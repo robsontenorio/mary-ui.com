@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  ######## APP ########
+  mary-app:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+      target: local
+    environment:
+      - CONTAINER_ROLE=APP    
+    volumes:
+      - ../:/var/www/app:cached
+      # local composer package development
+      # - /home/robson/dev:/home/dev 
+    ports:
+      - 8018:8080    
