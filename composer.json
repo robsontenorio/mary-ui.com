@@ -1,8 +1,16 @@
 {
-    "name": "laravel/laravel",
+    "name": "robsontenorio/mary",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "description": "Livewire blade components using daisyUI / Tailwind",
+    "keywords": [
+        "laravel",
+        "livewire3",
+        "blade",
+        "components",
+        "ui",
+        "daisyUI",
+        "tailwind"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
@@ -11,7 +19,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
-        "robsontenorio/mary": "^0.0.2"
+        "robsontenorio/mary": "dev-main"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -63,6 +71,15 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "robsontenorio/mary": {
+            "type": "path",
+            "url": "/var/www/app/packages/mary",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
 }

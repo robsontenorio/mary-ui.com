@@ -22,9 +22,9 @@ class Counter extends Component
     {
         return <<<'HTML'
         <div>
-            <h1>{{ $count }}</h1>
+            <x-header :title="$count" subtitle="Here it counts!" />
 
-            <x-button label="+" wire:click="increment" class="btn-info" />
+            <x-button label="+" wire:click="increment" class="btn-success" />
             <x-button label="-" wire:click="decrement" class="btn-error" />
         </div>
         HTML;

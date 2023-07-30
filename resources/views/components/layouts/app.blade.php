@@ -12,7 +12,25 @@
 </head>
 
 <body>
-    {{ $slot }}
+    <x-nav class="bg-primary text-white">
+        <x-slot:brand>
+            Mary
+        </x-slot:brand>
+        <x-slot:actions>
+            <x-button label="Like" icon="o-heart" />
+        </x-slot:actions>
+    </x-nav>
+
+    <div class="grid grid-flow-col">
+        <div>
+            Menu
+
+        </div>
+        <div>
+            {{ $slot }}
+        </div>
+    </div>
+
 </body>
 
 </html>
