@@ -10,8 +10,8 @@
         I have title, subtitle, separator and shadow.
     </x-card>
 
-    <x-card title="Nice objects">
-        Check this out.
+    <x-card title="Nice things">
+        I am using slots here.
         <x-slot:figure>
             <img src="https://picsum.photos/500/200"  />
         </x-slot:figure>
@@ -30,8 +30,8 @@
         I have title, subtitle, separator and shadow.
     </X-card>
 
-    <X-card title="Nice objects">
-        Check this out.
+    <X-card title="Nice things">
+        I am using slots here.
         <X-slot:figure> 
             <img src="https://picsum.photos/500/200"  />
         </X-slot:figure>

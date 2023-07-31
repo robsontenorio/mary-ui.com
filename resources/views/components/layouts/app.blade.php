@@ -44,6 +44,15 @@
                 <a href="/docs/components/drawer" wire:navigate>Drawer</a>
             </div>
             <div>
+                <a href="/docs/components/form" wire:navigate>Form</a>
+            </div>
+            <div>
+                <a href="/docs/components/header" wire:navigate>Header</a>
+            </div>
+            <div>
+                <a href="/docs/components/icon" wire:navigate>Icon</a>
+            </div>
+            <div>
                 <a href="/counter" wire:navigate>Counter</a>
             </div>
         </x-slot:sidebar>
