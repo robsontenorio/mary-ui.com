@@ -1,3 +1,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    @apply font-bold my-5
+}
+
+h1 {
+    @apply text-4xl font-extrabold mt-0
+}
+
+h2 {
+    @apply text-3xl
+}
+
+h3 {
+    @apply text-2xl
+}
+
+h4 {
+    @apply text-xl
+}
+
+p {
+    @apply mt-5
+}
+
+a {
+    @apply link
+}
+
+ul li {
+    @apply ml-10 list-disc
+}
+
+ol li {
+    @apply ml-10 list-decimal
+}
+
+
+/*
+ Margin and rounding are personal preferences,
+ overflow-x-auto is recommended.
+*/
+pre {
+    @apply my-4 rounded overflow-x-auto;
+}
+
+/*
+ Add some vertical padding and expand the width
+ to fill its container. The horizontal padding
+ comes at the line level so that background
+ colors extend edge to edge.
+*/
+pre code.torchlight {
+    @apply block py-4 min-w-max;
+}
+
+/*
+ Horizontal line padding.
+*/
+pre code.torchlight .line {
+    @apply px-4;
+}
+
+/*
+ Push the code away from the line numbers and
+ summary caret indicators.
+*/
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+    @apply mr-4;
+}
+
+.torchlight.has-focus-lines .line:not(.line-focus) {
+    transition: filter 0.35s, opacity 0.35s;
+    filter: blur(.095rem);
+    opacity: .65;
+}
+
+/*
+  When the code block is hovered, bring all the lines into focus.
+*/
+.torchlight.has-focus-lines:hover .line:not(.line-focus) {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+code:not(.torchlight) {
+    @apply bg-gray-200 py-0.5 px-1 rounded-sm italic text-red-400
+}

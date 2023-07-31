@@ -1,5 +1,3 @@
 <x-layouts.app>
-    <div>
-        index
-    </div>
+    docs index
 </x-layouts.app>

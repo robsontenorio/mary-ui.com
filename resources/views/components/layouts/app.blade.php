@@ -8,11 +8,10 @@
     <title>{{ $title ?? config('app.name') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @mary
 </head>
 
-<body>
-    <x-nav class="bg-primary text-white">
+<body class="bg-base-100 min-h-screen pb-40 font-sans antialiased">
+    <x-nav sticky>
         <x-slot:brand>
             Mary
         </x-slot:brand>
@@ -21,15 +20,29 @@
         </x-slot:actions>
     </x-nav>
 
-    <div class="grid grid-flow-col">
-        <div>
-            Menu
-
-        </div>
-        <div>
+    <x-main>
+        <x-slot:sidebar>
+            <div>
+                <a href="/docs" wire:navigate>Overview</a>
+            </div>
+            <div>
+                <a href="/docs/installation" wire:navigate>Installation</a>
+            </div>
+            <div>
+                <a href="/docs/components/alert" wire:navigate>Alert</a>
+            </div>
+            <div>
+                <a href="/counter" wire:navigate>Counter</a>
+            </div>
+        </x-slot:sidebar>
+        <x-slot:content>
             {{ $slot }}
-        </div>
-    </div>
+        </x-slot:content>
+    </x-main>
+
+    {{-- TODO: just add an empty livewire component to make wire:navigate work on top level --}}
+    {{-- Is it a bug because were are using folio for managing top level routes ??? --}}
+    <livewire:nothing />
 
 </body>
 

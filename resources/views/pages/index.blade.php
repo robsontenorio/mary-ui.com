@@ -1,3 +1,3 @@
 <x-layouts.app>
-    install
+    index
 </x-layouts.app>
