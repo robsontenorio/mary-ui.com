@@ -7,7 +7,7 @@ h2,
 h3,
 h4,
 h5 {
-    @apply font-bold my-5
+    @apply font-bold my-10
 }
 
 h1 {
@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    @apply text-2xl
+    @apply text-2xl my-5
 }
 
 h4 {
@@ -27,7 +27,7 @@ h4 {
 }
 
 p {
-    @apply mt-5
+    @apply my-5
 }
 
 a {
@@ -58,7 +58,7 @@ pre {
  colors extend edge to edge.
 */
 pre code.torchlight {
-    @apply block py-4 min-w-max;
+    @apply block py-4 min-w-max text-sm;
 }
 
 /*
@@ -92,5 +92,5 @@ pre code.torchlight .summary-caret {
 }
 
 code:not(.torchlight) {
-    @apply bg-gray-200 py-0.5 px-1 rounded-sm italic text-red-400
+    @apply bg-gray-100 py-0.5 px-2 mx-1.5 rounded-sm text-sm text-red-400
 }

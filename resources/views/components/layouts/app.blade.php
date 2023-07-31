@@ -29,7 +29,19 @@
                 <a href="/docs/installation" wire:navigate>Installation</a>
             </div>
             <div>
+                <a href="/docs/components/layout" wire:navigate>Layout</a>
+            </div>
+            <div>
                 <a href="/docs/components/alert" wire:navigate>Alert</a>
+            </div>
+            <div>
+                <a href="/docs/components/button" wire:navigate>Button</a>
+            </div>
+            <div>
+                <a href="/docs/components/card" wire:navigate>Card</a>
+            </div>
+            <div>
+                <a href="/docs/components/drawer" wire:navigate>Drawer</a>
             </div>
             <div>
                 <a href="/counter" wire:navigate>Counter</a>

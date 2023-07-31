@@ -12,7 +12,7 @@
 - [Tailwind](https://tailwindcss.com/docs/guides/laravel)
 </x-markdown>
 
-<x-alert  icon="o-exclamation-triangle" class="mt-5 alert-warning">
+<x-alert  icon="o-exclamation-triangle" class="mt-5 bg-yellow-200">
 This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
 Make sure you have both installed.
 </x-alert>
