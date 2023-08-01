@@ -5,7 +5,8 @@
 # Form
 </x-markdown>
 
-<div class="p-10 rounded-md bg-gray-100">
+<x-code class="rounded-md bg-gray-100 p-10">
+@verbatim
     <x-form wire:submit="save">
         <x-input label="Name" hint="Full name" />
         <x-input label="E-mail" icon="o-envelope" />
@@ -14,20 +15,8 @@
             <x-button label="Save" class="btn-primary" type="submit" />
         </x-slot:actions>
     </x-form>
-</div>
-
-<pre>
-<x-torchlight-code language='html'>
-    <X-form wire:submit="save">
-        <X-input label="Name" hint="Full name" />
-        <X-input label="E-mail" icon="o-envelope" />
-        <X-slot:actions>
-            <X-button label="Cancel" />
-            <X-button label="Save" class="btn-primary" type="submit" />
-        </X-slot:actions>
-    </X-form>
-</x-torchlight-code>
-</pre>
+@endverbatim
+</x-code>
 
 </x-layouts.app>
 {{-- blade-formatter-enable --}}
