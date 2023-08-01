@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    @apply text-2xl my-5
+    @apply text-2xl mt-16 mb-10
 }
 
 h4 {

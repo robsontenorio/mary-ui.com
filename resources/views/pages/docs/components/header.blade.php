@@ -5,7 +5,7 @@
 # Header
 </x-markdown>
 
-<x-code class="rounded-md bg-gray-100 p-10">
+<x-code >
 @verbatim
     <x-header title="Users" subtitle="Manage all users here"  separator>
         <x-slot:actions>

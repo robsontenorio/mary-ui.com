@@ -8,38 +8,29 @@ You are free to make your own layout decision. This is just a suggestion to quic
 
 ### Template
 
+
 <pre>
 <x-torchlight-code language='html'>
-    <!DOCTYPE html>
-    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-            <title>My Site</title>
-
-            @ vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        </head>
-        <body class="bg-base-100 min-h-screen pb-40 font-sans antialiased"> <!-- [tl! focus:17 highlight:17] -->
-            <X-nav sticky> 
-                <X-slot:brand>
-                    My Site
-                </X-slot:brand>
-                <X-slot:actions>
-                    <X-button label="Like" icon="o-heart" />
-                </X-slot:actions>
-            </X-nav>
-            <X-main>
-                <X-slot:sidebar>
-                    Menu items
-                </X-slot:sidebar>
-                <X-slot:content>
-                    Main Content 
-                </<X-slot:content>
-            </X-main>
-        </body>
-    </html>
+    @verbatim
+    <body class="bg-base-100 min-h-screen pb-40 font-sans antialiased">
+        <x-nav sticky> 
+            <x-slot:brand>
+                My Site
+            </x-slot:brand>
+            <x-slot:actions>
+                <x-button label="Like" icon="o-heart" />
+            </x-slot:actions>
+        </x-nav>
+        <x-main>
+            <x-slot:sidebar>
+                Menu items
+            </x-slot:sidebar>
+            <x-slot:content>
+                Main Content 
+            </<x-slot:content>
+        </x-main>
+    </body>    
+    @endverbatim
 </x-torchlight-code>
 </pre>
 

@@ -53,6 +53,24 @@
                 <a href="/docs/components/icon" wire:navigate>Icon</a>
             </div>
             <div>
+                <a href="/docs/components/input" wire:navigate>Input</a>
+            </div>
+            <div>
+                <a href="/docs/components/list-item" wire:navigate>List Item</a>
+            </div>
+            <div>
+                <a href="/docs/components/modal" wire:navigate>Modal</a>
+            </div>
+            <div>
+                <a href="/docs/components/tabs" wire:navigate>tabs</a>
+            </div>
+            <div>
+                <a href="/docs/components/toggle" wire:navigate>Toggle</a>
+            </div>
+            <div>
+                <a href="/docs/components/select" wire:navigate>Select</a>
+            </div>
+            <div>
                 <a href="/counter" wire:navigate>Counter</a>
             </div>
         </x-slot:sidebar>

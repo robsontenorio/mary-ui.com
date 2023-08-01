@@ -3291,7 +3291,7 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/app/packages/mary",
-                "reference": "c343df1a50f60f0cb272cda7c1a5a789b28bc834"
+                "reference": "ea033d1ce18dc05971e236fddfa6055ab23c238f"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -8685,8 +8685,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "laravel/folio": 10,
-        "livewire/livewire": 10,
-        "robsontenorio/mary": 20
+        "livewire/livewire": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

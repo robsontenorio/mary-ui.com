@@ -6,26 +6,24 @@
 </x-markdown>
 
 
-<x-code class="rounded-md bg-gray-100 p-10">
+<x-code class="grid grid-flow-col grid-cols-2 gap-5">
 @verbatim
-    <div class="grid grid-flow-col grid-cols-2 gap-10">
-        <x-card title="You stats" subtitle="Our finds about you" shadow separator>
-            I have title, subtitle, separator and shadow.
-        </x-card>
+    <x-card title="You stats" subtitle="Our finds about you" shadow separator>
+        I have title, subtitle, separator and shadow.
+    </x-card>
 
-        <x-card title="Nice things">
-            I am using slots here.
-            <x-slot:figure>
-                <img src="https://picsum.photos/500/200"  />
-            </x-slot:figure>
-            <x-slot:menu>
-                <x-icon name="o-heart" />
-            </x-slot:menu>
-            <x-slot:actions>
-                <x-button label="Ok" class="btn-primary" />
-            </x-slot:actions>            
-        </x-card>
-    </div>
+    <x-card title="Nice things">
+        I am using slots here.
+        <x-slot:figure>
+            <img src="https://picsum.photos/500/200"  />
+        </x-slot:figure>
+        <x-slot:menu>
+            <x-icon name="o-heart" />
+        </x-slot:menu>
+        <x-slot:actions>
+            <x-button label="Ok" class="btn-primary" />
+        </x-slot:actions>            
+    </x-card>
 @endverbatim
 </x-code>
 

@@ -5,7 +5,7 @@
 # Alert
 </x-markdown>
 
-<x-code class="grid gap-5">
+<x-code class="grid gap-5 bg-white p-0">
 @verbatim
     <x-alert title="You have 10 messages" icon="o-exclamation-triangle" />
 

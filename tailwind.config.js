@@ -4,6 +4,7 @@ export default {
     "./resources/**/**/*.blade.php",
     "./resources/**/**/*.js",
     "./app/Livewire/**/**/*.php",
+    "./app/View/Components/**/**/*.php",
     "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
   ],
   theme: {

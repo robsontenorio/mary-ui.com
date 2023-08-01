@@ -4,22 +4,24 @@
 <x-markdown>
 # Drawer
 
-You can direct open drawer by using native HTML `<label>` by referencing drawer `id`.    
+You can direct open a drawer by using native HTML `<label>` while referencing drawer `id`. It closes when you click outside.
 
 </x-markdown>
 
-<x-code class="rounded-md bg-gray-100 p-10">
-@verbatim
-   <x-drawer id="my-drawer">
-        Content left
-   </x-drawer>
+<x-code class="flex gap-5">
+     @verbatim
+    <x-drawer id="my-drawer" >
+        Content left auto width.
+    </x-drawer>
 
-   <x-drawer id="my-drawer2" right>
-        Content right
-   </x-drawer>
+    <x-drawer id="my-drawer2" class="w-1/3" right>
+        <x-card title="Settings" subtitle="Main profile">
+            Content right with fixed width and Card.
+        </x-card>
+    </x-drawer>
 
+    {{-- Just reference correct drawer ID --}}
     <label for="my-drawer" class="btn btn-primary capitalize">Open left</label>
-
     <label for="my-drawer2" class="btn btn-warning capitalize">Open right</label>
 @endverbatim
 </x-code>

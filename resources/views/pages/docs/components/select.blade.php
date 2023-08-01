@@ -2,7 +2,7 @@
 <x-layouts.app>
 
 <x-markdown>
-# ...
+# Select
 </x-markdown>
 
 <x-code>
