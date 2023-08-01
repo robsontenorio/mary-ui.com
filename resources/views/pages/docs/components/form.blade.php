@@ -5,7 +5,7 @@
 # Form
 </x-markdown>
 
-<div class="p-10 bg-gray-100">
+<div class="p-10 rounded-md bg-gray-100">
     <x-form wire:submit="save">
         <x-input label="Name" hint="Full name" />
         <x-input label="E-mail" icon="o-envelope" />

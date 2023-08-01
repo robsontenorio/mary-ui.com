@@ -5,7 +5,7 @@
 # Header
 </x-markdown>
 
-<div class="p-10 bg-gray-100">
+<div class="p-10 rounded-md bg-gray-100">
     <x-header title="Users" subtitle="Manage all users here"  separator>
         <x-slot:actions>
             <x-button label="Add" icon="o-plus" class="btn-primary" />
