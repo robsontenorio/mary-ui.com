@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "167219108420aa6cd977f8dbcda88869",
+    "content-hash": "3b1eafead2384a0a00db2bf41b7c2c19",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3287,11 +3287,17 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "dev-main",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robsontenorio/mary.git",
+                "reference": "249af0681a1a383784c8f47f2f1856f4b28fc4c2"
+            },
             "dist": {
-                "type": "path",
-                "url": "/var/www/app/packages/mary",
-                "reference": "ea033d1ce18dc05971e236fddfa6055ab23c238f"
+                "type": "zip",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/249af0681a1a383784c8f47f2f1856f4b28fc4c2",
+                "reference": "249af0681a1a383784c8f47f2f1856f4b28fc4c2",
+                "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -3317,11 +3323,7 @@
                     "Mary\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Mary\\Tests\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3335,17 +3337,18 @@
             "description": "Livewire blade components using daisyUI / Tailwind",
             "homepage": "https://github.com/robsontenorio/mary",
             "keywords": [
-                "Blade",
-                "Components",
-                "Laravel",
-                "Livewire",
                 "Mary",
-                "UI"
+                "blade",
+                "components",
+                "laravel",
+                "livewire",
+                "ui"
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/robsontenorio/mary/issues",
+                "source": "https://github.com/robsontenorio/mary/tree/0.0.3"
+            },
+            "time": "2023-08-01T18:11:54+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",
@@ -8682,7 +8685,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "laravel/folio": 10,
         "livewire/livewire": 10

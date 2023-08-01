@@ -1,3 +1,3 @@
 <x-layouts.app>
-    index
+    Amazing landing page here.
 </x-layouts.app>

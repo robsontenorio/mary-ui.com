@@ -5,6 +5,8 @@ echo '------ Starting deploy tasks  ------'
 cp .env.example .env
 composer install --prefer-dist --no-interaction --no-progress --ansi
 
+yarn build
+
 php artisan config:cache
 php artisan view:cache
 php artisan route:cache
