@@ -62,7 +62,7 @@
                 <a href="/docs/components/modal" wire:navigate>Modal</a>
             </div>
             <div>
-                <a href="/docs/components/tabs" wire:navigate>tabs</a>
+                <a href="/docs/components/tabs" wire:navigate>Tabs</a>
             </div>
             <div>
                 <a href="/docs/components/toggle" wire:navigate>Toggle</a>

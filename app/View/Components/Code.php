@@ -8,8 +8,9 @@ use Illuminate\View\Component;
 
 class Code extends Component
 {
-    public function __construct($language = 'html')
+    public function __construct(public string $language = 'html')
     {
+
     }
 
     public function render(): View|Closure|string
@@ -20,10 +21,10 @@ class Code extends Component
             $x = (string) Str::of($slot)->prepend('    ');
         @endphp
 
-        <div {{ $attributes->class(["rounded-md bg-gray-100 p-10"]) }} >            
+        <div {{ $attributes->class(["rounded-md bg-gray-50 shadow-md p-10"]) }} >            
                 @php  echo Blade::render($x)  @endphp
         </div>
-        <pre><x-torchlight-code language='html' :contents="$x" /></pre>
+        <pre><x-torchlight-code :language="$language" :contents="$x" /></pre>
         HTML;
     }
 }
