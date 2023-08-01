@@ -33,59 +33,6 @@ You are free to make your own layout decision. This is just a suggestion to quic
     @endverbatim
 </x-torchlight-code>
 </pre>
-
-### Common css
-
-Place this on `resouces/css/app.css`
-
-<pre>
-<x-torchlight-code language='css'>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    @apply font-bold my-10
-}
-
-h1 {
-    @apply text-4xl font-extrabold mt-0
-}
-
-h2 {
-    @apply text-3xl
-}
-
-h3 {
-    @apply text-2xl my-5
-}
-
-h4 {
-    @apply text-xl
-}
-
-p {
-    @apply my-5
-}
-
-a {
-    @apply link
-}
-
-ul li {
-    @apply ml-10 list-disc
-}
-
-ol li {
-    @apply ml-10 list-decimal
-}
-</x-torchlight-code>
-</pre>
-
 </x-markdown>
 
 </x-layouts.app>

@@ -15,5 +15,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/counter', Counter::class);
-
-Route::get('/teste', fn () => view('teste'));

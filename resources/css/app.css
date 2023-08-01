@@ -19,7 +19,7 @@ h2 {
 }
 
 h3 {
-    @apply text-2xl mt-16 mb-10
+    @apply text-2xl my-10
 }
 
 h4 {
@@ -27,20 +27,17 @@ h4 {
 }
 
 p {
-    @apply my-5
+    @apply my-5 leading-8
 }
 
-a {
+.markdown ul li {
+    @apply list-disc ml-10
+}
+
+.markdown a {
     @apply link
 }
 
-ul li {
-    @apply ml-10 list-disc
-}
-
-ol li {
-    @apply ml-10 list-decimal
-}
 
 
 /*

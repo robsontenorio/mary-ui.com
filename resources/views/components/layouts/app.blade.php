@@ -13,7 +13,9 @@
 <body class="bg-base-100 min-h-screen pb-40 font-sans antialiased">
     <x-nav sticky>
         <x-slot:brand>
-            Mary
+            <a href="/" wire:navigate>
+                <x-mary-brand />
+            </a>
         </x-slot:brand>
         <x-slot:actions>
             <x-button label="Like" icon="o-heart" />
@@ -22,60 +24,41 @@
 
     <x-main>
         <x-slot:sidebar>
-            <div>
-                <a href="/docs" wire:navigate>Overview</a>
-            </div>
-            <div>
-                <a href="/docs/installation" wire:navigate>Installation</a>
-            </div>
-            <div>
-                <a href="/docs/components/layout" wire:navigate>Layout</a>
-            </div>
-            <div>
-                <a href="/docs/components/alert" wire:navigate>Alert</a>
-            </div>
-            <div>
-                <a href="/docs/components/button" wire:navigate>Button</a>
-            </div>
-            <div>
-                <a href="/docs/components/card" wire:navigate>Card</a>
-            </div>
-            <div>
-                <a href="/docs/components/drawer" wire:navigate>Drawer</a>
-            </div>
-            <div>
-                <a href="/docs/components/form" wire:navigate>Form</a>
-            </div>
-            <div>
-                <a href="/docs/components/header" wire:navigate>Header</a>
-            </div>
-            <div>
-                <a href="/docs/components/icon" wire:navigate>Icon</a>
-            </div>
-            <div>
-                <a href="/docs/components/input" wire:navigate>Input</a>
-            </div>
-            <div>
-                <a href="/docs/components/list-item" wire:navigate>List Item</a>
-            </div>
-            <div>
-                <a href="/docs/components/modal" wire:navigate>Modal</a>
-            </div>
-            <div>
-                <a href="/docs/components/tabs" wire:navigate>Tabs</a>
-            </div>
-            <div>
-                <a href="/docs/components/toggle" wire:navigate>Toggle</a>
-            </div>
-            <div>
-                <a href="/docs/components/select" wire:navigate>Select</a>
-            </div>
-            <div>
-                <a href="/counter" wire:navigate>Counter</a>
-            </div>
+            <x-menu title="Get started" icon="o-sparkles" separator>
+                <x-menu-item title="Overview" link="/" />
+                <x-menu-item title="Installation" link="/docs/installation" />
+
+                <x-menu-separator title="Layout" icon="o-view-columns" />
+                <x-menu-item title="Layout" link="/docs/components/layout" />
+
+                <x-menu-separator title="Forms" icon="o-code-bracket-square" />
+                <x-menu-item title="Form" link="/docs/components/form" />
+                <x-menu-item title="Input" link="/docs/components/input" />
+                <x-menu-item title="Select" link="/docs/components/select" />
+
+                <x-menu-separator title="UI" icon="o-cursor-arrow-rays" />
+                <x-menu-item title="Alert" link="/docs/components/alert" />
+                <x-menu-item title="Button" link="/docs/components/button" />
+                <x-menu-item title="Card" link="/docs/components/card" />
+                <x-menu-item title="Drawer" link="/docs/components/drawer" />
+
+                <x-menu-item title="Header" link="/docs/components/header" />
+                <x-menu-item title="Icon" link="/docs/components/icon" />
+
+                <x-menu-item title="Item" link="/docs/components/list-item" wir" />
+                <x-menu-item title="Modal" link="/docs/components/modal" />
+                <x-menu-item title="Tabs" link="/docs/components/tabs" />
+                <x-menu-item title="Toggle" link="/docs/components/toggle" />
+
+                <x-menu-item title="Menu" link="/docs/components/menu" />
+                <x-menu-item title="Counter" link="/counter" />
+            </x-menu>
         </x-slot:sidebar>
         <x-slot:content>
             {{ $slot }}
+
+            <hr class="mt-20 mb-10" />
+            <x-mary-brand />
         </x-slot:content>
     </x-main>
 

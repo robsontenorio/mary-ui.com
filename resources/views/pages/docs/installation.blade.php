@@ -1,21 +1,23 @@
 {{-- blade-formatter-disable --}}
 <x-layouts.app>
 
-<x-markdown>
+<x-markdown class="markdown">
 # Installation
+
+This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
+Of course you can opt to not install DaisyUI and style all components by yourself.
 
 ### Requirements
 
 - Laravel 10+
 - Livewire 3
-- [Daisy UI](https://daisyui.com/docs/install/)
 - [Tailwind](https://tailwindcss.com/docs/guides/laravel)
+- [Daisy UI (recommended)](https://daisyui.com/docs/install/)
 </x-markdown>
 
-<x-alert  icon="o-exclamation-triangle" class="mt-5 bg-yellow-200">
-This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
-Make sure you have both installed.
-</x-alert>
+
+
+
 
 <x-markdown>
 ### Install
