@@ -56,10 +56,11 @@
         </x-slot:sidebar>
         <x-slot:content>
             {{ $slot }}
-
+        </x-slot:content>
+        <x-slot:footer>
             <hr class="mt-20 mb-10" />
             <x-mary-brand />
-        </x-slot:content>
+        </x-slot:footer>
     </x-main>
 
     {{-- TODO: just add an empty livewire component to make wire:navigate work on top level --}}
