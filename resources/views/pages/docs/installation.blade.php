@@ -4,19 +4,16 @@
 <x-markdown class="markdown">
 # Installation
 
-This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
-Of course you can opt to not install DaisyUI and style all components by yourself.
+This package <strong>does not ship any custom CSS</strong> and relies on <strong>DaisyUI and Tailwind</strong> for out-of-box styling.
+Of course you can opt to not install DaisyUI, but in this case you need to style **all components by yourself**.
 
 ### Requirements
 
 - Laravel 10+
 - Livewire 3
 - [Tailwind](https://tailwindcss.com/docs/guides/laravel)
-- [Daisy UI (recommended)](https://daisyui.com/docs/install/)
+- **[Daisy UI (recommended)](https://daisyui.com/docs/install/)**
 </x-markdown>
-
-
-
 
 
 <x-markdown>
@@ -47,7 +44,12 @@ Add a new entry on `tailwind.config.js`.
 </x-torchlight-code>
 </pre>
 
-You are done!
+<x-icon name="o-sparkles" class="text-yellow-500 w-8 h-8" /> 
+
+<strong >You are done!</strong>
+
+<x-alert title="All components are styled out-the-box with Daisy UI. So, it is recommend to install it. Otherwise you will need to style all components by your self" class="alert-warning mt-10" icon="o-exclamation-triangle" />
+
 
 </x-layouts.app>
 {{-- blade-formatter-enable --}}

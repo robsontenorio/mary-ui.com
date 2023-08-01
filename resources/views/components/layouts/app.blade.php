@@ -35,6 +35,7 @@
                 <x-menu-item title="Form" link="/docs/components/form" />
                 <x-menu-item title="Input" link="/docs/components/input" />
                 <x-menu-item title="Select" link="/docs/components/select" />
+                <x-menu-item title="Toggle" link="/docs/components/toggle" />
 
                 <x-menu-separator title="UI" icon="o-cursor-arrow-rays" />
                 <x-menu-item title="Alert" link="/docs/components/alert" />
@@ -45,10 +46,10 @@
                 <x-menu-item title="Header" link="/docs/components/header" />
                 <x-menu-item title="Icon" link="/docs/components/icon" />
 
-                <x-menu-item title="Item" link="/docs/components/list-item" wir" />
+                <x-menu-item title="List Item" link="/docs/components/list-item" wir" />
                 <x-menu-item title="Modal" link="/docs/components/modal" />
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
-                <x-menu-item title="Toggle" link="/docs/components/toggle" />
+
 
                 <x-menu-item title="Menu" link="/docs/components/menu" />
                 <x-menu-item title="Counter" link="/counter" />
@@ -59,7 +60,9 @@
         </x-slot:content>
         <x-slot:footer>
             <hr class="mt-20 mb-10" />
-            <x-mary-brand />
+            <div class="justify-center items-baseline flex">
+                <x-mary-brand />
+            </div>
         </x-slot:footer>
     </x-main>
 

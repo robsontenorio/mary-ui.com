@@ -31,7 +31,7 @@ p {
 }
 
 .markdown ul li {
-    @apply list-disc ml-10
+    @apply list-disc ml-10 pb-2
 }
 
 .markdown a {
@@ -45,7 +45,7 @@ p {
  overflow-x-auto is recommended.
 */
 pre {
-    @apply my-4 rounded overflow-x-auto;
+    @apply my-4 rounded-lg overflow-x-auto;
 }
 
 /*

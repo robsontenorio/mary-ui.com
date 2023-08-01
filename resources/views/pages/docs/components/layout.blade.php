@@ -4,7 +4,7 @@
 <x-markdown>
 # Layout
 
-You are free to make your own layout decision. This is just a suggestion to quickly get started.
+You are free to make your own layout decision. But here is suggestion to quickly get started.
 
 ### Template
 
@@ -26,8 +26,11 @@ You are free to make your own layout decision. This is just a suggestion to quic
                 Menu items
             </x-slot:sidebar>
             <x-slot:content>
-                Main Content 
+                Content 
             </<x-slot:content>
+            <x-slot:content>
+                Footer
+        </<x-slot:content>
         </x-main>
     </body>    
     @endverbatim

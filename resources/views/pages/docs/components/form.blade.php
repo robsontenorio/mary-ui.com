@@ -5,7 +5,7 @@
 # Form
 </x-markdown>
 
-<x-code>
+<x-code class="">
 @verbatim
     <x-form wire:submit="save">
         <x-input label="Name" hint="Full name" />
