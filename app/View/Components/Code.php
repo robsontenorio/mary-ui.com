@@ -20,7 +20,7 @@ class Code extends Component
             $x = (string) Str::of($slot)->prepend('    ');
         @endphp
 
-        <div {{ $attributes->class(["rounded-md bg-gray-100 p-5"]) }} >            
+        <div {{ $attributes->class(["rounded-md bg-gray-100 p-10"]) }} >            
                 @php  echo Blade::render($x)  @endphp
         </div>
         <pre><x-torchlight-code language='html' :contents="$x" /></pre>

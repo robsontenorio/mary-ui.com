@@ -15,7 +15,7 @@ All icons are powered by [Blade Hero Icons](https://blade-ui-kit.com/blade-icons
 
     <x-icon name="s-home" class="w-7 h-7 text-green-500" />
 
-    <x-icon name="o-home" class="w-11 h-11 bg-orange-500 p-2 text-white rounded-full" />
+    <x-icon name="o-home" class="w-10 h-10 bg-orange-500 p-2 text-white rounded-full" />
 @endverbatim
 </x-code>
 
