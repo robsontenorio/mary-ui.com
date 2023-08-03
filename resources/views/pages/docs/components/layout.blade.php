@@ -28,9 +28,9 @@ You are free to make your own layout decision. But here is suggestion to quickly
             <x-slot:content>
                 Content 
             </<x-slot:content>
-            <x-slot:content>
+            <x-slot:footer>
                 Footer
-        </<x-slot:content>
+            </<x-slot:footer>
         </x-main>
     </body>    
     @endverbatim
