@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b1eafead2384a0a00db2bf41b7c2c19",
+    "content-hash": "05c0679c867ee9e8b8497d0d9e279a74",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1122,16 +1122,16 @@
         },
         {
             "name": "laravel/folio",
-            "version": "v1.0.0-beta.2",
+            "version": "v1.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/folio.git",
-                "reference": "2e98990cc9ccf0a01bce731ced17e1f04b531586"
+                "reference": "0d42ee9485f83e2c57b2a5d40cd4f651c2ff95e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/folio/zipball/2e98990cc9ccf0a01bce731ced17e1f04b531586",
-                "reference": "2e98990cc9ccf0a01bce731ced17e1f04b531586",
+                "url": "https://api.github.com/repos/laravel/folio/zipball/0d42ee9485f83e2c57b2a5d40cd4f651c2ff95e3",
+                "reference": "0d42ee9485f83e2c57b2a5d40cd4f651c2ff95e3",
                 "shasum": ""
             },
             "require": {
@@ -1147,7 +1147,7 @@
                 "spatie/once": "^3.1"
             },
             "require-dev": {
-                "orchestra/testbench": "^8.0",
+                "orchestra/testbench": "^8.5.10",
                 "pestphp/pest": "^2.5",
                 "phpstan/phpstan": "^1.10"
             },
@@ -1190,7 +1190,7 @@
                 "issues": "https://github.com/laravel/folio/issues",
                 "source": "https://github.com/laravel/folio"
             },
-            "time": "2023-07-31T07:48:50+00:00"
+            "time": "2023-08-08T11:33:29+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1980,29 +1980,29 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.0-beta.5",
+            "version": "v3.0.0-beta.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "249b52628d4285f2b1073eeedc3312b265774705"
+                "reference": "888c869df2c886c603ffafa7b70240891dbc56ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/249b52628d4285f2b1073eeedc3312b265774705",
-                "reference": "249b52628d4285f2b1073eeedc3312b265774705",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/888c869df2c886c603ffafa7b70240891dbc56ed",
+                "reference": "888c869df2c886c603ffafa7b70240891dbc56ed",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^9.0|^10.0|^11.0",
-                "illuminate/support": "^9.0|^10.0|^11.0",
-                "illuminate/validation": "^9.0|^10.0|^11.0",
+                "illuminate/database": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "illuminate/validation": "^10.0|^11.0",
                 "league/mime-type-detection": "^1.9",
                 "php": "^8.1",
                 "symfony/http-kernel": "^5.0|^6.0"
             },
             "require-dev": {
                 "calebporzio/sushi": "^2.1",
-                "laravel/framework": "^9.0|^10.0",
+                "laravel/framework": "^10.0|^11.0",
                 "mockery/mockery": "^1.3.1",
                 "orchestra/testbench": "^7.0|^8.0",
                 "orchestra/testbench-dusk": "^7.0|^8.0",
@@ -2041,7 +2041,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.5"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.8"
             },
             "funding": [
                 {
@@ -2049,7 +2049,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-28T21:10:07+00:00"
+            "time": "2023-08-08T19:03:42+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3287,16 +3287,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "249af0681a1a383784c8f47f2f1856f4b28fc4c2"
+                "reference": "a9f2b3751f6c7e14d6fb00e93893fcde61a71cad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/249af0681a1a383784c8f47f2f1856f4b28fc4c2",
-                "reference": "249af0681a1a383784c8f47f2f1856f4b28fc4c2",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/a9f2b3751f6c7e14d6fb00e93893fcde61a71cad",
+                "reference": "a9f2b3751f6c7e14d6fb00e93893fcde61a71cad",
                 "shasum": ""
             },
             "require": {
@@ -3334,7 +3334,7 @@
                     "homepage": "https://github.com/robsontenorio"
                 }
             ],
-            "description": "Livewire blade components using daisyUI / Tailwind",
+            "description": "Laravel blade components for Livewire 3",
             "homepage": "https://github.com/robsontenorio/mary",
             "keywords": [
                 "Mary",
@@ -3346,9 +3346,9 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.0.3"
+                "source": "https://github.com/robsontenorio/mary/tree/0.0.4"
             },
-            "time": "2023-08-01T18:11:54+00:00"
+            "time": "2023-08-09T03:53:02+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",

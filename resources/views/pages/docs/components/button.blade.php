@@ -5,7 +5,7 @@
 # Button
 </x-markdown>
 
-<x-code class="flex gap-5">
+<x-code class="flex gap-3">
 @verbatim
     <x-button label="Save" class="btn-outline" />
 

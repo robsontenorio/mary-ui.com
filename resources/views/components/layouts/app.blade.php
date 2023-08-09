@@ -10,7 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-base-100 min-h-screen pb-40 font-sans antialiased">
+<body class="min-h-screen pb-40 font-sans antialiased">
     <x-nav sticky>
         <x-slot:brand>
             <a href="/" wire:navigate>
@@ -19,7 +19,9 @@
         </x-slot:brand>
         <x-slot:actions>
             <div class="flex">
-                <div class="bg-yellow-300 rounded text-sm px-2 py-0.5 font-bold -rotate-3 w-30 mr-4">This is a WIP</div>
+                <div class="bg-yellow-300 rounded text-sm text-black px-2 py-0.5 font-bold -rotate-3 w-30 mr-4">
+                    This is a WIP
+                </div>
 
                 <a href="https://github.com/robsontenorio/mary">
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -56,12 +58,11 @@
                 <x-menu-item title="Header" link="/docs/components/header" />
                 <x-menu-item title="Icon" link="/docs/components/icon" />
 
-                <x-menu-item title="List Item" link="/docs/components/list-item" wir" />
+                <x-menu-item title="List Item" link="/docs/components/list-item" />
+                <x-menu-item title="Menu" link="/docs/components/menu" />
                 <x-menu-item title="Modal" link="/docs/components/modal" />
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
 
-
-                <x-menu-item title="Menu" link="/docs/components/menu" />
                 <x-menu-item title="Counter" link="/counter" />
             </x-menu>
         </x-slot:sidebar>

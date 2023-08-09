@@ -32,11 +32,13 @@ You can use Livewire or Alpine for a existing model property.
 
 <pre>
 <x-torchlight-code language='html'>
+    @verbatim
     <!-- Livewire  -->
-    <X-button label="Open" wire:model="drawerOpened" />
+    <x-button label="Open" wire:model="drawerOpened" />
     
     <!-- Alpine  -->
-    <X-button label="Open" x-on:click="$wire.drawerOpened = true" />
+    <x-button label="Open" x-on:click="$wire.drawerOpened = true" />
+    @endverbatim
 </x-torchlight-code>
 </pre>
 

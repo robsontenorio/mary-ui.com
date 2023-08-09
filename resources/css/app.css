@@ -19,11 +19,11 @@ h2 {
 }
 
 h3 {
-    @apply text-2xl my-10
+    @apply text-2xl mt-10 mb-5
 }
 
 h4 {
-    @apply text-xl
+    @apply text-xl mt-10 mb-5
 }
 
 p {
@@ -89,5 +89,5 @@ pre code.torchlight .summary-caret {
 }
 
 code:not(.torchlight) {
-    @apply bg-gray-100 py-0.5 px-2 mx-1.5 rounded-sm text-sm text-red-400
+    @apply bg-gray-100 py-0.5 px-2 mx-1 rounded-sm text-sm text-red-400
 }

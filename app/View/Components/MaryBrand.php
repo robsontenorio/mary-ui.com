@@ -15,7 +15,8 @@ class MaryBrand extends Component
     {
         return <<<'HTML'
             <span
-                class="font-extrabold text-4xl [&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">
+                class="font-extrabold text-4xl bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
+                                            
                 mary
             </span>
             <span class="ml-3 text-gray-500 text-sm font-medium">Laravel blade components</span>

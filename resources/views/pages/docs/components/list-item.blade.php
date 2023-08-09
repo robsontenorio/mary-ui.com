@@ -22,7 +22,7 @@
     
     <x-list-item :item="$item" value="other_name" avatar="other_avatar" />    
 
-    <x-list-item :item="$item" sub-value="email" link="/show/{{$item->id}}" no-separator>
+    <x-list-item :item="$item" sub-value="email" link="/docs/installation" no-separator>
         <x-slot:action>
             <x-button icon="o-trash" class="text-red-500" />
         </x-slot:action>
