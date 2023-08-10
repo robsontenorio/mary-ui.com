@@ -21,7 +21,7 @@
 <x-markdown>
 ### Validation errors
 
-When your fill `name` attribute as same an `wire:model`, automatically validation error will be displayed.
+When you fill `name` attribute as same an `wire:model`, automatically validation error will be displayed.
 </x-markdown>
 
 <x-code>

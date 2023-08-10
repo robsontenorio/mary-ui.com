@@ -15,9 +15,15 @@
     
     <x-button icon="o-check" class="btn-info text-white">
         With default slot
-    </x-button>
+    </x-button>    
 @endverbatim
 </x-code>
+
+<x-markdown>
+### Spinners
+
+TODO //
+</x-markdown>
 
 </x-layouts.app>
 {{-- blade-formatter-enable --}}

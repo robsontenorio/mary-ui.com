@@ -6,7 +6,7 @@
 
 You are free to make your own layout decision. But here is suggestion to quickly get started.
 
-You can play around by placing css classes on components or slots, or your just removing some entirely.
+You can play around by placing css classes on components/slots, or just removing some entirely.
 
 <pre>
 <x-torchlight-code language='html'>

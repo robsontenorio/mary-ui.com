@@ -8,7 +8,7 @@
 
 <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
 @verbatim
-    <x-card title="You stats" subtitle="Our finds about you" shadow separator>
+    <x-card title="Your stats" subtitle="Our finds about you" shadow separator>
         I have title, subtitle, separator and shadow.
     </x-card>
 

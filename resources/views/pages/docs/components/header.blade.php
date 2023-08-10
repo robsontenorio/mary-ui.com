@@ -5,15 +5,23 @@
 # Header
 </x-markdown>
 
-<x-code >
+<x-code class="grid gap-5">
 @verbatim
-    <x-header title="Users" subtitle="Manage all users here"  separator>
-        <x-slot:actions>
-            <x-button label="Add" icon="o-plus" class="btn-primary" />
+    <x-header title="Personal address" subtitle="Your home address" separator />
+
+    <x-header title="Personal address" subtitle="Your home address" size="text-xl" separator />
+
+    <x-header title="Users">
+        <x-slot:middle>
+            <x-input icon="o-magnifying-glass" placeholder="Search..." />
+        </x-slot:middle>
+        <x-slot:actions>        
+            <x-button icon="o-funnel"  />
+            <x-button icon="o-plus" class="btn-primary" />            
         </x-slot:actions>
     </x-header>
 
-    <x-header title="Personal address" subtitle="Make sure inform your current location" size="text-xl" />
+    
 @endverbatim
 </x-code>
 
