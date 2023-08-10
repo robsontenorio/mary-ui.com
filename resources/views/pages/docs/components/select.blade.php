@@ -1,13 +1,19 @@
 {{-- blade-formatter-disable --}}
 <x-layouts.app>
 
-<x-markdown>
+<x-markdown class="markdown">
 # Select
 
 ### Default attributes
+It will lookup for:
 
-It will lookup for `id` (as key) and `name` (as value).
+- `object.id` for option value
+- `object.name` for option display label 
+
+<br>
 </x-markdown>
+
+
 
 <x-code class="grid gap-5"> 
     @verbatim
@@ -22,7 +28,7 @@ It will lookup for `id` (as key) and `name` (as value).
 <x-markdown>
 ### Alternative attributes
 
-Just set `key` and `value`  representing the columns.
+Just set `option-value` and `option-label`  representing desired targets.
 
 </x-markdown>
 
@@ -30,17 +36,18 @@ Just set `key` and `value`  representing the columns.
     @verbatim
     @php
     $options = App\Models\User::take(5)->get()->each(function($item){
-                    $item->other_value = $item->name;
-                    $item->other_key = $item->id;
+                    $item->other_value = $item->id;
+                    $item->other_label = $item->name;
                 });
     @endphp 
 
     <x-select 
         label="Alternative" 
         :options="$options" 
-        key="other_key" 
-        value="other_value" 
+        option-value="other_key" 
+        option-label="other_label" 
         placeholder="Select an user" 
+        hint="Select one, please."
         wire:model="selectedUser" />
     @endverbatim
 </x-code>
