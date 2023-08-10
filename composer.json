@@ -20,7 +20,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
-        "robsontenorio/mary": "dev-main",
+        "robsontenorio/mary": "^0.0.8",
         "spatie/laravel-markdown": "^2.3",
         "torchlight/torchlight-laravel": "^0.5.13"
     },
@@ -74,15 +74,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": {
-        "robsontenorio/mary": {
-            "type": "path",
-            "url": "/var/www/app/packages/mary",
-            "options": {
-                "symlink": true
-            }
-        }
-    }
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

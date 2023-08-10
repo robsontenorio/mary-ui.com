@@ -21,7 +21,7 @@ class Code extends Component
             $x = (string) Str::of($slot)->prepend('    ');
         @endphp
 
-        <div {{ $attributes->class(["rounded-lg  p-8 border-gray-300 border border-dashed"]) }} >            
+        <div {{ $attributes->class(["rounded-lg  p-8 bg-base-200/50 border-gray-400/50 border border-dashed"]) }} >            
                 @php  echo Blade::render($x)  @endphp
         </div>
         <pre><x-torchlight-code :language="$language" :contents="$x" /></pre>

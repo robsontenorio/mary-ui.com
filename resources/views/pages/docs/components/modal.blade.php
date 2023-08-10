@@ -17,7 +17,7 @@
 
         <x-slot:actions>
             {{-- Use same ID and call `.close()` --}}
-            <x-button label="Cancel" @click="modal17.close()" />
+            <x-button label="Cancel" onclick="modal17.close()" />
             <x-button label="Confirm" class="btn-primary" />
         </x-slot:actions>
     </x-modal>
@@ -35,7 +35,7 @@
 
         <x-slot:actions>
             {{-- Use same ID and call `.close()` --}}
-            <x-button label="Cancel" @click="modal99.close()" />
+            <x-button label="Cancel" onclick="modal99.close()" />
             <x-button label="Confirm" class="btn-primary" />
         </x-slot:actions>
     </x-modal>
