@@ -9,13 +9,15 @@ All icons are powered by [Blade Hero Icons](https://blade-ui-kit.com/blade-icons
 </x-markdown>
 
 
-<x-code class="flex gap-5 ">
+<x-code class="flex gap-5">
 @verbatim
     <x-icon name="o-envelope" />        
 
-    <x-icon name="s-home" class="w-7 h-7 text-green-500" />
+    <x-icon name="s-envelope" class="w-9 h-9 text-green-500" />
 
-    <x-icon name="o-home" class="w-10 h-10 bg-orange-500 p-2 text-white rounded-full" />
+    <x-icon name="o-envelope" class="w-12 h-12 bg-orange-500 text-white p-2 rounded-full" />
+
+    <x-icon name="s-envelope" class="w-14 h-14 hover:text-purple-500 cursor-pointer" />
 @endverbatim
 </x-code>
 

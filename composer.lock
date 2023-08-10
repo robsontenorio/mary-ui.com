@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd0fe80cfe164d306752c8fa86744cf4",
+    "content-hash": "86783e648243ac776e1911f657dc6cc5",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3287,16 +3287,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.0.6",
+            "version": "0.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "63ad8c9feb202273ac8f99d74dd3cfc35d7e6461"
+                "reference": "1573f9d765e687fdc2d5b94cbca0c650b22c0e2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/63ad8c9feb202273ac8f99d74dd3cfc35d7e6461",
-                "reference": "63ad8c9feb202273ac8f99d74dd3cfc35d7e6461",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/1573f9d765e687fdc2d5b94cbca0c650b22c0e2a",
+                "reference": "1573f9d765e687fdc2d5b94cbca0c650b22c0e2a",
                 "shasum": ""
             },
             "require": {
@@ -3346,9 +3346,9 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.0.6"
+                "source": "https://github.com/robsontenorio/mary/tree/0.0.7"
             },
-            "time": "2023-08-10T12:48:33+00:00"
+            "time": "2023-08-10T18:11:38+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",
@@ -8685,7 +8685,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "laravel/folio": 10,
         "livewire/livewire": 10

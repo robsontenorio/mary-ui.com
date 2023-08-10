@@ -6,7 +6,7 @@
 </x-markdown>
 
 
-<x-code class="grid grid-flow-col grid-cols-2 gap-10 bg-base-200">
+<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
 @verbatim
     <x-card title="You stats" subtitle="Our finds about you" shadow separator>
         I have title, subtitle, separator and shadow.
@@ -18,7 +18,9 @@
             <img src="https://picsum.photos/500/200"  />
         </x-slot:figure>
         <x-slot:menu>
-            <x-icon name="o-heart" />
+            <x-button icon="o-share" class="btn-circle btn-sm" />
+            <x-icon name="o-heart" class="cursor-pointer" />
+
         </x-slot:menu>
         <x-slot:actions>
             <x-button label="Ok" class="btn-primary" />

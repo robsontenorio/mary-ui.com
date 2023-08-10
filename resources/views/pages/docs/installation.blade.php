@@ -7,21 +7,20 @@
 This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
 Of course you can opt to not install daisyUI, but in this case you need to style **all components by yourself**.
 
-**Install Livewire, Tailwind and daisyUI (if you have not)**
+### Install dependencies
+
 
 <pre>
 <x-torchlight-code language='bash'>
+# Livewire 3
 composer require livewire/livewire "^3.0@beta"
-</x-torchlight-code>
-</pre>
 
-<pre>
-<x-torchlight-code language='bash'>
+# Tailwind and daisyUI
 yarn install -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
 </x-torchlight-code>
 </pre>
 
-**Install mary**
+### Install mary
 
 <pre>
 <x-torchlight-code language='bash'>
@@ -35,28 +34,27 @@ Then, add **mary** and **daisy** entries to `tailwind.config.js`.
 <x-torchlight-code language='javascript'>
 export default {
     content: [
-        // You will probably need those lines
+        // You will probably also need those lines
         "./resources/**/**/*.blade.php",
         "./resources/**/**/*.js",
         "./app/View/Components/**/**/*.php",
         "./app/Livewire/**/**/*.php",                     
-        "./vendor/robsontenorio/mary/src/View/Components/**/*.php" //[tl! highlight]
+
+        "./vendor/robsontenorio/mary/src/View/Components/**/*.php" //[tl! add]
     ],
     theme: {
         extend: {},
     },
-    plugins: [require("daisyui")] //[tl! highlight]
+    plugins: [require("daisyui")] //[tl! add]
 }
 </x-torchlight-code>
 </pre>
 
+
+<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
+
+<strong >... You are done!</strong>
+
 </x-markdown>
-
-<x-icon name="o-sparkles" class="text-yellow-500 w-8 h-8" /> 
-
-<strong >You are done!</strong>
-
-<x-alert title="All components are styled out-the-box with daisy UI. So, it is recommend to install it. Otherwise you will need to style all components by yourself" class="alert-warning mt-10" icon="o-exclamation-triangle" />
-
 </x-layouts.app>
 {{-- blade-formatter-enable --}}

@@ -12,7 +12,7 @@ It will lookup for `id` (as key) and `name` (as value).
 <x-code class="grid gap-5"> 
     @verbatim
     @php
-        $options = App\Models\User::factory()->times(5)->create();        
+        $options = App\Models\User::take(5)->get();        
     @endphp
     
     <x-select label="Master user" icon="o-user" :options="$options" wire:model="selectedUser" /> 
@@ -29,10 +29,7 @@ Just set `key` and `value`  representing the columns.
 <x-code class="grid gap-5"> 
     @verbatim
     @php
-    $options = App\Models\User::factory()
-                ->times(5)
-                ->create()
-                ->each(function($item){
+    $options = App\Models\User::take(5)->get()->each(function($item){
                     $item->other_value = $item->name;
                     $item->other_key = $item->id;
                 });

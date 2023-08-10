@@ -14,15 +14,19 @@
             'email' => 'mary@jane.com',
             'avatar' => 'https://picsum.photos/200?='.now(),
             'other_avatar' => 'https://picsum.photos/200?x=1',
-            'other_name' => 'Carl Silver'
+            'other_name' => 'Carl Silver',
+            'other_subvalue' => 'carl@news.com'
         ]);
     @endphp 
 
-    <x-list-item :item="$item" />
+    <x-list-item :item="$item" link="/docs/installation" />
     
-    <x-list-item :item="$item" value="other_name" avatar="other_avatar" />    
+    <x-list-item :item="$item" value="other_name" sub-value="email" avatar="other_avatar" />    
 
-    <x-list-item :item="$item" sub-value="email" link="/docs/installation" no-separator>
+    <x-list-item :item="$item" sub-value="email" no-separator>
+        <x-slot:sub-value>
+            Custom stuff here
+        </x-slot:sub-value>
         <x-slot:action>
             <x-button icon="o-trash" class="text-red-500" />
         </x-slot:action>

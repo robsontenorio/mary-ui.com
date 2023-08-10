@@ -5,21 +5,19 @@
 # Tabs
 </x-markdown>
 
-<x-tabs selected="tab1">
-    <x-tab name="tab1" label="Users" icon="o-users">
-        <span>Users</span>
-    </x-tab>
-    <x-tab name="tab2" label="Offices" icon="o-building-office">
-        <span>Offices</span>
-    </x-tab>
-    <x-tab name="tab3" label="Musics" icon="o-musical-note">
-        <span>Musics</span>
-    </x-tab>
-</x-tabs>
-
 <x-code>
     @verbatim
-    
+    <x-tabs selected="tab2">
+        <x-tab name="tab1" label="Users" icon="o-users">
+            <span>Users</span>
+        </x-tab>
+        <x-tab name="tab2" label="Offices" icon="o-building-office">
+            <span>Offices</span>
+        </x-tab>
+        <x-tab name="tab3" label="Musics" icon="o-musical-note">
+            <span>Musics</span>
+        </x-tab>
+    </x-tabs>
     @endverbatim
 </x-code>
 
