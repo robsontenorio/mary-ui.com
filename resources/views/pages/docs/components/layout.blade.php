@@ -6,33 +6,39 @@
 
 You are free to make your own layout decision. But here is suggestion to quickly get started.
 
-### Template
-
+You can play around by placing css classes on components or slots, or your just removing some entirely.
 
 <pre>
 <x-torchlight-code language='html'>
     @verbatim
-    <body class="bg-base-100 min-h-screen pb-40 font-sans antialiased">
-        <x-nav sticky> 
+    <body class="min-h-screen font-sans antialiased">
+        <x-nav sticky>
             <x-slot:brand>
-                My Site
+                My App
             </x-slot:brand>
             <x-slot:actions>
-                <x-button label="Like" icon="o-heart" />
+                <a href="###"><x-icon name="o-envelope" /> Messages</a>
+                <a href="###"><x-icon name="o-bell" /> Notifications</a>
             </x-slot:actions>
         </x-nav>
         <x-main>
-            <x-slot:sidebar>
-                Menu items
+            <x-slot:sidebar class="bg-slate-200">
+                <x-menu>
+                    <x-menu-item title="Home" icon="o-home" link="###" />
+                    <x-menu-item title="Messages" icon="o-envelope" link="###" />
+                </x-menu>
             </x-slot:sidebar>
             <x-slot:content>
-                Content 
+                {{ $slot }}
             </x-slot:content>
             <x-slot:footer>
-                Footer
-            </<x-slot:footer>
+                <hr />
+                <div class="p-6">
+                    Footer
+                </div>
+            </x-slot:footer>
         </x-main>
-    </body>    
+    </body>
     @endverbatim
 </x-torchlight-code>
 </pre>
