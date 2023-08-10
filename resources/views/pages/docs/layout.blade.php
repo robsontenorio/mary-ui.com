@@ -12,8 +12,15 @@ You can play around by placing css classes on components or slots, or your just 
 <x-torchlight-code language='html'>
     @verbatim
     <body class="min-h-screen font-sans antialiased">
+
+        {{-- The navbar with `sticky` --}}
         <x-nav sticky>
             <x-slot:brand>
+                {{-- Drawer toggle for "main-drawer" --}}
+                <label for="main-drawer" class="lg:hidden mr-3">
+                    <x-icon name="o-bars-3" class="cursor-pointer" />
+                </label>
+
                 My App
             </x-slot:brand>
             <x-slot:actions>
@@ -21,16 +28,24 @@ You can play around by placing css classes on components or slots, or your just 
                 <a href="###"><x-icon name="o-bell" /> Notifications</a>
             </x-slot:actions>
         </x-nav>
+
+        {{-- The main content --}}
         <x-main>
-            <x-slot:sidebar class="bg-slate-200">
+            {{-- It is a sidebar that works also as a drawer at small screen --}}
+            {{-- Note `main-drawer` reference here --}}
+            <x-slot:sidebar class="bg-slate-200 hidden lg:block" drawer="main-drawer">
                 <x-menu>
                     <x-menu-item title="Home" icon="o-home" link="###" />
                     <x-menu-item title="Messages" icon="o-envelope" link="###" />
                 </x-menu>
             </x-slot:sidebar>
+
+            {{-- The `$slot` goes here --}}
             <x-slot:content>
                 {{ $slot }}
             </x-slot:content>
+
+            {{-- Footer area --}}
             <x-slot:footer>
                 <hr />
                 <div class="p-6">

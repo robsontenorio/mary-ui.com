@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05c0679c867ee9e8b8497d0d9e279a74",
+    "content-hash": "984c15b24ac882e0b76abd6bdfab3278",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3287,16 +3287,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "a9f2b3751f6c7e14d6fb00e93893fcde61a71cad"
+                "reference": "0d9008c65586277c2a8963643c67dbce2e48393b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/a9f2b3751f6c7e14d6fb00e93893fcde61a71cad",
-                "reference": "a9f2b3751f6c7e14d6fb00e93893fcde61a71cad",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/0d9008c65586277c2a8963643c67dbce2e48393b",
+                "reference": "0d9008c65586277c2a8963643c67dbce2e48393b",
                 "shasum": ""
             },
             "require": {
@@ -3346,9 +3346,9 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.0.4"
+                "source": "https://github.com/robsontenorio/mary/tree/0.0.5"
             },
-            "time": "2023-08-09T03:53:02+00:00"
+            "time": "2023-08-10T00:55:43+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",

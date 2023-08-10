@@ -11,15 +11,19 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <x-nav sticky class="backdrop-blur-2xl bg-transparent">
+    <x-nav sticky>
         <x-slot:brand>
+            <label for="main-drawer" class="lg:hidden mr-3">
+                <x-icon name="o-bars-3" class="cursor-pointer" />
+            </label>
+
             <a href="/" wire:navigate>
                 <x-mary-brand />
             </a>
         </x-slot:brand>
         <x-slot:actions>
             <span class="bg-yellow-300 rounded text-sm text-black px-2 py-0.5 font-bold -rotate-3">
-                This is a WIP
+                <span class="hidden lg:inline">This is a</span> WIP
             </span>
 
             <a href="https://github.com/robsontenorio/mary">
@@ -33,13 +37,12 @@
     </x-nav>
 
     <x-main>
-        <x-slot:sidebar class="pt-10 px-5">
+        <x-slot:sidebar class="pt-10 px-5 hidden lg:block" drawer="main-drawer">
             <x-menu title="Get started" icon="o-sparkles" separator>
                 <x-menu-item title="Overview" link="/" />
                 <x-menu-item title="Installation" link="/docs/installation" />
-
-                <x-menu-separator title="Layout" icon="o-view-columns" />
-                <x-menu-item title="Layout" link="/docs/components/layout" />
+                <x-menu-item title="Layout" link="/docs/layout" />
+                <x-menu-item title="Contributing" link="/docs/contributing" />
 
                 <x-menu-separator title="Forms" icon="o-code-bracket-square" />
                 <x-menu-item title="Form" link="/docs/components/form" />
@@ -60,8 +63,6 @@
                 <x-menu-item title="Menu" link="/docs/components/menu" />
                 <x-menu-item title="Modal" link="/docs/components/modal" />
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
-
-                <x-menu-item title="Counter" link="/counter" />
             </x-menu>
         </x-slot:sidebar>
         <x-slot:content class="lg:max-w-4xl">

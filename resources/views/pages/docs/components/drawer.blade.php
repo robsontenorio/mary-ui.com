@@ -10,7 +10,7 @@ You can direct open a drawer by using native HTML `<label>` while referencing dr
 
 <x-code class="flex gap-5">
      @verbatim
-    <x-drawer id="my-drawer" >
+    <x-drawer id="my-drawer" class="bg-purple-300" >
         Content left auto width.
     </x-drawer>
 
