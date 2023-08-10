@@ -31,9 +31,9 @@ You can play around by placing css classes on components or slots, or your just 
 
         {{-- The main content --}}
         <x-main>
-            {{-- It is a sidebar that works also as a drawer at small screen --}}
+            {{-- It is a sidebar that works also as a drawer at small screens --}}
             {{-- Note `main-drawer` reference here --}}
-            <x-slot:sidebar class="bg-slate-200 hidden lg:block" drawer="main-drawer">
+            <x-slot:sidebar class="bg-slate-200" drawer="main-drawer">
                 <x-menu>
                     <x-menu-item title="Home" icon="o-home" link="###" />
                     <x-menu-item title="Messages" icon="o-envelope" link="###" />

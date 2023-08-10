@@ -20,7 +20,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.0@beta",
-        "robsontenorio/mary": "^0.0.5",
+        "robsontenorio/mary": "^0.0.6",
         "spatie/laravel-markdown": "^2.3",
         "torchlight/torchlight-laravel": "^0.5.13"
     },
@@ -74,6 +74,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

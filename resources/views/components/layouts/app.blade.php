@@ -37,7 +37,7 @@
     </x-nav>
 
     <x-main>
-        <x-slot:sidebar class="pt-10 px-5 hidden lg:block" drawer="main-drawer">
+        <x-slot:sidebar drawer="main-drawer">
             <x-menu title="Get started" icon="o-sparkles" separator>
                 <x-menu-item title="Overview" link="/" />
                 <x-menu-item title="Installation" link="/docs/installation" />

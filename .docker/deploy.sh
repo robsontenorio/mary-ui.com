@@ -8,6 +8,9 @@ composer install --prefer-dist --no-interaction --no-progress --ansi
 yarn install 
 yarn build
 
+touch database/database.sqlite
+php artisan migrate:fresh --seed
+
 php artisan config:cache
 php artisan view:cache
 php artisan route:cache
