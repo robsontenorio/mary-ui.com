@@ -9,7 +9,7 @@ yarn install
 yarn build
 
 touch database/database.sqlite
-php artisan migrate:fresh --seed
+php artisan migrate:fresh --seed --force
 
 php artisan config:cache
 php artisan view:cache
