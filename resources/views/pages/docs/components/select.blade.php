@@ -13,8 +13,6 @@ It will lookup for:
 <br>
 </x-markdown>
 
-
-
 <x-code class="grid gap-5"> 
     @verbatim
     @php
