@@ -8,8 +8,10 @@ use Illuminate\View\Component;
 
 class Code extends Component
 {
-    public function __construct(public string $language = 'html')
-    {
+    public function __construct(
+        public string $language = 'html',
+        public ?bool $noRender = false
+    ) {
 
     }
 
@@ -21,9 +23,11 @@ class Code extends Component
             $x = (string) Str::of($slot)->prepend('    ');
         @endphp
 
-        <div {{ $attributes->class(["rounded-lg  p-8 bg-base-200/50 border-gray-400/50 border border-dashed"]) }} >            
-                @php  echo Blade::render($x)  @endphp
-        </div>
+        @if(!$noRender)
+            <div {{ $attributes->class(["rounded-lg  p-8 bg-base-200/50 border-gray-400/50 border border-dashed"]) }} >                            
+                    @php  echo Blade::render($x)  @endphp                
+            </div>
+        @endif
         <pre><x-torchlight-code :language="$language" :contents="$x" /></pre>
         HTML;
     }

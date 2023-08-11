@@ -23,6 +23,8 @@
             </a>
         </x-slot:brand>
         <x-slot:actions>
+            <a href="/docs/installation" wire:navigate class="font-medium">Docs</a>
+
             <a href="https://github.com/robsontenorio/mary">
                 <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
@@ -34,36 +36,7 @@
     </x-nav>
 
     <x-main>
-        <x-slot:sidebar drawer="main-drawer">
-            <x-menu title="Get started" icon="o-sparkles" separator>
-                <x-menu-item title="Installation" link="/docs/installation" />
-                <x-menu-item title="Layout" link="/docs/layout" />
-                <x-menu-item title="Contributing" link="/docs/contributing" />
-
-                <x-menu-separator title="Forms" icon="o-code-bracket-square" />
-                <x-menu-item title="Form" link="/docs/components/form" />
-                <x-menu-item title="Input" link="/docs/components/input" />
-                <x-menu-item title="Radio" link="/docs/components/radio" />
-                <x-menu-item title="Select" link="/docs/components/select" />
-                <x-menu-item title="Toggle" link="/docs/components/toggle" />
-
-                <x-menu-separator title="UI" icon="o-cursor-arrow-rays" />
-                <x-menu-item title="Alert" link="/docs/components/alert" />
-                <x-menu-item title="Button" link="/docs/components/button" />
-                <x-menu-item title="Card" link="/docs/components/card" />
-                <x-menu-item title="Drawer" link="/docs/components/drawer" />
-
-                <x-menu-item title="Header" link="/docs/components/header" />
-                <x-menu-item title="Icon" link="/docs/components/icon" />
-
-                <x-menu-item title="List Item" link="/docs/components/list-item" />
-                <x-menu-item title="Menu" link="/docs/components/menu" />
-                <x-menu-item title="Modal" link="/docs/components/modal" />
-                <x-menu-item title="Table" link="/docs/components/table" />
-                <x-menu-item title="Tabs" link="/docs/components/tabs" />
-            </x-menu>
-        </x-slot:sidebar>
-        <x-slot:content class="lg:max-w-4xl">
+        <x-slot:content>
             {{ $slot }}
         </x-slot:content>
         <x-slot:footer>

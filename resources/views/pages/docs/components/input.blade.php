@@ -5,7 +5,7 @@
 # Input
 </x-markdown>
 
-<x-code class="grid gap-3 " x-data>
+<x-code class="grid gap-3">
     @verbatim
     <x-input label="Name" placeholder="Your name" hint="Fill with your full name" />
 
