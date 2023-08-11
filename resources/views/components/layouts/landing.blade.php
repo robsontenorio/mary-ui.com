@@ -14,10 +14,6 @@
 <body class="min-h-screen font-sans antialiased">
     <x-nav sticky>
         <x-slot:brand>
-            <label for="main-drawer" class="lg:hidden mr-3">
-                <x-icon name="o-bars-3" class="cursor-pointer" />
-            </label>
-
             <a href="/" wire:navigate>
                 <x-mary-brand />
             </a>
@@ -36,7 +32,7 @@
     </x-nav>
 
     <x-main>
-        <x-slot:content>
+        <x-slot:content class="px-0 lg:px-0">
             {{ $slot }}
         </x-slot:content>
         <x-slot:footer>
