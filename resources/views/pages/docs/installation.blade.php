@@ -10,28 +10,23 @@ Of course you can opt to not install daisyUI, but in this case you need to style
 ### Install dependencies
 
 
-<pre>
-<x-torchlight-code language='bash'>
+<x-code no-render language="bash">
 # Livewire 3
 composer require livewire/livewire "^3.0@beta"
 
 # Tailwind and daisyUI
 yarn install -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
-</x-torchlight-code>
-</pre>
+</x-code>
 
 ### Install mary
 
-<pre>
-<x-torchlight-code language='bash'>
-    composer require robsontenorio/mary    
-</x-torchlight-code>
-</pre>
+<x-code no-render language="bash">
+composer require robsontenorio/mary    
+</x-code>
 
 Then, add **mary** and **daisy** entries to `tailwind.config.js`.
 
-<pre>
-<x-torchlight-code language='javascript'>
+<x-code no-render language="javascript">
 export default {
     content: [
         // You will probably also need those lines
@@ -47,8 +42,7 @@ export default {
     },
     plugins: [require("daisyui")] //[tl! add]
 }
-</x-torchlight-code>
-</pre>
+</x-code>
 
 
 <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 

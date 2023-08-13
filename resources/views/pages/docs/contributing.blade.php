@@ -9,8 +9,7 @@
 - Change `composer.json` from **your app**
 
 
-<pre>
-<x-torchlight-code language='json'>
+<x-code no-render language="javascript">
 "minimum-stability": "dev",      // <- change to "dev" [tl! highlight]
 "repositories": {
     "robsontenorio/mary": {
@@ -21,24 +20,20 @@
         }
     }
 }
-</x-torchlight-code>
-</pre>
+</x-code>
 
 - Require the package again for local symlink.
 
-<pre>
-<x-torchlight-code language='bash'>
+<x-code no-render language="bash">
 composer require robsontenorio/mary
-</x-torchlight-code>
-</pre>
+</x-code>
 
 - Start dev  
 
-<pre>
-<x-torchlight-code language='bash'>
+<x-code no-render language="bash">
 yarn dev
-</x-torchlight-code>
-</pre>
+</x-code>
+
 </x-markdown>
 
 </x-layouts.app>

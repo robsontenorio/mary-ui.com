@@ -45,49 +45,36 @@ p {
  overflow-x-auto is recommended.
 */
 pre {
-    @apply my-4 rounded-lg overflow-x-auto;
+    @apply my-4 p-4 rounded-lg overflow-x-auto;
+    @apply text-sm leading-6
 }
 
-/*
- Add some vertical padding and expand the width
- to fill its container. The horizontal padding
- comes at the line level so that background
- colors extend edge to edge.
-*/
-pre code.torchlight {
-    @apply block py-4 min-w-max text-sm;
+
+.shiki .highlight {
+    background-color: hsl(197, 88%, 94%);
+    padding: 3px 0;
 }
 
-/*
- Horizontal line padding.
-*/
-pre code.torchlight .line {
-    @apply px-4 py-1;
+.shiki .add {
+    background-color: hsl(136, 100%, 96%);
+    padding: 3px 0;
 }
 
-/*
- Push the code away from the line numbers and
- summary caret indicators.
-*/
-pre code.torchlight .line-number,
-pre code.torchlight .summary-caret {
-    @apply mr-4;
+.shiki .del {
+    background-color: hsl(354, 100%, 96%);
+    padding: 3px 0;
 }
 
-.torchlight.has-focus-lines .line:not(.line-focus) {
-    transition: filter 0.35s, opacity 0.35s;
-    filter: blur(.095rem);
-    opacity: .65;
+.shiki.focus .line:not(.focus) {
+    transition: all 250ms;
+    filter: blur(2px);
 }
 
-/*
-  When the code block is hovered, bring all the lines into focus.
-*/
-.torchlight.has-focus-lines:hover .line:not(.line-focus) {
-    filter: blur(0px);
-    opacity: 1;
+.shiki.focus:hover .line {
+    transition: all 250ms;
+    filter: blur(0);
 }
 
-code:not(.torchlight) {
+code:not(.shiki > code) {
     @apply bg-base-200 py-0.5 px-2 mx-1 rounded text-sm text-red-400
 }

@@ -20,15 +20,19 @@ class Code extends Component
         return <<<'HTML'
         <!-- Fix identation -->
         @php 
-            $x = (string) Str::of($slot)->prepend('    ');
+            $x = (string) Str::of($slot);
         @endphp
 
         @if(!$noRender)
             <div {{ $attributes->class(["rounded-lg  p-8 bg-base-200/50 border-gray-400/50 border border-dashed"]) }} >                            
-                    @php  echo Blade::render($x)  @endphp                
+                <?php echo Blade::render($x);  ?>
             </div>
         @endif
-        <pre><x-torchlight-code :language="$language" :contents="$x" /></pre>
+        <x-markdown theme="material-theme-palenight">
+        ```{{ $language }}
+        {!! $x !!}
+        ```
+        </x-markdown>
         HTML;
     }
 }
