@@ -29,22 +29,18 @@ $delete = function () {
 
 <div>
 
-<div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">
-    
-
+<div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">    
     <div class="font-extrabold text-6xl text-center mb-10 mt-20">
-        Do <span class="underline decoration-green-500">more</span> with <span class="underline decoration-rose-500">less</span>.    
+        Do <span class="underline decoration-green-500">more</span> with <span class="underline decoration-red-500 decoration-wavy">less</span>.    
     </div>
-
-    <div class="my-5 flex justify-center items-center">    
-        <span class="bg-yellow-200 rounded text-sm  text-gray-800 px-2 py-0.5 font-bold -rotate-6">
-            Made for Livewire 3
-        </span>                    
-    </div>
+    
     
     <div class="text-center">
-        <div class="text-lg">
-            Develop at light speed with this set of composable <strong>Laravel blade components</strong> styled around daisyUI and Tailwind. 
+        <div class="text-lg leading-10">
+            Nice <span class="bg-red-100 px-2 py-1 rounded  font-bold decoration-wavy">Laravel blade components</span> 
+            <br>carefully crafted for
+            <span class="bg-yellow-100 px-2 py-1 rounded  font-bold decoration-wavy">Livewire 3</span> <br>
+             styled around <span class="bg-sky-100 px-2 py-1 rounded  font-bold decoration-wavy">daisyUI + Tailwind</span>
         </div>
         
         <div class="mt-10">

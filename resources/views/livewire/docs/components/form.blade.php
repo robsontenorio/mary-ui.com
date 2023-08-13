@@ -11,6 +11,9 @@ new class extends Component
     #[Rule('required|email')]
     public $email = '';
 
+    #[Rule('required|decimal:0,2')]
+    public $amount = '';
+
     public function save()
     {
         sleep(1);
@@ -24,10 +27,11 @@ new class extends Component
 <x-markdown class="markdown">
 # Form
 
-Submit this example form and you will get for free:
+Once you submit a form you get for free:
 
 - Validation errors based on `wire:model`.
 - Button spinner base on `target` action.
+- Auto unmask `money` inputs for nice validation.
 
 <br>
 </x-markdown>
@@ -37,6 +41,8 @@ Submit this example form and you will get for free:
 <x-form wire:submit="save">
     <x-input label="Name" wire:model="name" hint="Full name" />
     <x-input label="E-mail" wire:model="email" icon="o-envelope" placeholder="Personal email" />
+    <x-input label="Amount" wire:model="amount" prefix="US" money hint="It submits a unmasked value" />    
+
     <x-slot:actions>
         <x-button label="Cancel" />
         <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />

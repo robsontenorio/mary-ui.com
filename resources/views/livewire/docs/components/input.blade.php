@@ -24,7 +24,7 @@ new class extends Component
 <x-input label="E-mail" wire:model="email" icon="o-envelope" />
 
 <!-- It uses Alpine x-mask plugin for money -->
-<x-input label="Auto money" wire:model="money1" prefix="US" money />
+<x-input label="Auto money" wire:model="money1" prefix="US" money hint="It submits a unmasked value" />
 
 <!-- It uses Alpine x-mask plugin for money -->
 <x-input 
@@ -33,7 +33,8 @@ new class extends Component
     prefix="R$" 
     money     
     thousands-separator="."  
-    fraction-separator="," />
+    fraction-separator="," 
+    hint="It submits a unmasked value" />
     
 @endverbatim
 </x-code>
