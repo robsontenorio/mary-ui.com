@@ -18,8 +18,8 @@ new class extends Component
 ### Default attributes
 It will lookup for:
 
-- `$object->id` for option value
-- `$object->name` for option display label 
+- `$object->id` for option value.
+- `$object->name` for option display label.
 
 <br>
 </x-markdown>
@@ -44,17 +44,14 @@ Just set `option-value` and `option-label`  representing desired targets.
 <x-code class="grid gap-5"> 
 @verbatim
 @php
-    $users = App\Models\User::take(5)->get()->each(function($item){
-                $item->other_value = $item->id;
-                $item->other_label = $item->name;
-            });
+    $users = App\Models\User::take(5)->get();
 @endphp 
 
 <x-select 
     label="Alternative" 
     :options="$users" 
-    option-value="other_value" 
-    option-label="other_label" 
+    option-value="custom_key" 
+    option-label="other_name" 
     placeholder="Select an user" 
     hint="Select one, please."
     wire:model="selectedUser2" />

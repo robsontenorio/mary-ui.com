@@ -29,7 +29,7 @@ new class extends Component
 <x-markdown>
 ### Currency
 
-It uses Alpine `x-mask` plugin with `$money`. Under the hood it sets and unmasked value when you submit a form.
+It uses Alpine `x-mask` plugin with `$money`. Under the hood it sets an unmasked value when you submit a form.
 
 </x-markdown>
 

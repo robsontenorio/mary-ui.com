@@ -19,8 +19,8 @@ new class extends Component
 
 It will lookup for:
 
-- `$object->id` for option value
-- `$object->name` for option display label 
+- `$object->id` for option value.
+- `$object->name` for option display label.
 
 <br>
 </x-markdown>

@@ -30,7 +30,7 @@ new class extends Component
 Once you submit a form you get for free:
 
 - Validation errors based on `wire:model`.
-- Button spinner base on `target` action.
+- Button spinner based on `target` action.
 - Auto unmask `money` inputs for nice validation.
 
 <br>
@@ -41,7 +41,7 @@ Once you submit a form you get for free:
 <x-form wire:submit="save">
     <x-input label="Name" wire:model="name" hint="Full name" />
     <x-input label="E-mail" wire:model="email" icon="o-envelope" placeholder="Personal email" />
-    <x-input label="Amount" wire:model="amount" prefix="US" money hint="It submits a unmasked value" />    
+    <x-input label="Amount" wire:model="amount" prefix="US" money hint="It submits an unmasked value" />    
 
     <x-slot:actions>
         <x-button label="Cancel" />

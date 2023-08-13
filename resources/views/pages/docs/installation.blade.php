@@ -5,7 +5,7 @@
 # Installation
 
 This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
-You can customize most of components styles, by inline overriding daisyUI and Tailwind css classes.
+You can customize most of components styles, by inline overriding daisyUI and Tailwind CSS classes.
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown">

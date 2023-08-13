@@ -14,29 +14,30 @@ new class extends Component
 
 <div>
 
-<x-markdown>
+<x-markdown class="markdown">
 # List Item
+
+It will lookup for:
+
+- `$object->name` as main value.
+-  `$object->avatar` as picture url.
+
+<br>
 </x-markdown>
 
 <x-code>
 @verbatim
 @php
-    $item = new App\Models\User([
-        'id' => 1,
-        'name' => 'Mary Jane',
-        'email' => 'mary@jane.com',
-        'avatar' => 'https://picsum.photos/200?='.now(),
-        'other_avatar' => 'https://picsum.photos/200?x=1',
-        'other_name' => 'Carl Silver',
-        'other_subvalue' => 'carl@news.com'
-    ]);
+    $user1 = App\Models\User::inRandomOrder()->first();
+    $user2 = App\Models\User::inRandomOrder()->first();
+    $user3 = App\Models\User::inRandomOrder()->first();
 @endphp 
 
-<x-list-item :item="$item" link="/docs/installation" />
+<x-list-item :item="$user1" link="/docs/installation" />
 
-<x-list-item :item="$item" value="other_name" sub-value="email" avatar="other_avatar" />    
+<x-list-item :item="$user2" value="other_name" sub-value="other_email" avatar="other_avatar" />    
 
-<x-list-item :item="$item" sub-value="email" no-separator>
+<x-list-item :item="$user3" sub-value="email" no-separator>
     <x-slot:sub-value>
         Custom stuff here
     </x-slot:sub-value>
