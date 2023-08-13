@@ -6,8 +6,8 @@
 <x-code>
 @verbatim
 <x-menu title="Components" icon="o-cursor-arrow-rays" separator>
-    <x-menu-item title="Click here to navigate to Alert docs" icon="o-share" link="/docs/components/alert" />
     <x-menu-item title="Messages" icon="o-envelope"   />
+    <x-menu-item title="Navigate to Alert docs" icon="o-arrow-right" link="/docs/components/alert" />
     
     <x-menu-separator />
     <x-menu-item title="Another item"  />

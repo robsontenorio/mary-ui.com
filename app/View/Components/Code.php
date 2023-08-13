@@ -24,9 +24,9 @@ class Code extends Component
         @endphp
 
         @if(!$noRender)
-            <div {{ $attributes->class(["rounded-lg  p-8 bg-base-200/50 border-gray-400/50 border border-dashed"]) }} >                            
+            <x-mockup {{ $attributes }}>
                 <?php echo Blade::render($x);  ?>
-            </div>
+            </x-mockup>
         @endif
         <x-markdown theme="material-theme-palenight">
         ```{{ $language }}

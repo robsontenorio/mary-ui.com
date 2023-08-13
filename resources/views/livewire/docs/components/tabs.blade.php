@@ -7,13 +7,13 @@
 @verbatim
 <x-tabs selected="tab2">
     <x-tab name="tab1" label="Users" icon="o-users">
-        <span>Users</span>
+        <div>Users</div>
     </x-tab>
-    <x-tab name="tab2" label="Offices" icon="o-building-office">
-        <span>Offices</span>
+    <x-tab name="tab2" label="Tricks" icon="o-sparkles">
+        <div>Tricks</div>
     </x-tab>
     <x-tab name="tab3" label="Musics" icon="o-musical-note">
-        <span>Musics</span>
+        <div>Musics</div>
     </x-tab>
 </x-tabs>
 @endverbatim

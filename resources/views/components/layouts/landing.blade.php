@@ -42,11 +42,6 @@
             </div>
         </x-slot:footer>
     </x-main>
-
-    {{-- TODO: just add an empty livewire component to make wire:navigate work on top level --}}
-    {{-- Is it a bug because were are using folio for managing top level routes ??? --}}
-    <livewire:nothing />
-
 </body>
 
 </html>

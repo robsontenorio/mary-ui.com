@@ -17,7 +17,7 @@ new class extends Component
 </x-markdown>
 
 <x-code class="flex gap-5 justify-center">
-<div class="w-96 bg-base-200 p-5 rounded-lg">
+<div class="w-96 border-dashed border border-gray-400/50 rounded-lg p-8">
     @verbatim
     <x-toggle label="Left" wire:model="item1" />
     <hr class="my-5" />
