@@ -12,7 +12,7 @@ new class extends Component
 ?>
 
 <div>
-<x-markdown>
+<x-markdown class="markdown">
 # Radio
 
 ### Default attributes
