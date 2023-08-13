@@ -88,7 +88,7 @@ $delete = function () {
 
 <div class="bg-base-200/50 px-5 lg:px-20 pb-20">
     <div class="font-extrabold text-4xl py-10 text-right"> 
-        Less code, more action.
+        It. Just. Works.
     </div>
 
 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
