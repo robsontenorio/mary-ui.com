@@ -30,16 +30,18 @@ $delete = function () {
 <div>
 
 <div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">
-    <div class="my-5 flex justify-center items-center">    
-        <span class="bg-yellow-200 rounded text-sm  text-gray-800 px-2 py-0.5 font-bold -rotate-6">
-            Works with Livewire 3
-        </span>                    
-    </div>
+    
 
     <div class="font-extrabold text-6xl text-center mb-10 mt-20">
         Do <span class="underline decoration-green-500">more</span> with <span class="underline decoration-rose-500">less</span>.    
     </div>
 
+    <div class="my-5 flex justify-center items-center">    
+        <span class="bg-yellow-200 rounded text-sm  text-gray-800 px-2 py-0.5 font-bold -rotate-6">
+            Made for Livewire 3
+        </span>                    
+    </div>
+    
     <div class="text-center">
         <div class="text-lg">
             Develop at light speed with this set of composable <strong>Laravel blade components</strong> styled around daisyUI and Tailwind. 
