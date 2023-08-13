@@ -30,17 +30,17 @@ $delete = function () {
 <div>
 
 <div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">    
-    <div class="font-extrabold text-6xl text-center mb-10 mt-20">
-        Do <span class="underline decoration-green-500">more</span> with <span class="underline decoration-red-500 decoration-wavy">less</span>.    
+    <div class="font-bold text-6xl text-center mb-10 mt-20">
+        <span class="font-extrabold">Do more</span>. <span class="font-thin">Code less</span>.    
     </div>
     
     
     <div class="text-center">
-        <div class="text-lg leading-10">
-            Nice <span class="bg-red-100 px-2 py-1 rounded  font-bold decoration-wavy">Laravel blade components</span> 
+        <div class="text-lg leading-7">
+            Nice <span class="underline decoration-red-400  rounded  font-bold decoration-wavy">Laravel blade components</span> 
             <br>made for
-            <span class="bg-yellow-100 px-2 py-1 rounded  font-bold decoration-wavy">Livewire 3</span> <br>
-             styled with <span class="bg-sky-100 px-2 py-1 rounded  font-bold decoration-wavy">daisyUI + Tailwind</span>
+            <span class="underline decoration-yellow-400  rounded  font-bold decoration-wavy">Livewire 3</span> 
+             and styled around <span class="underline decoration-sky-400  rounded  font-bold decoration-wavy">daisyUI + Tailwind</span>
         </div>
         
         <div class="mt-10">
