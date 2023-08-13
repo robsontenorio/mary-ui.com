@@ -19,13 +19,13 @@ new class extends Component
 <x-code class="flex gap-5 justify-center">
 <div class="w-96 bg-base-200 p-5 rounded-lg">
     @verbatim
-    <x-toggle label="Option 1" wire:model="item1" />
+    <x-toggle label="Left" wire:model="item1" />
     <hr class="my-5" />
 
-    <x-toggle label="Option 2" wire:model="item2" class="toggle-warning" right />
+    <x-toggle label="Right" wire:model="item2" class="toggle-warning" right />
     <hr class="my-5" />    
 
-    <x-button label="Switch" @click="$wire.item2 = !$wire.item2"  class="btn-outline"/>
+    <x-button label="Switch with $wire" @click="$wire.item2 = !$wire.item2"  class="btn-outline"/>
     @endverbatim
 </div>
 </x-code>

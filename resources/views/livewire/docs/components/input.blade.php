@@ -22,20 +22,29 @@ new class extends Component
 <x-input label="Name" placeholder="Your name" hint="Fill with your full name" />
 
 <x-input label="E-mail" wire:model="email" icon="o-envelope" />
+    
+@endverbatim
+</x-code>
 
-<!-- It uses Alpine x-mask plugin for money -->
-<x-input label="Auto money" wire:model="money1" prefix="US" money hint="It submits a unmasked value" />
+<x-markdown>
+### Currency
 
-<!-- It uses Alpine x-mask plugin for money -->
+It uses Alpine `x-mask` plugin with `$money`. Under the hood it sets and unmasked value when you submit a form.
+
+</x-markdown>
+
+<x-code class="grid gap-4">
+@verbatim
+<x-input label="Default money" wire:model="money1" prefix="US" money />
+
 <x-input 
     label="Custom money" 
     wire:model="money2" 
     prefix="R$" 
     money     
     thousands-separator="."  
-    fraction-separator="," 
-    hint="It submits a unmasked value" />
-    
+    fraction-separator=","  />    
 @endverbatim
 </x-code>
+
 </div>
