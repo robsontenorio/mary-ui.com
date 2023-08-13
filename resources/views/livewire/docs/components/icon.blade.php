@@ -1,6 +1,6 @@
 <div>
 
-<x-markdown>
+<x-markdown class="markdown">
 # Icon
 
 All icons are powered by [Blade Hero Icons](https://blade-ui-kit.com/blade-icons?set=1#search).
