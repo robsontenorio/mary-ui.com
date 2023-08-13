@@ -13,8 +13,9 @@ new class extends Component
 <x-markdown>
 # Drawer
 
-You can direct open a drawer by using native HTML `<label>` while referencing drawer `id`. It closes when you click outside.
+### Native HTML
 
+You can direct open a drawer by using native HTML `<label>` while referencing drawer `id`. It closes when you click outside.
 </x-markdown>
 
 <x-code class="flex gap-5">
@@ -29,21 +30,27 @@ You can direct open a drawer by using native HTML `<label>` while referencing dr
     </x-card>
 </x-drawer>
 
+<!-- HTML: Just reference correct drawer ID  -->
+<label for="my-drawer" class="btn btn-primary capitalize">Open left</label>
+<label for="my-drawer2" class="btn btn-warning capitalize">Open right</label>
+@endverbatim
+</x-code>
+
+<x-markdown>
+### With Livewire
+</x-markdown>
+
+<x-code class="flex gap-5">
+@verbatim
 <x-drawer wire:model="openDrawer" class="bg-red-300" >
     With `wire:model`
 </x-drawer>
 
-<!-- HTML: Just reference correct drawer ID  -->
-<label for="my-drawer" class="btn btn-primary capitalize">Open left (HTML)</label>
-<label for="my-drawer2" class="btn btn-warning capitalize">Open right (HTML)</label>
-
 <!-- Livewire: Server side  -->
-<x-button label="Livewire (server)" wire:click="$toggle('openDrawer')" class="btn-info" />
+<x-button label="Server" wire:click="$toggle('openDrawer')" class="btn-primary" />
 
-<!-- Livewire: Client side  -->
-<x-button label="Livewire (client)" @click="$wire.openDrawer = true" class="btn-error" />
-
-
+<!-- Livewire: Client side (no http request)  -->
+<x-button label="Client" @click="$wire.openDrawer = true" class="btn-warning" />
 @endverbatim
 </x-code>
 
