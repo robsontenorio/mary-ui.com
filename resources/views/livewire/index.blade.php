@@ -38,9 +38,9 @@ $delete = function () {
     <div class="text-center">
         <div class="text-lg leading-10">
             Nice <span class="bg-red-100 px-2 py-1 rounded  font-bold decoration-wavy">Laravel blade components</span> 
-            <br>carefully crafted for
+            <br>made for
             <span class="bg-yellow-100 px-2 py-1 rounded  font-bold decoration-wavy">Livewire 3</span> <br>
-             styled around <span class="bg-sky-100 px-2 py-1 rounded  font-bold decoration-wavy">daisyUI + Tailwind</span>
+             styled with <span class="bg-sky-100 px-2 py-1 rounded  font-bold decoration-wavy">daisyUI + Tailwind</span>
         </div>
         
         <div class="mt-10">
@@ -60,7 +60,6 @@ $delete = function () {
 
 
 <x-mockup>
-    
     <x-form wire:submit="save">
         <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
         <x-input label="Amount" wire:model="amount" prefix="US" money />    
@@ -69,13 +68,10 @@ $delete = function () {
             <x-button label="Clik me!" class="btn-primary" type="submit" spinner="save" />
         </x-slot:actions>
     </x-form>
-    
 </x-mockup>
 
 
-<x-markdown theme="material-theme-palenight">
-
-```html
+<x-code no-render>
 @verbatim
 <x-form wire:submit="save">
     <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
@@ -86,8 +82,6 @@ $delete = function () {
     </x-slot:actions>
 </x-form>
 @endverbatim
-```
-
 </x-markdown>
 
 </div>
@@ -99,8 +93,7 @@ $delete = function () {
 
 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
 
-<x-markdown theme="material-theme-palenight">
-```html
+<x-code no-render>
 @verbatim
 @foreach($this->users as $user) 
     <x-list-item :item="$user" sub-value="username" link="/docs/installation">
@@ -110,7 +103,6 @@ $delete = function () {
     </x-list-item>
 @endforeach
 @endverbatim
-```
 </x-markdown>
 
 
