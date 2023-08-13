@@ -41,12 +41,15 @@ export default {
         "./app/View/Components/**/**/*.php",
         "./app/Livewire/**/**/*.php",                     
 
-        "./vendor/robsontenorio/mary/src/View/Components/**/*.php" //[tl! add]
+        // Add mary
+        "./vendor/robsontenorio/mary/src/View/Components/**/*.php" 
     ],
     theme: {
         extend: {},
     },
-    plugins: [require("daisyui")] //[tl! add]
+    
+    // Add daisyUI
+    plugins: [require("daisyui")] 
 }
 </x-code>
 
