@@ -53,6 +53,19 @@ export default {
 }
 </x-code>
 
+Remember to add Tailwind directives to `resources/app.css`
+
+<x-code no-render language="css">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</x-code>
+
+
+Finally, start dev server
+<x-code no-render language="bash">
+yarn dev
+</x-code>
 
 <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
 
