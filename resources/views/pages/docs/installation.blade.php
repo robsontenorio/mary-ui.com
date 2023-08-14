@@ -21,7 +21,7 @@ You can customize most of components styles, by inline overriding daisyUI and Ta
 composer require livewire/livewire "^3.0@beta"
 
 # Tailwind and daisyUI
-yarn install -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
+yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
 </x-code>
 
 ### Install mary
