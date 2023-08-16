@@ -6,10 +6,13 @@ You are free to make your own layout decision. But, here is suggestion to quickl
 
 You can play around by placing css classes on components/slots, or just removing some entirely.
 
+File: `views/components/layouts/app.blade.php`
 </x-markdown>
 
 <x-code no-render>
 @verbatim
+...
+
 <!-- Remember this -->
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
