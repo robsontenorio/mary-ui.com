@@ -35,6 +35,7 @@ composer require robsontenorio/mary
 Then, add **mary** and **daisy** entries to `tailwind.config.js`.
 
 <x-code no-render language="javascript">
+/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         // You will probably also need those lines
