@@ -6,7 +6,7 @@ new class extends Component
 {
     public int $selectedUser = 1;
 
-    public int $selectedUser2 = 1;
+    public int $selectedUser2;
 }
 
 ?>
@@ -47,17 +47,14 @@ Just set `option-value` and `option-label`  representing desired targets.
 <x-code>
 @verbatim        
 @php
-    $users = App\Models\User::take(3)->get()->each(function($item){
-                $item->other_value = $item->id;
-                $item->other_label = $item->name;
-            });
+    $users = App\Models\User::take(3)->get();
 @endphp
 
 <x-radio 
     label="Select one" 
     :options="$users" 
-    option-value="other_value" 
-    option-label="other_label" 
+    option-value="custom_key" 
+    option-label="other_name" 
     wire:model="selectedUser2" 
     hint="Choose wisely"
     class="bg-blue-50"/>

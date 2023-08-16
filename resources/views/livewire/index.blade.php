@@ -62,7 +62,7 @@ $delete = function () {
 <x-mockup>
     <x-form wire:submit="save">
         <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
-        <x-input label="Amount" wire:model="amount" prefix="US" money />    
+        <x-input label="Amount" wire:model="amount" prefix="USD" money />    
         <x-slot:actions>
             <x-button label="Cancel" />
             <x-button label="Clik me!" class="btn-primary" type="submit" spinner="save" />

@@ -39,10 +39,8 @@ Once you submit a form you get for free:
 <x-code>
 @verbatim
 <x-form wire:submit="save">
-    <x-input label="Name" wire:model="name" hint="Full name" />
-    <x-input label="E-mail" wire:model="email" icon="o-envelope" placeholder="Personal email" />
-    <x-input label="Amount" wire:model="amount" prefix="US" money hint="It submits an unmasked value" />    
-
+    <x-input label="Name" wire:model="name" />
+    <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />    
     <x-slot:actions>
         <x-button label="Cancel" />
         <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />

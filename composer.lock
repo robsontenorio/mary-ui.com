@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "87af2f8bb0ebd27b8a86540537dc7faf",
+    "content-hash": "c53f13ccdfa00079b8ab2d4539aef0f3",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1121,78 +1121,6 @@
             "time": "2021-10-07T12:57:01+00:00"
         },
         {
-            "name": "laravel/folio",
-            "version": "v1.0.0-beta.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/folio.git",
-                "reference": "0d42ee9485f83e2c57b2a5d40cd4f651c2ff95e3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/folio/zipball/0d42ee9485f83e2c57b2a5d40cd4f651c2ff95e3",
-                "reference": "0d42ee9485f83e2c57b2a5d40cd4f651c2ff95e3",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^10.15|^11.0",
-                "illuminate/container": "^10.15|^11.0",
-                "illuminate/contracts": "^10.15|^11.0",
-                "illuminate/filesystem": "^10.15|^11.0",
-                "illuminate/pipeline": "^10.15|^11.0",
-                "illuminate/routing": "^10.15|^11.0",
-                "illuminate/support": "^10.15|^11.0",
-                "illuminate/view": "^10.15|^11.0",
-                "php": "^8.1",
-                "spatie/once": "^3.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^8.5.10",
-                "pestphp/pest": "^2.5",
-                "phpstan/phpstan": "^1.10"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Folio\\FolioServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "functions.php"
-                ],
-                "psr-4": {
-                    "Laravel\\Folio\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Page based routing for Laravel.",
-            "homepage": "https://github.com/laravel/folio",
-            "keywords": [
-                "laravel",
-                "routing"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/folio/issues",
-                "source": "https://github.com/laravel/folio"
-            },
-            "time": "2023-08-08T11:33:29+00:00"
-        },
-        {
             "name": "laravel/framework",
             "version": "v10.18.0",
             "source": {
@@ -2086,16 +2014,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.0-beta.8",
+            "version": "v3.0.0-beta.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "888c869df2c886c603ffafa7b70240891dbc56ed"
+                "reference": "e3547a6cab69c6a50444c9681042aa6b7b31442a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/888c869df2c886c603ffafa7b70240891dbc56ed",
-                "reference": "888c869df2c886c603ffafa7b70240891dbc56ed",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/e3547a6cab69c6a50444c9681042aa6b7b31442a",
+                "reference": "e3547a6cab69c6a50444c9681042aa6b7b31442a",
                 "shasum": ""
             },
             "require": {
@@ -2147,7 +2075,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.8"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.9"
             },
             "funding": [
                 {
@@ -2155,31 +2083,31 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-08T19:03:42+00:00"
+            "time": "2023-08-15T03:56:30+00:00"
         },
         {
             "name": "livewire/volt",
-            "version": "v1.0.0-beta.4",
+            "version": "v1.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "75f3985162a5525e826ba189a26fe5c3df9f6b0c"
+                "reference": "2e1e9469d668d0051e8b16e25748d95e02dbb714"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/75f3985162a5525e826ba189a26fe5c3df9f6b0c",
-                "reference": "75f3985162a5525e826ba189a26fe5c3df9f6b0c",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/2e1e9469d668d0051e8b16e25748d95e02dbb714",
+                "reference": "2e1e9469d668d0051e8b16e25748d95e02dbb714",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": "^10.16|^11.0",
+                "laravel/framework": "^10.17|^11.0",
                 "livewire/livewire": "^3.0",
                 "php": "^8.1"
             },
             "require-dev": {
                 "laravel/folio": "^1.0",
                 "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^8.5",
+                "orchestra/testbench": "^8.6.2",
                 "pestphp/pest": "^2.9.5",
                 "phpstan/phpstan": "^1.10"
             },
@@ -2227,7 +2155,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-08-08T15:28:03+00:00"
+            "time": "2023-08-15T13:56:20+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3465,16 +3393,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.14.0",
+            "version": "0.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "f84647de5cd2663ad8f9137939b67be83b2b9478"
+                "reference": "7a1d79088cb7a721d85795f2a724031329181ac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/f84647de5cd2663ad8f9137939b67be83b2b9478",
-                "reference": "f84647de5cd2663ad8f9137939b67be83b2b9478",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/7a1d79088cb7a721d85795f2a724031329181ac9",
+                "reference": "7a1d79088cb7a721d85795f2a724031329181ac9",
                 "shasum": ""
             },
             "require": {
@@ -3524,9 +3452,9 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.14.0"
+                "source": "https://github.com/robsontenorio/mary/tree/0.17.0"
             },
-            "time": "2023-08-13T20:14:01+00:00"
+            "time": "2023-08-16T01:06:37+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",
@@ -3796,68 +3724,6 @@
                 }
             ],
             "time": "2023-05-29T13:17:57+00:00"
-        },
-        {
-            "name": "spatie/once",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/once.git",
-                "reference": "aab3fc8694e7caec98b2d330c4a8420391c7559d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/once/zipball/aab3fc8694e7caec98b2d330c4a8420391c7559d",
-                "reference": "aab3fc8694e7caec98b2d330c4a8420391c7559d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "pestphp/pest": "^1.21",
-                "symfony/var-dumper": "^5.1"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "Spatie\\Once\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A magic memoization function",
-            "homepage": "https://github.com/spatie/once",
-            "keywords": [
-                "cache",
-                "callable",
-                "memoization",
-                "once",
-                "spatie"
-            ],
-            "support": {
-                "source": "https://github.com/spatie/once/tree/3.1.0"
-            },
-            "funding": [
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                    "type": "custom"
-                }
-            ],
-            "time": "2022-04-21T12:23:20+00:00"
         },
         {
             "name": "spatie/shiki-php",
@@ -8938,7 +8804,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "laravel/folio": 10,
         "livewire/livewire": 10,
         "livewire/volt": 10
     },

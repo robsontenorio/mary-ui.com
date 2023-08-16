@@ -37,9 +37,12 @@ It will lookup for:
 
 <x-list-item :item="$user2" value="other_name" sub-value="other_email" avatar="other_avatar" />    
 
-<x-list-item :item="$user3" sub-value="email" no-separator>
+<x-list-item :item="$user3" no-separator>
+    <x-slot:value>
+        Custom value
+    </x-slot:value>
     <x-slot:sub-value>
-        Custom stuff here
+        Custom sub-value
     </x-slot:sub-value>
     <x-slot:action>
         <x-button icon="o-trash" class="text-red-500" wire:click="delete(1)" spinner />

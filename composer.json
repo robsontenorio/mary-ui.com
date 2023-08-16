@@ -15,14 +15,13 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/folio": "^1.0@beta",
         "laravel/framework": "^10.18",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "league/iso3166": "^4.3",
         "livewire/livewire": "^3.0@beta",
         "livewire/volt": "^1.0@beta",
-        "robsontenorio/mary": "^0.14.0",
+        "robsontenorio/mary": "^0.17.0",
         "spatie/laravel-markdown": "^2.3",
         "spatie/laravel-validation-rules": "^3.3",
         "torchlight/torchlight-laravel": "^0.5.13"

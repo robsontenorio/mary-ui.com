@@ -31,6 +31,8 @@ It will lookup for:
 @endphp
 
 <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" /> 
+
+<x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline /> 
 @endverbatim
 </x-code>
 
