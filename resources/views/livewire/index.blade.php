@@ -37,10 +37,10 @@ $delete = function () {
     
     <div class="text-center">
         <div class="text-lg leading-7">
-            Nice <span class="underline decoration-red-400  rounded  font-bold decoration-wavy">Laravel blade components</span> 
+        Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade components</span> 
             <br>made for
-            <span class="underline decoration-yellow-400  rounded  font-bold decoration-wavy">Livewire 3</span> 
-             and styled around <span class="underline decoration-sky-400  rounded  font-bold decoration-wavy">daisyUI + Tailwind</span>
+            <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span> 
+             and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
         </div>
         
         <div class="mt-10">
