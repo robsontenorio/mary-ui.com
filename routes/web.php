@@ -1,7 +1,5 @@
 <?php
 
-use App\Livewire\Counter;
-use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 /*
@@ -15,9 +13,10 @@ use Livewire\Volt\Volt;
 |
 */
 
-Route::get('/counter', Counter::class);
-
 Volt::route('/', 'index');
+Volt::route('/docs/installation', 'docs.installation');
+Volt::route('/docs/contributing', 'docs.contributing');
+Volt::route('/docs/layout', 'docs.layout');
 
 // FORMS
 Volt::route('/docs/components/form', 'docs.components.form');
@@ -28,6 +27,7 @@ Volt::route('/docs/components/toggle', 'docs.components.toggle');
 
 // UI
 Volt::route('/docs/components/alert', 'docs.components.alert');
+Volt::route('/docs/components/badges', 'docs.components.badges');
 Volt::route('/docs/components/button', 'docs.components.button');
 Volt::route('/docs/components/card', 'docs.components.card');
 Volt::route('/docs/components/drawer', 'docs.components.drawer');
@@ -36,5 +36,6 @@ Volt::route('/docs/components/icon', 'docs.components.icon');
 Volt::route('/docs/components/list-item', 'docs.components.list-item');
 Volt::route('/docs/components/menu', 'docs.components.menu');
 Volt::route('/docs/components/modal', 'docs.components.modal');
+Volt::route('/docs/components/stat', 'docs.components.stat');
 Volt::route('/docs/components/table', 'docs.components.table');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');

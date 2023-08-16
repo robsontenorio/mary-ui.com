@@ -1,6 +1,4 @@
-{{-- blade-formatter-disable --}}
-<x-layouts.app>
-
+<div>
 <x-markdown class="markdown">
 # Contributing
 
@@ -35,6 +33,4 @@ yarn dev
 </x-code>
 
 </x-markdown>
-
-</x-layouts.app>
-{{-- blade-formatter-enable --}}
+</div>

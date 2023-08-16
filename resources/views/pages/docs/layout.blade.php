@@ -1,6 +1,4 @@
-{{-- blade-formatter-disable --}}
-<x-layouts.app>
-
+<div>
 <x-markdown>
 # Layout
 
@@ -58,6 +56,4 @@ You can play around by placing css classes on components/slots, or just removing
 </body>
 @endverbatim
 </x-code>
-
-</x-layouts.app>
-{{-- blade-formatter-enable --}}
+</div>

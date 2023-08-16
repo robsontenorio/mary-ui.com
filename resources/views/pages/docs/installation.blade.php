@@ -1,6 +1,4 @@
-{{-- blade-formatter-disable --}}
-<x-layouts.app>
-
+<div>
 <x-markdown class="markdown">
 # Installation
 
@@ -72,5 +70,4 @@ yarn dev
 <strong >... You are done!</strong>
 
 </x-markdown>
-</x-layouts.app>
-{{-- blade-formatter-enable --}}
+</div>
