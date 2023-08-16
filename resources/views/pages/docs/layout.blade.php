@@ -10,6 +10,9 @@ You can play around by placing css classes on components/slots, or just removing
 
 <x-code no-render>
 @verbatim
+<!-- Remember this -->
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+
 <body class="min-h-screen font-sans antialiased">
 
     {{-- The navbar with `sticky` --}}

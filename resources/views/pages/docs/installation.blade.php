@@ -10,7 +10,11 @@ You can customize most of components styles, by inline overriding daisyUI and Ta
     Please, for further style references see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
 </x-alert>
 
+<br>
 <x-markdown>
+Bellow we show all steps for a brand new project, to quickly get started, without leaving this docs.  
+Of course you can tweak this or reference related packages sites if needed.
+
 ### Install dependencies
 
 
@@ -59,6 +63,16 @@ Remember to add Tailwind directives to `resources/app.css`
 @tailwind utilities;
 </x-code>
 
+Don't forget `Vite` on main app layout `views/components/layouts.app.blade`
+
+<x-code no-render>
+@verbatim
+<!-- This -->
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+
+<body>...</body>
+@endverbatim
+</x-code>
 
 Finally, start dev server
 <x-code no-render language="bash">
@@ -70,4 +84,9 @@ yarn dev
 <strong >... You are done!</strong>
 
 </x-markdown>
+
+<x-alert icon="o-light-bulb" class="markdown">
+    See <a href="/docs/layout" wire:navigate>layout</a> section to quickly get started.
+</x-alert>
+
 </div>
