@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('city_id')->constrained();
             $table->string('custom_key');
             $table->string('name');
             $table->string('username')->unique();

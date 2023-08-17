@@ -18,6 +18,7 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
+            'city_id' => CityFactory::new(),
             'custom_key' => fake()->unique()->randomNumber(),
             'name' => fake()->unique()->firstName(),
             'username' => fake()->unique()->userName(),
