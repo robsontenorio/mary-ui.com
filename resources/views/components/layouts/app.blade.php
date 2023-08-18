@@ -7,6 +7,20 @@
     <title>{{ $title ?? config('app.name') }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
+     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mary-ui.com/">
+    <meta property="og:title" content="Mary UI">
+    <meta property="og:description" content="Laravel blade components for Livewire 3.">
+    <meta property="og:image" content="https://mary-ui.com/mary-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mary-ui.com/">
+    <meta property="twitter:title" content="Mary UI">
+    <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
+    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
