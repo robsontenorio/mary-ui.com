@@ -55,10 +55,7 @@ $delete = function () {
 <div class="font-extrabold text-4xl py-10 px-5 lg:px-20"> 
     Less code, more action.
 </div>
-
 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mb-10  px-5 lg:px-20">
-
-
 <x-mockup>
     <x-form wire:submit="save">
         <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
@@ -69,7 +66,6 @@ $delete = function () {
         </x-slot:actions>
     </x-form>
 </x-mockup>
-
 
 <x-code no-render>
 @verbatim
@@ -83,45 +79,83 @@ $delete = function () {
 </x-form>
 @endverbatim
 </x-markdown>
-
 </div>
 
 <div class="bg-base-200/50 px-5 lg:px-20 pb-20">
     <div class="font-extrabold text-4xl py-10 text-right"> 
         It. Just. Works.
     </div>
-
 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-
 <x-code no-render>
 @verbatim
 @foreach($this->users as $user) 
     <x-list-item :item="$user" sub-value="username" link="/docs/installation">
-        <x-slot:action>
+        <x-slot:actions>
             <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner/>
-        </x-slot:action>
+        </x-slot:actions>
     </x-list-item>
 @endforeach
 @endverbatim
 </x-markdown>
 
-
 <x-mockup>       
     <div>
         @foreach($this->users as $user) 
             <x-list-item :item="$user" sub-value="username" link="/docs/installation">
-                <x-slot:action>
+                <x-slot:actions>
                     <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner/>
-                </x-slot:action>
+                </x-slot:actions>
             </x-list-item>
         @endforeach
     </div>
 </x-mockup>
-
+</div>
 </div>
 
+<div class="font-extrabold text-4xl py-10 px-5 lg:px-20"> 
+    Develop at light speed.
 </div>
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mb-10  px-5 lg:px-20">
+<x-mockup>
+@php 
+    $users = App\Models\User::with('city')->take(6)->get();
 
+    $headers = [
+        ['key' => 'id', 'label' => '#'],
+        ['key' => 'name', 'label' => 'Nice Name'],
+        ['key' => 'city.name', 'label' => 'City']
+    ];    
+@endphp
+
+<!-- You can use any `$wire.METHOD` on `@row-click` -->
+<x-table 
+    :headers="$headers" 
+    :rows="$users" 
+    striped     
+    @row-click="alert($event.detail.name)" />
+</x-mockup>
+
+<x-code no-render>
+@verbatim
+@php 
+    $users = App\Models\User::with('city')->take(6)->get();
+
+    $headers = [
+        ['key' => 'id', 'label' => '#'],
+        ['key' => 'name', 'label' => 'Nice Name'],
+        ['key' => 'city.name', 'label' => 'City']
+    ];    
+@endphp
+
+<!-- You can use any `$wire.METHOD` on `@row-click` -->
+<x-table 
+    :headers="$headers" 
+    :rows="$users" 
+    striped     
+    @row-click="alert($event.detail.name)" />
+@endverbatim
+</x-markdown>
+</div>
 
 <div class="mt-10 text-center">
     <a wire:navigate href="/docs/installation" class="btn btn-primary">            

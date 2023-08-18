@@ -21,7 +21,7 @@
 <x-table 
     :headers="$headers" 
     :rows="$users" 
-    zebra     
+    striped     
     @row-click="alert($event.detail.name)" />
 @endverbatim
 </x-code>
@@ -29,8 +29,8 @@
 <x-markdown class="markdown">
 ### Slots
 
-We just provide a helper blade directive @verbatim `@scope`/`@endscope` for context `$item` injection on loop. @endverbatim
-It will achieve same behavior what you expect from Vue/React components scoped slots.
+We just provide a helper blade directive @verbatim `@scope`/`@endscope` @endverbatim for context `$item` injection on loop. 
+It will achieve same behavior you expect from Vue/React scoped slots.
 
 Just call @verbatim `@slot('cell_xxx')` @endverbatim where `xxx` is any `key` declared on `$headers` object.
 

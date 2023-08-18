@@ -28,25 +28,39 @@ It will lookup for:
 <x-code>
 @verbatim
 @php
-    $user1 = App\Models\User::inRandomOrder()->first();
-    $user2 = App\Models\User::inRandomOrder()->first();
-    $user3 = App\Models\User::inRandomOrder()->first();
+    $users = App\Models\User::take(3)->get();
 @endphp 
 
-<x-list-item :item="$user1" link="/docs/installation" />
+@foreach($users as $user)
+    <x-list-item :item="$user" link="/docs/installation" />
+@endforeach
+@endverbatim
+</x-code>
 
-<x-list-item :item="$user2" value="other_name" sub-value="other_email" avatar="other_avatar" />    
+<x-markdown >
+### Slots and other attributes
+<br>
+</x-markdown>
 
-<x-list-item :item="$user3" no-separator>
+<x-code>
+@verbatim
+@php
+    $user1 = App\Models\User::inRandomOrder()->first();
+    $user2 = App\Models\User::inRandomOrder()->first();    
+@endphp 
+
+<x-list-item :item="$user1" value="other_name" sub-value="other_email" avatar="other_avatar" />    
+
+<x-list-item :item="$user2" no-separator>
     <x-slot:value>
         Custom value
     </x-slot:value>
     <x-slot:sub-value>
         Custom sub-value
     </x-slot:sub-value>
-    <x-slot:action>
+    <x-slot:actions>
         <x-button icon="o-trash" class="text-red-500" wire:click="delete(1)" spinner />
-    </x-slot:action>
+    </x-slot:actions>
 </x-list-item>
 @endverbatim
 </x-code>
