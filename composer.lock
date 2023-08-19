@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27af9cc547db14de60a9314b05ec80da",
+    "content-hash": "95e15c224526a41dcf0ae222e12225c0",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1899,64 +1899,6 @@
             "time": "2023-05-02T20:02:14+00:00"
         },
         {
-            "name": "league/iso3166",
-            "version": "4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/iso3166.git",
-                "reference": "628f1b4992169917f3f59c14020ea4513c63f6db"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/iso3166/zipball/628f1b4992169917f3f59c14020ea4513c63f6db",
-                "reference": "628f1b4992169917f3f59c14020ea4513c63f6db",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": "^7.3|^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\ISO3166\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Bast",
-                    "email": "rob.bast@gmail.com"
-                }
-            ],
-            "description": "ISO 3166-1 PHP Library",
-            "homepage": "https://github.com/thephpleague/iso3166",
-            "keywords": [
-                "3166",
-                "3166-1",
-                "ISO 3166",
-                "countries",
-                "iso",
-                "library"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/iso3166/issues",
-                "source": "https://github.com/thephpleague/iso3166"
-            },
-            "time": "2023-06-05T15:02:58+00:00"
-        },
-        {
             "name": "league/mime-type-detection",
             "version": "1.11.0",
             "source": {
@@ -2087,16 +2029,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.0.0-beta.5",
+            "version": "v1.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "2e1e9469d668d0051e8b16e25748d95e02dbb714"
+                "reference": "a3839304f441398b036151224269188a686b2814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/2e1e9469d668d0051e8b16e25748d95e02dbb714",
-                "reference": "2e1e9469d668d0051e8b16e25748d95e02dbb714",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/a3839304f441398b036151224269188a686b2814",
+                "reference": "a3839304f441398b036151224269188a686b2814",
                 "shasum": ""
             },
             "require": {
@@ -2155,7 +2097,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-08-15T13:56:20+00:00"
+            "time": "2023-08-17T09:02:29+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3651,79 +3593,6 @@
                 }
             ],
             "time": "2023-04-27T08:09:01+00:00"
-        },
-        {
-            "name": "spatie/laravel-validation-rules",
-            "version": "3.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-validation-rules.git",
-                "reference": "846b92dfbb76fd2a30c6011ae08082f0248c9cf4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-validation-rules/zipball/846b92dfbb76fd2a30c6011ae08082f0248c9cf4",
-                "reference": "846b92dfbb76fd2a30c6011ae08082f0248c9cf4",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^8.0|^9.0|^10.0",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.3",
-                "league/iso3166": "^3.0",
-                "myclabs/php-enum": "^1.6",
-                "orchestra/testbench": "^6.23|^7.0|^8.0",
-                "pestphp/pest": "^1.23|^2.6",
-                "spatie/enum": "^2.2|^3.0"
-            },
-            "suggest": {
-                "league/iso3166": "Needed for the CountryCode rule and Currency rule"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\ValidationRules\\ValidationRulesServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\ValidationRules\\": "src",
-                    "Spatie\\ValidationRules\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A set of useful Laravel validation rules",
-            "homepage": "https://github.com/spatie/laravel-validation-rules",
-            "keywords": [
-                "laravel-validation-rules",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/laravel-validation-rules/issues",
-                "source": "https://github.com/spatie/laravel-validation-rules/tree/3.3.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-05-29T13:17:57+00:00"
         },
         {
             "name": "spatie/shiki-php",
@@ -6084,71 +5953,6 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.6"
             },
             "time": "2023-01-03T09:29:04+00:00"
-        },
-        {
-            "name": "torchlight/torchlight-laravel",
-            "version": "v0.5.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/torchlight-api/torchlight-laravel.git",
-                "reference": "fe2b0dd48397632fa2e1272c22136b7ab3a79767"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/fe2b0dd48397632fa2e1272c22136b7ab3a79767",
-                "reference": "fe2b0dd48397632fa2e1272c22136b7ab3a79767",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.2",
-                "illuminate/cache": "^7.26.0|^8.0|^9.0|^10.0",
-                "illuminate/console": "^7.26.0|^8.0|^9.0|^10.0",
-                "illuminate/http": "^7.26.0|^8.0|^9.0|^10.0",
-                "illuminate/support": "^7.26.0|^8.0|^9.0|^10.0",
-                "illuminate/view": "^7.26.0|^8.0|^9.0|^10.0",
-                "php": "^7.3|^8.0",
-                "ramsey/uuid": "^3.7|^4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.3.3",
-                "orchestra/testbench": "^5.0|^6.0|^7.0",
-                "phpunit/phpunit": "^8.5.23|^9.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Torchlight\\TorchlightServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Torchlight\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Francis",
-                    "email": "aaron@hammerstone.dev"
-                }
-            ],
-            "description": "A Laravel Client for Torchlight, the syntax highlighting API.",
-            "homepage": "https://torchlight.dev",
-            "keywords": [
-                "Code highlighting",
-                "laravel",
-                "syntax highlighting"
-            ],
-            "support": {
-                "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
-                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.5.13"
-            },
-            "time": "2023-02-14T02:49:05+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

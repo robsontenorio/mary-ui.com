@@ -4,16 +4,16 @@
 
 You are free to make your own layout decision. But, here is suggestion to quickly get started.
 
-You can play around by placing css classes on components/slots. Or just remove entirely some components/slots.
+You can play around by placing **daisyUI/Tailwind** classes on components or slots, from this example. Also try to remove entirely some components or slots.
 
-File: `views/components/layouts/app.blade.php`
+Default Livewire app template: `views/components/layouts/app.blade.php`
 </x-markdown>
 
 <x-code no-render>
 @verbatim
 ...
 
-<!-- Remember this -->
+<!-- Remember adding this -->
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 <body class="min-h-screen font-sans antialiased">

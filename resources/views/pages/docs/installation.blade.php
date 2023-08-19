@@ -7,13 +7,13 @@ You can customize most of components styles, by inline overriding daisyUI and Ta
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown">
-    Please, for further style references see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
+    Please, for further style reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
 </x-alert>
 
 <br>
 <x-markdown>
-Bellow we show all steps for a brand new project, to quickly get started, without leaving this docs.  
-Of course you can tweak this or reference related packages sites if needed.
+Bellow we show all steps for a **brand new project**, to quickly get started, without leaving this docs.  
+If you are an experienced developer you can tweak this steps or reference related packages sites if needed.
 
 ### Install dependencies
 
@@ -32,7 +32,7 @@ yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss i
 composer require robsontenorio/mary    
 </x-code>
 
-Then, add **mary** and **daisy** entries to `tailwind.config.js`.
+Add **mary** and **daisy** entries to `tailwind.config.js`.
 
 <x-code no-render language="javascript">
 /** @type {import('tailwindcss').Config} */
@@ -56,7 +56,7 @@ export default {
 }
 </x-code>
 
-Remember to add Tailwind directives to `resources/app.css`
+Add Tailwind directives to `resources/app.css`
 
 <x-code no-render language="css">
 @tailwind base;
@@ -64,7 +64,14 @@ Remember to add Tailwind directives to `resources/app.css`
 @tailwind utilities;
 </x-code>
 
-Don't forget `Vite` on main app layout `views/components/layouts.app.blade`
+Setup Livewire default app template.
+
+<x-code no-render language="bash">
+# It creates `views/components/layouts/app.blade`
+php artisan livewire:layout
+</x-code>
+
+Then add @verbatim `@vite` @endverbatim on default app template `views/components/layouts/app.blade`
 
 <x-code no-render>
 @verbatim
@@ -75,7 +82,7 @@ Don't forget `Vite` on main app layout `views/components/layouts.app.blade`
 @endverbatim
 </x-code>
 
-Finally, start dev server
+Finally, start dev server.
 <x-code no-render language="bash">
 yarn dev
 </x-code>

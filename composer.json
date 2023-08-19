@@ -18,13 +18,10 @@
         "laravel/framework": "^10.18",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "league/iso3166": "^4.3",
         "livewire/livewire": "^3.0@beta",
         "livewire/volt": "^1.0@beta",
         "robsontenorio/mary": "^0.24.0",
-        "spatie/laravel-markdown": "^2.3",
-        "spatie/laravel-validation-rules": "^3.3",
-        "torchlight/torchlight-laravel": "^0.5.13"
+        "spatie/laravel-markdown": "^2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -48,6 +45,14 @@
         }
     },
     "scripts": {
+        "start": [
+            "composer install",
+            "php artisan key:generate",
+            "touch database/database.sqlite",
+            "php artisan migrate:fresh --seed",
+            "yarn install",
+            "yarn dev"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
