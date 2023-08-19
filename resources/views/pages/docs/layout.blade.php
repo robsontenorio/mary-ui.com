@@ -4,7 +4,7 @@
 
 You are free to make your own layout decision. But, here is suggestion to quickly get started.
 
-You can play around by placing css classes on components/slots, or just removing some entirely.
+You can play around by placing css classes on components/slots. Or just remove entirely some components/slots.
 
 File: `views/components/layouts/app.blade.php`
 </x-markdown>
@@ -18,10 +18,10 @@ File: `views/components/layouts/app.blade.php`
 
 <body class="min-h-screen font-sans antialiased">
 
-    {{-- The navbar with `sticky` --}}
+    <!-- The navbar with `sticky` -->
     <x-nav sticky>
         <x-slot:brand>
-            {{-- Drawer toggle for "main-drawer" --}}
+            <!-- Drawer toggle for "main-drawer" -->
             <label for="main-drawer" class="lg:hidden mr-3">
                 <x-icon name="o-bars-3" class="cursor-pointer" />
             </label>
@@ -35,10 +35,10 @@ File: `views/components/layouts/app.blade.php`
         </x-slot:actions>
     </x-nav>
 
-    {{-- The main content --}}
+    <!-- The main content -->
     <x-main>
-        {{-- It is a sidebar that works also as a drawer at small screens --}}
-        {{-- Note `main-drawer` reference here --}}
+        <!-- It is a sidebar that works also as a drawer at small screens -->
+        <!-- Note `main-drawer` reference here -->
         <x-slot:sidebar class="bg-slate-200" drawer="main-drawer">
             <x-menu>
                 <x-menu-item title="Home" icon="o-home" link="###" />
@@ -46,12 +46,12 @@ File: `views/components/layouts/app.blade.php`
             </x-menu>
         </x-slot:sidebar>
 
-        {{-- The `$slot` goes here --}}
+        <!-- The `$slot` goes here -->
         <x-slot:content>
             {{ $slot }}
         </x-slot:content>
 
-        {{-- Footer area --}}
+        <!-- Footer area -->
         <x-slot:footer>
             <hr />
             <div class="p-6">

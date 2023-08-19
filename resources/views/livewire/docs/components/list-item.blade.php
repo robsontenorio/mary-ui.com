@@ -52,6 +52,9 @@ It will lookup for:
 <x-list-item :item="$user1" value="other_name" sub-value="other_email" avatar="other_avatar" />    
 
 <x-list-item :item="$user2" no-separator>
+    <x-slot:avatar>
+        <x-badge value="top user" class="badge-primary" />
+    </x-slot:avatar>
     <x-slot:value>
         Custom value
     </x-slot:value>

@@ -4,7 +4,6 @@
 # Modal
 </x-markdown>
 
-
 <x-code>
 @verbatim
  <!-- Use same ID and call `.showModal()` -->

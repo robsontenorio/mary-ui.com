@@ -21,7 +21,7 @@
         "league/iso3166": "^4.3",
         "livewire/livewire": "^3.0@beta",
         "livewire/volt": "^1.0@beta",
-        "robsontenorio/mary": "^0.23.0",
+        "robsontenorio/mary": "^0.24.0",
         "spatie/laravel-markdown": "^2.3",
         "spatie/laravel-validation-rules": "^3.3",
         "torchlight/torchlight-laravel": "^0.5.13"

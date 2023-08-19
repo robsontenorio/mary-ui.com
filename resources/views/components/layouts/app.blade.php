@@ -56,15 +56,19 @@
 
                 <x-menu-separator title="Forms" icon="o-code-bracket-square" />
                 <x-menu-item title="Form" link="/docs/components/form" />
+                <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
                 <x-menu-item title="Input" link="/docs/components/input" />
                 <x-menu-item title="Radio" link="/docs/components/radio" />
                 <x-menu-item title="Select" link="/docs/components/select" />
-                <x-menu-item title="Toggle" link="/docs/components/toggle" />
-                <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
+                <x-menu-item title="Toggle" link="/docs/components/toggle" />                
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />
                 <x-menu-item title="Table" link="/docs/components/table" />
+
+                <x-menu-separator title="Menus" icon="o-queue-list" />
+                <x-menu-item title="Menu" link="/docs/components/menu" />            
+                <x-menu-item title="Dropdown" link="/docs/components/dropdown" />                                
 
                 <x-menu-separator title="Dialogs" icon="o-window" />
                 <x-menu-item title="Modal" link="/docs/components/modal" />
@@ -74,11 +78,9 @@
                 <x-menu-item title="Alert" link="/docs/components/alert" />
                 <x-menu-item title="Button" link="/docs/components/button" />
                 <x-menu-item title="Badges" link="/docs/components/badges" />
-                <x-menu-item title="Card" link="/docs/components/card" />                
-                <!-- <x-menu-item title="Dropdown" link="/docs/components/dropdown" />                 -->
+                <x-menu-item title="Card" link="/docs/components/card" />                                
                 <x-menu-item title="Header" link="/docs/components/header" />
-                <x-menu-item title="Icon" link="/docs/components/icon" />                
-                <x-menu-item title="Menu" link="/docs/components/menu" />                
+                <x-menu-item title="Icon" link="/docs/components/icon" />                                    
                 <x-menu-item title="Stat" link="/docs/components/stat" />                
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
             </x-menu>
