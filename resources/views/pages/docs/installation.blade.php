@@ -67,11 +67,11 @@ Add Tailwind directives to `resources/app.css`
 Setup Livewire default app template.
 
 <x-code no-render language="bash">
-# It creates `views/components/layouts/app.blade`
+# It creates `views/components/layouts/app.blade.php`
 php artisan livewire:layout
 </x-code>
 
-Then add @verbatim `@vite` @endverbatim on default app template `views/components/layouts/app.blade`
+Then add @verbatim `@vite` @endverbatim on default app template `views/components/layouts/app.blade.php`
 
 <x-code no-render>
 @verbatim

@@ -33,6 +33,8 @@ It will lookup for:
 <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" /> 
 
 <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline /> 
+
+<x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" /> 
 @endverbatim
 </x-code>
 

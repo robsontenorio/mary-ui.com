@@ -24,15 +24,23 @@ new class extends Component
 
 <x-code class="flex flex-wrap gap-3">
 @verbatim
-<x-button label="Save" class="btn-outline" />
+<x-button label="Hi!" class="btn-outline" />
 
-<x-button label="Save" class="btn-warning" />
+<x-button label="Hello" icon-right="o-x-circle" class="btn-warning" />
 
-<x-button label="Save" icon="o-check" class="btn-success" />
+<x-button label="There" icon="o-check" class="btn-success" />
 
-<x-button icon="o-check" class="btn-info text-white">
+<x-button class="btn-primary ">
     With default slot
 </x-button>    
+
+<x-button icon="o-user" class="btn-circle" />
+
+<x-button icon="o-user" class="btn-circle btn-outline" />
+
+<x-button icon="o-user" class="btn-circle btn-ghost" />
+
+<x-button icon="o-user" class="btn-square" />
 @endverbatim
 </x-code>
 
@@ -41,19 +49,19 @@ new class extends Component
 
 </x-markdown>
 
-<x-code class="grid">
+<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 @verbatim
 <!-- It automatically targets to self `wire:click` action  -->
-<x-button label="Self target" spinner wire:click="save" class="btn-warning" />
-
-<hr class="my-10">
+<x-button label="Self target" wire:click="save" icon-right="o-lock-closed" spinner />
 
 <x-form wire:submit="save2">
-    <x-input label="Name" />
-
+    <x-input label="Name" inline />
     <x-slot:actions>
-        <!-- Set custom target as `save2` -->
-        <x-button label="Custom target" spinner="save2" type="submit" class="btn-primary" />
+        <!-- No target spinner -->
+        <x-button label="No target" />
+
+        <!-- Target is `save2` -->
+        <x-button label="Custom target" type="submit" class="btn-primary" spinner="save2" />
     </x-slot:actions>
 </x-form>
 

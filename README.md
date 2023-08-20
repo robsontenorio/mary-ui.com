@@ -12,6 +12,8 @@
 
 ## Install
 
+This website is made with Laravel, Livewire, Volt and Mary.
+
 - Clone the repositoy `git clone git@github.com:robsontenorio/mary-ui.com.git`
 
 - Open it on VSCODE with `Dev Container` extension.
@@ -23,7 +25,7 @@ APP_ENV=local
 APP_DEBUG=true
 ```
 
-- Install, migrate and start.
+Install, migrate and start.
 
 ```bash
 composer start
@@ -33,6 +35,6 @@ composer start
 
 <br>
 
-> :warning: If you are not using Docker, use http://localhost or any local address you set up.
+> :warning: If you are not using VSCODE Dev Containers, use any local address you have set up.
 
 > :warning: It uses SQLITE for dynamic examples.

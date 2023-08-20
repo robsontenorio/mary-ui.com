@@ -24,13 +24,13 @@
 }
 </x-code>
 
-- Require the package again for local symlink.
+Require the package again for local symlink.
 
 <x-code no-render language="bash">
 composer require robsontenorio/mary
 </x-code>
 
-- Start dev  
+Start dev  
 
 <x-code no-render language="bash">
 yarn dev

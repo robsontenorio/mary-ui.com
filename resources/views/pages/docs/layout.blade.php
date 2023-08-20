@@ -29,6 +29,8 @@ Default Livewire app template: `views/components/layouts/app.blade.php`
             My App
 
         </x-slot:brand>
+
+        <!-- Right side actions -->
         <x-slot:actions>
             <a href="###"><x-icon name="o-envelope" /> Messages</a>
             <a href="###"><x-icon name="o-bell" /> Notifications</a>

@@ -4,7 +4,9 @@ use Livewire\Volt\Component;
 
 new class extends Component
 {
-    public string $email = 'mary@me.com';
+    public string $address = 'CA, Street 1';
+
+    public string $password = 'Hello!';
 
     public string $money1 = '123456.78';
 
@@ -15,28 +17,44 @@ new class extends Component
 <div>
 <x-markdown>
 # Input
+
+### Basic
 </x-markdown>
 
 <x-code class="grid gap-5">
 @verbatim
-<x-input label="Name" placeholder="Your name" hint="Fill with your full name" />
+<x-input label="Name" placeholder="Your name" icon="o-user" hint="Your full name" />
 
-<x-input label="E-mail" wire:model="email" icon="o-envelope" />
+<x-input label="Right icon" wire:model="address" icon-right="o-map-pin" />  
 
-<hr class="my-5" />
+<x-input label="Password" wire:model="password" icon="o-eye" type="password" />  
+@endverbatim
+</x-code>
 
+<x-markdown>
+### States
+</x-markdown>
+
+<x-code class="grid gap-5">
+@verbatim
 <x-input label="Disabled"  value="It is disabled" disabled />
 
 <x-input label="Read only"  value="Read only" readonly />
-
-<hr class="my-5" />
-
-<x-input label="Inline label" inline />
-
-<x-input label="Inline label + placeholder" placeholder="Hi!" icon="o-envelope" hint="Awsome" inline />
-    
 @endverbatim
 </x-code>
+
+<x-markdown>
+### Inline
+</x-markdown>
+
+<x-code class="grid gap-5">
+@verbatim
+<x-input label="Inline label" inline />
+
+<x-input label="Inline label + placeholder" placeholder="Hi!" icon="o-envelope" hint="Awsome" inline />    
+@endverbatim
+</x-code>
+
 
 <x-markdown>
 ### Currency
@@ -59,5 +77,33 @@ It uses Alpine `x-mask` plugin with `$money`. Under the hood it sets an unmasked
     fraction-separator=","  />    
 @endverbatim
 </x-code>
+
+<x-markdown>
+### Slots
+</x-markdown>
+
+<x-code class="grid gap-4">
+@verbatim
+@php
+    $users = App\Models\User::take(5)->get();        
+@endphp
+
+<x-input label="Prepend a select">
+    <x-slot:prepend>
+        <!-- Add `rounded-r-none` class -->
+        <x-select icon="o-user" :options="$users" class="rounded-r-none bg-base-200"  /> 
+    </x-slot:prepend>
+</x-input>
+
+<x-input label="Append a button">
+    <x-slot:append>
+        <!-- Add `rounded-l-none` class -->
+        <x-button label="I am a button" icon="o-check" class="btn-primary rounded-l-none" /> 
+    </x-slot:append>
+</x-input>
+
+@endverbatim
+</x-code>
+
 
 </div>
