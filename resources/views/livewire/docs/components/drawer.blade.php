@@ -4,7 +4,7 @@ use Livewire\Volt\Component;
 
 new class extends Component
 {
-    public bool $openDrawer = false;
+    public bool $showDrawer = false;
 }
 
 ?>
@@ -38,28 +38,37 @@ You can directly open a drawer by using native HTML `<label>` while referencing 
 
 <x-markdown>
 ### With Livewire
+
+You can toggle visibility with Livewire or Alpine. In both cases you need `wire:model`. 
+
+In the following example, we consider you have declared `$public bool myModal = false;`
+
+**You don't need** `id="xxx"`.  
+
 </x-markdown>
 
 <x-code class="flex gap-5">
 @verbatim
+<!-- Considering you have `$public bool showDrawer = false;` -->
+
 <!-- Note `wire:model` -->
-<x-drawer wire:model="openDrawer" class="w-1/3 p-5" >
+<x-drawer wire:model="showDrawer" class="w-1/3 p-5" >
     With Livewire
 
     <hr class="my-5"/>
 
     <!-- Livewire: Server side  -->
-    <x-button label="Close (server)" wire:click="$toggle('openDrawer')" class="btn-primary"  />
+    <x-button label="Livewiew (server)" wire:click="$toggle('showDrawer')" class="btn-primary"  />
 
-    <!-- Livewire: Client side (no http request)  -->
-    <x-button label="Close (client)" @click="$wire.openDrawer = false" class="btn-warning" />
+    <!-- Alpine: Client side (no http request)  -->
+    <x-button label="Alpine (client)" @click="$wire.showDrawer = false" class="btn-warning" />
 </x-drawer>
 
 <!-- Livewire: Server side  -->
-<x-button label="Open (server)" wire:click="$toggle('openDrawer')" class="btn-primary" />
+<x-button label="Livewire (server)" wire:click="$toggle('showDrawer')" class="btn-primary" />
 
-<!-- Livewire: Client side (no http request)  -->
-<x-button label="Open(client)" @click="$wire.openDrawer = true" class="btn-warning" />
+<!-- Alpine: Client side (no http request)  -->
+<x-button label="Alpine (client)" @click="$wire.showDrawer = true" class="btn-warning" />
 @endverbatim
 </x-code>
 
