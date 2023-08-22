@@ -13,8 +13,12 @@ Default Livewire app template: `views/components/layouts/app.blade.php`
 @verbatim
 ...
 
-<!-- Remember adding this -->
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<head>
+    ...
+
+    <!-- Remember adding this -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
 
 <body class="min-h-screen font-sans antialiased">
 

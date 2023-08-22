@@ -75,8 +75,12 @@ Then add @verbatim `@vite` @endverbatim on default app template `views/component
 
 <x-code no-render>
 @verbatim
-<!-- This -->
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<head>
+    ...
+    
+    <!-- This -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
 
 <body>...</body>
 @endverbatim
