@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('other_avatar');
             $table->string('other_name');
             $table->string('other_email');
+            $table->string('bio');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

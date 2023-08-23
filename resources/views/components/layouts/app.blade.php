@@ -55,12 +55,13 @@
                 <x-menu-item title="Contributing" link="/docs/contributing" />
 
                 <x-menu-separator title="Forms" icon="o-code-bracket-square" />
-                <x-menu-item title="Form" link="/docs/components/form" />
+                <x-menu-item title="Form" link="/docs/components/form" />                
+                <x-menu-item title="Input" link="/docs/components/input" />                                
                 <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
-                <x-menu-item title="Input" link="/docs/components/input" />
+                <x-menu-item title="Toggle" link="/docs/components/toggle" />                
                 <x-menu-item title="Radio" link="/docs/components/radio" />
                 <x-menu-item title="Select" link="/docs/components/select" />
-                <x-menu-item title="Toggle" link="/docs/components/toggle" />                
+                <x-menu-item title="Choices" link="/docs/components/choices" />                
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />

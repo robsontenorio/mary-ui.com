@@ -29,10 +29,13 @@
 <x-markdown class="markdown">
 ### Slots
 
-We just provide a helper blade directive @verbatim `@scope`/`@endscope` @endverbatim for context `$item` injection on loop. 
-It will achieve same behavior you expect from Vue/React scoped slots.
+@verbatim
+You have full control on rendering rows by using `@scope('cell_xxx', $object)` slot helper blade directive. 
+Where `xxx` is any `key` declared on `$headers` object.  
 
-Just call @verbatim `@slot('cell_xxx')` @endverbatim where `xxx` is any `key` declared on `$headers` object.
+It will inject current `$object` on loop context and will achieve same behavior you expect from Vue/React scoped slots.
+
+@endverbatim
 
 In the following example:
 

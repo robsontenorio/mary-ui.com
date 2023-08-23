@@ -15,6 +15,15 @@ new class extends Component
 <x-markdown class="markdown">
 # Select
 
+This component is intended to be used as simple native HTML value selection. It will best fit for most use cases on web apps.
+
+</x-markdown>
+
+<x-alert icon="o-light-bulb" class="markdown mb-10">
+    If you need a rich selection with async search see <a href="/docs/components/choices" wire:navigate>Choices</a> component.
+</x-alert>
+
+<x-markdown class="markdown">
 ### Default attributes
 It will lookup for:
 

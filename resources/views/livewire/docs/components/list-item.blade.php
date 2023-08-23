@@ -39,6 +39,8 @@ It will lookup for:
 
 <x-markdown >
 ### Slots and other attributes
+
+You can override all slots. It also suports nested properties.
 <br>
 </x-markdown>
 
@@ -49,8 +51,10 @@ It will lookup for:
     $user2 = App\Models\User::inRandomOrder()->first();    
 @endphp 
 
-<x-list-item :item="$user1" value="other_name" sub-value="other_email" avatar="other_avatar" />    
+<!-- Note `city.name`. It suports nested properties -->
+<x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />    
 
+<!-- All slots -->
 <x-list-item :item="$user2" no-separator>
     <x-slot:avatar>
         <x-badge value="top user" class="badge-primary" />

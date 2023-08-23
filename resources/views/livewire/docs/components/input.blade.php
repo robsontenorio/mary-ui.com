@@ -59,11 +59,13 @@ new class extends Component
 <x-markdown>
 ### Currency
 
-It uses Alpine `x-mask` plugin with `$money`. Under the hood it sets an unmasked value when you submit a form.
+It uses Alpine `x-mask` plugin with `$money`. When wraped in a form  it submits an unmasked number value.
+
+<br>
 
 </x-markdown>
 
-<x-code class="grid gap-4">
+<x-code class="grid gap-8">
 @verbatim
 <x-input label="Default money" wire:model="money1" prefix="USD" money inline/>
 
@@ -82,7 +84,7 @@ It uses Alpine `x-mask` plugin with `$money`. Under the hood it sets an unmasked
 ### Slots
 </x-markdown>
 
-<x-code class="grid gap-4">
+<x-code class="grid gap-8">
 @verbatim
 @php
     $users = App\Models\User::take(5)->get();        

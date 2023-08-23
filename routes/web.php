@@ -26,6 +26,7 @@ Volt::route('/docs/components/radio', 'docs.components.radio');
 Volt::route('/docs/components/select', 'docs.components.select');
 Volt::route('/docs/components/toggle', 'docs.components.toggle');
 Volt::route('/docs/components/checkbox', 'docs.components.checkbox');
+Volt::route('/docs/components/choices', 'docs.components.choices');
 
 // LIST DATA
 Volt::route('/docs/components/list-item', 'docs.components.list-item');
