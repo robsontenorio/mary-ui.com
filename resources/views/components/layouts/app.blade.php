@@ -62,6 +62,7 @@
                 <x-menu-item title="Radio" link="/docs/components/radio" />
                 <x-menu-item title="Select" link="/docs/components/select" />
                 <x-menu-item title="Choices" link="/docs/components/choices" />                
+                <x-menu-item title="Date Time" link="/docs/components/datetime" />                
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />
