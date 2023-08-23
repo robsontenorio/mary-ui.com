@@ -60,7 +60,7 @@ new class extends Component
 <x-markdown class="markdown">
 # Choices
 
-This component is intended to be used to build complex selection interface. It also suports **async search** when dealing with large lists.
+This component is intended to be used to build complex selection interface for single and multiple values. It also suports **async search** when dealing with large lists.
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -127,6 +127,7 @@ When dealing with large options list use `searchable` parameter.
         single 
         searchable />
 </div>
+
 <x-code no-render>
 @verbatim
 <!-- Note `searchable` -->
@@ -188,6 +189,7 @@ It will inject current `$object` on loop context and achieves same behavior you 
     @endscope
 </x-choices>
 </div>
+
 <x-code no-render>
 @verbatim
 <x-choices label="Slots" wire:model="user4_id" :options="$options" single>
@@ -205,5 +207,11 @@ It will inject current `$object` on loop context and achieves same behavior you 
 </x-choices>
 @endverbatim
 </x-code>
+
+<x-markdown>
+    ### Multiple
+
+    // WIP
+</x-markdown>
 
 </div>

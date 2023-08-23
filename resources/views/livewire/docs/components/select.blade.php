@@ -20,7 +20,7 @@ This component is intended to be used as simple native HTML value selection. It 
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown mb-10">
-    If you need a rich selection with async search see <a href="/docs/components/choices" wire:navigate>Choices</a> component.
+    If you need a rich selection value interfarce or async search see <a href="/docs/components/choices" wire:navigate>Choices</a> component.
 </x-alert>
 
 <x-markdown class="markdown">
