@@ -33,7 +33,7 @@
 You have full control on rendering rows by using `@scope('cell_xxx', $object)` slot helper blade directive. 
 Where `xxx` is any `key` declared on `$headers` object.  
 
-It will inject current `$object` on loop context and will achieve same behavior you expect from Vue/React scoped slots.
+It will inject current `$object` on loop context and achieves same behavior you expect from Vue/React scoped slots.
 
 @endverbatim
 

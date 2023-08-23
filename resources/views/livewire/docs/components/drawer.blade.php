@@ -39,18 +39,18 @@ You can directly open a drawer by using native HTML `<label>` while referencing 
 <x-markdown>
 ### With Livewire
 
-You can toggle visibility with Livewire or Alpine. In both cases you need `wire:model`. 
-
-In the following example, we consider you have declared `$public bool myModal = false;`
-
 **You don't need** `id="xxx"`.  
 
+You can toggle visibility with Livewire or Alpine. In both cases you need `wire:model`. In the following example, we consider you have declared:
+
+<x-code no-render language="php">
+public bool $showDrawer = false;
+</x-code>
+<br>
 </x-markdown>
 
 <x-code class="flex gap-5">
 @verbatim
-<!-- Considering you have `$public bool showDrawer = false;` -->
-
 <!-- Note `wire:model` -->
 <x-drawer wire:model="showDrawer" class="w-1/3 p-5" >
     With Livewire
@@ -59,14 +59,12 @@ In the following example, we consider you have declared `$public bool myModal = 
 
     <!-- Livewire: Server side  -->
     <x-button label="Livewiew (server)" wire:click="$toggle('showDrawer')" class="btn-primary"  />
-
     <!-- Alpine: Client side (no http request)  -->
     <x-button label="Alpine (client)" @click="$wire.showDrawer = false" class="btn-warning" />
 </x-drawer>
 
 <!-- Livewire: Server side  -->
 <x-button label="Livewire (server)" wire:click="$toggle('showDrawer')" class="btn-primary" />
-
 <!-- Alpine: Client side (no http request)  -->
 <x-button label="Alpine (client)" @click="$wire.showDrawer = true" class="btn-warning" />
 @endverbatim

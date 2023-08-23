@@ -168,8 +168,8 @@ public search(string $value = ''): Collection {
 ### Slots
 
 @verbatim
-You have full control on rendering rows by using `@scope('item', $object)` slot helper blade directive. 
-It will inject current `$object` on loop context and will achieve same behavior you expect from Vue/React scoped slots.
+You have full control on rendering items by using `@scope('item', $object)` slot helper blade directive. 
+It will inject current `$object` on loop context and achieves same behavior you expect from Vue/React scoped slots.
 @endverbatim
 
 </x-markdown>
