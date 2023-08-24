@@ -123,7 +123,8 @@ When dealing with large options list use `searchable` parameter.
         wire:model="user3_id" 
         :options="$options" 
         icon="o-magnifying-glass"
-        placeholder="Type here ..."
+        placeholder="Search for username ..."
+        option-label="username"
         single 
         searchable />
 </div>
