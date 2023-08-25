@@ -24,11 +24,12 @@ You can read the official documentation on the [Mary website](https://mary-ui.co
 
 This website is made with Laravel, Livewire, Volt and Mary.
 
-- Clone the repositoy `git clone git@github.com:robsontenorio/mary-ui.com.git`
+Clone the repositoy and open it on VSCODE with `Dev Container` extension.  
+```bash
+git clone git@github.com:robsontenorio/mary-ui.com.git
+```
 
-- Open it on VSCODE with `Dev Container` extension.
-
-- Create a `.env` from `.env.example`, then adjust some vars on `.env`.
+Create `.env` from `.env.example` and adjust few vars.
 
 ```bash
 APP_ENV=local
@@ -45,6 +46,6 @@ composer start
 
 <br>
 
-> :warning: If you are not using VSCODE Dev Containers, use any local address you have set up.
+:warning: If you are not using VSCODE Dev Containers, use any local address you have set up.
 
-> :warning: It uses SQLITE for dynamic examples.
+:warning: It uses SQLITE for dynamic examples.

@@ -4,10 +4,13 @@
 
 ### Mary components
 
-- Repository `git clone git@github.com:robsontenorio/mary.git`
--  Clone the repositoy into some folder **inside your app**. 
-- Change `composer.json` from **your app**
+Clone the repositoy into some folder **inside your app**.
+<x-code no-render language="bash">
+git clone git@github.com:robsontenorio/mary.git
+</x-code>
 
+
+Change `composer.json` from **your app**
 
 <x-code no-render language="javascript">
 "minimum-stability": "dev",      // <- change to "dev"
@@ -40,21 +43,23 @@ yarn dev
 
 This website is made with Laravel, Livewire, Volt and Mary.
 
-- Clone the repositoy `git clone git@github.com:robsontenorio/mary-ui.com.git`
-- Open it on VSCODE with `Dev Container` extension.
-- Create a `.env` from `.env.example`, then adjust some vars on `.env`.
+Clone the repositoy and open it on VSCODE with `Dev Container` extension.  
+<x-code no-render language="bash">
+git clone git@github.com:robsontenorio/mary-ui.com.git
+</x-code>
+
+Create `.env` from `.env.example` and adjust few vars.
 
 <x-code no-render language="bash">
 APP_ENV=local
 APP_DEBUG=true
 </x-code>
 
-- Install, migrate and start.
+Install, migrate and start.
 
 <x-code no-render language="bash">
 composer start
 </x-code>
-
 
 <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
 
