@@ -25,12 +25,33 @@ new class extends Component
 <x-markdown class="markdown">
 # Date Picker
 
-This component is a `flatpickr` wrapper. Under the hood all needed assets are injected automatically. All usage examples and config options are available on [flatpickr`s site](https://flatpickr.js.org/examples/).
+This component is wrapper around `flatpickr`. All usage examples and config options are available on [flatpickr`s site](https://flatpickr.js.org/examples/).
 </x-markdown>
+
 
 <x-alert icon="o-light-bulb" class="markdown mb-10">
     For native date time selection see <a href="/docs/components/datetime" wire:navigate>Date Time</a> component.
 </x-alert>
+
+<x-markdown>
+### Install
+</x-markdown>
+
+<x-code no-render>
+<head>
+    ...
+
+    <!-- Flatpickr  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+</x-code>
+
+<x-markdown class="markdown">
+### Usage
+
+See all `$config` options at [flatpickr](https://flatpickr.js.org/options/).
+</x-markdown>
 
 <x-code class="grid grid-cols-2 gap-5">
 @verbatim
@@ -45,47 +66,40 @@ This component is a `flatpickr` wrapper. Under the hood all needed assets are in
 @endverbatim
 </x-code>
 
+
+
 <x-markdown class="markdown">
 ### Localization
 
-Add extra locale packages at end of `<body>`. See more at [flatpickr`s site](https://flatpickr.js.org/localization/).
+Just add extra locale packages. See more at [flatpickr`s site](https://flatpickr.js.org/localization/).
+
+</x-markdown>
 
 <x-code no-render>
-<body>
+<head>
     ...
+
+    <!-- Flatpickr  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- By default it will not apply locale  -->
     <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>    
     <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>    
     <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>    
-</body>
-</x-code>
 
-#### Global
-
-In the following example it will apply `fr` locale for all `flatpickr` instances.
-
-</x-markdown>
-
-<x-code no-render>
-<body>
-    ...
-    
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>    
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>    
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
-    
-    <!-- Global locale -->
+    <!-- Just set here default locale or any global flatpickr settings-->
     <script>
         flatpickr.localize(flatpickr.l10ns.fr);
     </script>
-</body>
+</head>
 </x-code>
+
 
 <x-markdown>
 #### Per component
 
-Just add extra locale packages as described above. But **don't apply** global locale config. Instead set locale on component config object.
+Just add extra locale packages as described above, but **don't apply** global locale config. Instead set locale on component config object.
 </x-markdown>
 
 <x-code class="flex gap-8">
@@ -100,6 +114,3 @@ Just add extra locale packages as described above. But **don't apply** global lo
 @endverbatim
 </x-code>
 </div>
-
-<script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
-<script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>

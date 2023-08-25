@@ -22,6 +22,12 @@
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>    
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 

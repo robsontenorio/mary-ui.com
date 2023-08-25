@@ -20,7 +20,7 @@ If you are an experienced developer you can tweak this steps or reference relate
 
 <x-code no-render language="bash">
 # Livewire 3
-composer require livewire/livewire "^3.0@beta"
+composer require livewire/livewire 
 
 # Tailwind and daisyUI
 yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
