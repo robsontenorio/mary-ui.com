@@ -185,7 +185,7 @@ Here is a reference to get started, but, of course, you can use the approach bes
 ...
 
 // It is called by <x-choices>
-public search(string $value = '') {
+public function search(string $value = '') {
 
     $this->usersExampleSingleSearch = User::query()
             ->where('name', 'like', "%{$value}%")
