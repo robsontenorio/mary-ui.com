@@ -25,7 +25,7 @@ new class extends Component
 <x-markdown class="markdown">
 # Date Picker
 
-This component is wrapper around `flatpickr`. All usage examples and config options are available on [flatpickr`s site](https://flatpickr.js.org/examples/).
+This component is a wrapper around `flatpickr`. All usage examples and config options are available on [flatpickr`s site](https://flatpickr.js.org/examples/).
 </x-markdown>
 
 
@@ -53,7 +53,7 @@ This component is wrapper around `flatpickr`. All usage examples and config opti
 See all `$config` options at [flatpickr](https://flatpickr.js.org/options/).
 </x-markdown>
 
-<x-code class="grid grid-cols-2 gap-5">
+<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
 @verbatim
 @php
     $config1 = ['altFormat' => 'm/d/Y'];
@@ -102,7 +102,7 @@ Just add extra locale packages. See more at [flatpickr`s site](https://flatpickr
 Just add extra locale packages as described above, but **don't apply** global locale config. Instead set locale on component config object.
 </x-markdown>
 
-<x-code class="flex gap-8">
+<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
 @verbatim
 @php
     $config1 = ['locale' => 'pt'];

@@ -25,7 +25,7 @@ This component is intended to be used as simple native HTML value selection. It 
 
 <x-markdown class="markdown">
 ### Default attributes
-It will lookup for:
+By default it will lookup for:
 
 - `$object->id` for option value.
 - `$object->name` for option display label.

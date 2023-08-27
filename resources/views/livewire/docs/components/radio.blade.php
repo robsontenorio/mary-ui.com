@@ -17,7 +17,7 @@ new class extends Component
 
 ### Default attributes
 
-It will lookup for:
+By default it will lookup for:
 
 - `$object->id` for option value.
 - `$object->name` for option display label.

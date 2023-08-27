@@ -19,38 +19,50 @@ new class extends Component
     #[Rule('required')]
     public ?int $user4_id = null;
 
-    public Collection $options;
+    #[Rule('required')]
+    public ?int $user5_id = null;
+
+    #[Rule('required')]
+    public array $users_multiple = [];
+
+    #[Rule('required')]
+    public array $users_multiple_searchable = [];
+
+    public Collection $users;
+
+    public Collection $usersExampleSingleSearch;
+
+    public Collection $usersExampleMultiSearch;
 
     public function mount()
     {
+        $this->users = User::take(4)->get();
+
         $this->search();
+        $this->otherSearch();
     }
 
     public function save()
     {
-        sleep(1);
         $this->validate();
     }
 
     public function search(?string $term = '')
     {
-        $selectedUser1 = User::find($this->user1_id);
-        $selectedUser2 = User::find($this->user2_id);
-        $selectedUser3 = User::find($this->user3_id);
-        $selectedUser4 = User::find($this->user4_id);
-
-        $this->options = User::query()
-            ->where('username', 'like', "%{$term}%")
+        $this->usersExampleSingleSearch = User::query()
+            ->where('name', 'like', "%{$term}%")
+            ->orderBy('name')
             ->take(4)
-            ->orderBy('username')
-            ->get()
-            ->prepend($selectedUser1)
-            ->prepend($selectedUser2)
-            ->prepend($selectedUser3)
-            ->prepend($selectedUser4)
-            ->filter()
-            ->unique();
+            ->get();
+    }
 
+    public function otherSearch(?string $term = '')
+    {
+        $this->usersExampleMultiSearch = User::query()
+            ->where('name', 'like', "%{$term}%")
+            ->orderBy('name')
+            ->take(4)
+            ->get();
     }
 }
 
@@ -64,13 +76,13 @@ This component is intended to be used to build complex selection interface for s
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown mb-10">
-    If you need a simple native HTML value selection just use <a href="/docs/components/select" wire:navigate>Select</a> component.
+    Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component. It renders nice natively on every device.
 </x-alert>
 
 <x-markdown class="markdown">
-### Single
+### Selection
 
-It will lookup for:
+By default it will lookup for:
 
 - `$object->id` for option value.
 - `$object->name` for option display label.
@@ -79,35 +91,40 @@ It will lookup for:
 <br>
 </x-markdown>
 
-<div class="border border-dashed border-gray-300 bg-base-200/50 p-8 rounded-lg flex gap-8">
-    <x-choices label="Simple" wire:model="user1_id" :options="$options" single />
+<div class="border border-dashed border-gray-300 bg-base-200/50 p-8 rounded-lg grid grid-cols-1 gap-5">
+    <x-choices label="Simple" wire:model="user1_id" :options="$users" single />
+    
+    <x-choices label="Multiple" wire:model="users_multiple" :options="$users" />
 
     <x-choices 
-        label="Custom" 
+        label="Custom display labels" 
         wire:model="user2_id" 
-        :options="$options" 
+        :options="$users" 
         option-label="username" 
-        option-sub-label="city.name"   
+        option-sub-label="city.name"
         option-avatar="other_avatar" 
-        single 
-    />
+        hint="It has custom display labels"
+        single />    
 </div>
 
 <x-code no-render>
 @verbatim
 <!-- Note `single` -->
-<x-choices label="Simple" wire:model="user1_id" :options="$options" single />
+<x-choices label="Simple" wire:model="user1_id" :options="$users" single />
+
+<!-- public array $users_multiple = []; -->
+<x-choices label="Multiple" wire:model="users_multiple" :options="$users" />
 
 <!-- Custom options -->
 <x-choices 
-    label="Custom" 
-    wire:model="user2_id" 
-    :options="$options" 
-    option-label="username"     
-    option-sub-label="city.name"    {-- It suports nested values  --}
-    option-avatar="other_avatar" 
-    single 
-/>
+        label="Custom display labels" 
+        wire:model="user2_id" 
+        :options="$users" 
+        option-label="username" 
+        option-sub-label="city.name"
+        option-avatar="other_avatar" 
+        hint="It has custom display labels"
+        single />    
 @endverbatim
 </x-code>
 
@@ -117,56 +134,68 @@ It will lookup for:
 When dealing with large options list use `searchable` parameter.
 </x-markdown>
 
-<div class="border border-dashed border-gray-300 bg-base-200/50 p-8 rounded-lg">        
+<div class="border border-dashed border-gray-300 bg-base-200/50 p-8 rounded-lg grid gap-5">        
     <x-choices 
-        label="Users" 
-        wire:model="user3_id" 
-        :options="$options" 
-        icon="o-magnifying-glass"
-        placeholder="Search for username ..."
-        option-label="username"
+        label="Searchable - Single" 
+        wire:model="user4_id" 
+        :options="$usersExampleSingleSearch"         
+        no-result-text="Nothing here"
         single 
+        searchable />
+
+    <x-choices 
+        label="Searchable - Multiple" 
+        wire:model="users_multiple_searchable" 
+        :options="$usersExampleMultiSearch"         
+        search-function="otherSearch"
+        no-result-text="Nothing here"        
         searchable />
 </div>
 
 <x-code no-render>
 @verbatim
-<!-- Note `searchable` -->
+<!-- Note `searchable` + `single` -->
 <x-choices 
-    label="Users" 
-    wire:model="user3_id" 
-    :options="$options" 
-    icon="o-magnifying-glass"
-    placeholder="Type here ..."
+    label="Searchable - Single" 
+    wire:model="user4_id" 
+    :options="$usersExampleSingleSearch"         
+    no-result-text="Nothing here"
     single 
+    searchable />
+
+<!-- You can choose de search function name -->
+<x-choices 
+    label="Searchable - Multiple" 
+    wire:model="users_multiple_searchable" 
+    :options="$usersExampleMultiSearch"         
+    search-function="otherSearch"
+    no-result-text="Nothing here"        
     searchable />
 @endverbatim
 </x-code>
 
 <x-markdown>
-When using `searchable` option you need to implement the `search` method. Here is a reference to get started. But, of course, you can use the approach best works for you.
+By default it calls `search()` method to get fresh options while typing. 
+You can change the method name by using `search-function` parameter.
+Here is a reference to get started, but, of course, you can use the approach best works for you.
+</x-markdown>
 
 <x-code no-render language="php">
 @verbatim
 ...
 
-public Collection $options;
+// It is called by <x-choices>
+public search(string $value = '') {
 
-public function mount()
-{
-    $this->search();
-}
-
-public search(string $value = ''): Collection {
-
-    $this->options = User::query()
+    $this->usersExampleSingleSearch = User::query()
             ->where('name', 'like', "%{$value}%")
-            ->take(5)
-            ->get()
+            ->take(4)
+            ->get();
 }
 @endverbatim
 </x-code>
 
+<x-markdown>
 ### Slots
 
 @verbatim
@@ -177,7 +206,7 @@ It will inject current `$object` on loop context and achieves same behavior you 
 </x-markdown>
 
 <div class="border border-dashed border-gray-300 bg-base-200/50 p-8 rounded-lg">        
-<x-choices label="Slots" wire:model="user4_id" :options="$options" single>
+<x-choices label="Slots" wire:model="user5_id" :options="$users" single>
     @scope('item', $user)        
         <x-list-item :item="$user" sub-value="bio">
             <x-slot:avatar>
@@ -193,9 +222,8 @@ It will inject current `$object` on loop context and achieves same behavior you 
 
 <x-code no-render>
 @verbatim
-<x-choices label="Slots" wire:model="user4_id" :options="$options" single>
-    @scope('item', $user)
-        <!-- You could use any element in here. See `x-list-item` is a good fit. -->
+<x-choices label="Slots" wire:model="user5_id" :options="$users" single>
+    @scope('item', $user)        
         <x-list-item :item="$user" sub-value="bio">
             <x-slot:avatar>
                 <x-icon name="o-user" class="bg-orange-100 p-2 w-8 h8 rounded-full" />
@@ -208,11 +236,5 @@ It will inject current `$object` on loop context and achieves same behavior you 
 </x-choices>
 @endverbatim
 </x-code>
-
-<x-markdown>
-    ### Multiple
-
-    // WIP
-</x-markdown>
 
 </div>

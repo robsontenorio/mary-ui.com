@@ -17,7 +17,7 @@ new class extends Component
 <x-markdown class="markdown">
 # List Item
 
-It will lookup for:
+By default it will lookup for:
 
 - `$object->name` as main value.
 -  `$object->avatar` as picture url.
