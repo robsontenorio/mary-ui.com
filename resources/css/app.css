@@ -7,7 +7,7 @@ h2,
 h3,
 h4,
 h5 {
-    @apply font-bold my-10
+    @apply font-bold my-10 scroll-mt-24
 }
 
 h1 {
@@ -34,7 +34,7 @@ p {
     @apply list-disc ml-10 pb-2
 }
 
-.markdown a {
+.markdown :not(h1, h2, h3, h4, h5) a {
     @apply link
 }
 

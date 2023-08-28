@@ -23,6 +23,10 @@
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Algolia docsearch -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 </head>
 
 <body class="min-h-screen font-sans antialiased">
@@ -33,6 +37,8 @@
             </a>
         </x-slot:brand>
         <x-slot:actions>
+            <div id="doc-search">...</div>
+
             <a href="/docs/installation" wire:navigate class="font-medium">Docs</a>
 
             <a href="https://github.com/robsontenorio/mary">
@@ -56,6 +62,19 @@
             </div>
         </x-slot:footer>
     </x-main>
+
+    <!-- Algolia search docs -->
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script type="text/javascript">
+        docsearch({
+            appId: '0AWOCS02I6',
+            apiKey: '7814a814bf52a38ef15b03d5bf6be0f5',
+            indexName: 'mary-ui',
+            insights: true, // Optional, automatically send insights when user interacts with search results
+            container: '#doc-search',
+            debug: false // Set debug to true if you want to inspect the modal
+        });
+    </script>
 </body>
 
 </html>

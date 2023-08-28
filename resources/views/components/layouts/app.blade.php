@@ -29,6 +29,10 @@
     <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>    
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Algolia docsearch -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 </head>
 
 <body class="min-h-screen font-sans antialiased">
@@ -43,6 +47,7 @@
             </a>
         </x-slot:brand>
         <x-slot:actions>
+            <div id="doc-search">...</div>
             <a href="https://github.com/robsontenorio/mary">
                 <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
@@ -104,6 +109,19 @@
             </div>
         </x-slot:footer>
     </x-main>
+
+    <!-- Algolia search docs -->
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script type="text/javascript">
+        docsearch({
+            appId: '0AWOCS02I6',
+            apiKey: '7814a814bf52a38ef15b03d5bf6be0f5',
+            indexName: 'mary-ui',
+            insights: true, // Optional, automatically send insights when user interacts with search results
+            container: '#doc-search',
+            debug: false // Set debug to true if you want to inspect the modal
+        });
+    </script>
 </body>
 
 </html>
