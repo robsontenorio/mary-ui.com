@@ -72,7 +72,7 @@ new class extends Component
 <x-markdown class="markdown">
 # Choices
 
-This component is intended to be used to build complex selection interface for single and multiple values. It also suports **async search** when dealing with large lists.
+This component is intended to be used to build complex selection interface for single and multiple values. It also supports **async search** when dealing with large lists.
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown mb-10">

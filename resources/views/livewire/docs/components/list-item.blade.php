@@ -40,7 +40,7 @@ By default it will lookup for:
 <x-markdown >
 ### Slots and other attributes
 
-You can override all slots. It also suports nested properties.
+You can override all slots. It also supports nested properties.
 <br>
 </x-markdown>
 
@@ -51,7 +51,7 @@ You can override all slots. It also suports nested properties.
     $user2 = App\Models\User::inRandomOrder()->first();    
 @endphp 
 
-<!-- Note `city.name`. It suports nested properties -->
+<!-- Note `city.name`. It supports nested properties -->
 <x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />    
 
 <!-- All slots -->
