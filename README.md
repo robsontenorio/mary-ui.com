@@ -1,26 +1,10 @@
 <p align="center"><img width="200" src="public/mary.png"></p>
 
-<p align="center">
-    <a href="https://packagist.org/packages/robsontenorio/mary">
-        <img src="https://poser.pugx.org/robsontenorio/mary/d/total.svg">
-    </a>
-    <a href="https://packagist.org/packages/robsontenorio/mary">
-        <img src="https://poser.pugx.org/robsontenorio/mary/v/stable.svg">
-    </a>
-    <a href="https://packagist.org/packages/robsontenorio/mary">
-        <img src="https://poser.pugx.org/robsontenorio/mary/license.svg">
-    </a>
-</p>
-
 
 ## Introduction
-Mary is a set of gorgeous Laravel blade components made for Livewire 3 and styled with DaisyUI and Tailwind.
+This is the source code of [mary-ui.com](https://mary-ui.com)  
 
-## Official Documentation
-You can read the official documentation on the [Mary website](https://mary-ui.com).
-
-
-## Contributing
+## Contributing 
 
 This website is made with Laravel, Livewire, Volt and Mary.
 
