@@ -27,6 +27,12 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>    
+    
+    <!-- Vanilla Calendar -->
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">    
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js" defer></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -73,8 +79,7 @@
                 <x-menu-item title="Radio" link="/docs/components/radio" />
                 <x-menu-item title="Select" link="/docs/components/select" />
                 <x-menu-item title="Choices" link="/docs/components/choices" />                
-                <x-menu-item title="Date Time" link="/docs/components/datetime" />                
-                <x-menu-item title="Date Picker" link="/docs/components/datepicker" />                
+                <x-menu-item title="Date Time" link="/docs/components/datetime" />                                
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />
@@ -97,6 +102,11 @@
                 <x-menu-item title="Icon" link="/docs/components/icon" />                                    
                 <x-menu-item title="Stat" link="/docs/components/stat" />                
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
+
+                <x-menu-separator title="Third-party" icon="o-puzzle-piece" />
+                <x-menu-item title="Calendar" link="/docs/components/calendar" />
+                <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
+
             </x-menu>
         </x-slot:sidebar>
         <x-slot:content class="lg:max-w-4xl">
