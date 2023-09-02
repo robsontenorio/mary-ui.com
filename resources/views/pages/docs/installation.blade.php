@@ -45,7 +45,7 @@ export default {
         "./app/Livewire/**/**/*.php",                     
 
         // Add mary
-        "./vendor/robsontenorio/mary/src/View/Components/**/*.php" 
+        "./vendor/robsontenorio/mary/src/{View,Livewire}/**/*.php",
     ],
     theme: {
         extend: {},

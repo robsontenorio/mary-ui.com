@@ -37,6 +37,7 @@ Route::get('/docs/components/table', fn () => view('livewire.docs.components.tab
 // DIALOG
 Volt::route('/docs/components/drawer', 'docs.components.drawer');
 Volt::route('/docs/components/modal', 'docs.components.modal');
+Volt::route('/docs/components/toast', 'docs.components.toast');
 
 // UI
 Volt::route('/docs/components/alert', 'docs.components.alert');

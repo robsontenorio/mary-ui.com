@@ -90,8 +90,9 @@
                 <x-menu-item title="Dropdown" link="/docs/components/dropdown" />                                
 
                 <x-menu-separator title="Dialogs" icon="o-window" />
-                <x-menu-item title="Modal" link="/docs/components/modal" />
                 <x-menu-item title="Drawer" link="/docs/components/drawer" />
+                <x-menu-item title="Modal" link="/docs/components/modal" />                
+                <x-menu-item title="Toast" link="/docs/components/toast" />
 
                 <x-menu-separator title="UI" icon="o-cursor-arrow-rays" />
                 <x-menu-item title="Alert" link="/docs/components/alert" />
@@ -132,6 +133,9 @@
             debug: false // Set debug to true if you want to inspect the modal
         });
     </script>
+
+    <!-- Toast -->
+    <x-toast />                    
 </body>
 
 </html>
