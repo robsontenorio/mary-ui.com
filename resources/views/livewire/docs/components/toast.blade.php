@@ -102,11 +102,11 @@ class MyComponent extends Component
 
 <x-code class="grid lg:flex gap-5">
 @verbatim
-<x-button label="Default" class="btn-success" wire:click="save" />
+<x-button label="Default" class="btn-success" wire:click="save" spinner />
 
-<x-button label="Quick" class="btn-error" wire:click="save2" />
+<x-button label="Quick" class="btn-error" wire:click="save2" spinner />
 
-<x-button label="Save and redirect" class="btn-warning" wire:click="save3" />
+<x-button label="Save and redirect" class="btn-warning" wire:click="save3" spinner />
 @endverbatim
 </x-code>
 
