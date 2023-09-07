@@ -55,7 +55,7 @@ You can override all slots. It also supports nested properties.
 <x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />    
 
 <!-- All slots -->
-<x-list-item :item="$user2" no-separator>
+<x-list-item :item="$user2" no-separator no-hover>
     <x-slot:avatar>
         <x-badge value="top user" class="badge-primary" />
     </x-slot:avatar>

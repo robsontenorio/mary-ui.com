@@ -6,7 +6,15 @@ You are free to make your own layout decision. But, here is suggestion to quickl
 
 You can play around by placing **daisyUI/Tailwind** classes on components or slots, from this example. Also try to remove entirely some components or slots.
 
-Default Livewire app template: `views/components/layouts/app.blade.php`
+Default Livewire app template is `views/components/layouts/app.blade.php`
+</x-markdown>
+
+<x-markdown class="markdown">
+### All together
+
+- Navbar
+- Sidebar
+- Footer
 </x-markdown>
 
 <x-code no-render>
@@ -22,16 +30,17 @@ Default Livewire app template: `views/components/layouts/app.blade.php`
 
 <body class="min-h-screen font-sans antialiased">
 
-    <!-- The navbar with `sticky` -->
-    <x-nav sticky>
+    <!-- The navbar with `sticky` and `full-width` -->
+    <x-nav sticky full-width>
+        
         <x-slot:brand>
             <!-- Drawer toggle for "main-drawer" -->
             <label for="main-drawer" class="lg:hidden mr-3">
                 <x-icon name="o-bars-3" class="cursor-pointer" />
             </label>
 
+            <!-- Your logo -->
             My App
-
         </x-slot:brand>
 
         <!-- Right side actions -->
@@ -41,12 +50,15 @@ Default Livewire app template: `views/components/layouts/app.blade.php`
         </x-slot:actions>
     </x-nav>
 
-    <!-- The main content -->
-    <x-main>
+    <!-- The main content with `full-width` -->
+    <x-main full-width>
+
         <!-- It is a sidebar that works also as a drawer at small screens -->
         <!-- Note `main-drawer` reference here -->
-        <x-slot:sidebar class="bg-slate-200" drawer="main-drawer">
-            <x-menu>
+        <x-slot:sidebar drawer="main-drawer" class="bg-slate-200">
+
+            <!-- Activate menu item when route matches `link` property -->
+            <x-menu activate-by-route>
                 <x-menu-item title="Home" icon="o-home" link="###" />
                 <x-menu-item title="Messages" icon="o-envelope" link="###" />
             </x-menu>
@@ -68,4 +80,59 @@ Default Livewire app template: `views/components/layouts/app.blade.php`
 </body>
 @endverbatim
 </x-code>
+
+<x-markdown>
+### Only sidebar (collapsible)
+</x-markdown>
+
+<x-code no-render>
+@verbatim
+...
+
+<head>
+    ...
+
+    <!-- Remember adding this -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body class="min-h-screen font-sans antialiased">
+    <x-main full-width>
+        <x-slot:sidebar drawer="main-drawer" collapsible class="pt-3 bg-sky-800 text-white">
+        
+            <!-- Hidden when collapsed -->
+            <div class="hidden-when-collapsed ml-5 font-black text-4xl text-yellow-500">mary</div>
+            
+            <!-- Display when collapsed -->
+            <div class="display-when-collapsed ml-5 font-black text-4xl text-orange-500">m</div>
+            
+            <!-- Custom `active menu item background color` -->
+            <x-menu activate-by-route active-bg-color="bg-base-300/10">        
+            
+                @php
+                    $user = App\Models\User::first();
+                @endphp
+
+                <!-- User -->        
+                <x-list-item :item="$user" sub-value="username" no-separator no-hover class="!-mx-2 mt-2 mb-5 border-y border-y-sky-900">
+                    <x-slot:actions>                
+                        <div class="tooltip tooltip-left" data-tip="logoff">
+                            <x-button icon="o-power" class="btn-circle btn-ghost btn-xs" />                
+                        </div>
+                    </x-slot:actions>
+                </x-list-item>                                
+                    
+                <x-menu-item title="Home" icon="o-home" link="/" />
+                <x-menu-item title="Yeah" icon="o-sparkles" link="####" />               
+            </x-menu>
+        </x-slot:sidebar>
+        <!-- The `$slot` goes here -->
+        <x-slot:content>
+            {{ $slot }}
+        </x-slot:content>
+    </x-main>
+</body>
+@endverbatim
+</x-code>
+
 </div>

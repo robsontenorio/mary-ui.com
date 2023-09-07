@@ -54,6 +54,12 @@
         </x-slot:brand>
         <x-slot:actions>
             <div id="doc-search">...</div>
+            
+            <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
+                <x-icon name="o-heart" class="text-pink-500 animate-pulse " />
+                Sponsor
+            </a>                                                
+
             <a href="https://github.com/robsontenorio/mary">
                 <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                     <path fill-rule="evenodd"
@@ -64,9 +70,9 @@
         </x-slot:actions>
     </x-nav>
 
-    <x-main>
+    <x-main with-nav>
         <x-slot:sidebar drawer="main-drawer">
-            <x-menu title="Get started" icon="o-sparkles" separator>
+            <x-menu title="Get started" icon="o-sparkles" separator activate-by-route>
                 <x-menu-item title="Installation" link="/docs/installation" />
                 <x-menu-item title="Layout" link="/docs/layout" />
                 <x-menu-item title="Contributing" link="/docs/contributing" />
@@ -111,14 +117,20 @@
             </x-menu>
         </x-slot:sidebar>
         <x-slot:content class="lg:max-w-4xl">
+            
             {{ $slot }}
-        </x-slot:content>
-        <x-slot:footer>
-            <hr />
-            <div class="justify-center items-baseline flex my-10">
+
+            <hr class="my-10" />
+            
+            <div class="justify-center items-baseline flex ">
                 <x-mary-brand />
+
+                <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
+                    <x-icon name="o-heart" class="text-pink-500 animate-pulse " />
+                    Sponsor
+                </a>                                                
             </div>
-        </x-slot:footer>
+        </x-slot:content>
     </x-main>
 
     <!-- Algolia search docs -->

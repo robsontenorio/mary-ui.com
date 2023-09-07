@@ -24,7 +24,7 @@ We have simplified its API to make it act as a **readonly calendar** for easily 
 </head>
 </x-code>
 
-In the following examples we use dinamic dates to keep this example udpated to current month. You can work with default plain string as `YYYY-MM-DD`.
+In the following examples we use dinamic dates to keep this example udpated to current month.
 Remember to configure **Tailwind safelist** when working with dinamic CSS classes.
 </x-markdown>
 
@@ -41,21 +41,21 @@ Remember to configure **Tailwind safelist** when working with dinamic CSS classe
             'label' => 'Day off',
             'description' => 'Playing <u>tennis.</u>',
             'css' => '!bg-amber-200',
-            'date' => now()->startOfMonth()->addDays(3)->format('Y-m-d'), 
+            'date' => now()->startOfMonth()->addDays(3), 
         ],
         [
             'label' => 'Health',
             'description' => 'I am sick',
             'css' => '!bg-green-200',
-            'date' => now()->startOfMonth()->addDays(8)->format('Y-m-d'), 
+            'date' => now()->startOfMonth()->addDays(8), 
         ],
         [
             'label' => 'Laracon',
             'description' => 'Let`s go!',
             'css' => '!bg-blue-200',
             'range' => [
-                    now()->startOfMonth()->addDays(13)->format('Y-m-d'), 
-                    now()->startOfMonth()->addDays(15)->format('Y-m-d')
+                    now()->startOfMonth()->addDays(13), 
+                    now()->startOfMonth()->addDays(15)
             ]
         ],
     ];
@@ -81,8 +81,8 @@ Remember to configure **Tailwind safelist** when working with dinamic CSS classe
             'description' => 'Series A founding',
             'css' => '!bg-red-200',
             'range' => [
-                    now()->startOfMonth()->addDays(12)->format('Y-m-d'), 
-                    now()->startOfMonth()->addDays(19)->format('Y-m-d')
+                    now()->startOfMonth()->addDays(12), 
+                    now()->startOfMonth()->addDays(19)
             ]
         ],
     ];

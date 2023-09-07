@@ -163,7 +163,7 @@ When dealing with large options list use `searchable` parameter.
     single 
     searchable />
 
-<!-- You can choose de search function name -->
+<!-- You can choose the search function name -->
 <x-choices 
     label="Searchable - Multiple" 
     wire:model="users_multiple_searchable" 

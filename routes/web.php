@@ -34,6 +34,10 @@ Volt::route('/docs/components/list-item', 'docs.components.list-item');
 Route::get('/docs/components/table', fn () => view('livewire.docs.components.table'));
 // Volt::route('/docs/components/table', 'docs.components.table');
 
+// MENU
+Volt::route('/docs/components/dropdown', 'docs.components.dropdown');
+Volt::route('/docs/components/menu', 'docs.components.menu');
+
 // DIALOG
 Volt::route('/docs/components/drawer', 'docs.components.drawer');
 Volt::route('/docs/components/modal', 'docs.components.modal');
@@ -44,10 +48,8 @@ Volt::route('/docs/components/alert', 'docs.components.alert');
 Volt::route('/docs/components/badges', 'docs.components.badges');
 Volt::route('/docs/components/button', 'docs.components.button');
 Volt::route('/docs/components/card', 'docs.components.card');
-Volt::route('/docs/components/dropdown', 'docs.components.dropdown');
 Volt::route('/docs/components/header', 'docs.components.header');
 Volt::route('/docs/components/icon', 'docs.components.icon');
-Volt::route('/docs/components/menu', 'docs.components.menu');
 Volt::route('/docs/components/stat', 'docs.components.stat');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');
 

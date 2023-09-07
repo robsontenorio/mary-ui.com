@@ -39,7 +39,17 @@
         <x-slot:actions>
             <div id="doc-search">...</div>
 
-            <a href="/docs/installation" wire:navigate class="font-medium">Docs</a>
+            <div class="hidden lg:block">
+                <a href="/docs/installation" wire:navigate class="font-medium btn btn-ghost btn-sm">
+                    <x-icon name="o-book-open"  />
+                    Docs
+                </a>
+                
+                <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
+                    <x-icon name="o-heart" class="text-pink-500" />
+                    Sponsor
+                </a>
+            </div>
 
             <a href="https://github.com/robsontenorio/mary">
                 <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
