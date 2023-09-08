@@ -131,7 +131,8 @@ By default it will lookup for:
 <x-markdown class="markdown">
 ### Searchable
 
-When dealing with large options list use `searchable` parameter.
+When dealing with large options list use `searchable` parameter. By default it calls `search()` method to get fresh options while typing. 
+You can change the method name by using `search-function` parameter.  
 </x-markdown>
 
 <div class="border border-dashed border-gray-300 bg-base-200/50 p-8 rounded-lg grid gap-5">        
@@ -163,7 +164,7 @@ When dealing with large options list use `searchable` parameter.
     single 
     searchable />
 
-<!-- You can choose the search function name -->
+<!-- Note custom `search-function` -->
 <x-choices 
     label="Searchable - Multiple" 
     wire:model="users_multiple_searchable" 
@@ -175,23 +176,41 @@ When dealing with large options list use `searchable` parameter.
 </x-code>
 
 <x-markdown>
-By default it calls `search()` method to get fresh options while typing. 
-You can change the method name by using `search-function` parameter.
-Here is a reference to get started, but, of course, you can use the approach best works for you.
+
+You also must consider display pre selected items on list. 
+There are many approaches to make it work, but here is one to quickly get started for **multiple search.**
 </x-markdown>
 
 <x-code no-render language="php">
 @verbatim
-...
 
-// It is called by <x-choices>
-public function search(string $value = '') {
+class ChoicesExample extends Component
+{
+    // Selected users
+    public array $users_multiple_searchable = [];
 
-    $this->usersExampleSingleSearch = User::query()
-            ->where('name', 'like', "%{$value}%")
-            ->take(4)
-            ->get();
+    // Result search
+    public Collection $usersExampleMultiSearch;
+
+    public function mount()
+    {
+        $this->search();
+    }
+    
+    // It is called by <x-choices>
+    public function search(string $value = '') {
+
+        // Also load selected users, besides result search
+        $preUsers = User::whereIn('id', $this->users_multiple_searchable)->get();
+        
+        $this->usersExampleMultiSearch = User::query()
+                ->where('name', 'like', "%{$value}%")
+                ->take(4)
+                ->get()
+                ->merge($preUsers); // <--- make it appear on list
+    }
 }
+
 @endverbatim
 </x-code>
 

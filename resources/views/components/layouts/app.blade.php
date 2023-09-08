@@ -55,10 +55,10 @@
         <x-slot:actions>
             <div id="doc-search">...</div>
             
-            <a class="btn btn-ghost btn-sm hidden lg:block" href="https://github.com/sponsors/robsontenorio">
-                <x-icon name="o-heart" class="text-pink-500 animate-pulse " />
+            <a class="btn btn-ghost btn-sm hidden lg:inline-flex" href="https://github.com/sponsors/robsontenorio">
+                <x-icon name="o-heart" class="text-pink-500" />
                 Sponsor
-            </a>                                                
+            </a>                            
 
             <a href="https://github.com/robsontenorio/mary">
                 <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
