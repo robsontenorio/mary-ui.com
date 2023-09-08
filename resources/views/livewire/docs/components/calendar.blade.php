@@ -32,7 +32,7 @@ Remember to configure **Tailwind safelist** when working with dinamic CSS classe
 ### Single month
 </x-markdown>
 
-<x-code class="bg-base-200 grid grid-cols-1 lg:grid-cols-2">
+<x-code class="bg-base-200 grid grid-cols-1 lg:grid-cols-2 gap-5">
 @verbatim
 
 @php

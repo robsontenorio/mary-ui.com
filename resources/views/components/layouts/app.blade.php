@@ -55,7 +55,7 @@
         <x-slot:actions>
             <div id="doc-search">...</div>
             
-            <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
+            <a class="btn btn-ghost btn-sm hidden lg:block" href="https://github.com/sponsors/robsontenorio">
                 <x-icon name="o-heart" class="text-pink-500 animate-pulse " />
                 Sponsor
             </a>                                                
@@ -72,7 +72,7 @@
 
     <x-main with-nav>
         <x-slot:sidebar drawer="main-drawer">
-            <x-menu title="Get started" icon="o-sparkles" separator activate-by-route>
+            <x-menu title="Get started" icon="o-sparkles" separator activate-by-route class="mt-5">
                 <x-menu-item title="Installation" link="/docs/installation" />
                 <x-menu-item title="Layout" link="/docs/layout" />
                 <x-menu-item title="Contributing" link="/docs/contributing" />
@@ -116,6 +116,7 @@
 
             </x-menu>
         </x-slot:sidebar>
+
         <x-slot:content class="lg:max-w-4xl">
             
             {{ $slot }}
@@ -134,7 +135,7 @@
     </x-main>
 
     <!-- Algolia search docs -->
-    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
     <script type="text/javascript">
         docsearch({
             appId: '0AWOCS02I6',

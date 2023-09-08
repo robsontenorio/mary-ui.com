@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "927f9df3b505f0767d27231b267f63be",
+    "content-hash": "fe6b97407fc485fa2d345a2c31294ea3",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1122,16 +1122,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.20.0",
+            "version": "v10.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a655dca3fbe83897e22adff652b1878ba352d041"
+                "reference": "9234388a895206d4e1df37342b61adc67e5c5d31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a655dca3fbe83897e22adff652b1878ba352d041",
-                "reference": "a655dca3fbe83897e22adff652b1878ba352d041",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9234388a895206d4e1df37342b61adc67e5c5d31",
+                "reference": "9234388a895206d4e1df37342b61adc67e5c5d31",
                 "shasum": ""
             },
             "require": {
@@ -1318,7 +1318,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-08-22T13:37:09+00:00"
+            "time": "2023-09-05T13:20:01+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -1956,29 +1956,29 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "2e426e8d47e03c4777334ec0c8397341bcfa15f3"
+                "reference": "daa88b5a6203c0e60f0a9bf8a8b5ac1394708ddc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/2e426e8d47e03c4777334ec0c8397341bcfa15f3",
-                "reference": "2e426e8d47e03c4777334ec0c8397341bcfa15f3",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/daa88b5a6203c0e60f0a9bf8a8b5ac1394708ddc",
+                "reference": "daa88b5a6203c0e60f0a9bf8a8b5ac1394708ddc",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^10.0|^11.0",
-                "illuminate/support": "^10.0|^11.0",
-                "illuminate/validation": "^10.0|^11.0",
+                "illuminate/database": "^10.0",
+                "illuminate/support": "^10.0",
+                "illuminate/validation": "^10.0",
                 "league/mime-type-detection": "^1.9",
                 "php": "^8.1",
                 "symfony/http-kernel": "^5.0|^6.0"
             },
             "require-dev": {
                 "calebporzio/sushi": "^2.1",
-                "laravel/framework": "^10.0|^11.0",
+                "laravel/framework": "^10.0",
                 "mockery/mockery": "^1.3.1",
                 "orchestra/testbench": "^7.0|^8.0",
                 "orchestra/testbench-dusk": "^7.0|^8.0",
@@ -2017,7 +2017,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.1"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.2"
             },
             "funding": [
                 {
@@ -2025,20 +2025,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-25T18:13:03+00:00"
+            "time": "2023-09-06T16:02:17+00:00"
         },
         {
             "name": "livewire/volt",
-            "version": "v1.0.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "3b0713661313735d1ee2f678949850567f395097"
+                "reference": "aea9dc65e608d0609d277b151efd0c8279a16c6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/3b0713661313735d1ee2f678949850567f395097",
-                "reference": "3b0713661313735d1ee2f678949850567f395097",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/aea9dc65e608d0609d277b151efd0c8279a16c6a",
+                "reference": "aea9dc65e608d0609d277b151efd0c8279a16c6a",
                 "shasum": ""
             },
             "require": {
@@ -2047,7 +2047,7 @@
                 "php": "^8.1"
             },
             "require-dev": {
-                "laravel/folio": "^1.0",
+                "laravel/folio": "^1.1",
                 "mockery/mockery": "^1.6",
                 "orchestra/testbench": "^8.6.2",
                 "pestphp/pest": "^2.9.5",
@@ -2097,7 +2097,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-08-22T13:36:50+00:00"
+            "time": "2023-09-01T14:06:06+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3387,16 +3387,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.34.0",
+            "version": "0.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "301404a54db46b538178d48f5190713ba4ee305d"
+                "reference": "33552019a7626b5882e97cb271027321bb408be2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/301404a54db46b538178d48f5190713ba4ee305d",
-                "reference": "301404a54db46b538178d48f5190713ba4ee305d",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/33552019a7626b5882e97cb271027321bb408be2",
+                "reference": "33552019a7626b5882e97cb271027321bb408be2",
                 "shasum": ""
             },
             "require": {
@@ -3446,7 +3446,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.34.0"
+                "source": "https://github.com/robsontenorio/mary/tree/0.35.0"
             },
             "funding": [
                 {
@@ -3454,7 +3454,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-07T16:59:20+00:00"
+            "time": "2023-09-08T15:17:00+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",

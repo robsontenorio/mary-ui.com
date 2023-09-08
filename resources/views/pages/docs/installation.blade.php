@@ -10,29 +10,44 @@ You can customize most of components styles, by inline overriding daisyUI and Ta
     Please, for further style reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
 </x-alert>
 
-<br>
 <x-markdown>
-Bellow we show all steps for a **brand new project**, to quickly get started, without leaving this docs.  
-If you are an experienced developer you can tweak this steps or reference related packages sites if needed.
+### Automatic
 
-### Install dependencies
+It requires you are installing Mary on a **brand new** Laravel project. The installer also includes a starter layout, a `Welcome` component and its route.
 
+<x-code no-render language="bash">
+composer require robsontenorio/mary
+
+php artisan mary:install
+</x-code>
+
+Then, start dev server.
+<x-code no-render language="bash">
+yarn dev
+</x-code>
+
+<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
+
+<strong >... You are done!</strong>
+
+<br>
+
+### Manual
+
+If you wanna see it by yourself here we go...
 
 <x-code no-render language="bash">
 # Livewire 3
 composer require livewire/livewire 
 
+# Mary
+composer require robsontenorio/mary    
+
 # Tailwind and daisyUI
 yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
 </x-code>
 
-### Install mary
-
-<x-code no-render language="bash">
-composer require robsontenorio/mary    
-</x-code>
-
-Add **mary** and **daisy** entries to `tailwind.config.js`.
+Add **Mary** and **Daisy** entries to `tailwind.config.js`.
 
 <x-code no-render language="javascript">
 /** @type {import('tailwindcss').Config} */
@@ -56,7 +71,7 @@ export default {
 }
 </x-code>
 
-Add Tailwind directives to `resources/app.css`
+Add Tailwind directives to `resources/css/app.css`
 
 <x-code no-render language="css">
 @tailwind base;
@@ -98,7 +113,7 @@ yarn dev
 </x-markdown>
 
 <x-alert icon="o-light-bulb" class="markdown">
-    See <a href="/docs/layout" wire:navigate>layout</a> section to quickly get started.
+    See <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
 </x-alert>
 
 </div>
