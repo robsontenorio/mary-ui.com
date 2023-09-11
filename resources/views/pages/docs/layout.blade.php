@@ -82,7 +82,10 @@ Default Livewire app template is `views/components/layouts/app.blade.php`
 </x-code>
 
 <x-markdown>
-### Only sidebar (collapsible)
+### Only sidebar
+
+This layout  has only a collapsibe Sidebar. Fits nice for "enterprise layout" which need more vertical spacing.
+
 </x-markdown>
 
 <x-code no-render>
@@ -121,7 +124,12 @@ Default Livewire app template is `views/components/layouts/app.blade.php`
                 @endif
                     
                 <x-menu-item title="Home" icon="o-home" link="/" />
-                <x-menu-item title="Yeah" icon="o-sparkles" link="####" />               
+                <x-menu-item title="Yeah" icon="o-sparkles" link="####" />           
+                
+                <x-menu-sub title="Settings" icon="o-cog-6-tooth">
+                    <x-menu-item title="Wifi" icon="o-wifi" />
+                    <x-menu-item title="Archives" icon="o-archive-box"  />
+                </x-menu-sub>
             </x-menu>
         </x-slot:sidebar>
         
