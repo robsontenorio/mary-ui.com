@@ -51,6 +51,7 @@ Volt::route('/docs/components/card', 'docs.components.card');
 Volt::route('/docs/components/header', 'docs.components.header');
 Volt::route('/docs/components/icon', 'docs.components.icon');
 Volt::route('/docs/components/stat', 'docs.components.stat');
+Volt::route('/docs/components/timeline', 'docs.components.timeline');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');
 
 // THIRD-PARTY

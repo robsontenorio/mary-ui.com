@@ -108,6 +108,7 @@
                 <x-menu-item title="Header" link="/docs/components/header" />
                 <x-menu-item title="Icon" link="/docs/components/icon" />                                    
                 <x-menu-item title="Stat" link="/docs/components/stat" />                
+                <x-menu-item title="Timeline" link="/docs/components/timeline" />                
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
 
                 <x-menu-separator title="Third-party" icon="o-puzzle-piece" />
