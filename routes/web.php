@@ -28,6 +28,7 @@ Volt::route('/docs/components/toggle', 'docs.components.toggle');
 Volt::route('/docs/components/checkbox', 'docs.components.checkbox');
 Volt::route('/docs/components/choices', 'docs.components.choices');
 Volt::route('/docs/components/datetime', 'docs.components.datetime');
+Volt::route('/docs/components/textarea', 'docs.components.textarea');
 
 // LIST DATA
 Volt::route('/docs/components/list-item', 'docs.components.list-item');
@@ -57,3 +58,4 @@ Volt::route('/docs/components/tabs', 'docs.components.tabs');
 // THIRD-PARTY
 Volt::route('/docs/components/datepicker', 'docs.components.datepicker');
 Volt::route('/docs/components/calendar', 'docs.components.calendar');
+Volt::route('/docs/components/diff', 'docs.components.diff');

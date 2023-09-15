@@ -34,6 +34,11 @@
     <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">    
     <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js" defer></script>
 
+    <!-- DIFF2HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Algolia docsearch -->
@@ -86,6 +91,7 @@
                 <x-menu-item title="Select" link="/docs/components/select" />
                 <x-menu-item title="Choices" link="/docs/components/choices" />                
                 <x-menu-item title="Date Time" link="/docs/components/datetime" />                                
+                <x-menu-item title="Textrarea" link="/docs/components/textarea" />                                
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />
@@ -114,6 +120,7 @@
                 <x-menu-separator title="Third-party" icon="o-puzzle-piece" />
                 <x-menu-item title="Calendar" link="/docs/components/calendar" />
                 <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
+                <x-menu-item title="Diff" link="/docs/components/diff" />
 
             </x-menu>
         </x-slot:sidebar>

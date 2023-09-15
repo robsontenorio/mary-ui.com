@@ -24,8 +24,8 @@ We have simplified its API to make it act as a **readonly calendar** for easily 
 </head>
 </x-code>
 
-In the following examples we use dinamic dates to keep this example udpated to current month.
-Remember to configure **Tailwind safelist** when working with dinamic CSS classes.
+In the following examples we use dynamic dates to keep this example udpated to current month.
+Remember to configure **Tailwind safelist** when working with dynamic CSS classes.
 </x-markdown>
 
 <x-markdown>
