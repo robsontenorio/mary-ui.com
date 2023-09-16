@@ -18,8 +18,7 @@ new class extends Component
 <x-textarea 
     label="Bio" 
     wire:model="bio"
-    placeholder="Your history ..."  
-    icon="o-home" 
+    placeholder="Your history ..."
     hint="Max 1000 chars"             
     rows="5" 
     inline />
