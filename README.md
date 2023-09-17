@@ -2,7 +2,7 @@
 
 
 ## Introduction
-This is the source code of [mary-ui.com](https://mary-ui.com)  
+This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking for [mary components repository](https://github.com/robsontenorio/mary)?
 
 ## Sponsor
 Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) ❤️ 

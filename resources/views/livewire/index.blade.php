@@ -62,7 +62,7 @@ $delete = function () {
         <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />    
         <x-slot:actions>
             <x-button label="Cancel" />
-            <x-button label="Clik me!" class="btn-primary" type="submit" spinner="save" />
+            <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
         </x-slot:actions>
     </x-form>
 </x-mockup>
@@ -74,7 +74,7 @@ $delete = function () {
     <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />    
     <x-slot:actions>
         <x-button label="Cancel" />
-        <x-button label="Clik me!" class="btn-primary" type="submit" spinner="save" />
+        <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
     </x-slot:actions>
 </x-form>
 @endverbatim
