@@ -1,8 +1,9 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('List Item')] class extends Component
 {
     public function delete()
     {

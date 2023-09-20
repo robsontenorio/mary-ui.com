@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Card')] class extends Component
+{
+}
+?>
 <div>
 <x-markdown>
 # Card

@@ -1,12 +1,15 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('Select')] class extends Component
 {
     public int $selectedUser = 4;
 
     public int $selectedUser2 = 3;
+
+    public int $selectedUser3 = 0;
 }
 
 ?>
@@ -68,6 +71,30 @@ Just set `option-value` and `option-label`  representing desired targets.
     placeholder="Select an user" 
     hint="Select one, please."
     wire:model="selectedUser2" />
+@endverbatim
+</x-code>
+
+<x-markdown>
+### Disable options
+</x-markdown>
+
+<x-code class="grid gap-5"> 
+@verbatim
+@php
+    $users = [
+        [
+            'id' => 1,
+            'name' => 'Joe'
+        ],
+        [
+            'id' => 2,
+            'name' => 'Mary',
+            'disabled' => true
+        ]
+    ];
+@endphp 
+
+<x-select label="Disabled options" :options="$users" wire:model="selectedUser3" />
 @endverbatim
 </x-code>
 </div>

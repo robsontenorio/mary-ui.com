@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Stat')] class extends Component
+{
+}
+?>
 <div>
 <x-markdown>
 # Stat

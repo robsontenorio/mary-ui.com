@@ -1,8 +1,9 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('Modal')] class extends Component
 {
     public bool $myModal = false;
 }

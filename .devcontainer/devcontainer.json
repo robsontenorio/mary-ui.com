@@ -8,11 +8,8 @@
 		"vscode": {
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "zsh",
+				"editor.formatOnSave": true,
 				"laravel-pint.enable": true,
-				"volar.completion.preferredAttrNameCase": "kebab",
-				"volar.completion.preferredTagNameCase": "kebab",
-				"volar.inlayHints.eventArgumentInInlineHandlers": false,
-				"volar.inlayHints.missingRequiredProps": false,
 				"[php]": {
 					"editor.defaultFormatter": "open-southeners.laravel-pint"
 				}
@@ -20,8 +17,6 @@
 			"extensions": [
 				"bmewburn.vscode-intelephense-client",
 				"open-southeners.laravel-pint",
-				"cjhowe7.laravel-blade",
-				"shufo.vscode-blade-formatter",
 				"bradlc.vscode-tailwindcss",
 				"formulahendry.auto-close-tag"
 			]

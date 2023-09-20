@@ -1,9 +1,10 @@
 <?php
 
 use Livewire\Attributes\Rule;
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('Form')] class extends Component
 {
     #[Rule('required|min:20')]
     public $name = '';

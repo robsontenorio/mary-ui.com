@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Calendar')] class extends Component
+{
+}
+?>
 <div>
 <x-markdown class="markdown">
 # Calendar

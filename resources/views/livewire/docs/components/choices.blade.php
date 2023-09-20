@@ -3,9 +3,10 @@
 use App\Models\User;
 use Illuminate\Support\Collection;
 use Livewire\Attributes\Rule;
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('Choices')] class extends Component
 {
     #[Rule('required')]
     public ?int $user1_id = null;

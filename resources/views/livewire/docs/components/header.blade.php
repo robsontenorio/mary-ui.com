@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Header')] class extends Component
+{
+}
+?>
 <div>
 <x-markdown>
 # Header

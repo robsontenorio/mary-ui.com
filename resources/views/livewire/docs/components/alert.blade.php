@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Alert')] class extends Component
+{
+}
+?>
 <div>
 <x-markdown>
 # Alert

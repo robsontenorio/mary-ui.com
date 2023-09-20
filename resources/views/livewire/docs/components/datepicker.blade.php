@@ -1,8 +1,9 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('Datepicker')] class extends Component
 {
     public ?string $myDate1 = '2029-06-12';
 

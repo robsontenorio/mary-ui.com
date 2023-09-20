@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Contributing')] class extends Component
+{
+}
+?>
 <div>
 <x-markdown class="markdown">
 # Contributing

@@ -1,9 +1,10 @@
 <?php
 
 use Livewire\Attributes\Rule;
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component
+new #[Title('Datetime')] class extends Component
 {
     #[Rule('required|date')]
     public ?string $myDate = '2029-06-12';

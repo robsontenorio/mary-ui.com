@@ -1,9 +1,10 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Mary\Traits\Toast;
 
-new class extends Component
+new #[Title('Toast')] class extends Component
 {
     use Toast;
 

@@ -32,8 +32,8 @@ Volt::route('/docs/components/textarea', 'docs.components.textarea');
 
 // LIST DATA
 Volt::route('/docs/components/list-item', 'docs.components.list-item');
-Route::get('/docs/components/table', fn () => view('livewire.docs.components.table'));
-// Volt::route('/docs/components/table', 'docs.components.table');
+// Route::get('/docs/components/table', fn () => view('livewire.docs.components.table'));
+Volt::route('/docs/components/table', 'docs.components.table');
 
 // MENU
 Volt::route('/docs/components/dropdown', 'docs.components.dropdown');

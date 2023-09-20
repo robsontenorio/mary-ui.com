@@ -1,6 +1,18 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Table')] class extends Component
+{
+    public function delete()
+    {
+        sleep(1);
+    }
+}
+?>
 <div>
 
-<x-layouts.app>
 <x-markdown>
 # Table
 </x-markdown>
@@ -91,12 +103,10 @@ In the following example:
 
     <!-- Special `actions` slot -->
     @scope('actions', $user)
-        <x-button icon="o-trash" wire:click="delete({{ $user->id }})" class="btn-sm" />
+        <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner class="btn-sm" />
     @endscope
     
 </x-table>
 @endverbatim
 </x-code>
-
-</x-layouts.app>
 </div>
