@@ -22,7 +22,8 @@ You can customize most of components styles, by inline overriding daisyUI and Ta
 <x-markdown>
 ### Automatic
 
-It requires you are installing Mary on a **brand new** Laravel project. The installer also includes a starter layout, a `Welcome` component and its route.
+It requires you are installing Mary on a **brand new** Laravel project, **without any starter kit**. 
+The installer also includes a starter layout, a `Welcome` component and its route.
 
 <x-code no-render language="bash">
 composer require robsontenorio/mary
@@ -43,7 +44,9 @@ yarn dev
 
 ### Manual
 
-If you wanna see it by yourself here we go...
+If you have created a Laravel project **with a starter kit**, follow this steps.  
+
+Once Mary was primally designed to work on fresh projects **without starter kits**, probably you will have to handle some settings conflits by yourself.
 
 <x-code no-render language="bash">
 # Livewire 3

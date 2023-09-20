@@ -74,7 +74,7 @@
     </x-main>
 
     <!-- Algolia search docs -->
-    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
     <script type="text/javascript">
         docsearch({
             appId: '0AWOCS02I6',
