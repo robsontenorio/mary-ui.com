@@ -22,7 +22,7 @@ You can customize most of components styles, by inline overriding daisyUI and Ta
 <x-markdown>
 ### Automatic
 
-It requires you are installing Mary on a **brand new** Laravel project, **without any starter kit**. 
+It requires you are installing Mary on a **brand new** Laravel project, **without any starter kit**.
 The installer also includes a starter layout, a `Welcome` component and its route.
 
 <x-code no-render language="bash">
@@ -36,7 +36,7 @@ Then, start dev server.
 yarn dev
 </x-code>
 
-<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
+<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
 
 <strong >... You are done!</strong>
 
@@ -44,16 +44,16 @@ yarn dev
 
 ### Manual
 
-If you have created a Laravel project **with a starter kit**, follow this steps.  
+If you have created a Laravel project **with a starter kit**, follow this steps.
 
-Once Mary was primally designed to work on fresh projects **without starter kits**, probably you will have to handle some settings conflits by yourself.
+Once Mary was primarily designed to work on fresh projects **without starter kits**, probably you will have to handle some settings conflicts by yourself.
 
 <x-code no-render language="bash">
 # Livewire 3
-composer require livewire/livewire 
+composer require livewire/livewire
 
 # Mary
-composer require robsontenorio/mary    
+composer require robsontenorio/mary
 
 # Tailwind and daisyUI
 yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
@@ -69,17 +69,17 @@ export default {
         "./resources/**/**/*.blade.php",
         "./resources/**/**/*.js",
         "./app/View/Components/**/**/*.php",
-        "./app/Livewire/**/**/*.php",                     
+        "./app/Livewire/**/**/*.php",
 
         // Add mary
-        "./vendor/robsontenorio/mary/src/View/Components/**/*.php" 
+        "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
     ],
     theme: {
         extend: {},
     },
-    
+
     // Add daisyUI
-    plugins: [require("daisyui")] 
+    plugins: [require("daisyui")]
 }
 </x-code>
 
@@ -104,7 +104,7 @@ Then add @verbatim `@vite` @endverbatim on default app template `views/component
 @verbatim
 <head>
     ...
-    
+
     <!-- This -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -118,7 +118,7 @@ Finally, start dev server.
 yarn dev
 </x-code>
 
-<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
+<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
 
 <strong >... You are done!</strong>
 
