@@ -99,6 +99,13 @@ class MyComponent extends Component
 </x-markdown>
 
 <x-markdown>
+For convenience this component flashs the following messages to make testing easier.
+
+<x-code no-render language="php">
+session()->flash('mary.toast.title', $title);
+session()->flash('mary.toast.description', $description);
+</x-code>
+
 ### Example
 </x-markdown>
 
