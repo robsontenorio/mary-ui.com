@@ -1,3 +1,4 @@
+{{--@formatter:off--}}
 <?php
 
 use Livewire\Attributes\Title;
@@ -24,7 +25,7 @@ new #[Title('Toast')] class extends Component
         $this->error(
             'It will last just 1 second ...',
             timeout: 1000,
-            position: 'bottom-10 right-10'
+            position: 'toast-bottom toast-start'
         );
     }
 
@@ -59,7 +60,7 @@ Just place @verbatim `<x-toast />` @endverbatim somewhere on your main app layou
 @endverbatim
 </x-code>
 
-Import `Toast` trait and call `$this->toast(...)` method. 
+Import `Toast` trait and call `$this->toast(...)` method.
 
 <x-code no-render language="php">
 @verbatim
@@ -80,7 +81,7 @@ class MyComponent extends Component
             type: 'success',
             title: 'It is done!',
             description: null,                  // optional (text)
-            position: 'top-10 right-10',        // optional (Tailwind classes)
+            position: 'toast-top toast-end',    // optional (daisyUI classes)
             timeout: 3000,                      // optional (ms)
             redirectTo: null                    // optional (uri)
         );
@@ -98,7 +99,7 @@ class MyComponent extends Component
 </x-markdown>
 
 <x-markdown>
-### Example 
+### Example
 </x-markdown>
 
 <x-code class="grid lg:flex gap-5">
@@ -125,11 +126,11 @@ public function save2()
 {
     // Your stuff here ...
 
-    // Toast        
+    // Toast
     $this->error(
         'It will last just 1 second ...',
         timeout: 1000,
-        position: 'bottom-10 right-10'
+        position: 'toast-bottom toast-start'
     );
 }
 
@@ -137,7 +138,7 @@ public function save3()
 {
     // Your stuff here ...
 
-    // Toast        
+    // Toast
     $this->warning(
         'It is working with redirect',
         'You were redirected to another url ...',

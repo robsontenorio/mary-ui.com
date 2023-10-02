@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e2f4b88393cf4727dd2720a541e1939",
+    "content-hash": "88985dab90cb98ea13f7aaea460d9d08",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -2267,16 +2267,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.3.0",
+            "version": "v1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "aea9dc65e608d0609d277b151efd0c8279a16c6a"
+                "reference": "f777801cfdd24b6fa3d4b572413216dfb12d9e2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/aea9dc65e608d0609d277b151efd0c8279a16c6a",
-                "reference": "aea9dc65e608d0609d277b151efd0c8279a16c6a",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/f777801cfdd24b6fa3d4b572413216dfb12d9e2e",
+                "reference": "f777801cfdd24b6fa3d4b572413216dfb12d9e2e",
                 "shasum": ""
             },
             "require": {
@@ -2335,7 +2335,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-09-01T14:06:06+00:00"
+            "time": "2023-09-25T00:46:14+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3625,16 +3625,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.38.3",
+            "version": "0.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "d1e64195512b082907a7c924372428a876c1d16e"
+                "reference": "3b7d56cf64aab3c123e5305f1ea078989136286f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/d1e64195512b082907a7c924372428a876c1d16e",
-                "reference": "d1e64195512b082907a7c924372428a876c1d16e",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/3b7d56cf64aab3c123e5305f1ea078989136286f",
+                "reference": "3b7d56cf64aab3c123e5305f1ea078989136286f",
                 "shasum": ""
             },
             "require": {
@@ -3685,7 +3685,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.38.3"
+                "source": "https://github.com/robsontenorio/mary/tree/0.39.0"
             },
             "funding": [
                 {
@@ -3693,7 +3693,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-19T23:32:38+00:00"
+            "time": "2023-10-01T22:49:13+00:00"
         },
         {
             "name": "spatie/commonmark-shiki-highlighter",
