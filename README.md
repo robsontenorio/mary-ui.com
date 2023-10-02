@@ -11,7 +11,7 @@ Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) â
 
 This website is made with Laravel, Livewire, Volt and Mary.
 
-Clone the repositoy and open it on VSCODE with `Dev Container` extension.  
+Clone the repository and open it on VSCODE with `Dev Container` extension.  
 ```bash
 git clone git@github.com:robsontenorio/mary-ui.com.git
 ```

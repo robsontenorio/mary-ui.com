@@ -13,7 +13,7 @@ new #[Title('Contributing')] class extends Component
 
 ### Mary components
 
-Clone the repositoy into some folder **inside your app**.
+Clone the repository into some folder **inside your app**.
 <x-code no-render language="bash">
 git clone git@github.com:robsontenorio/mary.git
 </x-code>
@@ -24,7 +24,7 @@ Change `composer.json` from **your app**
 <x-code no-render language="javascript">
 "minimum-stability": "dev",      // <- change to "dev"
 
-// Add this 
+// Add this
 "repositories": {
     "robsontenorio/mary": {
         "type": "path",
@@ -42,7 +42,7 @@ Require the package again for local symlink.
 composer require robsontenorio/mary
 </x-code>
 
-Start dev  
+Start dev
 
 <x-code no-render language="bash">
 yarn dev
@@ -52,7 +52,7 @@ yarn dev
 
 This website is made with Laravel, Livewire, Volt and Mary.
 
-Clone the repositoy and open it on VSCODE with `Dev Container` extension.  
+Clone the repository and open it on VSCODE with `Dev Container` extension.
 <x-code no-render language="bash">
 git clone git@github.com:robsontenorio/mary-ui.com.git
 </x-code>
@@ -70,7 +70,7 @@ Install, migrate and start.
 composer start
 </x-code>
 
-<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" /> 
+<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
 
 <strong>Done! See <a href="http://localhost:8018">http://localhost:8018</a></strong>
 
