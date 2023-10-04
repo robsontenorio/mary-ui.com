@@ -52,12 +52,12 @@ yarn dev
 
 This website is made with Laravel, Livewire, Volt and Mary.
 
-Clone the repository and open it on VSCODE with `Dev Container` extension.
+Clone the repository and open it on VSCODE with the `Dev Container` extension.
 <x-code no-render language="bash">
 git clone git@github.com:robsontenorio/mary-ui.com.git
 </x-code>
 
-Create `.env` from `.env.example` and adjust few vars.
+Create `.env` from `.env.example` and adjust a few vars.
 
 <x-code no-render language="bash">
 APP_ENV=local
