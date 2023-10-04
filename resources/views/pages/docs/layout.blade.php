@@ -11,9 +11,9 @@ new #[Title('Layout')] class extends Component
 <x-markdown>
 # Layout
 
-You are free to make your own layout decision. But, here is suggestion to quickly get started.
+You are free to make your own layout decision, but here is a suggestion to quickly get started.
 
-You can play around by placing **daisyUI/Tailwind** classes on components or slots, from this example. Also try to remove entirely some components or slots.
+You can play around by placing **daisyUI/Tailwind** classes on components or slots, based on this example Also try to remove entirely some components or slots.
 
 Default Livewire app template is `views/components/layouts/app.blade.php`
 </x-markdown>
@@ -62,11 +62,11 @@ Default Livewire app template is `views/components/layouts/app.blade.php`
     <!-- The main content with `full-width` -->
     <x-main full-width>
 
-        <!-- It is a sidebar that works also as a drawer at small screens -->
-        <!-- Note `main-drawer` reference here -->
+        <!-- It is a sidebar that works also as a drawer on small screens -->
+        <!-- Notice the `main-drawer` reference here -->
         <x-slot:sidebar drawer="main-drawer" class="bg-slate-200">
 
-            <!-- Activate menu item when route matches `link` property -->
+            <!-- Activates the menu item when the route matches the `link` property -->
             <x-menu activate-by-route>
                 <x-menu-item title="Home" icon="o-home" link="###" />
                 <x-menu-item title="Messages" icon="o-envelope" link="###" />
@@ -93,7 +93,7 @@ Default Livewire app template is `views/components/layouts/app.blade.php`
 <x-markdown>
 ### Only sidebar
 
-This layout  has only a collapsible Sidebar. Fits nice for "enterprise layout" which need more vertical spacing.
+This layout has only a collapsible Sidebar. It fits nicely for an “enterprise layout”, which needs more vertical space.
 
 </x-markdown>
 
