@@ -44,7 +44,7 @@ yarn dev
 
 ### Manual
 
-If you have created a Laravel project **with a starter kit**, follow this steps.
+If you have created a Laravel project **with a starter kit**, follow these steps.
 
 Once Mary was primarily designed to work on fresh projects **without starter kits**, probably you will have to handle some settings conflicts by yourself.
 
@@ -94,7 +94,7 @@ Add Tailwind directives to `resources/css/app.css`
 Setup Livewire default app template.
 
 <x-code no-render language="bash">
-# It creates `views/components/layouts/app.blade.php`
+# This creates `views/components/layouts/app.blade.php`
 php artisan livewire:layout
 </x-code>
 
