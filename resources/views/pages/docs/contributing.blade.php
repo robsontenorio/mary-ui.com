@@ -3,86 +3,102 @@
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Contributing')] class extends Component
-{
+new #[Title('Contributing')] class extends Component {
 }
 ?>
 <div>
-<x-markdown class="markdown">
-# Contributing
 
-### Mary components
+    <x-header title="Contributing" />
 
-Clone the repository into some folder **inside your app**.
-<x-code no-render language="bash">
-git clone git@github.com:robsontenorio/mary.git
-</x-code>
+    <x-header title="Mary components" size="text-2xl" class="mt-10 mb-5" />
 
+    <p>
+        Clone the repository into some folder <strong>inside your app</strong>.
+    </p>
 
-Change `composer.json` from **your app**
+    <x-code no-render language="bash">
+        git clone git@github.com:robsontenorio/mary.git
+    </x-code>
 
-<x-code no-render language="javascript">
-"minimum-stability": "dev",      // <- change to "dev"
+    <p>
+        Change <code>composer.json</code> from <strong>your app</strong>.
+    </p>
 
-// Add this
-"repositories": {
-    "robsontenorio/mary": {
-        "type": "path",
-        "url": "/path/to/mary",  // <- change the path
-        "options": {
-            "symlink": true
+    {{--@formatter:off--}}
+    <x-code no-render language="javascript">
+        "minimum-stability": "dev", // <- change to "dev"
+
+        // Add this
+        "repositories": {
+            "robsontenorio/mary": {
+                "type": "path",
+                "url": "/path/to/mary", // <- change the path
+                "options": {
+                    "symlink": true
+                }
+            }
         }
-    }
-}
-</x-code>
+    </x-code>
+    {{--@formatter:on--}}
 
-Require the package again for local symlink.
+    <p>
+        Require the package again for local symlink.
+    </p>
 
-<x-code no-render language="bash">
-composer require robsontenorio/mary
-</x-code>
+    <x-code no-render language="bash">
+        composer require robsontenorio/mary
+    </x-code>
 
-Start dev
+    <p>
+        Start dev
+    </p>
 
-<x-code no-render language="bash">
-yarn dev
-</x-code>
+    <x-code no-render language="bash">
+        yarn dev
+    </x-code>
 
-### Mary docs
+    <x-header title="Mary docs" size="text-2xl" class="mt-10 mb-5" />
 
-This website is made with Laravel, Livewire, Volt and Mary.
+    <p>
+        This website is made with Laravel, Livewire, Volt and Mary.
+    </p>
 
-Clone the repository and open it on VSCODE with `Dev Container` extension.
-<x-code no-render language="bash">
-git clone git@github.com:robsontenorio/mary-ui.com.git
-</x-code>
+    <p>
+        Clone the repository and open it on VSCODE with <code>Dev Container</code> extension.
+    </p>
 
-Create `.env` from `.env.example` and adjust few vars.
+    <x-code no-render language="bash">
+        git clone git@github.com:robsontenorio/mary-ui.com.git
+    </x-code>
 
-<x-code no-render language="bash">
-APP_ENV=local
-APP_DEBUG=true
-</x-code>
+    <p>
+        Create <code>.env</code> from <code>.env.example</code> and adjust few vars.
+    </p>
 
-Install, migrate and start.
+    <x-code no-render language="bash">
+        APP_ENV=local
+        APP_DEBUG=true
+    </x-code>
 
-<x-code no-render language="bash">
-composer start
-</x-code>
+    <p>
+        Install, migrate and start.
+    </p>
 
-<x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
+    <x-code no-render language="bash">
+        composer start
+    </x-code>
 
-<strong>Done! See <a href="http://localhost:8018">http://localhost:8018</a></strong>
+    <p>
+        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
+        <strong>Done! See <a href="http://localhost:8018">http://localhost:8018</a></strong>
+    </p>
 
-</x-markdown>
+    <x-alert icon="o-light-bulb" class="mb-8">
+        If you are not using VSCODE Dev Containers, use any local address you have set up.
+    </x-alert>
 
-<x-alert icon="o-light-bulb" class="markdown mb-5">
-     If you are not using VSCODE Dev Containers, use any local address you have set up.
-</x-alert>
-
-<x-alert icon="o-light-bulb" class="markdown">
-    It uses SQLITE for dynamic examples.
-</x-alert>
-
+    <x-alert icon="o-light-bulb">
+        It uses SQLITE for dynamic examples.
+    </x-alert>
 
 </div>

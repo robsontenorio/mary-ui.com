@@ -7,6 +7,12 @@ export default {
         "./app/View/Components/**/**/*.php",
         "./vendor/robsontenorio/mary/src/View/Components/**/*.php",
     ],
+    safelist: [
+        {
+            pattern: /col-span-*/,
+            variants: ['lg']
+        }
+    ],
     theme: {
         extend: {},
     },

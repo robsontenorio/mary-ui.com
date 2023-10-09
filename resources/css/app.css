@@ -2,79 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    @apply font-bold my-10 scroll-mt-24
-}
-
-h1 {
-    @apply text-4xl font-extrabold mt-0
-}
-
-h2 {
-    @apply text-3xl
-}
-
-h3 {
-    @apply text-2xl mt-10 mb-5
-}
-
-h4 {
-    @apply text-xl mt-10 mb-5
-}
-
 p {
     @apply my-5 leading-8
 }
 
-.markdown ul li {
+.docs > ul li {
     @apply list-disc ml-10 pb-2
 }
 
-.markdown :not(h1, h2, h3, h4, h5) a {
+.docs > :not(h1, h2, h3, h4, h5) a {
     @apply link
 }
 
+.docs .mockup a {
+    @apply !no-underline
+}
 
+.docs-hide {
+    @apply hidden
+}
 
 /*
  Margin and rounding are personal preferences,
  overflow-x-auto is recommended.
 */
 pre {
-    @apply my-4 p-4 rounded-lg overflow-x-auto;
-    @apply text-sm leading-6
+    @apply my-4 rounded-lg overflow-x-auto;
 }
 
-
-.shiki .highlight {
-    background-color: hsl(197, 88%, 94%);
-    padding: 3px 0;
+/*
+ Add some vertical padding and expand the width
+ to fill its container. The horizontal padding
+ comes at the line level so that background
+ colors extend edge to edge.
+*/
+pre code.torchlight {
+    @apply block rounded-lg py-4 min-w-max text-sm;
 }
 
-.shiki .add {
-    background-color: hsl(136, 100%, 96%);
-    padding: 3px 0;
+/*
+ Horizontal line padding.
+*/
+pre code.torchlight .line {
+    @apply px-4 py-0.5;
 }
 
-.shiki .del {
-    background-color: hsl(354, 100%, 96%);
-    padding: 3px 0;
+/*
+ Push the code away from the line numbers and
+ summary caret indicators.
+*/
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+    @apply mr-4;
 }
 
-.shiki.focus .line:not(.focus) {
-    transition: all 250ms;
-    filter: blur(2px);
-}
-
-.shiki.focus:hover .line {
-    transition: all 250ms;
-    filter: blur(0);
-}
-
-code:not(.shiki > code) {
+code:not(.torchlight) {
     @apply bg-base-200 py-0.5 px-2 mx-1 rounded text-sm text-red-400
 }

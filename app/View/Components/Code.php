@@ -9,30 +9,47 @@ use Illuminate\View\Component;
 class Code extends Component
 {
     public function __construct(
-        public string $language = 'html',
-        public ?bool $noRender = false
+        public string $language = 'blade',
+        public ?bool $noRender = false,
+        public ?bool $sideBySide = false,
+        public ?bool $invert = false,
+        public ?string $renderColSpan = "12",
+        public ?string $codeColSpan = "12"
     ) {
-
     }
 
     public function render(): View|Closure|string
     {
         return <<<'HTML'
-        <!-- Fix identation -->
-        @php 
+        @php
             $x = (string) Str::of($slot);
+
+            // The @verbatim adds some weird indentation.
+            // So we hack it by looking for keyword ('docs') to know when @verbatim is used.
+            // Then, we handle unneeded extra white spaces.
+
+            if (Str::contains($x, "('docs')")) {
+                $x = Str::replace("('docs')", "        ", $x);
+                $x = Str::replaceFirst("        \n", "", $x);
+                $x = Str::replaceFirst("        ", "", $x);
+            }
         @endphp
 
+        <div @class(["grid gap-5 grid-cols-1 lg:grid-cols-12" => $sideBySide])>
         @if(!$noRender)
-            <x-mockup {{ $attributes }}>
-                <?php echo Blade::render($x);  ?>
-            </x-mockup>
+            <div @class(["lg:col-span-$renderColSpan" => $sideBySide, "order-last" => $invert])>
+                <x-mockup {{ $attributes }}>
+                    <?php echo Blade::render($x);  ?>
+                </x-mockup>
+            </div>
         @endif
-        <x-markdown theme="material-theme-palenight">
-        ```{{ $language }}
-        {!! $x !!}
-        ```
-        </x-markdown>
+
+        <div wire:ignore @class(["lg:col-span-$codeColSpan" => $sideBySide])>
+            <pre><x-torchlight-code :language="$language">
+                {!! $x !!}
+            </x-torchlight-code></pre>
+        </div>
+        </div>
         HTML;
     }
 }

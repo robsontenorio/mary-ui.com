@@ -8,14 +8,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
-    <!-- Open Graph / Facebook -->
+    {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="Mary UI">
     <meta property="og:description" content="Laravel blade components for Livewire 3.">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png">
 
-    <!-- Twitter -->
+    {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="Mary UI">
@@ -24,7 +24,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Algolia docsearch -->
+    {{-- Algolia docsearch --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 </head>
@@ -73,7 +73,7 @@
     </x-slot:footer>
 </x-main>
 
-<!-- Algolia search docs -->
+{{-- Algolia search docs --}}
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
 <script type="text/javascript">
     docsearch({

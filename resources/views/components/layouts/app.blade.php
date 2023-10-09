@@ -8,40 +8,40 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
-    <!-- Open Graph / Facebook -->
+    {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="Mary UI">
     <meta property="og:description" content="Laravel blade components for Livewire 3.">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png">
 
-    <!-- Twitter -->
+    {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="Mary UI">
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
-    <!-- Flatpickr -->
+    {{-- Flatpickr --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
 
-    <!-- Vanilla Calendar -->
+    {{-- Vanilla Calendar --}}
     <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/light.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/dark.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.js" defer></script>
 
-    <!-- DIFF2HTML -->
+    {{-- DIFF2HTML --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <!-- Algolia docsearch -->
+    {{-- Algolia docsearch --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 </head>
@@ -91,7 +91,7 @@
             <x-menu-item title="Select" link="/docs/components/select" />
             <x-menu-item title="Choices" link="/docs/components/choices" />
             <x-menu-item title="Date Time" link="/docs/components/datetime" />
-            <x-menu-item title="Textrarea" link="/docs/components/textarea" />
+            <x-menu-item title="Textarea" link="/docs/components/textarea" />
 
             <x-menu-separator title="List data" icon="o-list-bullet" />
             <x-menu-item title="List Item" link="/docs/components/list-item" />
@@ -142,21 +142,21 @@
     </x-slot:content>
 </x-main>
 
-<!-- Algolia search docs -->
+{{-- Algolia search docs --}}
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
 <script type="text/javascript">
     docsearch({
         appId: '0AWOCS02I6',
         apiKey: '7814a814bf52a38ef15b03d5bf6be0f5',
         indexName: 'mary-ui',
-        insights: true, // Optional, automatically send insights when user interacts with search results
+        insights: true,
         container: '#doc-search',
-        debug: false // Set debug to true if you want to inspect the modal
+        debug: false
     });
 </script>
 
-<!-- Toast -->
+{{-- Toast --}}
 <x-toast />
-</body>
 
+</body>
 </html>

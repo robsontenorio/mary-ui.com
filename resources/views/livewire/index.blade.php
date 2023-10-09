@@ -1,167 +1,164 @@
-{{--@formatter:off--}}
 <?php
 
-use function Livewire\Volt\computed;
-use function Livewire\Volt\layout;
-use function Livewire\Volt\rules;
-use function Livewire\Volt\state;
+use App\Models\User;
+use Illuminate\Support\Collection;
+use Livewire\Attributes\Computed;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Rule;
+use Livewire\Volt\Component;
 
-layout('components.layouts.landing');
+new #[Layout('components.layouts.landing')] class extends Component {
+    #[Rule('required|min:10')]
+    public string $name = '';
 
-state(['name', 'amount']);
+    #[Rule('required|decimal:0,2|gt:0')]
+    public string $amount;
+    
+    public Collection $users;
 
-rules([
-    'name' => 'required|min:10',
-    'amount' => 'required|decimal:0,2|gt:0',
-]);
+    public array $selected_users = [];
 
-$users = computed(fn () => App\Models\User::take(3)->get());
+    public function mount()
+    {
+        $this->users = User::take(4)->get();
 
-$save = function () {
-    sleep(1);
-    $this->validate();
-};
+        $this->search();
+    }
 
-$delete = function () {
-    sleep(1);
-};
+    public function save()
+    {
+        sleep(1);
+        $this->validate();
+    }
+
+    public function delete()
+    {
+        sleep(1);
+    }
+
+    public function search(?string $term = '')
+    {
+        $this->users = User::query()
+            ->where('name', 'like', "%{$term}%")
+            ->orderBy('name')
+            ->take(4)
+            ->get();
+    }
+}
 
 ?>
 
-<div>
-
-<div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">
-    <div class="font-bold text-6xl text-center mb-10 mt-20">
-        <span class="font-extrabold">Do more</span>. <span class="font-thin">Code less</span>.
-    </div>
-
-    <div class="text-center">
-        <div class="text-lg leading-7">
-        Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade components</span>
-            <br>made for
-            <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
-             and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
+<div class="docs">
+    <div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">
+        <div class="font-bold text-6xl text-center mb-10 mt-20">
+            <span class="font-extrabold">Do more</span>. <span class="font-thin">Code less</span>.
         </div>
 
-        <div class="mt-10">
-            <a wire:navigate href="/docs/installation" class="btn btn-primary">
-                Get started
-                <x-icon name="o-arrow-right" />
-            </a>
+        <div class="text-center">
+            <div class="text-xl leading-10">
+                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade components</span>
+                <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
+                and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
+            </div>
+
+            <div class="mt-10">
+                <a wire:navigate href="/docs/installation" class="btn btn-primary !no-underline animate-pulse">
+                    Get started
+                    <x-icon name="o-arrow-right" />
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="font-extrabold text-4xl py-10 px-5 lg:px-20">
-    Less code, more action.
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mb-10  px-5 lg:px-20">
-<x-mockup>
-    <x-form wire:submit="save">
-        <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
-        <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
-        <x-slot:actions>
-            <x-button label="Cancel" />
-            <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
-        </x-slot:actions>
-    </x-form>
-</x-mockup>
+    <div class="px-5 lg:px-20 pb-20">
+        <div class="font-extrabold text-4xl py-10">
+            Less code, more action.
+        </div>
 
-<x-code no-render>
-@verbatim
-<x-form wire:submit="save">
-    <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
-    <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
-    <x-slot:actions>
-        <x-button label="Cancel" />
-        <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
-    </x-slot:actions>
-</x-form>
-@endverbatim
-</x-code>
-</div>
+        <x-code side-by-side render-col-span="5" code-col-span="7">
+            @verbatim('docs')
+                @php
+                    $users = App\Models\User::take(3)->get();
+                @endphp
 
-<div class="bg-base-200/50 px-5 lg:px-20 pb-20">
-    <div class="font-extrabold text-4xl py-10 text-right">
-        It. Just. Works.
+                @foreach($users as $user)
+                    <x-list-item :item="$user" sub-value="username" link="/docs/installation">
+                        <x-slot:actions>
+                            <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner />
+                        </x-slot:actions>
+                    </x-list-item>
+                @endforeach
+            @endverbatim
+        </x-code>
     </div>
-<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-<x-code no-render>
-@verbatim
-@foreach($this->users as $user)
-    <x-list-item :item="$user" sub-value="username" link="/docs/installation">
-        <x-slot:actions>
-            <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner/>
-        </x-slot:actions>
-    </x-list-item>
-@endforeach
-@endverbatim
-</x-code>
 
-<x-mockup>
-    <div>
-        @foreach($this->users as $user)
-            <x-list-item :item="$user" sub-value="username" link="/docs/installation">
-                <x-slot:actions>
-                    <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner/>
-                </x-slot:actions>
-            </x-list-item>
-        @endforeach
+    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
+        <div class="font-extrabold text-4xl py-10 text-right">
+            It. Just. Works.
+        </div>
+
+        <x-code side-by-side render-col-span="4" code-col-span="8" class="grid gap-5">
+            @verbatim('docs')
+                @php                              // [tl! .docs-hide]
+                    $users = $this->users;   // [tl! .docs-hide]
+                @endphp                         {{-- [tl! .docs-hide] --}}
+                <x-choices label="Searchable" wire:model="selected_users" :options="$users" searchable />
+            @endverbatim
+        </x-code>
     </div>
-</x-mockup>
-</div>
-</div>
 
-<div class="font-extrabold text-4xl py-10 px-5 lg:px-20">
-    Develop at light speed.
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-5 mb-10  px-5 lg:px-20">
-<x-mockup>
-@php
-    $users = App\Models\User::with('city')->take(6)->get();
+    <div class="bg-base-200 px-5 lg:px-20 py-20">
+        <div class="font-extrabold text-4xl py-10">
+            Forms.
+        </div>
 
-    $headers = [
-        ['key' => 'id', 'label' => '#'],
-        ['key' => 'name', 'label' => 'Nice Name'],
-        ['key' => 'city.name', 'label' => 'City']
-    ];
-@endphp
+        <x-code side-by-side invert render-col-span="5" code-col-span="7">
+            @verbatim('docs')
+                <x-form wire:submit="save">
+                    <x-input label="Name" wire:model="name" icon="o-user" placeholder="Hello" />
+                    <x-input label="Amount" wire:model="amount" prefix="USD" money />
 
-<!-- You can use any `$wire.METHOD` on `@row-click` -->
-<x-table
-    :headers="$headers"
-    :rows="$users"
-    striped
-    @row-click="alert($event.detail.name)" />
-</x-mockup>
+                    <x-slot:actions>
+                        <x-button label="Cancel" />
+                        <x-button label="Save" class="btn-primary" type="submit" spinner="save" />
+                    </x-slot:actions>
+                </x-form>
+            @endverbatim
+        </x-code>
+    </div>
 
-<x-code no-render>
-@verbatim
-@php
-    $users = App\Models\User::with('city')->take(6)->get();
+    <div class="px-5 lg:px-20 py-20">
+        <div class="font-extrabold text-4xl py-10">
+            Tables.
+        </div>
 
-    $headers = [
-        ['key' => 'id', 'label' => '#'],
-        ['key' => 'name', 'label' => 'Nice Name'],
-        ['key' => 'city.name', 'label' => 'City']
-    ];
-@endphp
+        <x-code side-by-side render-col-span="4" code-col-span="8">
+            @verbatim('docs')
+                @php
+                    $users = App\Models\User::with('city')->take(5)->get();
 
-<!-- You can use any `$wire.METHOD` on `@row-click` -->
-<x-table
-    :headers="$headers"
-    :rows="$users"
-    striped
-    @row-click="alert($event.detail.name)" />
-@endverbatim
-</x-code>
-</div>
+                    $headers = [
+                        ['key' => 'id', 'label' => '#', 'class' => 'bg-red-400'],
+                        ['key' => 'name', 'label' => 'Nice Name'],
+                        ['key' => 'city.name', 'label' => 'City']
+                    ];
+                @endphp
 
-<div class="mt-10 text-center">
-    <a wire:navigate href="/docs/installation" class="btn btn-primary">
-        Let`s do it
-        <x-icon name="o-arrow-right" />
-    </a>
-</div>
+                {{-- You can use any `$wire.METHOD` on `@row-click` --}}
+                <x-table :headers="$headers" :rows="$users" striped @row-click="alert($event.detail.name)" />
+            @endverbatim
+        </x-code>
+    </div>
 
+    <div class=" text-center">
+
+        <div class="font-extrabold text-4xl py-10">
+            And more ...
+        </div>
+
+        <a wire:navigate href="/docs/installation" class="btn btn-primary !no-underline animate-pulse">
+            Let`s do it
+            <x-icon name="o-arrow-right" />
+        </a>
+    </div>
 </div>

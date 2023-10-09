@@ -4,16 +4,15 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Form')] class extends Component
-{
+new #[Title('Form')] class extends Component {
     #[Rule('required|min:20')]
-    public $name = '';
+    public string $name = '';
 
     #[Rule('required|email')]
-    public $email = '';
+    public string $email = '';
 
     #[Rule('required|decimal:0,2')]
-    public $amount = '';
+    public float $amount;
 
     public function save()
     {
@@ -24,29 +23,31 @@ new #[Title('Form')] class extends Component
 
 ?>
 
-<div>
-<x-markdown class="markdown">
-# Form
+<div class="docs">
+    <x-header title="Form" />
 
-Once you submit a form you get for free:
+    <p>
+        Once you submit a form you get for free:
+    </p>
 
-- Validation errors based on `wire:model`.
-- Button spinner based on `target` action.
-- Auto unmask `money` inputs for nice validation.
+    <ul>
+        <li>Validation errors based on <code>wire:model</code>.</li>
+        <li>Button spinner based on <code>target</code> action.</li>
+        <li>Auto unmask <code>money</code> inputs for nice validation.</li>
+    </ul>
 
-<br>
-</x-markdown>
+    <br>
 
-<x-code>
-@verbatim
-<x-form wire:submit="save">
-    <x-input label="Name" wire:model="name" />
-    <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />    
-    <x-slot:actions>
-        <x-button label="Cancel" />
-        <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
-    </x-slot:actions>
-</x-form>
-@endverbatim
-</x-code>
+    <x-code>
+        @verbatim('docs')
+            <x-form wire:submit="save">
+                <x-input label="Name" wire:model="name" />
+                <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
+                <x-slot:actions>
+                    <x-button label="Cancel" />
+                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+                </x-slot:actions>
+            </x-form>
+        @endverbatim
+    </x-code>
 </div>

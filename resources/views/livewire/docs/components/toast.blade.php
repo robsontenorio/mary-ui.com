@@ -1,12 +1,10 @@
-{{--@formatter:off--}}
 <?php
 
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Mary\Traits\Toast;
 
-new #[Title('Toast')] class extends Component
-{
+new #[Title('Toast')] class extends Component {
     use Toast;
 
     public function save()
@@ -43,116 +41,122 @@ new #[Title('Toast')] class extends Component
 }
 ?>
 
-<div>
-<x-markdown>
-# Toast
+<div class="docs">
 
-### Usage
+    <x-header title="Toast" />
 
-Just place @verbatim `<x-toast />` @endverbatim somewhere on your main app layout.
+    <x-header title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
-<x-code no-render>
-@verbatim
-<body>
-    ...
-    <x-toast />
-</body>
-@endverbatim
-</x-code>
+    <p>
+        Place <strong>toast tag</strong> somewhere on main layout.
+    </p>
 
-Import `Toast` trait and call `$this->toast(...)` method.
+    {{--@formatter:off--}}
+    <x-code no-render>
+        @verbatim('docs')
+            <body>
+                ...
+                <x-toast />  <!-- [tl! highlight .animate-pulse] -->
+            </body>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 
-<x-code no-render language="php">
-@verbatim
+    <p>
+        Import <code>Toast</code> trait and call <code>$this->toast(...)</code> method.
+    </p>
 
-use Mary\Traits\Toast;
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            use Mary\Traits\Toast;
 
-class MyComponent extends Component
-{
-    // Use this trait
-    use Toast;
+            class MyComponent extends Component
+            {
+                // Use this trait [tl! highlight:1 .animate-pulse]
+                use Toast;
 
-    public function save()
-    {
-        // Do your stuff here ...
+                public function save()
+                {
+                    // Do your stuff here ...
 
-        // Toast
-        $this->toast(
-            type: 'success',
-            title: 'It is done!',
-            description: null,                  // optional (text)
-            position: 'toast-top toast-end',    // optional (daisyUI classes)
-            timeout: 3000,                      // optional (ms)
-            redirectTo: null                    // optional (uri)
-        );
+                    // Toast
+                    $this->toast(
+                        type: 'success',
+                        title: 'It is done!',
+                        description: null,                  // optional (text)
+                        position: 'toast-top toast-end',    // optional (daisyUI classes)
+                        timeout: 3000,                      // optional (ms)
+                        redirectTo: null                    // optional (uri)
+                    );
 
-        // Shortcuts
-        $this->success(...);
-        $this->error(...);
-        $this->warning(...);
-        $this->info(...);
-    }
-}
-@endverbatim
-</x-code>
+                    // Shortcuts
+                    $this->success(...);
+                    $this->error(...);
+                    $this->warning(...);
+                    $this->info(...);
+                }
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 
-</x-markdown>
+    <p>
+        For convenience this component flashes the following messages to make testing easier.
+    </p>
 
-<x-markdown>
-For convenience this component flashs the following messages to make testing easier.
+    <x-code no-render language="php">
+        session()->flash('mary.toast.title', $title);
+        session()->flash('mary.toast.description', $description);
+    </x-code>
 
-<x-code no-render language="php">
-session()->flash('mary.toast.title', $title);
-session()->flash('mary.toast.description', $description);
-</x-code>
+    <x-header title="Example" size="text-2xl" class="mt-10 mb-5" />
 
-### Example
-</x-markdown>
+    <x-code class="grid lg:flex gap-5">
+        @verbatim('docs')
+            <x-button label="Default" class="btn-success" wire:click="save" spinner />
 
-<x-code class="grid lg:flex gap-5">
-@verbatim
-<x-button label="Default" class="btn-success" wire:click="save" spinner />
+            <x-button label="Quick" class="btn-error" wire:click="save2" spinner />
 
-<x-button label="Quick" class="btn-error" wire:click="save2" spinner />
+            <x-button label="Save and redirect" class="btn-warning" wire:click="save3" spinner />
+        @endverbatim
+    </x-code>
 
-<x-button label="Save and redirect" class="btn-warning" wire:click="save3" spinner />
-@endverbatim
-</x-code>
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            public function save()
+            {
+                // Your stuff here ...
 
-<x-code no-render language="php">
-@verbatim
-public function save()
-{
-    // Your stuff here ...
+                // Toast
+                $this->success('We are done, check it out');
+            }
 
-    // Toast
-    $this->success('We are done, check it out');
-}
+            public function save2()
+            {
+                // Your stuff here ...
 
-public function save2()
-{
-    // Your stuff here ...
+                // Toast
+                $this->error(
+                    'It will last just 1 second ...',
+                    timeout: 1000,
+                    position: 'toast-bottom toast-start'
+                );
+            }
 
-    // Toast
-    $this->error(
-        'It will last just 1 second ...',
-        timeout: 1000,
-        position: 'toast-bottom toast-start'
-    );
-}
+            public function save3()
+            {
+                // Your stuff here ...
 
-public function save3()
-{
-    // Your stuff here ...
-
-    // Toast
-    $this->warning(
-        'It is working with redirect',
-        'You were redirected to another url ...',
-        redirectTo: '/docs/components/form'
-    );
-}
-@endverbatim
-</x-code>
-
+                // Toast
+                $this->warning(
+                    'It is working with redirect',
+                    'You were redirected to another url ...',
+                    redirectTo: '/docs/components/form'
+                );
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 </div>

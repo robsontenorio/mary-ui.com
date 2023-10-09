@@ -3,22 +3,25 @@
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Stat')] class extends Component
-{
+new #[Title('Stat')] class extends Component {
 }
 ?>
-<div>
-<x-markdown>
-# Stat
-</x-markdown>
+<div class="docs">
+    <x-header title="Stat" />
 
-<x-code class="bg-base-200 flex gap-5">
-@verbatim
-<x-stat title="Sales" value="22.124" icon="o-arrow-trending-up" />
+    <x-code class="bg-base-200 flex gap-5">
+        @verbatim('docs')
+            <x-stat title="Sales" value="22.124" icon="o-arrow-trending-up" />
 
-<x-stat title="Sales" description="This month" value="22.124" icon="o-arrow-trending-up" />
+            <x-stat title="Sales" description="This month" value="22.124" icon="o-arrow-trending-up" />
 
-<x-stat title="Sales" description="This month" value="22.124" icon="o-arrow-trending-down" class="text-orange-500" color="text-pink-500" />
-@endverbatim
-</x-code>
+            <x-stat
+                title="Sales"
+                description="This month"
+                value="22.124"
+                icon="o-arrow-trending-down"
+                class="text-orange-500"
+                color="text-pink-500" />
+        @endverbatim
+    </x-code>
 </div>

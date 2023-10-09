@@ -3,8 +3,7 @@
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Datepicker')] class extends Component
-{
+new #[Title('Datepicker')] class extends Component {
     public ?string $myDate1 = '2029-06-12';
 
     public ?string $myDate2 = '2025-09-24';
@@ -15,103 +14,100 @@ new #[Title('Datepicker')] class extends Component
 
     public function save()
     {
-
     }
 };
 
 ?>
 
-<div>
+<div class="docs">
 
-<x-markdown class="markdown">
-# Date Picker
+    <x-header title="Date Picker" />
 
-This component is a wrapper around `flatpickr`. All usage examples and config options are available on [flatpickr`s site](https://flatpickr.js.org/examples/).
-</x-markdown>
+    <p>
+        This component is a wrapper around <a href="https://flatpickr.js.org/examples/" target="_blank">flatpickr`s docs</a>.
+    </p>
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        For native date time selection see <a href="/docs/components/datetime" wire:navigate>Date Time</a> component.
+    </x-alert>
 
-<x-alert icon="o-light-bulb" class="markdown mb-10">
-    For native date time selection see <a href="/docs/components/datetime" wire:navigate>Date Time</a> component.
-</x-alert>
+    <x-header title="Install" size="text-2xl" class="mt-10 mb-5" />
 
-<x-markdown>
-### Install
-</x-markdown>
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
 
-<x-code no-render>
-<head>
-    ...
+                {{-- Flatpickr  --}}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            </head>
+        @endverbatim
+    </x-code>
 
-    <!-- Flatpickr  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-</head>
-</x-code>
+    <x-header title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
-<x-markdown class="markdown">
-### Usage
+    <p>
+        See all <code>$config</code> options at <a href="https://flatpickr.js.org/options/" target="_blank">flatpickr`s docs</a>.
+    </p>
 
-See all `$config` options at [flatpickr](https://flatpickr.js.org/options/).
-</x-markdown>
+    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        @verbatim('docs')
+            @php
+                $config1 = ['altFormat' => 'm/d/Y'];
+                $config2 = ['mode' => 'range'];
+            @endphp
 
-<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-@verbatim
-@php
-    $config1 = ['altFormat' => 'm/d/Y'];
-    $config2 = ['mode' => 'range'];
-@endphp
+            <x-datepicker label="Date" wire:model="myDate1" icon="o-calendar" hint="Hi!" />
+            <x-datepicker label="Alt" wire:model="myDate2" icon-right="o-calendar" :config="$config1" />
+            <x-datepicker label="Range" wire:model="myDate3" icon-right="o-calendar" :config="$config2" />
+        @endverbatim
+    </x-code>
 
-<x-datepicker label="Date" wire:model="myDate1" icon="o-calendar" />
-<x-datepicker label="Alt" wire:model="myDate2" icon-right="o-calendar" :config="$config1" />
-<x-datepicker label="Range" wire:model="myDate3" icon-right="o-calendar" :config="$config2" hint="Select start and end date" />
-@endverbatim
-</x-code>
+    <x-header title="Localization" size="text-2xl" class="mt-10 mb-5" />
 
+    <p>
+        First add extra locale packages, then set up a global flatpickr object.
+        See more at <a href="https://flatpickr.js.org/localization/" target="_blank">flatpickr`s docs</a>.
+    </p>
 
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
 
-<x-markdown class="markdown">
-### Localization
+                {{-- Flatpickr  --}}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-Just add extra locale packages. See more at [flatpickr`s site](https://flatpickr.js.org/localization/).
+                {{-- It will not apply locale yet  --}}
+                <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+                <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+                <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
 
-</x-markdown>
+                {{-- You need to set here the default locale or any global flatpickr settings--}}
+                <script>
+                    flatpickr.localize(flatpickr.l10ns.fr);
+                </script>
+            </head>
+        @endverbatim
+    </x-code>
 
-<x-code no-render>
-<head>
-    ...
+    <x-header title="Per component" size="text-2xl" class="mt-10 mb-5" />
 
-    <!-- Flatpickr  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <p>
+        Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config. Instead, set locale on component config object.
+    </p>
 
-    <!-- By default it will not apply locale  -->
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>    
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>    
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>    
+    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        @verbatim('docs')
+            @php
+                $config1 = ['locale' => 'pt'];
+                $config2 = ['locale' => 'fr'];
+            @endphp
 
-    <!-- Just set here default locale or any global flatpickr settings-->
-    <script>
-        flatpickr.localize(flatpickr.l10ns.fr);
-    </script>
-</head>
-</x-code>
-
-
-<x-markdown>
-#### Per component
-
-Just add extra locale packages as described above, but **don't apply** global locale config. Instead set locale on component config object.
-</x-markdown>
-
-<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-@verbatim
-@php
-    $config1 = ['locale' => 'pt'];
-    $config2 = ['locale' => 'fr'];
-@endphp
-
-<x-datepicker label="Portuguese" wire:model="myDate1" icon="o-calendar" :config="$config1" />
-<x-datepicker label="French" wire:model="myDate1" icon="o-calendar" :config="$config2" />
-@endverbatim
-</x-code>
+            <x-datepicker label="Portuguese" wire:model="myDate1" icon="o-calendar" :config="$config1" />
+            <x-datepicker label="French" wire:model="myDate1" icon="o-calendar" :config="$config2" />
+        @endverbatim
+    </x-code>
 </div>

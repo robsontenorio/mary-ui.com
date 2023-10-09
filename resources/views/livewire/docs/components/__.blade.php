@@ -1,4 +1,3 @@
-{{--@formatter:off--}}
 <?php
 
 use Livewire\Volt\Component;
@@ -7,14 +6,17 @@ new class extends Component {
     //
 }; ?>
 
-<div>
-<x-markdown>
-# ...
-</x-markdown>
+<div class="docs">
+    <x-header title="Installation" />
+    <x-header title="Manual" size="text-2xl" class="mt-10 mb-5" />
 
-<x-code>
-@verbatim
-...
-@endverbatim
-</x-code>
+    <p>
+        // paragraphs
+    </p>
+
+    <x-code>
+        @verbatim
+            ...
+        @endverbatim
+    </x-code>
 </div>

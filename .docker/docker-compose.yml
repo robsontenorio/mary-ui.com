@@ -11,8 +11,6 @@ services:
             - CONTAINER_ROLE=APP
         volumes:
             - ../:/var/www/app:cached
-            # local composer package development
-            # - /home/robson/dev:/home/dev
         ports:
             - "8018:8080"
             - "5174:5174"

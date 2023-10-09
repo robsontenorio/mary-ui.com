@@ -3,33 +3,30 @@
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Alert')] class extends Component
-{
+new #[Title('Alert')] class extends Component {
 }
 ?>
-<div>
-<x-markdown>
-# Alert
-</x-markdown>
 
-<x-code class="grid gap-5">
-@verbatim
-<x-alert title="You have 10 messages" icon="o-exclamation-triangle" />
+<div class="docs">
+    <x-header title="Alert" />
 
-<x-alert title="I am using description attribute" description="Received today" icon="o-exclamation-triangle" class="alert-warning" />
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            <x-alert title="You have 10 messages" icon="o-exclamation-triangle" />
 
-<x-alert icon="o-exclamation-triangle" class="alert-success">
-    I am using the  <strong>default slot.</strong>
-</x-alert>
+            <x-alert title="Hey!" description="Ho!" icon="o-home" class="alert-warning" />
 
-<x-alert title="I am using actions slot" description="And the description attribute" icon="o-exclamation-triangle" class="alert-info">
-    <x-slot:actions>
-        <x-button label="See" />
-    </x-slot:actions>
-</x-alert>
+            <x-alert icon="o-exclamation-triangle" class="alert-success">
+                I am using the <strong>default slot.</strong>
+            </x-alert>
 
-<x-alert title="I have a shadow" icon="o-exclamation-triangle"  shadow />
-@endverbatim
-</x-code>
+            <x-alert title="With actions" description="Hi" icon="o-envelope" class="alert-info">
+                <x-slot:actions>
+                    <x-button label="See" />
+                </x-slot:actions>
+            </x-alert>
 
+            <x-alert title="I have a shadow" icon="o-exclamation-triangle" shadow />
+        @endverbatim
+    </x-code>
 </div>

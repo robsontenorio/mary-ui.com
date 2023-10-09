@@ -3,8 +3,7 @@
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Button')] class extends Component
-{
+new #[Title('Button')] class extends Component {
     public function save()
     {
         sleep(1);
@@ -18,55 +17,50 @@ new #[Title('Button')] class extends Component
 
 ?>
 
-<div>
-<x-markdown>
-# Button
-</x-markdown>
+<div class="docs">
+    <x-header title="Button" />
 
-<x-code class="flex flex-wrap gap-3">
-@verbatim
-<x-button label="Hi!" class="btn-outline" />
+    <x-code class="flex flex-wrap gap-3">
+        @verbatim('docs')
+            <x-button label="Hi!" class="btn-outline" />
 
-<x-button label="Hello" icon-right="o-x-circle" class="btn-warning" />
+            <x-button label="Hello" icon-right="o-x-circle" class="btn-warning" />
 
-<x-button label="There" icon="o-check" class="btn-success" />
+            <x-button label="There" icon="o-check" class="btn-success" />
 
-<x-button class="btn-primary ">
-    With default slot
-</x-button>    
+            <x-button class="btn-primary ">
+                With default slot
+            </x-button>
 
-<x-button icon="o-user" class="btn-circle" />
+            <x-button icon="o-user" class="btn-circle" />
 
-<x-button icon="o-user" class="btn-circle btn-outline" />
+            <x-button icon="o-user" class="btn-circle btn-outline" />
 
-<x-button icon="o-user" class="btn-circle btn-ghost" />
+            <x-button icon="o-user" class="btn-circle btn-ghost" />
 
-<x-button icon="o-user" class="btn-square" />
-@endverbatim
-</x-code>
+            <x-button icon="o-user" class="btn-square" />
+        @endverbatim
+    </x-code>
 
-<x-markdown>
-### Spinners
+    <x-header title="Spinners" size="text-2xl" class="mt-10 mb-5" />
 
-</x-markdown>
+    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        @verbatim('docs')
+            {{-- It automatically targets to self `wire:click` action  --}}
+            <x-button label="Self target" wire:click="save" icon-right="o-lock-closed" spinner />
 
-<x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-@verbatim
-<!-- It automatically targets to self `wire:click` action  -->
-<x-button label="Self target" wire:click="save" icon-right="o-lock-closed" spinner />
+            <x-form wire:submit="save2">
+                <x-input label="Name" inline />
+                <x-slot:actions>
+                    {{-- No target spinner --}}
+                    <x-button label="No target" />
 
-<x-form wire:submit="save2">
-    <x-input label="Name" inline />
-    <x-slot:actions>
-        <!-- No target spinner -->
-        <x-button label="No target" />
+                    {{-- Target is `save2` --}}
+                    <x-button label="Custom target" type="submit" class="btn-primary" spinner="save2" />
+                </x-slot:actions>
+            </x-form>
 
-        <!-- Target is `save2` -->
-        <x-button label="Custom target" type="submit" class="btn-primary" spinner="save2" />
-    </x-slot:actions>
-</x-form>
-
-@endverbatim
-</x-code>
+        @endverbatim
+    </x-code>
 
 </div>
