@@ -56,7 +56,7 @@ new #[Title('Toast')] class extends Component {
         @verbatim('docs')
             <body>
                 ...
-                <x-toast />  <!-- [tl! highlight .animate-pulse] -->
+                <x-toast />  <!-- [tl! highlight .animate-bounce] -->
             </body>
         @endverbatim
     </x-code>
@@ -73,7 +73,7 @@ new #[Title('Toast')] class extends Component {
 
             class MyComponent extends Component
             {
-                // Use this trait [tl! highlight:1 .animate-pulse]
+                // Use this trait [tl! highlight:1 .animate-bounce]
                 use Toast;
 
                 public function save()
