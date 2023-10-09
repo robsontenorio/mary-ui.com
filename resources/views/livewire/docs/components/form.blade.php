@@ -24,7 +24,7 @@ new #[Title('Form')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Form" />
+    <x-header title="Form" with-anchor />
 
     <p>
         Once you submit a form you get for free:

@@ -7,7 +7,7 @@ new #[Title('Timeline')] class extends Component {
 }
 ?>
 <div class="docs">
-    <x-header title="Timeline" />
+    <x-header title="Timeline" with-anchor />
 
     <x-code>
         @verbatim('docs')

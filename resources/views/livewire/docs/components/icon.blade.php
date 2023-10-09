@@ -8,7 +8,7 @@ new #[Title('Icon')] class extends Component {
 ?>
 <div class="docs">
 
-    <x-header title="Icon" />
+    <x-header title="Icon" with-anchor />
 
     <p>
         All icons are powered by <a href="https://blade-ui-kit.com/blade-icons?set=1#search" target="_blank">Blade Hero Icons</a>.

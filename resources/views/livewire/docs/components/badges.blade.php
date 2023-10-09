@@ -8,8 +8,8 @@ new #[Title('Badges')] class extends Component {
 ?>
 <div class="docs">
 
-    <x-header title="Badges" />
-    <x-header title="Standalone" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Badges" with-anchor />
+    <x-header title="Standalone" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -23,7 +23,7 @@ new #[Title('Badges')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Combined" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Combined" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')

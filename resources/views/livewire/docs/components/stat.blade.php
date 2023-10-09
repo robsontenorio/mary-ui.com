@@ -11,7 +11,7 @@ new #[Title('Stat')] class extends Component {
 
     <x-code class="bg-base-200 flex gap-5">
         @verbatim('docs')
-            <x-stat title="Sales" value="22.124" icon="o-arrow-trending-up" />
+            <x-stat title="Messages" value="44" icon="o-envelope" />
 
             <x-stat title="Sales" description="This month" value="22.124" icon="o-arrow-trending-up" />
 

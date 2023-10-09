@@ -10,7 +10,7 @@ new #[Title('Tabs')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Tabs" />
+    <x-header title="Tabs" with-anchor />
 
     <x-code>
         @verbatim('docs')
@@ -28,7 +28,7 @@ new #[Title('Tabs')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="With Livewire" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="With Livewire" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')

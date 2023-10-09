@@ -18,17 +18,17 @@ new #[Title('Button')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Button" />
+    <x-header title="Button" with-anchor />
 
     <x-code class="flex flex-wrap gap-3">
         @verbatim('docs')
-            <x-button label="Hi!" class="btn-outline" />
+            <x-button label="Hi!" class="btn-outline" tooltip="Mary" />
 
-            <x-button label="Hello" icon-right="o-x-circle" class="btn-warning" />
+            <x-button label="Hello" icon-right="o-x-circle" tooltip-bottom="Joe" class="btn-warning" />
 
-            <x-button label="There" icon="o-check" class="btn-success" />
+            <x-button label="There" icon="o-check" tooltip-left="Marina" class="btn-success" />
 
-            <x-button class="btn-primary ">
+            <x-button class="btn-primary" tooltip-right="Giovanna">
                 With default slot
             </x-button>
 
@@ -42,7 +42,7 @@ new #[Title('Button')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Spinners" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Spinners" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         @verbatim('docs')

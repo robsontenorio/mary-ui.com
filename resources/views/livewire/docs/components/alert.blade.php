@@ -8,7 +8,7 @@ new #[Title('Alert')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Alert" />
+    <x-header title="Alert" with-anchor />
 
     <x-code class="grid gap-5">
         @verbatim('docs')

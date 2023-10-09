@@ -14,7 +14,7 @@ new #[Title('Toggle')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Toggle" />
+    <x-header title="Toggle" with-anchor />
 
     <x-code class="flex gap-5 justify-center">
         @verbatim('docs')

@@ -21,7 +21,7 @@ new #[Title('Datepicker')] class extends Component {
 
 <div class="docs">
 
-    <x-header title="Date Picker" />
+    <x-header title="Date Picker" with-anchor />
 
     <p>
         This component is a wrapper around <a href="https://flatpickr.js.org/examples/" target="_blank">flatpickr`s docs</a>.
@@ -31,7 +31,7 @@ new #[Title('Datepicker')] class extends Component {
         For native date time selection see <a href="/docs/components/datetime" wire:navigate>Date Time</a> component.
     </x-alert>
 
-    <x-header title="Install" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Install" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -45,7 +45,7 @@ new #[Title('Datepicker')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Usage" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         See all <code>$config</code> options at <a href="https://flatpickr.js.org/options/" target="_blank">flatpickr`s docs</a>.
@@ -64,7 +64,7 @@ new #[Title('Datepicker')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Localization" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Localization" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         First add extra locale packages, then set up a global flatpickr object.
@@ -93,7 +93,7 @@ new #[Title('Datepicker')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Per component" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Per component" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config. Instead, set locale on component config object.

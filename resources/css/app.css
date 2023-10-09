@@ -14,12 +14,16 @@ p {
     @apply link
 }
 
-.docs .mockup a {
+.docs .mockup a, .docs .mary-header-anchor a {
     @apply !no-underline
 }
 
 .docs-hide {
     @apply hidden
+}
+
+.mary-header-anchor {
+    @apply scroll-mt-24
 }
 
 /*

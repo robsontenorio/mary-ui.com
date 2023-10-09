@@ -15,7 +15,7 @@ new #[Title('Checkbox')] class extends Component {
 
 <div class="docs">
 
-    <x-header title="Installation" />
+    <x-header title="Checkbox" with-anchor />
 
     <x-code class="flex gap-5 justify-center">
 

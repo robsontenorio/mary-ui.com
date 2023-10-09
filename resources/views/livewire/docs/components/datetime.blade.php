@@ -16,9 +16,9 @@ new #[Title('Datetime')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Date Time" />
+    <x-header title="Date Time" with-anchor />
 
-    <x-header title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Native HTML" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         If you have no constraints regards on date selection, just sticky with this approach. It renders nice natively on every device and cover most of use cases.

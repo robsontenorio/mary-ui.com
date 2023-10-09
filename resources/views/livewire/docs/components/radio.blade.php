@@ -12,9 +12,9 @@ new #[Title('Radio')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Radio" />
+    <x-header title="Radio" with-anchor />
 
-    <x-header title="Default attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Default attributes" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         By default, it will look up for:
@@ -38,7 +38,7 @@ new #[Title('Radio')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Alternative attributes" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Just set <code>option-value</code> and <code>option-label</code> representing desired targets.

@@ -9,7 +9,7 @@ new #[Title('Textarea')] class extends Component {
 
 ?>
 <div class="docs">
-    <x-header title="Textarea" />
+    <x-header title="Textarea" with-anchor />
 
     <x-code>
         @verbatim('docs')

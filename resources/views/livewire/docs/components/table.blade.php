@@ -12,7 +12,7 @@ new #[Title('Table')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Table" />
+    <x-header title="Table" with-anchor />
 
     <x-code>
         @verbatim('docs')
@@ -35,7 +35,7 @@ new #[Title('Table')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Header slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Header slots" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can override any header by using <code>&#x40;scope('header_XXX', $header)</code> slot helper blade directive.
@@ -72,7 +72,7 @@ new #[Title('Table')] class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-header title="Row slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Row slots" with-anchorsize="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can override any row by using <code>&#x40;scope('row_XXX', $row)</code> slot helper blade directive. Where <code>XXX</code> is any <code>key</code> from

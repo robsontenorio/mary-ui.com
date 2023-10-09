@@ -8,7 +8,7 @@ new #[Title('Menu')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Menu" />
+    <x-header title="Menu" with-anchor />
 
     <p>
         This component plays nice with <a href="/docs/components/dropdown" wire:navigate>Dropdown</a> and <a href="/docs/layout#only-sidebar-collapsible" wire:navigate>Layout</a>`s

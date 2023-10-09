@@ -16,9 +16,9 @@ new #[Title('Input')] class extends Component {
 ?>
 <div>
 
-    <x-header title="Input" />
+    <x-header title="Input" with-anchor />
 
-    <x-header title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Basic" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -30,7 +30,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="States" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="States" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -40,7 +40,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Inline" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Inline" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -50,7 +50,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Currency" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Currency" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         It uses Alpine <code>x-mask</code> plugin with <code>$money</code>. When wrapped in a form it submits an unmasked number value.
@@ -73,7 +73,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Slots" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-8">
         @verbatim('docs')

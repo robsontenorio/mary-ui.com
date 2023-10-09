@@ -8,13 +8,15 @@ new #[Title('Header')] class extends Component {
 ?>
 <div class="docs">
 
-    <x-header title="Header" />
+    <x-header title="Header" with-anchor />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
             <x-header title="Personal address" subtitle="Your home address" separator />
 
             <x-header title="Personal address" subtitle="Your home address" size="text-xl" separator />
+
+            <x-header title="With Anchor" subtitle="Click on title to get anchor link" with-anchor />
 
             <x-header title="Users">
                 <x-slot:middle>
@@ -27,5 +29,4 @@ new #[Title('Header')] class extends Component {
             </x-header>
         @endverbatim
     </x-code>
-
 </div>

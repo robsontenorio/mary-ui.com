@@ -8,9 +8,9 @@ new #[Title('Diff')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Diff" />
+    <x-header title="Diff" with-anchor />
 
-    <x-header title="Install" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Install" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         This component is a wrapper around <a href="https://diff2html.xyz" target="_blank">diff2html</a> with a simpler API to quickly show diff between two strings.
@@ -29,7 +29,7 @@ new #[Title('Diff')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Examples" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Examples" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')

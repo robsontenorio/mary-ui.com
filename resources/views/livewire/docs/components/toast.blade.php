@@ -43,9 +43,9 @@ new #[Title('Toast')] class extends Component {
 
 <div class="docs">
 
-    <x-header title="Toast" />
+    <x-header title="Toast" with-anchor />
 
-    <x-header title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Usage" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Place <strong>toast tag</strong> somewhere on main layout.
@@ -110,7 +110,7 @@ new #[Title('Toast')] class extends Component {
         session()->flash('mary.toast.description', $description);
     </x-code>
 
-    <x-header title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Example" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid lg:flex gap-5">
         @verbatim('docs')

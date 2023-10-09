@@ -15,7 +15,7 @@ class Mockup extends Component
     public function render(): View|Closure|string
     {
         return <<<'HTML'
-            <div class="mockup rounded-xl border bg-base-300">
+            <div class="mockup rounded-xl border border-base-300 bg-base-300">
                 <div class="mockup-browser">
                     <div class="mockup-browser-toolbar"></div>
                 </div>

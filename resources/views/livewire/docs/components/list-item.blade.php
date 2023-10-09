@@ -13,7 +13,7 @@ new #[Title('List Item')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="List Item" />
+    <x-header title="List Item" with-anchor />
 
     <p>
         By default, it will look up for:
@@ -38,7 +38,7 @@ new #[Title('List Item')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Slots and other attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Slots and other attributes" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can override all slots. It also supports nested properties.

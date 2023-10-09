@@ -8,7 +8,7 @@ new #[Title('Installation')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Installation" />
+    <x-header title="Installation" with-anchor />
 
     <p>
         This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
@@ -19,7 +19,7 @@ new #[Title('Installation')] class extends Component {
         Please, for further style reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
     </x-alert>
 
-    <x-header title="Automatic" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Automatic" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         It requires you are installing Mary on a <strong>brand-new</strong> Laravel project, <strong>without any starter kit like Breeze or Jetstream</strong>.
@@ -49,7 +49,7 @@ new #[Title('Installation')] class extends Component {
         Go to <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
     </x-alert>
 
-    <x-header title="Manual" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Manual" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         If you have an existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow this steps.

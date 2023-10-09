@@ -7,8 +7,8 @@ new class extends Component {
 }; ?>
 
 <div class="docs">
-    <x-header title="Installation" />
-    <x-header title="Manual" size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Installation" with-anchor />
+    <x-header title="Manual" size="text-2xl" class="mt-10 mb-5" with-anchor />
 
     <p>
         // paragraphs
