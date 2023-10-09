@@ -52,11 +52,11 @@ new #[Title('Installation')] class extends Component {
     <x-header title="Manual" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you have a existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow this steps.
+        If you have an existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow this steps.
     </p>
     <p>
         Once Mary was primarily designed to work on fresh projects <strong>without starter kits</strong>,
-        you will have to handle some conflicts by yourself, like <strong>components name collision</strong>.
+        you will have to handle some conflicts by yourself, like <strong>components name collision</strong> or existing settings.
     </p>
     <p>
         <strong>Not all steps</strong> may apply for some starter kits.
