@@ -105,12 +105,16 @@ new #[Layout('components.layouts.landing')] class extends Component {
             It. Just. Works.
         </div>
 
-        <x-code side-by-side render-col-span="4" code-col-span="8" class="grid gap-5">
+        <x-code side-by-side render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
                 @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
                 @endphp                         {{-- [tl! .docs-hide] --}}
-                <x-choices label="Searchable" wire:model="selected_users" :options="$users" searchable />
+                <x-choices
+                    label="Searchable"
+                    wire:model="selected_users"
+                    :options="$users"
+                    searchable />
             @endverbatim
         </x-code>
     </div>
