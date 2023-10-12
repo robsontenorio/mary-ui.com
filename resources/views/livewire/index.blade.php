@@ -13,7 +13,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     #[Rule('required|decimal:0,2|gt:0')]
     public string $amount;
-    
+
     public Collection $users;
 
     public array $selected_users = [];
@@ -55,6 +55,14 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
 
         <div class="text-center">
+
+            <div class="flex gap-5 justify-center items-center my-10">
+                <img src="laravel.png" class="w-8 h-8" />
+                <img src="livewire.png" class="w-9 h-7" />
+                <img src="tailwind.png" class="w-9 h-7" />
+                <img src="daisy.png" class="w-6 h-8" />
+            </div>
+
             <div class="text-xl leading-10">
                 Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade components</span>
                 <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
