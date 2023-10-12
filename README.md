@@ -36,3 +36,7 @@ composer start
 :warning: If you are not using VSCODE Dev Containers, use any local address you have set up.
 
 :warning: It uses SQLITE for dynamic examples.
+
+## Follow me
+
+[@robsontenorio](https://twitter.com/robsontenorio)
