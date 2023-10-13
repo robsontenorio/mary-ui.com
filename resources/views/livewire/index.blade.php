@@ -49,7 +49,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 ?>
 
 <div class="docs">
-    <div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">
+    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-20 pt-20 pb-32 px-5 lg:px-20">
         <div class="font-bold text-6xl text-center mb-10 mt-20">
             <span class="font-extrabold">Do more</span>. <span class="font-thin">Code less</span>.
         </div>
@@ -57,10 +57,10 @@ new #[Layout('components.layouts.landing')] class extends Component {
         <div class="text-center">
 
             <div class="flex gap-5 justify-center items-center my-10">
-                <img src="laravel.png" class="w-8 h-8" />
-                <img src="livewire.png" class="w-9 h-7" />
-                <img src="tailwind.png" class="w-9 h-7" />
-                <img src="daisy.png" class="w-6 h-8" />
+                <img src="/laravel.png" class="w-8 h-8" />
+                <img src="/livewire.png" class="w-9 h-7" />
+                <img src="/tailwind.png" class="w-9 h-7" />
+                <img src="/daisy.png" class="w-6 h-8" />
             </div>
 
             <div class="text-xl leading-10">
@@ -100,7 +100,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
+    <div class="bg-base-200/50  px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10 text-right">
             It. Just. Works.
         </div>
@@ -119,7 +119,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200 px-5 lg:px-20 py-20">
+    <div class="px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Forms.
         </div>
@@ -139,7 +139,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20">
+    <div class="bg-base-200/50  px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Tables.
         </div>

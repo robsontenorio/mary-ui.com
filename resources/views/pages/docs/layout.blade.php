@@ -34,7 +34,7 @@ new #[Title('Layout')] class extends Component {
             <head>
                 ...
 
-                {{-- Remember adding this [tl! highlight:1 .animate-bounce] --}}
+                {{-- Add this [tl! highlight:1 .animate-bounce] --}}
                 @vite(['resources/css/app.css', 'resources/js/app.js'])
             </head>
 
@@ -80,7 +80,7 @@ new #[Title('Layout')] class extends Component {
 
                 {{-- The `$slot` goes here --}}
                 <x-slot:content>
-                    {{ $slot }}
+                    {{ $slot }} {{-- [tl! highlight .animate-bounce] --}}
                 </x-slot:content>
 
                 {{-- Footer area --}}
@@ -108,7 +108,7 @@ new #[Title('Layout')] class extends Component {
             <head>
                 ...
 
-                {{-- Remember adding this [tl! highlight:1 .animate-bounce] --}}
+                {{-- Add this [tl! highlight:1 .animate-bounce] --}}
                 @vite(['resources/css/app.css', 'resources/js/app.js'])
             </head>
 
@@ -148,7 +148,7 @@ new #[Title('Layout')] class extends Component {
 
                 {{-- The `$slot` goes here --}}
                 <x-slot:content>
-                    {{ $slot }}
+                    {{ $slot }} {{-- [tl! highlight .animate-bounce] --}}
                 </x-slot:content>
             </x-main>
             </body>

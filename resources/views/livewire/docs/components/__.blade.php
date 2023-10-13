@@ -1,14 +1,15 @@
 <?php
 
+use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new class extends Component {
+new #[Title] class extends Component {
     //
 }; ?>
 
 <div class="docs">
-    <x-header title="Installation" with-anchor />
-    <x-header title="Manual" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-header title="..." with-anchor />
+    <x-header title="..." size="text-2xl" class="mt-10 mb-5" with-anchor />
 
     <p>
         // paragraphs

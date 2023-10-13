@@ -16,20 +16,18 @@ new #[Title('Toggle')] class extends Component {
 <div class="docs">
     <x-header title="Toggle" with-anchor />
 
-    <x-code class="flex gap-5 justify-center">
+    <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <div class="w-96 border-dashed border border-gray-400/50 rounded-lg p-8">
-                <x-toggle label="Left" wire:model="item1" />
-                <hr class="my-5" />
+            <x-toggle label="Left" wire:model="item1" />
+            <hr />
 
-                <x-toggle label="Right" wire:model="item2" right />
-                <hr class="my-5" />
+            <x-toggle label="Right" wire:model="item2" right />
+            <hr />
 
-                <x-toggle label="Right Tight" wire:model="item3" class="toggle-warning" right tight />
-                <hr class="my-5" />
+            <x-toggle label="Right Tight" wire:model="item3" class="toggle-warning" right tight />
+            <hr />
 
-                <x-button label="Switch with $wire" @click="$wire.item3 = !$wire.item3" class="btn-outline" />
-            </div>
+            <x-button label="Switch with $wire" @click="$wire.item3 = !$wire.item3" class="btn-outline" />
         @endverbatim
     </x-code>
 </div>
