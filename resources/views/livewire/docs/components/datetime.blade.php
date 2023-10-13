@@ -21,11 +21,11 @@ new #[Title('Datetime')] class extends Component {
     <x-header title="Native HTML" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you have no constraints regards on date selection, just sticky with this approach. It renders nice natively on every device and cover most of use cases.
+        If you have no constraints regarding dates' selection, just stick with this approach, which renders nice natively on all devices and covers most of use cases.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        For advanced date picker see <a href="/docs/components/datepicker" wire:navigate>Date Picker</a> component.
+        For advanced date picker see the <a href="/docs/components/datepicker" wire:navigate>Date Picker</a> component.
     </x-alert>
 
     <x-code class="grid gap-5">
@@ -34,10 +34,10 @@ new #[Title('Datetime')] class extends Component {
 
             <x-datetime label="Right icon" wire:model="myDate" icon-right="o-calendar" />
 
-            {{-- Note `type="datetime-local"` --}}
+            {{-- Notice `type="datetime-local"` --}}
             <x-datetime label="Date + Time" wire:model="myDate" icon="o-calendar" type="datetime-local" />
 
-            {{-- Note `type="time"` --}}
+            {{-- Notice `type="time"` --}}
             <x-datetime label="Time" wire:model="myDate" icon="o-calendar" type="time" />
         @endverbatim
     </x-code>
