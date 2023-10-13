@@ -64,7 +64,7 @@ new #[Title('Contributing')] class extends Component {
     </p>
 
     <p>
-        Clone the repository and open it on VSCODE with <code>Dev Container</code> extension.
+        Clone the repository and open it on VSCODE with the <code>Dev Container</code> extension.
     </p>
 
     <x-code no-render language="bash">
@@ -72,7 +72,7 @@ new #[Title('Contributing')] class extends Component {
     </x-code>
 
     <p>
-        Create <code>.env</code> from <code>.env.example</code> and adjust few vars.
+        Create <code>.env</code> from <code>.env.example</code> and adjust a few vars.
     </p>
 
     <x-code no-render language="bash">
@@ -94,7 +94,7 @@ new #[Title('Contributing')] class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="mb-8">
-        If you are not using VSCODE Dev Containers, use any local address you have set up.
+        If you are not using the VSCODE Dev Containers extension, use any local address you have set up.
     </x-alert>
 
     <x-alert icon="o-light-bulb">
