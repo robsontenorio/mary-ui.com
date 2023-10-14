@@ -2,11 +2,22 @@
 
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
+use Illuminate\Support\Arr;
+use Mary\Traits\Toast;
 
 new #[Title('Table')] class extends Component {
+    use Toast;
+
+    public array $selected = [1, 3];
+
     public function delete()
     {
         sleep(1);
+    }
+
+    function save()
+    {
+        $this->success("Checked IDs: " . Arr::join(Arr::sort($this->selected), ', '));
     }
 }
 ?>
@@ -19,7 +30,7 @@ new #[Title('Table')] class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(3)->get();
+                $users = App\Models\User::with('city')->take(4)->get();
 
                 $headers = [
                     ['key' => 'id', 'label' => '#'],
@@ -45,11 +56,58 @@ new #[Title('Table')] class extends Component {
                 $users = App\Models\User::with('city')->take(2)->get();
 
                 $headers = [
-                    ['key' => 'name', 'label' => 'Nice Name'],
+                    ['key' => 'name', 'label' => 'Name'],
+                    ['key' => 'city.name', 'label' => 'City'],
                 ];
             @endphp
 
             <x-table :headers="$headers" :rows="$users" no-headers />
+        @endverbatim
+    </x-code>
+
+    <x-header title="Selection" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        Use <code>selectable</code> attribute and <code>wire:model</code> to easily get a full-featured row selection.
+    </p>
+
+    <x-code no-render language="php">
+        public array $selected = [1, 3];
+    </x-code>
+
+    <br>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::take(3)->get();
+
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
+
+            {{-- Notice `selectable` and `wire:model` --}}
+            {{-- See `@row-selection` output console  --}}
+            {{-- You can use any `$wire.METHOD` on `@row-selection` --}}
+            <x-table
+                :headers="$headers"
+                :rows="$users"
+                wire:model="selected"
+                selectable
+                @row-selection="console.log($event.detail)" />
+
+            <x-button label="Save" icon="o-check" wire:click="save" spinner />
+        @endverbatim
+    </x-code>
+
+    <p>
+        By default, it will look up for <code>$row->id</code> attribute. You can customize this with <code>selectable-key</code> attribute.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-table ... selectable selectable-key="mycode" />
         @endverbatim
     </x-code>
 
