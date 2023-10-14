@@ -14,6 +14,8 @@ new #[Title('Table')] class extends Component {
 <div class="docs">
     <x-header title="Table" with-anchor />
 
+    <x-header title="Simple" with-anchor size="text-2xl" class="mt-10 mb-5" />
+
     <x-code>
         @verbatim('docs')
             @php
@@ -32,6 +34,22 @@ new #[Title('Table')] class extends Component {
                 :rows="$users"
                 striped
                 @row-click="alert($event.detail.name)" />
+        @endverbatim
+    </x-code>
+
+    <x-header title="No headers" with-anchor size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::with('city')->take(2)->get();
+
+                $headers = [
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
+
+            <x-table :headers="$headers" :rows="$users" no-headers />
         @endverbatim
     </x-code>
 
@@ -60,12 +78,12 @@ new #[Title('Table')] class extends Component {
             <x-table :headers="$headers" :rows="$users">
                 {{-- Overrides `name` header --}}
                 @scope('header_name', $header)
-                    {{ $header['label'] }} <x-icon name="s-question-mark-circle" />
+                {{ $header['label'] }} <x-icon name="s-question-mark-circle" />
                 @endscope
 
                 {{-- Overrides `city.name` header --}}
                 @scope('header_city.name', $header)
-                    <u>{{ $header['label'] }}</u>
+                <u>{{ $header['label'] }}</u>
                 @endscope
             </x-table>
         @endverbatim
@@ -105,27 +123,27 @@ new #[Title('Table')] class extends Component {
 
                 {{-- Notice `$user` is the current row item on loop --}}
                 @scope('cell_id', $user)
-                    <strong>{{ $user->id }}</strong>
+                <strong>{{ $user->id }}</strong>
                 @endscope
 
                 {{-- You can name the injected object as you wish  --}}
                 @scope('cell_name', $stuff)
-                    <x-badge :value="$stuff->name" class="badge-info" />
+                <x-badge :value="$stuff->name" class="badge-info" />
                 @endscope
 
                 {{-- Notice the `dot` notation for nested attribute cell's slot --}}
                 @scope('cell_city.name', $user)
-                    <i>{{ $user->city->name }}</i>
+                <i>{{ $user->city->name }}</i>
                 @endscope
 
                 {{-- The `fakeColumn` does not exist to the actual object --}}
                 @scope('cell_fakeColumn', $user)
-                    <u>{{ $user->city->name }}</u>
+                <u>{{ $user->city->name }}</u>
                 @endscope
 
                 {{-- Special `actions` slot --}}
                 @scope('actions', $user)
-                    <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner class="btn-sm" />
+                <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner class="btn-sm" />
                 @endscope
 
             </x-table>
