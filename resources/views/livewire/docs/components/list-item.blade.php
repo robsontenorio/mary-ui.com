@@ -16,12 +16,12 @@ new #[Title('List Item')] class extends Component {
     <x-header title="List Item" with-anchor />
 
     <p>
-        By default, it will look up for:
+        By default, this will look up for:
     </p>
 
     <ul>
-        <li><code>$object->name</code> as main value.</li>
-        <li><code>$object->avatar</code> as picture url.</li>
+        <li><code>$object->name</code> as the main value.</li>
+        <li><code>$object->avatar</code> as the picture url.</li>
     </ul>
 
     <br>
@@ -53,7 +53,7 @@ new #[Title('List Item')] class extends Component {
                 $user2 = App\Models\User::inRandomOrder()->first();
             @endphp
 
-            {{-- Note `city.name`. It supports nested properties --}}
+            {{-- Notice `city.name`. It supports nested properties --}}
             <x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />
 
             {{-- All slots --}}

@@ -12,10 +12,10 @@ new #[Title('Layout')] class extends Component {
 
     <p>
         You can play around by placing <strong>daisyUI/Tailwind</strong> classes on components or slots, from this example.
-        Also try to remove entirely some components or slots.
+        Also, try to entirely remove some components or slots.
     </p>
     <p>
-        You are free to make your own layout decision. But, here is suggestion to quickly get started. Default Livewire app template is
+        You are free to make your own layout decision. But here is a suggestion to quickly get started. The Default Livewire app template is in
         <code>views/components/layouts/app.blade.php</code>.
     </p>
 
@@ -67,11 +67,11 @@ new #[Title('Layout')] class extends Component {
             {{-- The main content with `full-width` --}}
             <x-main full-width>
 
-                {{-- It is a sidebar that works also as a drawer at small screens --}}
-                {{-- Note `main-drawer` reference here --}}
+                {{-- This is a sidebar that works also as a drawer on small screens --}}
+                {{-- Notice the `main-drawer` reference here --}}
                 <x-slot:sidebar drawer="main-drawer" class="bg-slate-200">
 
-                    {{-- Activate menu item when route matches `link` property --}}
+                    {{-- Activates the menu item when a route matches the `link` property --}}
                     <x-menu activate-by-route>
                         <x-menu-item title="Home" icon="o-home" link="###" />
                         <x-menu-item title="Messages" icon="o-envelope" link="###" />
@@ -98,7 +98,7 @@ new #[Title('Layout')] class extends Component {
     <x-header title="Only sidebar" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        This layout has only a collapsible Sidebar. Fits nice for "enterprise layout" which need more vertical spacing.
+        This layout has only a collapsible Sidebar. It fits nice for an "enterprise layout", which needs more vertical spacing.
     </p>
 
     <x-code no-render>
