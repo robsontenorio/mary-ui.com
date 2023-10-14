@@ -12,17 +12,17 @@ new #[Title('Installation')] class extends Component {
 
     <p>
         This package <strong>does not ship any custom CSS</strong> and relies on <strong>daisyUI and Tailwind</strong> for out-of-box styling.
-        You can customize most of components styles, by inline overriding daisyUI and Tailwind CSS classes.
+        You can customize most of the components' styles, by inline overriding daisyUI and Tailwind CSS classes.
     </p>
 
     <x-alert icon="o-light-bulb">
-        Please, for further style reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
+        Please, for further styles reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
     </x-alert>
 
     <x-header title="Automatic" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        It requires you are installing Mary on a <strong>brand-new</strong> Laravel project, <strong>without any starter kit like Breeze or Jetstream</strong>.
+        This package requires that you are installing Mary on a <strong>brand-new</strong> Laravel project, <strong>without any starter kit like Breeze or Jetstream</strong>.
         The installer also includes a starter layout, a <code>Welcome</code> component and its route.
     </p>
 
@@ -33,7 +33,7 @@ new #[Title('Installation')] class extends Component {
     </x-code>
 
     <p>
-        Then, start dev server.
+        Then, start the dev server.
     </p>
 
     <x-code no-render language="bash">
@@ -46,17 +46,17 @@ new #[Title('Installation')] class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb">
-        Go to <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
+        Go to the <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
     </x-alert>
 
     <x-header title="Manual" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you have an existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow this steps.
+        If you have an existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow these steps.
     </p>
     <p>
         Once Mary was primarily designed to work on fresh projects <strong>without starter kits</strong>,
-        you will have to handle some conflicts by yourself, like <strong>components name collision</strong> or existing settings.
+        you will have to handle some conflicts by yourself, like <strong>component name collisions</strong> or existing settings.
     </p>
     <p>
         <strong>Not all steps</strong> may apply for some starter kits.
@@ -116,12 +116,12 @@ new #[Title('Installation')] class extends Component {
     </p>
 
     <x-code no-render language="bash">
-        # It creates `views/components/layouts/app.blade.php`
+        # This creates `views/components/layouts/app.blade.php`
         php artisan livewire:layout
     </x-code>
 
     <p>
-        Then add the <code>&#x40;vite</code> directive on default app template <code>views/components/layouts/app.blade.php</code>.
+        Then add the <code>&#x40;vite</code> directive on the default app template <code>views/components/layouts/app.blade.php</code>.
     </p>
 
     <x-code no-render>
@@ -138,7 +138,7 @@ new #[Title('Installation')] class extends Component {
     </x-code>
 
     <p>
-        Finally, start dev server.
+        Finally, start the dev server.
     </p>
 
     <x-code no-render language="bash">
@@ -151,7 +151,7 @@ new #[Title('Installation')] class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb">
-        See <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
+        Check the <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
     </x-alert>
 
 </div>

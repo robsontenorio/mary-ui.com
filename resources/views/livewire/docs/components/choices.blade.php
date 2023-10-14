@@ -72,12 +72,12 @@ new #[Title('Choices')] class extends Component {
     <x-header title="Choices" with-anchor />
 
     <p>
-        This component is intended to be used to build complex selection interface for single and multiple values. It also supports <strong>async search</strong> when dealing with
+        This component is intended to be used to build complex selection interfaces for single and multiple values. It also supports <strong>async search</strong> when dealing with
         large lists.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component. It renders nice natively on every device.
+        Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
     </x-alert>
 
     <x-header title="Selection" with-anchor size="text-2xl" class="mt-10 mb-5" />
@@ -122,7 +122,7 @@ new #[Title('Choices')] class extends Component {
 
     <p>
         When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options while typing.
-        You can change the method name by using <code>search-function</code> parameter.
+        You can change the method's name by using <code>search-function</code> parameter.
     </p>
 
     <x-code class="grid gap-5">
@@ -152,8 +152,8 @@ new #[Title('Choices')] class extends Component {
     </x-code>
 
     <p>
-        You also must consider display pre-selected items on list.
-        There are many approaches to make it work, but here is one to quickly get started for <strong>multiple search.</strong>
+        You must also consider displaying pre-selected items on list.
+        There are many approaches to make it work, but here is one to quickly get you started for <strong>multiple search.</strong>
     </p>
 
     {{--@formatter:off--}}
@@ -167,23 +167,23 @@ new #[Title('Choices')] class extends Component {
                 // Result search
                 public Collection $usersExampleMultiSearch;
 
-                // Make sure loads items on initial render
+                // Make sure it loads items on the initial render
                 public function mount()
                 {
                     $this->search();
                 }
 
-                // It is called by <x-choices>
+                // This is called by <x-choices>
                 public function search(string $value = '')
                 {
-                    // Also load selected users, besides result search
+                    // Also load selected users, besides the result search
                     $preUsers = User::whereIn('id', $this->users_multiple_searchable)->get();
 
                     $this->usersExampleMultiSearch = User::query()
                             ->where('name', 'like', "%{$value}%")
                             ->take(4)
                             ->get()
-                            ->merge($preUsers); // <--- make it appear on list
+                            ->merge($preUsers); // <--- makes it appear on the list
                 }
             }
 
@@ -194,8 +194,8 @@ new #[Title('Choices')] class extends Component {
     <x-header title="Slots" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You have full control on rendering items by using <code>&#x40;scope('item', $object)</code> slot helper blade directive.
-        It injects current <code>$object</code> from loop context and achieves same behavior you expect from Vue/React scoped slots.
+        You have full control on rendering items by using the <code>&#x40;scope('item', $object)</code> slot helper's blade directive.
+        It injects the current <code>$object</code> from the loop's context and achieves the same behavior that you would expect from the Vue/React scoped slots.
     </p>
 
     {{--@formatter:off--}}

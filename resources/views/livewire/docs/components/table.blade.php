@@ -38,8 +38,8 @@ new #[Title('Table')] class extends Component {
     <x-header title="Header slots" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can override any header by using <code>&#x40;scope('header_XXX', $header)</code> slot helper blade directive.
-        Where <code>XXX</code> is any <code>key</code> from <code>$headers</code> config object.
+        You can override any header by using <code>&#x40;scope('header_XXX', $header)</code> slot helper's blade directive,
+        in which <code>XXX</code> is any <code>key</code> from <code>$headers</code> config object.
     </p>
 
     <br>
@@ -75,14 +75,14 @@ new #[Title('Table')] class extends Component {
     <x-header title="Row slots" with-anchorsize="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can override any row by using <code>&#x40;scope('row_XXX', $row)</code> slot helper blade directive. Where <code>XXX</code> is any <code>key</code> from
+        You can override any row by using <code>&#x40;scope('row_XXX', $row)</code> slot helper's blade directive, in which <code>XXX</code> is any <code>key</code> from
         <code>$headers</code> config object.
     </p>
     <p>
-        It injects current <code>$row</code> from loop context and achieves same behavior you expect from Vue/React components.
+        It injects current <code>$row</code> from the loop's context and achieves the same behavior that you would expect from the Vue/React components.
     </p>
     <p>
-        Note you do not need to override all attributes.
+        Notice that you do not need to override all the attributes.
     </p>
 
     <br>
@@ -103,22 +103,22 @@ new #[Title('Table')] class extends Component {
 
             <x-table :headers="$headers" :rows="$users">
 
-                {{-- Note `$user` is the current row item on loop --}}
+                {{-- Notice `$user` is the current row item on loop --}}
                 @scope('cell_id', $user)
                     <strong>{{ $user->id }}</strong>
                 @endscope
 
-                {{-- You can name injected object as you wish  --}}
+                {{-- You can name the injected object as you wish  --}}
                 @scope('cell_name', $stuff)
                     <x-badge :value="$stuff->name" class="badge-info" />
                 @endscope
 
-                {{-- Note `dot` notation for nested attribute cell slot --}}
+                {{-- Notice the `dot` notation for nested attribute cell's slot --}}
                 @scope('cell_city.name', $user)
                     <i>{{ $user->city->name }}</i>
                 @endscope
 
-                {{-- The `fakeColumn` does not exist actual object --}}
+                {{-- The `fakeColumn` does not exist to the actual object --}}
                 @scope('cell_fakeColumn', $user)
                     <u>{{ $user->city->name }}</u>
                 @endscope
