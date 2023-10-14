@@ -82,7 +82,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             Less code, more action.
         </div>
 
-        <x-code side-by-side render-col-span="5" code-col-span="7">
+        <x-code side-by-side render-col-span="4" code-col-span="8">
             @verbatim('docs')
                 @php
                     $users = App\Models\User::take(3)->get();
