@@ -61,20 +61,12 @@
         </a>
     </x-slot:brand>
     <x-slot:actions>
-        <div id="doc-search">...</div>
+        <div id="doc-search" class="mr-2 lg:mr-8">...</div>
 
-        <a class="btn btn-ghost btn-sm hidden lg:inline-flex" href="https://github.com/sponsors/robsontenorio">
-            <x-icon name="o-heart" class="text-pink-500" />
-            Sponsor
-        </a>
-
-        <a href="https://twitter.com/robsontenorio">
-            <x-icon name="fab.twitter" />
-        </a>
-
-        <a href="https://github.com/robsontenorio/mary">
-            <x-icon name="fab.github" />
-        </a>
+        <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
+        <x-button icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 lg:hidden" external />
+        <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
+        <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
     </x-slot:actions>
 </x-nav>
 
@@ -134,13 +126,10 @@
 
         <hr class="my-10" />
 
-        <div class="justify-center items-baseline flex ">
+        <div class="flex justify-center items-center">
             <x-mary-brand />
 
-            <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
-                <x-icon name="o-heart" class="text-pink-500 animate-pulse " />
-                Sponsor
-            </a>
+            <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
         </div>
     </x-slot:content>
 </x-main>

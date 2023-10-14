@@ -62,7 +62,7 @@ new #[Title('Input')] class extends Component {
             <x-input
                 label="Custom money"
                 wire:model="money2"
-                sufix="R$"
+                suffix="R$"
                 money
                 inline
                 locale="pt-BR" />

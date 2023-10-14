@@ -70,10 +70,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
 
             <div class="mt-10">
-                <a wire:navigate href="/docs/installation" class="btn btn-primary !no-underline animate-pulse">
-                    Get started
-                    <x-icon name="o-arrow-right" />
-                </a>
+                <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
             </div>
         </div>
     </div>
@@ -120,7 +117,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
     </div>
 
     <div class="px-5 lg:px-20 py-20">
-        <div class="font-extrabold text-4xl py-10">
+        <div class="font-extrabold text-4xl py-10 text-right">
             Forms.
         </div>
 
@@ -168,9 +165,6 @@ new #[Layout('components.layouts.landing')] class extends Component {
             And more ...
         </div>
 
-        <a wire:navigate href="/docs/installation" class="btn btn-primary !no-underline animate-pulse">
-            Let`s do it
-            <x-icon name="o-arrow-right" />
-        </a>
+        <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
     </div>
 </div>

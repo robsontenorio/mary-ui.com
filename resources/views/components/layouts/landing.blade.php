@@ -22,6 +22,9 @@
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
+    {{--  Currency  --}}
+    @maryJS('currency/currency.js')
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Algolia docsearch --}}
@@ -37,27 +40,16 @@
         </a>
     </x-slot:brand>
     <x-slot:actions>
-        <div id="doc-search">...</div>
+        <div id="doc-search" class="mr-2 lg:mr-8">...</div>
 
         <div class="hidden lg:block">
-            <a href="/docs/installation" wire:navigate class="font-medium btn btn-ghost btn-sm">
-                <x-icon name="o-book-open" />
-                Docs
-            </a>
-
-            <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
-                <x-icon name="o-heart" class="text-pink-500" />
-                Sponsor
-            </a>
+            <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
+            <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
         </div>
 
-        <a href="https://twitter.com/robsontenorio">
-            <x-icon name="fab.twitter" />
-        </a>
-
-        <a href="https://github.com/robsontenorio/mary">
-            <x-icon name="fab.github" />
-        </a>
+        <x-button icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 lg:hidden" external />
+        <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
+        <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
     </x-slot:actions>
 </x-nav>
 
