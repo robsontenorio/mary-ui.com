@@ -16,7 +16,7 @@ new #[Title] class extends Component {
     </p>
 
     <x-code>
-        @verbatim
+        @verbatim('docs')
             ...
         @endverbatim
     </x-code>
