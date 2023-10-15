@@ -117,7 +117,7 @@ new #[Title('File Upload')] class extends Component {
 
     <p>
         If for some reason you want to manage the upload progress use the following dispatched events by
-        <a href="https://livewire.laravel.com/docs/uploads#progress-indicators" target="_blank">Livewire</a>.
+        <a href="https://livewire.laravel.com/docs/uploads#progress-indicators" target="_blank">Livewire upload events</a>.
     </p>
 
     <x-code>
