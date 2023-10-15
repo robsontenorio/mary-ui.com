@@ -47,7 +47,6 @@
             <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
         </div>
 
-        <x-button icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 lg:hidden" external />
         <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
         <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
     </x-slot:actions>
@@ -61,6 +60,7 @@
         <hr />
         <div class="justify-center items-baseline flex my-10">
             <x-mary-brand />
+            <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
         </div>
     </x-slot:footer>
 </x-main>
