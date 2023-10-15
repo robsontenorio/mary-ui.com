@@ -52,24 +52,29 @@ new #[Title('Input')] class extends Component {
 
     <x-header title="Currency" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
-    <p>
-        It uses Alpine <code>x-mask</code> plugin with <code>$money</code>. When wrapped in a form it submits an unmasked number value.
-    </p>
-
-    <br>
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
+                
+                {{--  Currency  --}}
+                @maryJS('currency/currency.js')
+            </head>
+        @endverbatim
+    </x-code>
 
     <x-code class="grid gap-8">
         @verbatim('docs')
             <x-input label="Default money" wire:model="money1" prefix="USD" money inline />
 
+            {{-- Notice `locale` accepts any valid locale --}}
             <x-input
                 label="Custom money"
                 wire:model="money2"
-                sufix="R$"
+                suffix="R$"
                 money
                 inline
-                thousands-separator="."
-                fraction-separator="," />
+                locale="pt-BR" />
         @endverbatim
     </x-code>
 

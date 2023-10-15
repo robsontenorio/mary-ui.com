@@ -8,11 +8,8 @@ new #[Title('Form')] class extends Component {
     #[Rule('required|min:20')]
     public string $name = '';
 
-    #[Rule('required|email')]
-    public string $email = '';
-
     #[Rule('required|decimal:0,2')]
-    public float $amount;
+    public ?float $amount = null;
 
     public function save()
     {

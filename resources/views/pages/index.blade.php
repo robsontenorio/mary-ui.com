@@ -18,6 +18,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public array $selected_users = [];
 
+    public array $selected = [1, 3];
+
     public function mount()
     {
         $this->users = User::take(4)->get();
@@ -49,7 +51,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 ?>
 
 <div class="docs">
-    <div class="bg-gradient-to-r from-white via-purple-50  to-white -mt-20 pt-20 pb-32 px-5 lg:px-20 dark:text-black">
+    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-20 pt-20 pb-32 px-5 lg:px-20">
         <div class="font-bold text-6xl text-center mb-10 mt-20">
             <span class="font-extrabold">Do more</span>. <span class="font-thin">Code less</span>.
         </div>
@@ -57,10 +59,10 @@ new #[Layout('components.layouts.landing')] class extends Component {
         <div class="text-center">
 
             <div class="flex gap-5 justify-center items-center my-10">
-                <img src="laravel.png" class="w-8 h-8" />
-                <img src="livewire.png" class="w-9 h-7" />
-                <img src="tailwind.png" class="w-9 h-7" />
-                <img src="daisy.png" class="w-6 h-8" />
+                <img src="/laravel.png" class="w-8 h-8" />
+                <img src="/livewire.png" class="w-9 h-7" />
+                <img src="/tailwind.png" class="w-9 h-7" />
+                <img src="/daisy.png" class="w-6 h-8" />
             </div>
 
             <div class="text-xl leading-10">
@@ -70,10 +72,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
 
             <div class="mt-10">
-                <a wire:navigate href="/docs/installation" class="btn btn-primary !no-underline animate-pulse">
-                    Get started
-                    <x-icon name="o-arrow-right" />
-                </a>
+                <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
             </div>
         </div>
     </div>
@@ -83,7 +82,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             Less code, more action.
         </div>
 
-        <x-code side-by-side render-col-span="5" code-col-span="7">
+        <x-code side-by-side render-col-span="4" code-col-span="8">
             @verbatim('docs')
                 @php
                     $users = App\Models\User::take(3)->get();
@@ -100,7 +99,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
+    <div class="bg-base-200/50  px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10 text-right">
             It. Just. Works.
         </div>
@@ -119,8 +118,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200 px-5 lg:px-20 py-20">
-        <div class="font-extrabold text-4xl py-10">
+    <div class="px-5 lg:px-20 py-20">
+        <div class="font-extrabold text-4xl py-10 text-right">
             Forms.
         </div>
 
@@ -139,25 +138,33 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20">
+    <div class="bg-base-200/50  px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Tables.
         </div>
 
-        <x-code side-by-side render-col-span="4" code-col-span="8">
+        <x-code side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
                 @php
                     $users = App\Models\User::with('city')->take(5)->get();
 
                     $headers = [
-                        ['key' => 'id', 'label' => '#', 'class' => 'bg-red-400'],
+                        ['key' => 'id', 'label' => '#', 'class' => 'text-red-400'], # <-- css
                         ['key' => 'name', 'label' => 'Nice Name'],
-                        ['key' => 'city.name', 'label' => 'City']
+                        ['key' => 'city.name', 'label' => 'City']   # <-- nested object
                     ];
                 @endphp
 
+                {{-- See console ouput --}}
                 {{-- You can use any `$wire.METHOD` on `@row-click` --}}
-                <x-table :headers="$headers" :rows="$users" striped @row-click="alert($event.detail.name)" />
+                <x-table
+                    :headers="$headers"
+                    :rows="$users"
+                    striped
+                    selectable
+                    wire:model="selected"
+                    @row-click="console.log($event.detail)"
+                    @row-selection="console.log($event.detail)" />
             @endverbatim
         </x-code>
     </div>
@@ -168,9 +175,6 @@ new #[Layout('components.layouts.landing')] class extends Component {
             And more ...
         </div>
 
-        <a wire:navigate href="/docs/installation" class="btn btn-primary !no-underline animate-pulse">
-            Let`s do it
-            <x-icon name="o-arrow-right" />
-        </a>
+        <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
     </div>
 </div>

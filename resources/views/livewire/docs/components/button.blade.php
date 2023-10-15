@@ -42,6 +42,21 @@ new #[Title('Button')] class extends Component {
         @endverbatim
     </x-code>
 
+    <x-header title="Links" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        You can make a button act as a link by placing <code>link</code> property. You can use all options describe above for ordinary buttons.
+    </p>
+
+    <x-code class="flex flex-wrap gap-3">
+        @verbatim('docs')
+            {{--  It uses `wire:navigate` --}}
+            <x-button label="Go to installation" link="/docs/installation" class="btn-ghost" />
+
+            {{--  Note `external` for external links  --}}
+            <x-button label="Google" link="https://google.com" external icon="o-link" />
+        @endverbatim
+    </x-code>
+
     <x-header title="Spinners" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">

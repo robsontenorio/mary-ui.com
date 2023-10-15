@@ -23,21 +23,24 @@
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
     {{-- Flatpickr --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
-    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    @maryCSS('flatpickr/flatpickr.min.css')
+    @maryJS('flatpickr/flatpickr.min.js')
+    @maryJS('flatpickr/lang/pt.js')
+    @maryJS('flatpickr/lang/fr.js')
 
     {{-- Vanilla Calendar --}}
-    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/light.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/dark.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.js" defer></script>
+    @maryCSS('calendar/calendar.min.css')
+    @maryCSS('calendar/light.min.css')
+    @maryCSS('calendar/dark.min.css')
+    @maryJS('calendar/calendar.min.js', 'defer')
 
-    {{-- DIFF2HTML --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+    {{--  DIFF2HTML  --}}
+    @maryCSS('diff/github.min.css')
+    @maryCSS('diff/diff2html.min.css')
+    @maryJS('diff/diff2html-ui.min.js')
+
+    {{--  Currency  --}}
+    @maryJS('currency/currency.js')
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -58,20 +61,12 @@
         </a>
     </x-slot:brand>
     <x-slot:actions>
-        <div id="doc-search">...</div>
+        <div id="doc-search" class="mr-2 lg:mr-8">...</div>
 
-        <a class="btn btn-ghost btn-sm hidden lg:inline-flex" href="https://github.com/sponsors/robsontenorio">
-            <x-icon name="o-heart" class="text-pink-500" />
-            Sponsor
-        </a>
-
-        <a href="https://twitter.com/robsontenorio">
-            <x-icon name="fab.twitter" />
-        </a>
-
-        <a href="https://github.com/robsontenorio/mary">
-            <x-icon name="fab.github" />
-        </a>
+        <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
+        <x-button icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 lg:hidden" external />
+        <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
+        <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
     </x-slot:actions>
 </x-nav>
 
@@ -131,13 +126,10 @@
 
         <hr class="my-10" />
 
-        <div class="justify-center items-baseline flex ">
+        <div class="flex justify-center items-center">
             <x-mary-brand />
 
-            <a class="btn btn-ghost btn-sm" href="https://github.com/sponsors/robsontenorio">
-                <x-icon name="o-heart" class="text-pink-500 animate-pulse " />
-                Sponsor
-            </a>
+            <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
         </div>
     </x-slot:content>
 </x-main>

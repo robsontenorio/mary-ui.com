@@ -26,13 +26,13 @@ new #[Title('Contributing')] class extends Component {
 
     {{--@formatter:off--}}
     <x-code no-render language="javascript">
-        "minimum-stability": "dev", // <- change to "dev"
+        "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
 
-        // Add this
+        // Add this block  [tl! highlight]
         "repositories": {
             "robsontenorio/mary": {
                 "type": "path",
-                "url": "/path/to/mary", // <- change the path
+                "url": "/path/to/mary", // <- change the path  [tl! highlight .animate-bounce]
                 "options": {
                     "symlink": true
                 }

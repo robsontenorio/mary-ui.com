@@ -15,11 +15,12 @@ new #[Title('Menu')] class extends Component {
         sidebar slot.
     </p>
 
-    <x-code>
+    <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            {{-- Auto activate menu item with  `activate-by-route`--}}
-            <x-menu activate-by-route active-bg-color="bg-red-50">
-                <x-menu-item title="Messages" icon="o-envelope" />
+            {{-- Auto activate menu item with `activate-by-route`--}}
+            <x-menu activate-by-route active-bg-color="bg-blue-50" class="border border-dashed">
+
+                <x-menu-item title="Messages" icon="o-envelope" badge="78+" />
                 <x-menu-item title="Navigate to Alert docs" icon="o-arrow-right" link="/docs/components/alert" />
 
                 <x-menu-separator />
@@ -30,7 +31,7 @@ new #[Title('Menu')] class extends Component {
                 </x-menu-sub>
 
                 <x-menu-separator title="Magic" icon="o-sparkles" />
-                <x-menu-item title="Hello" />
+                <x-menu-item title="Hello" badge="7" badge-classes="!badge-warning !text-red-500" />
 
                 {{-- When route matches `link` property it activates menu --}}
                 <x-menu-item title="Active state" link="/docs/components/menu" />
@@ -38,6 +39,7 @@ new #[Title('Menu')] class extends Component {
                 <x-menu-separator title="Tricks" />
                 <x-menu-item title="Hi" />
                 <x-menu-item title="Some style" class="text-purple-500 font-bold" />
+
             </x-menu>
         @endverbatim
     </x-code>

@@ -39,8 +39,8 @@ new #[Title('Datepicker')] class extends Component {
                 ...
 
                 {{-- Flatpickr  --}}
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                @maryCSS('flatpickr/flatpickr.min.css')
+                @maryJS('flatpickr/flatpickr.min.js')
             </head>
         @endverbatim
     </x-code>
@@ -64,7 +64,7 @@ new #[Title('Datepicker')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Localization" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Localization and global settings" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         First add extra locale packages, then set up a global flatpickr object.
@@ -77,13 +77,13 @@ new #[Title('Datepicker')] class extends Component {
                 ...
 
                 {{-- Flatpickr  --}}
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                @maryCSS('flatpickr/flatpickr.min.css')
+                @maryJS('flatpickr/flatpickr.min.js')
 
                 {{-- It will not apply locale yet  --}}
-                <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
-                <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
-                <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+                @maryJS('flatpickr/lang/pt.js')
+                @maryJS('flatpickr/lang/fr.js')
+                @maryJS('flatpickr/lang/es.js')
 
                 {{-- You need to set here the default locale or any global flatpickr settings--}}
                 <script>
