@@ -25,9 +25,9 @@ new #[Title('Table')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Table" with-anchor />
+    <x-anchor title="Table" />
 
-    <x-header title="Simple" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Simple" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -46,7 +46,7 @@ new #[Title('Table')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="No headers" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No headers" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -64,7 +64,7 @@ new #[Title('Table')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Header slot" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can override any header by using <code>&#x40;scope('header_XXX', $header)</code> special blade directive,
@@ -101,7 +101,7 @@ new #[Title('Table')] class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-header title="Row slot" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row slot" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can override any row by using <code>&#x40;scope('row_XXX', $row)</code> special blade directive, in which <code>XXX</code> is any <code>key</code> from
@@ -162,7 +162,7 @@ new #[Title('Table')] class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-header title="Row selection" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row selection" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Use <code>selectable</code> attribute in conjunction with <code>wire:model</code> to manage selection state.
@@ -210,7 +210,7 @@ new #[Title('Table')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Row expansion" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row expansion" size="text-2xl" class="mt-10 mb-5" />
     <p>
         Use <code>expandable</code> attribute in conjunction with <code>wire:model</code> to manage expansion state.
     </p>

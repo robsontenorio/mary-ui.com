@@ -8,7 +8,7 @@ new #[Title('Layout')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Layout" with-anchor />
+    <x-anchor title="Layout" />
 
     <p>
         You can play around by placing <strong>daisyUI/Tailwind</strong> classes on components or slots, from this example.
@@ -19,7 +19,7 @@ new #[Title('Layout')] class extends Component {
         <code>views/components/layouts/app.blade.php</code>.
     </p>
 
-    <x-header title="All together" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="All together" size="text-2xl" class="mt-10 mb-5" />
 
     <ul>
         <li>Navbar</li>
@@ -95,7 +95,7 @@ new #[Title('Layout')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Only sidebar" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Only sidebar" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         This layout has only a collapsible Sidebar. It fits nice for an "enterprise layout", which needs more vertical spacing.

@@ -8,9 +8,9 @@ new #[Title('Icon')] class extends Component {
 ?>
 <div class="docs">
 
-    <x-header title="Icon" with-anchor />
+    <x-anchor title="Icon" />
 
-    <x-header title="Default iconset" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-anchor title="Default iconset" size="text-2xl" class="mt-10 mb-5" />
     <p>
         All default icons are powered by <a href="https://blade-ui-kit.com/blade-icons?set=1#search" target="_blank">Blade Hero Icons</a> and you can use them right the way.
     </p>
@@ -25,7 +25,7 @@ new #[Title('Icon')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Alternative iconset" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-anchor title="Alternative iconset" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can install any compatible blade iconset <a href="https://github.com/blade-ui-kit/blade-icons#icon-packages" target="_blank">listed here</a>.

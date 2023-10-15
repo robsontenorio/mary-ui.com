@@ -69,7 +69,7 @@ new #[Title('Choices')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Choices" with-anchor />
+    <x-anchor title="Choices" />
 
     <p>
         This component is intended to be used to build complex selection interfaces for single and multiple values. It also supports <strong>async search</strong> when dealing with
@@ -80,7 +80,7 @@ new #[Title('Choices')] class extends Component {
         Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
     </x-alert>
 
-    <x-header title="Selection" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Selection" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         By default, it will look up for:
@@ -118,7 +118,7 @@ new #[Title('Choices')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Searchable" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searchable" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options while typing.
@@ -191,7 +191,7 @@ new #[Title('Choices')] class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-header title="Slots" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You have full control on rendering items by using the <code>&#x40;scope('item', $object)</code> slot helper's blade directive.

@@ -7,7 +7,7 @@ new #[Title('Calendar')] class extends Component {
 }
 ?>
 <div class="docs">
-    <x-header title="Calendar" with-anchor />
+    <x-anchor title="Calendar" />
 
     <p>
         This component is a wrapper around <a href="https://vanilla-calendar.com" target="_blank">Vanilla Calendar</a>.
@@ -19,7 +19,7 @@ new #[Title('Calendar')] class extends Component {
         component.
     </x-alert>
 
-    <x-header title="Install" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -40,7 +40,7 @@ new #[Title('Calendar')] class extends Component {
         Remember to configure <strong>Tailwind safelist</strong> when working with dynamic CSS classes.
     </p>
 
-    <x-header title="Single month" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Single month" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="bg-base-200 grid grid-cols-1 lg:grid-cols-2 gap-5">
         @verbatim('docs')
@@ -77,7 +77,7 @@ new #[Title('Calendar')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Multiple months" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Multiple months" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="bg-base-200">
         @verbatim('docs')

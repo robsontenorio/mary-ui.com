@@ -8,9 +8,9 @@ new #[Title('Contributing')] class extends Component {
 ?>
 <div class="docs">
 
-    <x-header title="Contributing" with-anchor />
+    <x-anchor title="Contributing" />
 
-    <x-header title="Mary components" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Mary components" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Clone the repository into some folder <strong>inside your app</strong>.
@@ -57,7 +57,7 @@ new #[Title('Contributing')] class extends Component {
         yarn dev
     </x-code>
 
-    <x-header title="Mary docs" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Mary docs" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         This website is made with Laravel, Livewire, Volt and Mary.

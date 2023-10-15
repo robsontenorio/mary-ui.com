@@ -16,9 +16,9 @@ new #[Title('Input')] class extends Component {
 ?>
 <div>
 
-    <x-header title="Input" with-anchor />
+    <x-anchor title="Input" />
 
-    <x-header title="Basic" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -30,7 +30,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="States" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="States" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -40,7 +40,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Inline" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Inline" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -50,13 +50,13 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Currency" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Currency" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
             <head>
                 ...
-                
+
                 {{--  Currency  --}}
                 @maryJS('currency/currency.js')
             </head>
@@ -78,7 +78,7 @@ new #[Title('Input')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Slots" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-8">
         @verbatim('docs')

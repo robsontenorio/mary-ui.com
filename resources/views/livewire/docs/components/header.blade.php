@@ -17,7 +17,7 @@ new #[Title('Header')] class extends Component {
 ?>
 <div class="docs">
 
-    <x-header title="Header" with-anchor />
+    <x-anchor title="Header" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -39,7 +39,7 @@ new #[Title('Header')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Progress indicator" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Notice it only works combined with <code>separator</code> attribute.

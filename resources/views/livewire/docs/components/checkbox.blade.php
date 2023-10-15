@@ -15,7 +15,7 @@ new #[Title('Checkbox')] class extends Component {
 
 <div class="docs">
 
-    <x-header title="Checkbox" with-anchor />
+    <x-anchor title="Checkbox" />
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')

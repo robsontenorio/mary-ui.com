@@ -11,9 +11,9 @@ new #[Title('Drawer')] class extends Component {
 
 <div class="docs">
 
-    <x-header title="Drawer" with-anchor />
+    <x-anchor title="Drawer" />
 
-    <x-header title="Native HTML" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can directly open a drawer by using native HTML <strong>label tag</strong> while referencing same drawer <code>id</code>. It closes when you click outside.
@@ -37,7 +37,7 @@ new #[Title('Drawer')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="With Livewire" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="With Livewire" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         <strong>You don't need</strong> <code>id="xxx"</code>.

@@ -18,7 +18,7 @@ new #[Title('Button')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Button" with-anchor />
+    <x-anchor title="Button" />
 
     <x-code class="flex flex-wrap gap-3">
         @verbatim('docs')
@@ -42,7 +42,7 @@ new #[Title('Button')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Links" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Links" size="text-2xl" class="mt-10 mb-5" />
     <p>
         You can make a button act as a link by placing <code>link</code> property. You can use all options describe above for ordinary buttons.
     </p>
@@ -57,7 +57,7 @@ new #[Title('Button')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Spinners" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Spinners" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         @verbatim('docs')

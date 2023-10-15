@@ -7,7 +7,7 @@ new #[Title('Stat')] class extends Component {
 }
 ?>
 <div class="docs">
-    <x-header title="Stat" />
+    <x-anchor title="Stat" />
 
     <x-code class="bg-base-200 flex gap-5">
         @verbatim('docs')

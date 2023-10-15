@@ -13,7 +13,7 @@ new #[Title('Dropdown')] class extends Component {
 ?>
 
 <div class="docs">
-    <x-header title="Dropdown" with-anchor />
+    <x-anchor title="Dropdown" />
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
         Dropdowns are just a suspended <a href="/docs/components/menu" wire:navigate>Menu</a>. Take a look at <a href="/docs/components/select" wire:navigate>Select</a> for value
@@ -47,7 +47,7 @@ new #[Title('Dropdown')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Click propagation" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Click propagation" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         By default, any click closes the dropdown. Just use <code>@click.stop</code> or <code>wire:click.stop</code> to prevent this behavior.

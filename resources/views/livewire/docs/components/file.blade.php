@@ -43,7 +43,7 @@ new #[Title('File Upload')] class extends Component {
 }; ?>
 
 <div class="docs" xmlns="http://www.w3.org/1999/html">
-    <x-header title="File Upload" with-anchor />
+    <x-anchor title="File Upload" />
 
     <p>
         This component is powered by Livewire`s <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload.</a>
@@ -64,7 +64,7 @@ new #[Title('File Upload')] class extends Component {
         enable <code>Fast 3G</code> on Developer Tools. <strong>Remember to switch it back!</strong>
     </p>
 
-    <x-header title="Basic" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -81,7 +81,7 @@ new #[Title('File Upload')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Default slot" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-anchor title="Default slot" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can override the file input's default button by using the custom slot.
@@ -113,7 +113,7 @@ new #[Title('File Upload')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Custom progress" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-anchor title="Custom progress" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         If for some reason you want to manage the upload progress use the following dispatched events by

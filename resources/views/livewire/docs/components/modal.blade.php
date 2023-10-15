@@ -11,8 +11,8 @@ new #[Title('Modal')] class extends Component {
 
 <div class="docs">
 
-    <x-header title="Modal" with-anchor />
-    <x-header title="Native HTML" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Modal" />
+    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Note the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not Mary/Livewire/Alpine.
@@ -38,7 +38,7 @@ new #[Title('Modal')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="With Livewire" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="With Livewire" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         <strong>You don't need</strong> <code>id="xxx"</code>.
