@@ -47,10 +47,11 @@ new #[Title('File Upload')] class extends Component {
 
     <p>
         This component is powered by Livewire`s <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload.</a>
+        Please, <strong>first check its docs</strong> to proper setup file uploads before using this component.
     </p>
 
     <p>
-        By default, it includes:
+        By default, this component includes:
     </p>
 
     <ul>
@@ -80,7 +81,11 @@ new #[Title('File Upload')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-header title="Custom" size="text-2xl" class="mt-10 mb-5" with-anchor />
+    <x-header title="Default slot" size="text-2xl" class="mt-10 mb-5" with-anchor />
+
+    <p>
+        You can override the file input's default button by using the custom slot.
+    </p>
 
     <x-code>
         @verbatim('docs')
