@@ -21,10 +21,10 @@ new #[Title('Diff')] class extends Component {
             <head>
                 ...
 
-                {{-- DIFF2HTML --}}
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
-                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+                {{--  DIFF2HTML  --}}
+                @maryCSS('diff/github.min.css')
+                @maryCSS('diff/diff2html.min.css')
+                @maryJS('diff/diff2html-ui.min.js')
             </head>
         @endverbatim
     </x-code>

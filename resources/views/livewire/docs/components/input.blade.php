@@ -52,7 +52,16 @@ new #[Title('Input')] class extends Component {
 
     <x-header title="Currency" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
-    <br>
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
+                
+                {{--  Currency  --}}
+                @maryJS('currency/currency.js')
+            </head>
+        @endverbatim
+    </x-code>
 
     <x-code class="grid gap-8">
         @verbatim('docs')
