@@ -86,6 +86,7 @@
             <x-menu-item title="Choices" link="/docs/components/choices" />
             <x-menu-item title="Date Time" link="/docs/components/datetime" />
             <x-menu-item title="Textarea" link="/docs/components/textarea" />
+            <x-menu-item title="File Upload" link="/docs/components/file" />
 
             <x-menu-separator title="List data" icon="o-list-bullet" />
             <x-menu-item title="List Item" link="/docs/components/list-item" />

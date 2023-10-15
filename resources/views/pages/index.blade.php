@@ -146,6 +146,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
         <x-code side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
                 @php
+                    // public array $selected = [1, 3];
+
                     $users = App\Models\User::with('city')->take(5)->get();
 
                     $headers = [

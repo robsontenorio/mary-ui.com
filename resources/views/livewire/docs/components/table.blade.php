@@ -162,7 +162,7 @@ new #[Title('Table')] class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-header title="Rows selection" with-anchor size="text-2xl" class="mt-10 mb-5" />
+    <x-header title="Row selection" with-anchor size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Use <code>selectable</code> attribute in conjunction with <code>wire:model</code> to manage selection state.
@@ -186,7 +186,7 @@ new #[Title('Table')] class extends Component {
             @endphp
 
             {{-- Notice `selectable` and `wire:model` --}}
-            {{-- See `@row-selection` output console  --}}
+            {{-- See `@row-selection` output on console  --}}
             {{-- You can use any `$wire.METHOD` on `@row-selection` --}}
             <x-table
                 :headers="$headers"
