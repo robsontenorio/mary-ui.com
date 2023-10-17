@@ -21,12 +21,12 @@ new #[Title('Drawer')] class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-drawer id="my-drawer" class="bg-blue-300">
+            <x-drawer id="my-drawer" class="bg-blue-50">
                 Content left auto width.
             </x-drawer>
 
             <x-drawer id="my-drawer2" class="w-1/3" right>
-                <x-card title="Settings" subtitle="Main profile">
+                <x-card title="Settings" subtitle="Main profile" separator>
                     Content right with fixed width and Card.
                 </x-card>
             </x-drawer>

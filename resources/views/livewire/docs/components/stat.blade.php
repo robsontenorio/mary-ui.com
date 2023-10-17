@@ -9,7 +9,7 @@ new #[Title('Stat')] class extends Component {
 <div class="docs">
     <x-anchor title="Stat" />
 
-    <x-code class="bg-base-200 flex gap-5">
+    <x-code class="bg-base-200 flex flex-wrap gap-5">
         @verbatim('docs')
             <x-stat title="Messages" value="44" icon="o-envelope" />
 

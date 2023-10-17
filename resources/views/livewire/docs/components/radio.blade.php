@@ -57,7 +57,7 @@ new #[Title('Radio')] class extends Component {
                 option-label="other_name"
                 wire:model="selectedUser2"
                 hint="Choose wisely"
-                class="bg-blue-50" />
+                class="bg-red-50" />
         @endverbatim
     </x-code>
 </div>

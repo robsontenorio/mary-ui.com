@@ -238,7 +238,7 @@ new #[Title('Table')] class extends Component {
 
                 {{-- Special `expansion` slot --}}
                 @scope('expansion', $user)
-                    <div class="bg-yellow-50 p-8 font-bold">
+                    <div class="bg-base-200 p-8 font-bold">
                         Hello, {{ $user->name }}!
                     </div>
                 @endscope
