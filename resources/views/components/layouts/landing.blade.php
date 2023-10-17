@@ -23,7 +23,7 @@
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
     {{--  Currency  --}}
-    @maryJS('currency/currency.js')
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
