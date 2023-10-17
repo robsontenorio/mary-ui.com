@@ -23,24 +23,24 @@
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
     {{-- Flatpickr --}}
-    @maryCSS('flatpickr/flatpickr.min.css')
-    @maryJS('flatpickr/flatpickr.min.js')
-    @maryJS('flatpickr/lang/pt.js')
-    @maryJS('flatpickr/lang/fr.js')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
 
     {{-- Vanilla Calendar --}}
-    @maryCSS('calendar/calendar.min.css')
-    @maryCSS('calendar/light.min.css')
-    @maryCSS('calendar/dark.min.css')
-    @maryJS('calendar/calendar.min.js', 'defer')
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/dark.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.js" defer></script>
 
-    {{--  DIFF2HTML  --}}
-    @maryCSS('diff/github.min.css')
-    @maryCSS('diff/diff2html.min.css')
-    @maryJS('diff/diff2html-ui.min.js')
+    {{-- DIFF2HTML --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
 
     {{--  Currency  --}}
-    @maryJS('currency/currency.js')
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

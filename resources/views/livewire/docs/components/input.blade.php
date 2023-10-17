@@ -58,7 +58,7 @@ new #[Title('Input')] class extends Component {
                 ...
 
                 {{--  Currency  --}}
-                @maryJS('currency/currency.js')
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js" />
             </head>
         @endverbatim
     </x-code>

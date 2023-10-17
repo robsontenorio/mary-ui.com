@@ -39,8 +39,8 @@ new #[Title('Datepicker')] class extends Component {
                 ...
 
                 {{-- Flatpickr  --}}
-                @maryCSS('flatpickr/flatpickr.min.css')
-                @maryJS('flatpickr/flatpickr.min.js')
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
             </head>
         @endverbatim
     </x-code>
@@ -77,13 +77,13 @@ new #[Title('Datepicker')] class extends Component {
                 ...
 
                 {{-- Flatpickr  --}}
-                @maryCSS('flatpickr/flatpickr.min.css')
-                @maryJS('flatpickr/flatpickr.min.js')
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
                 {{-- It will not apply locale yet  --}}
-                @maryJS('flatpickr/lang/pt.js')
-                @maryJS('flatpickr/lang/fr.js')
-                @maryJS('flatpickr/lang/es.js')
+                <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+                <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+                <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
 
                 {{-- You need to set here the default locale or any global flatpickr settings--}}
                 <script>
