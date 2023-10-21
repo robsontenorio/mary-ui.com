@@ -46,6 +46,41 @@ new #[Title('Table')] class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Click to navigate" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        The following <code>{tokens}</code> will be replaced by actual values <strong>on each row</strong> based on any <code>key</code>
+        from <code>$headers</code> config object.
+    </p>
+    <p>
+        Some examples:
+    </p>
+    <ul>
+        <li><code>/users/{id}</code></li>
+        <li><code>/users/profile/{username}/?&admin=true</code></li>
+        <li><code>/users/{id}/?from={city.name}</code></li>
+    </ul>
+
+    <br>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::with('city')->take(2)->get();
+
+                $headers = [
+                    ['key' => 'id', 'label' => '#'],
+                    ['key' => 'username', 'label' => 'username'],
+                    ['key' => 'city.name', 'label' => 'City'],
+                ];
+            @endphp
+
+            {{-- Notice `link` --}}
+            {{-- Check browser url on next page --}}
+            <x-table :headers="$headers" :rows="$users" link="/docs/installation/?from={username}" />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="No headers" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>

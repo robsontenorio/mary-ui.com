@@ -82,7 +82,7 @@ new #[Title('Installation')] class extends Component {
         /** @type {import('tailwindcss').Config} */
         export default {
             content: [
-                // You will probably also need those lines
+                // You will probably also need these lines
                 "./resources/**/**/*.blade.php",
                 "./resources/**/**/*.js",
                 "./app/View/Components/**/**/*.php",
