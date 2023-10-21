@@ -7,6 +7,11 @@ This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking 
 ## Sponsor
 Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) ❤️ 
 
+## Follow me
+
+[@robsontenorio](https://twitter.com/robsontenorio)
+
+
 ## Contributing 
 
 This website is made with Laravel, Livewire, Volt and Mary.
@@ -36,7 +41,3 @@ composer start
 :warning: If you are not using VSCODE Dev Containers, use any local address you have set up.
 
 :warning: It uses SQLITE for dynamic examples.
-
-## Follow me
-
-[@robsontenorio](https://twitter.com/robsontenorio)
