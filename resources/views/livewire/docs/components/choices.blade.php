@@ -99,7 +99,7 @@ new #[Title('Choices')] class extends Component {
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            {{-- Note `single` --}}
+            {{-- Notice `single` --}}
             <x-choices label="Simple" wire:model="user1_id" :options="$users" single />
 
             {{-- public array $users_multiple = []; --}}
@@ -131,7 +131,7 @@ new #[Title('Choices')] class extends Component {
                     $usersExampleSingleSearch = $this->usersExampleSingleSearch;   // [tl! .docs-hide]
                     $usersExampleMultiSearch = $this->usersExampleMultiSearch;    // [tl! .docs-hide]
             @endphp                                                               {{-- [tl! .docs-hide] --}}
-            {{-- Note `searchable` + `single` --}}
+            {{-- Notice `searchable` + `single` --}}
             <x-choices
                 label="Searchable - Single"
                 wire:model="user4_id"
@@ -140,7 +140,7 @@ new #[Title('Choices')] class extends Component {
                 single
                 searchable />
 
-            {{-- Note custom `search-function` --}}
+            {{-- Notice custom `search-function` --}}
             <x-choices
                 label="Searchable - Multiple"
                 wire:model="users_multiple_searchable"

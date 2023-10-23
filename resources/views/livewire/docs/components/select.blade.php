@@ -47,6 +47,8 @@ new #[Title('Select')] class extends Component {
 
             <x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" />
 
+            <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled readonly />
+
             <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline />
         @endverbatim
     </x-code>
