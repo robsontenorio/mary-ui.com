@@ -71,7 +71,7 @@ new #[Title('Select')] class extends Component {
                 option-value="custom_key"
                 option-label="other_name"
                 placeholder="Select an user"
-                placeholder-value="0" {{-- Set a value for placeholder. Defaut is `null` --}}
+                placeholder-value="0" {{-- Set a value for placeholder. Default is `null` --}}
                 hint="Select one, please."
                 wire:model="selectedUser2" />
         @endverbatim
