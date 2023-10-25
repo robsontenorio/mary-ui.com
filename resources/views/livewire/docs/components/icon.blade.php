@@ -25,6 +25,15 @@ new #[Title('Icon')] class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Caching" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at
+        <strong>production environment</strong>.
+    </p>
+    <x-code no-render language="bash">
+        php artisan icons:cache
+    </x-code>
+
     <x-anchor title="Alternative iconset" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
