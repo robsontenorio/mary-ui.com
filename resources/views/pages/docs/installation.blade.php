@@ -92,10 +92,10 @@ new #[Title('Installation')] class extends Component {
                 "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
             ],
             theme: {
-            extend: {},
+                extend: {},
             },
 
-            // Add daisyUI
+            // Add daisyUI  [tl! highlight:1 .animate-bounce]
             plugins: [require("daisyui")]
         }
     </x-code>

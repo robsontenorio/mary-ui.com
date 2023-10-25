@@ -16,6 +16,7 @@ use Livewire\Volt\Volt;
 Volt::route('/', 'index');
 Volt::route('/docs/installation', 'docs.installation');
 Volt::route('/docs/contributing', 'docs.contributing');
+Volt::route('/docs/upgrading', 'docs.components.upgrading');
 Volt::route('/docs/layout', 'docs.layout');
 
 // FORMS

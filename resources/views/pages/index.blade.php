@@ -158,7 +158,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 @endphp
 
                 {{-- See console ouput --}}
-                {{-- You can use any `$wire.METHOD` on `@row-click` --}}
+                {{-- You can use any `$wire.METHOD` on `@row-xxxx` --}}
                 <x-table
                     :headers="$headers"
                     :rows="$users"
