@@ -74,9 +74,9 @@
         <x-menu title="Get started" icon="o-sparkles" separator activate-by-route class="mt-5">
             <x-menu-item title="Installation" link="/docs/installation" />
             <x-menu-item title="Layout" link="/docs/layout" />
-            <x-menu-item title="Contributing" link="/docs/contributing" />
-            <x-menu-item title="Upgrading" link="/docs/upgrading" />
             <x-menu-item title="Customizing" link="/docs/customizing" />
+            <x-menu-item title="Upgrading" link="/docs/upgrading" />
+            <x-menu-item title="Contributing" link="/docs/contributing" />
 
             <x-menu-separator title="Forms" icon="o-code-bracket-square" />
             <x-menu-item title="Form" link="/docs/components/form" />
