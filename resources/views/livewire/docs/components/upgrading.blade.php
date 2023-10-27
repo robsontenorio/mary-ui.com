@@ -10,7 +10,7 @@ new #[Title('Upgrading')] class extends Component {
     <x-anchor title="Upgrading" />
 
     <p>
-        You should keep an eye on Mary's <a href="https://github.com/robsontenorio/mary/releases">releases pages</a> to stay updated.
+        You should keep an eye on Mary's <a href="https://github.com/robsontenorio/mary/releases">releases page</a> to stay updated.
     </p>
 
     <x-code no-render language="bash">
