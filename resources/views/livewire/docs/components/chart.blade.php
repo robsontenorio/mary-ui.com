@@ -41,7 +41,7 @@ new #[Title('Chart')] class extends Component {
 
     <p>
         This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
-        So, it accepts any valid configuration describe at its docs.
+        So, it accepts any valid configuration described at its docs.
     </p>
 
     <x-code no-render>
