@@ -25,6 +25,12 @@ new #[Title('Upgrading')] class extends Component {
         yarn add --D daisyui tailwindcss postcss autoprefixer
     </x-code>
 
+    <p>For sure, you want to keep Livewire updated as well.</p>
+
+    <x-code no-render language="bash">
+        composer require livewire/livewire
+    </x-code>
+
     <x-anchor title="Recent releases" size="text-2xl" class="mt-10 mb-5" />
 
     <livewire:releases lazy />
