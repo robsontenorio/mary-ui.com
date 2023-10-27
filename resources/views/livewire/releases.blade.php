@@ -1,15 +1,20 @@
 <?php
 
+use Illuminate\Support\Facades\Cache;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
 new class extends Component {
     public function fetchReleases()
     {
-        return Cache::remember('mary-releases', 864000, function () {
-            return Http::withToken(config('services.github.token'), type: 'token')->get("https://api.github.com/repos/robsontenorio/mary/releases")->collect()->take(5);
+        return Cache::remember('mary-releases', 3600, function () {
+            return Http::withToken(config('services.github.token'), type: 'token')
+                ->get("https://api.github.com/repos/robsontenorio/mary/releases")
+                ->collect()
+                ->take(5);
         });
     }
 
