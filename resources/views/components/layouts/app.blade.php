@@ -39,6 +39,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
 
+    {{-- Chart.js  --}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
@@ -116,6 +119,7 @@
 
             <x-menu-separator title="Third-party" icon="o-puzzle-piece" />
             <x-menu-item title="Calendar" link="/docs/components/calendar" />
+            <x-menu-item title="Chart" link="/docs/components/chart" />
             <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
             <x-menu-item title="Diff" link="/docs/components/diff" />
 

@@ -60,4 +60,5 @@ Volt::route('/docs/components/tabs', 'docs.components.tabs');
 // THIRD-PARTY
 Volt::route('/docs/components/datepicker', 'docs.components.datepicker');
 Volt::route('/docs/components/calendar', 'docs.components.calendar');
+Volt::route('/docs/components/chart', 'docs.components.chart');
 Volt::route('/docs/components/diff', 'docs.components.diff');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a8dcd8929e13e0f58011243656e0f60",
+    "content-hash": "2f8f1ce9d0f6b01c86e0b775fed1192b",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3760,16 +3760,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "0.45.2",
+            "version": "1.0.0-RC.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "61da99869eb5db52b3cac6e4c72194c57d898f51"
+                "reference": "5b6bdccab98a402ab39f08b4a82c671ce7bc1f80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/61da99869eb5db52b3cac6e4c72194c57d898f51",
-                "reference": "61da99869eb5db52b3cac6e4c72194c57d898f51",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/5b6bdccab98a402ab39f08b4a82c671ce7bc1f80",
+                "reference": "5b6bdccab98a402ab39f08b4a82c671ce7bc1f80",
                 "shasum": ""
             },
             "require": {
@@ -3821,7 +3821,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/0.45.2"
+                "source": "https://github.com/robsontenorio/mary/tree/1.0.0-RC.0"
             },
             "funding": [
                 {
@@ -3829,7 +3829,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-24T03:10:24+00:00"
+            "time": "2023-10-27T20:47:38+00:00"
         },
         {
             "name": "symfony/console",
@@ -8861,7 +8861,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "robsontenorio/mary": 5
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

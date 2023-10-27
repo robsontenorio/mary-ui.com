@@ -1,0 +1,102 @@
+<?php
+
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
+
+new #[Title('Chart')] class extends Component {
+    public array $myChart = [
+        'type' => 'pie',
+        'data' => [
+            'labels' => ['Mary', 'Joe', 'Ana'],
+            'datasets' => [
+                [
+                    'label' => '# of Votes',
+                    'data' => [12, 19, 3],
+                ]
+            ]
+        ]
+    ];
+
+    public function randomize()
+    {
+        Arr::set($this->myChart, 'data.datasets.0.data', [fake()->randomNumber(2), fake()->randomNumber(2), fake()->randomNumber(2)]);
+    }
+
+    public function switch()
+    {
+        $type = $this->myChart['type'] == 'bar' ? 'pie' : 'bar';
+
+        Arr::set($this->myChart, 'type', $type);
+    }
+} ?>
+
+<div class="docs">
+    <x-anchor title="Chart" />
+
+    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-alert icon="o-light-bulb">
+        Available only in <a href="https://github.com/robsontenorio/mary/releases" target="_blank">release candidate version</a>.
+    </x-alert>
+
+    <p>
+        This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
+        So, it accepts any valid configuration describe at its docs.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
+
+                {{-- Chart.js  --}}
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+            </head>
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        See all available options at <a href="https://www.chartjs.org" target="_blank">Chart.js</a> docs.
+    </p>
+
+    <x-code class="grid lg:grid-cols-2  items-start justify-center gap-10">
+        @verbatim('docs')
+            <div class="grid gap-5">
+                <x-button label="Randomize" wire:click="randomize" class="btn-primary" spinner />
+                <x-button label="Switch" wire:click="switch" spinner />
+            </div>
+
+            <x-chart wire:model="myChart" />
+        @endverbatim
+    </x-code>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        public array $myChart = [
+            'type' => 'pie',
+            'data' => [
+                'labels' => ['Mary', 'Joe', 'Ana'],
+                'datasets' => [
+                    [
+                        'label' => '# of Votes',
+                        'data' => [12, 19, 3],
+                    ]
+                ]
+            ]
+        ];
+
+        public function randomize()
+        {
+            Arr::set($this->myChart, 'data.datasets.0.data', [fake()->randomNumber(2), fake()->randomNumber(2), fake()->randomNumber(2)]);
+        }
+
+        public function switch()
+        {
+            $type = $this->myChart['type'] == 'bar' ? 'pie' : 'bar';
+            Arr::set($this->myChart, 'type', $type);
+        }
+    </x-code>
+    {{--@formatter:on--}}
+</div>
