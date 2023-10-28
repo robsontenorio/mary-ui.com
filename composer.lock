@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb220e1c584f5b778f2edf06ec374a44",
+    "content-hash": "3a973603e7173ed5b18464bdb8931fab",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3766,7 +3766,7 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
@@ -3788,7 +3788,6 @@
                 "orchestra/testbench": "^8.5",
                 "phpunit/phpunit": "^10.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3828,7 +3827,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/main"
+                "source": "https://github.com/robsontenorio/mary/tree/1.0.0"
             },
             "funding": [
                 {
@@ -8868,9 +8867,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "robsontenorio/mary": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
