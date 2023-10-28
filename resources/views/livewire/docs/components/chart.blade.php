@@ -39,10 +39,6 @@ class extends Component {
 
     <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
 
-    <x-alert icon="o-light-bulb">
-        Available only in <a href="https://github.com/robsontenorio/mary/releases" target="_blank">release candidate version</a>.
-    </x-alert>
-
     <p>
         This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
         So, it accepts any valid configuration described at its docs.
