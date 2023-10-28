@@ -1,9 +1,16 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title] class extends Component {
+new
+#[Title(fill_here)]
+#[Layout('components.layouts.app', ['description' => fill_here])]
+class extends Component
+{
+class extends Component
+{
     //
 }; ?>
 

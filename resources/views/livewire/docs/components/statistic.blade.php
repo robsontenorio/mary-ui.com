@@ -1,13 +1,17 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Stat')] class extends Component {
+new
+#[Title('Statistic')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI statistics component with icon, description and tooltip.'])]
+class extends Component {
 }
 ?>
 <div class="docs">
-    <x-anchor title="Stat" />
+    <x-anchor title="Statistic" />
 
     <x-code class="bg-base-200 grid md:grid-cols-4 gap-5">
         @verbatim('docs')

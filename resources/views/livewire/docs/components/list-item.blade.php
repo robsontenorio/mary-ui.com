@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('List Item')] class extends Component {
+new
+#[Title('List Item')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI list item component with link, avatar and customizable slots.'])]
+class extends Component {
     public function delete()
     {
         sleep(1);

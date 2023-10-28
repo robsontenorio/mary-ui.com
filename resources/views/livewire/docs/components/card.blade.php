@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Card')] class extends Component {
+new
+#[Title('Card')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI card component with title, subtitle and actions slot.'])]
+class extends Component {
 }
 ?>
 <div class="docs">

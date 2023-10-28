@@ -1,10 +1,14 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Form')] class extends Component {
+new
+#[Title('Form')]
+#[Layout('components.layouts.app', ['description' => 'Livewire form component with builtin validation, spinner, money/currency and actions slot.'])]
+class extends Component {
     #[Rule('required|min:20')]
     public string $name = '';
 
@@ -15,6 +19,13 @@ new #[Title('Form')] class extends Component {
     {
         sleep(1);
         $this->validate();
+    }
+
+    public function with(): array
+    {
+        return [
+            'description' => 'xxxxxxxx'
+        ];
     }
 }
 

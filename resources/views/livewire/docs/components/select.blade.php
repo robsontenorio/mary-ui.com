@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Select')] class extends Component {
+new
+#[Title('Select')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI native select component with icon and disabled option state.'])]
+class extends Component {
     public int $selectedUser = 4;
 
     public int $selectedUser2 = 3;

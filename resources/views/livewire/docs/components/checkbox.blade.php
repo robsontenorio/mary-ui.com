@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Checkbox')] class extends Component {
+new
+#[Title('Checkbox')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI checkbox component with builtin validation support.'])]
+class extends Component {
     public bool $item1 = true;
 
     public bool $item2 = false;

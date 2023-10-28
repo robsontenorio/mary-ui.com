@@ -8,6 +8,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
+    {{--  Meta description  --}}
+    <meta name="description" content="{{ $description ?? config('app.name') }}">
+
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
@@ -41,7 +44,7 @@
 
     {{-- Chart.js  --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    
+
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
@@ -113,7 +116,7 @@
             <x-menu-item title="Card" link="/docs/components/card" />
             <x-menu-item title="Header" link="/docs/components/header" />
             <x-menu-item title="Icon" link="/docs/components/icon" />
-            <x-menu-item title="Stat" link="/docs/components/stat" />
+            <x-menu-item title="Statistic" link="/docs/components/statistic" />
             <x-menu-item title="Timeline" link="/docs/components/timeline" />
             <x-menu-item title="Tabs" link="/docs/components/tabs" />
 

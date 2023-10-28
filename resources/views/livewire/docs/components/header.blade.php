@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Header')] class extends Component {
+new
+#[Title('Header')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI page header component with title, subtitle, progress indicator and customizable slots.'])]
+class extends Component {
     public function save()
     {
         sleep(1);

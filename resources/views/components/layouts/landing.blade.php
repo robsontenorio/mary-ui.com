@@ -8,6 +8,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
+    {{--  Meta description  --}}
+    <meta name="description" content="MaryUI is a set of gorgeous Laravel blade components made for Livewire 3 and styled around daisyUI + Tailwind">
+
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">

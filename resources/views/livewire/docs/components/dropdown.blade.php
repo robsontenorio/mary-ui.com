@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Dropdown')] class extends Component {
+new
+#[Title('Dropdown')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI dropdown component.'])]
+class extends Component {
     public function delete()
     {
         sleep(1);

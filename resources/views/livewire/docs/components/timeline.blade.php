@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Timeline')] class extends Component {
+new
+#[Title('Timeline')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI full featured timeline component with title, description and date.'])]
+class extends Component {
 }
 ?>
 <div class="docs">

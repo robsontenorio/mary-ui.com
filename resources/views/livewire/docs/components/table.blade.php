@@ -1,11 +1,15 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Illuminate\Support\Arr;
 use Mary\Traits\Toast;
 
-new #[Title('Table')] class extends Component {
+new
+#[Title('Table')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI full featured table component with link, row selection, expandable row and customizable slots.'])]
+class extends Component {
     use Toast;
 
     public array $selected = [1, 3];

@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Icon')] class extends Component {
+new
+#[Title('Icon')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI icon component using Blade UI that supports dozen of iconsets.'])]
+class extends Component {
 }
 ?>
 <div class="docs">
@@ -23,15 +27,6 @@ new #[Title('Icon')] class extends Component {
 
             <x-icon name="o-envelope" class="w-12 h-12 bg-orange-500 text-white p-2 rounded-full" />
         @endverbatim
-    </x-code>
-
-    <x-anchor title="Caching" size="text-2xl" class="mt-10 mb-5" />
-    <p>
-        As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at
-        <strong>production environment</strong>.
-    </p>
-    <x-code no-render language="bash">
-        php artisan icons:cache
     </x-code>
 
     <x-anchor title="Alternative iconset" size="text-2xl" class="mt-10 mb-5" />
@@ -57,5 +52,14 @@ new #[Title('Icon')] class extends Component {
             {{-- Bootstrap --}}
             <x-icon name="bi.bell-fill" />
         @endverbatim
+    </x-code>
+
+    <x-anchor title="Caching" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at
+        <strong>production environment</strong>.
+    </p>
+    <x-code no-render language="bash">
+        php artisan icons:cache
     </x-code>
 </div>

@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Diff')] class extends Component {
+new
+#[Title('Diff')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI diff text component using diff2html.'])]
+class extends Component {
 }
 ?>
 

@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Alert')] class extends Component {
+new
+#[Title('Alert')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI alert component with icon and customizable slots.'])]
+class extends Component {
 }
 ?>
 

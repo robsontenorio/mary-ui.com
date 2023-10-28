@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Datepicker')] class extends Component {
+new
+#[Title('Datepicker')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI full featured datepicker component using Flatpickr with localization and global settings support.'])]
+class extends Component {
     public ?string $myDate1 = '2029-06-12';
 
     public ?string $myDate2 = '2025-09-24';

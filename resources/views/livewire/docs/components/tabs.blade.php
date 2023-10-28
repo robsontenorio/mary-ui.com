@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Tabs')] class extends Component {
+new
+#[Title('Tabs')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI tabs component with icons and dynamic selection.'])]
+class extends Component {
     public string $selectedTab = 'tricks-tab';
 }
 

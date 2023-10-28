@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Calendar')] class extends Component {
+new
+#[Title('Calendar')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI calendar component to easily display events using Vanilla Calendar.'])]
+class extends Component {
 }
 ?>
 <div class="docs">

@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Radio')] class extends Component {
+new
+#[Title('Radio')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI radio component with builtin validation support.'])]
+class extends Component {
     public int $selectedUser = 1;
 
     public int $selectedUser2;

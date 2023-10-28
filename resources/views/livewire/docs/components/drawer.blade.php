@@ -1,9 +1,13 @@
 <?php
 
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Drawer')] class extends Component {
+new
+#[Title('Drawer')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI drawer component made easy.'])]
+class extends Component {
     public bool $showDrawer = false;
 }
 
