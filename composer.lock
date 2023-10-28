@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f8f1ce9d0f6b01c86e0b775fed1192b",
+    "content-hash": "cb220e1c584f5b778f2edf06ec374a44",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3766,16 +3766,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.0.0-RC.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "5b6bdccab98a402ab39f08b4a82c671ce7bc1f80"
+                "reference": "97592663081a77f66f743d0803603508083678b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/5b6bdccab98a402ab39f08b4a82c671ce7bc1f80",
-                "reference": "5b6bdccab98a402ab39f08b4a82c671ce7bc1f80",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/97592663081a77f66f743d0803603508083678b5",
+                "reference": "97592663081a77f66f743d0803603508083678b5",
                 "shasum": ""
             },
             "require": {
@@ -3788,6 +3788,7 @@
                 "orchestra/testbench": "^8.5",
                 "phpunit/phpunit": "^10.2"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3827,7 +3828,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.0.0-RC.0"
+                "source": "https://github.com/robsontenorio/mary/tree/main"
             },
             "funding": [
                 {
@@ -3835,7 +3836,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-27T20:47:38+00:00"
+            "time": "2023-10-28T02:41:04+00:00"
         },
         {
             "name": "symfony/console",
@@ -8868,7 +8869,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "robsontenorio/mary": 5
+        "robsontenorio/mary": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
