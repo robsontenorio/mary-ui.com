@@ -33,6 +33,20 @@
     {{-- Algolia docsearch --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-NDC4ZLZ6D2');
+    </script>
 </head>
 
 <body class="min-h-screen font-sans antialiased">

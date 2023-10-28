@@ -7,7 +7,7 @@ use Livewire\Volt\Component;
 
 new
 #[Title('Form')]
-#[Layout('components.layouts.app', ['description' => 'Livewire form component with builtin validation, spinner, money/currency and actions slot.'])]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI form component with builtin validation, spinner, money/currency and actions slot.'])]
 class extends Component {
     #[Rule('required|min:20')]
     public string $name = '';
