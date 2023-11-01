@@ -12,46 +12,39 @@ new
 #[Title('Choices')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI full featured Choices component with searchable, multi-selection support and customizable slots.'])]
 class extends Component {
-    // Single NOT SEARCHABLE
     #[Rule('required')]
-    public ?int $userA_id = 1;
+    public ?int $user_id = 1;
 
-    // Single NOT SEARCHABLE (available options)
-    public Collection $usersA;
-
-    // Single searchable
     #[Rule('required')]
-    public ?int $userB_id = 3;
+    public array $users_multi_ids = [3, 4];
 
-    // Single searchable (available options)
-    public Collection $usersB;
-
-    // Multiple NOT SEARCHABLE
     #[Rule('required')]
-    public array $usersC_ids = [];
+    public int $user_custom_id = 1;
 
-    // Multiple NOT SEARCHABLE (available options)
-    public Collection $usersC;
-
-    // Multiple searchable
     #[Rule('required')]
-    public array $usersD_ids = [];
+    public ?int $user_searchable_id = 2;
 
-    // Multiple searchable (available options)
-    public Collection $usersD;
+    #[Rule('required')]
+    public array $users_multi_searchable_ids = [1, 55, 2];
+
+    #[Rule('required')]
+    public int $user_custom_slot_id = 1;
+
+    public Collection $users;
+
+    public Collection $usersSearchable;
+
+    public Collection $usersMultiSearchable;
 
     public function mount()
     {
-        // Populates $usersA (Single NOT SEARCHABLE, it is a static list)
-        $this->usersA = User::take(4)->get();
+        // For NOT SEARCHABLE examples, static list
+        $this->users = User::take(4)->get();
 
-        // Populates $usersC (Multi NOT SEARCHABLE, it is a static list)
-        $this->usersC = User::take(4)->get();
-
-        // Populates $usersB (Single searchable)
+        // Single searchable
         $this->search();
 
-        // Populates $usersB (Multi searchable)
+        // Multiple Searchable
         $this->searchMulti();
     }
 
@@ -60,32 +53,32 @@ class extends Component {
         $this->validate();
     }
 
-    // For single searchable ($usersB)
+    // For single searchable
     public function search(string $value = '')
     {
-        // Besides the search results, you must include pre-selected IDs
-        $preUsers = User::where('id', $this->userB_id)->orderBy('name')->get();
+        // Besides the search results, you must include on demand selected options
+        $selectedOptions = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
 
-        $this->usersB = User::query()
+        $this->usersSearchable = User::query()
             ->where('name', 'like', "%$value%")
             ->take(5)
             ->orderBy('name')
             ->get()
-            ->merge($preUsers);     // <-- Adds pre-selected IDs
+            ->merge($selectedOptions);     // <-- Adds selected option
     }
 
-    // For multi searchable ($usersD)
+    // For multi searchable
     public function searchMulti(string $value = '')
     {
-        // Besides the search results, you must include pre-selected IDs
-        $preUsers = User::whereIn('id', $this->usersD_ids)->orderBy('name')->get();
+        // Besides the search results, you must include on demand selected options
+        $selectedOptions = User::whereIn('id', $this->users_multi_searchable_ids)->orderBy('name')->get();
 
-        $this->usersD = User::query()
+        $this->usersMultiSearchable = User::query()
             ->where('name', 'like', "%$value%")
             ->take(5)
             ->orderBy('name')
             ->get()
-            ->merge($preUsers);     // <-- Adds pre-selected IDs
+            ->merge($selectedOptions);     // <-- Adds selected options
     }
 }
 ?>
@@ -93,33 +86,148 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Choices" />
 
+    <p>
+        This component is intended to be used to build complex selection interfaces for single and multiple values. It also supports <strong>async search</strong> when dealing with
+        large lists.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
+    </x-alert>
+
+    <x-anchor title="Selection" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        By default, it will look up for:
+    </p>
+
+    <ul>
+        <li><code>$object->id</code> for option value.</li>
+        <li><code>$object->name</code> for option display label.</li>
+        <li><code>$object->avatar</code> for avatar picture.</li>
+    </ul>
+
+    <br>
+
     <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $usersA = $this->usersA;
-                $usersB = $this->usersB;
-                $usersC = $this->usersC;
-                $usersD = $this->usersD;
-            @endphp
+            @php                              // [tl! .docs-hide]
+                    $users = $this->users;   // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            {{-- Notice `single` --}}
+            <x-choices2 label="Single" wire:model="user_id" :options="$users" single />
 
-            <x-choices2 label="Single single" wire:model="userA_id" :options="$usersA" />
+            {{-- public array $usersC_ids = []; --}}
+            <x-choices2 label="Multiple" wire:model="users_multi_ids" :options="$users" />
 
-            <x-choices2 label="Single Searchable" wire:model="userB_id" :options="$usersB" searchable />
-
-            <x-choices2 label="Multiple" wire:model="usersC_ids" :options="$usersC" multiple />
-
+            {{-- Custom options --}}
             <x-choices2
-                label="Multiple Searchable"
-                wire:model="usersD_ids"
-                :options="$usersD"
-                search-function="searchMulti"
-                no-result-text="Nothing here"
+                label="Custom labels"
+                wire:model="user_custom_id"
+                :options="$users"
+                option-label="username"
+                option-sub-label="city.name"
+                option-avatar="other_avatar"
                 icon="o-users"
-                searchable
-                multiple
-            />
-
-            <x-button label="save" wire:click="save" />
+                hint="It has custom display labels"
+                single />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Searchable" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options while typing.
+        You can change the method's name by using <code>search-function</code> parameter.
+    </p>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            @php                                                            // [tl! .docs-hide]
+                    $usersSearchable = $this->usersSearchable;              // [tl! .docs-hide]
+                    $usersMultiSearchable = $this->usersMultiSearchable;    // [tl! .docs-hide]
+            @endphp                                                         {{-- [tl! .docs-hide] --}}
+            {{-- Notice `searchable` + `single` --}}
+            <x-choices2
+                label="Searchable - Single"
+                wire:model="user_searchable_id"
+                :options="$usersSearchable"
+                single
+                searchable />
+
+            {{-- Notice custom `search-function` --}}
+            <x-choices2
+                label="Searchable - Multiple"
+                wire:model="users_multi_searchable_ids"
+                :options="$usersMultiSearchable"
+                search-function="searchMulti"
+                no-result-text="Ops! Nothing here ..."
+                searchable />
+        @endverbatim
+    </x-code>
+
+    <p>
+        You must also consider displaying pre-selected items on list, when it <strong>first renders</strong> and <strong>while searching</strong>.
+        There are many approaches to make it work, but here is an example for <strong>single search using Volt.</strong>
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            class extends Component {
+                #[Rule('required')]
+                public ?int $user_searchable_id = 2;
+
+                public function mount()
+                {
+                    // Fill options when component first renders
+                    $this->search();
+                }
+
+                // Also called as you type
+                public function search(string $value = '')
+                {
+                    // Besides the search results, you must include on demand selected options
+                    $selectedOptions = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
+
+                    $this->usersSearchable = User::query()
+                        ->where('name', 'like', "%$value%")
+                        ->take(5)
+                        ->orderBy('name')
+                        ->get()
+                        ->merge($selectedOptions);     // <-- Adds selected option
+                }
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You have full control on rendering items by using the <code>&#x40;scope('item', $object)</code> special blade directive.
+        It injects the current <code>$object</code> from the loop's context and achieves the same behavior that you would expect from the Vue/React scoped slots.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            <div>                                       <!-- [tl! .docs-hide] -->
+                @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
+            </div>                                      <!-- [tl! .docs-hide] -->
+            <x-choices2 label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
+                @scope('item', $user)
+                    <x-list-item :item="$user" sub-value="bio">
+                        <x-slot:avatar>
+                            <x-icon name="o-user" class="bg-orange-100 p-2 w-8 h8 rounded-full" />
+                        </x-slot:avatar>
+                        <x-slot:actions>
+                            <x-badge :value="$user->username" />
+                        </x-slot:actions>
+                    </x-list-item>
+                @endscope
+            </x-choices2>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 </div>
