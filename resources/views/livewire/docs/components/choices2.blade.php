@@ -84,7 +84,7 @@ class extends Component {
 ?>
 
 <div class="docs">
-    <x-anchor title="Choices" />
+    <x-anchor title="Choices (Rework WIP)" />
 
     <p>
         This component is intended to be used to build complex selection interfaces for single and multiple values. It also supports <strong>async search</strong> when dealing with
