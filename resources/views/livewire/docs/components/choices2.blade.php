@@ -93,31 +93,33 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Choices" />
 
-    {{--    <x-choices2 label="Single" wire:model="userA_id" :options="$usersA" hint="Hello !" />--}}
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            @php
+                $usersA = $this->usersA;
+                $usersB = $this->usersB;
+                $usersC = $this->usersC;
+                $usersD = $this->usersD;
+            @endphp
 
-    ... {{ $userB_id }}
+            <x-choices2 label="Single single" wire:model="userA_id" :options="$usersA" />
 
-    @php
-        dump($usersB->pluck('name', 'id')->toArray());
-    @endphp
+            <x-choices2 label="Single Searchable" wire:model="userB_id" :options="$usersB" searchable />
 
-    <x-choices2 label="Single single" wire:model="userA_id" :options="$usersA" />
+            <x-choices2 label="Multiple" wire:model="usersC_ids" :options="$usersC" multiple />
 
-    <x-choices2 label="Single Searchable" wire:model="userB_id" :options="$usersB" searchable />
+            <x-choices2
+                label="Multiple Searchable"
+                wire:model="usersD_ids"
+                :options="$usersD"
+                search-function="searchMulti"
+                no-result-text="Nothing here"
+                icon="o-users"
+                searchable
+                multiple
+            />
 
-    <x-choices2 label="Multiple" wire:model="usersC_ids" :options="$usersC" multiple />
-
-    <x-choices2
-        label="Multiple Searchable"
-        wire:model="usersD_ids"
-        :options="$usersD"
-        search-function="searchMulti"
-        no-result-text="Nothing here"
-        icon="o-users"
-        searchable
-        multiple
-    />
-
-    <x-button label="save" wire:click="save" />
-
+            <x-button label="save" wire:click="save" />
+        @endverbatim
+    </x-code>
 </div>
