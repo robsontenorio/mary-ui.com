@@ -122,14 +122,14 @@ class extends Component {
 
             {{-- Custom options --}}
             <x-choices2
-                label="Custom labels"
+                label="Custom options"
                 wire:model="user_custom_id"
                 :options="$users"
                 option-label="username"
                 option-sub-label="city.name"
                 option-avatar="other_avatar"
                 icon="o-users"
-                hint="It has custom display labels"
+                hint="It has custom options"
                 single />
         @endverbatim
     </x-code>
@@ -176,7 +176,7 @@ class extends Component {
         @verbatim('docs')
             class extends Component {
                 #[Rule('required')]
-                public ?int $user_searchable_id = 2;
+                public ?int $user_searchable_id = null;
 
                 public function mount()
                 {
