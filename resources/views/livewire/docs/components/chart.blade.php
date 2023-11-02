@@ -4,7 +4,10 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Chart')] #[Layout('components.layouts.app', ['description' => 'Livewire UI chart component using Chart.Js that provides dozen of chart types.'])] class extends Component
+new 
+#[Title('Chart')] 
+#[Layout('components.layouts.app', ['description' => 'Livewire UI chart component using Chart.Js that provides dozen of chart types.'])] 
+class extends Component
 {
     public array $myChart = [
         'type' => 'pie',
