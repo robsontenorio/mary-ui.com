@@ -84,6 +84,10 @@ class extends Component {
         Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
     </x-alert>
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10 alert-warning">
+        Help testing new Choices upcoming version. See <a href="https://github.com/robsontenorio/mary/issues/107" target="_blank">RFC - Choices</a>.
+    </x-alert>
+
     <x-anchor title="Selection" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
