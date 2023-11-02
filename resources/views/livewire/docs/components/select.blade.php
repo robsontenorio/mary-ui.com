@@ -5,8 +5,8 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
 new 
-#[Title('Select')] 
-#[Layout('components.layouts.app', ['description' => 'Livewire UI native select component with icon and disabled option state.'])] 
+#[Title('Select')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI native select component with icon and disabled option state.'])]
 class extends Component {
     public int $selectedUser = 4;
 

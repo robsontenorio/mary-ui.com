@@ -9,8 +9,8 @@ use Livewire\WithFileUploads;
 use Mary\Traits\Toast;
 
 new 
-#[Title('File Upload')] 
-#[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])] 
+#[Title('File Upload')]
+#[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])]
 class extends Component {
     use Toast, WithFileUploads;
 

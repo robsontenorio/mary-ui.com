@@ -5,8 +5,8 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
 new 
-#[Title('Button')] 
-#[Layout('components.layouts.app', ['description' => 'Livewire UI button component with icon, tooltip, spinner and customizable slots.'])] 
+#[Title('Button')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI button component with icon, tooltip, spinner and customizable slots.'])]
 class extends Component {
     public function save()
     {

@@ -5,8 +5,8 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
 new 
-#[Title('Textarea')] 
-#[Layout('components.layouts.app', ['description' => 'Livewire UI textarea component with builtin validation support.'])] 
+#[Title('Textarea')]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI textarea component with builtin validation support.'])]
 class extends Component {
     public ?string $bio = '';
 }
