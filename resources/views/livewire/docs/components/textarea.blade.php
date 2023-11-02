@@ -4,10 +4,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new
-#[Title('Textarea')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI textarea component with builtin validation support.'])]
-class extends Component {
+new #[Title('Textarea')] #[Layout('components.layouts.app', ['description' => 'Livewire UI textarea component with builtin validation support.'])] class extends Component
+{
     public ?string $bio = '';
 }
 
@@ -20,7 +18,7 @@ class extends Component {
             <x-textarea
                 label="Bio"
                 wire:model="bio"
-                placeholder="Your history ..."
+                placeholder="Your story ..."
                 hint="Max 1000 chars"
                 rows="5"
                 inline />

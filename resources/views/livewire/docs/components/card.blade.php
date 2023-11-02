@@ -4,10 +4,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new
-#[Title('Card')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI card component with title, subtitle and actions slot.'])]
-class extends Component {
+new #[Title('Card')] #[Layout('components.layouts.app', ['description' => 'Livewire UI card component with title, subtitle and actions slot.'])] class extends Component
+{
 }
 ?>
 <div class="docs">
@@ -16,7 +14,7 @@ class extends Component {
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
         @verbatim('docs')
-            <x-card title="Your stats" subtitle="Our finds about you" shadow separator>
+            <x-card title="Your stats" subtitle="Our findings about you" shadow separator>
                 I have title, subtitle, separator and shadow.
             </x-card>
 

@@ -1,18 +1,16 @@
 <?php
 
 use Illuminate\Validation\ValidationException;
+use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
-use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
 use Mary\Traits\Toast;
 
-new
-#[Title('File Upload')]
-#[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])]
-class extends Component {
-    use WithFileUploads, Toast;
+new #[Title('File Upload')] #[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])] class extends Component
+{
+    use Toast, WithFileUploads;
 
     #[Rule('required|min:10')]
     public $username;
@@ -96,7 +94,7 @@ class extends Component {
             @php                            // [tl! .docs-hide]
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            {{-- Alternative loading. Notice `wire:loading` `wire:target`  --}}
+            {{-- Alternative loading. Notice the `wire:loading` + `wire:target` combination  --}}
             <span wire:loading wire:target="photo2" class="loading loading-spinner"></span>
 
             {{-- Image preview --}}

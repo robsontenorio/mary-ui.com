@@ -5,10 +5,8 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Mary\Traits\Toast;
 
-new
-#[Title('Toast')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI toast component with title, description and redirect support.'])]
-class extends Component {
+new #[Title('Toast')] #[Layout('components.layouts.app', ['description' => 'Livewire UI toast component with title, description and redirect support.'])] class extends Component
+{
     use Toast;
 
     public function save()
@@ -52,7 +50,7 @@ class extends Component {
     <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Place <strong>toast tag</strong> somewhere on main layout.
+        Place <strong>toast tag</strong> anywhere on the main layout.
     </p>
 
     {{--@formatter:off--}}
@@ -67,7 +65,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Import <code>Toast</code> trait and call <code>$this->toast(...)</code> method.
+        Import the <code>Toast</code> trait and call the <code>$this->toast(...)</code> method.
     </p>
 
     {{--@formatter:off--}}

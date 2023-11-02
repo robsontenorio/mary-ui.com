@@ -4,10 +4,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new
-#[Title('Radio')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI radio component with builtin validation support.'])]
-class extends Component {
+new #[Title('Radio')] #[Layout('components.layouts.app', ['description' => 'Livewire UI radio component with builtin validation support.'])] class extends Component
+{
     public int $selectedUser = 1;
 
     public int $selectedUser2;
@@ -45,7 +43,7 @@ class extends Component {
     <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Just set <code>option-value</code> and <code>option-label</code> representing desired targets.
+        Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
     <x-code>

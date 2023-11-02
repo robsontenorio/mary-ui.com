@@ -4,10 +4,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new
-#[Title('Input')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI input component with builtin validation, icons, label, validation, currency, prefix/suffix and customizable slots.'])]
-class extends Component {
+new #[Title('Input')] #[Layout('components.layouts.app', ['description' => 'Livewire UI input component with builtin validation, icons, label, validation, currency, prefix/suffix and customizable slots.'])] class extends Component
+{
     public string $address = 'CA, Street 1';
 
     public string $password = 'Hello!';
@@ -71,7 +69,7 @@ class extends Component {
         @verbatim('docs')
             <x-input label="Default money" wire:model="money1" prefix="USD" money inline />
 
-            {{-- Notice `locale` accepts any valid locale --}}
+            {{-- Notice that `locale` accepts any valid locale --}}
             <x-input
                 label="Custom money"
                 wire:model="money2"

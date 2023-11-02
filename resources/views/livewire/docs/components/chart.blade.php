@@ -4,10 +4,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new
-#[Title('Chart')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI chart component using Chart.Js that provides dozen of chart types.'])]
-class extends Component {
+new #[Title('Chart')] #[Layout('components.layouts.app', ['description' => 'Livewire UI chart component using Chart.Js that provides dozen of chart types.'])] class extends Component
+{
     public array $myChart = [
         'type' => 'pie',
         'data' => [
@@ -16,9 +14,9 @@ class extends Component {
                 [
                     'label' => '# of Votes',
                     'data' => [12, 19, 3],
-                ]
-            ]
-        ]
+                ],
+            ],
+        ],
     ];
 
     public function randomize()
@@ -41,7 +39,7 @@ class extends Component {
 
     <p>
         This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
-        So, it accepts any valid configuration described at its docs.
+        So, it accepts any valid configuration described in its docs.
     </p>
 
     <x-code no-render>
@@ -58,7 +56,7 @@ class extends Component {
     <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        See all available options at <a href="https://www.chartjs.org" target="_blank">Chart.js</a> docs.
+        Check all available options in the <a href="https://www.chartjs.org" target="_blank">Chart.js</a> docs.
     </p>
 
     <x-code class="grid lg:grid-cols-2  items-start justify-center gap-10">

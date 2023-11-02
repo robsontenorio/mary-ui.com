@@ -7,10 +7,8 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new
-#[Title('Choices')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI full featured Choices component with searchable, multi-selection support and customizable slots.'])]
-class extends Component {
+new #[Title('Choices')] #[Layout('components.layouts.app', ['description' => 'Livewire UI full featured Choices component with searchable, multi-selection support and customizable slots.'])] class extends Component
+{
     #[Rule('required')]
     public ?int $user1_id = null;
 
@@ -85,7 +83,7 @@ class extends Component {
     </x-alert>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10 alert-warning">
-        Help testing new Choices upcoming version. See <a href="https://github.com/robsontenorio/mary/issues/107" target="_blank">RFC - Choices</a>.
+        Help testing the new Choices upcoming version. Check the <a href="https://github.com/robsontenorio/mary/issues/107" target="_blank">RFC - Choices</a>.
     </x-alert>
 
     <x-anchor title="Selection" size="text-2xl" class="mt-10 mb-5" />
@@ -129,8 +127,8 @@ class extends Component {
     <x-anchor title="Searchable" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options while typing.
-        You can change the method's name by using <code>search-function</code> parameter.
+        When dealing with large options list use the <code>searchable</code> parameter. By default, it calls the <code>search()</code> method to get fresh options while typing.
+        You can change the method's name by using the <code>search-function</code> parameter.
     </p>
 
     <x-code class="grid gap-5">
@@ -139,7 +137,7 @@ class extends Component {
                     $usersExampleSingleSearch = $this->usersExampleSingleSearch;   // [tl! .docs-hide]
                     $usersExampleMultiSearch = $this->usersExampleMultiSearch;    // [tl! .docs-hide]
             @endphp                                                               {{-- [tl! .docs-hide] --}}
-            {{-- Notice `searchable` + `single` --}}
+            {{-- Notice the `searchable` + `single` combination --}}
             <x-choices
                 label="Searchable - Single"
                 wire:model="user4_id"
@@ -148,7 +146,7 @@ class extends Component {
                 single
                 searchable />
 
-            {{-- Notice custom `search-function` --}}
+            {{-- Notice the custom `search-function` --}}
             <x-choices
                 label="Searchable - Multiple"
                 wire:model="users_multiple_searchable"
