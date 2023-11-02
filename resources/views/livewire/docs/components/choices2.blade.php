@@ -22,6 +22,21 @@ class extends Component {
     public int $user_custom_id = 1;
 
     #[Rule('required')]
+    public array $users_all_ids = [2];
+
+    #[Rule('required')]
+    public array $users_all2_ids = [3];
+
+    #[Rule('required')]
+    public array $users_compact_ids = [1];
+
+    #[Rule('required')]
+    public array $users_compact2_ids = [2, 3, 4];
+
+    #[Rule('required')]
+    public array $users_all_compact_ids = [];
+
+    #[Rule('required')]
     public ?int $user_searchable_id = null;
 
     #[Rule('required')]
@@ -39,7 +54,7 @@ class extends Component {
     public function mount()
     {
         // For NOT SEARCHABLE examples, static list
-        $this->users = User::take(4)->get();
+        $this->users = User::with('city')->take(4)->get();
 
         // Single searchable
         $this->search();
@@ -117,7 +132,7 @@ class extends Component {
             {{-- Notice `single` --}}
             <x-choices2 label="Single" wire:model="user_id" :options="$users" single />
 
-            {{-- public array $usersC_ids = []; --}}
+            {{-- public array $users_multi_ids = []; --}}
             <x-choices2 label="Multiple" wire:model="users_multi_ids" :options="$users" />
 
             {{-- Custom options --}}
@@ -131,6 +146,70 @@ class extends Component {
                 icon="o-users"
                 hint="It has custom options"
                 single />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Select All" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        This option only works for <strong>multiple and non-searchable</strong> exclusively.
+    </p>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            @php                              // [tl! .docs-hide]
+                    $users = $this->users;   // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            {{-- Notice `allow-all` --}}
+            <x-choices2 label="Multiple" wire:model="users_all_ids" :options="$users" allow-all />
+
+            <x-choices2
+                label="Multiple"
+                wire:model="users_all2_ids"
+                :options="$users"
+                allow-all
+                allow-all-text="Select all of them!" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Compact mode" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        This option only works for <strong>multiple and non-searchable</strong> exclusively.
+    </p>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            @php                              // [tl! .docs-hide]
+                    $users = $this->users;   // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            {{-- Notice `compact` --}}
+            <x-choices2 label="Compact" wire:model="users_compact_ids" :options="$users" compact />
+
+            <x-choices2
+                label="Compact label"
+                wire:model="users_compact2_ids"
+                :options="$users"
+                compact
+                compact-text="choices selected!" />
+        @endverbatim
+    </x-code>
+
+    <p>
+        You can combine <code>allow-all</code> and <code>compact</code>
+    </p>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            @php                              // [tl! .docs-hide]
+                    $users = $this->users;   // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            <x-choices2
+                label="Multiple"
+                wire:model="users_all_compact_ids"
+                :options="$users"
+                compact
+                allow-all />
         @endverbatim
     </x-code>
 
