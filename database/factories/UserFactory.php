@@ -2,11 +2,12 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends Factory<User>
  */
 class UserFactory extends Factory
 {
@@ -22,9 +23,9 @@ class UserFactory extends Factory
             'custom_key' => fake()->unique()->randomNumber(),
             'name' => fake()->unique()->firstName(),
             'username' => fake()->unique()->userName(),
-            'avatar' => 'https://picsum.photos/200?='.now(),
+            'avatar' => 'https://picsum.photos/200?=' . rand(),
             'email' => fake()->unique()->safeEmail(),
-            'other_avatar' => 'https://picsum.photos/200?='.now(),
+            'other_avatar' => 'https://picsum.photos/200?=' . rand(),
             'other_name' => fake()->unique()->firstName(),
             'other_email' => fake()->unique()->safeEmail(),
             'bio' => fake()->paragraph(),
@@ -39,7 +40,7 @@ class UserFactory extends Factory
      */
     public function unverified(): static
     {
-        return $this->state(fn (array $attributes) => [
+        return $this->state(fn(array $attributes) => [
             'email_verified_at' => null,
         ]);
     }
