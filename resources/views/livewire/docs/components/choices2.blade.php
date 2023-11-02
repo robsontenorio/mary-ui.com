@@ -256,7 +256,11 @@ class extends Component {
         @verbatim('docs')
             new class extends Component {
 
+                // Selected option
                 public ?int $user_searchable_id = null;
+
+                // Options list
+                public Collection $usersSearchable;
 
                 public function mount()
                 {
