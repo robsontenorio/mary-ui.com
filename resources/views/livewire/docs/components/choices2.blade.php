@@ -12,37 +12,26 @@ new
 #[Title('Choices')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI full featured Choices component with searchable, multi-selection support and customizable slots.'])]
 class extends Component {
-    #[Rule('required')]
     public ?int $user_id = 1;
 
-    #[Rule('required')]
     public array $users_multi_ids = [3, 4];
 
-    #[Rule('required')]
     public int $user_custom_id = 1;
 
-    #[Rule('required')]
     public array $users_all_ids = [2];
 
-    #[Rule('required')]
     public array $users_all2_ids = [3];
 
-    #[Rule('required')]
     public array $users_compact_ids = [1];
 
-    #[Rule('required')]
     public array $users_compact2_ids = [2, 3, 4];
 
-    #[Rule('required')]
     public array $users_all_compact_ids = [];
 
-    #[Rule('required')]
     public ?int $user_searchable_id = null;
 
-    #[Rule('required')]
     public array $users_multi_searchable_ids = [];
 
-    #[Rule('required')]
     public int $user_custom_slot_id = 1;
 
     public Collection $users;
