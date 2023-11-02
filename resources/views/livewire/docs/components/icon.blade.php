@@ -4,7 +4,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new 
+new
 #[Title('Icon')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI icon component using Blade UI that supports dozen of iconsets.'])]
 class extends Component {

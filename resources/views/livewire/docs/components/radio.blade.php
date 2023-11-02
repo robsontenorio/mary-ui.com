@@ -4,7 +4,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new 
+new
 #[Title('Radio')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI radio component with builtin validation support.'])]
 class extends Component {

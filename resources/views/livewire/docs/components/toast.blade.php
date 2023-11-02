@@ -5,7 +5,7 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Mary\Traits\Toast;
 
-new 
+new
 #[Title('Toast')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI toast component with title, description and redirect support.'])]
 class extends Component {

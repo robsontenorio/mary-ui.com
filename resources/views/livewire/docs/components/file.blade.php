@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Validation\ValidationException;
-use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Layout;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
 use Mary\Traits\Toast;
 
-new 
+new
 #[Title('File Upload')]
 #[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])]
 class extends Component {

@@ -4,7 +4,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new 
+new
 #[Title('Textarea')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI textarea component with builtin validation support.'])]
 class extends Component {

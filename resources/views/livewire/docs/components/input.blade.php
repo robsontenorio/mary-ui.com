@@ -4,7 +4,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new 
+new
 #[Title('Input')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI input component with builtin validation, icons, label, validation, currency, prefix/suffix and customizable slots.'])]
 class extends Component {
