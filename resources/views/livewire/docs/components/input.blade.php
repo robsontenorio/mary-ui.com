@@ -71,7 +71,7 @@ class extends Component {
         @verbatim('docs')
             <x-input label="Default money" wire:model="money1" prefix="USD" money inline />
 
-            {{-- Notice `locale` accepts any valid locale --}}
+            {{-- Notice that `locale` accepts any valid locale --}}
             <x-input
                 label="Custom money"
                 wire:model="money2"

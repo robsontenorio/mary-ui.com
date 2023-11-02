@@ -46,15 +46,15 @@ class extends Component {
     <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Notice it only works combined with <code>separator</code> attribute.
+        Notice it only works combined with the <code>separator</code> attribute.
     </p>
 
     <x-code>
         @verbatim('docs')
-            {{--  Fires when call any action on page  --}}
+            {{--  This fires when you call any action on the page  --}}
             <x-header title="Always fires" separator progress-indicator />
 
-            {{-- Fires when you call `save` action --}}
+            {{-- This fires when you call the `save` action --}}
             <x-header title="Only by `save`" separator progress-indicator="save" />
 
             <x-button label="Some action" wire:click="something" />

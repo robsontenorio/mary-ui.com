@@ -12,7 +12,7 @@ new
 #[Title('File Upload')]
 #[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])]
 class extends Component {
-    use WithFileUploads, Toast;
+    use Toast, WithFileUploads;
 
     #[Rule('required|min:10')]
     public $username;
@@ -96,7 +96,7 @@ class extends Component {
             @php                            // [tl! .docs-hide]
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            {{-- Alternative loading. Notice `wire:loading` `wire:target`  --}}
+            {{-- Alternative loading. Notice the `wire:loading` + `wire:target` combination  --}}
             <span wire:loading wire:target="photo2" class="loading loading-spinner"></span>
 
             {{-- Image preview --}}

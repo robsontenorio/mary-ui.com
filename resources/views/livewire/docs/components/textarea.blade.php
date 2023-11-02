@@ -20,7 +20,7 @@ class extends Component {
             <x-textarea
                 label="Bio"
                 wire:model="bio"
-                placeholder="Your history ..."
+                placeholder="Your story ..."
                 hint="Max 1000 chars"
                 rows="5"
                 inline />

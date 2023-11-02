@@ -21,11 +21,11 @@ class extends Component {
     <x-anchor title="Select" />
 
     <p>
-        This component is intended to be used as simple native HTML value selection. It will best fit for most use cases on web apps.
+        This component is intended to be used as a simple native HTML value selection. It will best fit for most use cases on web apps.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        If you need a rich selection value interface or async search see <a href="/docs/components/choices" wire:navigate>Choices</a> component.
+        If you need a rich selection value interface or async search check the <a href="/docs/components/choices" wire:navigate>Choices</a> component.
     </x-alert>
 
     <x-anchor title="Default attributes" size="text-2xl" class="mt-10 mb-5" />
@@ -60,7 +60,7 @@ class extends Component {
     <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Just set <code>option-value</code> and <code>option-label</code> representing desired targets.
+        Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
     <x-code class="grid gap-5">

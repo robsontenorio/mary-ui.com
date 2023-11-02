@@ -45,7 +45,7 @@ class extends Component {
     <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Just set <code>option-value</code> and <code>option-label</code> representing desired targets.
+        Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
     <x-code>

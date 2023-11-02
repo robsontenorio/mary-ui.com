@@ -48,7 +48,7 @@ class extends Component {
 
     <x-anchor title="Links" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        You can make a button act as a link by placing <code>link</code> property. You can use all options describe above for ordinary buttons.
+        You can make a button act as a link by placing a <code>link</code> property. You can use all the options described above for ordinary buttons.
     </p>
 
     <x-code class="flex flex-wrap gap-3">

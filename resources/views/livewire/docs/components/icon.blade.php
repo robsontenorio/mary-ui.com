@@ -16,7 +16,7 @@ class extends Component {
 
     <x-anchor title="Default iconset" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        All default icons are powered by <a href="https://blade-ui-kit.com/blade-icons?set=1#search" target="_blank">Blade Hero Icons</a> and you can use them right the way.
+        All the default icons are powered by <a href="https://blade-ui-kit.com/blade-icons?set=1#search" target="_blank">Blade Hero Icons</a> and you can use them right away.
     </p>
 
     <x-code class="flex gap-5">
@@ -56,7 +56,7 @@ class extends Component {
 
     <x-anchor title="Caching" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at
+        As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at the
         <strong>production environment</strong>.
     </p>
     <x-code no-render language="bash">
