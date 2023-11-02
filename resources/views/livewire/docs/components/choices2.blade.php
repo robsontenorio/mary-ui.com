@@ -181,7 +181,7 @@ class extends Component {
                 wire:model="users_compact2_ids"
                 :options="$users"
                 compact
-                compact-text="choices selected!" />
+                compact-text="stuff chosen" />
         @endverbatim
     </x-code>
 
