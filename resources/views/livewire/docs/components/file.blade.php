@@ -11,8 +11,7 @@ use Mary\Traits\Toast;
 new 
 #[Title('File Upload')] 
 #[Layout('components.layouts.app', ['description' => 'Livewire file upload component.'])] 
-class extends Component
-{
+class extends Component {
     use Toast, WithFileUploads;
 
     #[Rule('required|min:10')]

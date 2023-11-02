@@ -10,8 +10,7 @@ use Livewire\Volt\Component;
 new 
 #[Title('Choices')] 
 #[Layout('components.layouts.app', ['description' => 'Livewire UI full featured Choices component with searchable, multi-selection support and customizable slots.'])] 
-class extends Component
-{
+class extends Component {
     #[Rule('required')]
     public ?int $user1_id = null;
 

@@ -8,8 +8,7 @@ use Mary\Traits\Toast;
 new 
 #[Title('Toast')] 
 #[Layout('components.layouts.app', ['description' => 'Livewire UI toast component with title, description and redirect support.'])] 
-class extends Component
-{
+class extends Component {
     use Toast;
 
     public function save()

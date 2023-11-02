@@ -7,8 +7,7 @@ use Livewire\Volt\Component;
 new 
 #[Title('Card')] 
 #[Layout('components.layouts.app', ['description' => 'Livewire UI card component with title, subtitle and actions slot.'])] 
-class extends Component
-{
+class extends Component {
 }
 ?>
 <div class="docs">
