@@ -158,7 +158,8 @@ class extends Component {
                 wire:model="users_all2_ids"
                 :options="$users"
                 allow-all
-                allow-all-text="Select all of them!" />
+                allow-all-text="Select all stuff"
+                remove-all-text="Delete all things" />
         @endverbatim
     </x-code>
 
