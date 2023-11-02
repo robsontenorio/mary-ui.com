@@ -22,10 +22,10 @@ class extends Component {
     public int $user_custom_id = 1;
 
     #[Rule('required')]
-    public ?int $user_searchable_id = 2;
+    public ?int $user_searchable_id = null;
 
     #[Rule('required')]
-    public array $users_multi_searchable_ids = [1, 55, 2];
+    public array $users_multi_searchable_ids = [];
 
     #[Rule('required')]
     public int $user_custom_slot_id = 1;
