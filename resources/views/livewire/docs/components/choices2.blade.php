@@ -144,6 +144,7 @@ class extends Component {
                 option-sub-label="city.name"
                 option-avatar="other_avatar"
                 icon="o-users"
+                height="max-h-96" {{-- Default is `max-h-64`  --}}
                 hint="It has custom options"
                 single />
         @endverbatim
@@ -253,8 +254,8 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code no-render language="php">
         @verbatim('docs')
-            class extends Component {
-                #[Rule('required')]
+            new class extends Component {
+
                 public ?int $user_searchable_id = null;
 
                 public function mount()
