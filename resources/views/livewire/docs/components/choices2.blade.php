@@ -30,6 +30,8 @@ class extends Component {
 
     public ?int $user_searchable_id = null;
 
+    public ?int $user_searchable_min_chars_id = null;
+
     public array $users_multi_searchable_ids = [];
 
     public int $user_custom_slot_id = 1;
@@ -37,6 +39,8 @@ class extends Component {
     public Collection $users;
 
     public Collection $usersSearchable;
+
+    public Collection $usersSearchableMinChars;
 
     public Collection $usersMultiSearchable;
 
@@ -47,6 +51,9 @@ class extends Component {
 
         // Single searchable
         $this->search();
+
+        // Single searchable (min chars)
+        $this->searchMinChars();
 
         // Multiple Searchable
         $this->searchMulti();
@@ -60,15 +67,34 @@ class extends Component {
     // For single searchable
     public function search(string $value = '')
     {
-        // Besides the search results, you must include on demand selected options
-        $selectedOptions = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
+        // Besides the search results, you must include on demand selected option
+        $selectedOption = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
 
         $this->usersSearchable = User::query()
             ->where('name', 'like', "%$value%")
             ->take(5)
             ->orderBy('name')
             ->get()
-            ->merge($selectedOptions);     // <-- Adds selected option
+            ->merge($selectedOption);     // <-- Adds selected option
+    }
+
+    // For single searchable (min chars)
+    public function searchMinChars(string $value = '')
+    {
+        // Besides the search results, you must include on demand selected options
+        $selectedOption = User::where('id', $this->user_searchable_min_chars_id)->orderBy('name')->get();
+
+        $this->usersSearchableMinChars = collect();
+
+        if (strlen($value) >= 2) {
+            $this->usersSearchableMinChars = User::query()
+                ->where('name', 'like', "%$value%")
+                ->take(5)
+                ->orderBy('name')
+                ->get();
+        }
+
+        $this->usersSearchableMinChars = $this->usersSearchableMinChars->merge($selectedOption);     // <-- Adds selected option
     }
 
     // For multi searchable
@@ -145,6 +171,8 @@ class extends Component {
         This option only works for <strong>multiple and non-searchable</strong> exclusively.
     </p>
 
+    <br>
+
     <x-code class="grid gap-5">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
@@ -169,6 +197,8 @@ class extends Component {
         This option only works for <strong>multiple and non-searchable</strong> exclusively.
     </p>
 
+    <br>
+
     <x-code class="grid gap-5">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
@@ -185,6 +215,8 @@ class extends Component {
                 compact-text="stuff chosen" />
         @endverbatim
     </x-code>
+
+    <br>
 
     <p>
         You can combine <code>allow-all</code> and <code>compact</code>
@@ -211,15 +243,17 @@ class extends Component {
         You can change the method's name by using <code>search-function</code> parameter.
     </p>
 
+    <br>
+
     <x-code class="grid gap-5">
         @verbatim('docs')
-            @php                                                            // [tl! .docs-hide]
-                    $usersSearchable = $this->usersSearchable;              // [tl! .docs-hide]
-                    $usersMultiSearchable = $this->usersMultiSearchable;    // [tl! .docs-hide]
-            @endphp                                                         {{-- [tl! .docs-hide] --}}
+            @php                                                                  // [tl! .docs-hide]
+                    $usersSearchable = $this->usersSearchable;                    // [tl! .docs-hide]
+                    $usersMultiSearchable = $this->usersMultiSearchable;          // [tl! .docs-hide]
+            @endphp                                                               {{-- [tl! .docs-hide] --}}
             {{-- Notice `searchable` + `single` --}}
             <x-choices2
-                label="Searchable - Single"
+                label="Searchable + Single"
                 wire:model="user_searchable_id"
                 :options="$usersSearchable"
                 single
@@ -227,7 +261,7 @@ class extends Component {
 
             {{-- Notice custom `search-function` --}}
             <x-choices2
-                label="Searchable - Multiple"
+                label="Searchable + Multiple"
                 wire:model="users_multi_searchable_ids"
                 :options="$usersMultiSearchable"
                 search-function="searchMulti"
@@ -235,6 +269,8 @@ class extends Component {
                 searchable />
         @endverbatim
     </x-code>
+
+    <br>
 
     <p>
         You must also consider displaying pre-selected items on list, when it <strong>first renders</strong> and <strong>while searching</strong>.
@@ -261,20 +297,54 @@ class extends Component {
                 // Also called as you type
                 public function search(string $value = '')
                 {
-                    // Besides the search results, you must include on demand selected options
-                    $selectedOptions = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
+                    // Besides the search results, you must include on demand selected option
+                    $selectedOption = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
 
                     $this->usersSearchable = User::query()
                         ->where('name', 'like', "%$value%")
                         ->take(5)
                         ->orderBy('name')
                         ->get()
-                        ->merge($selectedOptions);     // <-- Adds selected option
+                        ->merge($selectedOption);     // <-- Adds selected option
                 }
             }
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <br>
+
+    <p>
+        Sometimes you don't want to hit a datasource on <strong>every keystroke</strong>.
+        So, you can make use of <code>debounce</code> as described at <a href="https://livewire.laravel.com/docs/forms#debouncing-input" target="_blank">Livewire docs</a>
+        for input fields.
+    </p>
+
+    <p>
+        Another approach is to use <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
+    </p>
+
+    <br>
+
+    <x-code>
+        @verbatim('docs')
+            @php                                                              // [tl! .docs-hide]
+                $usersSearchableMinChars = $this->usersSearchableMinChars;    // [tl! .docs-hide]
+            @endphp                                                           {{-- [tl! .docs-hide] --}}
+            {{-- Notice `min-chars` and `debounce` --}}
+            <x-choices2
+                label="Searchable + Single + Debounce + Min chars"
+                wire:model="user_searchable_min_chars_id"
+                :options="$usersSearchableMinChars"
+                search-function="searchMinChars"
+                debounce="300ms" {{-- Default is `250ms`--}}
+                min-chars="2" {{-- Default is `0`--}}
+                single
+                searchable />
+        @endverbatim
+    </x-code>
+
+    <br>
 
     <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
@@ -282,6 +352,8 @@ class extends Component {
         You have full control on rendering items by using the <code>&#x40;scope('item', $object)</code> special blade directive.
         It injects the current <code>$object</code> from the loop's context and achieves the same behavior that you would expect from the Vue/React scoped slots.
     </p>
+
+    <br>
 
     {{--@formatter:off--}}
     <x-code>
