@@ -228,7 +228,7 @@ class extends Component {
                     $users = $this->users;   // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-choices2
-                label="Multiple"
+                label="Select All + Compact"
                 wire:model="users_all_compact_ids"
                 :options="$users"
                 compact
