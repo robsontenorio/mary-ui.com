@@ -83,7 +83,10 @@
     <x-slot:actions>
         <div id="doc-search" class="mr-2 lg:mr-8">...</div>
 
-        <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
+        <span class="pt-1.5 hidden lg:inline-flex flex gap-5">
+            <a class="github-button" href="https://github.com/sponsors/robsontenorio" data-icon="octicon-heart" data-size="large">Sponsor</a>
+            <a class="github-button" href="https://github.com/robsontenorio/mary" data-size="large" data-show-count="true" data-icon="octicon-star">Star</a>
+        </span>
         <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
         <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
     </x-slot:actions>
@@ -172,5 +175,7 @@
 {{-- Toast --}}
 <x-toast />
 
+{{-- Star --}}
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

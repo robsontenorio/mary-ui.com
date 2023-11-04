@@ -59,9 +59,12 @@
     <x-slot:actions>
         <div id="doc-search" class="mr-2 lg:mr-8">...</div>
 
+        <div class="hidden lg:block pt-1.5">
+            <a class="github-button" href="https://github.com/robsontenorio/mary" data-size="large" data-show-count="true" data-icon="octicon-star">Star</a>
+        </div>
+
         <div class="hidden lg:block">
             <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
-            <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500 hidden lg:inline-flex" external />
         </div>
 
         <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
@@ -81,6 +84,9 @@
         </div>
     </x-slot:footer>
 </x-main>
+
+{{-- Star --}}
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 {{-- Algolia search docs --}}
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>

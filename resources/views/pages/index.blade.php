@@ -66,7 +66,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
 
             <div class="text-xl leading-10">
-                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade components</span>
+                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade UI components</span>
                 <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
                 and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
             </div>
