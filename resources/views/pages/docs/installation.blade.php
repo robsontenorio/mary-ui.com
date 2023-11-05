@@ -49,6 +49,42 @@ new #[Title('Installation')] class extends Component {
         Go to the <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
     </x-alert>
 
+    <x-anchor title="Renaming components" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        If for some reason you need to rename Mary components using a custom prefix, publish the config file.
+    </p>
+
+    <x-code no-render language="bash">
+        php artisan vendor:publish --tag mary.config
+    </x-code>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            return [
+                /**
+                 * Default is empty.
+                 *    prefix => ''
+                 *              <x-button />
+                 *              <x-card />
+                 *
+                 * Renaming all components:
+                 *    prefix => 'mary-'
+                 *               <x-mary-button />
+                 *               <x-mary-card />
+                 */
+                'prefix' => ''
+            ];
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    Make sure to clear view cache after renaming.
+
+    <x-code no-render language="bash">
+        php artisan view:clear
+    </x-code>
+
     <x-anchor title="Manual" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
