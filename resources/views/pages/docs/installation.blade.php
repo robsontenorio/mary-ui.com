@@ -19,7 +19,7 @@ new #[Title('Installation')] class extends Component {
         Please, for further styles reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
     </x-alert>
 
-    <x-anchor title="Automatic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Automatic install" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         This package requires that you are installing Mary on a <strong>brand-new</strong> Laravel project, <strong>without any starter kit like Breeze or Jetstream</strong>.
@@ -64,12 +64,12 @@ new #[Title('Installation')] class extends Component {
             return [
                 /**
                  * Default is empty.
-                 *    prefix => ''
+                 *    'prefix' => ''
                  *              <x-button />
                  *              <x-card />
                  *
                  * Renaming all components:
-                 *    prefix => 'mary-'
+                 *    'prefix' => 'mary-'
                  *               <x-mary-button />
                  *               <x-mary-card />
                  */
@@ -85,7 +85,7 @@ new #[Title('Installation')] class extends Component {
         php artisan view:clear
     </x-code>
 
-    <x-anchor title="Manual" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Manual install" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         If you have an existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow these steps.
