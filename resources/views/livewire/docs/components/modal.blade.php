@@ -9,6 +9,8 @@ new
 #[Layout('components.layouts.app', ['description' => 'Livewire UI modal component with title, subtitle, actions and customizable slots.'])]
 class extends Component {
     public bool $myModal = false;
+
+    public bool $myPersistentModal = false;
 }
 
 ?>
@@ -68,7 +70,7 @@ class extends Component {
 
             {{-- Note `wire:model`, no `id="xxx"` --}}
             <x-modal wire:model="myModal" title="Hello" subtitle="Livewire example" separator>
-                Click "cancel" or press ESC to exit.
+                Press `ESC`, click outside or click `CANCEL` button to close.
 
                 <x-slot:actions>
                     <x-button label="Cancel" @click="$wire.myModal = false" />
@@ -77,4 +79,34 @@ class extends Component {
             </x-modal>
         @endverbatim
     </x-code>
+
+    <x-anchor title="Persistent" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Add the <code>persistent</code> attribute to prevent modal close on click outside or when pressing `ESC` key.
+    </p>
+
+    <br>
+
+    <x-code class="flex gap-5">
+        @verbatim('docs')
+            {{-- Livewire: fires network request --}}
+            <x-button label="Livewire" class="btn-primary" wire:click="$toggle('myPersistentModal')" />
+
+            {{-- Alpine: no network request --}}
+            <x-button label="Alpine" class="btn-warning" @click="$wire.myPersistentModal = true" />
+
+
+            {{-- Note `persistent` --}}
+            <x-modal wire:model="myPersistentModal" title="Persistent" separator persistent>
+                I won't close unless you click on `CANCEL` button.
+
+                <x-slot:actions>
+                    <x-button label="Cancel" @click="$wire.myPersistentModal = false" />
+                    <x-button label="Confirm" class="btn-primary" />
+                </x-slot:actions>
+            </x-modal>
+        @endverbatim
+    </x-code>
+
 </div>
