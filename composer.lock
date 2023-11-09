@@ -3770,12 +3770,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "bd7109e5a775d14f225fc3c9479a2e7427d038ce"
+                "reference": "d7631240a0c3cf19d90f375330d202ca580a7999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/bd7109e5a775d14f225fc3c9479a2e7427d038ce",
-                "reference": "bd7109e5a775d14f225fc3c9479a2e7427d038ce",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/d7631240a0c3cf19d90f375330d202ca580a7999",
+                "reference": "d7631240a0c3cf19d90f375330d202ca580a7999",
                 "shasum": ""
             },
             "require": {
@@ -3835,7 +3835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-08T23:50:35+00:00"
+            "time": "2023-11-09T00:02:22+00:00"
         },
         {
             "name": "symfony/console",
