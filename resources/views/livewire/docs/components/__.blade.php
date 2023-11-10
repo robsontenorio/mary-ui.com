@@ -7,10 +7,7 @@ use Livewire\Volt\Component;
 new
 #[Title(fill_here)]
 #[Layout('components.layouts.app', ['description' => fill_here])]
-class extends Component
-{
-class extends Component
-{
+class extends Component {
     //
 }; ?>
 

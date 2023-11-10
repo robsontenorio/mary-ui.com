@@ -29,6 +29,16 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    {{--    <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />--}}
+
+    {{--    <x-code class="flex gap-5">--}}
+    {{--        @verbatim('docs')--}}
+    {{--            <x-icon name="o-envelope" label="Messages" />--}}
+
+    {{--            <x-icon name="s-envelope" class="w-9 h-9 text-green-500 text-2xl" label="Messages" />--}}
+    {{--        @endverbatim--}}
+    {{--    </x-code>--}}
+
     <x-anchor title="Alternative iconset" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
