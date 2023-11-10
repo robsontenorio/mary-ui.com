@@ -24,24 +24,32 @@ class extends Component {
             <x-avatar :image="$user->avatar" />
 
             {{-- Manipulate avatar imagem with CSS classes --}}
-            <x-avatar :image="$user->avatar" class="w-14" />
+            <x-avatar :image="$user->avatar" class="!w-14 !rounded-lg" />
 
+            {{-- Title --}}
             <x-avatar :image="$user->avatar" :title="$user->username" />
 
-            <x-avatar
-                :image="$user->avatar"
-                :title="$user->username"
-                :subtitle="$user->name"
-                class="w-10 rounded-lg" />
+            {{-- Subtitle --}}
+            <x-avatar :image="$user->avatar" :title="$user->username" :subtitle="$user->name" class="!w-10 " />
 
-            {{--  SLOTS --}}
-            <x-avatar :image="$user->avatar" class="w-24">
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code class="flex gap-5">
+        @verbatim('docs')
+            @php
+                $user = App\Models\User::first();
+            @endphp
+
+            <x-avatar :image="$user->avatar" class="!w-24">
 
                 <x-slot:title class="text-3xl pl-2">
                     {{ $user->username }}
                 </x-slot:title>
 
-                <x-slot:subtitle class="text-inherit flex flex-col gap-1 mt-2 pl-2">
+                <x-slot:subtitle class="text-neutral flex flex-col gap-1 mt-2 pl-2">
                     <x-icon name="o-paper-airplane" label="12 posts" />
                     <x-icon name="o-chat-bubble-left" label="45 comments" />
                 </x-slot:subtitle>
