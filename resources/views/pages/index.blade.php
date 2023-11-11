@@ -40,11 +40,14 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public function search(?string $term = '')
     {
+        $selectedOptions = User::whereIn('id', $this->selected_users)->orderBy('name')->get();
+
         $this->users = User::query()
             ->where('name', 'like', "%{$term}%")
             ->orderBy('name')
             ->take(4)
-            ->get();
+            ->get()
+            ->merge($selectedOptions);
     }
 }
 

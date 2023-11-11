@@ -22,7 +22,7 @@
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.4",
         "owenvoke/blade-fontawesome": "^2.4",
-        "robsontenorio/mary": "dev-choices-rework",
+        "robsontenorio/mary": "^1.3",
         "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
