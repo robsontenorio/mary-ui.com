@@ -88,8 +88,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 </div>
                 <div>
                     <p class="text-lg leading-10">
-                        The <span class="underline decoration-green-400 font-bold">elegant</span> and <span class="underline decoration-sky-400 font-bold">minimalist</span>
-                        demo built with MaryUI.
+                        The <span class="underline decoration-green-400 font-bold">elegant</span> and <span class="underline decoration-sky-400 font-bold">minimalist</span> demo.
+                        <br>
                         <span class="underline decoration-yellow-400 font-bold">Get surprised</span> how smooth was to built it.
                     </p>
                     <div class="flex gap-3">
