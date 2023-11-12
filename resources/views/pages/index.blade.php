@@ -69,7 +69,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
 
             <div class="text-xl leading-10">
-                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel blade UI components</span>
+                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel Blade UI Components</span>
                 <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
                 and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
             </div>
@@ -80,7 +80,36 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
     </div>
 
-    <div class="px-5 lg:px-20 pb-20">
+    <div class="px-5 lg:px-20 pb-40 pt-10">
+        <div class="grid lg:grid-cols-2 mt-10 gap-10 items-center">
+            <div class="lg:mx-24">
+                <div class="flex justify-center">
+                    <img src="/paper.png" width="300" />
+                </div>
+                <div>
+                    <p class="text-lg leading-10">
+                        The <span class="underline decoration-green-400 font-bold">elegant</span> and <span class="underline decoration-sky-400 font-bold">minimalist</span>
+                        demo built with MaryUI.
+                        <span class="underline decoration-yellow-400 font-bold">Get surprised</span> how smooth was to built it.
+                    </p>
+                    <div class="flex gap-3">
+                        <x-button label="See the demo" icon-right="o-arrow-right" link="https://paper.mary-ui.com" class="!no-underline btn-warning" external />
+                        <x-button label="Source code" icon="o-code-bracket" link="https://github.com/robsontenorio/paper.mary-ui.com" class="!no-underline" external />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="mockup-browser border bg-base-300">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/paper-demo.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Less code, more action.
         </div>
@@ -102,7 +131,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200/50  px-5 lg:px-20 py-20">
+    <div class="px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10 text-right">
             It. Just. Works.
         </div>
@@ -121,7 +150,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20">
+    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10 text-right">
             Forms.
         </div>
@@ -141,7 +170,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200/50  px-5 lg:px-20 py-20">
+    <div class="px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Tables.
         </div>
@@ -174,7 +203,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class=" text-center">
+    <div class="bg-base-200/50 py-20 text-center">
 
         <div class="font-extrabold text-4xl py-10">
             And more ...

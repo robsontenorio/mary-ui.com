@@ -15,10 +15,11 @@ use Livewire\Volt\Volt;
 
 Volt::route('/', 'index');
 Volt::route('/docs/installation', 'docs.installation');
-Volt::route('/docs/contributing', 'docs.contributing');
-Volt::route('/docs/upgrading', 'docs.components.upgrading');
-Volt::route('/docs/customizing', 'docs.components.customizing');
 Volt::route('/docs/layout', 'docs.layout');
+Volt::route('/docs/demos', 'docs.demos');
+Volt::route('/docs/customizing', 'docs.components.customizing');
+Volt::route('/docs/upgrading', 'docs.components.upgrading');
+Volt::route('/docs/contributing', 'docs.contributing');
 
 // FORMS
 Volt::route('/docs/components/form', 'docs.components.form');
