@@ -56,6 +56,7 @@ class extends Component {
 
                 {{-- Separator with title and icon --}}
                 <x-menu-separator title="Magic" icon="o-sparkles" />
+                <x-menu-item title="Wifi" icon="o-wifi" />
 
             </x-menu>
 
