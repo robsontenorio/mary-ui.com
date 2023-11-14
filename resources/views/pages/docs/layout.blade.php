@@ -65,7 +65,7 @@ new #[Title('Layout')] class extends Component {
             </x-nav>
 
             {{-- The main content with `full-width` --}}
-            <x-main full-width>
+            <x-main with-nav full-width>
 
                 {{-- This is a sidebar that works also as a drawer on small screens --}}
                 {{-- Notice the `main-drawer` reference here --}}
@@ -113,7 +113,21 @@ new #[Title('Layout')] class extends Component {
             </head>
 
             <body class="min-h-screen font-sans antialiased">
-            <x-main full-width>
+
+            {{-- Displays only on mobile --}}
+            <x-nav sticky class="lg:hidden bg-sky-800 text-white">
+                <x-slot:brand>
+                    {{-- Drawer toggle for "main-drawer" --}}
+                    <label for="main-drawer" class="lg:hidden mr-3">
+                        <x-icon name="o-bars-3" class="cursor-pointer" />
+                    </label>
+
+                    {{-- Your logo --}}
+                    My App
+                </x-slot:brand>
+            </x-nav>
+
+            <x-main>
                 <x-slot:sidebar drawer="main-drawer" collapsible class="pt-3 bg-sky-800 text-white">
 
                     {{-- Hidden when collapsed --}}
