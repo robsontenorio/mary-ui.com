@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+main .drawer-side {
+    @apply lg:top-20
+}
+
 p {
     @apply my-5 leading-8
 }

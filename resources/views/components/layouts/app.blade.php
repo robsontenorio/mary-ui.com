@@ -94,7 +94,7 @@
 </x-nav>
 
 <x-main with-nav>
-    <x-slot:sidebar drawer="main-drawer">
+    <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
         <x-menu title="Get started" icon="o-sparkles" separator activate-by-route class="mt-5">
             <x-menu-item title="Installation" link="/docs/installation" />
             <x-menu-item title="Layout" link="/docs/layout" />
