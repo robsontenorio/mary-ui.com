@@ -23,7 +23,6 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            {{-- Auto activate menu item with `activate-by-route`--}}
             <x-menu class="border border-dashed">
                 <x-menu-item title="Home" icon="o-envelope" />
                 <x-menu-item title="Messages" icon="o-paper-airplane" badge="78+" />
