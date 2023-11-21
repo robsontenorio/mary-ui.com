@@ -136,6 +136,7 @@
             <x-menu-item title="Card" link="/docs/components/card" />
             <x-menu-item title="Header" link="/docs/components/header" />
             <x-menu-item title="Icon" link="/docs/components/icon" />
+            <x-menu-item title="Progress" link="/docs/components/progress" />
             <x-menu-item title="Statistic" link="/docs/components/statistic" />
             <x-menu-item title="Timeline" link="/docs/components/timeline" />
             <x-menu-item title="Tabs" link="/docs/components/tabs" />

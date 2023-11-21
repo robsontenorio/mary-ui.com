@@ -42,6 +42,20 @@ class extends Component {
             redirectTo: '/docs/components/form'
         );
     }
+
+    public function save4()
+    {
+        // Your stuff here ...
+
+        // Toast
+        $this->warning(
+            'Wishlist <u>updated</u>',
+            'You will <strong>love it :)</strong>',
+            position: 'bottom-end',
+            icon: 'o-heart',
+            css: 'bg-pink-500 text-base-100'
+        );
+    }
 }
 ?>
 
@@ -90,6 +104,8 @@ class extends Component {
                         title: 'It is done!',
                         description: null,                  // optional (text)
                         position: 'toast-top toast-end',    // optional (daisyUI classes)
+                        icon: 'o-information-circle',       // Optional (any icon)
+                        css: 'alert-info',                  // Optional (daisyUI classes)
                         timeout: 3000,                      // optional (ms)
                         redirectTo: null                    // optional (uri)
                     );
@@ -115,6 +131,10 @@ class extends Component {
     </x-code>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        The shortcuts are branded with default colors and icons.
+    </p>
 
     <x-code class="grid lg:flex gap-5">
         @verbatim('docs')
@@ -158,6 +178,38 @@ class extends Component {
                     'It is working with redirect',
                     'You were redirected to another url ...',
                     redirectTo: '/docs/components/form'
+                );
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Custom style" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can use any daisyUI/Tailwind classes. It also supports HTML.
+    </p>
+
+    <x-code class="grid lg:flex gap-5">
+        @verbatim('docs')
+            <x-button label="Like" wire:click="save4" icon="o-heart" spinner />
+        @endverbatim
+    </x-code>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            public function save4()
+            {
+                // Your stuff here ...
+
+                // Toast
+                $this->warning(
+                    'Wishlist <u>updated</u>',
+                    'You will <strong>love it :)</strong>',
+                    position: 'bottom-end',
+                    icon: 'o-heart',
+                    css: 'bg-pink-500 text-base-100'
                 );
             }
         @endverbatim

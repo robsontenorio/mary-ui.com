@@ -37,6 +37,10 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Chart" />
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        If you need a simple progress bar see the <a href="/docs/components/progress" wire:navigate>Progress</a> component.
+    </x-alert>
+
     <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
