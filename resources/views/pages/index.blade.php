@@ -109,6 +109,35 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
     </div>
 
+    <div class="px-5 lg:px-20 pb-40 pt-10">
+        <div class="grid lg:grid-cols-2 mt-10 gap-10 items-center">
+            <div>
+                <div class="mockup-browser border bg-base-300">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/orange-demo.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="lg:mx-16">
+                <div class="flex justify-center">
+                    <img src="/orange-genious.png" width="300" />
+                </div>
+                <div>
+                    <p class="text-lg leading-10">
+                        The <span class="underline decoration-green-400 font-bold">refreshing</span> storefront demo.
+                        <br>
+                        <span class="underline decoration-yellow-400 font-bold">Get amazed</span> how much you can do with <span
+                            class="underline decoration-yellow-400 font-bold">minimal effort</span>.
+                    </p>
+                    <div class="flex gap-3">
+                        <x-button label="See the demo" icon-right="o-arrow-right" link="https://orange.mary-ui.com" class="!no-underline btn-warning" external />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="bg-base-200/50 px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Less code, more action.

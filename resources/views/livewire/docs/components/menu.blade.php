@@ -30,8 +30,11 @@ class extends Component {
 
                 <x-menu-item title="Internal link" icon="o-arrow-down" link="/docs/components/alert" />
 
-                {{-- Notice external --}}
+                {{-- Notice `external` --}}
                 <x-menu-item title="External link" icon="o-arrow-uturn-right" link="https://google.com" external />
+
+                {{-- Notice `no-wire-navigate` --}}
+                <x-menu-item title="Internal without wire:navigate" icon="o-power" link="/docs/components/menu" no-wire-navigate />
             </x-menu>
         @endverbatim
     </x-code>

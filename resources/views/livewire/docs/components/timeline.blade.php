@@ -13,6 +13,8 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Timeline" />
 
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+
     <x-code>
         @verbatim('docs')
             {{-- Cut top edge with `first` --}}
@@ -27,6 +29,20 @@ class extends Component {
 
             {{-- Cut bottom edge with `last` --}}
             <x-timeline-item title="Shipment" pending last description="It is shiped :)" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Icons" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
+            <x-timeline-item title="Order placed" first icon="o-map-pin" />
+
+            <x-timeline-item title="Payment confirmed" icon="o-credit-card" />
+
+            <x-timeline-item title="Shipped" icon="o-paper-airplane" />
+
+            <x-timeline-item title="Delivered" pending last icon="o-gift" />
         @endverbatim
     </x-code>
 </div>
