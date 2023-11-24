@@ -48,7 +48,7 @@ class extends Component {
                 </div>
             </a>
             <div class="mt-5">
-                <x-header title="Orange" subtitle="The refreshing frontstore demo" size="text-xl" />
+                <x-header title="Orange" subtitle="The refreshing storefront demo" size="text-xl" />
             </div>
         </div>
     </div>
