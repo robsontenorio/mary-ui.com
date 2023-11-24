@@ -39,7 +39,7 @@ class extends Component {
 
         {{-- ORANGE --}}
         <div>
-            <a href="https://paper.mary-ui.com" target="_blank">
+            <a href="https://orange.mary-ui.com" target="_blank">
                 <div class="mockup-browser border bg-base-300">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
