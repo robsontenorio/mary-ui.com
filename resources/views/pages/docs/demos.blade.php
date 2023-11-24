@@ -14,21 +14,41 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Demos" />
 
-    <div class="grid grid-cols-2 gap-10">
+    <p class="mb-10">
+        Deep dive into the source code of these demos and
+        <span class="bg-warning p-1 font-bold dark:text-white">get amazed</span>
+        how much you can do with <span class="underline decoration-warning font-bold">minimal effort</span> learning by example.
+        Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of MaryUI and Livewire.
+    </p>
+
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">
         {{-- PAPER --}}
         <div>
-            <div class="mockup-browser border bg-base-300">
-                <div class="mockup-browser-toolbar"></div>
-                <div>
-                    <img src="/paper-demo.png" />
+            <a href="https://paper.mary-ui.com" target="_blank">
+                <div class="mockup-browser border bg-base-300">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/paper-demo.png" />
+                    </div>
                 </div>
-            </div>
+            </a>
             <div class="mt-5">
-                <x-header title="Paper" subtitle="The elegant and minimalist demo" size="text-xl">
-                    <x-slot:actions>
-                        <x-button icon="o-link" link="https://paper.mary-ui.com" class="btn-sm" external />
-                    </x-slot:actions>
-                </x-header>
+                <x-header title="Paper" subtitle="The elegant and minimalist demo" size="text-xl" />
+            </div>
+        </div>
+
+        {{-- ORANGE --}}
+        <div>
+            <a href="https://paper.mary-ui.com" target="_blank">
+                <div class="mockup-browser border bg-base-300">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/orange-demo.png" />
+                    </div>
+                </div>
+            </a>
+            <div class="mt-5">
+                <x-header title="Orange" subtitle="The refreshing frontstore demo" size="text-xl" />
             </div>
         </div>
     </div>
