@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb807791c763db1e07a7087b47fa8c0a",
+    "content-hash": "608515474f00db471382e0fa91e070ad",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -2342,16 +2342,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "d213c658e482a10c3698148068b0c4d96512bbbb"
+                "reference": "22b15922d02db57e78bd1f1b3bab02843053c3d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/d213c658e482a10c3698148068b0c4d96512bbbb",
-                "reference": "d213c658e482a10c3698148068b0c4d96512bbbb",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/22b15922d02db57e78bd1f1b3bab02843053c3d4",
+                "reference": "22b15922d02db57e78bd1f1b3bab02843053c3d4",
                 "shasum": ""
             },
             "require": {
@@ -2362,7 +2362,7 @@
             "require-dev": {
                 "laravel/folio": "^1.1",
                 "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^8.6.2",
+                "orchestra/testbench": "^8.15.0",
                 "pestphp/pest": "^2.9.5",
                 "phpstan/phpstan": "^1.10"
             },
@@ -2410,7 +2410,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-10-19T14:29:53+00:00"
+            "time": "2023-11-20T14:51:18+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3766,17 +3766,11 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "836cecf0d939774789bcc4e75374d84c7c8d5806"
-            },
+            "version": "dev-main-tags",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/836cecf0d939774789bcc4e75374d84c7c8d5806",
-                "reference": "836cecf0d939774789bcc4e75374d84c7c8d5806",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/app/packages/mary",
+                "reference": "f4c9ab8f2d9a5c751c340ce2709a4aa7ef7e61d3"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -3804,7 +3798,11 @@
                     "Mary\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Mary\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -3818,24 +3816,17 @@
             "description": "Laravel blade components for Livewire 3",
             "homepage": "https://mary-ui.com",
             "keywords": [
+                "Blade",
+                "Components",
+                "Laravel",
+                "Livewire",
                 "Mary",
-                "blade",
-                "components",
-                "laravel",
-                "livewire",
-                "ui"
+                "UI"
             ],
-            "support": {
-                "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.6.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/robsontenorio",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-11-24T01:01:39+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "symfony/console",
@@ -8866,7 +8857,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

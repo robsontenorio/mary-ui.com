@@ -31,8 +31,8 @@ class extends Component {
 
             <x-header title="With Anchor" subtitle="Click on title to get anchor link" with-anchor />
 
-            <x-header title="Users">
-                <x-slot:middle>
+            <x-header title="Users" subtitle="View this on mobile">
+                <x-slot:middle class="!justify-end">
                     <x-input icon="o-magnifying-glass" placeholder="Search..." />
                 </x-slot:middle>
                 <x-slot:actions>

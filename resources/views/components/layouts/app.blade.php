@@ -111,6 +111,7 @@
             <x-menu-item title="Radio" link="/docs/components/radio" />
             <x-menu-item title="Select" link="/docs/components/select" />
             <x-menu-item title="Choices" link="/docs/components/choices" />
+            <x-menu-item title="Tags" link="/docs/components/tags" />
             <x-menu-item title="Date Time" link="/docs/components/datetime" />
             <x-menu-item title="Textarea" link="/docs/components/textarea" />
             <x-menu-item title="File Upload" link="/docs/components/file" />
