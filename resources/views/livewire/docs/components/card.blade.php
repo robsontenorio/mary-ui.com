@@ -8,11 +8,22 @@ new
 #[Title('Card')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI card component with title, subtitle and actions slot.'])]
 class extends Component {
+    public function save(): void
+    {
+        sleep(1);
+    }
+
+    public function save2(): void
+    {
+        sleep(1);
+    }
 }
 ?>
 <div class="docs">
 
     <x-anchor title="Card" />
+
+    <x-anchor title="Basics" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
         @verbatim('docs')
@@ -34,6 +45,27 @@ class extends Component {
                     <x-button label="Ok" class="btn-primary" />
                 </x-slot:actions>
             </x-card>
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        This features only works when you have in place <code>title</code> and <code>separator</code> attributes.
+    </p>
+
+    <x-code class="grid lg:grid-cols-2 gap-8 bg-base-200 ">
+        @verbatim('docs')
+            {{-- Notice `progress-indicator` --}}
+            <x-card title="Your stats" subtitle="Always triggers" separator progress-indicator>
+                <x-button label="Save" wire:click="save" />
+            </x-card>
+
+            {{-- Notice `progress-indicator` target --}}
+            <x-card title="Your stats" subtitle="Only triggers with `save2`" separator progress-indicator="save2">
+                <x-button label="Save2" wire:click="save2" />
+            </x-card>
+
         @endverbatim
     </x-code>
 

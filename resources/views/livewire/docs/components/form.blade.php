@@ -36,13 +36,6 @@ class extends Component {
             'age' => 'required|integer'
         ]);
     }
-
-    public function with(): array
-    {
-        return [
-            'description' => 'xxxxxxxx'
-        ];
-    }
 }
 
 ?>
