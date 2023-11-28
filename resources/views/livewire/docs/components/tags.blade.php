@@ -17,10 +17,8 @@ class extends Component {
     <x-anchor title="Tags" />
 
     <p>
-        This component is intended to be used to build a simple tag input. <strong>It works offline only</strong>.
-
         <x-alert icon="o-light-bulb" class="markdown mb-10">
-            For complex multiple inputs see <a href="/docs/components/choices" wire:navigate>Choices</a> component, with online async search support.
+            For complex multiple inputs see <a href="/docs/components/choices" wire:navigate>Choices</a> component, which supports online async search.
         </x-alert>
     </p>
 
