@@ -13,6 +13,8 @@ class extends Component {
     public bool $item2 = false;
 
     public bool $item3 = false;
+
+    public bool $item4 = true;
 }
 
 ?>
@@ -25,13 +27,18 @@ class extends Component {
             <x-toggle label="Left" wire:model="item1" />
             <hr />
 
-            <x-toggle label="Right" wire:model="item2" right />
+            <x-toggle label="Right" wire:model="item2" right hint="Activate stuff" />
             <hr />
 
             <x-toggle label="Right Tight" wire:model="item3" class="toggle-warning" right tight />
             <hr />
 
-            <x-button label="Switch with $wire" @click="$wire.item3 = !$wire.item3" class="btn-outline" />
+            {{-- Notice Tailwind alignment class for long lines --}}
+            <x-toggle wire:model="item4" class="self-start">
+                <x-slot:label>
+                    This is <br>a very <br> long line.
+                </x-slot:label>
+            </x-toggle>
         @endverbatim
     </x-code>
 </div>

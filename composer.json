@@ -20,9 +20,9 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.2",
-        "livewire/volt": "^1.4",
+        "livewire/volt": "^1.5",
         "owenvoke/blade-fontawesome": "^2.4",
-        "robsontenorio/mary": "^1.6",
+        "robsontenorio/mary": "^1.7",
         "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {

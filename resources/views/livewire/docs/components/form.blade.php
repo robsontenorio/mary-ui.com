@@ -9,23 +9,32 @@ new
 #[Title('Form')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI form component with builtin validation, spinner, money/currency and actions slot.'])]
 class extends Component {
-    #[Rule('required|min:20')]
     public string $name = '';
 
-    #[Rule('required|decimal:0,2')]
     public ?float $amount = null;
+
+    public ?string $email = null;
+
+    public ?int $age = null;
 
     public function save()
     {
         sleep(1);
-        $this->validate();
+
+        $this->validate([
+            'name' => 'required|min:20',
+            'amount' => 'required|decimal:0,2'
+        ]);
     }
 
-    public function with(): array
+    public function save2()
     {
-        return [
-            'description' => 'xxxxxxxx'
-        ];
+        sleep(1);
+
+        $this->validate([
+            'email' => 'required|email',
+            'age' => 'required|integer'
+        ]);
     }
 }
 
@@ -33,6 +42,8 @@ class extends Component {
 
 <div class="docs">
     <x-anchor title="Form" />
+
+    <x-anchor title="Basics" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Once you submit a form you get for free:
@@ -51,9 +62,39 @@ class extends Component {
             <x-form wire:submit="save">
                 <x-input label="Name" wire:model="name" />
                 <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
+
                 <x-slot:actions>
                     <x-button label="Cancel" />
                     <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+                </x-slot:actions>
+            </x-form>
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Error bag" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        As you can see above, all validation errors are automatically displayed for each input.
+        Additionally, you can display <strong>entire error bag</strong> or <strong>omit</strong> error handling for some inputs.
+    </p>
+
+    <p>
+        Currently, it <strong>does not work</strong> with multiple forms on same screen.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-form wire:submit="save2">
+                {{-- Full error bag --}}
+                {{-- All attributes are optional, remove it and give a try--}}
+                <x-errors title="Oops!" description="Please, fix them." icon="o-face-frown" />
+
+                <x-input label="Age" wire:model="age" />
+
+                {{-- Notice `omit-error`--}}
+                <x-input label="E-mail" wire:model="email" hint="It will omit error here" omit-error />
+
+                <x-slot:actions>
+                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save2" />
                 </x-slot:actions>
             </x-form>
         @endverbatim

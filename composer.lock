@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb807791c763db1e07a7087b47fa8c0a",
+    "content-hash": "52bb2b19264a04932529a1d17bda8bc7",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -2342,16 +2342,16 @@
         },
         {
             "name": "livewire/volt",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "d213c658e482a10c3698148068b0c4d96512bbbb"
+                "reference": "22b15922d02db57e78bd1f1b3bab02843053c3d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/d213c658e482a10c3698148068b0c4d96512bbbb",
-                "reference": "d213c658e482a10c3698148068b0c4d96512bbbb",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/22b15922d02db57e78bd1f1b3bab02843053c3d4",
+                "reference": "22b15922d02db57e78bd1f1b3bab02843053c3d4",
                 "shasum": ""
             },
             "require": {
@@ -2362,7 +2362,7 @@
             "require-dev": {
                 "laravel/folio": "^1.1",
                 "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^8.6.2",
+                "orchestra/testbench": "^8.15.0",
                 "pestphp/pest": "^2.9.5",
                 "phpstan/phpstan": "^1.10"
             },
@@ -2410,7 +2410,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-10-19T14:29:53+00:00"
+            "time": "2023-11-20T14:51:18+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3766,16 +3766,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "836cecf0d939774789bcc4e75374d84c7c8d5806"
+                "reference": "e5155ba60d0793877fe341997c1aa3f0365234c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/836cecf0d939774789bcc4e75374d84c7c8d5806",
-                "reference": "836cecf0d939774789bcc4e75374d84c7c8d5806",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/e5155ba60d0793877fe341997c1aa3f0365234c0",
+                "reference": "e5155ba60d0793877fe341997c1aa3f0365234c0",
                 "shasum": ""
             },
             "require": {
@@ -3827,7 +3827,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.6.0"
+                "source": "https://github.com/robsontenorio/mary/tree/1.7.0"
             },
             "funding": [
                 {
@@ -3835,7 +3835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-24T01:01:39+00:00"
+            "time": "2023-12-05T23:30:25+00:00"
         },
         {
             "name": "symfony/console",

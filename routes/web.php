@@ -29,7 +29,7 @@ Volt::route('/docs/components/select', 'docs.components.select');
 Volt::route('/docs/components/toggle', 'docs.components.toggle');
 Volt::route('/docs/components/checkbox', 'docs.components.checkbox');
 Volt::route('/docs/components/choices', 'docs.components.choices');
-Volt::route('/docs/components/choices2', 'docs.components.choices2');
+Volt::route('/docs/components/tags', 'docs.components.tags');
 Volt::route('/docs/components/datetime', 'docs.components.datetime');
 Volt::route('/docs/components/textarea', 'docs.components.textarea');
 Volt::route('/docs/components/file', 'docs.components.file');

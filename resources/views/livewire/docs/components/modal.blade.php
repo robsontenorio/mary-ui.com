@@ -21,7 +21,7 @@ class extends Component {
     <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Note the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not Mary/Livewire/Alpine.
+        Notice the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not Mary/Livewire/Alpine.
     </p>
 
     <br>
@@ -47,11 +47,7 @@ class extends Component {
     <x-anchor title="With Livewire" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        <strong>You don't need</strong> <code>id="xxx"</code>.
-    </p>
-
-    <p>
-        You can toggle visibility with Livewire or Alpine. In both cases you need <code>wire:model</code>. In the following example, we consider you have declared:
+        Instead of <code>id="xxx"</code> use <code>wire:model</code>.
     </p>
 
     <x-code no-render language="php">
@@ -95,7 +91,6 @@ class extends Component {
 
             {{-- Alpine: no network request --}}
             <x-button label="Alpine" class="btn-warning" @click="$wire.myPersistentModal = true" />
-
 
             {{-- Note `persistent` --}}
             <x-modal wire:model="myPersistentModal" title="Persistent" separator persistent>
