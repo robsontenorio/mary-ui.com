@@ -77,6 +77,10 @@ class extends Component {
         Additionally, you can display <strong>entire error bag</strong> or <strong>omit</strong> error handling for some inputs.
     </p>
 
+    <p>
+        Currently, it <strong>does not work</strong> with multiple forms on same screen.
+    </p>
+
     <x-code>
         @verbatim('docs')
             <x-form wire:submit="save2">
