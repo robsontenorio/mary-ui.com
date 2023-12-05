@@ -38,8 +38,8 @@ class extends Component {
             </x-drawer>
 
             {{-- HTML: Just reference correct drawer ID  --}}
-            <label for="my-drawer" class="btn btn-primary capitalize">Open left</label>
-            <label for="my-drawer2" class="btn btn-warning capitalize">Open right</label>
+            <label for="my-drawer" class="btn btn-primary">Open left</label>
+            <label for="my-drawer2" class="btn btn-warning">Open right</label>
         @endverbatim
     </x-code>
 
