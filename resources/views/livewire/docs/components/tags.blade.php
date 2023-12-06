@@ -24,7 +24,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-tags label="Tags" wire:model="tags" icon="o-home" hint="Hint enter to create a new tag" />
+            <x-tags label="Tags" wire:model="tags" icon="o-home" hint="Hit enter to create a new tag" />
         @endverbatim
     </x-code>
     <x-code language="php" no-render>
