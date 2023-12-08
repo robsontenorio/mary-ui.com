@@ -68,7 +68,7 @@ class extends Component {
     public function search(string $value = '')
     {
         // Besides the search results, you must include on demand selected option
-        $selectedOption = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
+        $selectedOption = User::where('id', $this->user_searchable_id)->get();
 
         $this->usersSearchable = User::query()
             ->where('name', 'like', "%$value%")
@@ -76,6 +76,20 @@ class extends Component {
             ->orderBy('name')
             ->get()
             ->merge($selectedOption);     // <-- Adds selected option
+    }
+
+    // For multi searchable
+    public function searchMulti(string $value = '')
+    {
+        // Besides the search results, you must include on demand selected options
+        $selectedOptions = User::whereIn('id', $this->users_multi_searchable_ids)->orderBy('name')->get();
+
+        $this->usersMultiSearchable = User::query()
+            ->where('name', 'like', "%$value%")
+            ->take(5)
+            ->orderBy('name')
+            ->get()
+            ->merge($selectedOptions);     // <-- Adds selected options
     }
 
     // For single searchable (min chars)
@@ -95,20 +109,6 @@ class extends Component {
         }
 
         $this->usersSearchableMinChars = $this->usersSearchableMinChars->merge($selectedOption);     // <-- Adds selected option
-    }
-
-    // For multi searchable
-    public function searchMulti(string $value = '')
-    {
-        // Besides the search results, you must include on demand selected options
-        $selectedOptions = User::whereIn('id', $this->users_multi_searchable_ids)->orderBy('name')->get();
-
-        $this->usersMultiSearchable = User::query()
-            ->where('name', 'like', "%$value%")
-            ->take(5)
-            ->orderBy('name')
-            ->get()
-            ->merge($selectedOptions);     // <-- Adds selected options
     }
 }
 ?>
@@ -298,7 +298,7 @@ class extends Component {
                 public function search(string $value = '')
                 {
                     // Besides the search results, you must include on demand selected option
-                    $selectedOption = User::where('id', $this->user_searchable_id)->orderBy('name')->get();
+                    $selectedOption = User::where('id', $this->user_searchable_id)->get();
 
                     $this->usersSearchable = User::query()
                         ->where('name', 'like', "%$value%")
@@ -353,7 +353,9 @@ class extends Component {
         It injects the current <code>$object</code> from the loop's context and achieves the same behavior that you would expect from the Vue/React scoped slots.
     </p>
 
-    <br>
+    <p>
+        You can customize the list item and selected item slot.
+    </p>
 
     {{--@formatter:off--}}
     <x-code>
@@ -362,6 +364,7 @@ class extends Component {
                 @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
             </div>                                      <!-- [tl! .docs-hide] -->
             <x-choices label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
+                {{-- Item slot--}}
                 @scope('item', $user)
                     <x-list-item :item="$user" sub-value="bio">
                         <x-slot:avatar>
@@ -371,6 +374,11 @@ class extends Component {
                             <x-badge :value="$user->username" />
                         </x-slot:actions>
                     </x-list-item>
+                @endscope
+
+                {{-- Selection slot--}}
+                @scope('selection', $user)
+                    {{ $user->name }} ({{ $user->username }})
                 @endscope
             </x-choices>
         @endverbatim
