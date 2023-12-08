@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52bb2b19264a04932529a1d17bda8bc7",
+    "content-hash": "fbeb9c849c75d567f4b3d8b3a33dd777",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -2268,16 +2268,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.2.1",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "95083c0b61c1910ad28c4628e0dfa9c227eb1c41"
+                "reference": "ecded08cdc4b36bbb4b26bcc7f7a171ea2e4368c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/95083c0b61c1910ad28c4628e0dfa9c227eb1c41",
-                "reference": "95083c0b61c1910ad28c4628e0dfa9c227eb1c41",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/ecded08cdc4b36bbb4b26bcc7f7a171ea2e4368c",
+                "reference": "ecded08cdc4b36bbb4b26bcc7f7a171ea2e4368c",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2330,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.2.1"
+                "source": "https://github.com/livewire/livewire/tree/v3.2.6"
             },
             "funding": [
                 {
@@ -2338,7 +2338,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-20T17:05:06+00:00"
+            "time": "2023-12-04T21:20:19+00:00"
         },
         {
             "name": "livewire/volt",
@@ -3766,16 +3766,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "e5155ba60d0793877fe341997c1aa3f0365234c0"
+                "reference": "922248a5c0232d3b3cdce29a3d6669869d760ec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/e5155ba60d0793877fe341997c1aa3f0365234c0",
-                "reference": "e5155ba60d0793877fe341997c1aa3f0365234c0",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/922248a5c0232d3b3cdce29a3d6669869d760ec1",
+                "reference": "922248a5c0232d3b3cdce29a3d6669869d760ec1",
                 "shasum": ""
             },
             "require": {
@@ -3827,7 +3827,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.7.0"
+                "source": "https://github.com/robsontenorio/mary/tree/1.8.0"
             },
             "funding": [
                 {
@@ -3835,7 +3835,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-05T23:30:25+00:00"
+            "time": "2023-12-07T23:59:21+00:00"
         },
         {
             "name": "symfony/console",
