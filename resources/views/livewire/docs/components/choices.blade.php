@@ -30,11 +30,17 @@ class extends Component {
 
     public ?int $user_searchable_id = null;
 
+    public ?int $user_searchable_offline_id = null;
+
     public ?int $user_searchable_min_chars_id = null;
 
     public array $users_multi_searchable_ids = [];
 
+    public array $users_multi_searchable_offline_ids = [];
+
     public int $user_custom_slot_id = 1;
+
+    public int $user_custom_slot_offline_id = 1;
 
     public Collection $users;
 
@@ -47,7 +53,7 @@ class extends Component {
     public function mount()
     {
         // For NOT SEARCHABLE examples, static list
-        $this->users = User::with('city')->take(4)->get();
+        $this->users = User::with('city')->take(8)->get();
 
         // Single searchable
         $this->search();
@@ -117,8 +123,8 @@ class extends Component {
     <x-anchor title="Choices" />
 
     <p>
-        This component is intended to be used to build complex selection interfaces for single and multiple values. It also supports <strong>async search</strong> when dealing with
-        large lists.
+        This component is intended to be used to build complex selection interfaces for single and multiple values.
+        It also supports <strong>async search</strong> (frontend or server) when dealing with large lists.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -236,10 +242,43 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Searchable" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searchable (frontend)" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options while typing.
+        If you judge you don't have a huge list of items, you can make it searchable offline on <strong>"frontend side"</strong>.
+        But, <strong>if you have a huge list</strong> it is a better idea to make it searchable on <strong>"server side"</strong>, otherwise you can face some slow down on
+        frontend.
+        See on next section.
+    </p>
+
+    <br>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            @php                                               // [tl! .docs-hide]
+                    $users = $this->users;                    // [tl! .docs-hide]
+            @endphp                                           {{-- [tl! .docs-hide] --}}
+            {{-- Notice `searchable` --}}
+            <x-choices-offline
+                label="Single (offline)"
+                wire:model="user_searchable_offline_id"
+                :options="$users"
+                single
+                searchable />
+
+            <x-choices-offline
+                label="Multiple (offline)"
+                wire:model="users_multi_searchable_offline_ids"
+                :options="$users"
+                searchable />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Searchable (server)" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options from "server side" while
+        typing.
         You can change the method's name by using <code>search-function</code> parameter.
     </p>
 
@@ -354,7 +393,7 @@ class extends Component {
     </p>
 
     <p>
-        You can customize the list item and selected item slot.
+        You can customize the list item and selected item slot. <strong>Searchable (online) works with blade syntax</strong>.
     </p>
 
     {{--@formatter:off--}}
@@ -363,7 +402,7 @@ class extends Component {
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
             </div>                                      <!-- [tl! .docs-hide] -->
-            <x-choices label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
+            <x-choices label="Slots (online)" wire:model="user_custom_slot_id" :options="$users" single>
                 {{-- Item slot--}}
                 @scope('item', $user)
                     <x-list-item :item="$user" sub-value="bio">
@@ -380,6 +419,59 @@ class extends Component {
                 @scope('selection', $user)
                     {{ $user->name }} ({{ $user->username }})
                 @endscope
+            </x-choices>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <br>
+
+    <p>
+        On the other hand, <strong>searchable (frontend) works with Alpine syntax</strong>. Use the magic variable <code>option</code>, that represents the current object from
+        loop's
+        context.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
+            <x-choices-offline label="Slots (frontend)" wire:model="user_custom_slot_offline_id" :options="$users" single>
+                {{-- Item slot--}}
+                <x-slot:item>
+                    <div class="p-3 hover:bg-base-200 border border-t-0 border-b-base-200">
+                        <div x-text="option.name" class="font-semibold"></div>
+                        <div x-text="option.city.name" class="text-sm text-gray-400"></div>
+                    </div>
+                </x-slot:item>
+                {{-- Selection slot --}}
+                <x-slot:selection>
+                    <span x-text="`${option.name} ${option.id} (${option.city.name})`"></span>
+                </x-slot:selection>
+            </x-choices-offline>
+        @endverbatim
+    </x-code>
+
+    {{--@formatter:on--}}
+
+    <br>
+    <p>
+        You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            <div>                                       <!-- [tl! .docs-hide] -->
+                @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
+            </div>                                      <!-- [tl! .docs-hide] -->
+            <x-choices label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
+                <x-slot:prepend>
+                    <x-button icon="o-trash" class="rounded-r-none" />
+                </x-slot:prepend>
+                <x-slot:append>
+                    <x-button label="Create" icon="o-plus" class="rounded-l-none btn-primary" />
+                </x-slot:append>
             </x-choices>
         @endverbatim
     </x-code>
