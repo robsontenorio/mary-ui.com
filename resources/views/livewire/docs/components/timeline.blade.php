@@ -24,7 +24,7 @@ class extends Component {
 
             <x-timeline-item title="Analysis" subtitle="10/23/2023" description="Just checking" />
 
-            {{-- Note `pending` --}}
+            {{-- Notice `pending` --}}
             <x-timeline-item title="Prepare" pending description="Prepare to ship" />
 
             {{-- Cut bottom edge with `last` --}}

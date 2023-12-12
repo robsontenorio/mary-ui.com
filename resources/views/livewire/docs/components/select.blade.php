@@ -102,4 +102,29 @@ class extends Component {
             <x-select label="Disabled options" :options="$users" wire:model="selectedUser3" />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::take(5)->get();
+            @endphp
+
+            <x-select label="Slots"  :options="$users" single>
+                <x-slot:prepend>
+                    <x-button icon="o-trash" class="rounded-r-none" />
+                </x-slot:prepend>
+                <x-slot:append>
+                    <x-button label="Create" icon="o-plus" class="rounded-l-none btn-primary" />
+                </x-slot:append>
+            </x-select>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 </div>

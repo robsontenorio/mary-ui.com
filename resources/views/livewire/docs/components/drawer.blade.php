@@ -56,7 +56,7 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            {{-- Note `wire:model` --}}
+            {{-- Notice `wire:model` --}}
             <x-drawer wire:model="showDrawer" class="w-1/3">
 
                 {{-- Livewire: Server side  --}}

@@ -119,7 +119,7 @@ class extends Component {
             {{--  Notice `no-wire-navigate` --}}
             <x-button label="Go to demos" link="/docs/demos" no-wire-navigate class="btn-ghost" />
 
-            {{--  Note `external` for external links  --}}
+            {{--  Notice `external` for external links  --}}
             <x-button label="Google" link="https://google.com" external icon="o-link" tooltip="Go away!" />
         @endverbatim
     </x-code>

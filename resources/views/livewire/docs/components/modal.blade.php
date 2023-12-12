@@ -28,7 +28,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            {{-- Note `onclick` is HTML --}}
+            {{-- Notice `onclick` is HTML --}}
             <x-button label="Open modal" class="btn-primary" onclick="modal17.showModal()" />
 
             {{-- Here is modal`s ID --}}
@@ -36,7 +36,7 @@ class extends Component {
                 Click "cancel" or press ESC to exit.
 
                 <x-slot:actions>
-                    {{-- Note `onclick` is HTML --}}
+                    {{-- Notice `onclick` is HTML --}}
                     <x-button label="Cancel" onclick="modal17.close()" />
                     <x-button label="Confirm" class="btn-primary" />
                 </x-slot:actions>
@@ -64,7 +64,7 @@ class extends Component {
             {{-- Alpine: no network request --}}
             <x-button label="Alpine" class="btn-warning" @click="$wire.myModal = true" />
 
-            {{-- Note `wire:model`, no `id="xxx"` --}}
+            {{-- Notice `wire:model`, no `id="xxx"` --}}
             <x-modal wire:model="myModal" title="Hello" subtitle="Livewire example" separator>
                 Press `ESC`, click outside or click `CANCEL` button to close.
 
@@ -92,7 +92,7 @@ class extends Component {
             {{-- Alpine: no network request --}}
             <x-button label="Alpine" class="btn-warning" @click="$wire.myPersistentModal = true" />
 
-            {{-- Note `persistent` --}}
+            {{-- Notice `persistent` --}}
             <x-modal wire:model="myPersistentModal" title="Persistent" separator persistent>
                 I won't close unless you click on `CANCEL` button.
 

@@ -259,15 +259,16 @@ class extends Component {
                     $users = $this->users;                    // [tl! .docs-hide]
             @endphp                                           {{-- [tl! .docs-hide] --}}
             {{-- Notice `searchable` --}}
+            {{-- Notice this is a different component, but with same API --}}
             <x-choices-offline
-                label="Single (offline)"
+                label="Single (frontend)"
                 wire:model="user_searchable_offline_id"
                 :options="$users"
                 single
                 searchable />
 
             <x-choices-offline
-                label="Multiple (offline)"
+                label="Multiple (frontend)"
                 wire:model="users_multi_searchable_offline_ids"
                 :options="$users"
                 searchable />
@@ -277,7 +278,8 @@ class extends Component {
     <x-anchor title="Searchable (server)" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options from "server side" while
+        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options from <strong>"server
+            side"</strong> while
         typing.
         You can change the method's name by using <code>search-function</code> parameter.
     </p>
@@ -313,7 +315,7 @@ class extends Component {
 
     <p>
         You must also consider displaying pre-selected items on list, when it <strong>first renders</strong> and <strong>while searching</strong>.
-        There are many approaches to make it work, but here is an example for <strong>single search using Volt.</strong>
+        There are many approaches to make it work, but here is an example for <strong>single search</strong> using <strong>Volt.</strong>
     </p>
 
     {{--@formatter:off--}}

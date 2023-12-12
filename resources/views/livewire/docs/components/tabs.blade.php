@@ -36,7 +36,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            {{-- Note `wire:model` --}}
+            {{-- Notice `wire:model` --}}
             <x-tabs wire:model="selectedTab">
                 <x-tab name="users-tab" label="Users" icon="o-users">
                     <div>Users</div>
