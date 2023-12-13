@@ -19,12 +19,26 @@ p {
     @apply !no-underline
 }
 
+/* Hide elements from <x-code> component when necessary */
 .docs-hide {
     @apply hidden
 }
 
+/* Adjust for anchor links considering top nav height */
 .mary-header-anchor {
     @apply scroll-mt-24
+}
+
+.mary-table-pagination span[aria-current="page"] > span {
+    @apply bg-primary text-base-100
+}
+
+.mary-table-pagination span[aria-disabled="true"] span {
+    @apply bg-inherit
+}
+
+.mary-table-pagination button {
+    @apply bg-base-100
 }
 
 /*

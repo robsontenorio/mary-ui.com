@@ -4,13 +4,14 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Illuminate\Support\Arr;
+use Livewire\WithPagination;
 use Mary\Traits\Toast;
 
 new
 #[Title('Table')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI full featured table component with link, row selection, expandable row and customizable slots.'])]
+#[Layout('components.layouts.app', ['description' => 'Livewire UI table component with pagination, row selection, expandable row and customizable slots.'])]
 class extends Component {
-    use Toast;
+    use Toast, WithPagination;
 
     public array $selected = [1, 3];
 
@@ -102,6 +103,87 @@ class extends Component {
             <x-table :headers="$headers" :rows="$users" no-headers />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        MaryUI uses directly all features offered by Laravel and Livewire itself, including default pagination links and deeper customizations.
+        For further details, please, refer to their docs.
+    </p>
+
+    <p>
+        As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="javascript">
+        content: [
+            // Add this [tl! highlight .animate-bounce]
+            './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        ],
+    </x-code>
+    {{--@formatter:on--}}
+
+    <p>
+        Then, use <code>WithPagination</code> trait from Livewire itself, as described on
+        <a href="https://livewire.laravel.com/docs/pagination#basic-usage" target="_blank">Livewire docs</a>.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        use Livewire\WithPagination;
+
+        class ShowUsers extends Component
+        {
+            use WithPagination;
+        }
+    </x-code>
+    {{--@formatter:on--}}
+
+    <br>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::paginate(3);
+
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
+
+            {{-- Notice `with-pagination` --}}
+            <x-table :headers="$headers" :rows="$users" with-pagination />
+
+        @endverbatim
+    </x-code>
+
+    <br>
+
+    <p>
+        Here are some useful styles to add on <code>app.css</code>. Notice this is about default classes provided by Laravel paginator links <strong>not MaryUI itself</strong>.
+        Fell free to change it.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="css">
+        /* Active page highlight */
+        .mary-table-pagination span[aria-current="page"] > span {
+            @apply bg-primary text-base-100
+        }
+
+        /* For dark mode*/
+        .mary-table-pagination span[aria-disabled="true"] span {
+            @apply bg-inherit
+        }
+
+        /* For dark mode*/
+        .mary-table-pagination button {
+            @apply bg-base-100
+        }
+    </x-code>
+    {{--@formatter:on--}}
 
     <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
 

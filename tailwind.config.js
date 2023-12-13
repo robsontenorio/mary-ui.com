@@ -6,6 +6,7 @@ export default {
         "./app/Livewire/**/**/*.php",
         "./app/View/Components/**/**/*.php",
         "./vendor/robsontenorio/mary/src/View/Components/**/*.php",
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     ],
     safelist: [
         {
