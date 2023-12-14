@@ -147,7 +147,7 @@ class extends Component {
 
     <br>
     <p>
-        By default, <strong>all columns</strong> will be sortable. Check the following example to <strong>disable sorting</strong> on specific columns.
+        By default, <strong>all columns</strong> will be sortable. Check the following example to <strong>disable sorting</strong> on specific columns or change column name.
     </p>
 
     <x-code>
@@ -263,6 +263,8 @@ class extends Component {
         @verbatim('docs')
             @php
                 $users = App\Models\User::with('city')->take(2)->get();
+                $abc = 11;
+                $xx = 22;
 
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100'], # <--- custom CSS
@@ -271,9 +273,12 @@ class extends Component {
                 ];
             @endphp
 
+            xxxx {{ $abc }}
+
             <x-table :headers="$headers" :rows="$users">
                 {{-- Overrides `name` header --}}
-                @scope('header_name', $header)
+                @scope('header_name', $header, $abc, $xx)
+                    yyy {{ $abc }} {{ $xx }}
                     {{ $header['label'] }} <x-icon name="s-question-mark-circle" />
                 @endscope
 
