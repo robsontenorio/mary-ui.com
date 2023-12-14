@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Support\Collection;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
@@ -17,6 +19,8 @@ class extends Component {
 
     public array $expanded = [2];
 
+    public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+
     public function delete()
     {
         sleep(1);
@@ -25,6 +29,21 @@ class extends Component {
     function save()
     {
         $this->success("Checked IDs: " . Arr::join(Arr::sort($this->selected), ', '));
+    }
+
+    public function users(): Collection
+    {
+        return User::query()
+            ->orderBy(...array_values($this->sortBy))
+            ->take(3)
+            ->get();
+    }
+
+    public function with(): array
+    {
+        return [
+            'users' => $this->users()
+        ];
     }
 }
 ?>
@@ -48,6 +67,24 @@ class extends Component {
 
             {{-- You can use any `$wire.METHOD` on `@row-click` --}}
             <x-table :headers="$headers" :rows="$users" striped @row-click="alert($event.detail.name)" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="No headers" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::with('city')->take(2)->get();
+
+                $headers = [
+                    ['key' => 'name', 'label' => 'Name'],
+                    ['key' => 'city.name', 'label' => 'City'],
+                ];
+            @endphp
+
+            {{-- Notice `no-headers` --}}
+            <x-table :headers="$headers" :rows="$users" no-headers />
         @endverbatim
     </x-code>
 
@@ -75,7 +112,7 @@ class extends Component {
 
                 $headers = [
                     ['key' => 'id', 'label' => '#'],
-                    ['key' => 'username', 'label' => 'username'],
+                    ['key' => 'username', 'label' => 'Username'],
                     ['key' => 'city.name', 'label' => 'City'],
                 ];
             @endphp
@@ -86,21 +123,48 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No headers" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Sort" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Declare a property <code>$sortBy</code> within following pattern bellow.
+        It will be updated when you click on table headers.
+        So, you can use it to order your query.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+
+        public function users(): Collection
+        {
+            return User::query()
+                ->orderBy(...array_values($this->sortBy))
+                ->take(3)
+                ->get();
+        }
+    </x-code>
+    {{--@formatter:on--}}
+
+    <br>
+    <p>
+        By default, <strong>all columns</strong> will be sortable. Check the following example to <strong>disable sorting</strong> on specific columns.
+    </p>
 
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
+                $users = $this->users();  // [tl! .docs-hide]
+                $sortBy = $this->sortBy;                // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'name', 'label' => 'Name'],
-                    ['key' => 'city.name', 'label' => 'City'],
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-16'],
+                    ['key' => 'name', 'label' => 'Name', 'class' => 'w-72'],
+                    ['key' => 'email', 'label' => 'E-mail', 'sortable' => false], // <--- Won't be sortable
                 ];
             @endphp
 
-            {{-- Notice `no-headers` --}}
-            <x-table :headers="$headers" :rows="$users" no-headers />
+            {{-- Notice `sort-by` --}}
+            <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy" />
+
         @endverbatim
     </x-code>
 
@@ -222,10 +286,10 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Row slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Cell slot" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can override any row by using <code>&#x40;scope('row_XXX', $row)</code> special blade directive, in which <code>XXX</code> is any <code>key</code> from
+        You can override any row by using <code>&#x40;scope('cell_XXX', $row)</code> special blade directive, in which <code>XXX</code> is any <code>key</code> from
         <code>$headers</code> config object.
     </p>
     <p>
