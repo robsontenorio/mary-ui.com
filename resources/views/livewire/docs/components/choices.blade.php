@@ -124,7 +124,7 @@ class extends Component {
 
     <p>
         This component is intended to be used to build complex selection interfaces for single and multiple values.
-        It also supports <strong>async search</strong> (frontend or server) when dealing with large lists.
+        It also supports <strong>search</strong> on frontend or server, when dealing with large lists.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -357,8 +357,7 @@ class extends Component {
 
     <p>
         Sometimes you don't want to hit a datasource on <strong>every keystroke</strong>.
-        So, you can make use of <code>debounce</code> as described at <a href="https://livewire.laravel.com/docs/forms#debouncing-input" target="_blank">Livewire docs</a>
-        for input fields.
+        So, you can make use of <code>debounce</code> to control over how often a network request is sent.
     </p>
 
     <p>

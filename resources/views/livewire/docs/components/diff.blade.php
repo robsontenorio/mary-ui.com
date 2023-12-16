@@ -38,16 +38,9 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $old = '{
-                    "age": 24
-                    "name": "Mary"
-                }';
+                $old = '{"age": 24, "name": "Mary"}';
 
-                $new = '{
-                    "age": 27
-                    "name": "Mary"
-                }';
-
+                $new = '{"age": 27, "name": "Marian"}';
             @endphp
 
             {{-- The `file-name` determines highlight language --}}

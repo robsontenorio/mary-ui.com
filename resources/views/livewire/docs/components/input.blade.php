@@ -15,6 +15,8 @@ class extends Component {
     public string $money1 = '123456.78';
 
     public string $money2 = '123456.78';
+
+    public string $name = '';
 }
 
 ?>
@@ -31,6 +33,8 @@ class extends Component {
             <x-input label="Right icon" wire:model="address" icon-right="o-map-pin" />
 
             <x-input label="Password" wire:model="password" icon="o-eye" type="password" />
+
+            <x-input label="Name" wire:model="name" placeholder="Clearable field" clearable />
         @endverbatim
     </x-code>
 
@@ -49,8 +53,6 @@ class extends Component {
     <x-code class="grid gap-5">
         @verbatim('docs')
             <x-input label="Inline label" inline />
-
-            <x-input label="Inline label + placeholder" placeholder="Hi!" icon="o-envelope" hint="Awsome" inline />
         @endverbatim
     </x-code>
 

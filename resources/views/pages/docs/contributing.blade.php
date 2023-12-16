@@ -64,7 +64,7 @@ new #[Title('Contributing')] class extends Component {
     </p>
 
     <p>
-        Clone the repository and open it on VSCODE with the <code>Dev Container</code> extension.
+        Clone the repository.
     </p>
 
     <x-code no-render language="bash">
@@ -92,10 +92,6 @@ new #[Title('Contributing')] class extends Component {
         <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
         <strong>Done! See <a href="http://localhost:8018">http://localhost:8018</a></strong>
     </p>
-
-    <x-alert icon="o-light-bulb" class="mb-8">
-        If you are not using the VSCODE Dev Containers extension, use any local address you have set up.
-    </x-alert>
 
     <x-alert icon="o-light-bulb">
         It uses SQLITE for dynamic examples.

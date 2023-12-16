@@ -29,7 +29,7 @@ class extends Component {
                 Content left auto width and close button.
             </x-drawer>
 
-            <x-drawer id="my-drawer2" title="Settings" subtitle="Main profile" separator right class="w-1/3">
+            <x-drawer id="my-drawer2" title="Settings" subtitle="Main profile" separator right class="lg:w-1/3">
                 Content right with fixed width.
 
                 <x-slot:actions>
@@ -57,7 +57,7 @@ class extends Component {
     <x-code class="flex gap-5">
         @verbatim('docs')
             {{-- Notice `wire:model` --}}
-            <x-drawer wire:model="showDrawer" class="w-1/3">
+            <x-drawer wire:model="showDrawer" class="lg:w-1/3">
 
                 {{-- Livewire: Server side  --}}
                 <x-button label="Livewiew (server)" wire:click="$toggle('showDrawer')" class="btn-primary" />
