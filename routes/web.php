@@ -57,6 +57,7 @@ Volt::route('/docs/components/card', 'docs.components.card');
 Volt::route('/docs/components/header', 'docs.components.header');
 Volt::route('/docs/components/icon', 'docs.components.icon');
 Volt::route('/docs/components/progress', 'docs.components.progress');
+Volt::route('/docs/components/spotlight', 'docs.components.spotlight')->middleware('web');
 Volt::route('/docs/components/statistic', 'docs.components.statistic');
 Volt::route('/docs/components/timeline', 'docs.components.timeline');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');
