@@ -86,7 +86,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Instead of <code>avatar</code> you can use any rendered blade <code>icon</code>.
+        Instead of <code>avatar</code> you can use any pre-rendered blade <code>icon</code>.
     </p>
 
     {{--@formatter:off--}}
@@ -94,7 +94,7 @@ class extends Component {
         @verbatim('docs')
             [
                 // ...
-                'icon' => Blade::render("<x-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />")
+                'icon' => Blade::render("<x-icon name='o-bolt' />")
             ]
         @endverbatim
     </x-code>
@@ -105,6 +105,22 @@ class extends Component {
         <strong>... You are done!</strong>
     </p>
 
+    <x-anchor title="Options" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can change the <code>shortcut</code> with any combination supported
+        <a href="https://livewire.laravel.com/docs/actions#listening-for-specific-keys">by Livewire</a>.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-spotlight
+                shortcut="meta.slash"
+                search-text="Find docs, app actions or users"
+                no-results-text="Ops! Nothing here." />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
     <p>
         As Mary exposes a <strong>public route</strong> to make spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
@@ -113,7 +129,7 @@ class extends Component {
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can organize your search however you want. Don't be restricted exclusively to the strategy shown in this example.
+        You can organize your search however you want. Don't be restricted exclusively to the approach shown in this example.
         But, here an example that mixes "users" and "app actions".
     </p>
 
@@ -142,12 +158,6 @@ class extends Component {
 
             public function users(mixed $query = '')
             {
-                // Example of security concern
-                // Only admins can search for users
-                if(! auth()->user()->isAdmin()) {
-                    return [];
-                }
-
                 return User::query()
                         ->where('name', 'like', "%$query%")
                         ->take(5)
@@ -164,9 +174,6 @@ class extends Component {
 
             public function actions(mixed $search = '')
             {
-                // Security concern
-                // Any authenticated user can search
-
                 $icon = Blade::render("<x-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />");
 
                 return collect([
@@ -175,12 +182,6 @@ class extends Component {
                         'description' => 'Create a new user',
                         'icon' => $icon,
                         'link' => '/users/create'
-                    ],
-                    [
-                        'name' => 'Recent orders',
-                        'description' => 'See recent placed orders',
-                        'icon' => $icon,
-                        'link' => '/orders/recent'
                     ],
                     [
                         // More ...
@@ -194,19 +195,60 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Options" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can change the <code>shortcut</code> with any combination supported
-        <a href="https://livewire.laravel.com/docs/actions#listening-for-specific-keys">by Livewire</a>.
+        Add anything you want and dispatch a <code>mary-search</code> event with an extra query string.
+        All parameters will be injected on your custom search class.
+    </p>
+
+    <p>
+        You can do it in many ways. But, here is an example.
     </p>
 
     <x-code no-render>
         @verbatim('docs')
-            <x-spotlight
-                shortcut="meta.slash"
-                search-text="Find docs, app actions or users"
-                no-results-text="Ops! Nothing here." />
+            <x-spotlight>
+                <div
+                    x-data="{ query: { withUsers: true, withActions: true } }"
+                    x-init="$watch('query', value => $dispatch('mary-search', new URLSearchParams(value).toString()))"
+                    class="flex gap-8 p-3"
+                >
+                    <x-checkbox label="Users" x-model="query.withUsers" />
+                    <x-checkbox label="Actions" x-model="query.withActions" />
+                </div>
+            </x-spotlight>
+        @endverbatim
+    </x-code>
+
+    <p>
+        Then, adjust your <code>search()</code> method to handle those new params.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            class Spotlight
+            {
+                public function search($query = '', $withUsers = '', $withActions = '') {
+                    // Do your logic here
+                }
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <p>
+        You can add a fancy select on right side like this. Remember to add the query string logic describe above.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-spotlight>
+                <x-slot:append>
+                    <x-select x-model="category" class="border-none focus:outline-0" />
+                </x-slot:append>
+            </x-spotlight>
         @endverbatim
     </x-code>
 
