@@ -58,7 +58,7 @@ class extends Component {
 
             class Spotlight
             {
-                public function search(mixed $query = '')
+                public function search(Request $request)
                 {
                     // Do your search logic here
                     // IMPORTANT: apply any security concern here
@@ -121,6 +121,18 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Manual activation" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can trigger the Spotlight component by dispatching a <code>mary-search-open</code> event.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-button label="Search" icon="o-magnifying-glass" @click="$dispatch('mary-search-open')" />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
     <p>
         As Mary exposes a <strong>public route</strong> to make spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
@@ -143,7 +155,7 @@ class extends Component {
 
         class Spotlight
         {
-            public function search(mixed $query = '')
+            public function search(Request $request)
             {
                 // Example of security concern
                 // Guests can not search
@@ -152,14 +164,15 @@ class extends Component {
                 }
 
                 return collect()
-                    ->merge($this->actions($query))
-                    ->merge($this->users($query));
+                    ->merge($this->actions($request->search))
+                    ->merge($this->users($request->search));
             }
 
-            public function users(mixed $query = '')
+            // Database search
+            public function users(string $search = '')
             {
                 return User::query()
-                        ->where('name', 'like', "%$query%")
+                        ->where('name', 'like', "%$search%")
                         ->take(5)
                         ->get()
                         ->map(function (User $user) {
@@ -172,7 +185,8 @@ class extends Component {
                         });
             }
 
-            public function actions(mixed $search = '')
+            // Static search
+            public function actions(string $search = '')
             {
                 $icon = Blade::render("<x-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />");
 
@@ -199,7 +213,6 @@ class extends Component {
 
     <p>
         Add anything you want and dispatch a <code>mary-search</code> event with an extra query string.
-        All parameters will be injected on your custom search class.
     </p>
 
     <p>
@@ -222,7 +235,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Then, adjust your <code>search()</code> method to handle those new params.
+        Then, adjust your <code>search()</code> method to handle those new request parameters.
     </p>
 
     {{--@formatter:off--}}
@@ -230,7 +243,7 @@ class extends Component {
         @verbatim('docs')
             class Spotlight
             {
-                public function search($query = '', $withUsers = '', $withActions = '') {
+                public function search(Request $request) {
                     // Do your logic here
                 }
             }
@@ -252,7 +265,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Changing search class" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Changing the search class" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         If for some reason you want to change the search class, publish the config file.

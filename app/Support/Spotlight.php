@@ -4,19 +4,20 @@ namespace App\Support;
 
 use App\Models\User;
 use Blade;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 
 class Spotlight
 {
-    public function search(mixed $query = ''): Collection
+    public function search(Request $request): Collection
     {
         return collect()
-            ->merge($this->actions($query))
-            ->merge($this->docs($query))
-            ->merge($this->users($query));
+            ->merge($this->actions($request->search))
+            ->merge($this->docs($request->search))
+            ->merge($this->users($request->search));
     }
 
-    public function actions(mixed $search = ''): Collection
+    public function actions(string $search = ''): Collection
     {
         $icon = Blade::render("<x-mary-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />");
 
@@ -38,7 +39,7 @@ class Spotlight
         });
     }
 
-    public function docs(mixed $search = ''): Collection
+    public function docs(string $search = ''): Collection
     {
         $icon = Blade::render("<x-mary-icon name='o-book-open' class='w-11 h-11 p-2 bg-purple-50 rounded-full' />");
 
@@ -66,11 +67,11 @@ class Spotlight
         });
     }
 
-    public function users(mixed $query = ''): Collection
+    public function users(string $search = ''): Collection
     {
         return User::query()
             ->with('city')
-            ->where('name', 'like', "%$query%")
+            ->where('name', 'like', "%$search%")
             ->take(3)
             ->get()
             ->map(function (User $user) {
