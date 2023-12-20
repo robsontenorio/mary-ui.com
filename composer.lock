@@ -3770,7 +3770,7 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/app/packages/mary",
-                "reference": "26ff0eabbdb7c4624d6f30f19d4d9efa406411e4"
+                "reference": "2783f2637370a682878fbae3c86baf59c5895dc4"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",

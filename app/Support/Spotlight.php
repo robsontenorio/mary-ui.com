@@ -3,9 +3,9 @@
 namespace App\Support;
 
 use App\Models\User;
-use Blade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Blade;
 
 class Spotlight
 {

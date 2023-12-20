@@ -25,7 +25,7 @@ class extends Component {
     <x-anchor title="Try it" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Search for "a" to see what kind of content it returns.
+        Search for "a" to see what kind of content it returns. In this example, all links point to this page itself.
     </p>
 
     <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
@@ -48,7 +48,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Create <code>App\Support\Spotlight</code> class with a <code>search()</code> method that returns the result.
+        Create a <code>App\Support\Spotlight</code> class with a <code>search</code> method that returns the result.
     </p>
 
     {{--@formatter:off--}}
@@ -135,7 +135,7 @@ class extends Component {
 
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        As Mary exposes a <strong>public route</strong> to make spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
+        As Mary exposes a <strong>public route</strong> to make Spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
     </p>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
@@ -151,7 +151,8 @@ class extends Component {
         namespace App\Support;
 
         use App\Models\User;
-        use Blade;
+        use Illuminate\Http\Request;
+        use Illuminate\Support\Facades\Blade;
 
         class Spotlight
         {
@@ -216,7 +217,7 @@ class extends Component {
     </p>
 
     <p>
-        You can do it in many ways. But, here is an example.
+        You can do it in many ways. But, in this example we built it with Alpine.
     </p>
 
     <x-code no-render>
@@ -235,7 +236,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Then, adjust your <code>search()</code> method to handle those new request parameters.
+        Then, adjust your <code>search</code> method to handle those new request parameters.
     </p>
 
     {{--@formatter:off--}}
@@ -250,20 +251,6 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
-
-    <p>
-        You can add a fancy select on right side like this. Remember to add the query string logic describe above.
-    </p>
-
-    <x-code no-render>
-        @verbatim('docs')
-            <x-spotlight>
-                <x-slot:append>
-                    <x-select x-model="category" class="border-none focus:outline-0" />
-                </x-slot:append>
-            </x-spotlight>
-        @endverbatim
-    </x-code>
 
     <x-anchor title="Changing the search class" size="text-2xl" class="mt-10 mb-5" />
 
