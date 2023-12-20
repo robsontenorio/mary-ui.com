@@ -7,6 +7,10 @@ p {
     @apply my-5 leading-8
 }
 
+#marySpotlight > div {
+    @apply pt-1
+}
+
 .docs > ul li {
     @apply list-disc ml-10 pb-2
 }
