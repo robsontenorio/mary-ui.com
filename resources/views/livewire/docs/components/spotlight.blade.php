@@ -125,13 +125,31 @@ class extends Component {
 
     <p>
         You can trigger the Spotlight component by dispatching a <code>mary-search-open</code> event.
+        Probably you want to put this search button inside a navbar. In this case place an empty <code>x-data</code> as describe bellow.
     </p>
 
-    <x-code>
+    <x-button label="Search" icon="o-magnifying-glass" @click.stop="$dispatch('mary-search-open')" />
+
+    {{--@formatter:off--}}
+    <x-code no-render>
         @verbatim('docs')
-            <x-button label="Search" icon="o-magnifying-glass" @click="$dispatch('mary-search-open')" />
+            {{-- Place an empty `x-data` on body--}}
+            <body ... x-data>
+                ...
+                <nav>
+                    {{-- Notice `@click.stop` --}}
+                    <x-button label="Search" @click.stop="$dispatch('mary-search-open')" />
+                </nav>
+
+                <main>
+                    {{ $slot }}
+                </main>
+
+                <x-spotlight />
+            </body>
         @endverbatim
     </x-code>
+    {{--@formatter:on--}}
 
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
     <p>
