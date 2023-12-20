@@ -12,6 +12,9 @@ export default {
         {
             pattern: /col-span-*/,
             variants: ['lg']
+        },
+        {
+            pattern: /bg-(yellow|purple)-*/
         }
     ],
     theme: {
