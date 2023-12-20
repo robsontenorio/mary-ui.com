@@ -202,7 +202,9 @@ class extends Component {
                         // More ...
                     ]
                 ])->filter(function (array $item) use ($search) {
-                    return str($item['name'] . $item['description'])->lower()->contains($search);
+                    return str($item['name'] . $item['description'])
+                            ->lower()
+                            ->contains(str($search)->lower());
                 });
             }
         }
