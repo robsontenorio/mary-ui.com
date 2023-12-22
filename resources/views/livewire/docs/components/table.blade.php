@@ -34,6 +34,8 @@ class extends Component {
     public function users(): Collection
     {
         return User::query()
+            ->with('city')
+            ->withAggregate('city', 'name')
             ->orderBy(...array_values($this->sortBy))
             ->take(3)
             ->get();
@@ -147,7 +149,7 @@ class extends Component {
 
     <br>
     <p>
-        By default, <strong>all columns</strong> will be sortable. Check the following example to <strong>disable sorting</strong> on specific columns or change column name.
+        By default, <strong>all columns</strong> will be sortable. Check the following example to <strong>disable sorting</strong> on specific columns.
     </p>
 
     <x-code>
@@ -159,6 +161,37 @@ class extends Component {
                     ['key' => 'id', 'label' => '#', 'class' => 'w-16'],
                     ['key' => 'name', 'label' => 'Name', 'class' => 'w-72'],
                     ['key' => 'email', 'label' => 'E-mail', 'sortable' => false], // <--- Won't be sortable
+                ];
+            @endphp
+
+            {{-- Notice `sort-by` --}}
+            <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy" />
+
+        @endverbatim
+    </x-code>
+
+    <br>
+    <p>
+        If you plan to sort on relationship fields, consider using <code>withAggregate()</code> Eloquent method.
+        It will add an extra column on result.
+    </p>
+
+    <x-code no-render language="php">
+        @verbatim('docs')
+            // It will add an extra column `city_name` on User collection
+            User::withAggregate('city', 'name')-> ...
+        @endverbatim
+    </x-code>
+    <x-code>
+
+        @verbatim('docs')
+            @php
+                $users = $this->users();  // [tl! .docs-hide]
+                $sortBy = $this->sortBy;                // [tl! .docs-hide]
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-16'],
+                    ['key' => 'name', 'label' => 'Name', 'class' => 'w-72'],
+                    ['key' => 'city_name', 'label' => 'City'], // <--- Notice 'city_name' syntax
                 ];
             @endphp
 
