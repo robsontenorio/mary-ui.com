@@ -201,6 +201,44 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <br>
+
+    <p>
+        In the following example we need <code>City</code> as complex object to use it in a custom slot.
+        But, it must be sorted by a custom column. So we make use of same approach of <code>withAggregate</code> combined with a <code>sortBy</code> per column.
+    </p>
+
+    <x-code no-render language="php">
+        @verbatim('docs')
+            // It will add an extra column `city_name` on User collection
+            User::withAggregate('city', 'name')-> ...
+        @endverbatim
+    </x-code>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = $this->users();  // [tl! .docs-hide]
+                $sortBy = $this->sortBy;                // [tl! .docs-hide]
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-16'],
+                    ['key' => 'name', 'label' => 'Name', 'class' => 'w-72'],
+                    ['key' => 'city', 'label' => 'City', 'sortBy' => 'city_name'], // <--- Notice 'sortBy'
+                ];
+            @endphp
+
+            {{-- You will learn about custom slots on next sections --}}
+            <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy">
+                @scope('cell_city', $user)
+                    <x-badge :value="$user->city->name" class="badge-primary" />
+                @endscope
+            </x-table>
+
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
