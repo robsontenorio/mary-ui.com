@@ -401,12 +401,11 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
-                @php $users = $this->users; $abc = 11; $xxx = 22; @endphp      <!-- [tl! .docs-hide] -->
+                @php $users = $this->users; @endphp     <!-- [tl! .docs-hide] -->
             </div>                                      <!-- [tl! .docs-hide] -->
             <x-choices label="Slots (online)" wire:model="user_custom_slot_id" :options="$users" single>
                 {{-- Item slot--}}
-                @scope('item', $user, $abc, $xxx)
-                yyy {{ $abc }} {{ $xxx }}
+                @scope('item', $user)
                     <x-list-item :item="$user" sub-value="bio">
                         <x-slot:avatar>
                             <x-icon name="o-user" class="bg-orange-100 p-2 w-8 h8 rounded-full" />
@@ -418,43 +417,12 @@ class extends Component {
                 @endscope
 
                 {{-- Selection slot--}}
-                @scope('selection', $user, $xxx, $abc)
-                hh {{ $abc }} {{ $xxx }}
+                @scope('selection', $user)
                     {{ $user->name }} ({{ $user->username }})
                 @endscope
             </x-choices>
         @endverbatim
     </x-code>
-    {{--@formatter:on--}}
-
-    <br>
-
-    <p>
-        On the other hand, <strong>searchable (frontend) works with Alpine syntax</strong>. Use the magic variable <code>option</code>, that represents the current object from
-        loop's
-        context.
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code>
-        @verbatim('docs')
-            @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
-            <x-choices-offline label="Slots (frontend)" wire:model="user_custom_slot_offline_id" :options="$users" single>
-                {{-- Item slot--}}
-                <x-slot:item>
-                    <div class="p-3 hover:bg-base-200 border border-t-0 border-b-base-200">
-                        <div x-text="option.name" class="font-semibold"></div>
-                        <div x-text="option.city.name" class="text-sm text-gray-400"></div>
-                    </div>
-                </x-slot:item>
-                {{-- Selection slot --}}
-                <x-slot:selection>
-                    <span x-text="`${option.name} ${option.id} (${option.city.name})`"></span>
-                </x-slot:selection>
-            </x-choices-offline>
-        @endverbatim
-    </x-code>
-
     {{--@formatter:on--}}
 
     <br>

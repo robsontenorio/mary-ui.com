@@ -34,9 +34,7 @@ class Spotlight
                 'icon' => $icon,
                 'link' => '/docs/components/spotlight'
             ]
-        ])->filter(function (array $item) use ($search) {
-            return str($item['name'] . $item['description'])->lower()->contains(str($search)->lower());
-        });
+        ])->filter(fn(array $item) => str($item['name'] . $item['description'])->contains($search, true));
     }
 
     public function docs(string $search = ''): Collection

@@ -204,7 +204,7 @@ class extends Component {
                         });
             }
 
-            // Static search
+            // Static search, but it could come from a database
             public function actions(string $search = '')
             {
                 $icon = Blade::render("<x-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />");
@@ -219,11 +219,7 @@ class extends Component {
                     [
                         // More ...
                     ]
-                ])->filter(function (array $item) use ($search) {
-                    return str($item['name'] . $item['description'])
-                            ->lower()
-                            ->contains(str($search)->lower());
-                });
+                ])->filter(fn(array $item) => str($item['name'] . $item['description'])->contains($search, true));
             }
         }
         @endverbatim
