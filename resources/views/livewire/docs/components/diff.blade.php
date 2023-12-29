@@ -14,11 +14,11 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Diff" />
 
-    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
-
     <p>
         This component is a wrapper around <a href="https://diff2html.xyz" target="_blank">diff2html</a> with a simpler API to quickly show diff between two strings.
     </p>
+
+    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
