@@ -22,7 +22,7 @@
         "livewire/livewire": "^3.3",
         "livewire/volt": "^1.6",
         "owenvoke/blade-fontawesome": "^2.4",
-        "robsontenorio/mary": "^1.14",
+        "robsontenorio/mary": "dev-main",
         "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
@@ -83,6 +83,15 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "robsontenorio/mary": {
+            "type": "path",
+            "url": "/var/www/app/packages/mary",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
 }

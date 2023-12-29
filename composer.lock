@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e5b1dd87e1c3ef5720968211195a676",
+    "content-hash": "b96e2925f6f1dd7f699780e1db34bb8a",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -2268,16 +2268,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.3.0",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "7c1f609515e74ef1197c08e56a5606571b3ec1d9"
+                "reference": "6dd3bec8c711cd792742be4620057637e261e6f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/7c1f609515e74ef1197c08e56a5606571b3ec1d9",
-                "reference": "7c1f609515e74ef1197c08e56a5606571b3ec1d9",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/6dd3bec8c711cd792742be4620057637e261e6f7",
+                "reference": "6dd3bec8c711cd792742be4620057637e261e6f7",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2330,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.3.0"
+                "source": "https://github.com/livewire/livewire/tree/v3.3.3"
             },
             "funding": [
                 {
@@ -2338,7 +2338,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-11T18:04:00+00:00"
+            "time": "2023-12-20T05:34:05+00:00"
         },
         {
             "name": "livewire/volt",
@@ -3766,17 +3766,11 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.14.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "524d44c9b7027e3058482a0e1fdc0d7081bdad91"
-            },
+            "version": "dev-main",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/524d44c9b7027e3058482a0e1fdc0d7081bdad91",
-                "reference": "524d44c9b7027e3058482a0e1fdc0d7081bdad91",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/app/packages/mary",
+                "reference": "524d44c9b7027e3058482a0e1fdc0d7081bdad91"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -3804,7 +3798,11 @@
                     "Mary\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Mary\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -3828,17 +3826,10 @@
                 "tallstack",
                 "ui"
             ],
-            "support": {
-                "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.14.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/robsontenorio",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-12-24T17:04:42+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "symfony/console",
@@ -8869,7 +8860,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,

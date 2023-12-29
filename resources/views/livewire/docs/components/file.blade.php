@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
@@ -20,11 +21,27 @@ class extends Component {
     #[Rule('image|max:10')] // 10Kb
     public $photo;
 
-    #[Rule('image|max:10')] // 10Kb
+    #[Rule('sometimes|nullable|image|max:1024')]
     public $photo2;
 
-    #[Rule('image')]
+    #[Rule('sometimes|nullable|image|max:1024')]
     public $photo3;
+
+    #[Rule('sometimes|nullable|image|max:1024')]
+    public $photo4;
+
+    #[Rule('sometimes|nullable|image|max:1024')]
+    public $photo5;
+
+    #[Rule('sometimes|nullable|image|max:1024')]
+    public $photo6;
+
+    public User $user;
+
+    public function mount(): void
+    {
+        $this->user = User::first();
+    }
 
     public function save()
     {
@@ -50,18 +67,9 @@ class extends Component {
     <x-anchor title="File Upload" />
 
     <p>
-        This component is powered by Livewire`s <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload.</a>
+        This component uses native "file" input and is powered by Livewire`s <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload.</a>
         Please, <strong>first check its docs</strong> to proper setup file uploads before using this component.
     </p>
-
-    <p>
-        By default, this component includes:
-    </p>
-
-    <ul>
-        <li>Progress indicator.</li>
-        <li>Validation message.</li>
-    </ul>
 
     <p>
         In order to see the <strong>progress indicators on localhost</strong>
@@ -70,82 +78,122 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
 
+    <p>This is the preferred approach to upload documents like PDF.</p>
+
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo = $this->photo;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-form wire:submit="save">
-                <x-file wire:model="photo" label="Picture" hint="Hi!" accept="image/png, image/jpeg" />
-
-                <x-slot:actions>
-                    <x-button label="Save" type="submit" class="btn-primary" spinner="save" />
-                </x-slot:actions>
-            </x-form>
+            <x-file wire:model="photo" label="Document" hint="Hi!" accept="image/png, image/jpeg" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Default slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Preview" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can override the file input's default button by using the custom slot.
+        Place a html <code>img</code> with the CSS that works best for you. <strong>Click</strong> on image to change it.
+    </p>
+
+    <p>
+        In the following example we use fallback urls to cover scenarios like create or update.
     </p>
 
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
+                $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            {{-- Alternative loading. Notice the `wire:loading` + `wire:target` combination  --}}
-            <span wire:loading wire:target="photo2" class="loading loading-spinner"></span>
-
-            {{-- Image preview --}}
-            <img src="{{ $photo2?->temporaryUrl() ?? '/empty-user.jpg' }}" class="h-16 mb-5" />
-
-            <x-form wire:submit="save2">
-
-                {{-- Use `hide-errors` to hide inline validation erros --}}
-                {{-- Use `hide-progress` to hide default progress indicator --}}
-                <x-file wire:model="photo2" accept="image/png, image/jpeg" hide-errors hide-progress>
-                    Click here to edit
-                </x-file>
-
-                <x-slot:actions>
-                    <x-button label="Save" type="submit" class="btn-primary" spinner="save2" />
-                </x-slot:actions>
-            </x-form>
+            <x-file wire:model="photo2">
+                <img
+                    src="{{ $photo2?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
+                    class="h-40 rounded-lg" />
+            </x-file>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom progress" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Crop" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If for some reason you want to manage the upload progress use the following dispatched events by
-        <a href="https://livewire.laravel.com/docs/uploads#progress-indicators" target="_blank">Livewire upload events</a>.
+        To be able to crop images add <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a>.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
+                {{-- Cropper.js --}}
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
+            </head>
+        @endverbatim
+    </x-code>
+
+    <br>
+
+    <x-code>
+        @verbatim('docs')
+            @php                            // [tl! .docs-hide]
+                $photo4 = $this->photo4;      // [tl! .docs-hide]
+                $user = $this->user;        // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            <x-file wire:model="photo4">
+                <img
+                    src="{{ $photo4?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
+                    class="h-40 rounded-lg" />
+            </x-file>
+        @endverbatim
+    </x-code>
+
+    <br>
+
+    <p>
+        If you want to crop immediately after changing an image, use <code>crop-after-change</code>
     </p>
 
     <x-code>
         @verbatim('docs')
-            <p>
-                Keep console output open while uploading.
-            </p>
-            <x-form wire:submit="save3">
+            @php                            // [tl! .docs-hide]
+                $photo5 = $this->photo5;      // [tl! .docs-hide]
+                $user = $this->user;        // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            <x-file wire:model="photo5" crop-after-change>
+                <img
+                    src="{{ $photo5?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
+                    class="h-40 rounded-lg" />
+            </x-file>
+        @endverbatim
+    </x-code>
 
-                {{-- Use `hide-progress` to hide progress bar --}}
-                <x-file
-                    wire:model="photo3"
-                    hide-progress
-                    accept="image/png, image/jpeg"
-                    @livewire-upload-start="console.log('started photo3', $event.detail)"
-                    @livewire-upload-progress="console.log('progress photo3', $event.detail)"
-                    @livewire-upload-finish="console.log('Finish photo3')"
-                    @livewire-upload-error="console.log('error photo3')"
-                />
+    <x-anchor title="Buttons and texts" size="text-2xl" class="mt-10 mb-5" />
 
-                <x-slot:actions>
-                    <x-button label="Upload" type="submit" class="btn-primary" spinner="save3" />
-                </x-slot:actions>
-            </x-form>
+    <p>
+        You can display buttons as describe bellow. All buttons have default tooltip texts, so you do not need explicitly to set the text.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php                            // [tl! .docs-hide]
+                $photo6 = $this->photo6;      // [tl! .docs-hide]
+                $user = $this->user;        // [tl! .docs-hide]
+            @endphp                         {{-- [tl! .docs-hide] --}}
+            <x-file
+                wire:model="photo6"
+                change-button
+                crop-button
+                revert-button
+                change-text="Edit it"
+                revert-text="Revert it"
+                crop-text="Crop it"
+                crop-title-text="Crop the image"
+                crop-cancel-text="Exit"
+                crop-save-text="Done"
+            >
+                <img
+                    src="{{ $photo6?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
+                    class="h-40 rounded-lg" />
+            </x-file>
         @endverbatim
     </x-code>
 </div>
