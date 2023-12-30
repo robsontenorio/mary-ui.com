@@ -15,10 +15,7 @@ new
 class extends Component {
     use Toast, WithFileUploads;
 
-    #[Rule('required|min:10')]
-    public $username;
-
-    #[Rule('image|max:10')] // 10Kb
+    #[Rule('max:10')] // 10Kb
     public $photo;
 
     #[Rule('sometimes|nullable|image|max:1024')]
@@ -85,18 +82,18 @@ class extends Component {
             @php                            // [tl! .docs-hide]
                 $photo = $this->photo;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo" label="Document" hint="Hi!" accept="image/png, image/jpeg" />
+            <x-file wire:model="photo" label="Document" hint="Only PDF" accept="application/pdf" />
         @endverbatim
     </x-code>
 
     <x-anchor title="Preview" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Place a html <code>img</code> with the CSS that works best for you. <strong>Click</strong> on image to change it.
-    </p>
-
-    <p>
+        Place a html <code>img</code> that act as a placeholder with the CSS that works best for you.
         In the following example we use fallback urls to cover scenarios like create or update.
+    </p>
+    <p>
+        <strong>Click</strong> on image to change it.
     </p>
 
     <x-code>
@@ -105,10 +102,9 @@ class extends Component {
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo2">
-                <img
-                    src="{{ $photo2?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
-                    class="h-40 rounded-lg" />
+            {{-- It works only for images --}}
+            <x-file wire:model="photo2" accept="image/png, image/jpeg">
+                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
     </x-code>
@@ -131,40 +127,60 @@ class extends Component {
     </x-code>
 
     <br>
-
-    <x-code>
-        @verbatim('docs')
-            @php                            // [tl! .docs-hide]
-                $photo4 = $this->photo4;      // [tl! .docs-hide]
-                $user = $this->user;        // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo4">
-                <img
-                    src="{{ $photo4?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
-                    class="h-40 rounded-lg" />
-            </x-file>
-        @endverbatim
-    </x-code>
-
-    <br>
-
     <p>
-        If you want to crop immediately after changing an image, use <code>crop-after-change</code>
+        For cropping immediately after changing an image, use <code>crop-after-change</code>.
     </p>
 
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
-                $photo5 = $this->photo5;      // [tl! .docs-hide]
+                $photo3 = $this->photo3;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo5" crop-after-change>
-                <img
-                    src="{{ $photo5?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
-                    class="h-40 rounded-lg" />
+            {{-- Notice `crop-after-change`--}}
+            <x-file wire:model="photo3" crop-after-change>
+                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
     </x-code>
+
+    <br>
+    <p>
+        You can set or override any <strong>Cropper.js</strong> option.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $config = [
+                    'guides' => false
+                ];
+                $photo4 = $this->photo4;      // [tl! .docs-hide]
+                $user = $this->user;        // [tl! .docs-hide]
+            @endphp
+
+            {{-- Notice `crop-config`--}}
+            <x-file wire:model="photo4" crop-after-change :crop-config="$config">
+                <img src="/empty-user.jpg" class="h-40 rounded-lg" />
+            </x-file>
+        @endverbatim
+    </x-code>
+
+    <br>
+    <p>
+        If you want change cropper appearance, just hack CSS by inspecting browser console. Where are using the following on this website.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code language="css" no-render>
+        @verbatim('docs')
+            .cropper-point {
+                width: 10px !important;
+                height: 10px !important;
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 
     <x-anchor title="Buttons and texts" size="text-2xl" class="mt-10 mb-5" />
 
@@ -175,14 +191,15 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
-                $photo6 = $this->photo6;      // [tl! .docs-hide]
+                $photo5 = $this->photo5;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-file
-                wire:model="photo6"
+                wire:model="photo5"
                 change-button
                 crop-button
                 revert-button
+                crop-after-change
                 change-text="Edit it"
                 revert-text="Revert it"
                 crop-text="Crop it"
@@ -190,9 +207,7 @@ class extends Component {
                 crop-cancel-text="Exit"
                 crop-save-text="Done"
             >
-                <img
-                    src="{{ $photo6?->temporaryUrl() ?? $user->avatar ?? '/empty-user.jpg' }}"
-                    class="h-40 rounded-lg" />
+                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
     </x-code>

@@ -60,18 +60,20 @@
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    @if(config('app.env') == 'production')
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
+            gtag('js', new Date());
 
-        gtag('config', 'G-NDC4ZLZ6D2');
-    </script>
+            gtag('config', 'G-NDC4ZLZ6D2');
+        </script>
+    @endif
 </head>
 
 <body class="min-h-screen font-sans antialiased">
