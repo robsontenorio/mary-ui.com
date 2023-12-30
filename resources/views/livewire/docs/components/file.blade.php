@@ -128,7 +128,7 @@ class extends Component {
 
     <br>
     <p>
-        For cropping immediately after changing an image, use <code>crop-after-change</code>.
+        For cropping immediately after changing an image use <code>crop-after-change</code>.
     </p>
 
     <x-code>
@@ -161,7 +161,7 @@ class extends Component {
 
             {{-- Notice `crop-config`--}}
             <x-file wire:model="photo4" crop-after-change :crop-config="$config">
-                <img src="/empty-user.jpg" class="h-40 rounded-lg" />
+                <img src="/empty-user.jpg" class="h-40 w-40 rounded-full border-2" />
             </x-file>
         @endverbatim
     </x-code>
