@@ -43,7 +43,8 @@ class extends Component {
 
     <p>
         This component manages <strong>multiple image upload</strong> and is powered by Livewire`s
-        <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload</a>, including all features like file size and type validation.
+        <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload</a>, including all features like file size/type validation
+        and <strong>automatic</strong> storage persistence.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
