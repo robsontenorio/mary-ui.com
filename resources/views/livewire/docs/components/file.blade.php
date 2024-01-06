@@ -18,7 +18,7 @@ class extends Component {
     #[Rule('required|max:10')] // 10Kb
     public $photo;
 
-    #[Rule(['photos.*' => 'image|max:10'])] // 10Kb
+    #[Rule(['photos.*' => 'image|max:100'])] // 100Kb
     #[Rule(['photos' => 'required'])]
     public array $photos = [];
 
@@ -28,13 +28,13 @@ class extends Component {
     #[Rule('required|image|max:100')]
     public $photo3;
 
-    #[Rule('sometimes|nullable|image|max:1024')]
+    #[Rule('sometimes|nullable|image|max:100')]
     public $photo4;
 
-    #[Rule('sometimes|nullable|image|max:1024')]
+    #[Rule('sometimes|nullable|image|max:100')]
     public $photo5;
 
-    #[Rule('sometimes|nullable|image|max:1024')]
+    #[Rule('sometimes|nullable|image|max:100')]
     public $photo6;
 
     public User $user;
@@ -132,8 +132,8 @@ class extends Component {
 
     <x-code no-render language="php">
         @verbatim('docs')
-            #[Rule(['photos' => 'required'])]         // Notice a separated rule to make it required
-            #[Rule(['photos.*' => 'image|max:10'])]   // Notice `*` syntax for validate each file
+            #[Rule(['photos' => 'required'])]          // Notice a separated rule to make it required
+            #[Rule(['photos.*' => 'image|max:100'])]   // Notice `*` syntax for validate each file
             public array $photos = [];
         @endverbatim
     </x-code>
@@ -146,7 +146,7 @@ class extends Component {
     </p>
 
     <p>
-        Place a html <code>img</code> placeholder with the CSS that works best for you.
+        Use a html <code>img</code> as placeholder with the CSS that works best for you.
         In the following example we use fallback urls to cover scenarios like create or update.
     </p>
     <p>
@@ -232,7 +232,7 @@ class extends Component {
 
     <br>
     <p>
-        Once <strong>Cropper.js</strong> does not offer easy way to customize its CSS, just inspecting browser console to hack the CSS that works best for you.
+        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspecting browser console to hack the CSS that works best for you.
         We are using the following on all examples on this page.
     </p>
 

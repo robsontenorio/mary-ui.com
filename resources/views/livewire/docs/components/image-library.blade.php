@@ -7,20 +7,22 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
+use Mary\Traits\Toast;
 use Mary\Traits\WithMediaSync;
 
 new
 #[Title('Image Library')]
 #[Layout('components.layouts.app', ['description' => 'Livewire ui component for image library management, with multiple upload, crop, sort and preview.'])]
 class extends Component {
-    use WithFileUploads, WithMediaSync;
+    use WithFileUploads, WithMediaSync, Toast;
 
     #[Rule(['files.*' => 'image|max:100'])]
     public array $files = [];
 
-    public User $user;
-
+    #[Rule('required')]
     public Collection $library;
+
+    public User $user;
 
     public function mount(): void
     {
@@ -31,7 +33,8 @@ class extends Component {
     public function save(): void
     {
         $this->validate();
-        $this->syncMedia($this->user, $this->files, $this->library);
+        // $this->syncMedia($this->user, $this->files, $this->library);
+        $this->success('It is ok, but we will not store files here');
     }
 }; ?>
 
@@ -49,16 +52,6 @@ class extends Component {
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
-    <ul>
-        <li> Multiple images.</li>
-        <li> Remove individual image.</li>
-        <li> Drag to sort images.</li>
-        <li> Click on image to replace it.</li>
-        <li> Crop an image.</li>
-    </ul>
-
-    <br>
-
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
@@ -72,8 +65,6 @@ class extends Component {
                     wire:model="files"                 {{-- Temprary files --}}
                     wire:media="library"               {{-- Library metadata property --}}
                     :preview="$library"                {{-- Preview control --}}
-                    accept="image/png, image/jpeg"     {{-- Accepted mime types --}}
-                    add-files-text="Add files"         {{-- Default text --}}
                     label="Product images"
                     hint="Image files only" />
 
@@ -116,7 +107,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Add a <code>AsCollection</code> cast on respective column on your model.
+        Cast that column as <code>AsCollection</code>.
     </p>
 
     {{--@formatter:off--}}
@@ -130,7 +121,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        The following example considers the scenario where you are <strong>editing an existing user</strong>.
+        The following example considers that you named it as <code>library</code> and you are <strong>editing an existing user</strong>.
     </p>
 
     {{--@formatter:off--}}
@@ -149,6 +140,7 @@ class extends Component {
                 public array $files = [];
 
                 // Library metadata
+                #[Rule('required')]
                 public Collection $library;
 
                 // Editing this user
@@ -182,7 +174,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Validation note" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Note about validation" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload, like single file upload.
