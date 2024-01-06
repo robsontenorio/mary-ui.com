@@ -200,7 +200,7 @@ class extends Component {
 
     <br>
     <p>
-        You can set or override any <strong>Cropper.js</strong> option.
+        You can set or override any <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
     </p>
 
     <x-code>

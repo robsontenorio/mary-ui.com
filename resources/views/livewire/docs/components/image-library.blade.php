@@ -179,7 +179,7 @@ class extends Component {
     <x-anchor title="Cropper settings" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can set or override any <strong>Cropper.js</strong> option.
+        You can set or override any <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
     </p>
 
     <x-code no-render>
