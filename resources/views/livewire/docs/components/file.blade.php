@@ -16,59 +16,23 @@ class extends Component {
     use Toast, WithFileUploads;
 
     #[Rule('required|max:10')] // 10Kb
-    public $photo;
+    public $file;
 
     #[Rule(['photos.*' => 'image|max:100'])] // 100Kb
     #[Rule(['photos' => 'required'])]
     public array $photos = [];
 
     #[Rule('required|image|max:100')]
-    public $photo2;
+    public $photo;
 
     #[Rule('required|image|max:100')]
-    public $photo3;
-
-    #[Rule('sometimes|nullable|image|max:100')]
-    public $photo4;
-
-    #[Rule('sometimes|nullable|image|max:100')]
-    public $photo5;
-
-    #[Rule('sometimes|nullable|image|max:100')]
-    public $photo6;
+    public $photo2;
 
     public User $user;
 
     public function mount(): void
     {
-        $this->user = User::first();
-    }
-
-    public function save(): void
-    {
-        $this->validateOnly('photo');
-    }
-
-    public function saveMultiple(): void
-    {
-        $this->validateOnly('photos.*');
-        $this->validateOnly('photos');
-    }
-
-    public function save2()
-    {
-        $this->validateOnly('photo2');
-
-        $url = $this->photo2->store('posts', 'public');
-        $this->user->update(['avatar' => url("/storage/$url")]);
-    }
-
-    public function save3()
-    {
-        $this->validateOnly('photo3');
-
-        $url = $this->photo3->store('posts', 'public');
-        $this->user->update(['avatar' => url("/storage/$url")]);
+        $this->user = User::inRandomOrder()->first();
     }
 }; ?>
 
@@ -94,17 +58,20 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
-                $photo = $this->photo;      // [tl! .docs-hide]
+                $file = $this->file;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo" label="Receipt" hint="Only PDF" accept="application/pdf" />
+            <x-file wire:model="file" label="Receipt" hint="Only PDF" accept="application/pdf" />
         @endverbatim
     </x-code>
 
+    <p>
+        You can use validation rule from Laravel.
+    </p>
+
     <x-code no-render language="php">
         @verbatim('docs')
-            // Any validation rule from Laravel
             #[Rule('required|max:10')]
-            public $photo;
+            public $file;
         @endverbatim
     </x-code>
 
@@ -124,9 +91,13 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <p>
+        Here is a validation trick for multiple file upload.
+    </p>
+
     <x-code no-render language="php">
         @verbatim('docs')
-            #[Rule(['photos' => 'required'])]          // Notice a separated rule to make it required
+            #[Rule(['photos' => 'required'])]          // A separated rule to make it required
             #[Rule(['photos.*' => 'image|max:100'])]   // Notice `*` syntax for validate each file
             public array $photos = [];
         @endverbatim
@@ -150,10 +121,10 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
-                $photo2 = $this->photo2;      // [tl! .docs-hide]
+                $photo = $this->photo;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo2" accept="image/png, image/jpeg">
+            <x-file wire:model="photo" accept="image/png, image/jpeg">
                 <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
@@ -181,46 +152,41 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <br>
     <p>
-        Then, use <code>crop-after-change</code> property.
+        Now you can use the <code>crop-after-change</code> property.
     </p>
 
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
-                $photo3 = $this->photo3;      // [tl! .docs-hide]
+                $photo2 = $this->photo2;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo3" accept="image/png" crop-after-change>
+            <x-file wire:model="photo2" accept="image/png" crop-after-change>
                 <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
     </x-code>
 
-    <br>
     <p>
         You can set or override any <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
     </p>
 
-    <x-code>
+    <x-code no-render>
         @verbatim('docs')
             @php
-                $config = [ 'guides' => false ];
-                $photo4 = $this->photo4;      // [tl! .docs-hide]
-                $user = $this->user;        // [tl! .docs-hide]
+                $config = ['guides' => false];
             @endphp
 
-            <x-file wire:model="photo4" accept="image/png" :crop-config="$config" crop-after-change>
-                <img src="/empty-user.jpg" class="h-40 w-40 rounded-full border-2" />
+            <x-file ... :crop-config="$config">
+                ...
             </x-file>
         @endverbatim
     </x-code>
 
-    <br>
     <p>
-        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspecting browser console to hack the CSS that works best for you.
-        We are using the following on all examples on this page.
+        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspect browser console to hack the CSS that works best for you.
+        We are using the following on this page.
     </p>
 
     {{--@formatter:off--}}
@@ -237,23 +203,24 @@ class extends Component {
     <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        All labels have default texts, so you do not need explicitly to set all of them.
+        All are all default labels.
     </p>
 
-    <x-code>
+    <x-code no-render>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo5 = $this->photo5;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-file
-                wire:model="photo5"
-                change-text="Edit it"
-                crop-title-text="Crop the image"
-                crop-cancel-text="Exit"
-                crop-save-text="Done"
+                ...
+                change-text="Change"
+                crop-text="Crop"
+                crop-title-text="Crop image"
+                crop-cancel-text="Cancel"
+                crop-save-text="Crop"
             >
-                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
+                ...
             </x-file>
         @endverbatim
     </x-code>

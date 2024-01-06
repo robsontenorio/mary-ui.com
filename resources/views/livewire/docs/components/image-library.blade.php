@@ -7,14 +7,13 @@ use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
-use Mary\Traits\Toast;
 use Mary\Traits\WithMediaSync;
 
 new
 #[Title('Image Library')]
 #[Layout('components.layouts.app', ['description' => 'Livewire ui component for image library management, with multiple upload, crop, sort and preview.'])]
 class extends Component {
-    use WithFileUploads, WithMediaSync, Toast;
+    use WithFileUploads, WithMediaSync;
 
     #[Rule(['files.*' => 'image|max:100'])]
     public array $files = [];
@@ -26,15 +25,8 @@ class extends Component {
 
     public function mount(): void
     {
-        $this->user = User::find(2);
-        $this->library = $this->user->library;
-    }
-
-    public function save(): void
-    {
-        $this->validate();
-        $this->syncMedia($this->user, $this->files, $this->library);
-        //$this->success('It is ok, but we will not store files here');
+        $this->user = User::inRandomOrder()->first();
+        $this->library = $this->user->library ?? new Collection();
     }
 }; ?>
 
@@ -48,7 +40,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        If you need simple file upload or need to handle only one image see <a href="/docs/components/file" wire:navigate>File</a> component.
+        If you need a native file upload or want to handle only one image see the <a href="/docs/components/file" wire:navigate>File</a> component.
     </x-alert>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
@@ -63,10 +55,10 @@ class extends Component {
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-image-library
                 wire:model="files"                 {{-- Temprary files --}}
-                wire:media="library"               {{-- Library metadata property --}}
+                wire:library="library"             {{-- Library metadata property --}}
                 :preview="$library"                {{-- Preview control --}}
                 label="Product images"
-                hint="Image files only" />
+                hint="Max 100Kb" />
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
@@ -93,7 +85,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Now, add a new <code>json</code> column on your migration files to represent the image library metadata.
+        Add a new <code>json</code> column on your migration files to represent the image library metadata.
     </p>
 
     <x-code no-render language="php">
@@ -114,6 +106,8 @@ class extends Component {
         ];
     </x-code>
     {{--@formatter:on--}}
+
+    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         The following example considers that you named it as <code>library</code> and you are <strong>editing an existing user</strong>.
@@ -152,29 +146,60 @@ class extends Component {
 
                 public function save(): void
                 {
-                    // Remember to validate
-                    $this->validate();
+                    // Your stuff ...
 
-                    // Upload to storage and updates library metadata
+                    // Sync files and updates library metadata
                     $this->syncMedia($this->user, $this->files, $this->library);
 
                     // Or ... first create the user, if this components creates a user
                     // $user = User::create([...]);
                     // $this->syncMedia($user, $this->files, $this->library);
-
-                    // Your stuff ...
                 }
             }
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Note about validation" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Sync options" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload, like single file upload.
-        So, remember to call <code>$this->validate()</code> before saving the files.
+        Here are all options for syncing media on storage.
     </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            $this->syncMedia(
+                model: $this->user,         // A model that has an image library
+                files: $this->files,        // Temporary files to sync
+                library: $this->library,    // The library metadata
+                storage_subpath: '',        // Sub path on storage. Ex: '/users'
+                model_field: 'library',     // The model field that represents the library metadata
+                visibility: 'public'        // Visibility on storage
+            );
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Here are all default labels.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-image-library
+                ...
+                change-text="Change"
+                crop-text="Crop"
+                remove-text="Remove"
+                crop-title-text="Crop image"
+                crop-cancel-text="Cancel"
+                crop-save-text="Crop"
+                add-files-text="Add images" />
+        @endverbatim
+    </x-code>
 
     <x-anchor title="Cropper settings" size="text-2xl" class="mt-10 mb-5" />
 
@@ -192,10 +217,9 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <br>
     <p>
-        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspecting browser console to hack the CSS that works best for you.
-        We are using the following on all examples on this page.
+        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspect browser console to hack the CSS that works best for you.
+        We are using the following on this page.
     </p>
 
     {{--@formatter:off--}}
