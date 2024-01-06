@@ -50,6 +50,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
 
+    {{-- Sortable.js --}}
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
+
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
@@ -120,7 +123,8 @@
                 <x-menu-item title="Tags" link="/docs/components/tags" />
                 <x-menu-item title="Date Time" link="/docs/components/datetime" />
                 <x-menu-item title="Textarea" link="/docs/components/textarea" />
-                <x-menu-item title="File Upload" link="/docs/components/file" />
+                <x-menu-item title="File Upload" link="/docs/components/file" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="Image Library" link="/docs/components/image-library" badge="new" badge-classes="!badge-warning" />
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />
@@ -144,7 +148,7 @@
                 <x-menu-item title="Header" link="/docs/components/header" />
                 <x-menu-item title="Icon" link="/docs/components/icon" />
                 <x-menu-item title="Progress" link="/docs/components/progress" />
-                <x-menu-item title="Spotlight" link="/docs/components/spotlight" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                 <x-menu-item title="Statistic" link="/docs/components/statistic" />
                 <x-menu-item title="Timeline" link="/docs/components/timeline" />
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />

@@ -33,6 +33,7 @@ Volt::route('/docs/components/tags', 'docs.components.tags');
 Volt::route('/docs/components/datetime', 'docs.components.datetime');
 Volt::route('/docs/components/textarea', 'docs.components.textarea');
 Volt::route('/docs/components/file', 'docs.components.file');
+Volt::route('/docs/components/image-library', 'docs.components.image-library');
 
 // LIST DATA
 Volt::route('/docs/components/list-item', 'docs.components.list-item');

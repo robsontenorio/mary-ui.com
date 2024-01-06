@@ -15,13 +15,17 @@ new
 class extends Component {
     use Toast, WithFileUploads;
 
-    #[Rule('max:10')] // 10Kb
+    #[Rule('required|max:10')] // 10Kb
     public $photo;
 
-    #[Rule('sometimes|nullable|image|max:1024')]
+    #[Rule(['photos.*' => 'image|max:10'])] // 10Kb
+    #[Rule(['photos' => 'required'])]
+    public array $photos = [];
+
+    #[Rule('required|image|max:100')]
     public $photo2;
 
-    #[Rule('sometimes|nullable|image|max:1024')]
+    #[Rule('required|image|max:100')]
     public $photo3;
 
     #[Rule('sometimes|nullable|image|max:1024')]
@@ -40,23 +44,31 @@ class extends Component {
         $this->user = User::first();
     }
 
-    public function save()
+    public function save(): void
     {
         $this->validateOnly('photo');
     }
 
+    public function saveMultiple(): void
+    {
+        $this->validateOnly('photos.*');
+        $this->validateOnly('photos');
+    }
+
     public function save2()
     {
-        try {
-            $this->validateOnly('photo2');
-        } catch (ValidationException $e) {
-            $this->error($e->getMessage());
-        }
+        $this->validateOnly('photo2');
+
+        $url = $this->photo2->store('posts', 'public');
+        $this->user->update(['avatar' => url("/storage/$url")]);
     }
 
     public function save3()
     {
         $this->validateOnly('photo3');
+
+        $url = $this->photo3->store('posts', 'public');
+        $this->user->update(['avatar' => url("/storage/$url")]);
     }
 }; ?>
 
@@ -64,32 +76,77 @@ class extends Component {
     <x-anchor title="File Upload" />
 
     <p>
-        This component uses native "file" input and is powered by Livewire`s <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload.</a>
-        Please, <strong>first check its docs</strong> to proper setup file uploads before using this component.
+        This component is powered by Livewire`s <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload</a>,
+        including all features like file size and type validation.
+        Please, <strong>first check Livewire docs</strong> to proper setup file uploads before using this component.
     </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        For multiple image upload see <a href="/docs/components/image-library" wire:navigate>Image Library</a> component.
+    </x-alert>
+
+    <x-anchor title="Single file" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        In order to see the <strong>progress indicators on localhost</strong>
-        enable <code>Fast 3G</code> on Developer Tools. <strong>Remember to switch it back!</strong>
+        Livewire itself triggers real time validation for single file upload.
     </p>
-
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>This is the preferred approach to upload documents like PDF.</p>
 
     <x-code>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo = $this->photo;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-file wire:model="photo" label="Document" hint="Only PDF" accept="application/pdf" />
+            <x-form wire:submit="save">
+                <x-file wire:model="photo" label="Receipt" hint="Only PDF" accept="application/pdf" />
+                <x-button label="Save" type="submit" spinner="save" />
+            </x-form>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Preview" size="text-2xl" class="mt-10 mb-5" />
+    <x-code no-render language="php">
+        @verbatim('docs')
+            // Any validation rule from Laravel
+            #[Rule('required|max:10')]
+            public $photo;
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Multiple files" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Place a html <code>img</code> that act as a placeholder with the CSS that works best for you.
+        Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload. So, remember to call <code>$this->validate()</code> before saving the
+        files.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php                               // [tl! .docs-hide]
+                $photos = $this->photos;      // [tl! .docs-hide]
+            @endphp                           {{-- [tl! .docs-hide] --}}
+            <x-form wire:submit="saveMultiple">
+                <x-file wire:model="photos" label="Documents" multiple />
+                <x-button label="Save" type="submit" spinner="saveMultiple" />
+            </x-form>
+        @endverbatim
+    </x-code>
+
+    <x-code no-render language="php">
+        @verbatim('docs')
+            #[Rule(['photos' => 'required'])]         // Notice a separated rule to make it required
+            #[Rule(['photos.*' => 'image|max:10'])]   // Notice `*` syntax for validate each file
+            public array $photos = [];
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Image preview" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        It only works for single image.
+        For multiple image upload see <a href="/docs/components/image-library" wire:navigate>Image Library</a> component.
+    </p>
+
+    <p>
+        Place a html <code>img</code> placeholder with the CSS that works best for you.
         In the following example we use fallback urls to cover scenarios like create or update.
     </p>
     <p>
@@ -102,17 +159,24 @@ class extends Component {
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            {{-- It works only for images --}}
-            <x-file wire:model="photo2" accept="image/png, image/jpeg">
-                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
-            </x-file>
+            <x-form wire:submit="save2">
+                <x-file wire:model="photo2" accept="image/png, image/jpeg">
+                    <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
+                </x-file>
+                <x-button label="Save" type="submit" spinner="save2" />
+            </x-form>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Crop" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Image Crop" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        To be able to crop images add <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a>.
+        It only works for single image.
+        For multiple image upload see <a href="/docs/components/image-library" wire:navigate>Image Library</a> component.
+    </p>
+
+    <p>
+        First, add <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> library.
     </p>
 
     <x-code no-render>
@@ -128,7 +192,7 @@ class extends Component {
 
     <br>
     <p>
-        For cropping immediately after changing an image use <code>crop-after-change</code>.
+        Then, use <code>crop-after-change</code> property.
     </p>
 
     <x-code>
@@ -137,10 +201,13 @@ class extends Component {
                 $photo3 = $this->photo3;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            {{-- Notice `crop-after-change`--}}
-            <x-file wire:model="photo3" crop-after-change>
-                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
-            </x-file>
+            <x-form wire:submit="save3">
+                <x-file wire:model="photo3" accept="image/png" crop-after-change>
+                    <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
+                </x-file>
+
+                <x-button label="Save" type="submit" spinner="save3" />
+            </x-form>
         @endverbatim
     </x-code>
 
@@ -152,15 +219,12 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $config = [
-                    'guides' => false
-                ];
+                $config = [ 'guides' => false ];
                 $photo4 = $this->photo4;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp
 
-            {{-- Notice `crop-config`--}}
-            <x-file wire:model="photo4" crop-after-change :crop-config="$config">
+            <x-file wire:model="photo4" accept="image/png" :crop-config="$config" crop-after-change>
                 <img src="/empty-user.jpg" class="h-40 w-40 rounded-full border-2" />
             </x-file>
         @endverbatim
@@ -168,7 +232,8 @@ class extends Component {
 
     <br>
     <p>
-        If you want change cropper appearance, just hack CSS by inspecting browser console. Where are using the following on this website.
+        Once <strong>Cropper.js</strong> does not offer easy way to customize its CSS, just inspecting browser console to hack the CSS that works best for you.
+        We are using the following on all examples on this page.
     </p>
 
     {{--@formatter:off--}}
@@ -182,10 +247,10 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Buttons and texts" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can display buttons as describe bellow. All buttons have default tooltip texts, so you do not need explicitly to set the text.
+        All labels have default texts, so you do not need explicitly to set all of them.
     </p>
 
     <x-code>
@@ -196,13 +261,7 @@ class extends Component {
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-file
                 wire:model="photo5"
-                change-button
-                crop-button
-                revert-button
-                crop-after-change
                 change-text="Edit it"
-                revert-text="Revert it"
-                crop-text="Crop it"
                 crop-title-text="Crop the image"
                 crop-cancel-text="Exit"
                 crop-save-text="Done"
