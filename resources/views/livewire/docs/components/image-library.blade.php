@@ -69,13 +69,13 @@ class extends Component {
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-form wire:submit="save">
                 <x-image-library
-                    wire:model="files"                {{-- Hold temp uploaded files --}}
-                    wire:media="library"               {{-- Metada property --}}
+                    wire:model="files"                 {{-- Temprary files --}}
+                    wire:media="library"               {{-- Library metadata property --}}
                     :preview="$library"                {{-- Preview control --}}
-                    accept="image/png, image/jpeg"    {{-- Accepted mime types --}}
+                    accept="image/png, image/jpeg"     {{-- Accepted mime types --}}
+                    add-files-text="Add files"         {{-- Default text --}}
                     label="Product images"
-                    hint="Image files only"
-                    multiple />
+                    hint="Image files only" />
 
                 <x-slot:actions>
                     <x-button type="submit" label="save" spinner="save" icon="o-paper-airplane" class="btn-primary" />
@@ -185,7 +185,7 @@ class extends Component {
     <x-anchor title="Validation note" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload like single file upload.
+        Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload, like single file upload.
         So, remember to call <code>$this->validate()</code> before saving the files.
     </p>
 

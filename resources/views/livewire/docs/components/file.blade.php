@@ -114,8 +114,8 @@ class extends Component {
     <x-anchor title="Multiple files" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload. So, remember to call <code>$this->validate()</code> before saving the
-        files.
+        Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload, like single file upload.
+        So, remember to call <code>$this->validate()</code> before saving the files.
     </p>
 
     <x-code>
