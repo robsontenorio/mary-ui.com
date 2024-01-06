@@ -61,18 +61,12 @@ class extends Component {
                 $library = $this->library;    // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-form wire:submit="save">
-                <x-image-library
-                    wire:model="files"                 {{-- Temprary files --}}
-                    wire:media="library"               {{-- Library metadata property --}}
-                    :preview="$library"                {{-- Preview control --}}
-                    label="Product images"
-                    hint="Image files only" />
-
-                <x-slot:actions>
-                    <x-button type="submit" label="save" spinner="save" icon="o-paper-airplane" class="btn-primary" />
-                </x-slot:actions>
-            </x-form>
+            <x-image-library
+                wire:model="files"                 {{-- Temprary files --}}
+                wire:media="library"               {{-- Library metadata property --}}
+                :preview="$library"                {{-- Preview control --}}
+                label="Product images"
+                hint="Image files only" />
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
@@ -140,7 +134,7 @@ class extends Component {
                 #[Rule(['files.*' => 'image|max:1024'])]
                 public array $files = [];
 
-                // Library metadata
+                // Library metadata (optional validation)
                 #[Rule('required')]
                 public Collection $library;
 
