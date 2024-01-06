@@ -24,6 +24,11 @@ class UserFactory extends Factory
             'name' => fake()->unique()->firstName(),
             'username' => fake()->unique()->userName(),
             'avatar' => 'https://picsum.photos/200?=' . rand(),
+            'library' => [
+                ['uuid' => Str::uuid()->toString(), 'path' => str(fake()->image('storage/app/public/users'))->start('/')->replace("/app/public", "")->toString()],
+                ['uuid' => Str::uuid()->toString(), 'path' => str(fake()->image('storage/app/public/users'))->start('/')->replace("/app/public", "")->toString()],
+                ['uuid' => Str::uuid()->toString(), 'path' => str(fake()->image('storage/app/public/users'))->start('/')->replace("/app/public", "")->toString()]
+            ],
             'email' => fake()->unique()->safeEmail(),
             'other_avatar' => 'https://picsum.photos/200?=' . rand(),
             'other_name' => fake()->unique()->firstName(),

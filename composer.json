@@ -52,6 +52,7 @@
             "php artisan key:generate",
             "touch database/database.sqlite",
             "php artisan migrate:fresh --seed",
+            "php artisan storage:link",
             "yarn install",
             "yarn dev"
         ],

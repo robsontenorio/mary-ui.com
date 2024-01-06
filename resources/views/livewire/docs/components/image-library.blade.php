@@ -33,8 +33,8 @@ class extends Component {
     public function save(): void
     {
         $this->validate();
-        // $this->syncMedia($this->user, $this->files, $this->library);
-        $this->success('It is ok, but we will not store files here');
+        $this->syncMedia($this->user, $this->files, $this->library);
+        //$this->success('It is ok, but we will not store files here');
     }
 }; ?>
 
