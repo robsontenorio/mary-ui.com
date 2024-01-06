@@ -182,4 +182,37 @@ class extends Component {
         So, remember to call <code>$this->validate()</code> before saving the files.
     </p>
 
+    <x-anchor title="Cropper settings" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can set or override any <strong>Cropper.js</strong> option.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            @php
+                $config = [ 'guides' => false ];
+            @endphp
+
+            <x-image-library ... :crop-config="$config" />
+        @endverbatim
+    </x-code>
+
+    <br>
+    <p>
+        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspecting browser console to hack the CSS that works best for you.
+        We are using the following on all examples on this page.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code language="css" no-render>
+        @verbatim('docs')
+            .cropper-point {
+                width: 10px !important;
+                height: 10px !important;
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
 </div>

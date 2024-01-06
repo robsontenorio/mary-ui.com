@@ -96,10 +96,7 @@ class extends Component {
             @php                            // [tl! .docs-hide]
                 $photo = $this->photo;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-form wire:submit="save">
-                <x-file wire:model="photo" label="Receipt" hint="Only PDF" accept="application/pdf" />
-                <x-button label="Save" type="submit" spinner="save" />
-            </x-form>
+            <x-file wire:model="photo" label="Receipt" hint="Only PDF" accept="application/pdf" />
         @endverbatim
     </x-code>
 
@@ -123,10 +120,7 @@ class extends Component {
             @php                               // [tl! .docs-hide]
                 $photos = $this->photos;      // [tl! .docs-hide]
             @endphp                           {{-- [tl! .docs-hide] --}}
-            <x-form wire:submit="saveMultiple">
-                <x-file wire:model="photos" label="Documents" multiple />
-                <x-button label="Save" type="submit" spinner="saveMultiple" />
-            </x-form>
+            <x-file wire:model="photos" label="Documents" multiple />
         @endverbatim
     </x-code>
 
@@ -159,12 +153,9 @@ class extends Component {
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-form wire:submit="save2">
-                <x-file wire:model="photo2" accept="image/png, image/jpeg">
-                    <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
-                </x-file>
-                <x-button label="Save" type="submit" spinner="save2" />
-            </x-form>
+            <x-file wire:model="photo2" accept="image/png, image/jpeg">
+                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
+            </x-file>
         @endverbatim
     </x-code>
 
@@ -201,13 +192,9 @@ class extends Component {
                 $photo3 = $this->photo3;      // [tl! .docs-hide]
                 $user = $this->user;        // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
-            <x-form wire:submit="save3">
-                <x-file wire:model="photo3" accept="image/png" crop-after-change>
-                    <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
-                </x-file>
-
-                <x-button label="Save" type="submit" spinner="save3" />
-            </x-form>
+            <x-file wire:model="photo3" accept="image/png" crop-after-change>
+                <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
+            </x-file>
         @endverbatim
     </x-code>
 
