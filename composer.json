@@ -22,7 +22,7 @@
         "livewire/livewire": "^3.3",
         "livewire/volt": "^1.6",
         "owenvoke/blade-fontawesome": "^2.4",
-        "robsontenorio/mary": "dev-main",
+        "robsontenorio/mary": "^1.14",
         "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
@@ -52,7 +52,6 @@
             "php artisan key:generate",
             "touch database/database.sqlite",
             "php artisan migrate:fresh --seed",
-            "php artisan storage:link",
             "yarn install",
             "yarn dev"
         ],
