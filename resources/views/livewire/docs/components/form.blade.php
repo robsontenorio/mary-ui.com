@@ -55,6 +55,10 @@ class extends Component {
         <li>Auto unmask <code>money</code> inputs for nice validation.</li>
     </ul>
 
+    <p>
+        Make sure to add <a href="https://mary-ui.com/docs/components/input#currency">Currency</a> library to make money input work.
+    </p>
+
     <br>
 
     <x-code>

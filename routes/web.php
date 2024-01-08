@@ -33,6 +33,7 @@ Volt::route('/docs/components/tags', 'docs.components.tags');
 Volt::route('/docs/components/datetime', 'docs.components.datetime');
 Volt::route('/docs/components/textarea', 'docs.components.textarea');
 Volt::route('/docs/components/file', 'docs.components.file');
+Volt::route('/docs/components/image-library', 'docs.components.image-library');
 
 // LIST DATA
 Volt::route('/docs/components/list-item', 'docs.components.list-item');
@@ -61,6 +62,7 @@ Volt::route('/docs/components/spotlight', 'docs.components.spotlight')->middlewa
 Volt::route('/docs/components/statistic', 'docs.components.statistic');
 Volt::route('/docs/components/timeline', 'docs.components.timeline');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');
+Volt::route('/docs/components/theme-toggle', 'docs.components.theme-toggle');
 
 // THIRD-PARTY
 Volt::route('/docs/components/datepicker', 'docs.components.datepicker');

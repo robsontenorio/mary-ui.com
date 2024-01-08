@@ -45,6 +45,11 @@ p {
     @apply bg-base-100
 }
 
+.cropper-point {
+    width: 10px !important;
+    height: 10px !important;
+}
+
 /*
  Margin and rounding are personal preferences,
  overflow-x-auto is recommended.
