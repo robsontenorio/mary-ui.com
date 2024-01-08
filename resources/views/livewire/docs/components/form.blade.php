@@ -56,7 +56,7 @@ class extends Component {
     </ul>
 
     <p>
-        Make sure to add <a href="http://localhost:8018/docs/components/input#currency">Currency</a> library to make money input work.
+        Make sure to add <a href="https://mary-ui.com/docs/components/input#currency">Currency</a> library to make money input work.
     </p>
 
     <br>
