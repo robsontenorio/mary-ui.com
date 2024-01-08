@@ -150,6 +150,7 @@
                 <x-menu-item title="Progress" link="/docs/components/progress" />
                 <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                 <x-menu-item title="Statistic" link="/docs/components/statistic" />
+                <x-menu-item title="Steps" link="/docs/components/steps" badge="new" badge-classes="!badge-warning" />
                 <x-menu-item title="Timeline" link="/docs/components/timeline" />
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
                 <x-menu-item title="Theme Toggle" link="/docs/components/theme-toggle" badge="new" badge-classes="!badge-warning" />
@@ -160,8 +161,8 @@
                 <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                 <x-menu-item title="Diff" link="/docs/components/diff" />
 
-        </x-menu>
-    </x-slot:sidebar>
+            </x-menu>
+        </x-slot:sidebar>
 
         <x-slot:content class="lg:max-w-4xl">
 
