@@ -61,6 +61,7 @@ Volt::route('/docs/components/spotlight', 'docs.components.spotlight')->middlewa
 Volt::route('/docs/components/statistic', 'docs.components.statistic');
 Volt::route('/docs/components/timeline', 'docs.components.timeline');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');
+Volt::route('/docs/components/theme-toggle', 'docs.components.theme-toggle');
 
 // THIRD-PARTY
 Volt::route('/docs/components/datepicker', 'docs.components.datepicker');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e5b1dd87e1c3ef5720968211195a676",
+    "content-hash": "5827e859b5d2f0365c8e347a660855ec",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3766,17 +3766,11 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.14.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "524d44c9b7027e3058482a0e1fdc0d7081bdad91"
-            },
+            "version": "dev-theme-toggle",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/524d44c9b7027e3058482a0e1fdc0d7081bdad91",
-                "reference": "524d44c9b7027e3058482a0e1fdc0d7081bdad91",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/app/packages/mary",
+                "reference": "962706441513f8ebf02ebfcc3539ef77462c7a24"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1",
@@ -3804,7 +3798,11 @@
                     "Mary\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Mary\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -3828,17 +3826,10 @@
                 "tallstack",
                 "ui"
             ],
-            "support": {
-                "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.14.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/robsontenorio",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-12-24T17:04:42+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "symfony/console",
@@ -8869,7 +8860,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
