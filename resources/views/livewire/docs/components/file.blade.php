@@ -203,7 +203,7 @@ class extends Component {
     <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        All are all default labels.
+        Here are all default labels.
     </p>
 
     <x-code no-render>
