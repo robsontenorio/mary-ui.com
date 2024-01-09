@@ -53,6 +53,11 @@
     {{-- Sortable.js --}}
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
 
+    {{-- PhotoSwipe --}}
+    <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe-lightbox.umd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" rel="stylesheet">
+
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
@@ -160,6 +165,7 @@
                 <x-menu-item title="Chart" link="/docs/components/chart" />
                 <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                 <x-menu-item title="Diff" link="/docs/components/diff" />
+                <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" badge="new" badge-classes="!badge-warning" />
 
             </x-menu>
         </x-slot:sidebar>

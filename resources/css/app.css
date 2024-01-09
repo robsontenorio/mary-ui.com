@@ -11,6 +11,10 @@ p {
     @apply pt-1
 }
 
+#marySpotlight a {
+    @apply !no-underline
+}
+
 .docs > ul li {
     @apply list-disc ml-10 pb-2
 }
@@ -48,6 +52,19 @@ p {
 .cropper-point {
     width: 10px !important;
     height: 10px !important;
+}
+
+
+#image-library-landing-demo label {
+    @apply text-base-100
+}
+
+#image-library-landing-demo .label-text-alt {
+    @apply text-base-100
+}
+
+#image-library-landing-demo .relative {
+    @apply bg-base-100 rounded-lg
 }
 
 /*

@@ -40,7 +40,8 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        If you need a native file upload or want to handle only one image see the <a href="/docs/components/file" wire:navigate>File</a> component.
+        If you need a native file upload or want to handle only one image see the <a href="/docs/components/file" wire:navigate>File</a> component. <br>
+        If you need to nicely display images see <a href="/docs/components/image-gallery" wire:navigate>Image Gallery</a> component.
     </x-alert>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
