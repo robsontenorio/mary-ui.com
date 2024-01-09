@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0216d9dcc1ff4e503cc9d6bcc09d88a3",
+    "content-hash": "20c9404d5d2b523a4ce0f74e689d872d",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -3766,16 +3766,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.16.0",
+            "version": "1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "183145186a4621322c5681340c34cc671cfe3604"
+                "reference": "1e5c5f8255cc2c4f6dccfb678a3d28f439ce8ff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/183145186a4621322c5681340c34cc671cfe3604",
-                "reference": "183145186a4621322c5681340c34cc671cfe3604",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/1e5c5f8255cc2c4f6dccfb678a3d28f439ce8ff3",
+                "reference": "1e5c5f8255cc2c4f6dccfb678a3d28f439ce8ff3",
                 "shasum": ""
             },
             "require": {
@@ -3830,7 +3830,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.16.0"
+                "source": "https://github.com/robsontenorio/mary/tree/1.17.0"
             },
             "funding": [
                 {
@@ -3838,7 +3838,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-08T18:52:10+00:00"
+            "time": "2024-01-09T18:19:45+00:00"
         },
         {
             "name": "symfony/console",
@@ -8871,7 +8871,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"

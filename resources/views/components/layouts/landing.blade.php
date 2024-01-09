@@ -29,6 +29,18 @@
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
+    {{-- Cropper.js --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
+
+    {{-- Sortable.js --}}
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
+    
+    {{-- PhotoSwipe --}}
+    <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe-lightbox.umd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" rel="stylesheet">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Algolia docsearch --}}
@@ -36,71 +48,73 @@
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    @if(config('app.env') == 'production')
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
+            gtag('js', new Date());
 
-        gtag('config', 'G-NDC4ZLZ6D2');
-    </script>
+            gtag('config', 'G-NDC4ZLZ6D2');
+        </script>
+    @endif
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-<x-nav sticky>
-    <x-slot:brand>
-        <a href="/" wire:navigate>
-            <x-mary-brand />
-        </a>
-    </x-slot:brand>
-    <x-slot:actions>
-        <div id="doc-search" class="mr-2 lg:mr-8">...</div>
+    <x-nav sticky>
+        <x-slot:brand>
+            <a href="/" wire:navigate>
+                <x-mary-brand />
+            </a>
+        </x-slot:brand>
+        <x-slot:actions>
+            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
 
-        <div class="hidden lg:block pt-1.5">
-            <a class="github-button" href="https://github.com/robsontenorio/mary" data-size="large" data-show-count="true" data-icon="octicon-star">Star</a>
-        </div>
+            <div class="hidden lg:block pt-1.5">
+                <a class="github-button" href="https://github.com/robsontenorio/mary" data-size="large" data-show-count="true" data-icon="octicon-star">Star</a>
+            </div>
 
-        <div class="hidden lg:block">
-            <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
-        </div>
+            <div class="hidden lg:block">
+                <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
+            </div>
 
-        <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
-        <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
-    </x-slot:actions>
-</x-nav>
+            <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
+            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
+        </x-slot:actions>
+    </x-nav>
 
-<x-main>
-    <x-slot:content class="px-0 lg:px-0">
-        {{ $slot }}
-    </x-slot:content>
-    <x-slot:footer>
-        <hr />
-        <div class="justify-center items-baseline flex my-10">
-            <x-mary-brand />
-            <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
-        </div>
-    </x-slot:footer>
-</x-main>
+    <x-main>
+        <x-slot:content class="px-0 lg:px-0">
+            {{ $slot }}
+        </x-slot:content>
+        <x-slot:footer>
+            <hr />
+            <div class="justify-center items-baseline flex my-10">
+                <x-mary-brand />
+                <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
+            </div>
+        </x-slot:footer>
+    </x-main>
 
-{{-- Star --}}
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+    {{-- Star --}}
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-{{-- Algolia search docs --}}
-<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
-<script type="text/javascript">
-    docsearch({
-        appId: '0AWOCS02I6',
-        apiKey: '7814a814bf52a38ef15b03d5bf6be0f5',
-        indexName: 'mary-ui',
-        insights: true, // Optional, automatically send insights when user interacts with search results
-        container: '#doc-search',
-        debug: false // Set debug to true if you want to inspect the modal
-    });
-</script>
+    {{-- Algolia search docs --}}
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
+    <script type="text/javascript">
+        docsearch({
+            appId: '0AWOCS02I6',
+            apiKey: '7814a814bf52a38ef15b03d5bf6be0f5',
+            indexName: 'mary-ui',
+            insights: true, // Optional, automatically send insights when user interacts with search results
+            container: '#doc-search',
+            debug: false // Set debug to true if you want to inspect the modal
+        });
+    </script>
 </body>
 
 </html>

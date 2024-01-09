@@ -16,8 +16,8 @@ class MaryBrand extends Component
         return <<<'HTML'
             <div class="flex flex-wrap items-baseline">
                 <span
-                    class="font-extrabold text-4xl mr-3 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent ">                                            
-                    mary                
+                    class="font-extrabold text-4xl mr-3 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent ">
+                    mary
                 </span>
                 <!-- <span class=" text-gray-500 text-sm font-medium">Laravel blade components</span>             -->
             </div>

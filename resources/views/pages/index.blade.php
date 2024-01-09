@@ -6,8 +6,18 @@ use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Volt\Component;
+use Livewire\WithFileUploads;
+use Mary\Traits\WithMediaSync;
 
 new #[Layout('components.layouts.landing')] class extends Component {
+    use WithFileUploads, WithMediaSync;
+
+    #[Rule(['files.*' => 'image|max:100'])]
+    public array $files = [];
+
+    #[Rule('required')]
+    public Collection $library;
+
     #[Rule('required|min:10')]
     public string $name = '';
 
@@ -16,6 +26,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public Collection $users;
 
+    public User $user;
+
     public array $selected_users = [];
 
     public array $selected = [1, 3];
@@ -23,6 +35,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
     public function mount()
     {
         $this->users = User::take(4)->get();
+        $this->user = User::inRandomOrder()->first();
+        $this->library = new Collection();
 
         $this->search();
     }
@@ -54,21 +68,16 @@ new #[Layout('components.layouts.landing')] class extends Component {
 ?>
 
 <div class="docs">
-    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-20 pt-20 pb-32 px-5 lg:px-20">
-        <div class="font-bold text-6xl text-center mb-10 mt-20">
-            <span class="font-extrabold">Do more</span>. <span class="font-thin">Code less</span>.
-        </div>
-
+    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-20 pt-20 pb-32 px-5 lg:px-20 rounded-box">
         <div class="text-center">
-
             <div class="flex gap-5 justify-center items-center my-10">
-                <img src="/laravel.png" class="w-8 h-8" />
-                <img src="/livewire.png" class="w-9 h-7" />
-                <img src="/tailwind.png" class="w-9 h-7" />
-                <img src="/daisy.png" class="w-6 h-8" />
+                <img src="/laravel.png" class="w-12 h-12" />
+                <img src="/livewire.png" class="w-13 h-11" />
+                <img src="/tailwind.png" class="w-13 h-11" />
+                <img src="/daisy.png" class="w-9 h-12" />
             </div>
 
-            <div class="text-xl leading-10">
+            <div class="text-xl leading-10 lg:text-4xl lg:leading-relaxed">
                 Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel Blade UI Components</span>
                 <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
                 and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
@@ -80,65 +89,105 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
     </div>
 
-    <div class="px-5 lg:px-20 pb-40 pt-10">
-        <div class="grid lg:grid-cols-2 mt-10 gap-10 items-center">
-            <div class="lg:mx-24">
-                <div class="flex justify-center">
-                    <img src="/paper.png" width="300" />
-                </div>
-                <div>
-                    <p class="text-lg leading-10">
-                        The <span class="underline decoration-green-400 font-bold">elegant</span> and <span class="underline decoration-sky-400 font-bold">minimalist</span> demo.
-                        <br>
-                        <span class="underline decoration-yellow-400 font-bold">Get surprised</span> how smooth was to built it.
-                    </p>
-                    <div class="flex gap-3">
-                        <x-button label="See the demo" icon-right="o-arrow-right" link="https://paper.mary-ui.com" class="!no-underline btn-warning" external />
-                        <x-button label="Source code" icon="o-code-bracket" link="https://github.com/robsontenorio/paper.mary-ui.com" class="!no-underline" external />
-                    </div>
+    <div class="px-5 lg:px-20 py-20">
+        <div class="font-extrabold text-4xl py-10">
+            Amazing components.
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16">
+            <div>
+                <p>
+                    <span class="text-xl font-bold">Image Gallery</span> <br>
+                </p>
+
+                @php
+                    $images = [
+                        'https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg',
+                        'https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg',
+                        'https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg',
+                        'https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg',
+                        'https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg',
+                    ]
+                @endphp
+
+                <x-image-gallery :images="$images" class="h-40 rounded-box" />
+            </div>
+            <div>
+                <p>
+                    <span class="text-xl font-bold">Spotlight</span><br>
+                </p>
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-5 pb-8 ">
+                    <p class="text-base-100">Search for "a" to see what kind of content it returns.</p>
+                    <kbd class="kbd">Ctrl/Cmd</kbd> <span class="text-base-100">+</span> <kbd class="kbd">G</kbd>
                 </div>
             </div>
             <div>
-                <div class="mockup-browser border bg-base-300">
+                <p>
+                    <span class="text-xl font-bold">Image Library</span> <br>
+                </p>
+
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-5 pb-8 " id="image-library-landing-demo">
+                    <x-image-library
+                        wire:model="files"
+                        wire:library="library"
+                        :preview="$library"
+                        label="Product images"
+                        hint="Images | Max 100Kb" />
+                </div>
+            </div>
+            <div>
+                <p>
+                    <span class="text-xl font-bold">Everything you need...</span> <br>
+                </p>
+                <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 gap-5 p-8 py-14 rounded-box overflow-x-auto flex items-center">
+                    <div class="font-black text-base-100">30+ beautiful components</div>
+                    <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-outline text-white !no-underline" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-5 lg:px-20 pb-40 pt-10 bg-base-200/50 rounded-box">
+        <div class="font-extrabold text-4xl py-10 text-right">
+            Delightful demos.
+        </div>
+
+        <div class="grid lg:grid-cols-2 mt-10 gap-24 items-center overscroll-x-auto">
+
+            {{--   PAPER DEMO  --}}
+            <div>
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
-                    <div>
+                    <a href="https://paper.mary-ui.com" target="_blank">
                         <img src="/paper-demo.png" />
-                    </div>
+                    </a>
                 </div>
+                <p class="text-lg leading-10">
+                    The <span class="underline decoration-yellow-400 font-bold">elegant</span> and <span class="underline decoration-yellow-400 font-bold">minimalist</span> demo.
+                </p>
             </div>
-        </div>
-    </div>
 
-    <div class="px-5 lg:px-20 pb-40 pt-10">
-        <div class="grid lg:grid-cols-2 mt-10 gap-10 items-center">
+            {{--   ORANGE DEMO  --}}
             <div>
-                <div class="mockup-browser border bg-base-300">
+
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/orange-demo.png" />
+                        <a href="https://orange.mary-ui.com" target="_blank">
+                            <img src="/orange-demo.png" />
+                        </a>
                     </div>
                 </div>
+                <p class="text-lg leading-10">
+                    The <span class="underline decoration-yellow-400 font-bold">refreshing</span> storefront demo.
+                </p>
+
             </div>
-            <div class="lg:mx-16">
-                <div class="flex justify-center">
-                    <img src="/orange-genious.png" width="300" />
-                </div>
-                <div>
-                    <p class="text-lg leading-10">
-                        The <span class="underline decoration-green-400 font-bold">refreshing</span> storefront demo.
-                        <br>
-                        <span class="underline decoration-yellow-400 font-bold">Get amazed</span> how much you can do with <span
-                            class="underline decoration-yellow-400 font-bold">minimal effort</span>.
-                    </p>
-                    <div class="flex gap-3">
-                        <x-button label="See the demo" icon-right="o-arrow-right" link="https://orange.mary-ui.com" class="!no-underline btn-warning" external />
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 
-    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
+    <div class="px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
             Less code, more action.
         </div>
@@ -160,7 +209,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20">
+    <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
         <div class="font-extrabold text-4xl py-10 text-right">
             It. Just. Works.
         </div>
@@ -179,8 +228,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200/50 px-5 lg:px-20 py-20">
-        <div class="font-extrabold text-4xl py-10 text-right">
+    <div class=" px-5 lg:px-20 py-20">
+        <div class="font-extrabold text-4xl py-10">
             Forms.
         </div>
 
@@ -199,8 +248,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20">
-        <div class="font-extrabold text-4xl py-10">
+    <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
+        <div class="font-extrabold text-4xl py-10 text-right">
             Tables.
         </div>
 
@@ -232,12 +281,17 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="bg-base-200/50 py-20 text-center">
+    <div class="my-20 text-center">
 
-        <div class="font-extrabold text-4xl py-10">
+        <div class="font-extrabold text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box py-16 text-base-100 flex items-center justify-center gap-5">
             And more ...
-        </div>
 
-        <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
+            <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="!no-underline btn-outline text-base-100" />
+
+        </div>
+    </div>
+
+    <div class="docs">
+        <x-spotlight />
     </div>
 </div>
