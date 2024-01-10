@@ -94,7 +94,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             Amazing components.
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-16">
+        <div class="grid lg:grid-cols-2 gap-x-16 gap-y-8">
             <div>
                 <p>
                     <span class="text-xl font-bold">Image Gallery</span> <br>

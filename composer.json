@@ -19,6 +19,7 @@
         "laravel/framework": "^10.22",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/livewire": "^3.3",
         "livewire/volt": "^1.6",
         "owenvoke/blade-fontawesome": "^2.4",
@@ -83,5 +84,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

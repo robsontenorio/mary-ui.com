@@ -16,7 +16,7 @@ class extends Component {
 
     <p>
         This component is a wrapper around <a href="https://photoswipe.com" target="_blank">PhotoSwipe</a> to easily display a nice image gallery.
-        It supports swipe gestures on desktop and mobile devices.
+        It supports swipe gestures on mobile devices.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -40,7 +40,7 @@ class extends Component {
     <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        By default, the height of previews will be equal the original image heights. Use some CSS to set max height.
+        By default, the height of previews will be equal to the original images heights. Use some CSS to set max height.
     </p>
 
     <x-code>

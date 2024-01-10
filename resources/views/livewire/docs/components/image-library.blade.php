@@ -36,7 +36,7 @@ class extends Component {
     <p>
         This component manages <strong>multiple image upload</strong> and is powered by Livewire`s
         <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload</a>, including all features like file size/type validation
-        and <strong>automatic</strong> storage persistence.
+        and <strong>automatic</strong> storage persistence on <strong>local</strong> and <strong>S3</strong> disks.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -108,7 +108,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         The following example considers that you named it as <code>library</code> and you are <strong>editing an existing user</strong>.
@@ -150,21 +150,27 @@ class extends Component {
                     // Your stuff ...
 
                     // Sync files and updates library metadata
-                    $this->syncMedia($this->user, $this->files, $this->library);
+                    $this->syncMedia($this->user);
 
-                    // Or ... first create the user, if this components creates a user
+                    // Or ... first create the user, if this component creates a user
                     // $user = User::create([...]);
-                    // $this->syncMedia($user, $this->files, $this->library);
+                    // $this->syncMedia($user);
                 }
             }
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+    <x-anchor title="S3 storage" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Make sure to proper configure <strong>CDN CORS</strong> on your S3 provider, by listing your local and production environment addresses. Otherwise, cropper won't work.
+    </p>
 
     <x-anchor title="Sync options" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Here are all options for syncing media on storage.
+        If you are using default variable names described on "Setup" and "Example" topics above, <strong>you are good to go</strong>.
+        Otherwise, here are all options for syncing media on storage.
     </p>
 
     {{--@formatter:off--}}
@@ -172,11 +178,12 @@ class extends Component {
         @verbatim('docs')
             $this->syncMedia(
                 model: $this->user,         // A model that has an image library
-                files: $this->files,        // Temporary files to sync
-                library: $this->library,    // The library metadata
+                library: 'library',         // The library metadata property on component
+                files: 'files',             // Temp files property on component
                 storage_subpath: '',        // Sub path on storage. Ex: '/users'
-                model_field: 'library',     // The model field that represents the library metadata
+                model_field: 'library',     // The model column that represents the library metadata
                 visibility: 'public'        // Visibility on storage
+                disk: 'public'              // Storage disk. Also works with 's3'
             );
         @endverbatim
     </x-code>
