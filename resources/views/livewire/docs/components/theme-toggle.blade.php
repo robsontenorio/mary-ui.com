@@ -18,6 +18,21 @@ class extends Component {
         This component toggles between light/dark themes and includes an automatic persistent state.
     </p>
 
+    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Enable native Tailwind dark mode support on <code>tailwind.config.js</code>.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="javascript">
+        export default {
+            ...
+            darkMode: 'class', // [tl! highlight]
+        }
+    </x-code>
+    {{--@formatter:off--}}
+
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

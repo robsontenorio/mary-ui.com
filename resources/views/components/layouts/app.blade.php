@@ -202,6 +202,9 @@
     {{-- Spotlight --}}
     <x-spotlight />
 
+    {{-- Theme Toggle --}}
+    <x-theme-toggle class="hidden" />
+
     {{-- Star --}}
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
