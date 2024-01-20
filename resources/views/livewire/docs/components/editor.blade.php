@@ -46,7 +46,7 @@ class extends Component {
                 ...
                 {{-- Make sure you have this, to make file upload secure --}}
                 <meta name="csrf-token" content="{{ csrf_token() }}">
-                
+
                 {{-- TinyMCE --}}
                 <script src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
             </head>
@@ -65,7 +65,7 @@ class extends Component {
             @php                        // [tl! .docs-hide]
                 $text = $this->text;    // [tl! .docs-hide]
             @endphp                     {{-- [tl! .docs-hide] --}}
-            <x-editor wire:model="text" label="Description" hint="The full product description" disk="s3" folder="juju/mica" />
+            <x-editor wire:model="text" label="Description" hint="The full product description" />
         @endverbatim
     </x-code>
 
