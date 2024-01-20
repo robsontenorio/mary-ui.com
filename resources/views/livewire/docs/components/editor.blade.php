@@ -44,12 +44,21 @@ class extends Component {
         @verbatim('docs')
             <head>
                 ...
-                {{-- Make sure you have this, to make file upload secure --}}
+                {{-- Make sure you have this  --}}
                 <meta name="csrf-token" content="{{ csrf_token() }}">
 
                 {{-- TinyMCE --}}
                 <script src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
             </head>
+        @endverbatim
+    </x-code>
+
+    <p>
+        If you are using the <strong>local disk</strong> remember to run this.
+    </p>
+    <x-code language="bash" no-render>
+        @verbatim('docs')
+            php artisan storage:link
         @endverbatim
     </x-code>
 
