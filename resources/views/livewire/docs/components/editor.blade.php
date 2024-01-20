@@ -13,7 +13,7 @@ class extends Component {
     #[Rule('required|min:20')]
     public string $text = '<p><b>Select me</b> to create a link and upload any file, like PDF.</p><p>Also try the <i>image button</i>.</p>';
 
-    public string $text2 = 'Hit enter to see it autogrow until the max height.';
+    public string $text2 = 'Hit ENTER to see it autogrow until the max height.';
 
     public function mount(): void
     {
