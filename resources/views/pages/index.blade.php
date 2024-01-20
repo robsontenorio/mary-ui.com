@@ -139,15 +139,18 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <p>
                     <span class="text-xl font-bold">Everything you need...</span> <br>
                 </p>
-                <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 gap-5 p-8 py-14 rounded-box overflow-x-auto flex items-center">
-                    <div class="font-black text-base-100">30+ beautiful components</div>
+                <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 gap-5 p-8 py-12 rounded-box overflow-x-auto flex items-center justify-between">
+                    <div class="font-black text-base-100">
+                        <span class="text-4xl">39</span><br>
+                        beautiful components
+                    </div>
                     <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-outline text-white !no-underline" />
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="px-5 lg:px-20 pb-40 pt-10 bg-base-200/50 rounded-box">
+    <div class="px-5 lg:px-20 pb-24 pt-10 bg-base-200/50 rounded-box">
         <div class="font-extrabold text-4xl py-10 text-right">
             Delightful demos.
         </div>
@@ -162,9 +165,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                         <img src="/paper-demo.png" />
                     </a>
                 </div>
-                <p class="text-lg leading-10">
-                    The <span class="underline decoration-yellow-400 font-bold">elegant</span> and <span class="underline decoration-yellow-400 font-bold">minimalist</span> demo.
-                </p>
+                <div class="mt-5">
+                    <x-header title="Paper" subtitle="The elegant and minimalist demo." size="text-xl" />
+                </div>
             </div>
 
             {{--   ORANGE DEMO  --}}
@@ -178,9 +181,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                         </a>
                     </div>
                 </div>
-                <p class="text-lg leading-10">
-                    The <span class="underline decoration-yellow-400 font-bold">refreshing</span> storefront demo.
-                </p>
+                <div class="mt-5">
+                    <x-header title="Orange" subtitle="The refreshing storefront demo." size="text-xl" />
+                </div>
 
             </div>
 

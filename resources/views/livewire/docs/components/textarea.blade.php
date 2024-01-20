@@ -15,6 +15,14 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Textarea" />
 
+    <p>This component uses the native HTML textarea.</p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        If you need a rich text editor check the <a href="/docs/components/editor" wire:navigate>Editor</a> component.
+    </x-alert>
+
+    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+
     <x-code>
         @verbatim('docs')
             <x-textarea

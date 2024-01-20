@@ -58,6 +58,9 @@
     <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe-lightbox.umd.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" rel="stylesheet">
 
+    {{-- TinyMCE --}}
+    <script src="https://cdn.tiny.cloud/1/kecao1uumzo3qt3o90pztdtlp82b4ctv8tkvsrjgcx34ock5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
@@ -166,6 +169,7 @@
                 <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                 <x-menu-item title="Diff" link="/docs/components/diff" />
                 <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="Rich Text Editor" link="/docs/components/editor" badge="new" badge-classes="!badge-warning" />
 
             </x-menu>
         </x-slot:sidebar>
