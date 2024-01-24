@@ -121,7 +121,7 @@ new #[Title('Installation')] class extends Component {
     </p>
     <x-code no-render>
         @verbatim('docs')
-            <x-mary-input :value="__('Name')" wire:model="name" />
+            <x-mary-input wire:model="name" />
         @endverbatim
     </x-code>
 
