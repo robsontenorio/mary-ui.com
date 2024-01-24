@@ -10,6 +10,8 @@ new
 class extends Component {
     public int $step = 2;
 
+    public int $example = 1;
+
     public function prev()
     {
         if ($this->step == 1) {
@@ -26,6 +28,24 @@ class extends Component {
         }
 
         $this->step++;
+    }
+
+    public function prev2()
+    {
+        if ($this->example == 1) {
+            return;
+        }
+
+        $this->example--;
+    }
+
+    public function next2()
+    {
+        if ($this->example == 3) {
+            return;
+        }
+
+        $this->example++;
     }
 }; ?>
 
@@ -63,6 +83,28 @@ class extends Component {
             {{-- You could use Alpine with `$wire` here --}}
             <x-button label="Previous" wire:click="prev" />
             <x-button label="Next" wire:click="next" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Style" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Remember if you are using deeper CSS classes than <code>steps-xxxx</code> provided by daisyUI you must configure Tailwind <strong>safelist</strong>.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-steps wire:model="example" steps-color="step-warning">
+                <x-step step="1" text="A" />
+                <x-step step="2" text="B" />
+                <x-step step="3" text="C" data-content="✓" step-classes="!step-success" />
+            </x-steps>
+
+            <hr class="my-5" />
+
+            <x-button label="Previous" wire:click="prev2" />
+            <x-button label="Next" wire:click="next2" />
+
         @endverbatim
     </x-code>
 
