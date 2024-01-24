@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ba23e226e7928bbf6589fe591a3ac4d",
+    "content-hash": "64d768521ba3dbeb7af03df3abd428d3",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2483,20 +2483,21 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.3.5",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "1ef880fbcdc7b6e5e405cc9135a62cd5fdbcd06a"
+                "reference": "5c659ce15c157c2b320ad0ba5f5b828ddc6fa245"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/1ef880fbcdc7b6e5e405cc9135a62cd5fdbcd06a",
-                "reference": "1ef880fbcdc7b6e5e405cc9135a62cd5fdbcd06a",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/5c659ce15c157c2b320ad0ba5f5b828ddc6fa245",
+                "reference": "5c659ce15c157c2b320ad0ba5f5b828ddc6fa245",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^10.0|^11.0",
+                "illuminate/routing": "^10.0|^11.0",
                 "illuminate/support": "^10.0|^11.0",
                 "illuminate/validation": "^10.0|^11.0",
                 "league/mime-type-detection": "^1.9",
@@ -2508,8 +2509,8 @@
                 "laravel/framework": "^10.0|^11.0",
                 "laravel/prompts": "^0.1.6",
                 "mockery/mockery": "^1.3.1",
-                "orchestra/testbench": "^8.0|^9.0",
-                "orchestra/testbench-dusk": "^8.0|^9.0",
+                "orchestra/testbench": "8.20.0|^9.0",
+                "orchestra/testbench-dusk": "8.20.0|^9.0",
                 "phpunit/phpunit": "^10.4",
                 "psy/psysh": "^0.11.22|^0.12"
             },
@@ -2545,7 +2546,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.3.5"
+                "source": "https://github.com/livewire/livewire/tree/v3.4.0"
             },
             "funding": [
                 {
@@ -2553,7 +2554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-02T14:29:17+00:00"
+            "time": "2024-01-23T15:22:18+00:00"
         },
         {
             "name": "livewire/volt",
@@ -4047,16 +4048,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.19.0",
+            "version": "1.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "6836957c495c7870e884cf1419814bbd5c2f0df8"
+                "reference": "f8eae1c96c80de40801563d8c30891eb3d7398be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/6836957c495c7870e884cf1419814bbd5c2f0df8",
-                "reference": "6836957c495c7870e884cf1419814bbd5c2f0df8",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/f8eae1c96c80de40801563d8c30891eb3d7398be",
+                "reference": "f8eae1c96c80de40801563d8c30891eb3d7398be",
                 "shasum": ""
             },
             "require": {
@@ -4111,7 +4112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.19.0"
+                "source": "https://github.com/robsontenorio/mary/tree/1.19.2"
             },
             "funding": [
                 {
@@ -4119,7 +4120,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-20T02:12:56+00:00"
+            "time": "2024-01-24T14:26:31+00:00"
         },
         {
             "name": "symfony/console",

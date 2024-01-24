@@ -21,11 +21,6 @@ new #[Title('Installation')] class extends Component {
 
     <x-anchor title="Automatic install" size="text-2xl" class="mt-10 mb-5" />
 
-    <p>
-        This package requires that you are installing Mary on a <strong>brand-new</strong> Laravel project, <strong>without any starter kit like Breeze or Jetstream</strong>.
-        The installer also includes a starter layout, a <code>Welcome</code> component and its route.
-    </p>
-
     <x-code no-render language="bash">
         composer require robsontenorio/mary
 
@@ -51,7 +46,7 @@ new #[Title('Installation')] class extends Component {
 
     <x-anchor title="Renaming components" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        If for some reason you need to rename Mary components using a custom prefix, publish the config file.
+        If for some reason you need to rename maryUI components using a custom prefix, publish the config file.
     </p>
 
     <x-code no-render language="bash">
@@ -85,109 +80,49 @@ new #[Title('Installation')] class extends Component {
         php artisan view:clear
     </x-code>
 
-    <x-anchor title="Manual install" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Jetstream and Breeze" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you have an existing Laravel project <strong>with a starter kit like Breeze or Jetstream</strong>, follow these steps.
+        For existing projects that uses <strong>Jetstream</strong> or <strong>Breeze</strong>, the installer will publish <code>config/mary.php</code>
+        with a global prefix on maryUI components to avoid name collision. So, you need to use components like this <code>x-mary-button</code> , <code>x-mary-card</code> ...
     </p>
-    <p>
-        Once Mary was primarily designed to work on fresh projects <strong>without starter kits</strong>,
-        you will have to handle some conflicts by yourself, like <strong>component name collisions</strong> or existing settings.
-    </p>
-    <p>
-        <strong>Not all steps</strong> may apply for some starter kits.
-    </p>
-
-    <x-code no-render language="bash">
-        # Livewire 3
-        composer require livewire/livewire
-
-        # Mary
-        composer require robsontenorio/mary
-
-        # Tailwind and daisyUI
-        yarn add -D tailwindcss daisyui@latest postcss autoprefixer && npx tailwindcss init -p
-    </x-code>
 
     <p>
-        Add <strong>Mary</strong> and <strong>Daisy</strong> entries to <code>tailwind.config.js</code>.
+        The maryUI components provides a great DX that probably you may want to use its components instead of default Jetstream/Breeze components.
     </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="javascript">
-        /** @type {import('tailwindcss').Config} */
-        export default {
-            content: [
-                // You will probably also need these lines
-                "./resources/**/**/*.blade.php",
-                "./resources/**/**/*.js",
-                "./app/View/Components/**/**/*.php",
-                "./app/Livewire/**/**/*.php",
-
-                // Add mary  [tl! highlight:1 .animate-bounce]
-                "./vendor/robsontenorio/mary/src/View/Components/**/*.php"
-            ],
-            theme: {
-                extend: {},
-            },
-
-            // Add daisyUI  [tl! highlight:1 .animate-bounce]
-            plugins: [require("daisyui")]
-        }
-    </x-code>
-    {{--@formatter:on--}}
 
     <p>
-        Add Tailwind directives to <code>resources/css/app.css</code>.
+        <strong>Breeze</strong>
     </p>
-
-    <x-code no-render language="css">
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-    </x-code>
-
-    <p>
-        Setup Livewire default app template.
-    </p>
-
-    <x-code no-render language="bash">
-        # This creates `views/components/layouts/app.blade.php`
-        php artisan livewire:layout
-    </x-code>
-
-    <p>
-        Then add the <code>&#x40;vite</code> directive on the default app template <code>views/components/layouts/app.blade.php</code>.
-    </p>
-
     <x-code no-render>
         @verbatim('docs')
-            <head>
-                ...
-
-                {{-- This [tl! highlight:1 .animate-bounce] --}}
-                @vite(['resources/css/app.css', 'resources/js/app.js'])
-            </head>
-
-            <body>...</body>
+            <div>
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            </div>
         @endverbatim
     </x-code>
 
     <p>
-        Finally, start the dev server.
+        <strong>Jetstream</strong>
     </p>
-
-    <x-code no-render language="bash">
-        yarn dev
+    <x-code no-render>
+        @verbatim('docs')
+            <div>
+                <x-label for="name" value="{{ __('Name') }}" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+        @endverbatim
     </x-code>
 
     <p>
-        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... You are done!</strong>
+        <strong>maryUI</strong>
     </p>
-
-    <x-alert icon="o-light-bulb">
-        Check the <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
-    </x-alert>
+    <x-code no-render>
+        @verbatim('docs')
+            <x-mary-input :value="__('Name')" wire:model="name" />
+        @endverbatim
+    </x-code>
 
 </div>
