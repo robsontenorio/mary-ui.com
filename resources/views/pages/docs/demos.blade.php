@@ -6,7 +6,7 @@ use Livewire\Volt\Component;
 
 new
 #[Title("Demos")]
-#[Layout('components.layouts.app', ['description' => "Gorgeous demos built with MaryUI"])]
+#[Layout('components.layouts.app', ['description' => "Gorgeous demos built with maryUI"])]
 class extends Component {
     //
 }; ?>
@@ -18,7 +18,7 @@ class extends Component {
         Deep dive into the source code of these demos and
         <span class="bg-warning p-1 font-bold dark:text-white">get amazed</span>
         how much you can do with <span class="underline decoration-warning font-bold">minimal effort</span> learning by example.
-        Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of MaryUI and Livewire.
+        Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of maryUI and Livewire.
     </p>
 
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">

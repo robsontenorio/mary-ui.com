@@ -40,6 +40,10 @@ class extends Component {
         If you don't want to rely on cloud setup, just download TinyMCE SDK and self-host the source code.
     </p>
 
+    <p>
+        Also remember to add your local and production addresses on the allowed domains list.
+    </p>
+
     <x-code no-render>
         @verbatim('docs')
             <head>

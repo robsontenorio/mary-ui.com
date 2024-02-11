@@ -99,14 +99,20 @@
             </a>
         </x-slot:brand>
         <x-slot:actions>
-            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
+            <span class="hidden lg:inline-flex flex gap-3">
+                <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
+                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost" />
+                <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
+            </span>
 
-            <span class="pt-1.5 hidden lg:inline-flex flex gap-5">
-            <a class="github-button" href="https://github.com/sponsors/robsontenorio" data-icon="octicon-heart" data-size="large">Sponsor</a>
-            <a class="github-button" href="https://github.com/robsontenorio/mary" data-size="large" data-show-count="true" data-icon="octicon-star">Star</a>
-        </span>
-            <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
-            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
+            <x-button label="News" icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external responsive />
+            <x-button label="Source" icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm " external responsive />
+
+            <span class="hidden lg:inline-flex">
+                <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
+            </span>
+
+            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
         </x-slot:actions>
     </x-nav>
 
@@ -205,9 +211,6 @@
 
     {{-- Spotlight --}}
     <x-spotlight />
-
-    {{-- Theme Toggle --}}
-    <x-theme-toggle class="hidden" />
 
     {{-- Star --}}
     <script async defer src="https://buttons.github.io/buttons.js"></script>

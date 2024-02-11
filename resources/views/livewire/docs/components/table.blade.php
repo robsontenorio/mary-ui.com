@@ -297,7 +297,7 @@ class extends Component {
     <br>
 
     <p>
-        Here are some useful styles to add on <code>app.css</code>. Notice this is about default classes provided by Laravel paginator links <strong>not MaryUI itself</strong>.
+        Here are some useful styles to add on <code>app.css</code>. Notice this is about default classes provided by Laravel paginator links <strong>not maryUI itself</strong>.
         Fell free to change it.
     </p>
 
@@ -334,8 +334,6 @@ class extends Component {
         @verbatim('docs')
             @php
                 $users = App\Models\User::with('city')->take(2)->get();
-                $abc = 11;
-                $xx = 22;
 
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100'], # <--- custom CSS
@@ -344,12 +342,9 @@ class extends Component {
                 ];
             @endphp
 
-            xxxx {{ $abc }}
-
             <x-table :headers="$headers" :rows="$users">
                 {{-- Overrides `name` header --}}
-                @scope('header_name', $header, $abc, $xx)
-                    yyy {{ $abc }} {{ $xx }}
+                @scope('header_name', $header)
                     {{ $header['label'] }} <x-icon name="s-question-mark-circle" />
                 @endscope
 

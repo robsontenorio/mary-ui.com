@@ -35,7 +35,7 @@
 
     {{-- Sortable.js --}}
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
-    
+
     {{-- PhotoSwipe --}}
     <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe-lightbox.umd.min.js"></script>
@@ -72,18 +72,20 @@
             </a>
         </x-slot:brand>
         <x-slot:actions>
-            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
-
-            <div class="hidden lg:block pt-1.5">
-                <a class="github-button" href="https://github.com/robsontenorio/mary" data-size="large" data-show-count="true" data-icon="octicon-star">Star</a>
-            </div>
-
-            <div class="hidden lg:block">
+            <span class="hidden lg:inline-flex flex gap-3">
+                <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
+                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost" />
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
-            </div>
+            </span>
 
-            <x-button icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external />
-            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm" external />
+            <x-button label="News" icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external responsive />
+            <x-button label="Source" icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm " external responsive />
+
+            <span class="hidden lg:inline-flex">
+                <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
+            </span>
+
+            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
         </x-slot:actions>
     </x-nav>
 

@@ -68,7 +68,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 ?>
 
 <div class="docs">
-    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-20 pt-20 pb-32 px-5 lg:px-20 rounded-box">
+    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-32 pt-52 pb-32 px-5 lg:px-20 rounded-box">
         <div class="text-center">
             <div class="flex gap-5 justify-center items-center my-10">
                 <img src="/laravel.png" class="w-12 h-12" />
@@ -83,8 +83,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
             </div>
 
-            <div class="mt-10">
-                <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
+            <div class="mt-10 flex gap-3 justify-center">
+                <x-button label="Bootcamp" icon-right="o-code-bracket" link="/bootcamp/introduction" class="btn-neutral !no-underline" />
+                <x-button label="Installation" icon-right="o-arrow-right" link="/docs/installation" class="bg-purple-500 hover:bg-purple-700 text-white !no-underline" />
             </div>
         </div>
     </div>
@@ -144,7 +145,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                         <span class="text-4xl">39</span><br>
                         beautiful components
                     </div>
-                    <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-outline text-white !no-underline" />
+                    <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="!no-underline btn-outline text-base-100" />
                 </div>
             </div>
         </div>
