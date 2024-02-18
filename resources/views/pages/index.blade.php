@@ -44,7 +44,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public bool $myModal = false;
 
-    public string $text = '<p>It automatically upload images using <b>local</b> os <b>S3</b> disks.</p>';
+    public string $text = '<p>It automatically upload images using <b>local</b> or <b>S3</b> disks.</p>';
 
     public function mount()
     {
