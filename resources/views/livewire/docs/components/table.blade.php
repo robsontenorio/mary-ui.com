@@ -128,7 +128,7 @@ class extends Component {
     <x-anchor title="Header classes" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Any class set on <code>$header</code> will be applied to respective columns.
+        Any class set on <code>$headers</code> will be applied to respective columns.
         You can also control columns visibility using Tailwind responsive breakpoints. Resize this window to see it.
     </p>
 
@@ -554,7 +554,7 @@ class extends Component {
 
             <x-table :headers="$headers" :rows="$users">
                 @scope('cell_name', $user)
-                ({{  $this->loop->index }}) {{ $user->name }}
+                    ({{  $this->loop->index }}) {{ $user->name }}
                 @endscope
             </x-table>
         @endverbatim
