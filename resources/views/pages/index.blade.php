@@ -84,7 +84,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
 
             <div class="mt-10 flex gap-3 justify-center">
-                <x-button label="Bootcamp" icon-right="o-code-bracket" link="/bootcamp/introduction" class="btn-neutral !no-underline" />
+                <x-button label="Bootcamp" icon-right="o-code-bracket" link="/bootcamp/01" class="btn-neutral !no-underline" />
                 <x-button label="Installation" icon-right="o-arrow-right" link="/docs/installation" class="bg-purple-500 hover:bg-purple-700 text-white !no-underline" />
             </div>
         </div>
@@ -98,7 +98,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         <div class="grid lg:grid-cols-2 gap-x-16 gap-y-8">
             <div>
                 <p>
-                    <span class="text-xl font-bold">Image Gallery</span> <br>
+                    <span class="text-xl font-medium">Image Gallery</span> <br>
                 </p>
 
                 @php
@@ -115,7 +115,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
             <div>
                 <p>
-                    <span class="text-xl font-bold">Spotlight</span><br>
+                    <span class="text-xl font-medium">Spotlight</span><br>
                 </p>
                 <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-5 pb-8 ">
                     <p class="text-base-100">Search for "a" to see what kind of content it returns.</p>
@@ -124,7 +124,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
             <div>
                 <p>
-                    <span class="text-xl font-bold">Image Library</span> <br>
+                    <span class="text-xl font-medium">Image Library</span> <br>
                 </p>
 
                 <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-5 pb-8 " id="image-library-landing-demo">
@@ -138,7 +138,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
             <div>
                 <p>
-                    <span class="text-xl font-bold">Everything you need...</span> <br>
+                    <span class="text-xl font-medium">Everything you need...</span> <br>
                 </p>
                 <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 gap-5 p-8 py-12 rounded-box overflow-x-auto flex items-center justify-between">
                     <div class="font-black text-base-100">

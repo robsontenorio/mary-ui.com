@@ -101,7 +101,7 @@
         <x-slot:actions>
             <span class="hidden lg:inline-flex flex gap-3">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost" />
+                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
             </span>
 
@@ -137,8 +137,8 @@
                 <x-menu-item title="Tags" link="/docs/components/tags" />
                 <x-menu-item title="Date Time" link="/docs/components/datetime" />
                 <x-menu-item title="Textarea" link="/docs/components/textarea" />
-                <x-menu-item title="File Upload" link="/docs/components/file" badge="new" badge-classes="!badge-warning" />
-                <x-menu-item title="Image Library" link="/docs/components/image-library" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="File Upload" link="/docs/components/file" />
+                <x-menu-item title="Image Library" link="/docs/components/image-library" />
 
                 <x-menu-separator title="List data" icon="o-list-bullet" />
                 <x-menu-item title="List Item" link="/docs/components/list-item" />
@@ -164,18 +164,18 @@
                 <x-menu-item title="Progress" link="/docs/components/progress" />
                 <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                 <x-menu-item title="Statistic" link="/docs/components/statistic" />
-                <x-menu-item title="Steps" link="/docs/components/steps" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="Steps" link="/docs/components/steps" />
                 <x-menu-item title="Timeline" link="/docs/components/timeline" />
                 <x-menu-item title="Tabs" link="/docs/components/tabs" />
-                <x-menu-item title="Theme Toggle" link="/docs/components/theme-toggle" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="Theme Toggle" link="/docs/components/theme-toggle" />
 
                 <x-menu-separator title="Third-party" icon="o-puzzle-piece" />
                 <x-menu-item title="Calendar" link="/docs/components/calendar" />
                 <x-menu-item title="Chart" link="/docs/components/chart" />
                 <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                 <x-menu-item title="Diff" link="/docs/components/diff" />
-                <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" badge="new" badge-classes="!badge-warning" />
-                <x-menu-item title="Rich Text Editor" link="/docs/components/editor" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />
+                <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
 
             </x-menu>
         </x-slot:sidebar>

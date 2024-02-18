@@ -22,7 +22,7 @@ new #[Title('Installation')] class extends Component {
     <x-anchor title="Bootcamp" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you prefer a walkthrough guide, go to maryUI <a href="/bootcamp/introduction">Bootcamp</a> and get amazed how much you can do with minimal effort.
+        If you prefer a walkthrough guide, go to maryUI <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort.
     </p>
 
     <x-anchor title="Automatic install" size="text-2xl" class="mt-10 mb-5" />
