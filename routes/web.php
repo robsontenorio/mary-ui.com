@@ -72,3 +72,12 @@ Volt::route('/docs/components/chart', 'docs.components.chart');
 Volt::route('/docs/components/diff', 'docs.components.diff');
 Volt::route('/docs/components/editor', 'docs.components.editor');
 Volt::route('/docs/components/image-gallery', 'docs.components.image-gallery');
+
+// BOOTCAMP
+Volt::route('/bootcamp/01', 'bootcamp.01');
+Volt::route('/bootcamp/02', 'bootcamp.02');
+Volt::route('/bootcamp/03', 'bootcamp.03');
+Volt::route('/bootcamp/04', 'bootcamp.04');
+Volt::route('/bootcamp/05', 'bootcamp.05');
+Volt::route('/bootcamp/06', 'bootcamp.06');
+Volt::route('/bootcamp/07', 'bootcamp.07');

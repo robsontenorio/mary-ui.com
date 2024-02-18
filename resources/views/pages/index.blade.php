@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\City;
 use App\Models\User;
 use Illuminate\Support\Collection;
 use Livewire\Attributes\Computed;
@@ -7,10 +8,11 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 use Mary\Traits\WithMediaSync;
 
 new #[Layout('components.layouts.landing')] class extends Component {
-    use WithFileUploads, WithMediaSync;
+    use WithFileUploads, WithMediaSync, WithPagination;
 
     #[Rule(['files.*' => 'image|max:100'])]
     public array $files = [];
@@ -30,14 +32,33 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public array $selected_users = [];
 
+    public array $selected_cities = [];
+
     public array $selected = [1, 3];
+
+    public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+
+    public array $expanded = [];
+
+    public bool $showDrawer = false;
+
+    public bool $myModal = false;
+
+    public string $text = '<p>It automatically upload images using <b>local</b> os <b>S3</b> disks.</p>';
 
     public function mount()
     {
+        // TinyMCE (image upload)
+        if (! auth()->user()) {
+            auth()->login(User::inRandomOrder()->first());
+        }
+
+        // Image Library
         $this->users = User::take(4)->get();
         $this->user = User::inRandomOrder()->first();
         $this->library = new Collection();
 
+        // Choices
         $this->search();
     }
 
@@ -67,8 +88,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
 ?>
 
-<div class="docs">
-    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-20 pt-20 pb-32 px-5 lg:px-20 rounded-box">
+<div class="docs landing">
+    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-32 pt-52 pb-32 px-5 lg:px-20 rounded-box">
         <div class="text-center">
             <div class="flex gap-5 justify-center items-center my-10">
                 <img src="/laravel.png" class="w-12 h-12" />
@@ -83,8 +104,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
             </div>
 
-            <div class="mt-10">
-                <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-primary !no-underline animate-pulse" />
+            <div class="mt-10 flex gap-3 justify-center">
+                {{--                <x-button label="Bootcamp" icon-right="o-code-bracket" link="/bootcamp/01" class="btn-neutral !no-underline" />--}}
+                <x-button label="Installation" icon-right="o-arrow-right" link="/docs/installation" class="bg-purple-500 hover:bg-purple-700 text-white !no-underline" />
             </div>
         </div>
     </div>
@@ -96,10 +118,6 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
         <div class="grid lg:grid-cols-2 gap-x-16 gap-y-8">
             <div>
-                <p>
-                    <span class="text-xl font-bold">Image Gallery</span> <br>
-                </p>
-
                 @php
                     $images = [
                         'https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg',
@@ -113,49 +131,34 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <x-image-gallery :images="$images" class="h-40 rounded-box" />
             </div>
             <div>
-                <p>
-                    <span class="text-xl font-bold">Spotlight</span><br>
-                </p>
-                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-5 pb-8 ">
-                    <p class="text-base-100">Search for "a" to see what kind of content it returns.</p>
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box pt-10 px-8 pb-4 ">
                     <kbd class="kbd">Ctrl/Cmd</kbd> <span class="text-base-100">+</span> <kbd class="kbd">G</kbd>
+                    <p class="text-base-100">Search for "a" to see what kind of content it returns.</p>
                 </div>
             </div>
             <div>
-                <p>
-                    <span class="text-xl font-bold">Image Library</span> <br>
-                </p>
-
-                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-5 pb-8 " id="image-library-landing-demo">
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box p-10 " id="image-library-landing-demo">
                     <x-image-library
                         wire:model="files"
                         wire:library="library"
                         :preview="$library"
-                        label="Product images"
                         hint="Images | Max 100Kb" />
                 </div>
             </div>
             <div>
-                <p>
-                    <span class="text-xl font-bold">Everything you need...</span> <br>
-                </p>
-                <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 gap-5 p-8 py-12 rounded-box overflow-x-auto flex items-center justify-between">
-                    <div class="font-black text-base-100">
-                        <span class="text-4xl">39</span><br>
-                        beautiful components
-                    </div>
-                    <x-button label="GET STARTED" icon-right="o-arrow-right" link="/docs/installation" class="btn-outline text-white !no-underline" />
+                <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 p-3.5 rounded-box">
+                    <x-editor wire:model="text" :config="['height' => 150, 'plugins' => 'autoresize']" />
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="px-5 lg:px-20 pb-24 pt-10 bg-base-200/50 rounded-box">
-        <div class="font-extrabold text-4xl py-10 text-right">
+    <div class="px-5 lg:px-20 pt-20 bg-base-200/50 rounded-box">
+        <div class="font-extrabold text-4xl pt-10 text-right">
             Delightful demos.
         </div>
 
-        <div class="grid lg:grid-cols-2 mt-10 gap-24 items-center overscroll-x-auto">
+        <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
 
             {{--   PAPER DEMO  --}}
             <div>
@@ -172,7 +175,6 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
             {{--   ORANGE DEMO  --}}
             <div>
-
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
@@ -184,15 +186,26 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <div class="mt-5">
                     <x-header title="Orange" subtitle="The refreshing storefront demo." size="text-xl" />
                 </div>
-
             </div>
 
+            {{--   FLOW DEMO  --}}
+            <div>
+                <div class="mockup-browser  bg-base-300 transition-all shadow-xl">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div class="blur-sm">
+                        <img src="/flow-demo.png" />
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <x-header title="Flow" subtitle="The dashboard demo (coming soon)." size="text-xl" />
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
-            Less code, more action.
+            Lists
         </div>
 
         <x-code side-by-side render-col-span="4" code-col-span="8">
@@ -214,18 +227,37 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
         <div class="font-extrabold text-4xl py-10 text-right">
-            It. Just. Works.
+            Multi selection
         </div>
 
-        <x-code side-by-side render-col-span="6" code-col-span="6" class="grid gap-5">
+        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
                 @php                              // [tl! .docs-hide]
-                    $users = $this->users;   // [tl! .docs-hide]
+                    $users = $this->users;       // [tl! .docs-hide]
                 @endphp                         {{-- [tl! .docs-hide] --}}
                 <x-choices
-                    label="Searchable"
+                    label="Users - server side"
                     wire:model="selected_users"
                     :options="$users"
+                    icon="s-bolt"
+                    hint="Search happens on server side"
+                    searchable />
+            @endverbatim
+        </x-code>
+
+        <hr class="my-12" />
+
+        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
+            @verbatim('docs')
+                @php                                    // [tl! .docs-hide]
+                    $cities = App\Models\City::all();   // [tl! .docs-hide]
+                @endphp                                 {{-- [tl! .docs-hide] --}}
+                <x-choices-offline
+                    label="Cities - frontend side"
+                    wire:model="selected_cities"
+                    :options="$cities"
+                    icon="s-bolt-slash"
+                    hint="Search happens on frontend side"
                     searchable />
             @endverbatim
         </x-code>
@@ -236,7 +268,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             Forms.
         </div>
 
-        <x-code side-by-side invert render-col-span="5" code-col-span="7">
+        <x-code side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
                 <x-form wire:submit="save">
                     <x-input label="Name" wire:model="name" icon="o-user" placeholder="Hello" />
@@ -251,37 +283,139 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
-        <div class="font-extrabold text-4xl py-10 text-right">
-            Tables.
+    <div class="px-5 lg:px-20 pt-10 pb-20 bg-base-200/50 rounded-box">
+        <div class="font-extrabold text-4xl pt-10 pb-20 text-right">
+            Drawer & Modal
         </div>
 
-        <x-code side-by-side render-col-span="5" code-col-span="7">
+        <x-code side-by-side invert render-col-span="3" code-col-span="9">
+            @verbatim('docs')
+                @php                                    // [tl! .docs-hide]
+                    $showDrawer = $this->showDrawer;    // [tl! .docs-hide]
+                @endphp                                 {{-- [tl! .docs-hide] --}}
+                <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" />
+
+                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button separator class="lg:w-1/3">
+                    <div>Click outside, on `CANCEL` button or `CLOSE` icon to close.</div>
+
+                    <x-slot:actions>
+                        <x-button label="Cancel" wire:click="$toggle('showDrawer')" />
+                        <x-button label="Confirm" class="btn-primary" />
+                    </x-slot:actions>
+                </x-drawer>
+            @endverbatim
+        </x-code>
+
+        <hr class="my-12" />
+
+        <x-code side-by-side invert render-col-span="3" code-col-span="9">
+            @verbatim('docs')
+                @php                                    // [tl! .docs-hide]
+                    $myModal = $this->myModal;    // [tl! .docs-hide]
+                @endphp                                 {{-- [tl! .docs-hide] --}}
+                <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" />
+
+                <x-modal wire:model="myModal" title="Hello" subtitle="Livewire example" separator>
+                    <div>Click outside, press `ESC` or click `CANCEL` button to close.</div>
+
+                    <x-slot:actions>
+                        <x-button label="Cancel" wire:click="$toggle('myModal')" />
+                        <x-button label="Confirm" class="btn-primary" />
+                    </x-slot:actions>
+                </x-modal>
+            @endverbatim
+        </x-code>
+    </div>
+
+    <div class="px-5 lg:px-20 py-20 rounded-box">
+        <div class="font-extrabold text-4xl py-10">
+            Easy Tables.
+        </div>
+
+        {{--@formatter:off--}}
+        <x-code side-by-side render-col-span="5" code-col-span="7" class="grid gap-5">
+
             @verbatim('docs')
                 @php
-                    // public array $selected = [1, 3];
-
-                    $users = App\Models\User::with('city')->take(5)->get();
+                    use App\Models\User; // [tl! .docs-hide]
+                    $users = User::with('city')->take(4)->get();
 
                     $headers = [
-                        ['key' => 'id', 'label' => '#', 'class' => 'text-red-400'], # <-- css
-                        ['key' => 'name', 'label' => 'Nice Name'],
+                        ['key' => 'id', 'label' => '#', 'class' => 'w-1 bg-yellow-50'], # <-- CSS
+                        ['key' => 'name', 'label' => 'Nice Name', 'class' => 'hidden lg:table-cell'], # <-- responsive
                         ['key' => 'city.name', 'label' => 'City']   # <-- nested object
                     ];
                 @endphp
 
-                {{-- See console ouput --}}
-                {{-- You can use any `$wire.METHOD` on `@row-xxxx` --}}
-                <x-table
-                    :headers="$headers"
-                    :rows="$users"
-                    striped
-                    selectable
-                    wire:model="selected"
-                    @row-click="console.log($event.detail)"
-                    @row-selection="console.log($event.detail)" />
+                <x-table :rows="$users" :headers="$headers" striped />
             @endverbatim
         </x-code>
+        {{--@formatter:on--}}
+    </div>
+
+    <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
+        <div class="font-extrabold text-4xl py-10">
+            Full Tables.
+        </div>
+
+        {{--@formatter:off--}}
+        <x-code>
+            @verbatim('docs')
+                @php
+                    use App\Models\User; // [tl! .docs-hide]
+                    // public array $expanded = [];
+                    // public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+
+                    $sortBy = $this->sortBy;        // [tl! .docs-hide]
+                    $expanded = $this->expanded;    // [tl! .docs-hide]
+                    $users = User::with('city')
+                                ->orderBy(...array_values($this->sortBy))
+                                ->paginate(3);
+
+                    $headers = [
+                        ['key' => 'id', 'label' => '#', 'class' => 'w-1'], # <-- CSS
+                        ['key' => 'name', 'label' => 'Nice Name'],
+                        ['key' => 'username', 'label' => 'Username', 'class' => 'hidden lg:table-cell'], # <--- responsive
+                        ['key' => 'city.name', 'label' => 'City', 'sortable' => false, 'class' => 'hidden lg:table-cell']   # <-- nested object
+                    ];
+
+                    $cell_decoration = [
+                        'name' => [
+                            'bg-yellow-50 italic' => fn(User $user) => Str::of($user->name)->startsWith('A')
+                        ]
+                    ];
+                @endphp
+
+                <x-table
+                    wire:model="expanded"
+                    :headers="$headers"
+                    :rows="$users"
+                    :cell-decoration="$cell_decoration"
+                    :sort-by="$sortBy"
+                    link="/docs/components/table?user_id={id}&city={city.name}"  {{-- Make rows clickables --}}
+                    expandable
+                    with-pagination
+                >
+                    {{--  Expansion slot --}}
+                    @scope('expansion', $user)
+                        <div class="border border-dashed rounded-lg p-5 ">
+                            Hello, {{ $user->name }}!
+                        </div>
+                    @endscope
+
+                    {{-- Actions Slot --}}
+                    @scope('actions', $user)
+                        <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner />
+                    @endscope
+
+                    {{-- Cell scope --}}
+                    @scope('cell_username', $user)
+                        <x-badge :value="$user->username" class="badge-primary" />
+                    @endscope
+                </x-table>
+            @endverbatim
+        </x-code>
+        {{--@formatter:on--}}
     </div>
 
     <div class="my-20 text-center">

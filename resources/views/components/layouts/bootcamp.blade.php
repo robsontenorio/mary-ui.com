@@ -10,7 +10,7 @@
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
     {{--  Meta description  --}}
-    <meta name="description" content="MaryUI is a set of gorgeous Laravel blade components made for Livewire 3 and styled around daisyUI + Tailwind">
+    <meta name="description" content="{{ $description ?? config('app.name') }}">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
@@ -26,8 +26,25 @@
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 
-    {{--  Currency  --}}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
+    {{-- Flatpickr --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+
+    {{-- Vanilla Calendar --}}
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/themes/dark.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.6.2/build/vanilla-calendar.min.js" defer></script>
+
+    {{-- DIFF2HTML --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+
+    {{-- Chart.js  --}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
     {{-- Cropper.js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
@@ -43,6 +60,9 @@
 
     {{-- TinyMCE --}}
     <script src="https://cdn.tiny.cloud/1/kecao1uumzo3qt3o90pztdtlp82b4ctv8tkvsrjgcx34ock5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    {{--  Currency  --}}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -70,6 +90,10 @@
 <body class="min-h-screen font-sans antialiased">
     <x-nav sticky>
         <x-slot:brand>
+            <label for="main-drawer" class="lg:hidden mr-3">
+                <x-icon name="o-bars-3" class="cursor-pointer" />
+            </label>
+
             <a href="/" wire:navigate>
                 <x-mary-brand />
             </a>
@@ -77,7 +101,7 @@
         <x-slot:actions>
             <span class="hidden lg:inline-flex flex gap-3">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                {{--                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />--}}
+                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
             </span>
 
@@ -92,21 +116,34 @@
         </x-slot:actions>
     </x-nav>
 
-    <x-main>
-        <x-slot:content class="px-0 lg:px-0">
+    <x-main with-nav>
+        <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
+            <x-menu icon="o-sparkles" activate-by-route class="mt-5">
+                <x-menu-item title="Introduction" link="/bootcamp/01" icon="fas.dice-one" />
+                <x-menu-separator />
+                <x-menu-item title="Installation" link="/bootcamp/02" icon="fas.dice-two" />
+                <x-menu-item title="List users" link="/bootcamp/03" icon="fas.dice-three" />
+                <x-menu-item title="Update user" link="/bootcamp/04" icon="fas.dice-four" />
+                <x-menu-item title="Spotlight" link="/bootcamp/05" icon="fas.dice-five" />
+                <x-menu-item title="Image Library" link="/bootcamp/06" icon="fas.dice-six" />
+                <x-menu-separator />
+                <x-menu-item title="A wrap" link="/bootcamp/07" icon="fas.dice" />
+
+            </x-menu>
+        </x-slot:sidebar>
+
+        <x-slot:content class="lg:max-w-4xl">
+
             {{ $slot }}
-        </x-slot:content>
-        <x-slot:footer>
-            <hr />
-            <div class="justify-center items-baseline flex my-10">
+
+            <hr class="my-10" />
+
+            <div class="flex justify-center items-center">
                 <x-mary-brand />
                 <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
             </div>
-        </x-slot:footer>
+        </x-slot:content>
     </x-main>
-
-    {{-- Star --}}
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     {{-- Algolia search docs --}}
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3/dist/umd/index.js"></script>
@@ -115,11 +152,19 @@
             appId: '0AWOCS02I6',
             apiKey: '7814a814bf52a38ef15b03d5bf6be0f5',
             indexName: 'mary-ui',
-            insights: true, // Optional, automatically send insights when user interacts with search results
+            insights: true,
             container: '#doc-search',
-            debug: false // Set debug to true if you want to inspect the modal
+            debug: false
         });
     </script>
-</body>
 
+    {{-- Toast --}}
+    <x-toast />
+
+    {{-- Spotlight --}}
+    <x-spotlight />
+
+    {{-- Star --}}
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
 </html>

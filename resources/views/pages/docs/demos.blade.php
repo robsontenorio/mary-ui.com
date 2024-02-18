@@ -6,7 +6,7 @@ use Livewire\Volt\Component;
 
 new
 #[Title("Demos")]
-#[Layout('components.layouts.app', ['description' => "Gorgeous demos built with MaryUI"])]
+#[Layout('components.layouts.app', ['description' => "Gorgeous demos built with maryUI"])]
 class extends Component {
     //
 }; ?>
@@ -18,10 +18,10 @@ class extends Component {
         Deep dive into the source code of these demos and
         <span class="bg-warning p-1 font-bold dark:text-white">get amazed</span>
         how much you can do with <span class="underline decoration-warning font-bold">minimal effort</span> learning by example.
-        Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of MaryUI and Livewire.
+        Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of maryUI and Livewire.
     </p>
 
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-8">
         {{-- PAPER --}}
         <div>
             <a href="https://paper.mary-ui.com" target="_blank">
@@ -49,6 +49,20 @@ class extends Component {
             </a>
             <div class="mt-5">
                 <x-header title="Orange" subtitle="The refreshing storefront demo" size="text-xl" />
+            </div>
+        </div>
+
+        {{-- FLOW --}}
+        <div>
+            <div class="mockup-browser border bg-base-300">
+                <div class="mockup-browser-toolbar"></div>
+                <div class="blur-sm">
+                    <img src="/flow-demo.png" />
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <x-header title="Flow" subtitle="The dashboard demo (coming soon)." size="text-xl" />
             </div>
         </div>
     </div>
