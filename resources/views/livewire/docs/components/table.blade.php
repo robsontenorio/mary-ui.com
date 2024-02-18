@@ -125,6 +125,122 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Header classes" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Any class set on <code>$header</code> will be applied to respective columns.
+        You can also control columns visibility using Tailwind responsive breakpoints. Resize this window to see it.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                use App\Models\User;            // [tl! .docs-hide]
+                $users = User::take(3)->get();
+
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100 w-1'],
+                    ['key' => 'username', 'label' => 'Username'],
+                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:block'],
+                ];
+            @endphp
+
+            <x-table :headers="$headers" :rows="$users"  />
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Row and cell decoration" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        It is possible to define custom logic to apply background colors, or any class, on rows and/or cells.
+        Remember to configure <strong>Tailwind safelist</strong> to compile dynamic css classes you are using.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                use App\Models\User;            // [tl! .docs-hide]
+                $users = User::take(3)->get();
+
+                // Considering this scenario
+                $users[0]->isAdmin = true;
+                $users[0]->isInactive = true;
+
+                $users[1]->isAdmin = true;
+                $users[1]->isInactive = false;
+
+                $users[2]->isAdmin = false;
+                $users[2]->isInactive = true;
+
+                $headers = [
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                    ['key' => 'username', 'label' => 'Username'],
+                ];
+
+                // The `item` will be injected on current loop context.
+                // You can apply any logic to define what class will be applied.
+                // If more than one condition is `true` the respective classes will be merged.
+
+                $row_decoration = [
+                    'bg-yellow-100' => fn(User $user) => $user->isAdmin,
+                    'text-red-500' => fn(User $user) => $user->isAdmin && $user->isInactive,
+                    'underline font-bold' => fn(User $user) => $user->isInactive // <-- combined classes
+                ];
+            @endphp
+
+            <x-table :headers="$headers" :rows="$users" :row-decoration="$row_decoration" />
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <p>
+        You can do the same for cells.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                use App\Models\User;            // [tl! .docs-hide]
+                $users = User::take(3)->get();
+
+                // Considering this scenario
+                $users[0]->isAdmin = true;
+                $users[0]->isInactive = true;
+                $users[0]['city']->isAvailable = true;
+                $users[1]['city']->isAvailable = false;
+
+
+                $headers = [
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                    ['key' => 'username', 'label' => 'Username'],
+                    ['key' => 'city.name', 'label' => 'City'],
+                ];
+
+                // Use the same `headers key`.
+                // The `item` will be injected on current loop context.
+                // You can apply any logic to define what class will be applied.
+                // If more than one condition is `true` the respective classes will be merged.
+
+                $cell_decoration = [
+                    'city.name' => [
+                        'bg-yellow-100 underline' => fn(User $user) => !$user->city->isAvailable,
+                    ],
+                    'username' => [
+                        'text-yellow-500' => fn(User $user) => $user->isAdmin,
+                        'bg-gray-500' => fn(User $user) => $user->isInactive
+                    ]
+                ];
+            @endphp
+
+            <x-table :headers="$headers" :rows="$users" :cell-decoration="$cell_decoration" />
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Sort" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -139,10 +255,10 @@ class extends Component {
 
         public function users(): Collection
         {
-            return User::query()
-                ->orderBy(...array_values($this->sortBy))
-                ->take(3)
-                ->get();
+        return User::query()
+        ->orderBy(...array_values($this->sortBy))
+        ->take(3)
+        ->get();
         }
     </x-code>
     {{--@formatter:on--}}
@@ -231,7 +347,7 @@ class extends Component {
             {{-- You will learn about custom slots on next sections --}}
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy">
                 @scope('cell_city', $user)
-                    <x-badge :value="$user->city->name" class="badge-primary" />
+                <x-badge :value="$user->city->name" class="badge-primary" />
                 @endscope
             </x-table>
 
@@ -253,8 +369,8 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code no-render language="javascript">
         content: [
-            // Add this [tl! highlight .animate-bounce]
-            './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        // Add this [tl! highlight .animate-bounce]
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         ],
     </x-code>
     {{--@formatter:on--}}
@@ -270,7 +386,7 @@ class extends Component {
 
         class ShowUsers extends Component
         {
-            use WithPagination;
+        use WithPagination;
         }
     </x-code>
     {{--@formatter:on--}}
@@ -305,17 +421,17 @@ class extends Component {
     <x-code no-render language="css">
         /* Active page highlight */
         .mary-table-pagination span[aria-current="page"] > span {
-            @apply bg-primary text-base-100
+        @apply bg-primary text-base-100
         }
 
         /* For dark mode*/
         .mary-table-pagination span[aria-disabled="true"] span {
-            @apply bg-inherit
+        @apply bg-inherit
         }
 
         /* For dark mode*/
         .mary-table-pagination button {
-            @apply bg-base-100
+        @apply bg-base-100
         }
     </x-code>
     {{--@formatter:on--}}
@@ -333,10 +449,10 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(2)->get();                
+                $users = App\Models\User::with('city')->take(2)->get();
 
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100'], # <--- custom CSS
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100 w-1'], # <--- custom CSS
                     ['key' => 'name', 'label' => 'Nice Name'],
                     ['key' => 'city.name', 'label' => 'City'], # <---- nested attributes
                 ];
@@ -345,12 +461,12 @@ class extends Component {
             <x-table :headers="$headers" :rows="$users">
                 {{-- Overrides `name` header --}}
                 @scope('header_name', $header)
-                    {{ $header['label'] }} <x-icon name="s-question-mark-circle" />
+                {{ $header['label'] }} <x-icon name="s-question-mark-circle" />
                 @endscope
 
                 {{-- Overrides `city.name` header --}}
                 @scope('header_city.name', $header)
-                    <u>{{ $header['label'] }}</u>
+                <u>{{ $header['label'] }}</u>
                 @endscope
             </x-table>
         @endverbatim
@@ -390,29 +506,56 @@ class extends Component {
 
                 {{-- Notice `$user` is the current row item on loop --}}
                 @scope('cell_id', $user)
-                    <strong>{{ $user->id }}</strong>
+                <strong>{{ $user->id }}</strong>
                 @endscope
 
                 {{-- You can name the injected object as you wish  --}}
                 @scope('cell_name', $stuff)
-                    <x-badge :value="$stuff->name" class="badge-info" />
+                <x-badge :value="$stuff->name" class="badge-info" />
                 @endscope
 
                 {{-- Notice the `dot` notation for nested attribute cell's slot --}}
                 @scope('cell_city.name', $user)
-                    <i>{{ $user->city->name }}</i>
+                <i>{{ $user->city->name }}</i>
                 @endscope
 
                 {{-- The `fakeColumn` does not exist to the actual object --}}
                 @scope('cell_fakeColumn', $user)
-                    <u>{{ $user->city->name }}</u>
+                <u>{{ $user->city->name }}</u>
                 @endscope
 
                 {{-- Special `actions` slot --}}
                 @scope('actions', $user)
-                    <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner class="btn-sm" />
+                <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner class="btn-sm" />
                 @endscope
 
+            </x-table>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Loop context" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can access the <a href="https://laravel.com/docs/10.x/blade#the-loop-variable" target="_blank">loop context</a>
+        on cell scopes through <code>$this->loop</code>.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::with('city')->take(3)->get();
+
+                $headers = [
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
+
+            <x-table :headers="$headers" :rows="$users">
+                @scope('cell_name', $user)
+                ({{  $this->loop->index }}) {{ $user->name }}
+                @endscope
             </x-table>
         @endverbatim
     </x-code>
@@ -494,9 +637,9 @@ class extends Component {
 
                 {{-- Special `expansion` slot --}}
                 @scope('expansion', $user)
-                    <div class="bg-base-200 p-8 font-bold">
-                        Hello, {{ $user->name }}!
-                    </div>
+                <div class="bg-base-200 p-8 font-bold">
+                    Hello, {{ $user->name }}!
+                </div>
                 @endscope
 
             </x-table>
