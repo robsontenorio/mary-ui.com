@@ -142,7 +142,7 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100 w-1'],
                     ['key' => 'username', 'label' => 'Username'],
-                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:block'],
+                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'],
                 ];
             @endphp
 

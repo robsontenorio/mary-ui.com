@@ -101,7 +101,7 @@
         <x-slot:actions>
             <span class="hidden lg:inline-flex flex gap-3">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
+{{--                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />--}}
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
             </span>
 

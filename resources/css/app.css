@@ -27,6 +27,10 @@ p {
     @apply !no-underline
 }
 
+.landing pre {
+    @apply !mt-0
+}
+
 /* Hide elements from <x-code> component when necessary */
 .docs-hide {
     @apply hidden

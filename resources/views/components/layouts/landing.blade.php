@@ -41,6 +41,9 @@
     <script src="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/umd/photoswipe-lightbox.umd.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" rel="stylesheet">
 
+    {{-- TinyMCE --}}
+    <script src="https://cdn.tiny.cloud/1/kecao1uumzo3qt3o90pztdtlp82b4ctv8tkvsrjgcx34ock5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Algolia docsearch --}}
@@ -74,7 +77,7 @@
         <x-slot:actions>
             <span class="hidden lg:inline-flex flex gap-3">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
+                {{--                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />--}}
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
             </span>
 
