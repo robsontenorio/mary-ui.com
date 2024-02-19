@@ -90,7 +90,10 @@ new #[Title('Installation')] class extends Component {
 
     <p>
         For existing projects that uses <strong>Jetstream</strong> or <strong>Breeze</strong>, the installer will publish <code>config/mary.php</code>
-        with a global prefix on maryUI components to avoid name collision. So, you need to use components like this <code>x-mary-button</code> , <code>x-mary-card</code> ...
+        with a global prefix on maryUI components to avoid name collision. So, you need to use components like this:
+    </p>
+    <p>
+        <code>x-mary-button</code> , <code>x-mary-card</code> <code>x-mary-icon</code> ...
     </p>
 
     <p>
