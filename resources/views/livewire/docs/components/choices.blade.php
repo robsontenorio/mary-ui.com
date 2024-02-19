@@ -447,4 +447,19 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can catch the "change" event just like this, as described on Livewire docs.
+        It will return a single or multiple values, depending on if it "single choice" or "multiple choices".
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-choices ... @change-selection="..." />
+            <x-choices-offline ... @change-selection="..." />
+        @endverbatim
+    </x-code>
+
 </div>
