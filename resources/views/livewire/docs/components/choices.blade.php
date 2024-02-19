@@ -451,14 +451,18 @@ class extends Component {
     <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can catch the "change" event just like this, as described on Livewire docs.
-        It will return a single or multiple values, depending on if it "single choice" or "multiple choices".
+        You can catch component events just like described on Livewire docs.
+        In this case the component will trigger the <code>@change-selection</code> and it will contain the selected items keys.
+    </p>
+
+    <p>
+        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component.
     </p>
 
     <x-code no-render>
         @verbatim('docs')
-            <x-choices ... @change-selection="..." />
-            <x-choices-offline ... @change-selection="..." />
+            <x-choices ... @change-selection="console.log($event)" />
+            <x-choices-offline ... @change-selection="console.log($event)" />
         @endverbatim
     </x-code>
 
