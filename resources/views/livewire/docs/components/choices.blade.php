@@ -456,13 +456,13 @@ class extends Component {
     </p>
 
     <p>
-        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component.
+        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component. Because it is a custom event, you must access the key(s) via the <code>detail.value</code> property on the event.
     </p>
 
     <x-code no-render>
         @verbatim('docs')
-            <x-choices ... @change-selection="console.log($event)" />
-            <x-choices-offline ... @change-selection="console.log($event)" />
+            <x-choices ... @change-selection="console.log($event.detail.value)" />
+            <x-choices-offline ... @change-selection="console.log($event.detail.value)" />
         @endverbatim
     </x-code>
 
