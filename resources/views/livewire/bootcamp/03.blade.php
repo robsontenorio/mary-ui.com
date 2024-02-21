@@ -5,41 +5,37 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
 new
-#[Title('maryUI Bootcamp - List users')]
+#[Title('maryUI Bootcamp - Listing users')]
 #[Layout('components.layouts.bootcamp', ['description' => 'Move faster, code less. Get the job done.'])]
 class extends Component {
 }; ?>
 
 <div class="docs">
-    <x-anchor title="List users" />
+    <x-anchor title="Listing users" />
 
     <p>
-        As you can see on the existing <code>users/index.blade.php</code> example component, you can already sort and filter data. But, the data it is hardcoded.
+        As you can see on the existing <code>users/index.blade.php</code> example component you can already sort and filter, but the data it is hardcoded. Let's fix it now!
     </p>
-
-    <p>
-        <x-icon name="o-list-bullet" label="Checklist" class="font-bold" />
-    </p>
-    <ul>
-        <li>Real Eloquent query.</li>
-        <li>Add pagination.</li>
-        <li>Sort and filter by <code>Country</code> relationship.</li>
-        <li>Remove a <code>User</code> and show a notification.</li>
-    </ul>
 
     <x-anchor title="Table component" size="text-2xl" class="mt-10 mb-5" />
 
     <x-button label="Table docs" link="/docs/components/table" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
-    <img src="/bootcamp/03-a.png" class="rounded-lg border shadow-xl my-10" />
+    <img src="/bootcamp/03-a.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
         The <code>x-table</code> is a powerful component. You can easily display data, paginate, customize rows using slots, or make it sortable, clickable, selectable or
         expandable.
     </p>
 
+    <x-code no-render>
+        @verbatim('docs')
+            <x-table :headers="$headers" :rows="$users" />
+        @endverbatim
+    </x-code>
+
     <p>
-        Let's replace entirely the <code>users()</code> method to make it use an Eloquent query.
+        Let's replace <strong>entirely</strong> the <code>users()</code> method to make it use an Eloquent query.
     </p>
 
     {{--@formatter:off--}}
@@ -58,7 +54,7 @@ class extends Component {
 
     <p>
         After this you can see all the users from the database.
-        Notice the <code>users.age</code> column is empty because we have removed it from migrations. Let's fix it now.
+        Notice the <code>users.age</code> column is empty because we have removed it from migrations. Let's fix it on next topic.
     </p>
 
     <x-anchor title="Sorting" size="text-2xl" class="mt-10 mb-5" />
@@ -75,7 +71,7 @@ class extends Component {
     </x-code>
 
     <p>
-        On our <code>headers</code> property let's replace <code>age</code> column for <code>country.name</code>, then refresh the page to see the result.
+        On our <code>$headers</code> property let's replace <code>age</code> column for <code>country.name</code> and refresh the page to see the result.
         Nice! Table component works with <strong>dot notation.</strong>
     </p>
 
@@ -110,11 +106,9 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <p>
-        <strong>Cool! It works now!</strong>
-    </p>
-
     <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
+
+    <img src="/bootcamp/03-b.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
         As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
@@ -130,17 +124,17 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Then, use <code>WithPagination</code> trait from Livewire itself, as described on
+        Then, use <code>WithPagination</code> trait from Livewire itself as described on
         <a href="https://livewire.laravel.com/docs/pagination#basic-usage" target="_blank">Livewire docs</a>.
     </p>
 
     {{--@formatter:off--}}
     <x-code no-render language="php">
-        use Livewire\WithPagination; // [tl! highlight]
+        use Livewire\WithPagination; // [tl! add]
 
         class Welcome extends Component
         {
-            use WithPagination; // [tl! highlight]
+            use WithPagination; // [tl! add]
         }
     </x-code>
     {{--@formatter:on--}}
@@ -166,18 +160,19 @@ class extends Component {
         public function users(): LengthAwarePaginator // [tl! highlight]
         {
             return User::query()
+                ->withAggregate('country', 'name')
                 ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
                 ->orderBy(...array_values($this->sortBy))
-                ->paginate(5); // [tl! highlight]
+                ->get(); // [tl! remove]
+                ->paginate(5); // [tl! add]
         }
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Clear filters" size="text-2xl" class="mt-10 mb-5" />
+
     <p>
-        <strong>Now the pagination works!</strong>
-    </p>
-    <p>
-        But, there is a "bug"...
+        There is a "bug" on pagination...
     </p>
 
     <ul>
@@ -187,7 +182,10 @@ class extends Component {
     </ul>
 
     <p>
-        Actually, <strong>it is not a bug itself</strong>, but a Livewire pagination thing you must be aware when you change filters.
+        Actually <strong>it is not a bug itself</strong>, but a Livewire pagination thing (not maryUI) you must be aware when you change filters.
+    </p>
+
+    <p>
         Let's fix using Livewire lifecycle hooks to reset pagination when any component property changes. Add the following method on the example component.
     </p>
 
@@ -221,10 +219,26 @@ class extends Component {
         }
         @endverbatim
     </x-code>
+    {{--@formatter:on--}}
 
     <x-alert icon="o-light-bulb" class="markdown">
         Pro tip: You could create a trait like <code>ClearsFilters</code> with those methods above to reuse the logic.
     </x-alert>
+
+    <x-anchor title="Table CSS" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can apply CSS on table headers and make it responsive like this. Check it on mobile size.
+    </p>
+
+    <x-code no-render language="php">
+        @verbatim('docs')
+            ['key' => 'country_name', 'label' => 'Country'], // [tl! remove]
+            ['key' => 'country_name', 'label' => 'Country', 'class' => 'hidden lg:table-cell'], // [tl! add]
+        @endverbatim
+    </x-code>
+
+    <p>You can even decorate rows and cell with custom CSS, besides to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for more.</p>
 
     <x-anchor title="Header component" size="text-2xl" class="mt-10 mb-5" />
 
@@ -247,10 +261,10 @@ class extends Component {
     <x-button label="Toast docs" link="/docs/components/toast" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
     <p>
-        The maryUI installer already set up <code>x-toast</code> for you. For more details check its docs.
+        The maryUI installer already set up <code>x-toast</code> for you.
     </p>
     <p>
-        Let's delete a user and show a notification.
+        Let's replace <strong>entirely</strong> <code>delete()</code> method.
     </p>
 
     {{--@formatter:off--}}
@@ -267,7 +281,7 @@ class extends Component {
 
     <x-button label="Drawer docs" link="/docs/components/drawer" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
-    <img src="/bootcamp/03-c.png" class="rounded-lg border shadow-xl my-10" />
+    <img src="/bootcamp/03-c.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
         The <code>x-drawer</code> component is a nice way to not interrupt the users flow, when it is necessary to quickly execute a secondary action.
@@ -287,20 +301,20 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code no-render language="php">
         @verbatim('docs')
-            use App\Models\Country;  // [tl! highlight]
+            use App\Models\Country;  // [tl! add]
 
             new class extends Component {
                 ...
 
                 // Create a public property.
-                public int $country_id = 0; // [tl! highlight]
+                public int $country_id = 0; // [tl! add]
 
                 // Add a condition to filter by country
                 public function users(): LengthAwarePaginator
                 {
                     ...
                     ->when(...)
-                    ->when($this->country_id, fn(Builder $q) => $q->where('country_id', $this->country_id)) // [tl! highlight]
+                    ->when($this->country_id, fn(Builder $q) => $q->where('country_id', $this->country_id)) // [tl! add]
                     ...
                 }
 
@@ -310,7 +324,7 @@ class extends Component {
                     return [
                         'users' => $this->users(),
                         'headers' => $this->headers(),
-                        'countries' => Country::all(), // [tl! highlight]
+                        'countries' => Country::all(), // [tl! add]
                     ];
                 }
             }
@@ -337,21 +351,11 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="It is done!" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        Think for one second... you have <strong>90% of your job done</strong> on listing something: sort, filter and delete.
-        Check the source code again ... <strong>you did a lot with 100~ lines of code!</strong>
-    </p>
-
-    <p>
-        Probably, the remaining 10% here would be to customize table rows with slots, or make it clickable, selectable or expandable.
-        We have good news for you: <strong>maryUI tables does all of them</strong>. For more, check Tables docs.
-    </p>
-
     <x-anchor title="Challenge" size="text-2xl" class="mt-10 mb-5" />
 
     <x-button label="Button docs" link="/docs/components/button" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
+
+    <img src="/bootcamp/03-d.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
         If you are using a drawer probably you will have a few more filter options. In order to have a better UX it would be nice to show how many filters the user have selected.
@@ -361,7 +365,11 @@ class extends Component {
         Tip: use the button <code>badge</code> property and an extra method on your component to count how many filters are filled.
     </p>
 
-    <x-button label="Filters" badge="2" icon="o-funnel" />
+    <x-anchor title="It is done!" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Check the source code again and think for one second... ... <strong>you did a lot with a few code!</strong>
+    </p>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Before proceed, we recommend to make a local commit to keep track what is going on.
@@ -369,6 +377,6 @@ class extends Component {
 
     <div class="flex justify-between mt-10">
         <x-button label="Installation" link="/bootcamp/02" icon="o-arrow-left" class="!no-underline btn-ghost" />
-        <x-button label="Update user" link="/bootcamp/04" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
+        <x-button label="Updating users" link="/bootcamp/04" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
     </div>
 </div>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b802820c97445f6868dc6ac19d387c4",
+    "content-hash": "7f89e721883339679088652af77df90b",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1569,16 +1569,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.29.0",
+            "version": "v10.34.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2d002849a16ad131110a50cbea4d64dbb78515a3"
+                "reference": "c581caa233e380610b34cc491490bfa147a3b62b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2d002849a16ad131110a50cbea4d64dbb78515a3",
-                "reference": "2d002849a16ad131110a50cbea4d64dbb78515a3",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c581caa233e380610b34cc491490bfa147a3b62b",
+                "reference": "c581caa233e380610b34cc491490bfa147a3b62b",
                 "shasum": ""
             },
             "require": {
@@ -1679,7 +1679,7 @@
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
                 "nyholm/psr7": "^1.2",
-                "orchestra/testbench-core": "^8.12",
+                "orchestra/testbench-core": "^8.15.1",
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpstan": "^1.4.7",
                 "phpunit/phpunit": "^10.0.7",
@@ -1767,7 +1767,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-10-24T13:48:53+00:00"
+            "time": "2023-11-28T19:06:27+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -2483,16 +2483,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.4.4",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "c0489d4a76382f6dcf6e2702112f86aa089d0c8d"
+                "reference": "7e7d638183b34fb61621455891869f5abfd55a82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/c0489d4a76382f6dcf6e2702112f86aa089d0c8d",
-                "reference": "c0489d4a76382f6dcf6e2702112f86aa089d0c8d",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/7e7d638183b34fb61621455891869f5abfd55a82",
+                "reference": "7e7d638183b34fb61621455891869f5abfd55a82",
                 "shasum": ""
             },
             "require": {
@@ -2546,7 +2546,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.4.4"
+                "source": "https://github.com/livewire/livewire/tree/v3.4.6"
             },
             "funding": [
                 {
@@ -2554,7 +2554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-28T19:07:11+00:00"
+            "time": "2024-02-20T14:04:25+00:00"
         },
         {
             "name": "livewire/volt",

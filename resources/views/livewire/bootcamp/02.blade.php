@@ -24,7 +24,6 @@ class extends Component {
         <li>Fresh Laravel 11 project up and running.</li>
         <li>No starter kit.</li>
         <li>SQLite database.</li>
-        <li>Be comfortable with Livewire.</li>
     </ul>
 
     <x-code no-render language="bash">
@@ -32,13 +31,13 @@ class extends Component {
     </x-code>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceed, we recommend to make a local commit on each step to keep track what is going on.
+        Before proceed, we recommend to make a local commit on each step to keep track what is going on. After you have Laravel up and running it is time to commit.
     </x-alert>
 
     <x-anchor title="Install maryUI" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Make sure you have selected <strong>"Volt"</strong> during the installing.
+        Make sure you have selected <strong>"Volt"</strong> during this install.
     </p>
 
     <x-code no-render language="bash">
@@ -57,22 +56,42 @@ class extends Component {
 
     <p class="mb-10">
         <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... You are done!</strong>
+        <strong>... Check de browser!</strong>
     </p>
 
-    <x-alert icon="o-light-bulb" class="markdown my-10">
-        It is time to commit.
-    </x-alert>
+    <p>
+        We are using Livewire Volt, take a look at:
+    </p>
+    <ul>
+        <li><code>routes/web.php</code></li>
+        <li><code>resources/views/livewire/users/index.blade.php</code>.</li>
+    </ul>
 
-    <img src="/bootcamp/02-a.png" class="rounded-lg border p-5" />
+    <img src="/bootcamp/02-a.png" class="rounded-lg border shadow-xl p-3 my-10" />
+
+    <x-alert icon="o-light-bulb" class="markdown my-10">
+        Check the source code diff and commit it.
+    </x-alert>
 
     <x-anchor title="Improving the example" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You have a basic working example, but the <strong>data is hardcoded</strong>. So, let's make it work with a real database and add some new models and relationships:
+        You have a basic working example, but the <strong>data is hardcoded</strong>.
+        Let's make it work with a real database and add some new models and relationships.
     </p>
 
-    <ul>
+    <img src="/bootcamp/02-b.png" class="rounded-lg border shadow-xl p-3 mb-10" />
+
+    <p>
+        Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed up things.
+        After run, it is import to take a <strong>look on database</strong> to see what is going on.
+    </p>
+
+    <x-code no-render language="bash">
+        php artisan mary:bootcamp
+    </x-code>
+
+    <ul class="my-10">
         <li>Create a new <code>Country</code> model.</li>
         <li>Create a new <code>Language</code>model.</li>
         <li>Create a <code>User</code> belongs to <code>Country</code> relationship.</li>
@@ -81,26 +100,16 @@ class extends Component {
         <li>Random seed the database with users, countries, languages and its relationships.</li>
     </ul>
 
-    <img src="/bootcamp/02-b.png" class="rounded-lg mt-5" />
-
-    <p>
-        The above part has nothing to do with maryUI. So, we have created a command to do it for you and speed up things. After run, check the source code diff.
-    </p>
-
-    <x-code no-render language="bash">
-        php artisan mary:bootcamp
-    </x-code>
-
     <p>
         If you hit the browser again, of course, <strong>nothing has changed</strong>. On next topic we will work on that component.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Commit it again.
+        Check the source code diff and commit it.
     </x-alert>
 
     <div class="text-right mt-10">
-        <x-button label="List users" link="/bootcamp/03" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
+        <x-button label="Listing users" link="/bootcamp/03" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
     </div>
 
 </div>
