@@ -11,14 +11,10 @@ class extends Component {
 }; ?>
 
 <div class="docs">
-    <x-anchor title="Wrap" />
+    <x-anchor title="A wrap" />
     <x-anchor title="Simple" size="text-2xl" class="mt-10 mb-5" />
 
-    <p>
-        We could extend this Bootcamp infinitely adding cool features ...
-    </p>
-
-    <p>
-        Keep an eye on maryUI demos to check upcoming real word demos.... (mesma frase da pagina do demo sobre codigo real e tirar o maximo de proveito).
-    </p>
+    <div class="flex justify-between mt-10">
+        <x-button label="Home page users" link="/bootcamp/05" icon="o-arrow-left" class="!no-underline btn-ghost" />
+    </div>
 </div>

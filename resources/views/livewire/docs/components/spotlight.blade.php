@@ -33,7 +33,7 @@ class extends Component {
     <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Place <strong>spotlight tag</strong> anywhere on the main layout.
+        Place the <strong>spotlight tag</strong> somewhere on the main layout.
     </p>
 
     {{--@formatter:off--}}

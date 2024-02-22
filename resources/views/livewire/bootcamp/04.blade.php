@@ -155,14 +155,15 @@ class extends Component {
                 public User $user;
 
                 // You could use Livewire "form object" instead.
-                #[Rule('required')] // [tl! highlight:7]
+                #[Rule('required')] // [tl! highlight:8]
                 public string $name = '';
 
                 #[Rule('required|email')]
                 public string $email = '';
 
-                #[Rule('required')]
-                public int $country_id = 0;
+                // Optional
+                #[Rule('sometimes')]
+                public ?int $country_id = null;
 
                 // We also need this to fill Countries combobox on upcoming form
                 public function with(): array // [tl! highlight:5]
@@ -310,7 +311,7 @@ class extends Component {
 
     <p>
         As you can see above, we use a generic image as a placeholder if user has no avatar.
-        So, put a cool image to act as a placeholder at <code>your-app/public/empty-user.jpg</code> folder.
+        We have placed it for you at <code>your-app/public/empty-user.jpg</code> on Bootcamp setup.
     </p>
 
     <img src="/bootcamp/04-hh.png" class="rounded-lg border shadow-xl my-10 p-3" />
@@ -533,8 +534,9 @@ class extends Component {
         @verbatim('docs')
             new class extends Component {
                 ...
-                #[Rule('required')]        // [tl! highlight:1]
-                public string $bio = '';
+                // Optional [tl! highlight:2]
+                #[Rule('sometimes')]
+                public ?string $bio = null;
                 ...
             }
         @endverbatim
@@ -660,7 +662,6 @@ class extends Component {
 
     <div class="flex justify-between mt-10">
         <x-button label="List users" link="/bootcamp/03" icon="o-arrow-left" class="!no-underline btn-ghost" />
-        <x-button label="..." link="/bootcamp/05" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
+        <x-button label="Spotlight" link="/bootcamp/05" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
     </div>
-
 </div>
