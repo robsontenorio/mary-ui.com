@@ -68,7 +68,7 @@ class extends Component {
                                 'avatar' => $user->avatar ?? '/empty-user.jpg',
                                 'name' => $user->name,
                                 'description' => $user->email,
-                                'link' => "/users/{$user->id}"
+                                'link' => "/users/{$user->id}/edit"
                             ];
                         });
                     }

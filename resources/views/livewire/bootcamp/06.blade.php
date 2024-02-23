@@ -302,6 +302,7 @@ class extends Component {
                     $data = $this->validate();
 
                     $data['avatar'] = '/empty-user.jpg';
+                    $data['password'] = Hash::make($data['password']);
 
                     $user = User::create($data);
 
