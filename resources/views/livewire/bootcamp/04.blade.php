@@ -14,7 +14,7 @@ class extends Component {
     <x-anchor title="Updating users" />
 
     <p>
-        Let's build a nice form layout with file upload and cropping. Expect some nice components here!
+        Let's build a nice form layout with file upload and cropping!
     </p>
 
     <img src="/bootcamp/04-a.png" class="rounded-lg border shadow-xl mb-10 p-3" />

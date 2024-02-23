@@ -119,7 +119,8 @@
     <x-main with-nav>
         <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
             <x-menu icon="o-sparkles" activate-by-route class="mt-5">
-                <x-menu-item title="Introduction" link="/bootcamp/01" icon="fas.dice-one" />
+                <x-menu-item title="Bootcamp" link="/bootcamp/01" icon="fas.dice-one" />
+                <x-menu-separator />
                 <x-menu-item title="Setup" link="/bootcamp/02" icon="fas.dice-two" />
                 <x-menu-item title="Listing users" link="/bootcamp/03" icon="fas.dice-three" />
                 <x-menu-item title="Updating users" link="/bootcamp/04" icon="fas.dice-four" />

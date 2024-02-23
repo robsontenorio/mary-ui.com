@@ -21,12 +21,12 @@ class extends Component {
     <x-anchor title="Trade-off" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Remember that starter kits <strong>adds a dozen</strong> of files that probably you will not use. You have to tweak and maintain
-        them <strong>by yourself</strong>, because they are copied into your project.
+        Remember that starter kits adds a dozen of files that probably you will not use. You have to tweak and maintain
+        them by yourself, because they are copied into your project.
     </p>
 
     <p>
-        On the other hand you can think it is a waste of time build from the ground.
+        On the other hand you can think it is a waste of time to build it from the ground.
         But, later you have minimal code to maintain.
     </p>
 
@@ -54,7 +54,7 @@ class extends Component {
     <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        The maryUI components provides a great DX and you do not need to worry about maintain components by yourself.
+        The maryUI components provides a great DX and you do not need to worry about to maintain components by yourself.
     </p>
 
     <p>
@@ -94,11 +94,13 @@ class extends Component {
     <x-anchor title="Authentication" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Keep adding the bellow code on your Bootcamp source code.
+        Here is how looks like the full <code>routes/web.php</code> with Authentication.
     </p>
-    <p>
-        Here is the full <code>routes/web.php</code>.
-    </p>
+    <ul>
+        <li>Login route.</li>
+        <li>Logout route.</li>
+        <li>Protect some routes.</li>
+    </ul>
 
     {{--@formatter:off--}}
     <x-code no-render language="php">
@@ -239,7 +241,7 @@ class extends Component {
     <x-anchor title="Register" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Add this extra route to <code>web.php</code>.
+        Add this <strong>public</strong> extra route to <code>web.php</code>.
     </p>
 
     {{--@formatter:off--}}
@@ -335,7 +337,11 @@ class extends Component {
     </x-code>
 
     <p>
-        <strong>It is done!</strong> You can now hit the <strong>/register</strong> route on browser.
+        <strong>It is done!</strong>
+    </p>
+
+    <p>
+        Hit the <strong>/register</strong> route on browser and create an account. As you are logged in, file uploads will work on <strong>HTML Editor</strong> component.
     </p>
 
     <div class="flex justify-between mt-10">

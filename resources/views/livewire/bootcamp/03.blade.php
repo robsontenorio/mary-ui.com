@@ -365,12 +365,6 @@ class extends Component {
         Tip: use the button <code>badge</code> property and an extra method on your component to count how many filters are filled.
     </p>
 
-    <x-anchor title="It is done!" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        Check the source code again and think for one second... ... <strong>you did a lot with a few code!</strong>
-    </p>
-
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Before proceed, we recommend to make a local commit to keep track what is going on.
     </x-alert>
