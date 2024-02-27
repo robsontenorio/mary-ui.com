@@ -534,6 +534,33 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Inject external variables" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can inject any external variables into any <strong>cell scope</strong> like this.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
+                $headers = [['key' => 'name', 'label' => 'Name']]; // [tl! .docs-hide]
+                $some = 1;
+                $thing = 2;
+            @endphp
+
+            <x-table :headers="$headers" :rows="$users">
+                {{-- The `$user` viariable is the injected automatically from the current loop context --}}
+                {{-- You can pass any extra arbitrary variables after that --}}
+                @scope('cell_name', $user, $some, $thing)
+                    {{ $user->name }} - {{ $some }} - {{ $thing }}
+                @endscope
+            </x-table>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Loop context" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

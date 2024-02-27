@@ -32,6 +32,7 @@ Volt::route('/docs/components/choices', 'docs.components.choices');
 Volt::route('/docs/components/tags', 'docs.components.tags');
 Volt::route('/docs/components/datetime', 'docs.components.datetime');
 Volt::route('/docs/components/textarea', 'docs.components.textarea');
+Volt::route('/docs/components/range', 'docs.components.range');
 Volt::route('/docs/components/file', 'docs.components.file');
 Volt::route('/docs/components/image-library', 'docs.components.image-library');
 
@@ -57,6 +58,7 @@ Volt::route('/docs/components/button', 'docs.components.button');
 Volt::route('/docs/components/card', 'docs.components.card');
 Volt::route('/docs/components/header', 'docs.components.header');
 Volt::route('/docs/components/icon', 'docs.components.icon');
+Volt::route('/docs/components/kbd', 'docs.components.kbd');
 Volt::route('/docs/components/progress', 'docs.components.progress');
 Volt::route('/docs/components/spotlight', 'docs.components.spotlight');
 Volt::route('/docs/components/statistic', 'docs.components.statistic');

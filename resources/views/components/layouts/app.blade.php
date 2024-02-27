@@ -88,6 +88,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
+    {{--    <div class="bg-purple-50 text-center p-2 text-sm dark:bg-base-300">--}}
+    {{--        <x-badge value="new" class="badge-sm bg-purple-300 text-white" />--}}
+    {{--        The dashboard demo:--}}
+    {{--        <a href="https://flow.mary-ui.com" target="_blank" class="underline font-black">Flow &rarr;</a>--}}
+    {{--    </div>--}}
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -122,7 +127,7 @@
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
-                    <x-menu-item title="Demos" link="/docs/demos" badge="2" badge-classes="!badge-warning" />
+                    <x-menu-item title="Demos" link="/docs/demos" badge="3" badge-classes="!badge-warning" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Upgrading" link="/docs/upgrading" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
@@ -139,6 +144,7 @@
                     <x-menu-item title="Tags" link="/docs/components/tags" />
                     <x-menu-item title="Date Time" link="/docs/components/datetime" />
                     <x-menu-item title="Textarea" link="/docs/components/textarea" />
+                    <x-menu-item title="Range Slider" link="/docs/components/range" badge="new" badge-classes="!badge-warning" />
                     <x-menu-item title="File Upload" link="/docs/components/file" />
                     <x-menu-item title="Image Library" link="/docs/components/image-library" />
                 </x-menu-sub>
@@ -167,6 +173,7 @@
                     <x-menu-item title="Card" link="/docs/components/card" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
+                    <x-menu-item title="Kbd" link="/docs/components/kbd" badge="new" badge-classes="!badge-warning" />
                     <x-menu-item title="Progress" link="/docs/components/progress" />
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
