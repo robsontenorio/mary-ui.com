@@ -160,16 +160,30 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
 
-            {{--   PAPER DEMO  --}}
+            {{--   FLOW DEMO  --}}
+            {{--            <div>--}}
+            {{--                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">--}}
+            {{--                    <div class="mockup-browser-toolbar"></div>--}}
+            {{--                    <div>--}}
+            {{--                        <a href="https://flow.mary-ui.com" target="_blank">--}}
+            {{--                            <img src="/flow-demo.png" />--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--                <div class="mt-5">--}}
+            {{--                    <x-header title="Flow" subtitle="The dashboard demo." size="text-xl" />--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
+
             <div>
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
-                    <a href="https://paper.mary-ui.com" target="_blank">
-                        <img src="/paper-demo.png" />
-                    </a>
+                    <div class="blur-sm">
+                        <img src="/flow-demo.png" />
+                    </div>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Paper" subtitle="The elegant and minimalist demo." size="text-xl" />
+                    <x-header title="Flow" subtitle="The dashboard demo (release on March 01)." size="text-xl" />
                 </div>
             </div>
 
@@ -188,18 +202,19 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 </div>
             </div>
 
-            {{--   FLOW DEMO  --}}
+            {{--   PAPER DEMO  --}}
             <div>
-                <div class="mockup-browser  bg-base-300 transition-all shadow-xl">
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
-                    <div class="blur-sm">
-                        <img src="/flow-demo.png" />
-                    </div>
+                    <a href="https://paper.mary-ui.com" target="_blank">
+                        <img src="/paper-demo.png" />
+                    </a>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Flow" subtitle="The dashboard demo (coming soon)." size="text-xl" />
+                    <x-header title="Paper" subtitle="The elegant and minimalist demo." size="text-xl" />
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -295,7 +310,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 @endphp                                 {{-- [tl! .docs-hide] --}}
                 <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" />
 
-                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button separator class="lg:w-1/3">
+                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button separator class="w-11/12 lg:w-1/3">
                     <div>Click outside, on `CANCEL` button or `CLOSE` icon to close.</div>
 
                     <x-slot:actions>

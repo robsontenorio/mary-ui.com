@@ -22,25 +22,37 @@ class extends Component {
     </p>
 
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-8">
-        {{-- PAPER --}}
+        {{-- FLOW --}}
+        {{--        <div>--}}
+        {{--            <a href="https://flow.mary-ui.com" target="_blank">--}}
+        {{--                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">--}}
+        {{--                    <div class="mockup-browser-toolbar"></div>--}}
+        {{--                    <div>--}}
+        {{--                        <img src="/flow-demo.png" />--}}
+        {{--                    </div>--}}
+        {{--                </div>--}}
+        {{--            </a>--}}
+        {{--            <div class="mt-5">--}}
+        {{--                <x-header title="Flow" subtitle="The dashboard demo." size="text-xl" />--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
+
         <div>
-            <a href="https://paper.mary-ui.com" target="_blank">
-                <div class="mockup-browser border bg-base-300">
-                    <div class="mockup-browser-toolbar"></div>
-                    <div>
-                        <img src="/paper-demo.png" />
-                    </div>
+            <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
+                <div class="mockup-browser-toolbar"></div>
+                <div class="blur-sm">
+                    <img src="/flow-demo.png" />
                 </div>
-            </a>
+            </div>
             <div class="mt-5">
-                <x-header title="Paper" subtitle="The elegant and minimalist demo" size="text-xl" />
+                <x-header title="Flow" subtitle="The dashboard demo (release on March 01)." size="text-xl" />
             </div>
         </div>
 
         {{-- ORANGE --}}
         <div>
             <a href="https://orange.mary-ui.com" target="_blank">
-                <div class="mockup-browser border bg-base-300">
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <img src="/orange-demo.png" />
@@ -52,17 +64,18 @@ class extends Component {
             </div>
         </div>
 
-        {{-- FLOW --}}
+        {{-- PAPER --}}
         <div>
-            <div class="mockup-browser border bg-base-300">
-                <div class="mockup-browser-toolbar"></div>
-                <div class="blur-sm">
-                    <img src="/flow-demo.png" />
+            <a href="https://paper.mary-ui.com" target="_blank">
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/paper-demo.png" />
+                    </div>
                 </div>
-            </div>
-
+            </a>
             <div class="mt-5">
-                <x-header title="Flow" subtitle="The dashboard demo (coming soon)." size="text-xl" />
+                <x-header title="Paper" subtitle="The elegant and minimalist demo" size="text-xl" />
             </div>
         </div>
     </div>

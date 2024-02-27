@@ -37,9 +37,11 @@ new #[Title('Installation')] class extends Component {
         Then, start the dev server.
     </p>
 
+    {{--@formatter:off--}}
     <x-code no-render language="bash">
-        yarn dev
+        yarn dev   # or `npm run dev`
     </x-code>
+    {{--@formatter:on--}}
 
     <p>
         <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />

@@ -11,7 +11,7 @@ new #[Title('Customizing')] class extends Component {
     <x-anchor title="Customizing" />
 
     <p>
-        <strong>Any setting or CSS</strong> provided by <strong>daisyUI or Tailwind</strong> are valid for Mary`s components.
+        <strong>Any setting or CSS</strong> provided by <strong>daisyUI or Tailwind</strong> are valid for maryUI components.
         Here are some usefull links:
     </p>
     <ul>
