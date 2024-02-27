@@ -15,14 +15,14 @@
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
-    <meta property="og:title" content="Mary UI">
+    <meta property="og:title" content="maryUI">
     <meta property="og:description" content="Laravel blade components for Livewire 3.">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
-    <meta property="twitter:title" content="Mary UI">
+    <meta property="twitter:title" content="maryUI">
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
 

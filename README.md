@@ -14,7 +14,7 @@ Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) â
 
 ## Contributing
 
-This website is made with Laravel, Livewire, Volt and Mary.
+This website is made with Laravel, Livewire, Volt and maryUI.
 
 Clone the repository.
 

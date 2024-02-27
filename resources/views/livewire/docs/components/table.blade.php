@@ -358,7 +358,7 @@ class extends Component {
     <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        MaryUI uses directly all features offered by Laravel and Livewire itself, including default pagination links and deeper customizations.
+        Notice maryUI uses directly all features offered by Laravel and Livewire itself, including default pagination links and deeper customizations.
         For further details, please, refer to their docs.
     </p>
 

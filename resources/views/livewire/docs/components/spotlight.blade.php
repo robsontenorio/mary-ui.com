@@ -153,7 +153,7 @@ class extends Component {
 
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        As Mary exposes a <strong>public route</strong> to make Spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
+        As maryUI exposes a <strong>public route</strong> to make Spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
     </p>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />

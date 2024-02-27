@@ -21,7 +21,7 @@ class extends Component {
     <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Notice the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not Mary/Livewire/Alpine.
+        Notice the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not maryUI/Livewire/Alpine.
     </p>
 
     <br>

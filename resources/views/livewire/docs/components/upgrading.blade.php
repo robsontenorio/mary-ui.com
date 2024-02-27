@@ -10,7 +10,7 @@ new #[Title('Upgrading')] class extends Component {
     <x-anchor title="Upgrading" />
 
     <p>
-        You should keep an eye on Mary's <a href="https://github.com/robsontenorio/mary/releases">releases page</a> to stay updated.
+        You should keep an eye on maryUI's <a href="https://github.com/robsontenorio/mary/releases">releases page</a> to stay updated.
     </p>
 
     <x-code no-render language="bash">
@@ -18,7 +18,7 @@ new #[Title('Upgrading')] class extends Component {
     </x-code>
 
     <p>
-        As Mary uses <strong>daisyUI</strong> and <strong>Tailwind</strong> you should consider as well upgrade regularly their NPM packages and dependencies.
+        As maryUI uses <strong>daisyUI</strong> and <strong>Tailwind</strong> you should consider as well upgrade regularly their NPM packages and dependencies.
     </p>
 
     <x-code no-render language="bash">
