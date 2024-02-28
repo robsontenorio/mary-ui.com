@@ -32,7 +32,7 @@ class extends Component {
             <x-button label="Open modal" class="btn-primary" onclick="modal17.showModal()" />
 
             {{-- Here is modal`s ID --}}
-            <x-modal id="modal17" title="Are you sure?">
+            <x-modal id="modal17" title="Are you sure?" class="backdrop-blur">
                 Click "cancel" or press ESC to exit.
 
                 <x-slot:actions>

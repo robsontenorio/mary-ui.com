@@ -171,6 +171,7 @@
                     <x-menu-item title="Button" link="/docs/components/button" />
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
+                    <x-menu-item title="Collapse" link="/docs/components/collapse" badge="new" badge-classes="!badge-warning" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
                     <x-menu-item title="Kbd" link="/docs/components/kbd" badge="new" badge-classes="!badge-warning" />
