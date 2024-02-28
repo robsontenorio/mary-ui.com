@@ -112,6 +112,19 @@ new #[Layout('components.layouts.landing')] class extends Component {
     </div>
 
     <div class="px-5 lg:px-20 py-20">
+        <div class="text-4xl py-10 text-center">
+            <span class="underline decoration-pink-500 font-bold">Sponsors</span>
+            <x-icon name="o-heart" class="w-10 h-10 text-pink-500" />
+        </div>
+        <div class="min-h-[86px]">
+            <livewire:sponsors lazy />
+        </div>
+        <div class="text-center mt-5">
+            <x-button label="Sponsor" link="https://github.com/sponsors/robsontenorio" icon-right="o-arrow-right" external class="!no-underline" />
+        </div>
+    </div>
+
+    <div class="px-5 lg:px-20 pt-10 pb-20">
         <div class="font-extrabold text-4xl py-10">
             Amazing components.
         </div>
