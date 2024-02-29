@@ -174,29 +174,17 @@ new #[Layout('components.layouts.landing')] class extends Component {
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
 
             {{--   FLOW DEMO  --}}
-            {{--            <div>--}}
-            {{--                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">--}}
-            {{--                    <div class="mockup-browser-toolbar"></div>--}}
-            {{--                    <div>--}}
-            {{--                        <a href="https://flow.mary-ui.com" target="_blank">--}}
-            {{--                            <img src="/flow-demo.png" />--}}
-            {{--                        </a>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--                <div class="mt-5">--}}
-            {{--                    <x-header title="Flow" subtitle="The dashboard demo." size="text-xl" />--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
-
             <div>
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
-                    <div class="blur-sm">
-                        <img src="/flow-demo.png" />
+                    <div>
+                        <a href="https://flow.mary-ui.com" target="_blank">
+                            <img src="/flow-demo.png" />
+                        </a>
                     </div>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Flow" subtitle="The dashboard demo (release on March 01)." size="text-xl" />
+                    <x-header title="Flow" subtitle="The dashboard demo." size="text-xl" />
                 </div>
             </div>
 

@@ -88,11 +88,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-purple-50 text-center p-2 text-sm dark:bg-base-300">--}}
-    {{--        <x-badge value="new" class="badge-sm bg-purple-300 text-white" />--}}
-    {{--        The dashboard demo:--}}
-    {{--        <a href="https://flow.mary-ui.com" target="_blank" class="underline font-black">Flow &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-purple-50 text-center p-2 text-sm dark:bg-base-300">
+        <x-badge value="new" class="badge-sm bg-purple-300 text-white" />
+        The dashboard demo:
+        <a href="https://flow.mary-ui.com" target="_blank" class="underline font-black">Flow &rarr;</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
