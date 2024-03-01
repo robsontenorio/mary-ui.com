@@ -9,7 +9,7 @@ new
 #[Title('Markdown')]
 #[Layout('components.layouts.app', ['description' => 'Livewire markdown editor component.'])]
 class extends Component {
-    public string $text = "It **automatically** uploads images and files to **local** or **S3** disks.";
+    public string $text = "It **automatically** uploads images to **local** or **S3** disks.";
 
     public string $text2 = "**Custom** settings!";
 
@@ -26,8 +26,8 @@ class extends Component {
     <x-anchor title="Markdown" />
 
     <p>
-        This component is a wrapper around <a href="https://github.com/Ionaru/easy-markdown-editor?tab=readme-ov-file#toolbar-icons" target="_blank">EasyMDE</a>.
-        It <strong>automatically</strong> uploads images and files to <strong>local</strong> or <strong>S3</strong> disks.
+        This component is a wrapper around <a href="https://github.com/Ionaru/easy-markdown-editor" target="_blank">EasyMDE</a>.
+        It <strong>automatically</strong> uploads images to <strong>local</strong> or <strong>S3</strong> disks.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -62,7 +62,7 @@ class extends Component {
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        For security reasons, images and files uploads only works for <strong>authenticated users</strong>.
+        For security reasons, uploads only works for <strong>authenticated users</strong>.
         On all examples we already have a random user logged in.
     </p>
 
@@ -75,7 +75,7 @@ class extends Component {
     <x-anchor title="Upload settings" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        By default, this component automatically uploads images and files to <strong>local public disk</strong> into <strong>"markdown/"</strong> folder.
+        By default, this component automatically uploads images to <strong>local public disk</strong> into <strong>"markdown/"</strong> folder.
         You can change it like this.
     </p>
 
