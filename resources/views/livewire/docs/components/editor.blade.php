@@ -30,7 +30,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        If you need a native textarea see the <a href="/docs/components/textarea" wire:navigate>Textarea</a> component.
+        Also see the <a href="/docs/components/markdown" wire:navigate>Markdown Editor</a> component.
     </x-alert>
 
     <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />

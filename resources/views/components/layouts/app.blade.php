@@ -61,6 +61,10 @@
     {{-- TinyMCE --}}
     <script src="https://cdn.tiny.cloud/1/kecao1uumzo3qt3o90pztdtlp82b4ctv8tkvsrjgcx34ock5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
+    {{-- Markdown --}}
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
@@ -190,6 +194,7 @@
                     <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                     <x-menu-item title="Diff" link="/docs/components/diff" />
                     <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />
+                    <x-menu-item title="Markdown Editor" link="/docs/components/markdown" badge="new" badge-classes="!badge-warning" />
                     <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
                 </x-menu-sub>
             </x-menu>

@@ -75,6 +75,7 @@ Volt::route('/docs/components/chart', 'docs.components.chart');
 Volt::route('/docs/components/diff', 'docs.components.diff');
 Volt::route('/docs/components/editor', 'docs.components.editor');
 Volt::route('/docs/components/image-gallery', 'docs.components.image-gallery');
+Volt::route('/docs/components/markdown', 'docs.components.markdown');
 
 // BOOTCAMP
 Volt::route('/bootcamp/01', 'bootcamp.01');

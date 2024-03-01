@@ -71,6 +71,19 @@ p {
     @apply bg-base-100 rounded-lg
 }
 
+
+.EasyMDEContainer h1 {
+    @apply text-4xl font-bold mb-5
+}
+
+.EasyMDEContainer h2 {
+    @apply text-2xl font-bold mb-3
+}
+
+.EasyMDEContainer h3 {
+    @apply text-lg font-bold mb-3
+}
+
 /*
  Margin and rounding are personal preferences,
  overflow-x-auto is recommended.
