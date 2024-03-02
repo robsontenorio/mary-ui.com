@@ -1,7 +1,7 @@
 {
     "name": "robsontenorio/mary-ui.com",
     "type": "project",
-    "description": "Laravel blade components for Livewire 3",
+    "description": "Laravel Blade UI Components for Livewire 3",
     "keywords": [
         "laravel",
         "livewire3",

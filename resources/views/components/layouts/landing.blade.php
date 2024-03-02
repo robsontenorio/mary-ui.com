@@ -10,21 +10,21 @@
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
     {{--  Meta description  --}}
-    <meta name="description" content="MaryUI is a set of gorgeous Laravel blade components made for Livewire 3 and styled around daisyUI + Tailwind">
+    <meta name="description" content="MaryUI is a set of gorgeous Laravel Blade UI Components made for Livewire 3 and styled around daisyUI + Tailwind">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
     <meta property="og:description" content="Laravel blade components for Livewire 3.">
-    <meta property="og:image" content="https://mary-ui.com/mary-banner.png">
+    <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-01">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
-    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
+    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-01">
 
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
