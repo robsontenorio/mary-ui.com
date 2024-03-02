@@ -16,15 +16,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
-    <meta property="og:description" content="Laravel blade components for Livewire 3.">
-    <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-01">
+    <meta property="og:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-02">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
-    <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
-    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-01">
+    <meta property="twitter:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-02">
 
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
