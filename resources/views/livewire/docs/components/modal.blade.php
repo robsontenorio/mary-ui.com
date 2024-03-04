@@ -8,9 +8,11 @@ new
 #[Title('Modal')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI modal component with title, subtitle, actions and customizable slots.'])]
 class extends Component {
-    public bool $myModal = false;
+    public bool $myModal1 = false;
 
-    public bool $myPersistentModal = false;
+    public bool $myModal2 = false;
+
+    public bool $myModal3 = false;
 }
 
 ?>
@@ -18,61 +20,46 @@ class extends Component {
 <div class="docs">
 
     <x-anchor title="Modal" />
-    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
 
-    <p>
-        Notice the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not maryUI/Livewire/Alpine.
-    </p>
-
-    <br>
-
-    <x-code>
-        @verbatim('docs')
-            {{-- Notice `onclick` is HTML --}}
-            <x-button label="Open modal" class="btn-primary" onclick="modal17.showModal()" />
-
-            {{-- Here is modal`s ID --}}
-            <x-modal id="modal17" title="Are you sure?" class="backdrop-blur">
-                Click "cancel" or press ESC to exit.
-
-                <x-slot:actions>
-                    {{-- Notice `onclick` is HTML --}}
-                    <x-button label="Cancel" onclick="modal17.close()" />
-                    <x-button label="Confirm" class="btn-primary" />
-                </x-slot:actions>
-            </x-modal>
-        @endverbatim
-    </x-code>
-
-    <x-anchor title="With Livewire" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        Instead of <code>id="xxx"</code> use <code>wire:model</code>.
-    </p>
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code no-render language="php">
-        public bool $myModal = false;
+        public bool $myModal1 = false;
     </x-code>
 
     <br>
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            {{-- Livewire: fires network request --}}
-            <x-button label="Livewire" class="btn-primary" wire:click="$toggle('myModal')" />
+            <x-modal wire:model="myModal1" class="backdrop-blur">
+                <div class="mb-5">Press `ESC`, click outside or click `CANCEL` to close.</div>
+                <x-button label="Cancel" @click="$wire.myModal1 = false" />
+            </x-modal>
 
-            {{-- Alpine: no network request --}}
-            <x-button label="Alpine" class="btn-warning" @click="$wire.myModal = true" />
+            <x-button label="Open" @click="$wire.myModal1 = true" />
+        @endverbatim
+    </x-code>
 
-            {{-- Notice `wire:model`, no `id="xxx"` --}}
-            <x-modal wire:model="myModal" title="Hello" subtitle="Livewire example" separator>
-                Press `ESC`, click outside or click `CANCEL` button to close.
+    <x-anchor title="Complex" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code no-render language="php">
+        public bool $myModal2 = false;
+    </x-code>
+
+    <br>
+
+    <x-code class="flex gap-5">
+        @verbatim('docs')
+            <x-modal wire:model="myModal2" title="Hello" subtitle="Livewire example" separator>
+                <div>Hey!</div>
 
                 <x-slot:actions>
-                    <x-button label="Cancel" @click="$wire.myModal = false" />
+                    <x-button label="Cancel" @click="$wire.myModal2 = false" />
                     <x-button label="Confirm" class="btn-primary" />
                 </x-slot:actions>
             </x-modal>
+
+            <x-button label="Open" @click="$wire.myModal2 = true" />
         @endverbatim
     </x-code>
 
@@ -86,21 +73,43 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            {{-- Livewire: fires network request --}}
-            <x-button label="Livewire" class="btn-primary" wire:click="$toggle('myPersistentModal')" />
+            <x-modal wire:model="myModal3" persistent class="backdrop-blur">
+                <div>Processing ...</div>
+                <x-slot:actions>
+                    <x-button label="Cancel" @click="$wire.myModal3 = false" />
+                </x-slot:actions>
+            </x-modal>
 
-            {{-- Alpine: no network request --}}
-            <x-button label="Alpine" class="btn-warning" @click="$wire.myPersistentModal = true" />
+            <x-button label="Open Persistent" @click="$wire.myModal3 = true" />
+        @endverbatim
+    </x-code>
 
-            {{-- Notice `persistent` --}}
-            <x-modal wire:model="myPersistentModal" title="Persistent" separator persistent>
-                I won't close unless you click on `CANCEL` button.
+    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Notice the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not maryUI/Livewire/Alpine.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        This is not a recommend approach if you are using <strong>forms</strong>, because this is native HTML and there is no state management. Use it only for simple
+        confirmations.
+    </x-alert>
+
+    <x-code>
+        @verbatim('docs')
+            {{-- Here is modal`s ID --}}
+            <x-modal id="modal17" title="Are you sure?">
+                <div>Click "cancel" or press ESC to exit.</div>
 
                 <x-slot:actions>
-                    <x-button label="Cancel" @click="$wire.myPersistentModal = false" />
+                    {{-- Notice `onclick` is HTML --}}
+                    <x-button label="Cancel" onclick="modal17.close()" />
                     <x-button label="Confirm" class="btn-primary" />
                 </x-slot:actions>
             </x-modal>
+
+            {{-- Notice `onclick` is HTML --}}
+            <x-button label="Open modal" class="btn-primary" onclick="modal17.showModal()" />
         @endverbatim
     </x-code>
 
