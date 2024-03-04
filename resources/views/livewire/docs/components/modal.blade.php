@@ -91,7 +91,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        This is not a recommend approach if you are using <strong>forms</strong>, because this is native HTML and there is no state management. Use it only for simple
+        This is not a recommended approach if you are using <strong>forms</strong>, because this is native HTML and there is no state management. Use it only for simple
         confirmations.
     </x-alert>
 
