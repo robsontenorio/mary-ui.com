@@ -124,7 +124,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Then, use <code>WithPagination</code> trait from Livewire itself as described on
+        Go back to <code>users/index.blade</code> and use the <code>WithPagination</code> trait from Livewire itself as described on
         <a href="https://livewire.laravel.com/docs/pagination#basic-usage" target="_blank">Livewire docs</a>.
     </p>
 
@@ -132,7 +132,7 @@ class extends Component {
     <x-code no-render language="php">
         use Livewire\WithPagination; // [tl! add]
 
-        class Welcome extends Component
+        new class extends Component
         {
             use WithPagination; // [tl! add]
         }
@@ -344,7 +344,7 @@ class extends Component {
                 ...
                 <div class="grid gap-5"> <!-- [tl! highlight] -->
                     <x-input placeholder="Search..." ... />
-                    <x-select placeholder="Country" wire:model.live="country_id" :options="$countries" icon="o-flag" /> <!-- [tl! highlight:1] -->
+                    <x-select placeholder="Country" wire:model.live="country_id" :options="$countries" icon="o-flag" placeholder-value="0" /> <!-- [tl! highlight:1] -->
                 </div>
 
             </x-drawer>

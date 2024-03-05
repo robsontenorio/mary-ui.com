@@ -16,7 +16,7 @@ class extends Component {
         <x-anchor title="Bootcamp" />
 
         <p>
-            Let's build a full-featured CRUD in no time using straight approaches to get the most out of maryUI andLivewire.
+            Let's build a full-featured CRUD in no time using straight approaches to get the most out of maryUI and Livewire.
             Get <span class="decoration-amber-300 underline decoration-2 font-bold">amazed</span> how much you can do with
             <span class="decoration-amber-300 underline decoration-2 font-bold">minimal effort</span>.
         </p>
