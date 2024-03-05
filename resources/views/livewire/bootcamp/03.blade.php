@@ -130,11 +130,11 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code no-render language="php">
-        use Livewire\WithPagination; // [tl! add]
+        use Livewire\WithPagination; // [tl! highlight]
 
         new class extends Component
         {
-            use WithPagination; // [tl! add]
+            use WithPagination; // [tl! highlight]
         }
     </x-code>
     {{--@formatter:on--}}
@@ -145,12 +145,12 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
-            <x-table ... with-pagination />
+            <x-table ... with-pagination>
         @endverbatim
     </x-code>
 
     <p>
-        Finally, make some changes to use an Eloquent paginated query.
+        Finally, make some changes to use an Eloquent paginated query. Notice the return type is changed.
     </p>
 
     {{--@formatter:off--}}
@@ -163,8 +163,7 @@ class extends Component {
                 ->withAggregate('country', 'name')
                 ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
                 ->orderBy(...array_values($this->sortBy))
-                ->get(); // [tl! remove]
-                ->paginate(5); // [tl! add]
+                ->paginate(5); // No more `->get()`  [tl! highlight]
         }
     </x-code>
     {{--@formatter:on--}}
@@ -214,7 +213,7 @@ class extends Component {
         public function clear(): void
         {
             $this->reset();
-            $this->resetPage(); // [tl! add]
+            $this->resetPage(); // [tl! highlight]
             $this->success('Filters cleared.', position: 'toast-bottom');
         }
         @endverbatim
@@ -264,7 +263,7 @@ class extends Component {
         The maryUI installer already set up <code>x-toast</code> for you.
     </p>
     <p>
-        Let's replace <strong>entirely</strong> <code>delete()</code> method.
+        Let's replace <strong>entirely</strong> the <code>delete()</code> method.
     </p>
 
     {{--@formatter:off--}}
@@ -301,20 +300,20 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code no-render language="php">
         @verbatim('docs')
-            use App\Models\Country;  // [tl! add]
+            use App\Models\Country;  // [tl! highlight]
 
             new class extends Component {
                 ...
 
                 // Create a public property.
-                public int $country_id = 0; // [tl! add]
+                public int $country_id = 0; // [tl! highlight]
 
                 // Add a condition to filter by country
                 public function users(): LengthAwarePaginator
                 {
                     ...
                     ->when(...)
-                    ->when($this->country_id, fn(Builder $q) => $q->where('country_id', $this->country_id)) // [tl! add]
+                    ->when($this->country_id, fn(Builder $q) => $q->where('country_id', $this->country_id)) // [tl! highlight]
                     ...
                 }
 
@@ -324,7 +323,7 @@ class extends Component {
                     return [
                         'users' => $this->users(),
                         'headers' => $this->headers(),
-                        'countries' => Country::all(), // [tl! add]
+                        'countries' => Country::all(), // [tl! highlight]
                     ];
                 }
             }

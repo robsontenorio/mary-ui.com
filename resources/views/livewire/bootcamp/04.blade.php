@@ -219,7 +219,6 @@ class extends Component {
         @verbatim('docs')
             public function mount(): void
             {
-                // Is that legal?
                 $this->fill($this->user);
             }
         @endverbatim
@@ -357,6 +356,8 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
+            {{--  /resources/views/components/layouts/app.blade.php --}}
+
             <head>
                 ...
                 {{-- Cropper.js --}}
@@ -372,7 +373,7 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
-            <x-file ... crop-after-change />
+            <x-file ... crop-after-change>
         @endverbatim
     </x-code>
 
@@ -401,6 +402,7 @@ class extends Component {
                         </x-form>
                     </div>  <!-- [tl! highlight:4] -->
                     <div>
+                        {{-- Get a nice picture from `StorySet` web site --}}
                         <img src="/edit-form.png" width="300" class="mx-auto" />
                     </div>
                 </div>
@@ -419,7 +421,7 @@ class extends Component {
     </p>
 
     <p>
-        Remember that our data model we have a <strong>many-to-many</strong> relationship between <code>User</code> and
+        Remember that on our data model we have a <strong>many-to-many</strong> relationship between <code>User</code> and
         <code>Language</code>.
     </p>
 
@@ -517,6 +519,8 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
+            {{--  /resources/views/components/layouts/app.blade.php --}}
+
             <head>
                 ...
                 {{-- TinyMCE --}}
@@ -628,9 +632,11 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code no-render>
         @verbatim('docs')
-            @scope('cell_avatar', $user)
-                <x-avatar image="{{ $user->avatar ?? '/empty-user.jpeg' }}" class="!w-10" />
-            @endscope
+            <x-table ... >
+                @scope('cell_avatar', $user)                                                    <!-- [tl! highlight:2] -->
+                    <x-avatar image="{{ $user->avatar ?? '/empty-user.jpeg' }}" class="!w-10" />
+                @endscope
+            </x-table>
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
