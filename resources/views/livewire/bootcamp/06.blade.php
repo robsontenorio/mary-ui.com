@@ -14,7 +14,7 @@ class extends Component {
     <x-anchor title="Jetstream & Breeze" />
 
     <p>
-        If you have a project with Jetstream/Breaze the maryUI installer adds a global prefix <code>x-mary-</code> on maryUI components to avoid naming collision.
+        If you have a project with Jetstream/Breeze the maryUI installer adds a global prefix <code>x-mary-</code> on maryUI components to avoid naming collision.
         You are ready to go, just add maryUI components on your project.
     </p>
 

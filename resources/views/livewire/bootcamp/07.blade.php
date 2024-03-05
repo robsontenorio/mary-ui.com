@@ -23,16 +23,17 @@ class extends Component {
     </p>
 
     <p>
-        Deep dive into the source code of <strong>maryUI demos</strong> and get amazed how much you can do with minimal effort learning by example.
+        Also check the <a href="/docs/demos" target="_blank">maryUI demos</a> and get amazed on how much great stuff you can do.
         Each demo contains <strong>real world code</strong> and straight approaches to get the most out of maryUI and Livewire.
     </p>
 
     <p>
-        If you are enjoying maryUI <strong>give it a start</strong> on GitHub and <strong>sponsor it</strong>.
+        If you are enjoying maryUI <a href="https://github.com/robsontenorio/mary">give it a start</a> on GitHub and <a href="https://github.com/sponsors/robsontenorio">sponsor
+            it</a>.
     </p>
 
     <p>
-        See you on Twitter!
+        See you on <a href="https://twitter.com/robsontenorio" target="_blank">Twitter!</a>
     </p>
 
     <div class="flex justify-between mt-10">

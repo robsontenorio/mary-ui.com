@@ -634,7 +634,7 @@ class extends Component {
         @verbatim('docs')
             <x-table ... >
                 @scope('cell_avatar', $user)                                                    <!-- [tl! highlight:2] -->
-                    <x-avatar image="{{ $user->avatar ?? '/empty-user.jpeg' }}" class="!w-10" />
+                    <x-avatar image="{{ $user->avatar ?? '/empty-user.jpg' }}" class="!w-10" />
                 @endscope
             </x-table>
         @endverbatim

@@ -25,7 +25,7 @@ class extends Component {
             We will show you how easy is to start from the ground <span class="decoration-amber-300 underline decoration-2 font-bold">with no starter kits</span>.
         </p>
 
-        <x-button label="Ready? Go!" link="/bootcamp/02" icon-right="o-arrow-right" class="btn-primary my-5 !no-underline" />
+        <x-button label="Ready? Go!" link="/bootcamp/02" icon-right="o-arrow-right" class="btn-neutral my-5 !no-underline" />
     </div>
     <div class="px-10 my-10">
         <img src="/bootcamp/01-c.png" class="rounded-lg  shadow-xl rotate-1" />
@@ -39,7 +39,7 @@ class extends Component {
     </div>
 
     <div class="text-center my-10">
-        <x-button label=" Let's go" link="/bootcamp/02" icon-right="o-arrow-right" class="btn-primary !no-underline" />
+        <x-button label=" Let's go" link="/bootcamp/02" icon-right="o-arrow-right" class="btn-neutral !no-underline" />
     </div>
 
 </div>

@@ -369,7 +369,7 @@ class extends Component {
     </x-alert>
 
     <div class="flex justify-between mt-10">
-        <x-button label="Installation" link="/bootcamp/02" icon="o-arrow-left" class="!no-underline btn-ghost" />
+        <x-button label="Setup" link="/bootcamp/02" icon="o-arrow-left" class="!no-underline btn-ghost" />
         <x-button label="Updating users" link="/bootcamp/04" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
     </div>
 </div>
