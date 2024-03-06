@@ -89,8 +89,8 @@ class extends Component {
             {{-- livewire/users/index.blade.php --}}
             <x-table ... link="users/{id}/edit">
 
-                {{-- You could pass any parameter based on model columns' name --}}
-                <x-table ... link="users/{id}/edit?name={name}&city={city.name}">
+            {{-- You could pass any parameter based on model columns' name --}}
+            <x-table ... link="users/{id}/edit?name={name}&city={city.name}">
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
@@ -122,7 +122,8 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Let's add an <code>x-header</code> in the blade section to test if the User parameter is working. And It will work because of the Laravel route binding mechanism for models.
+        Let's add an <code>x-header</code> in the blade section to test if the User parameter is working. And It will work because of the Laravel route binding mechanism for
+        models.
     </p>
 
     <img src="/bootcamp/04-aa.png" class="rounded-lg border shadow-xl my-10 p-3" />
@@ -380,7 +381,8 @@ class extends Component {
     <x-anchor title="Better layout" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty trick we use on all maryUI demos.
+        That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty trick we use on all maryUI
+        demos.
         Just place a nice image on the right side.
     </p>
 
@@ -417,7 +419,8 @@ class extends Component {
     <img src="/bootcamp/04-i.png" class="rounded-lg border shadow-xl my-10 p-3" />
 
     <p>
-        This component is intended to be used for building complex selection interfaces for single and multiple values. It also supports a frontend or server values <strong>search</strong>.
+        This component is intended to be used for building complex selection interfaces for single and multiple values. It also supports a frontend or server values
+        <strong>search</strong>.
     </p>
 
     <p>
@@ -514,7 +517,8 @@ class extends Component {
     </p>
 
     <p>
-        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url bellow. Also remember to add your local address on the allowed domains list.
+        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url bellow. Also remember to add your local address on the allowed
+        domains list.
     </p>
 
     <x-code no-render>

@@ -38,7 +38,7 @@ class extends Component {
                 <x-toast />
 
                 {{-- Spotlight --}}
-                <x-spotlight />  <!-- [tl! add] -->
+                <x-spotlight />  <!-- [tl! highlight] -->
             </body>
         @endverbatim
     </x-code>
@@ -52,6 +52,9 @@ class extends Component {
     <x-code no-render language="php">
         @verbatim('docs')
             namespace App\Support;
+
+            use App\Models\User;
+            use Illuminate\Http\Request;
 
             class Spotlight
             {
@@ -71,7 +74,6 @@ class extends Component {
                                 'link' => "/users/{$user->id}/edit"
                             ];
                         });
-                    }
                 }
             }
         @endverbatim

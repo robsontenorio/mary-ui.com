@@ -48,7 +48,8 @@ class extends Component {
     <x-anchor title="Layout" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        There's not much to say here. As you can see on this Bootcamp, maryUI ships with a default layout. You can look for another layout alternative in the docs, but this is very personal.
+        There's not much to say here. As you can see on this Bootcamp, maryUI ships with a default layout. You can look for another layout alternative in the docs, but this is very
+        personal.
     </p>
 
     <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
@@ -161,7 +162,7 @@ class extends Component {
     </x-code>
 
     <p>
-        And here is the magic login component.
+        And here is the login component.
     </p>
 
     <x-code no-render language="zsh">
@@ -207,7 +208,7 @@ class extends Component {
 
                     $this->addError('email', 'The provided credentials do not match our records.');
                 }
-            };
+            }
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
@@ -260,7 +261,7 @@ class extends Component {
     </p>
 
     <x-code no-render language="zsh">
-        php artisan make:register --class
+        php artisan make:volt register --class
     </x-code>
 
     {{--@formatter:off--}}
@@ -271,6 +272,7 @@ class extends Component {
             use Livewire\Attributes\Rule;
             use Livewire\Attributes\Title;
             use Livewire\Volt\Component;
+            use Illuminate\Support\Facades\Hash;
 
             new
             #[Layout('components.layouts.empty')]       // <-- The same `empty` layout
@@ -312,7 +314,7 @@ class extends Component {
 
                     return redirect('/');
                 }
-            }; ?>
+            }
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
