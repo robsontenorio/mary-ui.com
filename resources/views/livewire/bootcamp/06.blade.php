@@ -15,28 +15,28 @@ class extends Component {
 
     <p>
         If you have a project with Jetstream/Breeze the maryUI installer adds a global prefix <code>x-mary-</code> on maryUI components to avoid naming collision.
-        You are ready to go, just add maryUI components on your project.
+        You are ready to go, just add maryUI components to your project.
     </p>
 
     <x-anchor title="Trade-off" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Remember that starter kits adds a dozen of files that probably you will not use. You have to tweak and maintain
+        Remember that starter kits add a dozen files that you probably will not use. You have to tweak and maintain
         them by yourself, because they are copied into your project.
     </p>
 
     <p>
-        On the other hand you can think it is a waste of time to build it from the ground.
-        But, later you have minimal code to maintain.
+        On the other hand you can think it is a waste of time to build everything from the ground.
+        But at least later you will have minimal code to maintain.
     </p>
 
     <ul>
-        <li><strong>Stater kit:</strong> works out the box, but adds extra code to maintain.</li>
-        <li><strong>From the ground:</strong> need extra time to setup, but adds minimal code.</li>
+        <li><strong>Stater kit:</strong> works out of the box, but adds extra code to maintain.</li>
+        <li><strong>From the ground:</strong> needs extra time to setup, but adds minimal code.</li>
     </ul>
 
     <p>
-        Let's see how easy is to implement exactly the features we need from the ground in no time, without starter kits.
+        Let's see how easy it is to implement exactly the features we need from the ground in no time, without starter kits.
     </p>
     <ul>
         <li>Layout</li>
@@ -48,13 +48,13 @@ class extends Component {
     <x-anchor title="Layout" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        There's not much to say here. As you can see on this Bootcamp, maryUI ships a default layout. See another layout alternative on docs, but this is very personal.
+        There's not much to say here. As you can see on this Bootcamp, maryUI ships with a default layout. You can look for another layout alternative in the docs, but this is very personal.
     </p>
 
     <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        The maryUI components provides a great DX and you do not need to worry about to maintain components by yourself.
+        The maryUI components provide a great DX and you don't have to worry about maintaining the components by yourself.
     </p>
 
     <p>
@@ -94,7 +94,7 @@ class extends Component {
     <x-anchor title="Authentication" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Here is how looks like the full <code>routes/web.php</code> with Authentication.
+        Here is what <code>routes/web.php</code> looks like with Authentication.
     </p>
     <ul>
         <li>Login route.</li>
@@ -134,7 +134,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Create an empty layout on <code>resources/views/components/layouts/empty.blade.php</code> to use on our login page.
+        Create an empty layout at <code>resources/views/components/layouts/empty.blade.php</code> to use it as our login page.
     </p>
 
     <x-code no-render>
@@ -342,7 +342,7 @@ class extends Component {
     </p>
 
     <p>
-        Hit the <strong>/register</strong> route on browser and create an account. As you are logged in, file uploads will work on <strong>HTML Editor</strong> component.
+        Hit the <strong>/register</strong> route on browser and create an account. As you are logged in, file uploads will work in the <strong>HTML Editor</strong> component.
     </p>
 
     <div class="flex justify-between mt-10">

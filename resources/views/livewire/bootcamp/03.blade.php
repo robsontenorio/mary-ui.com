@@ -14,7 +14,7 @@ class extends Component {
     <x-anchor title="Listing users" />
 
     <p>
-        As you can see on the existing <code>users/index.blade.php</code> example component you can already sort and filter, but the data it is hardcoded. Let's fix it now!
+        As you can see on the existing <code>users/index.blade.php</code> example component you can already sort and filter, but the data is hardcoded. Let's fix it now!
     </p>
 
     <x-anchor title="Table component" size="text-2xl" class="mt-10 mb-5" />
@@ -54,14 +54,14 @@ class extends Component {
 
     <p>
         After this you can see all the users from the database.
-        Notice the <code>users.age</code> column is empty because we have removed it from migrations. Let's fix it on next topic.
+        Notice the <code>users.age</code> column is empty because we have removed it from migrations. Let's fix it on the next topic.
     </p>
 
     <x-anchor title="Sorting" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         As you noticed on example source code, we have a <code>$sortBy</code> property to control the sorting column and its direction.
-        It works automatically when you click on table headers.
+        It works automatically when you click on the table headers.
     </p>
 
     <x-code no-render>
@@ -71,7 +71,7 @@ class extends Component {
     </x-code>
 
     <p>
-        On our <code>$headers</code> property let's replace <code>age</code> column for <code>country.name</code> and refresh the page to see the result.
+        In our <code>$headers</code> property let's replace the <code>age</code> column for <code>country.name</code> and refresh the page to see the result.
         Nice! Table component works with <strong>dot notation.</strong>
     </p>
 
@@ -83,7 +83,7 @@ class extends Component {
     </x-code>
 
     <p>
-        But, if you try to sort by the <code>country</code> column you get <strong>an error</strong>. Let's fix this using an Eloquent trick.
+        But, if you try to sort by the <code>country</code> column you will get <strong>an error</strong>. Let's fix this by using an Eloquent trick.
     </p>
 
     {{--@formatter:off--}}
@@ -124,7 +124,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Go back to <code>users/index.blade</code> and use the <code>WithPagination</code> trait from Livewire itself as described on
+        Go back to <code>users/index.blade</code> and use the <code>WithPagination</code> trait from Livewire itself, as described in
         <a href="https://livewire.laravel.com/docs/pagination#basic-usage" target="_blank">Livewire docs</a>.
     </p>
 
@@ -140,7 +140,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Add the <code>with-pagination</code> property on <code>x-table</code> component.
+        Add the <code>with-pagination</code> property on the <code>x-table</code> component.
     </p>
 
     <x-code no-render>
@@ -150,7 +150,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Finally, make some changes to use an Eloquent paginated query. Notice the return type is changed.
+        Finally, make some changes to use an Eloquent paginated query. Notice that the return type is changed.
     </p>
 
     {{--@formatter:off--}}
@@ -176,16 +176,16 @@ class extends Component {
 
     <ul>
         <li>Go to page 9.</li>
-        <li>Filter by any name you see at that page.</li>
+        <li>Filter by any name you see on that page.</li>
         <li>The list goes empty!</li>
     </ul>
 
     <p>
-        Actually <strong>it is not a bug itself</strong>, but a Livewire pagination thing (not maryUI) you must be aware when you change filters.
+        Actually <strong>it is not a bug in itself</strong>, but a Livewire pagination particularity (not maryUI) you must be aware when you change filters.
     </p>
 
     <p>
-        Let's fix using Livewire lifecycle hooks to reset pagination when any component property changes. Add the following method on the example component.
+        Let's fix it by using Livewire lifecycle hooks in order to reset the pagination when any component property changes. Add the following method to the example component.
     </p>
 
     {{--@formatter:off--}}
@@ -227,7 +227,7 @@ class extends Component {
     <x-anchor title="Table CSS" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can apply CSS on table headers and make it responsive like this. Check it on mobile size.
+        You can apply CSS on the table headers and make it responsive just like that. Check it at mobile size.
     </p>
 
     <x-code no-render language="php">
@@ -237,15 +237,15 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <p>You can even decorate rows and cell with custom CSS, besides to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for more.</p>
+    <p>You can even decorate rows and cells with custom CSS, in addition to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for more.</p>
 
     <x-anchor title="Header component" size="text-2xl" class="mt-10 mb-5" />
 
     <x-button label="Header docs" link="/docs/components/header" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
     <p>
-        Check the example source code and see how useful <code>x-header</code> component is. It includes a progress indicator, has builtin layout
-        and it is responsive. Check it on mobile size.
+        Check the example's source code to see how useful the<code>x-header</code> component is. It includes a progress indicator, has built-in layout
+        and is responsive. Check it at mobile size.
     </p>
 
     <x-code no-render>
@@ -283,8 +283,8 @@ class extends Component {
     <img src="/bootcamp/03-c.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
-        The <code>x-drawer</code> component is a nice way to not interrupt the users flow, when it is necessary to quickly execute a secondary action.
-        It comes with a handy close button and default layout.
+        The <code>x-drawer</code> component is a great way to avoid interrupting the users flow when it is necessary to quickly execute a secondary action.
+        It comes with a handy close button and a default layout.
     </p>
 
     <x-code no-render>
@@ -332,7 +332,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Finally, place a <code>x-select</code> component inside the drawer, with this small CSS grid to make it look better.
+        Finally, place an <code>x-select</code> component inside the drawer, with a small CSS grid to make it look even better.
     </p>
 
     <x-button label="Select docs" link="/docs/components/select" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
@@ -357,7 +357,7 @@ class extends Component {
     <img src="/bootcamp/03-d.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
-        If you are using a drawer probably you will have a few more filter options. In order to have a better UX it would be nice to show how many filters the user have selected.
+        If you are using a drawer you will probably have a few more filter options. In order to have a better UX it would be nice to display how many filters the user have selected.
     </p>
 
     <p>
@@ -365,7 +365,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceed, we recommend to make a local commit to keep track what is going on.
+        Before proceeding, we recommend that you make a local commit in order to keep track of what is going on.
     </x-alert>
 
     <div class="flex justify-between mt-10">

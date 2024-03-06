@@ -17,12 +17,12 @@ class extends Component {
 
         <p>
             Let's build a full-featured CRUD in no time using straight approaches to get the most out of maryUI and Livewire.
-            Get <span class="decoration-amber-300 underline decoration-2 font-bold">amazed</span> how much you can do with
+            Get <span class="decoration-amber-300 underline decoration-2 font-bold">amazed</span> by how much you can do with
             <span class="decoration-amber-300 underline decoration-2 font-bold">minimal effort</span>.
         </p>
         <p>
             Along this journey you will spot some cool tips and tricks to build a nice UI and keep your code elegant.
-            We will show you how easy is to start from the ground <span class="decoration-amber-300 underline decoration-2 font-bold">with no starter kits</span>.
+            We will show you how easy it is to start from the ground <span class="decoration-amber-300 underline decoration-2 font-bold">with no starter kits</span>.
         </p>
 
         <x-button label="Ready? Go!" link="/bootcamp/02" icon-right="o-arrow-right" class="btn-neutral my-5 !no-underline" />
