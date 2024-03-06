@@ -45,6 +45,7 @@ class extends Component {
         public function users(): Collection
         {
             return User::query()
+                ->with(['country'])
                 ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
                 ->orderBy(...array_values($this->sortBy))
                 ->get();
