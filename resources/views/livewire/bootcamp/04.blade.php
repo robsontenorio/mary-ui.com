@@ -14,14 +14,14 @@ class extends Component {
     <x-anchor title="Updating users" />
 
     <p>
-        Let's build a nice form layout with file upload and cropping!
+        Let's build a nice form layout that contains a file upload and cropping components!
     </p>
 
     <img src="/bootcamp/04-a.png" class="rounded-lg border shadow-xl mb-10 p-3" />
 
     <x-anchor title="New Components & Routes" size="text-2xl" class="mt-10 mb-5" />
 
-    Let's create new Volt components using the <code>class</code> syntax.
+    Let's create some new Volt components by using the <code>class</code> syntax.
 
     {{--@formatter:off--}}
     <x-code no-render language="bash">
@@ -46,7 +46,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        As you can notice maryUI ships with a default app template. Adjust the menu links to the new routes and <strong>check on browser</strong>.
+        As you can see, maryUI ships with a default app template. Make some adjustments to the menu links to add new routes and then <strong>check it in the browser</strong>.
     </p>
 
     {{--@formatter:off--}}
@@ -64,8 +64,8 @@ class extends Component {
     <x-button label="Menu docs" link="/docs/components/menu" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
     <p>
-        Here we are making use of <code>x-menu</code> and <code>x-menu-item</code> components. It works seamless with the default sidebar shipped by maryUI.
-        Yet, it keeps the menu item selected according to its route and sub-routes as you deep navigate.
+        Here, we are making use of the <code>x-menu</code> and <code>x-menu-item</code> components. They work seamless among the default sidebar shipped by maryUI.
+        Additionally, it keeps the correct menu item selected based on the user's current route and sub-routes, as they navigate deeply.
     </p>
 
     <x-anchor title="Form components" size="text-2xl" class="mt-10 mb-5" />
@@ -79,8 +79,8 @@ class extends Component {
     <img src="/bootcamp/04-g.png" class="rounded-lg border shadow-xl my-10 p-3" />
 
     <p>
-        First we need to create link from our table to the new edit component. And it's as easy as that with <code>x-table</code> component.
-        Go back to <code>users/index</code> and make this change.
+        First, we need to create a link from our table to the new edit component. This is easier than anything with the <code>x-table</code> component.
+        Go back to <code>users/index</code> and make the following change:
     </p>
 
     {{--@formatter:off--}}
@@ -89,19 +89,19 @@ class extends Component {
             {{-- livewire/users/index.blade.php --}}
             <x-table ... link="users/{id}/edit">
 
-            {{-- You could pass any parameter based on model columns' name --}}
-            <x-table ... link="users/{id}/edit?name={name}&city={city.name}">
+                {{-- You could pass any parameter based on model columns' name --}}
+                <x-table ... link="users/{id}/edit?name={name}&city={city.name}">
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
 
     <p>
-        After that change you can see <strong>an empty screen</strong> from the <code>users/edit</code> component.
-        But, the link is working as you can see on the browser's url.
+        After that change you can see <strong>an empty screen</strong> when visiting the <code>users/edit</code> component.
+        However, it means that the link is working as expected, as you can see in the browser's url.
     </p>
 
     <p>
-        Now, define that component <code>users/edit</code> accepts a <code>User</code> as parameter.
+        Now, in the <code>users/edit</code> component, add <code>User</code> as a component parameter.
     </p>
 
     {{--@formatter:off--}}
@@ -122,7 +122,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Let's add a <code>x-header</code> on blade section to test it. And It will work because the Laravel model route binding mechanism.
+        Let's add an <code>x-header</code> in the blade section to test if the User parameter is working. And It will work because of the Laravel route binding mechanism for models.
     </p>
 
     <img src="/bootcamp/04-aa.png" class="rounded-lg border shadow-xl my-10 p-3" />
@@ -139,7 +139,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Now let's add the component properties, that represents the <code>User</code> model, with respective Livewire validation rules.
+        Now, let's add the component properties that represent the <code>User</code> model properties, with their respective Livewire validation rules.
         Additionally, we will include an extra property using the Volt <code>with()</code> method to get all available countries.
     </p>
 
@@ -179,7 +179,7 @@ class extends Component {
 
     <p>
         Now, move to the blade section and let's add the UI components.
-        You will discover on docs that most of the components has a set of available properties and slots that will make things easier for you.
+        You will discover in the docs that most of the components have a set of available properties and slots that will make things easier for you.
     </p>
 
     <x-code no-render>
@@ -204,14 +204,14 @@ class extends Component {
     </x-code>
 
     <p>
-        Check on browser if it is working ... <strong>and the form is not filled.</strong>
+        Check in the browser if it is working... <strong>and if the form is not filled.</strong>
     </p>
 
     <img src="/bootcamp/04-g.png" class="rounded-lg border shadow-xl mb-10 p-3" />
 
     <p>
-        We can "fix" this using the Livewire <code>mount()</code> method and its handy <code>fill()</code> method to fill
-        automatically all component's properties <strong>that matches</strong> with the target model fields.
+        We can "fix" this by using the Livewire <code>mount()</code> method and its handy <code>fill()</code> method to fill
+        automatically all the component's properties <strong>that match</strong> with the target model fields.
     </p>
 
     {{--@formatter:off--}}
@@ -259,7 +259,7 @@ class extends Component {
     </p>
 
     <p>
-        Notice we have added the <code>users.avatar</code> column on migration files on Bootcamp setup.
+        Notice we added the <code>users.avatar</code> column in the migration files during the Bootcamp setup.
     </p>
 
     <p>
@@ -271,7 +271,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Add a new <code>$photo</code> property to hold the temporary file upload and use the <code>WithFileUploads</code> trait from Livewire itself, as described on its docs.
+        Add a new <code>$photo</code> property to store the temporary file upload and use the <code>WithFileUploads</code> trait from Livewire itself, as described in its docs.
     </p>
 
     {{--@formatter:off--}}
@@ -292,7 +292,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Now, let's add the cool <code>x-file</code> component. In this case, we are using its default slot to use an image instead of default browser file input field.
+        Now, let's add the cool <code>x-file</code> component. In this case, we are using its default slot to display an image instead of the default browser's file input field.
     </p>
 
     <x-code no-render>
@@ -309,14 +309,14 @@ class extends Component {
     </x-code>
 
     <p>
-        As you can see above, we use a generic image as a placeholder if user has no avatar.
-        We have placed it for you at <code>your-app/public/empty-user.jpg</code> on Bootcamp setup.
+        As you can see above, we display a generic image as a placeholder if the user doesn't have an avatar.
+        We stored it for you at <code>your-app/public/empty-user.jpg</code> during the Bootcamp setup.
     </p>
 
     <img src="/bootcamp/04-hh.png" class="rounded-lg border shadow-xl my-10 p-3" />
 
     <p>
-        If you select an image and hit "Save" <strong>of course the image won't be uploaded.</strong> Fore sure there are many ways to do it, but here is one option to get started.
+        If you select an image and hit "Save" <strong>of course the image won't be uploaded.</strong> There are certainly many ways to do it, but here is a way to get started.
     </p>
 
     {{--@formatter:off--}}
@@ -345,7 +345,7 @@ class extends Component {
     </p>
 
     <p>
-        And how about to crop the avatar image?
+        And how about cropping the avatar image?
     </p>
 
     <img src="/bootcamp/04-hhh.png" class="rounded-lg border shadow-xl mb-10 p-3" />
@@ -380,8 +380,8 @@ class extends Component {
     <x-anchor title="Better layout" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        That previous form we built looks a bit ugly because by default all components uses the full width available on screen. Here is a dirty trick we use on all maryUI demos.
-        Just place a nice image on right side.
+        That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty trick we use on all maryUI demos.
+        Just place a nice image on the right side.
     </p>
 
     <img src="/bootcamp/04-b.png" class="rounded-lg border shadow-xl mb-10 p-3" />
@@ -417,11 +417,11 @@ class extends Component {
     <img src="/bootcamp/04-i.png" class="rounded-lg border shadow-xl my-10 p-3" />
 
     <p>
-        This component is intended to be used to build complex selection interfaces for single and multiple values. It also supports <strong>search</strong> on frontend or server.
+        This component is intended to be used for building complex selection interfaces for single and multiple values. It also supports a frontend or server values <strong>search</strong>.
     </p>
 
     <p>
-        Remember that on our data model we have a <strong>many-to-many</strong> relationship between <code>User</code> and
+        Remember that in our data model we have a <strong>many-to-many</strong> relationship between <code>User</code> and
         <code>Language</code>.
     </p>
 
@@ -430,8 +430,8 @@ class extends Component {
     </p>
     <ul>
         <li>Add a new property <code>$my_languages</code> to hold the selected languages.</li>
-        <li>Fill <code>$my_languages</code> from a user using the <code>mount()</code> method.</li>
-        <li>Adjust <code>save()</code> method to store the multi selection.</li>
+        <li>Fill <code>$my_languages</code> with the user languages using the <code>mount()</code> method.</li>
+        <li>Adjust the <code>save()</code> method to store the multi selection.</li>
         <li>Add an extra property <code>languages</code> to list all available languages.</li>
     </ul>
 
@@ -482,7 +482,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        On blade section we will use <code>x-choices-offline</code> component variation to easily implement a multi selection feature.
+        On blade section we will use the <code>x-choices-offline</code> component variation to easily implement a multi selection feature.
     </p>
 
     <x-code no-render>
@@ -514,7 +514,7 @@ class extends Component {
     </p>
 
     <p>
-        Create an account on TinyMCE site and replace <code>YOUR-KEY-HERE</code> on url bellow. Also remember to add your local address on the allowed domains list.
+        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url bellow. Also remember to add your local address on the allowed domains list.
     </p>
 
     <x-code no-render>
@@ -530,7 +530,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Add a new component <code>$bio</code> property. We have added the <code>users.bio</code> column on Bootcamp setup.
+        Add a <code>$bio</code> property in the component, since we added the <code>users.bio</code> column during the Bootcamp setup.
     </p>
 
     {{--@formatter:off--}}
@@ -565,8 +565,8 @@ class extends Component {
     <x-anchor title="Better layout (2)" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes like the bellow example to clearly group related information.
-        This is just another alternative, so use that works best for you.
+        If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes, like the example bellow, for clear group related information.
+        This is just another alternative, so use the one that works best for you.
     </p>
 
     <img src="/bootcamp/04-e.png" class="rounded-lg border shadow-xl mb-10 p-3" />
@@ -614,7 +614,7 @@ class extends Component {
     <img src="/bootcamp/04-c.png" class="rounded-lg border mt-5 p-5" />
 
     <p>
-        Move back to <code>users/index</code> and add a new column on <code>$headers</code> property.
+        Move back to <code>users/index</code> and add a new column in the <code>$headers</code> property.
     </p>
 
     {{--@formatter:off--}}
@@ -644,11 +644,11 @@ class extends Component {
     <x-anchor title="Challenge" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        We will not show you the <code>users/create</code> component because it is pretty the same as <code>users/edit</code>, right?
+        We will not show you the <code>users/create</code> component because it is pretty much the same as <code>users/edit</code>, right?
     </p>
 
     <p>
-        Place a "create" button and go ahead implement it!
+        Put a "create" button now and go ahead and implement it!
     </p>
 
     <img src="/bootcamp/04-d.png" class="rounded-lg border p-5" />
@@ -663,7 +663,7 @@ class extends Component {
     </x-code>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceed, we recommend to make a local commit to keep track what is going on.
+        Before proceeding, we recommend that you make a local commit to keep track of what is going on.
     </x-alert>
 
     <div class="flex justify-between mt-10">

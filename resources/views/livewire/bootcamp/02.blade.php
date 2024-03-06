@@ -31,7 +31,7 @@ class extends Component {
     </x-code>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceed, we recommend to make a local commit on each step to keep track what is going on. After you have Laravel up and running it is time to commit.
+        Before proceed, we recommend you to make a local commit on each step to keep track of what is going on. After you have Laravel up and running it is time to commit.
     </x-alert>
 
     <x-anchor title="Install maryUI" size="text-2xl" class="mt-10 mb-5" />
@@ -56,7 +56,7 @@ class extends Component {
 
     <p class="mb-10">
         <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... Check de browser!</strong>
+        <strong>... Check the browser!</strong>
     </p>
 
     <p>
@@ -83,8 +83,8 @@ class extends Component {
     <img src="/bootcamp/02-b.png" class="rounded-lg border shadow-xl p-3 mb-10" />
 
     <p>
-        Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed up things.
-        After run, it is import to take a <strong>look on database</strong> to see what is going on.
+        Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed things up.
+        After running it, it is import to take a <strong>look at the database</strong> to see what is going on.
     </p>
 
     <x-code no-render language="bash">
@@ -96,12 +96,12 @@ class extends Component {
         <li>Create a new <code>Language</code>model.</li>
         <li>Create a <code>User</code> belongs to <code>Country</code> relationship.</li>
         <li>Create a <code>User</code> many-to-many <code>Language</code> relationship.</li>
-        <li>Create respective migrations/factories/seeders.</li>
-        <li>Random seed the database with users, countries, languages and its relationships.</li>
+        <li>Create their respective migrations/factories/seeders.</li>
+        <li>Randomly seed the database with users, countries, languages and its relationships.</li>
     </ul>
 
     <p>
-        If you hit the browser again, of course, <strong>nothing has changed</strong>. On next topic we will work on that component.
+        If you hit the browser again, of course, <strong>nothing has changed</strong>. On the next topic we will work on that component.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">

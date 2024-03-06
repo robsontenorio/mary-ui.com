@@ -16,8 +16,8 @@ class extends Component {
     <x-button label="Spotlight docs" link="/docs/components/spotlight" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
     <p>
-        Give superpower to your users and allow them to search everything.
-        On this example we will search only for users names, but you can mix any type of content like other entities or even quick actions like "Create a user".
+        Give superpowers to your users and allow them to search for anything.
+        On this example we will search only for usernames, but you can mix any type of content like other entities or even quick actions like "Create a user".
         Check the docs for more.
     </p>
 
@@ -26,7 +26,7 @@ class extends Component {
     <x-anchor title="Searching" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Place the <strong>spotlight tag</strong> somewhere on the main layout.
+        Place the <strong>spotlight tag</strong> somewhere in the main layout.
     </p>
 
     {{--@formatter:off--}}
@@ -45,7 +45,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Create a <code>App\Support\Spotlight</code> class with a <code>search</code> method that returns the result.
+        Create an <code>App\Support\Spotlight</code> class with a <code>search</code> method that returns the result.
     </p>
 
     {{--@formatter:off--}}
@@ -79,11 +79,11 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        <strong>That is it!</strong> You are done, try to hit <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
+        <strong>That's it!</strong> You are done, try to hit <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceed, we recommend to make a local commit to keep track what is going on.
+        Before proceeding, we recommend that you make a local commit to keep track of what is going on.
     </x-alert>
 
     <div class="flex justify-between mt-10">
