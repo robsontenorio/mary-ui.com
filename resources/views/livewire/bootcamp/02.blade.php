@@ -84,7 +84,7 @@ class extends Component {
 
     <p>
         Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed things up.
-        After running it, it is important to take <strong>look at the database</strong> to see what is going on.
+        After running it, it is important to take a <strong>look at the database</strong> to see what is going on.
     </p>
 
     <x-code no-render language="bash">
