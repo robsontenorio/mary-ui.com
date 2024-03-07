@@ -4124,16 +4124,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.25.2",
+            "version": "1.25.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "72c9347e880a1ef1fcc48e4276a7a44ecd9b25e0"
+                "reference": "88147e574453590c30a66227028fb22c1b2eb91c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/72c9347e880a1ef1fcc48e4276a7a44ecd9b25e0",
-                "reference": "72c9347e880a1ef1fcc48e4276a7a44ecd9b25e0",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/88147e574453590c30a66227028fb22c1b2eb91c",
+                "reference": "88147e574453590c30a66227028fb22c1b2eb91c",
                 "shasum": ""
             },
             "require": {
@@ -4176,19 +4176,30 @@
             "description": "Laravel Blade UI Components for Livewire 3",
             "homepage": "https://mary-ui.com",
             "keywords": [
+                "DaisyUI",
                 "alpinejs",
                 "blade",
+                "blade ui components",
                 "components",
                 "laravel",
                 "livewire",
+                "livewire 3",
+                "livewire components",
+                "livewire packages",
+                "livewire ui",
+                "livewire ui components",
                 "livewire-components",
                 "livewire-packages",
+                "tailwind",
                 "tallstack",
+                "tallstack components",
+                "tallstack ui",
+                "tallstackui",
                 "ui"
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.25.2"
+                "source": "https://github.com/robsontenorio/mary/tree/1.25.3"
             },
             "funding": [
                 {
@@ -4196,7 +4207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-01T16:35:41+00:00"
+            "time": "2024-03-07T17:01:55+00:00"
         },
         {
             "name": "symfony/console",
