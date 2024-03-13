@@ -19,11 +19,11 @@ new #[Title('Installation')] class extends Component {
         Please, for further styles reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
     </x-alert>
 
-    {{--    <x-anchor title="Bootcamp" size="text-2xl" class="mt-10 mb-5" />--}}
+    <x-anchor title="Bootcamp" size="text-2xl" class="mt-10 mb-5" />
 
-    {{--    <p>--}}
-    {{--        If you prefer a walkthrough guide, go to maryUI <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort.--}}
-    {{--    </p>--}}
+    <p>
+        If you prefer a walkthrough guide, go to maryUI <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort.
+    </p>
 
     <x-anchor title="Automatic install" size="text-2xl" class="mt-10 mb-5" />
 

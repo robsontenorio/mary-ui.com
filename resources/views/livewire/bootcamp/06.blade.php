@@ -45,6 +45,10 @@ class extends Component {
         <li>Register</li>
     </ul>
 
+    <x-alert icon="o-light-bulb" class="markdown my-10">
+        Go ahead and add Authentication e Register as described on the following sections.
+    </x-alert>
+
     <x-anchor title="Layout" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -102,6 +106,10 @@ class extends Component {
         <li>Logout route.</li>
         <li>Protect some routes.</li>
     </ul>
+
+    <p>
+        Go ahead and copy/paste this.
+    </p>
 
     {{--@formatter:off--}}
     <x-code no-render language="php">
@@ -215,7 +223,7 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
-            <div class="w-96 mx-auto mt-20">
+            <div class="md:w-96 mx-auto mt-20">
                 <div class="mb-10">Cool image here</div>
 
                 <x-form wire:submit="login">
@@ -250,7 +258,7 @@ class extends Component {
         @verbatim('docs')
             use Livewire\Volt\Volt;
 
-            Volt::route('/register', 'register');
+            Volt::route('/register', 'register'); // [tl! highlight]
 
         @endverbatim
     </x-code>
@@ -321,7 +329,7 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
-            <div class="w-96 mx-auto mt-20">
+            <div class="md:w-96 mx-auto mt-20">
                 <div class="mb-10">Cool image here</div>
 
                 <x-form wire:submit="register">
@@ -344,8 +352,12 @@ class extends Component {
     </p>
 
     <p>
-        Hit the <strong>/register</strong> route on browser and create an account. As you are logged in, file uploads will work in the <strong>HTML Editor</strong> component.
+        Hit the <strong>/register</strong> route on browser and create an account.
     </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        As you are logged in, file uploads will work in the <strong>HTML Editor</strong> component
+    </x-alert>
 
     <div class="flex justify-between mt-10">
         <x-button label="Spotlight" link="/bootcamp/05" icon="o-arrow-left" class="!no-underline btn-ghost" />

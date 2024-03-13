@@ -110,7 +110,7 @@
         <x-slot:actions class="flex !gap-1 lg:!gap-4">
             <span class="hidden lg:inline-flex flex gap-4">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                {{--                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />--}}
+                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
                 <x-button label="News" icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external responsive />
             </span>
@@ -231,8 +231,5 @@
 
     {{-- Spotlight --}}
     <x-spotlight />
-
-    {{-- Star --}}
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

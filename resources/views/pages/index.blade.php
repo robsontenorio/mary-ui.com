@@ -105,7 +105,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
 
             <div class="mt-10 flex gap-3 justify-center">
-                {{--                <x-button label="Bootcamp" icon-right="o-code-bracket" link="/bootcamp/01" class="btn-neutral !no-underline" />--}}
+                <x-button label="Bootcamp" icon-right="o-code-bracket" link="/bootcamp/01" class="btn-neutral !no-underline" />
                 <x-button label="Installation" icon-right="o-arrow-right" link="/docs/installation" class="bg-purple-500 hover:bg-purple-700 text-white !no-underline" />
             </div>
         </div>
