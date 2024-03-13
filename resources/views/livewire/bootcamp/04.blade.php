@@ -402,7 +402,7 @@ class extends Component {
                                 ...
                             </x-slot:actions>
                         </x-form>
-                    </div>  <!-- [tl! highlight:4] -->
+                    </div>  <!-- [tl! highlight:5] -->
                     <div>
                         {{-- Get a nice picture from `StorySet` web site --}}
                         <img src="/edit-form.png" width="300" class="mx-auto" />
@@ -563,7 +563,7 @@ class extends Component {
     </x-code>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Uploading images only works for <strong>authenticated users</strong> on your app.
+        Uploading images only works for <strong>authenticated users</strong> on your app. We will implement it on last section of the Bootcamp.
     </x-alert>
 
     <x-anchor title="Better layout (2)" size="text-2xl" class="mt-10 mb-5" />
