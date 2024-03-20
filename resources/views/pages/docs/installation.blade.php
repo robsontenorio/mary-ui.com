@@ -90,6 +90,10 @@ new #[Title('Installation')] class extends Component {
 
     <x-anchor title="Jetstream and Breeze" size="text-2xl" class="mt-10 mb-5" />
 
+    <x-alert icon="o-light-bulb">
+        If you are facing some UI glitches, try to remove <code>@tailwindcss/forms</code> plugin.
+    </x-alert>
+
     <p>
         For existing projects that uses <strong>Jetstream</strong> or <strong>Breeze</strong>, the installer will publish <code>config/mary.php</code>
         with a global prefix on maryUI components to avoid name collision. So, you need to use components like this:
@@ -136,4 +140,11 @@ new #[Title('Installation')] class extends Component {
         @endverbatim
     </x-code>
 
+    <p>
+        <strong>Still not convinced?</strong>
+    </p>
+
+    <p>
+        Go to the <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort, from the ground with no starter kits.
+    </p>
 </div>

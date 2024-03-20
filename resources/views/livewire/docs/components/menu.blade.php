@@ -15,7 +15,7 @@ class extends Component {
     <x-anchor title="Menu" />
 
     <p>
-        This component plays nice with <a href="/docs/components/dropdown" wire:navigate>Dropdown</a> and <a href="/docs/layout#only-sidebar-collapsible" wire:navigate>Layout</a>`s
+        This component plays nice with <a href="/docs/components/dropdown" wire:navigate>Dropdown</a> and <a href="/docs/layout" wire:navigate>Layout</a>`s
         sidebar slot.
     </p>
 
@@ -113,4 +113,30 @@ class extends Component {
 
         @endverbatim
     </x-code>
+
+    <x-anchor title="Cloud providers" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Some cloud providers put your app behind a proxy and force all routes to <strong>https</strong>.
+        Here is a solution to trust proxies and make <code>activate-by-route</code> attribute work as expected.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Laravel 11 solution.
+    </x-alert>
+
+    {{--@formatter:off--}}
+    <x-code language="php" no-render>
+        @verbatim('docs')
+            // bootstrap/app.php
+
+            return Application::configure(basePath: dirname(__DIR__))
+                ...
+                ->withMiddleware(function (Middleware $middleware) {
+                    $middleware->trustProxies(at: '*');   // [tl! highlight]
+                })
+                ...
+    @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 </div>
