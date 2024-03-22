@@ -173,6 +173,21 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
 
+            {{--   PING DEMO  --}}
+            <div>
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <a href="https://ping.mary-ui.com" target="_blank">
+                            <img src="/ping-demo.png" />
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <x-header title="Ping" subtitle="The real time chat demo." size="text-xl" />
+                </div>
+            </div>
+
             {{--   FLOW DEMO  --}}
             <div>
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">

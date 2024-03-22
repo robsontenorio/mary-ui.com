@@ -22,6 +22,21 @@ class extends Component {
     </p>
 
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-8">
+        {{-- PING --}}
+        <div>
+            <a href="https://ping.mary-ui.com" target="_blank">
+                <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/ping-demo.png" />
+                    </div>
+                </div>
+            </a>
+            <div class="mt-5">
+                <x-header title="Ping" subtitle="The real time chat demo." size="text-xl" />
+            </div>
+        </div>
+
         {{-- FLOW --}}
         <div>
             <a href="https://flow.mary-ui.com" target="_blank">
