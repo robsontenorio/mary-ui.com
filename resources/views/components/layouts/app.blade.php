@@ -92,10 +92,10 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-purple-50 text-center p-2 text-sm dark:bg-base-300">
-        <x-badge value="new" class="badge-sm bg-purple-300 text-white" />
-        The dashboard demo:
-        <a href="https://flow.mary-ui.com" target="_blank" class="underline font-black">Flow &rarr;</a>
+    <div class="bg-green-50 text-center p-2 text-sm dark:bg-base-300">
+        <x-badge value="new" class="badge-sm bg-green-500 text-white" />
+        The real time chat demo:
+        <a href="https://ping.mary-ui.com" target="_blank" class="underline font-black">Ping &rarr;</a>
     </div>
     <x-nav sticky>
         <x-slot:brand>
@@ -131,7 +131,7 @@
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
-                    <x-menu-item title="Demos" link="/docs/demos" badge="3" badge-classes="!badge-warning" />
+                    <x-menu-item title="Demos" link="/docs/demos" badge="4" badge-classes="!badge-success" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Upgrading" link="/docs/upgrading" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
@@ -148,7 +148,7 @@
                     <x-menu-item title="Tags" link="/docs/components/tags" />
                     <x-menu-item title="Date Time" link="/docs/components/datetime" />
                     <x-menu-item title="Textarea" link="/docs/components/textarea" />
-                    <x-menu-item title="Range Slider" link="/docs/components/range" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Range Slider" link="/docs/components/range" />
                     <x-menu-item title="File Upload" link="/docs/components/file" />
                     <x-menu-item title="Image Library" link="/docs/components/image-library" />
                 </x-menu-sub>
@@ -175,10 +175,10 @@
                     <x-menu-item title="Button" link="/docs/components/button" />
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
-                    <x-menu-item title="Collapse" link="/docs/components/collapse" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Collapse" link="/docs/components/collapse" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
-                    <x-menu-item title="Kbd" link="/docs/components/kbd" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Kbd" link="/docs/components/kbd" />
                     <x-menu-item title="Progress" link="/docs/components/progress" />
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
@@ -194,7 +194,7 @@
                     <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                     <x-menu-item title="Diff" link="/docs/components/diff" />
                     <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />
-                    <x-menu-item title="Markdown Editor" link="/docs/components/markdown" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Markdown Editor" link="/docs/components/markdown" />
                     <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
                 </x-menu-sub>
             </x-menu>
