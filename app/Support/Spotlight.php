@@ -19,7 +19,7 @@ class Spotlight
 
     public function actions(string $search = ''): Collection
     {
-        $icon = Blade::render("<x-mary-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />");
+        $icon = Blade::render("<x-mary-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-500/10 rounded-full' />");
 
         return collect([
             [

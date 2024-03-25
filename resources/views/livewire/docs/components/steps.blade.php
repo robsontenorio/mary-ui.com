@@ -67,14 +67,14 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-steps wire:model="step" class="border my-5 p-5">
+            <x-steps wire:model="step" class="border border-base-content/25 my-5 p-5">
                 <x-step step="1" text="Register">
                     Register step
                 </x-step>
                 <x-step step="2" text="Payment">
                     Payment step
                 </x-step>
-                <x-step step="3" text="Receive Product" class="bg-orange-100">
+                <x-step step="3" text="Receive Product" class="bg-orange-100 dark:bg-orange-500/20">
                     Receive Product
                 </x-step>
             </x-steps>

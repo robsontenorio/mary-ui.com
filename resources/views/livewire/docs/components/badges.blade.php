@@ -23,7 +23,7 @@ class extends Component {
 
             <x-badge value="Hello" class="badge-warning" />
 
-            <x-badge value="Hello" class="bg-cyan-200" />
+            <x-badge value="Hello" class="bg-cyan-200 dark:text-black" />
         @endverbatim
     </x-code>
 
