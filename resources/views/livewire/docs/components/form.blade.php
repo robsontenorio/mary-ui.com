@@ -48,7 +48,7 @@ class extends Component {
             'name'     => 'required|min:20',
             'amount'   => 'required|decimal:0,2',
             'multiple' => 'required|starts_with:Hello|ends_with:world',
-        ]);
+        ])->validate();
     }
 }
 
@@ -126,12 +126,14 @@ class extends Component {
         @verbatim('docs')
             <x-form wire:submit="save3">
                 <x-input label="Name" wire:model="state.name" error-bag="name"/>
-                <x-input label="Amount" wire:model="state.amount" prefix="USD" money hint="It submits an unmasked value" error-bag="amount" :omit-error="true"/>
+                <x-input label="Amount" wire:model="state.amount" prefix="USD" money hint="It submits an unmasked value"
+                         error-bag="amount" :omit-error="true"/>
 
                 <x-input label="Multiple Messages" wire:model="state.multiple" error-bag="multiple"/>
                 <x-input label="One Message" wire:model="state.multiple" error-bag="multiple" :first-error-only="true"/>
 
-                <x-input label="Blue text" wire:model="state.multiple" error-bag="multiple" error-class="text-blur-500 label-text-alt p-1"/>
+                <x-input label="Blue text" wire:model="state.multiple" error-bag="multiple"
+                         error-class="text-blur-500 label-text-alt p-1"/>
 
                 <x-slot:actions>
                     <x-button label="Cancel"/>
