@@ -311,8 +311,6 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <br>
-
     <p>
         You must also consider displaying pre-selected items on list, when it <strong>first renders</strong> and <strong>while searching</strong>.
         There are many approaches to make it work, but here is an example for <strong>single search</strong> using <strong>Volt.</strong>
@@ -353,8 +351,6 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <br>
-
     <p>
         Sometimes you don't want to hit a datasource on <strong>every keystroke</strong>.
         So, you can make use of <code>debounce</code> to control over how often a network request is sent.
@@ -363,8 +359,6 @@ class extends Component {
     <p>
         Another approach is to use <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
     </p>
-
-    <br>
 
     <x-code>
         @verbatim('docs')
@@ -384,7 +378,32 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <br>
+    <p>
+        You can pass any extra arbitrary search parameters like this.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            {{-- Notice `search-function` with extra arbitrary parameters --}}
+            <x-choices
+                label="Extra parameters"
+                wire:model="user_id"
+                :options="$users"
+                search-function="searchExtra(123, 'thing')"
+                searchable />
+        @endverbatim
+    </x-code>
+
+    <!-- @formatter:off -->
+    <x-code no-render language="php">
+        @verbatim('docs')
+        public function search(string $value = '', int $extra1 = 0, string $extra2 = '')
+        {
+            // The first parameter is the default and comes from the search input.
+        }
+        @endverbatim
+    </x-code>
+    <!-- @formatter:on -->
 
     <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
@@ -456,7 +475,8 @@ class extends Component {
     </p>
 
     <p>
-        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component. Because it is a custom event, you must access the key(s) via the <code>detail.value</code> property on the event.
+        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component. Because it is a custom event, you must
+        access the key(s) via the <code>detail.value</code> property on the event.
     </p>
 
     <x-code no-render>
