@@ -45,8 +45,8 @@ class extends Component {
         sleep(1);
 
         \Illuminate\Support\Facades\Validator::make($this->state, [
-            'name'     => 'required|min:20',
-            'amount'   => 'required|decimal:0,2',
+            'title'     => 'required|min:20',
+            'cost'   => 'required|decimal:0,2',
             'multiple' => 'required|starts_with:Hello|ends_with:world',
         ])->validate();
     }
@@ -100,7 +100,7 @@ class extends Component {
         To tailor the validation error handling to your needs, the following attributes are available:
     </p>
     <ul class="list-disc pl-5 mb-4">
-        <li><strong>error-bag</strong>: Specifies the name of the error bag to be referenced. Supports both specific
+        <li><strong>error-field</strong>: Specifies the name of the error field to be referenced. Supports both specific
             attribute values and wildcard patterns (e.g.,<code>state.val</code> or <code>val.*</code>).
         </li>
         <li><strong>omit-error</strong>: When set to <code>true</code>, the component's border will be highlighted
@@ -115,25 +115,25 @@ class extends Component {
     <x-anchor title="Default Values" size="text-2xl" class="mt-10 mb-5"/>
     <p>The following are the default values for each attribute:</p>
     <ul class="list-disc pl-5 mb-4">
-        <li><code>error-bag</code> defaults to <code>$modelName()</code>.</li>
+        <li><code>error-field</code> defaults to <code>$modelName()</code>.</li>
         <li><code>omit-error</code> is <code>false</code> by default, meaning error texts are shown.</li>
         <li><code>first-error-only</code> is set to <code>false</code>, allowing all relevant errors to be displayed.
         </li>
         <li>The default <code>error-class</code> is <code>'text-red-500 label-text-alt p-1'</code>.</li>
     </ul>
 
-    <x-code>
+    <x-code x-classes="text-blue-500">
         @verbatim('docs')
             <x-form wire:submit="save3">
-                <x-input label="Name" wire:model="state.name" error-bag="name"/>
-                <x-input label="Amount" wire:model="state.amount" prefix="USD" money hint="It submits an unmasked value"
-                         error-bag="amount" :omit-error="true"/>
+                <x-input label="Title" wire:model="state.title" error-field="title"/>
+                <x-input label="Cost" wire:model="state.cost" prefix="USD" money hint="It submits an unmasked value"
+                         error-field="cost" :omit-error="true"/>
 
-                <x-input label="Multiple Messages" wire:model="state.multiple" error-bag="multiple"/>
-                <x-input label="One Message" wire:model="state.multiple" error-bag="multiple" :first-error-only="true"/>
+                <x-input label="Multiple Messages" wire:model="state.multiple" error-field="multiple"/>
+                <x-input label="One Message" wire:model="state.multiple" error-field="multiple" :first-error-only="true"/>
 
-                <x-input label="Blue text" wire:model="state.multiple" error-bag="multiple"
-                         error-class="text-blur-500 label-text-alt p-1"/>
+                <x-input label="Blue text" wire:model="state.multiple" error-field="multiple"
+                         error-class="text-blue-500 label-text-alt p-1"/>
 
                 <x-slot:actions>
                     <x-button label="Cancel"/>
