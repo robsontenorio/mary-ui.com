@@ -340,7 +340,7 @@ class extends Component {
 
                     <x-slot:actions>
                         <x-button label="Already registered?" class="btn-ghost" link="/login" />
-                        <x-button label="Register" type="submit" icon="o-paper-airplane" class="btn-primary" spinner="login" />
+                        <x-button label="Register" type="submit" icon="o-paper-airplane" class="btn-primary" spinner="register" />
                     </x-slot:actions>
                 </x-form>
             </div>
