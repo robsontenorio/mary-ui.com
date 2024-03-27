@@ -56,8 +56,9 @@ class extends Component {
                     <x-menu-item title="Archives" icon="o-archive-box" />
                 </x-menu-sub>
 
-                {{-- Separator with title and icon --}}
-                <x-menu-separator title="Magic" icon="o-sparkles" />
+                {{-- Separator and Title with icon --}}
+                <x-menu-separator />
+                <x-menu-title title="Magic" icon="o-sparkles" />
                 <x-menu-item title="Wifi" icon="o-wifi" />
 
             </x-menu>
