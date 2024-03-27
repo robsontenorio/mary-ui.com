@@ -11,7 +11,7 @@ new #[Title('Layout')] class extends Component {
     <x-anchor title="Layout" />
 
     <p>
-        You can play around by placing <strong>daisyUI/Tailwind</strong> classes on components or slots, from the examples bellow.
+        You can play around by placing <strong>daisyUI/Tailwind</strong> classes on components or slots, from the examples below.
         Also, try to entirely remove some components or slots.
     </p>
     <p>
@@ -27,7 +27,7 @@ new #[Title('Layout')] class extends Component {
     <x-anchor title="Only sidebar" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        This layout has only a collapsible Sidebar. It fits nice for an "enterprise layout", which needs more vertical spacing.
+        This layout has only a collapsible Sidebar. It fits nicely for an "enterprise layout", which needs more vertical spacing.
     </p>
 
     <x-code no-render>
