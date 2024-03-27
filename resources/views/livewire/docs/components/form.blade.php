@@ -131,6 +131,34 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Custom error field" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        By default, it uses the model name to retrieve the validation errors. If you want to display validation errors for a custom error field, you can use the
+        <code>error-field</code> attribute.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-form wire:submit="save4">
+                {{-- Notice `error_field` --}}
+                <x-input label="Custom error field" wire:model="salary" error-field="total_salary" />
+
+                <x-slot:actions>
+                    <x-button label="Cancel" />
+                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save4" />
+                </x-slot:actions>
+            </x-form>
+        @endverbatim
+    </x-code>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            $this->addError('total_salary', 'This is a custom error message for total salary field.');
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Omit errors" size="text-2xl" class="mt-10 mb-5" />
     <p>
         If for some reason you want to omit the error message, you can use the <code>omit-error</code> attribute.
@@ -180,33 +208,6 @@ class extends Component {
                 'magicWord1' => 'starts_with:Hello|ends_with:world',
                 'magicWord2' => 'starts_with:Hello|ends_with:world',
             ]);
-        @endverbatim
-    </x-code>
-    {{--@formatter:on--}}
-
-    <x-anchor title="Custom error field" size="text-2xl" class="mt-10 mb-5" />
-    <p>
-        If you want to display validation errors for a custom error field, you can use the <code>error-field</code> attribute.
-    </p>
-
-    <x-code>
-        @verbatim('docs')
-            <x-form wire:submit="save4">
-                {{-- Notice `error_field` --}}
-                <x-input label="Custom error field" wire:model="salary" error-field="total_salary" />
-
-                <x-slot:actions>
-                    <x-button label="Cancel" />
-                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save4" />
-                </x-slot:actions>
-            </x-form>
-        @endverbatim
-    </x-code>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="php">
-        @verbatim('docs')
-            $this->addError('total_salary', 'This is a custom error message for total salary field.');
         @endverbatim
     </x-code>
     {{--@formatter:on--}}

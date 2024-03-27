@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6250ff34c3dd07d53c3c019934e4ea4e",
+    "content-hash": "2ee2474bde14d1e624a8f6c1f2184481",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2558,16 +2558,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.4.6",
+            "version": "v3.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "7e7d638183b34fb61621455891869f5abfd55a82"
+                "reference": "c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/7e7d638183b34fb61621455891869f5abfd55a82",
-                "reference": "7e7d638183b34fb61621455891869f5abfd55a82",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0",
+                "reference": "c65b3f0798ab2c9338213ede3588c3cdf4e6fcc0",
                 "shasum": ""
             },
             "require": {
@@ -2621,7 +2621,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.4.6"
+                "source": "https://github.com/livewire/livewire/tree/v3.4.9"
             },
             "funding": [
                 {
@@ -2629,20 +2629,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-20T14:04:25+00:00"
+            "time": "2024-03-14T14:03:32+00:00"
         },
         {
             "name": "livewire/volt",
-            "version": "v1.6.2",
+            "version": "v1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "f565e391a87a2694e1b0100031d16b9ed1f2c6d5"
+                "reference": "e5316b4f3508f759d0da6dc736331720ba14b8bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/f565e391a87a2694e1b0100031d16b9ed1f2c6d5",
-                "reference": "f565e391a87a2694e1b0100031d16b9ed1f2c6d5",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/e5316b4f3508f759d0da6dc736331720ba14b8bb",
+                "reference": "e5316b4f3508f759d0da6dc736331720ba14b8bb",
                 "shasum": ""
             },
             "require": {
@@ -2701,7 +2701,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2024-01-30T15:58:11+00:00"
+            "time": "2024-03-06T20:38:22+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4124,16 +4124,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.25.3",
+            "version": "1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "88147e574453590c30a66227028fb22c1b2eb91c"
+                "reference": "601842de253f447fc58799bb5e5b1f0a69c13cc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/88147e574453590c30a66227028fb22c1b2eb91c",
-                "reference": "88147e574453590c30a66227028fb22c1b2eb91c",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/601842de253f447fc58799bb5e5b1f0a69c13cc1",
+                "reference": "601842de253f447fc58799bb5e5b1f0a69c13cc1",
                 "shasum": ""
             },
             "require": {
@@ -4199,7 +4199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.25.3"
+                "source": "https://github.com/robsontenorio/mary/tree/1.26.0"
             },
             "funding": [
                 {
@@ -4207,7 +4207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-07T17:01:55+00:00"
+            "time": "2024-03-27T16:39:46+00:00"
         },
         {
             "name": "symfony/console",

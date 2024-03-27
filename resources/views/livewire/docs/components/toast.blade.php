@@ -201,16 +201,16 @@ class extends Component {
         @verbatim('docs')
             public function save4()
             {
-            // Your stuff here ...
+                // Your stuff here ...
 
-            // Toast
-            $this->warning(
-            'Wishlist <u>updated</u>',
-            'You will <strong>love it :)</strong>',
-            position: 'bottom-end',
-            icon: 'o-heart',
-            css: 'bg-pink-500 text-base-100'
-            );
+                // Toast
+                $this->warning(
+                    'Wishlist <u>updated</u>',
+                    'You will <strong>love it :)</strong>',
+                    position: 'bottom-end',
+                    icon: 'o-heart',
+                    css: 'bg-pink-500 text-base-100'
+                );
             }
         @endverbatim
     </x-code>
@@ -219,7 +219,8 @@ class extends Component {
     <x-anchor title="Using an Exception" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        If you are trying to trigger a toast from outside a Livewire context, you can use the <code>ToastException</code> to do so.
+        The previous approach uses a Trait and works only inside Livewire components. If you are trying to trigger a toast from outside a Livewire context, you can use the <code>ToastException</code>
+        to do so.
         This class has a number of shortcut functions to make it easier to use, and it's possible to overwrite all defaults.
     </p>
 
@@ -230,9 +231,9 @@ class extends Component {
 
         public function notALivewireMethod()
         {
-            throw ToastException::error('Your operation could not complete','Uh Oh!');
+            throw ToastException::error('Your operation could not complete');
 
-            // Shortcuts
+            // Shortcuts with the same API from Toast trait
             throw ToastException::success(...);
             throw ToastException::error(...);
             throw ToastException::warning(...);
@@ -243,33 +244,11 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        The final options array is useful when you need to tweak the default configuration in the place you've used it.
-        The key and values of the array match the property names in the <code>Toast</code> trait method.
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="php">
-        @verbatim('docs')
-        use Mary\Exceptions\ToastException;
-
-        public function notALivewireMethod()
-        {
-            $options = [
-                'icon'=>'o-exclamation-triangle'
-                'position' => 'toast-bottom toast-start',
-                'css' => 'alert-warning text-lg',
-                'timeout' => 5000,
-            ];
-            throw ToastException::info('Description Text or message', 'Title', $options);
-        }
-        @endverbatim
-    </x-code>
-    {{--@formatter:on--}}
-
-    <p>
-        The livewire request hook <code>fail</code> method is used to handle the client side rendering of the toasts. If you already have hooks set up, the hook to render the toast will be called second.
+        The livewire request hook <code>fail</code> method is used to handle the client side rendering of the toasts. If you already have hooks set up, the hook to render the toast
+        will be called second.
         If you have a toast call in your existing hook, it will be de-bounced so only one call is used.
-        The livewire fail hook is given a <code>preventDefault()</code> function to call if you wish to stop the event bubbling up, this behaviour is respected by the second hook configured by toast.
+        The livewire fail hook is given a <code>preventDefault()</code> function to call if you wish to stop the event bubbling up, this behaviour is respected by the second hook
+        configured by toast.
         If you want to disable this call, you can chain the <code>permitDefault()</code> method on your exception.
     </p>
 
