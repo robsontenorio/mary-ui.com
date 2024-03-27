@@ -74,7 +74,7 @@ class extends Component {
                 <x-step step="2" text="Payment">
                     Payment step
                 </x-step>
-                <x-step step="3" text="Receive Product" class="bg-orange-100">
+                <x-step step="3" text="Receive Product" class="bg-orange-500/20">
                     Receive Product
                 </x-step>
             </x-steps>

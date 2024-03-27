@@ -28,7 +28,7 @@ p {
 }
 
 .landing pre {
-    @apply !mt-0
+    @apply !my-0
 }
 
 /* Hide elements from <x-code> component when necessary */

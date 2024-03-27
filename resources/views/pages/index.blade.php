@@ -372,7 +372,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     $users = User::with('city')->take(4)->get();
 
                     $headers = [
-                        ['key' => 'id', 'label' => '#', 'class' => 'w-1 bg-yellow-50'], # <-- CSS
+                        ['key' => 'id', 'label' => '#', 'class' => 'w-1 bg-yellow-500/20'], # <-- CSS
                         ['key' => 'name', 'label' => 'Nice Name', 'class' => 'hidden lg:table-cell'], # <-- responsive
                         ['key' => 'city.name', 'label' => 'City']   # <-- nested object
                     ];
@@ -412,7 +412,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
                     $cell_decoration = [
                         'name' => [
-                            'bg-yellow-50 italic' => fn(User $user) => Str::of($user->name)->startsWith('A')
+                            'bg-yellow-500/20 italic' => fn(User $user) => Str::of($user->name)->startsWith('A')
                         ]
                     ];
                 @endphp
