@@ -140,7 +140,7 @@ class extends Component {
                 $users = User::take(3)->get();
 
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100 dark:bg-red-500/20 w-1'],
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20 w-1'],
                     ['key' => 'username', 'label' => 'Username'],
                     ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'],
                 ];
@@ -185,7 +185,7 @@ class extends Component {
                 // If more than one condition is `true` the respective classes will be merged.
 
                 $row_decoration = [
-                    'bg-yellow-100 dark:bg-yellow-500/25' => fn(User $user) => $user->isAdmin,
+                    'bg-yellow-500/25' => fn(User $user) => $user->isAdmin,
                     'text-red-500' => fn(User $user) => $user->isAdmin && $user->isInactive,
                     'underline font-bold' => fn(User $user) => $user->isInactive // <-- combined classes
                 ];
@@ -227,11 +227,11 @@ class extends Component {
 
                 $cell_decoration = [
                     'city.name' => [
-                        'bg-yellow-100 dark:bg-yellow-500/25 underline' => fn(User $user) => !$user->city->isAvailable,
+                        'bg-yellow-500/25 underline' => fn(User $user) => !$user->city->isAvailable,
                     ],
                     'username' => [
                         'text-yellow-500' => fn(User $user) => $user->isAdmin,
-                        'bg-gray-500 dark:bg-dark-300' => fn(User $user) => $user->isInactive
+                        'bg-dark-300' => fn(User $user) => $user->isInactive
                     ]
                 ];
             @endphp
@@ -452,7 +452,7 @@ class extends Component {
                 $users = App\Models\User::with('city')->take(2)->get();
 
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-100 dark:bg-red-500/20'], # <--- custom CSS
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20'], # <--- custom CSS
                     ['key' => 'name', 'label' => 'Nice Name'],
                     ['key' => 'city.name', 'label' => 'City'], # <---- nested attributes
                 ];

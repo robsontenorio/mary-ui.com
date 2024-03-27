@@ -49,7 +49,7 @@ class extends Component {
                     {{ $user->username }}
                 </x-slot:title>
 
-                <x-slot:subtitle class="text-neutral dark:text-neutral-content flex flex-col gap-1 mt-2 pl-2">
+                <x-slot:subtitle class="text-gray-500 flex flex-col gap-1 mt-2 pl-2">
                     <x-icon name="o-paper-airplane" label="12 posts" />
                     <x-icon name="o-chat-bubble-left" label="45 comments" />
                 </x-slot:subtitle>

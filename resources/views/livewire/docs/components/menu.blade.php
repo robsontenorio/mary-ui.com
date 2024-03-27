@@ -73,7 +73,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu active-bg-color="bg-blue-50 dark:bg-blue-500/10" class="border border-dashed">
+            <x-menu active-bg-color="bg-purple-500/10" class="border border-dashed">
                 {{-- Notice `active` --}}
                 <x-menu-item title="Hi" active />
                 <x-menu-item title="Some style" class="text-purple-500 font-bold" />
