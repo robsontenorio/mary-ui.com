@@ -1,0 +1,59 @@
+name: Create and publish a Docker image
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'         # any `x.y.z` tag builds the `production` iamge
+      - 'stage-*'                     # the `stage-xxxx` pattern tag builds the`stage` image
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: "Log in to the Container registry"
+        uses: docker/login-action@v3.1.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Check Github Tag"
+        id: check-tag
+        run: |
+          if [[ ${{ github.event.ref }} =~ ^refs/tags/[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              echo "IS_PRODUCTION=true" >> $GITHUB_OUTPUT
+          fi
+
+          if [[ ${{ github.event.ref }} =~ ^refs/tags/stage-(.*)$ ]]; then
+              echo "IS_STAGE=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: "Extract Docker metadata (tags, labels)"
+        id: meta
+        uses: docker/metadata-action@v5.5.1
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          flavor: |
+            latest=false
+          tags: |
+            type=raw,value=production,enable=${{  steps.check-tag.outputs.IS_PRODUCTION == 'true' }}
+            type=raw,value=stage,enable=${{  steps.check-tag.outputs.IS_STAGE == 'true' }}
+
+      - name: "Build and push Docker images"
+        uses: docker/build-push-action@v5.3.0
+        with:
+          context: .
+          file: .docker/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
