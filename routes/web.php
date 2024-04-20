@@ -57,6 +57,7 @@ Volt::route('/docs/components/badges', 'docs.components.badges');
 Volt::route('/docs/components/button', 'docs.components.button');
 Volt::route('/docs/components/card', 'docs.components.card');
 Volt::route('/docs/components/collapse', 'docs.components.collapse');
+Volt::route('/docs/components/colorpicker', 'docs.components.colorpicker');
 Volt::route('/docs/components/header', 'docs.components.header');
 Volt::route('/docs/components/icon', 'docs.components.icon');
 Volt::route('/docs/components/kbd', 'docs.components.kbd');

@@ -176,6 +176,7 @@
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
                     <x-menu-item title="Collapse" link="/docs/components/collapse" />
+                    <x-menu-item title="Color Picker" link="/docs/components/colorpicker" badge="new" badge-classes="!badge-warning" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
                     <x-menu-item title="Kbd" link="/docs/components/kbd" />
