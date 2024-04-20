@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ee2474bde14d1e624a8f6c1f2184481",
+    "content-hash": "2920488a365f4855c094ba002c1ae331",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4124,16 +4124,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.26.0",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "601842de253f447fc58799bb5e5b1f0a69c13cc1"
+                "reference": "dc631f01b875a7c6cd57be5a05120a42def4c33f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/601842de253f447fc58799bb5e5b1f0a69c13cc1",
-                "reference": "601842de253f447fc58799bb5e5b1f0a69c13cc1",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/dc631f01b875a7c6cd57be5a05120a42def4c33f",
+                "reference": "dc631f01b875a7c6cd57be5a05120a42def4c33f",
                 "shasum": ""
             },
             "require": {
@@ -4199,7 +4199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.26.0"
+                "source": "https://github.com/robsontenorio/mary/tree/1.27.0"
             },
             "funding": [
                 {
@@ -4207,7 +4207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-27T16:39:46+00:00"
+            "time": "2024-04-19T23:55:46+00:00"
         },
         {
             "name": "symfony/console",
