@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "80bebfe38df5ab6d1222365be626f2fc",
+    "content-hash": "861103b2558149652f248655035ab6ac",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4124,17 +4124,11 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.29.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "206dd53cd8ac0f6641bbf8e5a46ad75fd5fd072b"
-            },
+            "version": "dev-main",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/206dd53cd8ac0f6641bbf8e5a46ad75fd5fd072b",
-                "reference": "206dd53cd8ac0f6641bbf8e5a46ad75fd5fd072b",
-                "shasum": ""
+                "type": "path",
+                "url": "/var/www/app/packages/mary",
+                "reference": "206dd53cd8ac0f6641bbf8e5a46ad75fd5fd072b"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.3",
@@ -4162,7 +4156,11 @@
                     "Mary\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Mary\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -4176,11 +4174,11 @@
             "description": "Laravel Blade UI Components for Livewire 3",
             "homepage": "https://mary-ui.com",
             "keywords": [
-                "DaisyUI",
                 "alpinejs",
                 "blade",
                 "blade ui components",
                 "components",
+                "daisyUI",
                 "laravel",
                 "livewire",
                 "livewire 3",
@@ -4197,17 +4195,10 @@
                 "tallstackui",
                 "ui"
             ],
-            "support": {
-                "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.29.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/robsontenorio",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-04-22T00:33:53+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "symfony/console",
@@ -9209,7 +9200,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
