@@ -34,9 +34,6 @@ class extends Component {
 
     <x-code class="grid gap-10">
         @verbatim('docs')
-            Cor:
-            <input type="color" />
-
             <x-colorpicker wire:model="color1" />
 
             <x-colorpicker wire:model="color2" label="Select a color" hint="Please, a nice color" icon="o-swatch" />
