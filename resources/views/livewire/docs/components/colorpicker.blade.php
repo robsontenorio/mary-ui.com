@@ -29,7 +29,7 @@ class extends Component {
     <x-anchor title="Color Picker" />
 
     <p>
-        This components uses the native OS color picker.
+        This component uses the native OS color picker.
     </p>
 
     <x-code class="grid gap-10">
