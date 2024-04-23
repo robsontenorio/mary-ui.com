@@ -20,6 +20,10 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Signature" />
 
+    <p>
+        This component is a wrapper around <a href="https://github.com/szimek/signature_pad" target="_blank">signature_pad</a>, for more details refer to its docs.
+    </p>
+
     <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code no-render>

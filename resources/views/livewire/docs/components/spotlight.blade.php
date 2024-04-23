@@ -26,9 +26,14 @@ class extends Component {
 
     <p>
         Search for "a" to see what kind of content it returns. In this example, all links point to this page itself.
+        You can change this default shortcut.
     </p>
 
-    <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
+    <kbd class="kbd">⌘ command</kbd> + <kbd class="kbd">G</kbd>
+    <p class="my-5"></p>
+    <kbd class="kbd">⊞ win</kbd> + <kbd class="kbd">G</kbd>
+    <p class="my-5"></p>
+    <kbd class="kbd">◆ meta</kbd> + <kbd class="kbd">G</kbd>
 
     <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
 
@@ -105,22 +110,6 @@ class extends Component {
         <strong>... You are done!</strong>
     </p>
 
-    <x-anchor title="Options" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        You can change the <code>shortcut</code> with any combination supported
-        <a href="https://livewire.laravel.com/docs/actions#listening-for-specific-keys">by Livewire</a>.
-    </p>
-
-    <x-code no-render>
-        @verbatim('docs')
-            <x-spotlight
-                shortcut="meta.slash"
-                search-text="Find docs, app actions or users"
-                no-results-text="Ops! Nothing here." />
-        @endverbatim
-    </x-code>
-
     <x-anchor title="Manual activation" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -152,9 +141,10 @@ class extends Component {
     {{--@formatter:on--}}
 
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
-    <p>
+
+    <x-alert class="alert-error" icon="o-shield-exclamation">
         As maryUI exposes a <strong>public route</strong> to make Spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
-    </p>
+    </x-alert>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
@@ -226,6 +216,46 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Options" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can change the <code>shortcut</code> with any combination supported
+        <a href="https://livewire.laravel.com/docs/actions#listening-for-specific-keys">by Livewire</a>.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-spotlight
+                shortcut="meta.slash"
+                search-text="Find docs, app actions or users"
+                no-results-text="Ops! Nothing here."
+                url="/custom/search/url/here" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Changing the search class" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        If for some reason you want to change the search class, publish the config file.
+    </p>
+
+    <x-code no-render language="bash">
+        php artisan vendor:publish --tag mary.config
+    </x-code>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            // ...
+            'components' => [
+                'spotlight' => [
+                    'class' => 'App\Support\Spotlight'
+                ]
+            ]
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -264,29 +294,6 @@ class extends Component {
                     // Do your logic here
                 }
             }
-        @endverbatim
-    </x-code>
-    {{--@formatter:on--}}
-
-    <x-anchor title="Changing the search class" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        If for some reason you want to change the search class, publish the config file.
-    </p>
-
-    <x-code no-render language="bash">
-        php artisan vendor:publish --tag mary.config
-    </x-code>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="php">
-        @verbatim('docs')
-            // ...
-            'components' => [
-                'spotlight' => [
-                    'class' => 'App\Support\Spotlight'
-                ]
-            ]
         @endverbatim
     </x-code>
     {{--@formatter:on--}}

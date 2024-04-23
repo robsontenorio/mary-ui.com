@@ -145,7 +145,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
             <div>
                 <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box pt-10 px-8 pb-4 ">
-                    <kbd class="kbd">Ctrl/Cmd</kbd> <span class="text-base-100">+</span> <kbd class="kbd">G</kbd>
+                    <kbd class="kbd">⌘</kbd> <span class="text-base-100">+</span> <kbd class="kbd">G</kbd>
+                    <span class="text-base-100 ml-5 italic">(meta key + G)</span>
+
                     <p class="text-base-100">Search for "a" to see what kind of content it returns.</p>
                 </div>
             </div>
