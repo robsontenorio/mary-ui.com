@@ -68,6 +68,9 @@
     {{--  Currency  --}}
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
 
+    {{-- Signature Pad  --}}
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Algolia docsearch --}}
@@ -198,6 +201,7 @@
                     <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />
                     <x-menu-item title="Markdown Editor" link="/docs/components/markdown" />
                     <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
+                    <x-menu-item title="Signature" link="/docs/components/signature" badge="new" badge-classes="!badge-warning" />
                 </x-menu-sub>
             </x-menu>
         </x-slot:sidebar>

@@ -28,7 +28,7 @@ class extends Component {
     <x-anchor title="Date Picker" />
 
     <p>
-        This component is a wrapper around <a href="https://flatpickr.js.org/examples/" target="_blank">flatpickr`s docs</a>.
+        This component is a wrapper around <a href="https://flatpickr.js.org/examples/" target="_blank">flatpickr</a>.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
