@@ -16,6 +16,8 @@ class extends Component {
 
     public ?string $myDate4 = '2027-02-24';
 
+    public ?string $myDate5 = '';
+
     public function save()
     {
     }
@@ -112,6 +114,43 @@ class extends Component {
 
             <x-datepicker label="Portuguese" wire:model="myDate1" icon="o-calendar" :config="$config1" />
             <x-datepicker label="French" wire:model="myDate1" icon="o-calendar" :config="$config2" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Plugins" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Here is a example for <code>monthSelectPlugin</code>. Please, refer to flatpickr`s docs for more plugins and how about to install them.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <head>
+                ...
+
+                {{-- MonthSelectPlugin  --}}
+                <script src="https://unpkg.com/flatpickr/dist/plugins/monthSelect/index.js"></script>
+                <link href="https://unpkg.com/flatpickr/dist/plugins/monthSelect/style.css" rel="stylesheet">
+                @endverbatim
+            </head>
+    </x-code>
+
+    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        @verbatim('docs')
+            @php
+                $config1 = [
+                    'plugins' => [
+                         [
+                            'monthSelectPlugin' => [
+                                'dateFormat' => 'm.y',
+                                'altFormat' => 'F Y',
+                            ]
+                         ]
+                   ]
+               ];
+            @endphp
+
+            <x-datepicker label="Month" wire:model.live="myDate5" icon="o-calendar" :config="$config1" />
         @endverbatim
     </x-code>
 </div>
