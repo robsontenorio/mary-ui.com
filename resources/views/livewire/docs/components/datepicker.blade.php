@@ -150,7 +150,7 @@ class extends Component {
                ];
             @endphp
 
-            <x-datepicker label="Month" wire:model.live="myDate5" icon="o-calendar" :config="$config1" />
+            <x-datepicker label="Month" wire:model="myDate5" icon="o-calendar" :config="$config1" />
         @endverbatim
     </x-code>
 </div>

@@ -184,6 +184,23 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Default position" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        The default position is <code>toast-top toast-end</code>. You can change it by passing the <code>position</code> parameter.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render>
+        @verbatim('docs')
+            <body>
+                ...
+                <x-toast position="toast-top toast-center" />
+            </body>
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Custom style" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

@@ -31,6 +31,8 @@ class extends Component {
             </x-alert>
 
             <x-alert title="I have a shadow" icon="o-exclamation-triangle" shadow />
+
+            <x-alert title="Dismissible" description="Click the close icon" icon="o-exclamation-triangle" dismissible />
         @endverbatim
     </x-code>
 </div>
