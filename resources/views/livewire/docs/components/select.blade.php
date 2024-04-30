@@ -74,7 +74,7 @@ class extends Component {
                 :options="$users"
                 option-value="custom_key"
                 option-label="other_name"
-                placeholder="Select an user"
+                placeholder="Select a user"
                 placeholder-value="0" {{-- Set a value for placeholder. Default is `null` --}}
                 hint="Select one, please."
                 wire:model="selectedUser2" />
