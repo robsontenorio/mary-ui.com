@@ -14,7 +14,7 @@ class extends Component {
     <x-anchor title="Calendar" />
 
     <p>
-        This component is a wrapper around <a href="https://vanilla-calendar.com" target="_blank">Vanilla Calendar</a>.
+        This component is a wrapper around <a href="https://vanilla-calendar.pro" target="_blank">Vanilla Calendar</a>.
         We have simplified its API to make it act as a <strong>readonly calendar</strong> for easily displaying events.
     </p>
 
@@ -31,10 +31,8 @@ class extends Component {
                 ...
 
                 {{-- Vanilla Calendar --}}
-                <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.7.0/build/vanilla-calendar.min.css" rel="stylesheet">
-                <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.7.0/build/themes/light.min.css" rel="stylesheet">
-                <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.7.0/build/themes/dark.min.css" rel="stylesheet">
-                <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar@2.7.0/build/vanilla-calendar.min.js" defer></script>
+                <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.js"></script>
+                <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
             </head>
         @endverbatim
     </x-code>
@@ -76,8 +74,8 @@ class extends Component {
 
             <x-calendar :events="$events" />
 
-            {{-- `locale` is any valid locale --}}
-            <x-calendar locale="pt-BR" weekend-highlight />
+            {{-- Shortcuts config to `locale`, `sunday-start` and weekend-highlight --}}
+            <x-calendar locale="pt-BR" weekend-highlight sunday-start />
         @endverbatim
     </x-code>
 
