@@ -59,7 +59,7 @@
     <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" rel="stylesheet">
 
     {{-- TinyMCE --}}
-    <script src="https://cdn.tiny.cloud/1/kecao1uumzo3qt3o90pztdtlp82b4ctv8tkvsrjgcx34ock5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
 
     {{-- Markdown --}}
     <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
