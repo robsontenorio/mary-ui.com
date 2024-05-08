@@ -84,7 +84,7 @@ class extends Component {
     <br>
 
     <p>
-        You can automatically activate a menu item when current route matches <code>link</code> and its nested route variations by using the <code>activate-by-route</code>
+        You can automatically activate a menu item when current route matches the base <code>link</code> and its nested route variations by using the <code>activate-by-route</code>
         attribute.
     </p>
     <p>
@@ -111,6 +111,20 @@ class extends Component {
                 <x-menu-item title="Party" />
             </x-menu>
 
+        @endverbatim
+    </x-code>
+
+    <p>
+        If you use Laravel named routes, combine with the <code>route</code> param that matches the named route.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-menu activate-by-route>
+                <x-menu-sub title="Attendance">
+                    <x-menu-item title="Start" link="{{ route('attendance.index') }}" route="attendance.index" />
+                    <x-menu-item title="View" link="{{ route('attendance.list') }}" route="attendance.list" />
+                </x-menu-sub>
         @endverbatim
     </x-code>
 
