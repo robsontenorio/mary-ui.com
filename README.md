@@ -8,6 +8,11 @@ This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking 
 
 Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) ❤️
 
+## Discord 
+
+Come to say hello on [maryUI Discord](https://discord.gg/YyFR8dnQ)
+
+
 ## Follow me
 
 [@robsontenorio](https://twitter.com/robsontenorio)
