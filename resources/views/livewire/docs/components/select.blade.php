@@ -127,4 +127,33 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <x-anchor title="Group" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        This component uses the native HTML grouped select.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php
+                $grouped = [
+                    'Admins' => [
+                        ['id' => 1, 'name' => 'Mary'],
+                        ['id' => 2, 'name' => 'Giovanna'],
+                        ['id' => 3, 'name' => 'Marina']
+                     ],
+                    'Users' => [
+                        ['id' => 4, 'name' => 'John'],
+                        ['id' => 5, 'name' => 'Doe'],
+                        ['id' => 6, 'name' => 'Jane']
+                    ],
+                ];
+            @endphp
+
+            <x-select-group label="Group Select Demo" :options="$grouped" wire:model="selectedUser" />
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
 </div>
