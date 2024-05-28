@@ -179,11 +179,11 @@
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
                     <x-menu-item title="Collapse" link="/docs/components/collapse" />
-                    <x-menu-item title="Color Picker" link="/docs/components/colorpicker" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
                     <x-menu-item title="Kbd" link="/docs/components/kbd" />
-                    <x-menu-item title="Pin" link="/docs/components/pin" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Pin" link="/docs/components/pin" />
                     <x-menu-item title="Progress" link="/docs/components/progress" />
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
@@ -201,7 +201,7 @@
                     <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />
                     <x-menu-item title="Markdown Editor" link="/docs/components/markdown" />
                     <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
-                    <x-menu-item title="Signature" link="/docs/components/signature" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Signature" link="/docs/components/signature" />
                 </x-menu-sub>
             </x-menu>
         </x-slot:sidebar>

@@ -62,6 +62,21 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="No icon" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
+            <x-collapse no-icon>
+                <x-slot:heading>
+                    How ...
+                </x-slot:heading>
+                <x-slot:content>
+                    Are you ?
+                </x-slot:content>
+            </x-collapse>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Accordion" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

@@ -62,6 +62,7 @@ class extends Component {
                 subtitle="Livewire"
                 separator
                 with-close-button
+                close-on-escape
                 class="w-11/12 lg:w-1/3"
             >
                 <div>Hey!</div>
