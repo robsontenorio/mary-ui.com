@@ -62,6 +62,7 @@ Volt::route('/docs/components/header', 'docs.components.header');
 Volt::route('/docs/components/icon', 'docs.components.icon');
 Volt::route('/docs/components/kbd', 'docs.components.kbd');
 Volt::route('/docs/components/pin', 'docs.components.pin');
+Volt::route('/docs/components/popover', 'docs.components.popover');
 Volt::route('/docs/components/progress', 'docs.components.progress');
 Volt::route('/docs/components/spotlight', 'docs.components.spotlight');
 Volt::route('/docs/components/statistic', 'docs.components.statistic');
