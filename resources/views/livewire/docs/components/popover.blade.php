@@ -68,7 +68,7 @@ class extends Component {
                 <x-slot:trigger class="bg-base-200 p-2 rounded-lg">
                     {{ $user->username }}
                 </x-slot:trigger>
-                <x-slot:content class="border border-warning  w-40 text-sm">
+                <x-slot:content class="border border-warning !w-40 text-sm">
                     <x-avatar :image="$user->avatar" />
                     {{ $user->bio }}
                 </x-slot:content>
