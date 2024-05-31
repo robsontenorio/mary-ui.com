@@ -33,7 +33,7 @@ class extends Component {
 
             <x-header title="Users" subtitle="Check this on mobile">
                 <x-slot:middle class="!justify-end">
-                    <x-input icon="o-magnifying-glass" placeholder="Search..." />
+                    <x-input icon="o-bolt" placeholder="Search..." />
                 </x-slot:middle>
                 <x-slot:actions>
                     <x-button icon="o-funnel" />
