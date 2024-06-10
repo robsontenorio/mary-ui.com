@@ -64,4 +64,33 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Customisation" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+       Add custom classes to the x-tabs component
+    </p>
+    <x-code>
+        @verbatim('docs')
+            <x-tabs label-class="font-semibold" label-div-class="flex overflow-x-auto w-full" active-class='bg-primary'
+                   wire:model="selectedTab"
+                   class="!border-none w-full">
+                <x-tab id="all-tab" name="all-tab" label="All" class="!border-none">
+                    <div class="w-full flex flex-col items-start justify-start gap-4 !border-none">
+                        <div>All</div>
+                    </div>
+                </x-tab>
+                <x-tab name="graded-tab" label="Graded">
+                    <div>Tricks</div>
+                </x-tab>
+                <x-tab name="ungraded-tab">
+                    <x-slot:label>
+                        Ungraded
+                        <x-badge value="3" class="badge-primary"/>
+                    </x-slot:label>
+                    <div>Musics</div>
+                </x-tab>
+            </x-tabs>
+        @endverbatim
+    </x-code>
+
 </div>
