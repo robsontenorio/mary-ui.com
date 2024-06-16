@@ -565,7 +565,7 @@ class extends Component {
 
     <p>
         You can access the <a href="https://laravel.com/docs/10.x/blade#the-loop-variable" target="_blank">loop context</a>
-        on cell scopes through <code>$this->loop</code>.
+        on cell scopes through <code>$loop</code> variable.
     </p>
 
     {{--@formatter:off--}}
@@ -581,7 +581,7 @@ class extends Component {
 
             <x-table :headers="$headers" :rows="$users">
                 @scope('cell_name', $user)
-                    ({{  $this->loop->index }}) {{ $user->name }}
+                    ({{  $loop->index }}) {{ $user->name }}
                 @endscope
             </x-table>
         @endverbatim

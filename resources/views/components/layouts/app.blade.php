@@ -184,7 +184,7 @@
                     <x-menu-item title="Icon" link="/docs/components/icon" />
                     <x-menu-item title="Kbd" link="/docs/components/kbd" />
                     <x-menu-item title="Pin" link="/docs/components/pin" />
-                    <x-menu-item title="Popover" link="/docs/components/popover" badge="new" badge-classes="!badge-warning" />
+                    <x-menu-item title="Popover" link="/docs/components/popover" />
                     <x-menu-item title="Progress" link="/docs/components/progress" />
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
