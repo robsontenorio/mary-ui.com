@@ -13,6 +13,8 @@ class extends Component {
     public bool $myModal2 = false;
 
     public bool $myModal3 = false;
+
+    public bool $myModal4 = false;
 }
 
 ?>
@@ -73,7 +75,7 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-modal wire:model="myModal3" persistent class="backdrop-blur">
+            <x-modal wire:model="myModal3" persistent>
                 <div>Processing ...</div>
                 <x-slot:actions>
                     <x-button label="Cancel" @click="$wire.myModal3 = false" />
@@ -81,6 +83,22 @@ class extends Component {
             </x-modal>
 
             <x-button label="Open Persistent" @click="$wire.myModal3 = true" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Styling" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Remember to add <code>box-class</code> custom classes on Tailwind <strong>safelist</strong>.
+    </x-alert>
+
+    <x-code class="flex gap-5">
+        @verbatim('docs')
+            <x-modal wire:model="myModal4" class="backdrop-blur" box-class="bg-red-50 p-10 w-64">
+                Hello!
+            </x-modal>
+
+            <x-button label="Open " @click="$wire.myModal4 = true" />
         @endverbatim
     </x-code>
 
