@@ -64,4 +64,31 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Customisation" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Remember to add these custom classes on Tailwind <strong>safelist</strong>.
+    </x-alert>
+
+    <x-code>
+        @verbatim('docs')
+            <x-tabs
+                wire:model="selectedTab"
+                active-class="bg-primary rounded text-white"
+                label-class="font-semibold"
+                label-div-class="bg-primary/5 p-2 rounded"
+            >
+                <x-tab name="users-tab" label="Users">
+                    <div>All</div>
+                </x-tab>
+                <x-tab name="tricks-tab" label="Tricks">
+                    <div>Tricks</div>
+                </x-tab>
+                <x-tab name="musics-tab" label="Musics">
+                    <div>Musics</div>
+                </x-tab>
+            </x-tabs>
+        @endverbatim
+    </x-code>
+
 </div>
