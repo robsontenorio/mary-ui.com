@@ -131,15 +131,15 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom actions slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No `separator`" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        To avoid having the separator line above the actions slot, add <code>noseparator</code> attribute.
+        To avoid having the separator line above the actions slot, add <code>no-separator</code> attribute.
     </p>
 
     <x-code>
         @verbatim('docs')
-            <x-form wire:submit="save" noseparator>
+            <x-form wire:submit="save" no-separator>
                 <x-input label="Name" wire:model="name" />
 
                 <x-slot:actions>
