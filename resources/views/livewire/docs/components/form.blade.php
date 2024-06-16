@@ -131,6 +131,25 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="No `separator`" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        To avoid having the separator line above the actions slot, add <code>no-separator</code> attribute.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-form wire:submit="save" no-separator>
+                <x-input label="Name" wire:model="name" />
+
+                <x-slot:actions>
+                    <x-button label="Cancel" />
+                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+                </x-slot:actions>
+            </x-form>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Custom error field" size="text-2xl" class="mt-10 mb-5" />
     <p>
         By default, it uses the model name to retrieve the validation errors. If you want to display validation errors for a custom error field, you can use the
