@@ -8,13 +8,15 @@ new
 #[Title('Rating')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI rating component.'])]
 class extends Component {
-    public int $ranking1 = 2;
+    public int $ranking0 = 0;
+
+    public int $ranking1 = 1;
 
     public int $ranking2 = 2;
 
-    public int $ranking3 = 2;
+    public int $ranking3 = 3;
 
-    public int $ranking4 = 2;
+    public int $ranking4 = 4;
 }; ?>
 
 <div class="docs">
@@ -22,16 +24,24 @@ class extends Component {
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
 
+    <p>
+        It controls the rating based on a integer number. For "not rated" set its model value as "0".
+    </p>
+
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-rating wire:model="ranking1" />
+            {{-- Not rated --}}
+            {{-- public int $ranking0 = 0; --}}
+            <x-rating wire:model="ranking0" />
 
-            <x-rating wire:model="ranking2" total="8" />
+            <x-rating wire:model="ranking1" class="bg-warning" total="8" />
 
-            <x-rating wire:model="ranking4" class="!mask-heart !bg-red-500 rating-lg" />
+            <x-rating wire:model="ranking2" class="!mask-circle" />
+
+            <x-rating wire:model="ranking3" class="!mask-diamond bg-accent" />
+
+            <x-rating wire:model="ranking4" class="!mask-heart bg-secondary rating-lg" />
+
         @endverbatim
-    </x-code>
-    <x-code no-render language="php">
-        public int $ranking1 = 2;
     </x-code>
 </div>
