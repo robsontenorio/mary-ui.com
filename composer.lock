@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4919c8a71fc6d7a6977e9ef780d4ef11",
+    "content-hash": "b0aeebf9cf95016bee7525b8cd52bd49",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1466,16 +1466,16 @@
         },
         {
             "name": "jfcherng/php-diff",
-            "version": "6.15.3",
+            "version": "6.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jfcherng/php-diff.git",
-                "reference": "39be09756f8eda115299add3f34dc64b4bc32b66"
+                "reference": "7f46bcfc582e81769237d0b3f6b8a548efe8799d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jfcherng/php-diff/zipball/39be09756f8eda115299add3f34dc64b4bc32b66",
-                "reference": "39be09756f8eda115299add3f34dc64b4bc32b66",
+                "url": "https://api.github.com/repos/jfcherng/php-diff/zipball/7f46bcfc582e81769237d0b3f6b8a548efe8799d",
+                "reference": "7f46bcfc582e81769237d0b3f6b8a548efe8799d",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1485,7 @@
                 "php": ">=7.4"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.8",
+                "friendsofphp/php-cs-fixer": "^3.51",
                 "liip/rmt": "^1.6",
                 "phan/phan": "^5",
                 "phpunit/phpunit": "^9",
@@ -1520,7 +1520,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jfcherng/php-diff/issues",
-                "source": "https://github.com/jfcherng/php-diff/tree/6.15.3"
+                "source": "https://github.com/jfcherng/php-diff/tree/6.16.2"
             },
             "funding": [
                 {
@@ -1528,7 +1528,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2023-06-15T12:29:57+00:00"
+            "time": "2024-03-10T17:40:29+00:00"
         },
         {
             "name": "jfcherng/php-mb-string",
@@ -4124,7 +4124,7 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "dev-main",
+            "version": "1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
@@ -4146,7 +4146,6 @@
                 "orchestra/testbench": "^8.21",
                 "phpunit/phpunit": "^10.5"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4200,7 +4199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/main"
+                "source": "https://github.com/robsontenorio/mary/tree/1.33.0"
             },
             "funding": [
                 {
@@ -9211,9 +9210,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "robsontenorio/mary": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

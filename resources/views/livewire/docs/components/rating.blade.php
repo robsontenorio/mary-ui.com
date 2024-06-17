@@ -28,7 +28,7 @@ class extends Component {
 
             <x-rating wire:model="ranking2" total="8" />
 
-            <x-rating wire:model="ranking4" class="!mask-heart bg-red-500 rating-lg" />
+            <x-rating wire:model="ranking4" class="!mask-heart !bg-red-500 rating-lg" />
         @endverbatim
     </x-code>
     <x-code no-render language="php">

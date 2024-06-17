@@ -134,7 +134,7 @@
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
-                    <x-menu-item title="Demos" link="/docs/demos" badge="4" badge-classes="!badge-success" />
+                    <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Upgrading" link="/docs/upgrading" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
