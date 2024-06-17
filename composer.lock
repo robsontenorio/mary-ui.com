@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb95bde559c862a96181ec49c1b48e5d",
+    "content-hash": "4919c8a71fc6d7a6977e9ef780d4ef11",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4124,16 +4124,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.32.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "67f3f4b184375619882f5648868067507dbac933"
+                "reference": "6179ca63ea24686c9dc9c339b0fc228f8fbf881b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/67f3f4b184375619882f5648868067507dbac933",
-                "reference": "67f3f4b184375619882f5648868067507dbac933",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/6179ca63ea24686c9dc9c339b0fc228f8fbf881b",
+                "reference": "6179ca63ea24686c9dc9c339b0fc228f8fbf881b",
                 "shasum": ""
             },
             "require": {
@@ -4146,6 +4146,7 @@
                 "orchestra/testbench": "^8.21",
                 "phpunit/phpunit": "^10.5"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4199,7 +4200,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.32.0"
+                "source": "https://github.com/robsontenorio/mary/tree/main"
             },
             "funding": [
                 {
@@ -4207,7 +4208,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-31T16:06:38+00:00"
+            "time": "2024-06-17T00:25:01+00:00"
         },
         {
             "name": "symfony/console",
@@ -9210,7 +9211,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "robsontenorio/mary": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

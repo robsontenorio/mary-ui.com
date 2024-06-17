@@ -186,6 +186,7 @@
                     <x-menu-item title="Pin" link="/docs/components/pin" />
                     <x-menu-item title="Popover" link="/docs/components/popover" />
                     <x-menu-item title="Progress" link="/docs/components/progress" />
+                    <x-menu-item title="Rating" link="/docs/components/rating" badge-classes="!badge-warning" badge="new" />
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
                     <x-menu-item title="Steps" link="/docs/components/steps" />
