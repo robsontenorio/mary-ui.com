@@ -25,7 +25,9 @@ class extends Component {
         @verbatim('docs')
             <x-menu class="border border-dashed">
                 <x-menu-item title="Home" icon="o-envelope" />
+
                 <x-menu-item title="Messages" icon="o-paper-airplane" badge="78+" />
+
                 <x-menu-item title="Hello" icon="o-sparkles" badge="new" badge-classes="!badge-warning" />
 
                 <x-menu-item title="Internal link" icon="o-arrow-down" link="/docs/components/alert" />
@@ -39,11 +41,11 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Sections and Sub-menus" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Separator and Sub-menus" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-dashed">
+            <x-menu class="border border-dashed w-64">
                 <x-menu-item title="Hello" />
                 <x-menu-item title="There" />
 
@@ -58,14 +60,34 @@ class extends Component {
 
                 {{-- Separator with title and icon --}}
                 <x-menu-separator title="Magic" icon="o-sparkles" />
+
                 <x-menu-item title="Wifi" icon="o-wifi" />
-
             </x-menu>
-
         @endverbatim
     </x-code>
 
-    <x-anchor title="Active state" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        You can manually force the submenu keep open.
+    </p>
+
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu class="border border-dashed w-64">
+                <x-menu-sub title="Home" icon="o-home">
+                    <x-menu-item title="Users" icon="o-user" />
+                    <x-menu-item title="Folders" icon="o-folder" />
+                </x-menu-sub>
+
+                {{-- Force with `open` --}}
+                <x-menu-sub title="Settings" icon="o-cog-6-tooth" open>
+                    <x-menu-item title="Wifi" icon="o-wifi" />
+                    <x-menu-item title="Archives" icon="o-archive-box" />
+                </x-menu-sub>
+            </x-menu>
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Manual active state" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can manually define the active menu item by placing <code>active</code> attribute and choose a custom active color with <code>active-bg-color</code> attribute.
@@ -81,22 +103,22 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <br>
+    <x-anchor title="Automatic active state" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         You can automatically activate a menu item when current route matches the base <code>link</code> and its nested route variations by using the <code>activate-by-route</code>
         attribute.
     </p>
     <p>
-        For example, <code>link="/users"</code> will activate same menu item for:
+        For example, <code>link="/users"</code> will activate same menu item when you deep navigate for these routes:
     </p>
     <ul>
-        <li>/users</li>
-        <li>/users/23</li>
-        <li>/users/23/edit</li>
-        <li>/users/23/create</li>
-        <li>/users/?q=mary</li>
-        <li>...</li>
+        <li><strong>/users</strong></li>
+        <li><strong>/users/</strong>23</li>
+        <li><strong>/users/</strong>23/edit</li>
+        <li><strong>/users/</strong>23/create</li>
+        <li><strong>/users/</strong>?q=mary</li>
+        <li><strong>/users/</strong>[anything]</li>
     </ul>
 
     <br>
