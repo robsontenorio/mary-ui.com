@@ -147,13 +147,14 @@
                     <x-menu-item title="Toggle" link="/docs/components/toggle" />
                     <x-menu-item title="Radio" link="/docs/components/radio" />
                     <x-menu-item title="Select" link="/docs/components/select" />
+                    <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Choices" link="/docs/components/choices" />
-                    <x-menu-item title="Tags" link="/docs/components/tags" />
                     <x-menu-item title="Date Time" link="/docs/components/datetime" />
-                    <x-menu-item title="Textarea" link="/docs/components/textarea" />
-                    <x-menu-item title="Range Slider" link="/docs/components/range" />
                     <x-menu-item title="File Upload" link="/docs/components/file" />
                     <x-menu-item title="Image Library" link="/docs/components/image-library" />
+                    <x-menu-item title="Range Slider" link="/docs/components/range" />
+                    <x-menu-item title="Tags" link="/docs/components/tags" />
+                    <x-menu-item title="Textarea" link="/docs/components/textarea" />
                 </x-menu-sub>
 
                 <x-menu-sub title="List data" icon="o-list-bullet">
@@ -180,7 +181,6 @@
                     <x-menu-item title="Card" link="/docs/components/card" />
                     <x-menu-item title="Carousel" link="/docs/components/carousel" badge-classes="!badge-warning" badge="new" />
                     <x-menu-item title="Collapse" link="/docs/components/collapse" />
-                    <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
                     <x-menu-item title="Kbd" link="/docs/components/kbd" />

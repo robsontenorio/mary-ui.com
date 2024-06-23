@@ -94,15 +94,15 @@ class extends Component {
 
             <x-input label="Prepend a select">
                 <x-slot:prepend>
-                    {{-- Add `rounded-r-none` class --}}
-                    <x-select icon="o-user" :options="$users" class="rounded-r-none bg-base-200" />
+                    {{-- Add `rounded-e-none` class (RTL support) --}}
+                    <x-select icon="o-user" :options="$users" class="rounded-e-none bg-base-200" />
                 </x-slot:prepend>
             </x-input>
 
             <x-input label="Append a button">
                 <x-slot:append>
-                    {{-- Add `rounded-l-none` class --}}
-                    <x-button label="I am a button" icon="o-check" class="btn-primary rounded-l-none" />
+                    {{-- Add `rounded-s-none` class (RTL support) --}}
+                    <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
                 </x-slot:append>
             </x-input>
 

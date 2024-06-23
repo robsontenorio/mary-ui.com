@@ -10,6 +10,13 @@ new #[Title('Contributing')] class extends Component {
 
     <x-anchor title="Contributing" />
 
+    <p>
+        Please, consider adding RTL support when submitting new components.
+        See this post <a href="https://tailwindcss.com/blog/tailwindcss-v3-3#simplified-rtl-support-with-logical-properties">Tailwind Simplified RTL support with logical
+            properties</a>.
+        Here is an example of <a href="https://github.com/robsontenorio/mary/pull/503">refactoring PR</a>.
+    </p>
+
     <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -96,5 +103,4 @@ new #[Title('Contributing')] class extends Component {
     <x-alert icon="o-light-bulb">
         It uses SQLITE for dynamic examples.
     </x-alert>
-
 </div>

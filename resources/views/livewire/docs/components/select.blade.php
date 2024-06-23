@@ -28,7 +28,7 @@ class extends Component {
         If you need a rich selection value interface or async search check the <a href="/docs/components/choices" wire:navigate>Choices</a> component.
     </x-alert>
 
-    <x-anchor title="Default attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Default attributes" size="text-2xl" classf="mt-10 mb-5" />
 
     <p>
         By default, it will look up for:
@@ -118,10 +118,12 @@ class extends Component {
 
             <x-select label="Slots"  :options="$users" single>
                 <x-slot:prepend>
-                    <x-button icon="o-trash" class="rounded-r-none" />
+                    {{--  Add `rounded-e-none` (RTL support) --}}
+                    <x-button icon="o-trash" class="rounded-e-none" />
                 </x-slot:prepend>
                 <x-slot:append>
-                    <x-button label="Create" icon="o-plus" class="rounded-l-none btn-primary" />
+                    {{--  Add `rounded-s-none` (RTL support) --}}
+                    <x-button label="Create" icon="o-plus" class="rounded-s-none btn-primary" />
                 </x-slot:append>
             </x-select>
         @endverbatim

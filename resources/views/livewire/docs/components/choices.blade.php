@@ -457,10 +457,12 @@ class extends Component {
             </div>                                      <!-- [tl! .docs-hide] -->
             <x-choices label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
                 <x-slot:prepend>
-                    <x-button icon="o-trash" class="rounded-r-none" />
+                    {{-- Add `rounded-e-none` (RTL support) --}}
+                    <x-button icon="o-trash" class="rounded-e-none" />
                 </x-slot:prepend>
                 <x-slot:append>
-                    <x-button label="Create" icon="o-plus" class="rounded-l-none btn-primary" />
+                    {{-- Add `rounded-e-none` (RTL support) --}}
+                    <x-button label="Create" icon="o-plus" class="rounded-s-none btn-primary" />
                 </x-slot:append>
             </x-choices>
         @endverbatim
