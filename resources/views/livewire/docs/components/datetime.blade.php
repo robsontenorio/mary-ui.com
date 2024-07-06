@@ -36,8 +36,6 @@ class extends Component {
         @verbatim('docs')
             <x-datetime label="My date" wire:model="myDate" icon="o-calendar" />
 
-            <x-datetime label="Right icon" wire:model="myDate" icon-right="o-calendar" />
-
             {{-- Notice `type="datetime-local"` --}}
             <x-datetime label="Date + Time" wire:model="myDate" icon="o-calendar" type="datetime-local" />
 
