@@ -65,8 +65,8 @@ class extends Component {
             @endphp
 
             <x-datepicker label="Date" wire:model="myDate1" icon="o-calendar" hint="Hi!" />
-            <x-datepicker label="Alt" wire:model="myDate2" icon-right="o-calendar" :config="$config1" />
-            <x-datepicker label="Range" wire:model="myDate3" icon-right="o-calendar" :config="$config2" inline />
+            <x-datepicker label="Alt" wire:model="myDate2" icon="o-calendar" :config="$config1" />
+            <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" inline />
         @endverbatim
     </x-code>
 
