@@ -46,7 +46,7 @@ class extends Component {
     </ul>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Go ahead and add Authentication e Register as described on the following sections.
+        Go ahead and add Authentication and Register as described on the following sections.
     </x-alert>
 
     <x-anchor title="Layout" size="text-2xl" class="mt-10 mb-5" />
