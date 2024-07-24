@@ -142,7 +142,8 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20 w-1'],
                     ['key' => 'username', 'label' => 'Username'],
-                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'],
+                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'], // Responsive
+                    ['key' => 'bio', 'label' => 'Bio', 'hidden' => 'true'], // Alternative approach
                 ];
             @endphp
 
