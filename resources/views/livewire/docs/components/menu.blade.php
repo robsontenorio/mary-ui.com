@@ -26,7 +26,7 @@ class extends Component {
             <x-menu class="border border-dashed">
                 <x-menu-item title="Home" icon="o-envelope" />
 
-                <x-menu-item title="Messages" icon="o-paper-airplane" badge="78+" />
+                <x-menu-item title="Messages" icon="o-paper-airplane" badge="78+" badge-classes="float-right" />
 
                 <x-menu-item title="Hello" icon="o-sparkles" badge="new" badge-classes="!badge-warning" />
 
