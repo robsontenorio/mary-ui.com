@@ -21,6 +21,8 @@ class extends Component {
 
     public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
 
+    public int $perPage = 3;
+
     public function delete()
     {
         sleep(1);
@@ -436,6 +438,42 @@ class extends Component {
         }
     </x-code>
     {{--@formatter:on--}}
+
+    <br>
+
+    <p>
+        You also can control the number of items per page by using the <code>per-page</code> attribute, as well the displayed values using <code>per-page-values</code>.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="https://mary-ui.com/bootcamp/03#pagination">Bootcamp</a>.
+    </x-alert>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $perPage = $this->perPage;  // [tl! .docs-hide]
+                // Remember to define a model to bind the value
+                // public int $perPage = 3;
+
+                $users = App\Models\User::paginate($perPage);
+
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
+
+            <x-table
+                :headers="$headers"
+                :rows="$users"
+                with-pagination
+                per-page="perPage"
+                :per-page-values="[3, 5, 10]" {{-- Notice the `:` bind --}}
+            />
+
+        @endverbatim
+    </x-code>
 
     <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
 
