@@ -87,6 +87,28 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Enabled state" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        You can control the visibility of menus with the <code>enabled</code> attribute.
+    </p>
+
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu class="border border-dashed w-64">
+                <x-menu-item title="Users" icon="o-user" />
+
+                {{-- Notice `enabled` --}}
+                <x-menu-item title="Folders" icon="o-folder" :enabled="false" />
+
+                {{-- Notice `enabled` --}}
+                <x-menu-sub title="Settings" icon="o-cog-6-tooth" :enabled="false">
+                    <x-menu-item title="Wifi" icon="o-wifi" />
+                    <x-menu-item title="Archives" icon="o-archive-box" />
+                </x-menu-sub>
+            </x-menu>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Manual active state" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

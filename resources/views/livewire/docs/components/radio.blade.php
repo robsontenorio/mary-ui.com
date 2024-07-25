@@ -11,6 +11,8 @@ class extends Component {
     public int $selectedUser = 1;
 
     public int $selectedUser2;
+
+    public int $selectedUser3;
 }
 
 ?>
@@ -64,4 +66,26 @@ class extends Component {
                 class="bg-red-50" />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Disable options" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        You can disable options by setting the <code>disabled</code> attribute.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = [
+                    ['id' => 1, 'name' => 'John'],
+                    ['id' => 2, 'name' => 'Doe'],
+                    ['id' => 3, 'name' => 'Mary', 'disabled' => true],
+                    ['id' => 4, 'name' => 'Kate'],
+                ];
+            @endphp
+
+            <x-radio
+                label="Select one" :options="$users" wire:model="selectedUser3" />
+        @endverbatim
+    </x-code>
+
 </div>

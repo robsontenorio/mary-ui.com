@@ -19,9 +19,12 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Dropdown" />
 
+    <p>
+        Dropdowns plays nice with the <a href="/docs/components/menu" wire:navigate>Menu</a> component. Under the hood It uses the Alpine's anchor plugin to control the position.
+    </p>
+
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Dropdowns are just a suspended <a href="/docs/components/menu" wire:navigate>Menu</a>. Take a look at <a href="/docs/components/select" wire:navigate>Select</a> for value
-        selection.
+        Take a look at <a href="/docs/components/select" wire:navigate>Select</a> for value selection.
     </x-alert>
 
     <x-code class="flex justify-between">
@@ -80,6 +83,32 @@ class extends Component {
                 <x-menu-item @click.stop="">
                     <x-toggle label="Sleep mode" right />
                 </x-menu-item>
+            </x-dropdown>
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="No anchor" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        By default, this component works with Alpine's anchor plugin.
+        If you don't want to use it, just add <code>no-x-anchor</code> to the dropdown to manually control the position.
+    </p>
+
+    <x-code class="flex justify-between">
+        @verbatim('docs')
+            <x-dropdown label="Default" no-x-anchor>
+                <x-menu-item title="Hey" />
+                <x-menu-item title="How are you?" />
+            </x-dropdown>
+
+            <x-dropdown label="Top" no-x-anchor top>
+                <x-menu-item title="Hey" />
+                <x-menu-item title="How are you?" />
+            </x-dropdown>
+
+            <x-dropdown label="Right" no-x-anchor right>
+                <x-menu-item title="Hey" />
+                <x-menu-item title="It should align correctly on right side?" />
             </x-dropdown>
         @endverbatim
     </x-code>
