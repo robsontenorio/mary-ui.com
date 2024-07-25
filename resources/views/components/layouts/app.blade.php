@@ -134,6 +134,7 @@
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
+                    <x-menu-item title="Sidebar" link="/docs/sidebar" />
                     <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Upgrading" link="/docs/upgrading" />
@@ -179,7 +180,7 @@
                     <x-menu-item title="Button" link="/docs/components/button" />
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
-                    <x-menu-item title="Carousel" link="/docs/components/carousel" badge-classes="!badge-warning" badge="new" />
+                    <x-menu-item title="Carousel" link="/docs/components/carousel" />
                     <x-menu-item title="Collapse" link="/docs/components/collapse" />
                     <x-menu-item title="Header" link="/docs/components/header" />
                     <x-menu-item title="Icon" link="/docs/components/icon" />
@@ -187,7 +188,7 @@
                     <x-menu-item title="Pin" link="/docs/components/pin" />
                     <x-menu-item title="Popover" link="/docs/components/popover" />
                     <x-menu-item title="Progress" link="/docs/components/progress" />
-                    <x-menu-item title="Rating" link="/docs/components/rating" badge-classes="!badge-warning" badge="new" />
+                    <x-menu-item title="Rating" link="/docs/components/rating" />
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
                     <x-menu-item title="Steps" link="/docs/components/steps" />

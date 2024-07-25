@@ -89,7 +89,7 @@ class extends Component {
 
     <x-anchor title="Enabled state" size="text-2xl" class="mt-10 mb-5" />
     <p>
-        You can disable a menu item by using the <code>enabled</code> attribute.
+        You can control the visibility of menus with the <code>enabled</code> attribute.
     </p>
 
     <x-code class="grid gap-5 justify-center">

@@ -650,6 +650,35 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Empty Slot" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can customize the empty text message by using one of the following approaches.
+    </p>
+
+    <x-code class="grid gap-10">
+        @verbatim('docs')
+            @php                                                    // [tl! .docs-hide]
+                $users = [];                                        // [tl! .docs-hide]
+                $headers = [                                        // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],      // [tl! .docs-hide]
+                    ['key' => 'email', 'label' => 'E-mail'],        // [tl! .docs-hide]
+                    ['key' => 'bio', 'label' => 'Bio'],             // [tl! .docs-hide]
+                    ['key' => 'city.name', 'label' => 'City'],      // [tl! .docs-hide]
+                ];                                                  // [tl! .docs-hide]
+            @endphp                                                 <!-- [tl! .docs-hide] -->
+            <x-table :headers="$headers" :rows="$users" show-empty-text />
+
+            <x-table :headers="$headers" :rows="$users" show-empty-text empty-text="Nothing Here!" />
+
+            <x-table :headers="$headers" :rows="$users">
+                <x-slot:empty>
+                    <x-icon name="o-cube" label="It is empty." />
+                </x-slot:empty>
+            </x-table>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Row selection" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
