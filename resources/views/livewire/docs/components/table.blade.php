@@ -456,7 +456,8 @@ class extends Component {
                 // Remember to define a model to bind the value
                 // public int $perPage = 3;
 
-                $users = App\Models\User::paginate($perPage);
+                // Also use it here.
+                $users = App\Models\User::paginate($this->perPage);
 
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
@@ -472,6 +473,28 @@ class extends Component {
                 :per-page-values="[3, 5, 10]" {{-- Notice the `:` bind --}}
             />
 
+        @endverbatim
+    </x-code>
+
+    <br>
+
+    <p>
+        MarUI also provides its own pagination component. You can use it with other components, so it is not limited to tables.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                // Remember to define a model to bind the value
+                $users = App\Models\User::paginate($this->perPage);
+            @endphp
+
+            @foreach($users as $user)
+                <div class="bg-base-200 p-2 my-3 rounded">{{ $user->name }}</div>
+            @endforeach
+
+            {{-- The pagination component --}}
+            <x-pagination :rows="$users" wire:model.live="perPage" />
         @endverbatim
     </x-code>
 
