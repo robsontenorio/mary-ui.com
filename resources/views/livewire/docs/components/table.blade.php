@@ -21,6 +21,8 @@ class extends Component {
 
     public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
 
+    public int $perPage = 3;
+
     public function delete()
     {
         sleep(1);
@@ -142,7 +144,8 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20 w-1'],
                     ['key' => 'username', 'label' => 'Username'],
-                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'],
+                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'], // Responsive
+                    ['key' => 'bio', 'label' => 'Bio', 'hidden' => 'true'], // Alternative approach
                 ];
             @endphp
 
@@ -436,6 +439,65 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <br>
+
+    <p>
+        You also can control the number of items per page by using the <code>per-page</code> attribute, as well the displayed values using <code>per-page-values</code>.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="https://mary-ui.com/bootcamp/03#pagination">Bootcamp</a>.
+    </x-alert>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $perPage = $this->perPage;  // [tl! .docs-hide]
+                // Remember to define a model to bind the value
+                // public int $perPage = 3;
+
+                // Also use it here.
+                $users = App\Models\User::paginate($this->perPage);
+
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
+
+            <x-table
+                :headers="$headers"
+                :rows="$users"
+                with-pagination
+                per-page="perPage"
+                :per-page-values="[3, 5, 10]" {{-- Notice the `:` bind --}}
+            />
+
+        @endverbatim
+    </x-code>
+
+    <br>
+
+    <p>
+        MarUI also provides its own pagination component. You can use it with other components, so it is not limited to tables.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                // Remember to define a model to bind the value
+                $users = App\Models\User::paginate($this->perPage);
+            @endphp
+
+            @foreach($users as $user)
+                <div class="bg-base-200 p-2 my-3 rounded">{{ $user->name }}</div>
+            @endforeach
+
+            {{-- The pagination component --}}
+            <x-pagination :rows="$users" wire:model.live="perPage" />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -587,6 +649,35 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <x-anchor title="Empty Slot" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        You can customize the empty text message by using one of the following approaches.
+    </p>
+
+    <x-code class="grid gap-10">
+        @verbatim('docs')
+            @php                                                    // [tl! .docs-hide]
+                $users = [];                                        // [tl! .docs-hide]
+                $headers = [                                        // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],      // [tl! .docs-hide]
+                    ['key' => 'email', 'label' => 'E-mail'],        // [tl! .docs-hide]
+                    ['key' => 'bio', 'label' => 'Bio'],             // [tl! .docs-hide]
+                    ['key' => 'city.name', 'label' => 'City'],      // [tl! .docs-hide]
+                ];                                                  // [tl! .docs-hide]
+            @endphp                                                 <!-- [tl! .docs-hide] -->
+            <x-table :headers="$headers" :rows="$users" show-empty-text />
+
+            <x-table :headers="$headers" :rows="$users" show-empty-text empty-text="Nothing Here!" />
+
+            <x-table :headers="$headers" :rows="$users">
+                <x-slot:empty>
+                    <x-icon name="o-cube" label="It is empty." />
+                </x-slot:empty>
+            </x-table>
+        @endverbatim
+    </x-code>
 
     <x-anchor title="Row selection" size="text-2xl" class="mt-10 mb-5" />
 
