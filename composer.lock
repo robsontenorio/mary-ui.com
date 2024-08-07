@@ -4124,16 +4124,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.35.3",
+            "version": "1.35.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "5b641d64b8cd2f8602758eb0e2c6ad0ae68cb6a9"
+                "reference": "ea0c6fe0e136ecbb50f694591d12caa7a235df18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/5b641d64b8cd2f8602758eb0e2c6ad0ae68cb6a9",
-                "reference": "5b641d64b8cd2f8602758eb0e2c6ad0ae68cb6a9",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/ea0c6fe0e136ecbb50f694591d12caa7a235df18",
+                "reference": "ea0c6fe0e136ecbb50f694591d12caa7a235df18",
                 "shasum": ""
             },
             "require": {
@@ -4199,7 +4199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.35.3"
+                "source": "https://github.com/robsontenorio/mary/tree/1.35.4"
             },
             "funding": [
                 {
@@ -4207,7 +4207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-26T15:41:31+00:00"
+            "time": "2024-08-07T02:35:35+00:00"
         },
         {
             "name": "symfony/console",

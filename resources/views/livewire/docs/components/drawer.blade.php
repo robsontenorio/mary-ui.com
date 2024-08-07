@@ -78,25 +78,15 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disable focus trap" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        You can directly open a drawer by using native HTML <strong>label tag</strong> while referencing same drawer <code>id</code>. It closes when you click outside.
+        By default the focus trap is enabled, but you can disable it by adding the <code>without-trap-focus</code> attribute.
     </p>
 
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        This is not a recommended approach if you are using <strong>forms</strong>, because this is native HTML and there is no state management. Use it only for simple
-        confirmations.
-    </x-alert>
-
-    <x-code class="flex gap-5">
+    <x-code no-render>
         @verbatim('docs')
-            <x-drawer id="my-drawer" title="Hello" separator class="w-11/12 lg:w-1/3">
-                <div>Native HTML drawer, there is no Livewire state management.</div>
-                <label for="my-drawer" class="btn">Close</label>
-            </x-drawer>
-
-            <label for="my-drawer" class="btn">Open native</label>
+            <x-drawer without-trap-focus ... />
         @endverbatim
     </x-code>
 
