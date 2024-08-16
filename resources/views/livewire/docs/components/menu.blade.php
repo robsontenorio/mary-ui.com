@@ -172,6 +172,21 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <p>
+        If for some reason you need to use "conflicting" routes on main menu. Use the attribute <code>exact</code> do handle it properly.
+        Although it is not recommended to have this kind of route on the main menu, you have this option.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-menu activate-by-route>
+                {{-- Notice `exact` --}}
+                <x-menu-item title="Something 10" link="/something/10" exact />
+                <x-menu-item title="Something 101" link="/something/101" exact />
+            </x-menu>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Cloud providers" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
