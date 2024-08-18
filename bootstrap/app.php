@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->web(RenderTorchlight::class);
+        $middleware
+            ->web(RenderTorchlight::class)
+            ->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
