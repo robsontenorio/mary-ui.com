@@ -10,9 +10,6 @@ export default defineConfig({
             clientPort: 5174
         }
     },
-    build: {
-        manifest: 'manifest.json',
-    },
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],

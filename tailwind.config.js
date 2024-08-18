@@ -1,12 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: 'class',
     content: [
+        // You will probably also need these lines
         "./resources/**/**/*.blade.php",
         "./resources/**/**/*.js",
-        "./app/Livewire/**/**/*.php",
         "./app/View/Components/**/**/*.php",
+        "./app/Livewire/**/**/*.php",
+
+        // Add mary
         "./vendor/robsontenorio/mary/src/View/Components/**/*.php",
+
+        // Laravel Pagination
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     ],
     safelist: [
@@ -24,6 +28,7 @@ export default {
     daisyui: {
         themes: ["light", "dark", "aqua", "retro"],
     },
-    plugins: [require("daisyui")],
-}
 
+    // Add daisyUI
+    plugins: [require("daisyui")]
+}

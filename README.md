@@ -8,10 +8,9 @@ This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking 
 
 Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) ❤️
 
-## Discord 
+## Discord
 
 Come to say hello on [maryUI Discord](https://discord.gg/c2Dv8T2X2s)
-
 
 ## Follow me
 
