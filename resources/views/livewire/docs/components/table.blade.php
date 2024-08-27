@@ -127,6 +127,19 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <p>
+        The above approach makes puts a <code>href</code> on each cell. You can disable it for specific columns by setting <code>disableLink</code>.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        $headers = [
+            ...
+            ['key' => 'city.name', 'label' => 'City', 'disableLink' => true], // <--- Here!
+        ];
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Header classes" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
