@@ -140,6 +140,20 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <p>
+        You can also use the below special notation to link to specific route.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-table
+                :headers="$headers"
+                :rows="$users"
+                :link="route('users.show', ['username' => ['username'], 'id' => ['id']])"
+            />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Header classes" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
@@ -470,7 +484,7 @@ class extends Component {
                 // public int $perPage = 3;
 
                 // Also use it here.
-                $users = App\Models\User::paginate($this->perPage);
+                $users = App\Models\User::where('id', 9828922)->paginate($this->perPage);
 
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
