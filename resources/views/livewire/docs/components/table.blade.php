@@ -484,7 +484,7 @@ class extends Component {
                 // public int $perPage = 3;
 
                 // Also use it here.
-                $users = App\Models\User::where('id', 9828922)->paginate($this->perPage);
+                $users = App\Models\User::paginate($this->perPage);
 
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
