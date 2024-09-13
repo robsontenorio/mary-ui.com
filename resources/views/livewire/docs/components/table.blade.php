@@ -803,4 +803,15 @@ class extends Component {
             <x-table ... expandable expandable-key="mycode" />
         @endverbatim
     </x-code>
+
+    <p>
+        You can also control the expansion icon visibility by using <code>expandable-condition</code> attribute.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            {{-- It will check each row for the `is_admin` field --}}
+            <x-table ... expandable expandable-condition="is_admin" />
+        @endverbatim
+    </x-code>
 </div>
