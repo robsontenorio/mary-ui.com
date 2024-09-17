@@ -1,7 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "daisyui";
 
+@source "../views/**/**/*.blade.php";
+@source "../../app/**/**/*.php";
+@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
 p {
     @apply my-5 leading-8
@@ -19,9 +22,9 @@ p {
     @apply list-disc ml-10 pb-2
 }
 
-.docs > :not(h1, h2, h3, h4, h5) a {
-    @apply link
-}
+/*.docs > :not(h1, h2, h3, h4, h5) a {*/
+/*    @apply link*/
+/*}*/
 
 .docs .mockup a, .docs .mary-header-anchor a {
     @apply !no-underline

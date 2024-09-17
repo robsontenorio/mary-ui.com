@@ -35,6 +35,10 @@ class extends Component {
             <x-input label="Password" wire:model="password" icon="o-eye" type="password" />
 
             <x-input label="Name" wire:model="name" placeholder="Clearable field" clearable />
+
+            <x-input label="Het" wire:model="name" class="input-primary" />
+
+            <x-input label="Het" wire:model="name" class="input-warning" />
         @endverbatim
     </x-code>
 
