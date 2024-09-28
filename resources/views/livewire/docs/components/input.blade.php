@@ -32,9 +32,9 @@ class extends Component {
 
             <x-input label="Right icon" wire:model="address" icon-right="o-map-pin" />
 
-            <x-input label="Password" wire:model="password" icon="o-eye" type="password" />
-
             <x-input label="Name" wire:model="name" placeholder="Clearable field" clearable />
+
+            <x-input label="Prefix & Suffix" wire:model="name" prefix="www" suffix=".com" />
         @endverbatim
     </x-code>
 
@@ -53,6 +53,21 @@ class extends Component {
     <x-code class="grid gap-5">
         @verbatim('docs')
             <x-input label="Inline label" inline />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Password" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        Notice all above attributes will work with the password component.
+    </p>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            <x-password label="Toggle" hint="It toggles visibility" wire:model="password" clearable />
+            <x-password label="Right toggle" wire:model="password" right />
+            <x-password label="Custom icons" wire:model="password" password-icon="o-lock-closed" password-visible-icon="o-lock-open" />
+            <x-password label="Without toggle" wire:model="password" only-password />
         @endverbatim
     </x-code>
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34a2dd4020f879447d7464af88329b47",
+    "content-hash": "413563d1e9cdc88711133bd04ba4b32f",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4042,23 +4042,23 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.35.9",
+            "version": "1.40.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "f10d5dc459d68d938d3c1952d18c34751a7df8c4"
+                "reference": "314dae89741ebdfe5958c420321ac40856240347"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/f10d5dc459d68d938d3c1952d18c34751a7df8c4",
-                "reference": "f10d5dc459d68d938d3c1952d18c34751a7df8c4",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/314dae89741ebdfe5958c420321ac40856240347",
+                "reference": "314dae89741ebdfe5958c420321ac40856240347",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.3",
                 "illuminate/support": "^10.0|^11.0",
                 "jfcherng/php-diff": "^6.15",
-                "laravel/prompts": "^0.1.15"
+                "laravel/prompts": "^0|^1"
             },
             "require-dev": {
                 "orchestra/testbench": "^8.21",
@@ -4117,7 +4117,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.35.9"
+                "source": "https://github.com/robsontenorio/mary/tree/1.40.0"
             },
             "funding": [
                 {
@@ -4125,7 +4125,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-16T23:21:15+00:00"
+            "time": "2024-09-28T13:55:52+00:00"
         },
         {
             "name": "symfony/clock",
