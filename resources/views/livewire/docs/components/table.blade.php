@@ -74,7 +74,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No headers" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No headers & No hover" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -88,7 +88,7 @@ class extends Component {
             @endphp
 
             {{-- Notice `no-headers` --}}
-            <x-table :headers="$headers" :rows="$users" no-headers />
+            <x-table :headers="$headers" :rows="$users" no-headers no-hover />
         @endverbatim
     </x-code>
 
