@@ -59,6 +59,7 @@ Volt::route('/docs/components/rating', 'docs.components.rating');
 Volt::route('/docs/components/spotlight', 'docs.components.spotlight');
 Volt::route('/docs/components/statistic', 'docs.components.statistic');
 Volt::route('/docs/components/steps', 'docs.components.steps');
+Volt::route('/docs/components/swap', 'docs.components.swap');
 Volt::route('/docs/components/timeline', 'docs.components.timeline');
 Volt::route('/docs/components/tabs', 'docs.components.tabs');
 Volt::route('/docs/components/theme-toggle', 'docs.components.theme-toggle');
