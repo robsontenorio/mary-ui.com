@@ -8,32 +8,59 @@ new
 #[Title("Swap")]
 #[Layout('components.layouts.app', ['description' => "Livewire UI swap component"])]
 class extends Component {
-    public ?bool $swap1 = null;
+    public bool $swap1 = false;
 
-    public ?bool $swap2 = null;
+    public bool $swap2 = true;
+
+    public bool $swap3 = false;
+
+    public bool $swap4 = false;
 }; ?>
 
 <div class="">
     <x-anchor title="Swap" />
 
+    <p>
+        This component allows you to swap between two states (<code>true</code> / <code>false</code>) using two elements with animations.
+    </p>
+
+    <x-alert icon="o-light-bulb">
+        If you have multiple <code>x-swap</code> on the same page make sure to set different ids.
+    </x-alert>
+
     <x-anchor title="Default" size="text-2xl" class="mt-10 mb-5" />
 
-    <p>
-        Allows you to swap between any two elements with animations.<br/>
-        By default you don't need to pass any attributes. The default swaps between:
+    <x-code>
+        @php
+            $this->swap1 = $swap1;
+        @endphp
 
-        <ul class="list-disc ml-6">
-            <li>True: Sun icon</li>
-            <li>False: Moon icon</li>
-            <li>Size: h-5 w-5</li>
-        </ul>
+        @verbatim('docs')
+            <x-swap wire:model="swap1" />
+        @endverbatim
+    </x-code>
+
+    <x-code no-render language="php">
+        public bool $swap1 = false;
+    </x-code>
+
+    <x-anchor title="Text content" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        When providing the <code>true</code> or <code>false</code> attributes, the icons will be ignored.
     </p>
 
     <x-code>
+        @php
+            $this->swap2 = $swap2;
+        @endphp
         @verbatim('docs')
-            {{-- Notice, you don't need wire:model  --}}
-            <x-swap />
+            <x-swap wire:model="swap2" true="ON" false="OFF" />
         @endverbatim
+    </x-code>
+
+    <x-code no-render language="php">
+        public bool $swap2 = true;
     </x-code>
 
     <x-anchor title="Custom icons + size" size="text-2xl" class="mt-10 mb-5" />
@@ -44,34 +71,20 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Text content" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        When providing the 'true' or 'false' attributes (slots), the icons will be ignored.
-    </p>
-
-    <x-code>
-        @verbatim('docs')
-            <x-swap true="ON" false="OFF" />
-        @endverbatim
-    </x-code>
-
     <x-anchor title="Animations" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        Supports <a href="https://daisyui.com/components/swap/" class="underline">daisy-ui's swap animations</a>.<br/>
-        You have to make sure multiple swaps on the same page don't have the same id.
+        It supports <a href="https://daisyui.com/components/swap/" class="underline">daisy-ui's swap animations</a>.
     </p>
+
+    <x-alert icon="o-light-bulb" class="mb-5">
+        If you have multiple <code>x-swap</code> on the same page make sure to set different ids.
+    </x-alert>
 
     <x-code class="space-x-8">
         @verbatim('docs')
-            {{-- Notice: no class --}}
             <x-swap id="fade" />
-
-            {{-- Notice: class="swap-flip" --}}
             <x-swap id="flip" class="swap-flip" />
-
-            {{-- Notice: class="swap-rotate" --}}
             <x-swap id="rotate" class="swap-rotate" />
         @endverbatim
     </x-code>
@@ -79,24 +92,21 @@ class extends Component {
     <x-anchor title="Custom content" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
-        It is possible to provide completely custom content! <br/>
-        Please note that the width will aways be the width of the larger content.
+        It is possible to provide completely custom content. Please, note that the width will always be the width of the larger content.
     </p>
 
     <x-code>
+        @php
+            $this->swap3 = $swap3;
+        @endphp
         @verbatim('docs')
-            <x-swap id="custom">
-
-                <x-slot:true
-                    class="h-12 p-2 bg-primary text-primary-content rounded-2xl flex flex-row items-center justify-center">
+            <x-swap wire:model="swap3" id="custom">
+                <x-slot:true class="bg-warning rounded p-2">
                     Custom true
                 </x-slot:true>
-
-                <x-slot:false
-                    class="h-12 p-2 bg-error text-error-content rounded flex flex-row items-center justify-center">
+                <x-slot:false class="bg-secondary text-white p-2">
                     Custom false
                 </x-slot:false>
-
             </x-swap>
         @endverbatim
     </x-code>
@@ -108,31 +118,18 @@ class extends Component {
     </p>
 
     <x-code>
+        @php
+            $this->swap4 = $swap4;
+        @endphp
         @verbatim('docs')
-            <x-swap id="slots" wire:model.live="swap1" class="flex flex-row space-x-2 w-fit">
-
+            <x-swap id="slots" wire:model.live="swap4" class="flex gap-3">
                 <x-slot:before class="text-primary">
-                    Swap me!
+                    BEFORE
                 </x-slot:before>
-        
-                {{-- This only works with wire:model.live --}}
                 <x-slot:after class="text-error">
-                    {{ $this->swap1 ? 'ON' : 'OFF' }}
+                    AFTER
                 </x-slot:after>
-        
             </x-swap>
         @endverbatim
     </x-code>
-
-    <x-anchor title="Toggle programmatically" size="text-2xl" class="mt-10 mb-5" />
-
-    <x-code class="flex flex-row items-center space-x-4">
-        @verbatim('docs')
-            <x-button label="Toggle" wire:click="$toggle('swap2')" />
-            <x-swap id="programmatically" wire:model="swap2" icon-size="h-8 w-8"
-                    true-icon="o-arrow-right" false-icon="o-arrow-left" class="swap-flip" />
-        @endverbatim
-    </x-code>
-
-
 </div>
