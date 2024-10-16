@@ -81,7 +81,7 @@ class extends Component {
 
     <x-code no-render>
         @verbatim('docs')
-            <x-editor ... disk="s3" folder="super/cool/images" />
+            <x-markdown ... disk="s3" folder="super/cool/images" />
         @endverbatim
     </x-code>
 

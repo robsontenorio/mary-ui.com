@@ -66,7 +66,7 @@
             </a>
         </x-slot:brand>
         <x-slot:actions class="flex !gap-1 lg:!gap-4">
-            <span class="hidden lg:inline-flex flex gap-4">
+            <span class="hidden lg:inline-flex gap-4">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
                 <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
