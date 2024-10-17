@@ -2,14 +2,20 @@
 
 namespace App\View\Components;
 
+use Closure;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
+use ReflectionClass;
+use RuntimeException;
 
 class ApiGenerator extends Component
 {
     public string $className;
+
     public string $title;
-    public array  $propsHeader = [
+
+    public array $propsHeader = [
         ['key' => 'prop', 'label' => 'Prop'],
         ['key' => 'description', 'label' => 'Description'],
         ['key' => 'type', 'label' => 'Type'],
@@ -23,6 +29,7 @@ class ApiGenerator extends Component
     ];
 
     public array $propsData = [];
+
     public array $slotsData = [];
 
     public function __construct(string $className)
@@ -42,12 +49,51 @@ class ApiGenerator extends Component
         ];
     }
 
-    public function render()
+    public function generateApi(): void
+    {
+        $reflection = new ReflectionClass($this->className);
+        $this->title = Str::headline(class_basename($reflection->getName()));
+        $constructor = $reflection->getConstructor();
+
+        if (! $constructor) {
+            throw new RuntimeException("The constructor for class {$this->className} was not found.");
+        }
+
+        $docComment = $constructor->getDocComment();
+        $docData = $this->parseDocBlock($docComment);
+        $parameters = $constructor->getParameters();
+
+        foreach ($parameters as $param) {
+            $name = $param->getName();
+            $type = $param->hasType() ? $param->getType()->getName() : 'mixed';
+            $default = $param->isDefaultValueAvailable() ? var_export($param->getDefaultValue(), true) : 'N/A';
+            $required = $param->isOptional() ? 'false' : 'true';
+
+            if (array_key_exists($name, $docData['slots']) || $name == 'default') {
+                $this->slotsData[] = [
+                    'slot' => $name,
+                    'description' => $docData['slots'][$name] ?? 'Slot dynamic content',
+                ];
+            }
+
+            if (array_key_exists($name, $docData['params'])) {
+                $this->propsData[] = [
+                    'prop' => $name,
+                    'description' => $docData['params'][$name] ?? '',
+                    'type' => $type,
+                    'default' => $default,
+                    'required' => $required,
+                ];
+            }
+        }
+    }
+
+    public function render(): View|Closure|string
     {
         $this->generateApi();
 
         return <<<'blade'
-            <x-card title="{{ $title }} API" class="mb-5 border border-base-300" shadow>
+            <x-card class="border border-base-300 api-generator" shadow>
                 <x-tabs selected="props">
                     <x-tab name="props" label="Props">
                         <x-table :headers="$propsHeader" :rows="$propsData" no-hover>
@@ -70,50 +116,11 @@ class ApiGenerator extends Component
             blade;
     }
 
-    public function generateApi(): void
-    {
-        $reflection  = new \ReflectionClass($this->className);
-        $this->title = Str::headline(class_basename($reflection->getName()));
-        $constructor = $reflection->getConstructor();
-
-        if (!$constructor) {
-            throw new \RuntimeException("The constructor for class {$this->className} was not found.");
-        }
-
-        $docComment = $constructor->getDocComment();
-        $docData    = $this->parseDocBlock($docComment);
-        $parameters = $constructor->getParameters();
-
-        foreach ($parameters as $param) {
-            $name     = $param->getName();
-            $type     = $param->hasType() ? $param->getType()->getName() : 'mixed';
-            $default  = $param->isDefaultValueAvailable() ? var_export($param->getDefaultValue(), true) : 'N/A';
-            $required = $param->isOptional() ? 'false' : 'true';
-
-            if (array_key_exists($name, $docData['slots'])) {
-                $this->slotsData[] = [
-                    'slot'        => $name,
-                    'description' => $docData['slots'][$name] ?? 'Slot dynamic content',
-                ];
-            }
-
-            if (array_key_exists($name, $docData['params'])) {
-                $this->propsData[] = [
-                    'prop'        => $name,
-                    'description' => $docData['params'][$name] ?? '',
-                    'type'        => $type,
-                    'default'     => $default,
-                    'required'    => $required,
-                ];
-            }
-        }
-    }
-
     protected function parseDocBlock(?string $docComment): array
     {
         $parsed = ['params' => [], 'slots' => []];
 
-        if (!$docComment) {
+        if (! $docComment) {
             return $parsed;
         }
 

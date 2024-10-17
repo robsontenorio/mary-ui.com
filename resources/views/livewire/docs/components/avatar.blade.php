@@ -4,6 +4,7 @@ use App\Models\User;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
+use Mary\View\Components\Avatar;
 
 new
 #[Title('Avatar')]
@@ -13,7 +14,7 @@ class extends Component {
 }; ?>
 
 <div class="docs">
-    <x-anchor title="Avatar"/>
+    <x-anchor title="Avatar" />
 
     <x-code class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
@@ -21,21 +22,21 @@ class extends Component {
                 $user = App\Models\User::first();
             @endphp
 
-            <x-avatar :image="$user->avatar"/>
+            <x-avatar :image="$user->avatar" />
 
             {{-- Manipulate avatar imagem with CSS classes --}}
-            <x-avatar :image="$user->avatar" class="!w-14 !rounded-lg"/>
+            <x-avatar :image="$user->avatar" class="!w-14 !rounded-lg" />
 
             {{-- Title --}}
-            <x-avatar :image="$user->avatar" :title="$user->username"/>
+            <x-avatar :image="$user->avatar" :title="$user->username" />
 
             {{-- Subtitle --}}
-            <x-avatar :image="$user->avatar" :title="$user->username" :subtitle="$user->name" class="!w-10 "/>
+            <x-avatar :image="$user->avatar" :title="$user->username" :subtitle="$user->name" class="!w-10 " />
 
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5"/>
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
@@ -50,13 +51,16 @@ class extends Component {
                 </x-slot:title>
 
                 <x-slot:subtitle class="text-gray-500 flex flex-col gap-1 mt-2 pl-2">
-                    <x-icon name="o-paper-airplane" label="12 posts"/>
-                    <x-icon name="o-chat-bubble-left" label="45 comments"/>
+                    <x-icon name="o-paper-airplane" label="12 posts" />
+                    <x-icon name="o-chat-bubble-left" label="45 comments" />
                 </x-slot:subtitle>
 
             </x-avatar>
         @endverbatim
     </x-code>
 
-    <x-api-generator :class-name="\Mary\View\Components\Avatar::class"/>
+    <hr class="my-10" />
+    <x-anchor title="API" size="text-2xl" class="mt-10 mb-5" />
+    <x-api-generator :class-name="Avatar::class" />
+    <div class="mb-64"></div>
 </div>
