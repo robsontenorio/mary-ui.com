@@ -4,6 +4,7 @@ use App\Models\User;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
+use Mary\View\Components\Avatar;
 
 new
 #[Title('Avatar')]
@@ -57,4 +58,9 @@ class extends Component {
             </x-avatar>
         @endverbatim
     </x-code>
+
+    <hr class="my-10" />
+    <x-anchor title="API" size="text-2xl" class="mt-10 mb-5" />
+    <x-api-generator :class-name="Avatar::class" />
+    <div class="mb-64"></div>
 </div>
