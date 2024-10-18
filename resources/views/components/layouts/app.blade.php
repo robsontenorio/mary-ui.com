@@ -111,7 +111,7 @@
             </a>
         </x-slot:brand>
         <x-slot:actions class="flex !gap-1 lg:!gap-4">
-            <span class="hidden lg:inline-flex flex gap-4">
+            <span class="hidden lg:inline-flex gap-4">
                 <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
                 <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
                 <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
@@ -192,6 +192,7 @@
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
                     <x-menu-item title="Steps" link="/docs/components/steps" />
+                    <x-menu-item title="Swap" link="/docs/components/swap" badge="new" badge-classes="!badge-warning ml-2" />
                     <x-menu-item title="Timeline" link="/docs/components/timeline" />
                     <x-menu-item title="Tabs" link="/docs/components/tabs" />
                     <x-menu-item title="Theme Toggle" link="/docs/components/theme-toggle" />

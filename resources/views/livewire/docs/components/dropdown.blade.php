@@ -12,6 +12,21 @@ class extends Component {
     {
         sleep(1);
     }
+
+    public function delete2()
+    {
+        sleep(1);
+    }
+
+    public function delete3()
+    {
+        sleep(1);
+    }
+
+    public function delete4()
+    {
+        sleep(1);
+    }
 }
 
 ?>
@@ -27,16 +42,22 @@ class extends Component {
         Take a look at <a href="/docs/components/select" wire:navigate>Select</a> for value selection.
     </x-alert>
 
-    <x-code class="flex justify-between">
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
         @verbatim('docs')
-            {{-- Default trigger --}}
             <x-dropdown>
                 <x-menu-item title="Archive" icon="o-archive-box" />
                 <x-menu-item title="Remove" icon="o-trash" />
                 <x-menu-item title="Restore" icon="o-arrow-path" />
             </x-dropdown>
+        @endverbatim
+    </x-code>
 
-            {{-- Custom trigger  --}}
+    <x-anchor title="Custom Trigger" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
             <x-dropdown>
                 <x-slot:trigger>
                     <x-button icon="o-bell" class="btn-circle btn-outline" />
@@ -45,7 +66,13 @@ class extends Component {
                 <x-menu-item title="Archive" />
                 <x-menu-item title="Move" />
             </x-dropdown>
+        @endverbatim
+    </x-code>
 
+    <x-anchor title="Right alignment" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code class="flex justify-end">
+        @verbatim('docs')
             {{-- Use `right` if dropdown is on right side of screen --}}
             <x-dropdown label="Hello" class="btn-warning" right>
                 <x-menu-item title="It should align correctly on right side" />
@@ -83,6 +110,17 @@ class extends Component {
                 <x-menu-item @click.stop="">
                     <x-toggle label="Sleep mode" right />
                 </x-menu-item>
+            </x-dropdown>
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Spinner" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
+            <x-dropdown label="Settings" class="btn-outline">
+                <x-menu-item title="Spinner" wire:click.stop="delete2" spinner="delete2" />
+                <x-menu-item title="Spinner" wire:click.stop="delete3" spinner="delete3" icon="o-trash" />
             </x-dropdown>
         @endverbatim
     </x-code>

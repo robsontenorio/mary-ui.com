@@ -3,6 +3,7 @@
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
+use Mary\View\Components\Alert;
 
 new
 #[Title('Alert')]
@@ -35,4 +36,9 @@ class extends Component {
             <x-alert title="Dismissible" description="Click the close icon" icon="o-exclamation-triangle" dismissible />
         @endverbatim
     </x-code>
+
+    <hr class="my-10" />
+    <x-anchor title="API" size="text-2xl" class="mt-10 mb-5" />
+    <x-api-generator :class-name="Alert::class" />
+    <div class="mb-64"></div>
 </div>

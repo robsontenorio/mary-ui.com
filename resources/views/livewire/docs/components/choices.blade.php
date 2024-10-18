@@ -264,6 +264,7 @@ class extends Component {
                 label="Single (frontend)"
                 wire:model="user_searchable_offline_id"
                 :options="$users"
+                placeholder="Search ..."
                 single
                 searchable />
 
@@ -271,6 +272,7 @@ class extends Component {
                 label="Multiple (frontend)"
                 wire:model="users_multi_searchable_offline_ids"
                 :options="$users"
+                placeholder="Search ..."
                 searchable />
         @endverbatim
     </x-code>
@@ -297,6 +299,7 @@ class extends Component {
                 label="Searchable + Single"
                 wire:model="user_searchable_id"
                 :options="$usersSearchable"
+                placeholder="Search ..."
                 single
                 searchable />
 
@@ -305,6 +308,7 @@ class extends Component {
                 label="Searchable + Multiple"
                 wire:model="users_multi_searchable_ids"
                 :options="$usersMultiSearchable"
+                placeholder="Search ..."
                 search-function="searchMulti"
                 no-result-text="Ops! Nothing here ..."
                 searchable />

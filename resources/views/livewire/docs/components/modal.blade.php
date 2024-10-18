@@ -101,34 +101,4 @@ class extends Component {
             <x-button label="Open " @click="$wire.myModal4 = true" />
         @endverbatim
     </x-code>
-
-    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        Notice the following examples that <code>onclick</code> , <code>.showModal()</code> and <code>.close()</code> are native HTML stuff, not maryUI/Livewire/Alpine.
-    </p>
-
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        This is not a recommended approach if you are using <strong>forms</strong>, because this is native HTML and there is no state management. Use it only for simple
-        confirmations.
-    </x-alert>
-
-    <x-code>
-        @verbatim('docs')
-            {{-- Here is modal`s ID --}}
-            <x-modal id="modal17" title="Are you sure?">
-                <div>Click "cancel" or press ESC to exit.</div>
-
-                <x-slot:actions>
-                    {{-- Notice `onclick` is HTML --}}
-                    <x-button label="Cancel" onclick="modal17.close()" />
-                    <x-button label="Confirm" class="btn-primary" />
-                </x-slot:actions>
-            </x-modal>
-
-            {{-- Notice `onclick` is HTML --}}
-            <x-button label="Open modal" class="btn-primary" onclick="modal17.showModal()" />
-        @endverbatim
-    </x-code>
-
 </div>

@@ -27,7 +27,7 @@ p {
 /*    @apply link*/
 /*}*/
 
-.docs .mockup a, .docs .mary-header-anchor a {
+.docs .mockup a, .docs .mary-header-anchor a, .api-generator a {
     @apply !no-underline
 }
 

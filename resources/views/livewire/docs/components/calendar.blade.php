@@ -55,10 +55,10 @@ class extends Component {
                         'date' => now()->startOfMonth()->addDays(3),
                     ],
                     [
-                        'label' => 'Health',
-                        'description' => 'I am sick',
-                        'css' => '!bg-green-200',
-                        'date' => now()->startOfMonth()->addDays(8),
+                        'label' => 'Event at same day',
+                        'description' => 'Hey there!',
+                        'css' => '!bg-amber-200',
+                        'date' => now()->startOfMonth()->addDays(3),
                     ],
                     [
                         'label' => 'Laracon',
