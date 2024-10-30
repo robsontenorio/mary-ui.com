@@ -105,26 +105,22 @@ class extends Component {
 
     <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
 
-    <x-code class="grid gap-8">
-        @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
+    @php
+        $users = App\Models\User::take(5)->get();
+    @endphp
 
-            <x-input label="Prepend a select">
-                <x-slot:prepend>
-                    {{-- Add `rounded-e-none` class (RTL support) --}}
-                    <x-select icon="o-user" :options="$users" class="rounded-e-none bg-base-200" />
-                </x-slot:prepend>
-            </x-input>
+    <x-input label="Prepend a select">
+        <x-slot:prepend>
+            {{-- Add `rounded-e-none` class (RTL support) --}}
+            <x-select icon="o-user" :options="$users" class="rounded-e-none bg-base-200" />
+        </x-slot:prepend>
+    </x-input>
 
-            <x-input label="Append a button">
-                <x-slot:append>
-                    {{-- Add `rounded-s-none` class (RTL support) --}}
-                    <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
-                </x-slot:append>
-            </x-input>
+    <x-input label="Append a button">
+        <x-slot:append>
+            {{-- Add `rounded-s-none` class (RTL support) --}}
+            <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
+        </x-slot:append>
+    </x-input>
 
-        @endverbatim
-    </x-code>
 </div>

@@ -2,17 +2,33 @@
 
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
 new
 #[Title('Select')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI native select component with icon and disabled option state.'])]
 class extends Component {
+    #[Validate('required')]
     public int $selectedUser = 4;
 
-    public int $selectedUser2 = 3;
+    #[Validate('required')]
+    public ?int $selectedUser2 = null;
 
+    #[Validate('required')]
     public int $selectedUser3 = 0;
+
+    public function save()
+    {
+        $this->validate();
+    }
+
+    public function with()
+    {
+        return [
+            'users' => App\Models\User::take(5)->get()
+        ];
+    }
 }
 
 ?>
@@ -41,21 +57,37 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
-        @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
+    <x-form wire:submit="save">
+        <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" />
 
-            <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" />
+        <x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" />
 
-            <x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" />
+        <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
 
-            <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
+        <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline />
 
-            <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline />
-        @endverbatim
-    </x-code>
+        <x-select
+            label="Alternative"
+            :options="$users"
+            option-value="custom_key"
+            option-label="other_name"
+            placeholder="Select a user"
+            hint="Select one, please."
+            class="select-primary"
+            wire:model="selectedUser2" />
+
+        <x-select label="Slots" wire:model="selectedUser2" :options="$users" single placeholder="Select a user">
+            <x-slot:prepend>
+                {{--  Add `rounded-e-none` (RTL support) --}}
+                <x-button icon="o-trash" class="rounded-e-none" />
+            </x-slot:prepend>
+            <x-slot:append>
+                {{--  Add `rounded-s-none` (RTL support) --}}
+                <x-button label="Create" icon="o-plus" class="rounded-s-none btn-primary" />
+            </x-slot:append>
+        </x-select>
+        <x-button label="Submit" class="btn-primary" type="submit" />
+    </x-form>
 
     <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
 
