@@ -92,6 +92,40 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Formatters" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        The table component includes the basic <code>date</code> and <code>currency</code> formatters. You can also use a <code>closure</code> to make any kind of transformation.
+    </p>
+    <p>
+        For more complex scenarios you can use the <code>cell slot</code> described on the next sections.
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::take(2)->get();
+
+                $headers = [
+                    ['key' => 'name', 'label' => 'Name'],
+                    //
+                    ['key' => 'created_at', 'label' => 'Date', 'format' => ['date', 'd/m/Y']],
+
+                    // It calls number_format()
+                    // The first parameter represents all parameters in order for `number_format()` function
+                    // The  second parameter is any string to prepend (optional)
+                    ['key' => 'salary', 'label' => 'Salary', 'format' => ['currency', '2,.', 'R$ ']],
+
+                    // A closure that has the current row and field value itself
+                    ['key' => 'is_employee', 'label' => 'Employee?', 'format' => fn($row, $field) => $field ? 'Yes' : 'No'],
+                ];
+            @endphp
+
+            {{-- Notice `no-headers` --}}
+            <x-table :headers="$headers" :rows="$users" />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Click to navigate" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
