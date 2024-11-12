@@ -162,7 +162,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             </div>
             <div>
                 <div class="bg-gradient-to-tr from-indigo-500 via-purple-50-200 to-pink-500 p-3.5 rounded-box">
-                    <x-editor wire:model="text" :config="['height' => 150, 'plugins' => 'autoresize']" />
+                    <x-editor wire:model="text" :config="['height' => 150, 'plugins' => 'autoresize']" gpl-license />
                 </div>
             </div>
         </div>

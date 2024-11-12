@@ -473,6 +473,44 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Note about large numbers" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        This components uses the options <code>id</code> values to handle selection.
+        It tries to determine if these values are a <code>int</code> or <code>string</code>.
+    </p>
+    <p>
+        But, due to Javascript limitation with large numbers like these bellow, it will break.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            public array $options = [
+                [
+                    'id' => 264454000038134081,  # <-- Javascript won't handle this number
+                    'name' => 'Test 1',
+                ],
+                [
+                    'id' => '264454000038134082',  # <-- It is good!
+                    'name' => 'Test 2',
+                ],
+            ];
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <p>
+        As workaround, define the <code>id</code> as a string and use <strong>values-as-string</strong> attribute instead.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-choices ... values-as-string />
+            <x-choices-offline ... values-as-string />
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

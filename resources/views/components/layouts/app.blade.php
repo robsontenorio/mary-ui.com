@@ -192,7 +192,7 @@
                     <x-menu-item title="Spotlight" link="/docs/components/spotlight" />
                     <x-menu-item title="Statistic" link="/docs/components/statistic" />
                     <x-menu-item title="Steps" link="/docs/components/steps" />
-                    <x-menu-item title="Swap" link="/docs/components/swap" badge="new" badge-classes="!badge-warning ml-2" />
+                    <x-menu-item title="Swap" link="/docs/components/swap" />
                     <x-menu-item title="Timeline" link="/docs/components/timeline" />
                     <x-menu-item title="Tabs" link="/docs/components/tabs" />
                     <x-menu-item title="Theme Toggle" link="/docs/components/theme-toggle" />

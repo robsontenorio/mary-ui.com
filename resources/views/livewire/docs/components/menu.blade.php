@@ -187,6 +187,20 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu class="border border-dashed">
+                <x-menu-item icon="o-chart-pie">
+                    Charts
+                    <x-badge value="2" class="bg-warning" />
+                    <x-icon name="o-heart" class="text-secondary" />
+                </x-menu-item>
+            </x-menu>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Cloud providers" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

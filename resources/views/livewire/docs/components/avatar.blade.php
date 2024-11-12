@@ -31,8 +31,10 @@ class extends Component {
             <x-avatar :image="$user->avatar" :title="$user->username" />
 
             {{-- Subtitle --}}
-            <x-avatar :image="$user->avatar" :title="$user->username" :subtitle="$user->name" class="!w-10 " />
+            <x-avatar :image="$user->avatar" :title="$user->username" :subtitle="$user->name" class="!w-10" />
 
+            {{-- Placeholder --}}
+            <x-avatar placeholder="RT" title="Robson Tenório" subtitle="@robsontenorio" class="!w-10" />
         @endverbatim
     </x-code>
 
