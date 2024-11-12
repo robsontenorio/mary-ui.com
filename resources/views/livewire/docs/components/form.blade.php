@@ -1,10 +1,8 @@
 <?php
 
-use App\Models\User;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
-use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,10 +10,8 @@ new
 #[Title('Form')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI form component with builtin validation, spinner, money/currency and actions slot.'])]
 class extends Component {
-    #[Rule('required|hex_color')]
     public string $name = '';
 
-    #[Rule('required|hex_color')]
     public ?float $amount = null;
 
     public ?string $address = null;
@@ -26,10 +22,6 @@ class extends Component {
 
     public ?int $age = null;
 
-    #[Rule('required|hex_color')]
-    public ?int $abc = null;
-
-    #[Rule('required|hex_color')]
     public ?string $magicWord1 = null;
 
     public ?string $magicWord2 = null;
@@ -37,9 +29,6 @@ class extends Component {
     public ?int $salary = null;
 
     public ?string $full_name = null;
-
-    #[Rule('required|hex_color')]
-    public string $color1 = '';
 
     public array $state = [
         'name' => null,
@@ -51,7 +40,10 @@ class extends Component {
     {
         sleep(1);
 
-        $this->validate();
+        $this->validate([
+            'name' => 'required|min:20',
+            'amount' => 'required|decimal:0,2'
+        ]);
     }
 
     public function save2(): void
@@ -99,13 +91,6 @@ class extends Component {
             'age' => 'required|integer'
         ]);
     }
-
-    public function with(): array
-    {
-        return [
-            'users' => User::take(5)->get()
-        ];
-    }
 }
 
 ?>
@@ -132,30 +117,19 @@ class extends Component {
 
     <br>
 
-    <x-form wire:submit="save">
-        <x-colorpicker wire:model="color1" readonly />
-        <x-input label="Name" wire:model="name" />
-        <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
+    <x-code>
+        @verbatim('docs')
+            <x-form wire:submit="save">
+                <x-input label="Name" wire:model="name" />
+                <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
 
-        <x-input label="Prepend a select" wire:model="magicWord1">
-            <x-slot:prepend>
-                {{-- Add `rounded-e-none` class (RTL support) --}}
-                <x-select icon="o-user" wire:model="abc" :options="$users" class="rounded-e-none bg-base-200" />
-            </x-slot:prepend>
-        </x-input>
-
-        <x-input label="Append a button">
-            <x-slot:append>
-                {{-- Add `rounded-s-none` class (RTL support) --}}
-                <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
-            </x-slot:append>
-        </x-input>
-
-        <x-slot:actions>
-            <x-button label="Cancel" />
-            <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
-        </x-slot:actions>
-    </x-form>
+                <x-slot:actions>
+                    <x-button label="Cancel" />
+                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+                </x-slot:actions>
+            </x-form>
+        @endverbatim
+    </x-code>
 
     <x-anchor title="No `separator`" size="text-2xl" class="mt-10 mb-5" />
 
@@ -250,8 +224,8 @@ class extends Component {
     <x-code no-render language="php">
         @verbatim('docs')
             $this->validate([
-                'magicWord1' => 'starts_with:Hello|ends_with:world',
-                'magicWord2' => 'starts_with:Hello|ends_with:world',
+            'magicWord1' => 'starts_with:Hello|ends_with:world',
+            'magicWord2' => 'starts_with:Hello|ends_with:world',
             ]);
         @endverbatim
     </x-code>

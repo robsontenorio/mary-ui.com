@@ -24,10 +24,10 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-toggle label="Left" wire:model="item1" class="toggle-primary" />
+            <x-toggle label="Left" wire:model="item1" />
             <hr /> <!-- [tl! .docs-hide] -->
 
-            <x-toggle label="Right" wire:model="item2" right hint="Activate stuff" />
+            <x-toggle label="Right" wire:model="item2" right hint="Activate stuff" class="toggle-primary" />
             <hr /><!-- [tl! .docs-hide] -->
 
             <x-toggle label="Right Tight" wire:model="item3" class="toggle-warning" right tight />
