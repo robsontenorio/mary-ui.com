@@ -146,7 +146,8 @@
                     <x-menu-item title="Input" link="/docs/components/input" />
                     <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
                     <x-menu-item title="Toggle" link="/docs/components/toggle" />
-                    <x-menu-item title="Radio" link="/docs/components/radio" />
+                    <x-menu-item title="Group" link="/docs/components/group" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
+                    <x-menu-item title="Radio" link="/docs/components/radio" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
                     <x-menu-item title="Select" link="/docs/components/select" />
                     <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Choices" link="/docs/components/choices" />

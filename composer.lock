@@ -4046,13 +4046,13 @@
             "dist": {
                 "type": "path",
                 "url": "/var/www/app/packages/mary",
-                "reference": "f10d5dc459d68d938d3c1952d18c34751a7df8c4"
+                "reference": "772c89054035574e86c4fc554a4a3b51ca2b7d79"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.3",
                 "illuminate/support": "^10.0|^11.0",
                 "jfcherng/php-diff": "^6.15",
-                "laravel/prompts": "^0.1.15"
+                "laravel/prompts": "^0|^1"
             },
             "require-dev": {
                 "orchestra/testbench": "^8.21",
