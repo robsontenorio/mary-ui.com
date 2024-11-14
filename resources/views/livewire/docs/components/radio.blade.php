@@ -63,7 +63,7 @@ class extends Component {
                 option-label="other_name"
                 wire:model="selectedUser2"
                 hint="Choose wisely"
-                class="bg-red-50" />
+                class="bg-orange-50 [&:checked]:!bg-warning !border-orange-500 !text-orange-500" />
         @endverbatim
     </x-code>
 
