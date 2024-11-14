@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
@@ -30,6 +31,14 @@ class extends Component {
 
     public ?string $full_name = null;
 
+    public ?string $password = null;
+
+    public ?int $estado = null;
+
+    public ?int $item1 = null;
+
+    public ?int $item2 = null;
+
     public array $state = [
         'name' => null,
         'amount' => null,
@@ -38,11 +47,16 @@ class extends Component {
 
     public function save(): void
     {
-        sleep(1);
+        //sleep(1);
 
         $this->validate([
             'name' => 'required|min:20',
-            'amount' => 'required|decimal:0,2'
+            'amount' => 'required|decimal:0,2',
+            'estado' => 'required',
+            'password' => 'required|min:6',
+            'item1' => 'required',
+            'item2' => 'required'
+
         ]);
     }
 
@@ -91,6 +105,13 @@ class extends Component {
             'age' => 'required|integer'
         ]);
     }
+
+    public function with(): array
+    {
+        return [
+            'users' => User::take(5)->get()
+        ];
+    }
 }
 
 ?>
@@ -117,19 +138,63 @@ class extends Component {
 
     <br>
 
-    <x-code>
-        @verbatim('docs')
-            <x-form wire:submit="save">
-                <x-input label="Name" wire:model="name" />
-                <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" />
+    @php
+        $config1 = ['altFormat' => 'm/d/Y'];
+        $config2 = ['mode' => 'range'];
+    @endphp
 
-                <x-slot:actions>
-                    <x-button label="Cancel" />
-                    <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
-                </x-slot:actions>
-            </x-form>
-        @endverbatim
-    </x-code>
+    <x-form wire:submit="save">
+        <x-input label="Name" wire:model="name" class="input-primary" />
+
+        <x-input label="Amount" wire:model="amount" prefix="USD" money hint="It submits an unmasked value" class="input-primary" />
+
+        <x-password label="Password" wire:model="password" class="input-primary" disabled />
+
+        <x-toggle label="Left" wire:model="item1" class="toggle-primary" />
+
+        <x-checkbox label="Left" wire:model="item1" hint="You agree with terms" class="checkbox-primary" />
+
+        <x-radio label="Select one" :options="$users" wire:model="item2" class="radio-primary" />
+
+        <x-group label="Select one" :options="$users" wire:model="item1" />
+
+        <x-colorpicker wire:model="name" class="input-primary" />
+
+        <x-datetime label="My date" wire:model="name" icon="o-calendar" class="input-primary" />
+
+        <x-datetime label="Date + Time" wire:model="name" icon-right="o-calendar" type="datetime-local" class="input-primary" />
+
+        <x-file wire:model="name" label="Receipt" hint="Only PDF" accept="application/pdf" class="file-primary" />
+
+        <x-datetime label="Time" wire:model="name" icon="o-calendar" type="time" class="input-primary" />
+
+        <x-textarea label="Bio" wire:model="name" placeholder="Your story ..." hint="Max 1000 chars" rows="5" inline class="textarea-primary" />
+
+        <x-pin wire:model="name" size="3" />
+
+        <x-datepicker label="Date" wire:model="name" icon="o-calendar" hint="Hi!" />
+        <x-datepicker label="Alt" wire:model="name" icon="o-calendar" :config="$config1" />
+        <x-datepicker label="Range" wire:model="name" icon="o-calendar" :config="$config2" inline />
+
+        <x-input label="Prepend a select" wire:model="name" class="input-primary">
+            <x-slot:prepend>
+                {{-- Add `rounded-e-none` class (RTL support) --}}
+                <x-select icon="o-user" :options="$users" class="rounded-e-none select-primary" />
+            </x-slot:prepend>
+        </x-input>
+
+        <x-input label="Append a button" wire:model="name" class="input-primary">
+            <x-slot:append>
+                {{-- Add `rounded-s-none` class (RTL support) --}}
+                <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
+            </x-slot:append>
+        </x-input>
+
+        <x-slot:actions>
+            <x-button label="Cancel" />
+            <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
+        </x-slot:actions>
+    </x-form>
 
     <x-anchor title="No `separator`" size="text-2xl" class="mt-10 mb-5" />
 

@@ -39,7 +39,7 @@ class extends Component {
                 $users = App\Models\User::take(3)->get();
             @endphp
 
-            <x-radio label="Select one" :options="$users" wire:model="selectedUser" />
+            <x-group label="Select one" :options="$users" wire:model="selectedUser" />
 
         @endverbatim
     </x-code>
@@ -56,14 +56,14 @@ class extends Component {
                 $users = App\Models\User::take(3)->get();
             @endphp
 
-            <x-radio
+            <x-group
                 label="Select one"
                 :options="$users"
                 option-value="custom_key"
                 option-label="other_name"
                 wire:model="selectedUser2"
                 hint="Choose wisely"
-                class="bg-orange-50 [&:checked]:!bg-warning !border-orange-500 !text-orange-500" />
+                class="bg-orange-50 [&:checked]:!bg-orange-200 !border-orange-500 !text-orange-500" />
         @endverbatim
     </x-code>
 
@@ -83,8 +83,7 @@ class extends Component {
                 ];
             @endphp
 
-            <x-radio
-                label="Select one" :options="$users" wire:model="selectedUser3" />
+            <x-group label="Select one" :options="$users" wire:model="selectedUser3" />
         @endverbatim
     </x-code>
 
