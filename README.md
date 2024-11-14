@@ -42,7 +42,8 @@ plugins: [
 
 ```css
 @import "tailwindcss";
-@import "daisyui";
+
+@plugin "daisyui";
 
 @source "../views/**/**/*.blade.php";
 @source "../../app/**/**/*.php";
