@@ -88,4 +88,30 @@ class extends Component {
         @endverbatim
     </x-code>
 
+
+    <x-anchor title="HTML in label" size="text-2xl" class="mt-10 mb-5" />
+    <p>
+        You can add html to label
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            @php
+                $users = App\Models\User::take(3)->get();
+                $labelHtml = "<x-popover>
+                    <x-slot:trigger>
+                        <x-icon name='o-information-circle'/> Select one
+                    </x-slot:trigger>
+                    <x-slot:content>
+                        HEY, this is a suggestion
+                    </x-slot:content>
+                </x-popover>";
+            @endphp
+            <x-radio
+                :labelHtml=$labelHtml
+                :options="$users"
+                wire:model="selectedUser3" />
+        @endverbatim
+    </x-code>
+
 </div>
