@@ -95,11 +95,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-green-50 text-center p-2 text-sm dark:bg-base-300">--}}
-    {{--        <x-badge value="new" class="badge-sm bg-green-500 text-white" />--}}
-    {{--        The real time chat demo:--}}
-    {{--        <a href="https://ping.mary-ui.com" target="_blank" class="underline font-black">Ping &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-primary/5 text-center p-2 text-sm dark:bg-base-300">
+        <x-icon name="o-sparkles" class="h-4 w-4" />
+        maryUI 2 is here!
+        <a href="/docs/upgrading" class="underline font-black">Upgrade &rarr;</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -137,7 +137,7 @@
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
                     <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
-                    <x-menu-item title="Upgrading" link="/docs/upgrading" />
+                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
                 </x-menu-sub>
 

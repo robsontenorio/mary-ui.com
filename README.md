@@ -20,7 +20,8 @@ https://github.com/saadeghi/daisyui/tree/v5/components
 - Remove unnecessary dependencies from your `package.json` file and add new ones.
 
 ```bash
-yarn remove autoprefixer postcss 
+rm tailwind.config.js postcss.config.js && 
+yarn remove autoprefixer postcss && 
 yarn add -D daisyui@next tailwindcss@next @tailwindcss/vite@next
 ```
 

@@ -15,6 +15,8 @@ class extends Component {
 
     public ?float $amount = null;
 
+    public ?string $signature1 = null;
+
     public ?string $address = null;
 
     public ?int $number = null;
@@ -24,6 +26,8 @@ class extends Component {
     public ?int $age = null;
 
     public ?string $magicWord1 = null;
+
+    public ?string $pin = null;
 
     public ?string $magicWord2 = null;
 
@@ -170,11 +174,14 @@ class extends Component {
 
         <x-textarea label="Bio" wire:model="name" placeholder="Your story ..." hint="Max 1000 chars" rows="5" inline class="textarea-primary" />
 
-        <x-pin wire:model="name" size="3" />
+        @dump($pin)
+        <x-pin wire:model="pin" size="3" class="input-primary text-sm !bg-red-50" />
 
-        <x-datepicker label="Date" wire:model="name" icon="o-calendar" hint="Hi!" />
-        <x-datepicker label="Alt" wire:model="name" icon="o-calendar" :config="$config1" />
-        <x-datepicker label="Range" wire:model="name" icon="o-calendar" :config="$config2" inline />
+        <x-signature wire:model="signature1" hint="Please, sign it." />
+
+        <x-datepicker label="Date" wire:model="name" icon="o-calendar" hint="Hi!" class="input-primary" />
+        <x-datepicker label="Alt" wire:model="name" icon="o-calendar" :config="$config1" class="input-primary" />
+        <x-datepicker label="Range" wire:model="name" icon="o-calendar" :config="$config2" inline class="input-primary" />
 
         <x-input label="Prepend a select" wire:model="name" class="input-primary">
             <x-slot:prepend>
