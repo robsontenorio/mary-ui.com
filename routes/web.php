@@ -15,6 +15,7 @@ Volt::route('/docs/contributing', 'docs.contributing');
 Volt::route('/docs/components/form', 'docs.components.form');
 Volt::route('/docs/components/input', 'docs.components.input');
 Volt::route('/docs/components/radio', 'docs.components.radio');
+Volt::route('/docs/components/group', 'docs.components.group');
 Volt::route('/docs/components/select', 'docs.components.select');
 Volt::route('/docs/components/toggle', 'docs.components.toggle');
 Volt::route('/docs/components/checkbox', 'docs.components.checkbox');

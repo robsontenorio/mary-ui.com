@@ -43,10 +43,9 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" />
 
             <x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" />
@@ -65,10 +64,9 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                             // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select
                 label="Alternative"
                 :options="$users"
@@ -112,10 +110,9 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select label="Slots"  :options="$users" single>
                 <x-slot:prepend>
                     {{--  Add `rounded-e-none` (RTL support) --}}

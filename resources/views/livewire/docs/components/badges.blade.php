@@ -21,9 +21,9 @@ class extends Component {
 
             <x-badge value="Hello" class="badge-primary" />
 
-            <x-badge value="Hello" class="badge-warning" />
+            <x-badge value="Hello" class="badge-primary badge-soft " />
 
-            <x-badge value="Hello" class="bg-purple-500/10 " />
+            <x-badge value="Hello" class="badge-warning" />
         @endverbatim
     </x-code>
 

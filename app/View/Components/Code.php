@@ -35,6 +35,7 @@ class Code extends Component
             }
         @endphp
 
+        <div x-classes="lg:col-span-3 lg:col-span-4 lg:col-span-5 lg:col-span-6 lg:col-span-7 lg:col-span-8 lg:col-span-9"></div>
         <div @class(["grid gap-5 grid-cols-1 lg:grid-cols-12" => $sideBySide])>
         @if(!$noRender)
             <div @class(["lg:col-span-$renderColSpan" => $sideBySide, "order-last" => $invert])>
