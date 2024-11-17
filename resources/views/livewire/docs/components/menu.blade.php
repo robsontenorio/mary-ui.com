@@ -201,6 +201,29 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    
+    <x-anchor title="Icon Classes" size="text-2xl" class="mt-10 mb-5" />
+    
+    <p>
+        The <code>icon-classes</code> is available for:
+        <ul>
+            <li><code>x-menu-item</code></li>
+            <li><code>x-menu-separator</code></li>
+            <li><code>x-menu-sub</code></li>
+            <li><code>x-menu-title</code></li>
+        </ul>
+    </p>
+    
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu class="border border-dashed">
+                <x-menu-item icon="o-chart-pie" icon-classes="w-9 h-9 text-blue-600">
+                    Custom Icon Classes
+                </x-menu-item>
+            </x-menu>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Cloud providers" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
