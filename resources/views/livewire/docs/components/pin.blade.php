@@ -44,6 +44,24 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        The <code>hide</code> property allows you not to show what you are typing.<br>
+        You can use the <code>hideType</code> property to choose the type of icon that hides your code. Available Styles:
+        <ul>
+            <li>circle</li>
+            <li>disc</li>
+            <li>square</li>
+        </ul>
+    </p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-pin wire:model="pin2" size="4" numeric hide hideType="disc"/>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
