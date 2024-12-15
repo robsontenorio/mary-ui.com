@@ -19,13 +19,13 @@ new #[Title('Installation')] class extends Component {
         Please, for further styles reference see <a href="https://daisyui.com" target="_blank">daisyUI</a> and <a href="https://tailwindcss.com" target="_blank">Tailwind</a>.
     </x-alert>
 
-    <x-anchor title="Bootcamp" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Bootcamp" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         If you prefer a walkthrough guide, go to maryUI <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort.
     </p>
 
-    <x-anchor title="Automatic install" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Automatic install" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render language="bash">
         composer require robsontenorio/mary
@@ -52,7 +52,7 @@ new #[Title('Installation')] class extends Component {
         Go to the <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
     </x-alert>
 
-    <x-anchor title="Renaming components" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Renaming components" size="text-2xl" class="mt-10 !mb-5" />
     <p>
         If for some reason you need to rename maryUI components using a custom prefix, publish the config file.
     </p>
@@ -88,7 +88,7 @@ new #[Title('Installation')] class extends Component {
         php artisan view:clear
     </x-code>
 
-    <x-anchor title="Jetstream and Breeze" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Jetstream and Breeze" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-alert icon="o-light-bulb">
         If you are facing some UI glitches, try to remove <code>@tailwindcss/forms</code> plugin.

@@ -18,7 +18,7 @@ class extends Component {
         You are ready to go, just add maryUI components to your project.
     </p>
 
-    <x-anchor title="Trade-off" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Trade-off" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Remember that starter kits add a dozen files that you probably will not use. You have to tweak and maintain
@@ -49,14 +49,14 @@ class extends Component {
         Go ahead and add Authentication and Register as described on the following sections.
     </x-alert>
 
-    <x-anchor title="Layout" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Layout" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         There's not much to say here. As you can see on this Bootcamp, maryUI ships with a default layout. You can look for another layout alternative in the docs, but this is very
         personal.
     </p>
 
-    <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Components" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         The maryUI components provide a great DX and you don't have to worry about maintaining the components by yourself.
@@ -96,7 +96,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Authentication" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Authentication" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Here is what <code>routes/web.php</code> looks like with Authentication.
@@ -247,7 +247,7 @@ class extends Component {
         The default app layout shipped with maryUI shows the authenticated user and logout button for you.
     </p>
 
-    <x-anchor title="Register" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Register" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Add this <strong>public</strong> extra route to <code>web.php</code>.

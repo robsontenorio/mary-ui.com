@@ -197,106 +197,106 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.24.0.tgz#0574d7e87b44ee8511d08cc7f914bcb802b70818"
   integrity sha512-fbMkAF7fufku0N2dE5TBXcNlg0pt0cJue4xBRE2Qc5Vqikxr4VCgKj/ht6SMdFcOacVA9rqF70APJ8RN/4vMJw==
 
-"@tailwindcss/node@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/node/-/node-4.0.0-alpha.33.tgz#aa2ee940c09c1b69b11a245846f3f0cd5d7ddfb0"
-  integrity sha512-TazPrJrM2VC5+y9snszhRg2cSYv5u33iXrzHBDE4sgeLTyvcCNSHaSlKceg052U7C24VZZokh0Ae4j5cqoxmwQ==
+"@tailwindcss/node@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/node/-/node-4.0.0-alpha.34.tgz#dc3f08fc94cf36e9a4b18bf7481b339392d9bea6"
+  integrity sha512-AZiYQCGqbRMe+fEu2sJZp7dLYOG/7JCRI16QRodn+gJ4ZSeTrv22dRb/VKV+c7ate3W+/RTS8ToKPmo4VT/SHw==
   dependencies:
     enhanced-resolve "^5.17.1"
     jiti "^2.0.0-beta.3"
 
-"@tailwindcss/oxide-android-arm64@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.0.0-alpha.33.tgz#aa992112ea1b4a204a39026df6283599f8520daa"
-  integrity sha512-+HT1ePFKtGMKnWgI7rQnXDwfTNQR7Oj+dAb3PsDFyz1mFSyvQmqYeNrv7He7UFy0JWP8hy24Ekh5RGVBfjgJQw==
+"@tailwindcss/oxide-android-arm64@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-android-arm64/-/oxide-android-arm64-4.0.0-alpha.34.tgz#069ebc83e15f2c99ecfad86738e3e470277cdfb2"
+  integrity sha512-bkTCHLkHaR4nfKegCXJHakf9IXC0JiqVHWO+eI8W7D1WSfU8kixnSVrYOElaRO+72MseFQ6JK+WNnirftP+xQg==
 
-"@tailwindcss/oxide-darwin-arm64@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.0.0-alpha.33.tgz#bbef46fb3babac69ebdaf67650589ee0e8d84bb4"
-  integrity sha512-IJgi6UUDhsr6PoYOML7pmG3futWsYOJ29GzanuKMRCQFy1kQxQIR0ddMqLs3x92mZolCvAKb3S1CT7g+U0GB+A==
+"@tailwindcss/oxide-darwin-arm64@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-arm64/-/oxide-darwin-arm64-4.0.0-alpha.34.tgz#2be48c51a5090caabdddeb0cac7e26da769f5b14"
+  integrity sha512-Il1l88Hjjb8lGzyF2xOPsb3xaV4KeBmqRXdUC8E2oSHUzAiZAJZSxhbB1f8o7ZRyLGAgwnHe1jHYZ8NSE9u/HQ==
 
-"@tailwindcss/oxide-darwin-x64@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.0.0-alpha.33.tgz#2ee87d77fb7f60d80c9d2bc8a5c7a1a3467bc3a0"
-  integrity sha512-UU6oRKnZKMWDoB1QlF/MJh7XwX9lieP2C4rgn3PfyDU6yDbUOySgw9lit0+UIeKG7fWqZEaCxMCigNYDGifgVg==
+"@tailwindcss/oxide-darwin-x64@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-darwin-x64/-/oxide-darwin-x64-4.0.0-alpha.34.tgz#fc3feb033fe7d2972963613568f562995674511d"
+  integrity sha512-6EfsqKPLNaeVo6pTn4bN4ApvHbLkn8mk0+HS2LrDOE8kmAIGYtyhyvBh1fZY8cb7wBxxqnTWz9fVhLHkTgPSrQ==
 
-"@tailwindcss/oxide-freebsd-x64@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.0.0-alpha.33.tgz#49dbd0b6104e020ac266e013a753fc75808cd2e1"
-  integrity sha512-zUznuMdgNbBdN1/o/0GHn/VYjsJomQQvhH4zRkbBNBTNzl1hIdssK/yLv1BIXmMCfHLfi4wmU3z8dGUhr6kAVQ==
+"@tailwindcss/oxide-freebsd-x64@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-freebsd-x64/-/oxide-freebsd-x64-4.0.0-alpha.34.tgz#82a685cd1c3704c6a29cd889071ffe1468b22daa"
+  integrity sha512-eGgP5txixVU9Km7PPrCSZ4mLbboIKmV3hlasdyiCVIrEDnj40jo7r8/NqXpHtQbf/39mlsXzyDUtz2kP/HfgBQ==
 
-"@tailwindcss/oxide-linux-arm-gnueabihf@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.0.0-alpha.33.tgz#4d9197ff1e231fbc2b9a7ccf81f28c922f58ec5b"
-  integrity sha512-l2NHJ/SBpGulOpC3jzibRYtpouFTpQq7NApPJHtEbEUmGf96MUnPRITR4hvIGQeIc6do9VLHSdweJvU6KhPHkA==
+"@tailwindcss/oxide-linux-arm-gnueabihf@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm-gnueabihf/-/oxide-linux-arm-gnueabihf-4.0.0-alpha.34.tgz#57c64e05e4f29679b19be937700914fb296582f0"
+  integrity sha512-iqefLskJthiTXvT+SyOG6Rcq2+xWKoOmKcYmGFIYJ4Dd48KXoaz9nxBSJx6IySRDqTkDcDR9kKr5+zbztaryPA==
 
-"@tailwindcss/oxide-linux-arm64-gnu@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.0.0-alpha.33.tgz#f9d3c0a3a58286e4937f2b61a53a50517ad6e9d9"
-  integrity sha512-/5fNVK3rVDK0JvoThZ4Fr7lysW3yiSZ9MG9WJMMoQ+sJtRAFz/jQTeOcGj/XxQlV2F8aCMC0q80Uv5zNrt25WQ==
+"@tailwindcss/oxide-linux-arm64-gnu@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-gnu/-/oxide-linux-arm64-gnu-4.0.0-alpha.34.tgz#77f2e0a1e85e9a91153890da65122b22202bedba"
+  integrity sha512-JJJS8MfXtf2UlkGqEGBXLGTHLC6u7sqCAQ6hygB70ahPvFCBJgEmxMU4vFoIntoreUT+CzT6S3z1NCchI7ArjA==
 
-"@tailwindcss/oxide-linux-arm64-musl@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.0.0-alpha.33.tgz#b4fd0d1929565c42a3accdf75b98dd46e083f657"
-  integrity sha512-R9e4WUj7bIX1B2cBOnbJw50G46604jJbOQpe5f4PsiL7ZUV2yf2iEgJg+7qW06rDW+Hy0RvJHl9IAP/nmg5+6Q==
+"@tailwindcss/oxide-linux-arm64-musl@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-arm64-musl/-/oxide-linux-arm64-musl-4.0.0-alpha.34.tgz#193cb640d350a879870f014df837fac2749245cb"
+  integrity sha512-Uf1gpoj0toh/ofojNxn/Q/pRVMHLvN1P18ukzjp0xwY6Lnr78w9yc955L7eXN9FUGzzjL2mjJE1fFBsGR85qmg==
 
-"@tailwindcss/oxide-linux-x64-gnu@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.0.0-alpha.33.tgz#1191c224aea3e3df669f01cdbd81932097570d0e"
-  integrity sha512-tiaX7zQB+CcLVq5RAyGSNK0Y7GE3vS15duWY9Lh0p5gH4LpswKX7ZN3/Px/sYhXL3WYqxeoDSua1/2Ne9+6uJQ==
+"@tailwindcss/oxide-linux-x64-gnu@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-gnu/-/oxide-linux-x64-gnu-4.0.0-alpha.34.tgz#a6e25948e3fc17bb94ec185f4e987cc81fb9ac94"
+  integrity sha512-tOohkIUVzwIp3m5EqL5iTYlAj5M4FH+bHMmV09zitcbd6Kl3hbMfrmtPx/EAlCqjEHMMgBbhd61grOSbWe5lIA==
 
-"@tailwindcss/oxide-linux-x64-musl@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.0.0-alpha.33.tgz#435247957abf1a255d98ee02efe51a7e0d1b9746"
-  integrity sha512-oMGNZ1djhCFY2mVXHHqytsVel3r2bXy99EHhG6jTaj4XXsTT8eSn9rDHgL4eaY/Rfd+qNz4b7KjicmCFfcdOwA==
+"@tailwindcss/oxide-linux-x64-musl@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-linux-x64-musl/-/oxide-linux-x64-musl-4.0.0-alpha.34.tgz#8e24df111b0cd82c447be49f6efc0ea974765268"
+  integrity sha512-WBVvFt69MZAy9uMMX9h7H6MJJmdIoRj2QJJA8p9VOxFwoEhO9cc/DnXIP6pWajibwzC47PevIUgvNFIXdg4t9Q==
 
-"@tailwindcss/oxide-win32-arm64-msvc@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.0.0-alpha.33.tgz#5d64bc166e7e911a13e990901fc87e8e253dd412"
-  integrity sha512-ZmFedijQ4k3CvWwwMExJimK/pdeNCSXHn8BCZdbBcMCbobnW1+Id3kXNFxE3fUozfm1YZhHj9Uq6fDpw337a0w==
+"@tailwindcss/oxide-win32-arm64-msvc@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-arm64-msvc/-/oxide-win32-arm64-msvc-4.0.0-alpha.34.tgz#3c1cfbff0032fe635751e8e4925fdf7a2faf7b13"
+  integrity sha512-rwuBrvlWgY0/VZzyiV/HRZdHEorrqf/BY2R+LeS/meo4oW2eHNnjl8+GUN6M1XMWyYiGsoEyokxE1BpQQb5g+A==
 
-"@tailwindcss/oxide-win32-x64-msvc@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.0.0-alpha.33.tgz#49d734ccd6ccc1d011f0aa4d06bd47d77bfcbed5"
-  integrity sha512-JQ71zBorRRUK23vdF1i4B8jMMsxYr99TZBBzyoktYHrggiroHtITkgq1HCtZVB7/F62LMs9IqwABP/StJtVtiw==
+"@tailwindcss/oxide-win32-x64-msvc@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.0.0-alpha.34.tgz#01752b31005cc0d156a1962a0c5b2e22eda42576"
+  integrity sha512-WRk86AAnSuZYbPPG1VjNzal+VqHLr9XaZWO7SVfZHB0yl+oCSqNi57eohjfi9X6/h6hZfpF+jqB7m/Nf4iMdrg==
 
-"@tailwindcss/oxide@4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide/-/oxide-4.0.0-alpha.33.tgz#b7a30f6d81ab9326516c7c9f26037e1ce62e81a3"
-  integrity sha512-+Zj5Cr814aAAFogTGDyBvrRjzX8d9OU8IRGjRGrquEsBdYTdEIeKLrNXC9gQRuAZO36stmtOUhyeD4S3gqATZg==
+"@tailwindcss/oxide@4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/oxide/-/oxide-4.0.0-alpha.34.tgz#e18757ae662c2135bb99bcd9749b6ad09f6d3aad"
+  integrity sha512-tvC/Fkq7vWxFTgyWrM8czxgMwYiqfY3/pxV/e6bbTaX/Z7ZomukDErVTyExI67e4igjq4/P5VWdbSiM+bBAXOw==
   optionalDependencies:
-    "@tailwindcss/oxide-android-arm64" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-darwin-arm64" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-darwin-x64" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-freebsd-x64" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-linux-arm-gnueabihf" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-linux-arm64-gnu" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-linux-arm64-musl" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-linux-x64-gnu" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-linux-x64-musl" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-win32-arm64-msvc" "4.0.0-alpha.33"
-    "@tailwindcss/oxide-win32-x64-msvc" "4.0.0-alpha.33"
+    "@tailwindcss/oxide-android-arm64" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-darwin-arm64" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-darwin-x64" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-freebsd-x64" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-linux-arm-gnueabihf" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-linux-arm64-gnu" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-linux-arm64-musl" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-linux-x64-gnu" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-linux-x64-musl" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-win32-arm64-msvc" "4.0.0-alpha.34"
+    "@tailwindcss/oxide-win32-x64-msvc" "4.0.0-alpha.34"
 
-"@tailwindcss/vite@^4.0.0-alpha.33":
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/vite/-/vite-4.0.0-alpha.33.tgz#c95c248acb25317fb6a3345b105e23034378f0d2"
-  integrity sha512-HK6bUwVYI9dBKNLZSv+baR1kUo5dbxYjkT2r2FQvK2Yr+BPt6tJ4kXbG3KhfndQ6xdjKN9PVqTueXzi2v/GNdg==
+"@tailwindcss/vite@^4.0.0-alpha.34":
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/vite/-/vite-4.0.0-alpha.34.tgz#7b811040b716c36af673ce0e2391ff2f952c5796"
+  integrity sha512-9n/SRZtrTq3KxjASeMBPyv5tV2f9kU8zzVgzObA+cUGqU7wPGKPNnadptBzZWeqjYABgxKjjuljd7Qn6/vz6YA==
   dependencies:
-    "@tailwindcss/node" "4.0.0-alpha.33"
-    "@tailwindcss/oxide" "4.0.0-alpha.33"
+    "@tailwindcss/node" "4.0.0-alpha.34"
+    "@tailwindcss/oxide" "4.0.0-alpha.34"
     lightningcss "^1.26.0"
     svelte-preprocess "^6.0.2"
-    tailwindcss "4.0.0-alpha.33"
+    tailwindcss "4.0.0-alpha.34"
 
 "@types/estree@1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
   integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
 
-daisyui@^5.0.0-alpha.37:
-  version "5.0.0-alpha.37"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.0-alpha.37.tgz#8fc679075f5ce70ba61ff3aa012ead28957a6137"
-  integrity sha512-T8ZqKzk7CH3ecrjtRjVAl1JaI9yYn7wgsYmRM9qzyNaVWc2C3NjsUXVgqD4wMJhKs8jiXwhjVXDY36S+taBKtg==
+daisyui@^5.0.0-alpha.38:
+  version "5.0.0-alpha.38"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.0-alpha.38.tgz#727db1692837882e779ba18a731569e830535b61"
+  integrity sha512-QWaGCny2E8eb34JNimoHlPGU2h0EcarBuJnhxcdD+FcS/yZ2/8XDIY4FWSwqXJFK0RXFjP70wkYrG1Y1yKXFdA==
 
 detect-libc@^1.0.3:
   version "1.0.3"
@@ -355,10 +355,10 @@ jiti@^2.0.0-beta.3:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.3.3.tgz#39c66fc77476b92a694e65dfe04b294070e2e096"
   integrity sha512-EX4oNDwcXSivPrw2qKH2LB5PoFxEvgtv2JgwW0bU858HoLQ+kutSvjLMUqBd0PeJYEinLWhoI9Ol0eYMqj/wNQ==
 
-laravel-vite-plugin@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/laravel-vite-plugin/-/laravel-vite-plugin-1.0.5.tgz#0d1881bf69d9d420a01f33db183adb82d9143362"
-  integrity sha512-Zv+to82YLBknDCZ6g3iwOv9wZ7f6EWStb9pjSm7MGe9Mfoy5ynT2ssZbGsMr1udU6rDg9HOoYEVGw5Qf+p9zbw==
+laravel-vite-plugin@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/laravel-vite-plugin/-/laravel-vite-plugin-1.0.6.tgz#14c4f33574dda3ff4636ee73c83cd0c5f39e5d09"
+  integrity sha512-B34OqmZc/rV1KvSjst8SsUm/LKHsuDusw8jiZCIhlnTHXbXnK89JUM9pTJuk6E/Vc/1DT2gX7qNfhipak1WS8w==
   dependencies:
     picocolors "^1.0.0"
     vite-plugin-full-reload "^1.1.0"
@@ -490,10 +490,10 @@ svelte-preprocess@^6.0.2:
   resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-6.0.3.tgz#fdc1f9dc41b6f22bf8b1f059e9f21eaaae181eeb"
   integrity sha512-PLG2k05qHdhmRG7zR/dyo5qKvakhm8IJ+hD2eFRQmMLHp7X3eJnjeupUtvuRpbNiF31RjVw45W+abDwHEmP5OA==
 
-tailwindcss@4.0.0-alpha.33, tailwindcss@^4.0.0-alpha.33:
-  version "4.0.0-alpha.33"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.0.0-alpha.33.tgz#d13ad8ee4580e6bbf20350f4fbca0bc8d60e84d4"
-  integrity sha512-Bg8Ick3IC7fnMxHsKHyF4cgZieZAXbK5LUazJQcMZxRBC4FT1WN08PM/tHQ7x6dlGJNPS35jGlkj8IQX7x6Avw==
+tailwindcss@4.0.0-alpha.34, tailwindcss@^4.0.0-alpha.34:
+  version "4.0.0-alpha.34"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.0.0-alpha.34.tgz#60fdef2b519acb8d83858658bf81c241dc81fb4d"
+  integrity sha512-SST1h774z+bVCLTpRz4TYpjJLIcomZH1HBF4OPY1YusONUYqg0/XTq0N++12mNeyu6mK7VbFIkkNtf636yudWQ==
 
 tapable@^2.2.0:
   version "2.2.1"
@@ -508,10 +508,10 @@ vite-plugin-full-reload@^1.1.0:
     picocolors "^1.0.0"
     picomatch "^2.3.1"
 
-vite@^5.4.9:
-  version "5.4.9"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-5.4.9.tgz#215c80cbebfd09ccbb9ceb8c0621391c9abdc19c"
-  integrity sha512-20OVpJHh0PAM0oSOELa5GaZNWeDjcAvQjGXy2Uyr+Tp+/D2/Hdz6NLgpJLsarPTA2QJ6v8mX2P1ZfbsSKvdMkg==
+vite@^5.4.11:
+  version "5.4.11"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-5.4.11.tgz#3b415cd4aed781a356c1de5a9ebafb837715f6e5"
+  integrity sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==
   dependencies:
     esbuild "^0.21.3"
     postcss "^8.4.43"

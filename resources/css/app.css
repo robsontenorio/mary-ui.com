@@ -11,39 +11,54 @@ p {
     @apply my-5 leading-8
 }
 
-#marySpotlight > div {
-    @apply pt-1
-}
+/**
+* Docs `a` tag
+*/
 
-#marySpotlight a {
-    @apply !no-underline
+.docs a {
+    @apply underline
 }
-
-.docs > ul li {
-    @apply list-disc ml-10 pb-2
-}
-
-/*.docs > :not(h1, h2, h3, h4, h5) a {*/
-/*    @apply link*/
-/*}*/
 
 .docs .mockup a, .docs .mary-header-anchor a, .api-generator a {
     @apply !no-underline
 }
 
-.landing pre {
-    @apply !my-0
+/**
+* Docs `ul`/`li` tags
+*/
+
+.docs > ul li {
+    @apply list-disc ml-10 pb-2
 }
 
-/* Hide elements from <x-code> component when necessary */
+
+/**
+* Hide some elements on code blocks
+*/
 .docs-hide {
     @apply hidden
 }
 
-/* Adjust for anchor links considering top nav height */
+
+/**
+* Adjust for anchor links considering top nav height
+*/
+
 .mary-header-anchor {
     @apply scroll-mt-24
 }
+
+/**
+* Spotlight
+*/
+
+#marySpotlight > div {
+    @apply pt-1
+}
+
+/**
+* Mary Table paginator
+*/
 
 .mary-table-pagination span[aria-current="page"] > span {
     @apply bg-primary text-base-100
@@ -57,11 +72,10 @@ p {
     @apply bg-base-100
 }
 
-.cropper-point {
-    width: 10px !important;
-    height: 10px !important;
-}
 
+/**
+* Image Library landing page demo
+*/
 
 #image-library-landing-demo label {
     @apply text-base-100
@@ -75,6 +89,18 @@ p {
     @apply bg-base-100 rounded-lg
 }
 
+/**
+* Cropper
+*/
+
+.cropper-point {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+/**
+ * EasyMDE demo
+ */
 
 .EasyMDEContainer h1 {
     @apply text-4xl font-bold mb-5
@@ -88,35 +114,26 @@ p {
     @apply text-lg font-bold mb-3
 }
 
-/*
- Margin and rounding are personal preferences,
- overflow-x-auto is recommended.
+/**
+* Torchlight style and `code`/`pre` tags
 */
+
+.landing pre {
+    @apply !my-0
+}
+
 pre {
     @apply my-4 rounded-lg overflow-x-auto;
 }
 
-/*
- Add some vertical padding and expand the width
- to fill its container. The horizontal padding
- comes at the line level so that background
- colors extend edge to edge.
-*/
 pre code.torchlight {
     @apply block rounded-lg py-4 min-w-max text-sm;
 }
 
-/*
- Horizontal line padding.
-*/
 pre code.torchlight .line {
     @apply px-4 py-0.5;
 }
 
-/*
- Push the code away from the line numbers and
- summary caret indicators.
-*/
 pre code.torchlight .line-number,
 pre code.torchlight .summary-caret {
     @apply mr-4;

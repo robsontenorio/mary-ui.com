@@ -19,7 +19,7 @@ class extends Component {
 
     <img src="/bootcamp/04-a.png" class="rounded-lg border shadow-xl mb-10 p-3" />
 
-    <x-anchor title="New Components & Routes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="New Components & Routes" size="text-2xl" class="mt-10 !mb-5" />
 
     Let's create some new Volt components by using the <code>class</code> syntax.
 
@@ -68,7 +68,7 @@ class extends Component {
         Additionally, it keeps the correct menu item selected based on the user's current route and sub-routes, as they navigate deeply.
     </p>
 
-    <x-anchor title="Form components" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Form components" size="text-2xl" class="mt-10 !mb-5" />
 
     <div class="flex gap-3">
         <x-button label="Form docs" link="/docs/components/form" icon-right="o-arrow-up-right" external class=" btn-sm btn-outline !no-underline" />
@@ -249,7 +249,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="File component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="File component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="File docs" link="/docs/components/file" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -378,7 +378,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Better layout" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Better layout" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty trick we use on all maryUI
@@ -412,7 +412,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Choices component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Choices component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Choices docs" link="/docs/components/choices" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -505,7 +505,7 @@ class extends Component {
         Pro tip: for larger lists use the <code>x-choices</code> component variation.
     </x-alert>
 
-    <x-anchor title="Rich Text Editor component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Rich Text Editor component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Rich Text Editor docs" link="/docs/components/editor" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -566,7 +566,7 @@ class extends Component {
         Uploading images only works for <strong>authenticated users</strong> on your app. We will implement it on last section of the Bootcamp.
     </x-alert>
 
-    <x-anchor title="Better layout (2)" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Better layout (2)" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes, like the example bellow, for clear group related information.
@@ -611,7 +611,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Display the avatar on Table component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Display the avatar on Table component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Avatar docs" link="/docs/components/avatar" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -645,7 +645,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Challenge" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Challenge" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         We will not show you the <code>users/create</code> component because it is pretty much the same as <code>users/edit</code>, right?

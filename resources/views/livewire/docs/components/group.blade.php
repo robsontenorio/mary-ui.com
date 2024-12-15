@@ -20,7 +20,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Group" />
 
-    <x-anchor title="Default attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Default attributes" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         By default, it will look up for:
@@ -44,7 +44,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
@@ -67,7 +67,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disable options" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disable options" size="text-2xl" class="mt-10 !mb-5" />
     <p>
         You can disable options by setting the <code>disabled</code> attribute.
     </p>

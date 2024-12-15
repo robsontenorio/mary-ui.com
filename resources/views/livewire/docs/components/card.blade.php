@@ -23,7 +23,7 @@ class extends Component {
 
     <x-anchor title="Card" />
 
-    <x-anchor title="Basics" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basics" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
         @verbatim('docs')
@@ -48,7 +48,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         This features only works when you have in place <code>title</code> and <code>separator</code> attributes.

@@ -23,7 +23,7 @@ class extends Component {
         toggle.
     </x-alert>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Enable native Tailwind dark mode support on <code>tailwind.config.js</code>.
@@ -38,7 +38,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="flex gap-5 items-center">
         @verbatim('docs')
@@ -49,7 +49,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Manual activation" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Manual activation" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can toggle theme from anywhere by dispatching a <code>mary-theme-toggle</code> event.
@@ -88,7 +88,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Custom theme toggle" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom theme toggle" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         By default, this component uses the standard "light" and "dark" themes shipped with <strong>daisyUI</strong>. But, you can customize them by passing the theme names.

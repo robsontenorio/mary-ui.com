@@ -33,7 +33,7 @@ class extends Component {
         Also see the <a href="/docs/components/markdown" wire:navigate>Markdown Editor</a> component.
     </x-alert>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Create an account on TinyMCE site and replace <code>YOUR-KEY-HERE</code> on url bellow.
@@ -66,7 +66,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         For security reasons, images and files uploads only works for <strong>authenticated users</strong>.
@@ -82,7 +82,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Upload settings" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Upload settings" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         By default, this component automatically uploads images and files to <strong>local public disk</strong> into <strong>"editor/"</strong> folder.
@@ -95,7 +95,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Customizing" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Customizing" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can add or override any setting provided by <strong>TinyMCE</strong>. Check its docs for more.

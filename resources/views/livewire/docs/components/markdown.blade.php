@@ -34,7 +34,7 @@ class extends Component {
         Also see the <a href="/docs/components/editor" wire:navigate>Rich Text Editor</a> component.
     </x-alert>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -59,7 +59,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         For security reasons, uploads only works for <strong>authenticated users</strong>.
@@ -72,7 +72,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Upload settings" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Upload settings" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         By default, this component automatically uploads images to <strong>local public disk</strong> into <strong>"markdown/"</strong> folder.
@@ -85,7 +85,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Customizing" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Customizing" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can add or override any setting provided by <strong>EasyMDE</strong>. Check its docs for more.
@@ -105,7 +105,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Preview style" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Preview style" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Remember that Tailwind get rid of the basic styles of <code>H1, H2, H3</code> ...

@@ -23,7 +23,7 @@ class extends Component {
 
     <img src="/bootcamp/05-c.png" class="rounded-lg border shadow-xl mb-10 p-3" />
 
-    <x-anchor title="Searching" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searching" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Place the <strong>spotlight tag</strong> somewhere in the main layout.

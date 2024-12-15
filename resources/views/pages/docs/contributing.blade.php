@@ -17,7 +17,7 @@ new #[Title('Contributing')] class extends Component {
         Here is an example of <a href="https://github.com/robsontenorio/mary/pull/503">refactoring PR</a>.
     </p>
 
-    <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Components" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Clone the repository into some folder <strong>inside your app</strong>.
@@ -64,7 +64,7 @@ new #[Title('Contributing')] class extends Component {
         yarn dev
     </x-code>
 
-    <x-anchor title="Docs" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Docs" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         This website is made with Laravel, Livewire, Volt and maryUI.

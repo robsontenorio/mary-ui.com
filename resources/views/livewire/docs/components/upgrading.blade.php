@@ -85,7 +85,7 @@ new #[Title('Upgrading')] class extends Component {
 
     <hr />
 
-    <x-anchor title="Changelog" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Changelog" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-anchor title="All input components" size="text-lg" class="!mb-5" />
 
@@ -162,7 +162,7 @@ new #[Title('Upgrading')] class extends Component {
     {{--        composer require livewire/livewire--}}
     {{--    </x-code>--}}
 
-    <x-anchor title="Recent releases" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Recent releases" size="text-2xl" class="mt-10 !mb-5" />
 
     <livewire:releases lazy />
 </div>

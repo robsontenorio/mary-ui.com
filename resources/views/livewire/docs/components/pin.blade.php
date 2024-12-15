@@ -20,7 +20,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Pin" />
 
-    <x-anchor title="Default" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Default" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         The default behavior accept any character.
@@ -32,7 +32,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Numeric" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Numeric" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         The <code>numeric</code> property modifies the behavior to accept only numbers.
@@ -44,7 +44,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Events" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         The <code>@completed</code> and <code>@incomplete</code> events are triggered respectively when the pin is completed or is incomplete.

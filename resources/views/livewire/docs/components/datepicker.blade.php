@@ -37,7 +37,7 @@ class extends Component {
         For native date time selection see <a href="/docs/components/datetime" wire:navigate>Date Time</a> component.
     </x-alert>
 
-    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Install" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -51,7 +51,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         See all <code>$config</code> options at <a href="https://flatpickr.js.org/options/" target="_blank">flatpickr`s docs</a>.
@@ -70,7 +70,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Localization and global settings" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Localization and global settings" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         First add extra locale packages, then set up a global flatpickr object.
@@ -99,7 +99,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Per component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Per component" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config. Instead, set locale on component config object.
@@ -117,7 +117,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Plugins" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Plugins" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Here is a example for <code>monthSelectPlugin</code>. Please, refer to flatpickr`s docs for more plugins and how about to install them.

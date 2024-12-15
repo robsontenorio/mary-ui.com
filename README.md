@@ -1,53 +1,46 @@
 <p align="center"><img width="200" src="public/mary.png"></p>
 
-## maryUI v2 - Alpha
+## Introduction
 
-⚠️ **WIP** - DO NOT USE IN PRODUCTION
-<hr />
+This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking for [mary components repository](https://github.com/robsontenorio/mary)?
 
-This branch will follow the **daisyUI 5** and **Tailwind 4** progress.
+## Sponsor
 
-See daisyUI 5 components WIP.  
-https://github.com/saadeghi/daisyui/tree/v5/components
+Let's keep pushing it, [sponsor me](https://github.com/sponsors/robsontenorio) ❤️
 
-## Setup
+## Discord
 
-⚠️ This considers you are using **only maryUI** without any starter kits like Jetstream/Breeze or even Filament.
+Come to say hello on [maryUI Discord](https://discord.gg/c2Dv8T2X2s)
 
-<hr />
+## Follow me
 
-- Remove `tailwind.config.js` and `postcss.config.js` from your project.
-- Remove unnecessary dependencies from your `package.json` file and add new ones.
+[@robsontenorio](https://twitter.com/robsontenorio)
+
+## Contributing
+
+This website is made with Laravel, Livewire, Volt and maryUI.
+
+Clone the repository.
 
 ```bash
-rm tailwind.config.js postcss.config.js && 
-yarn remove autoprefixer postcss && 
-yarn add -D daisyui@next tailwindcss@next @tailwindcss/vite@next
+git clone git@github.com:robsontenorio/mary-ui.com.git
 ```
 
-- Add the following to your `vite.config.js` file.
+Create `.env` from `.env.example` and adjust few vars.
 
-```js
-import tailwindcss from '@tailwindcss/vite'
-
-...
-
-plugins: [
-    tailwindcss(),
-    ...
-]
-
+```bash
+APP_ENV=local
+APP_DEBUG=true
 ```
 
-- Edit the top of your `app.css` file to look like this.
+Install, migrate and start.
 
-```css
-@import "tailwindcss";
-
-@plugin "daisyui";
-
-@source "../views/**/**/*.blade.php";
-@source "../../app/**/**/*.php";
-@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+```bash
+composer start
 ```
+
+**Done! See http://localhost:8018**
+
+<br>
+
+:warning: It uses SQLITE for dynamic examples.

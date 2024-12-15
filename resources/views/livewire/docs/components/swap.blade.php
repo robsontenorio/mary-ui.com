@@ -28,7 +28,7 @@ class extends Component {
         If you have multiple <code>x-swap</code> on the same page make sure to set different ids.
     </x-alert>
 
-    <x-anchor title="Default" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Default" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @php
@@ -44,7 +44,7 @@ class extends Component {
         public bool $swap1 = false;
     </x-code>
 
-    <x-anchor title="Text content" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Text content" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         When providing the <code>true</code> or <code>false</code> attributes, the icons will be ignored.
@@ -63,7 +63,7 @@ class extends Component {
         public bool $swap2 = true;
     </x-code>
 
-    <x-anchor title="Custom icons + size" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom icons + size" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -71,7 +71,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Animations" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Animations" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         It supports <a href="https://daisyui.com/components/swap/" class="underline">daisy-ui's swap animations</a>.
@@ -89,7 +89,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom content" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom content" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         It is possible to provide completely custom content. Please, note that the width will always be the width of the larger content.
@@ -111,7 +111,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Before and after" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Before and after" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can add content before and after the content as well.

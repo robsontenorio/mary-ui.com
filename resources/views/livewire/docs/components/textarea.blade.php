@@ -21,7 +21,7 @@ class extends Component {
         If you need a rich text editor check the <a href="/docs/components/editor" wire:navigate>Editor</a> component.
     </x-alert>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')

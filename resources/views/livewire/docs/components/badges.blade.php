@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
 
     <x-anchor title="Badges" />
-    <x-anchor title="Standalone" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Standalone" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -27,7 +27,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Combined" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Combined" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
