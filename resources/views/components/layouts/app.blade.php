@@ -95,11 +95,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-green-50 text-center p-2 text-sm dark:bg-base-300">--}}
-    {{--        <x-badge value="new" class="badge-sm bg-green-500 text-white" />--}}
-    {{--        The real time chat demo:--}}
-    {{--        <a href="https://ping.mary-ui.com" target="_blank" class="underline font-black">Ping &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-yellow-50 text-center p-2 text-sm dark:bg-base-300">
+        <x-badge value="new" class="badge-sm bg-yellow-200" />
+        Livewire Volt extension for VSCode.
+        <a href="https://marketplace.visualstudio.com/items?itemName=robsontenorio.voltage" target="_blank" class="underline font-black">Voltage &rarr;</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
