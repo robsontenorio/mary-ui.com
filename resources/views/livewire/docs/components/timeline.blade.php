@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Timeline" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -32,7 +32,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Icons" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Icons" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')

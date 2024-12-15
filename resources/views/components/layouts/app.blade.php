@@ -39,9 +39,9 @@
     <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
 
     {{-- DIFF2HTML --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/xcode.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/css/diff2html.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/js/diff2html-ui.min.js"></script>
 
     {{-- Chart.js  --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -95,11 +95,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-green-50 text-center p-2 text-sm dark:bg-base-300">--}}
-    {{--        <x-badge value="new" class="badge-sm bg-green-500 text-white" />--}}
-    {{--        The real time chat demo:--}}
-    {{--        <a href="https://ping.mary-ui.com" target="_blank" class="underline font-black">Ping &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-primary/5 text-center p-2 text-sm dark:bg-base-300">
+        <x-icon name="o-sparkles" class="h-4 w-4" />
+        maryUI 2 is here!
+        <a href="/docs/upgrading" class="underline font-black">Upgrade &rarr;</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -130,14 +130,14 @@
 
     <x-main with-nav>
         <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
-            <x-menu activate-by-route class="mt-5 flex gap-3">
+            <x-menu activate-by-route class="mt-5 flex gap-3 w-full">
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
                     <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
-                    <x-menu-item title="Upgrading" link="/docs/upgrading" />
+                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
                 </x-menu-sub>
 
@@ -146,7 +146,8 @@
                     <x-menu-item title="Input" link="/docs/components/input" />
                     <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
                     <x-menu-item title="Toggle" link="/docs/components/toggle" />
-                    <x-menu-item title="Radio" link="/docs/components/radio" />
+                    <x-menu-item title="Group" link="/docs/components/group" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
+                    <x-menu-item title="Radio" link="/docs/components/radio" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
                     <x-menu-item title="Select" link="/docs/components/select" />
                     <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Choices" link="/docs/components/choices" />

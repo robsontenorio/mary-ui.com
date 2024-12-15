@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Setup" />
 
-    <x-anchor title="Requirements" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Requirements" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Make sure you a have a <strong>fresh Laravel 11</strong> project up and running on your browser, <strong>without any starter kit</strong>.
@@ -34,7 +34,7 @@ class extends Component {
         Before proceed, we recommend you to make a local commit on each step to keep track of what is going on. After you have Laravel up and running it is time to commit.
     </x-alert>
 
-    <x-anchor title="Install maryUI" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Install maryUI" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Make sure you have selected <strong>"Volt"</strong> during this install.
@@ -73,7 +73,7 @@ class extends Component {
         Check the source code diff and commit it.
     </x-alert>
 
-    <x-anchor title="Improving the example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Improving the example" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You have a basic working example, but the <strong>data is hardcoded</strong>.

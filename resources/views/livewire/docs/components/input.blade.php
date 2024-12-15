@@ -24,7 +24,7 @@ class extends Component {
 
     <x-anchor title="Input" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -34,11 +34,15 @@ class extends Component {
 
             <x-input label="Name" wire:model="name" placeholder="Clearable field" clearable />
 
+            <x-input label="Primary" wire:model="name" class="input-primary" />
+
+            <x-input label="Warning" wire:model="name" class="input-warning" />
+
             <x-input label="Prefix & Suffix" wire:model="name" prefix="www" suffix=".com" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="States" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="States" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -48,7 +52,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Inline" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Inline" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -56,7 +60,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Password" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Password" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Notice all above attributes will work with the password component.
@@ -71,7 +75,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Currency" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Currency" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -99,13 +103,13 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
 
-    <x-code class="grid gap-8">
+    <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
+            @php                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]
+            @endphp                                             <!-- [tl! .docs-hide] -->
 
             <x-input label="Prepend a select">
                 <x-slot:prepend>
@@ -120,7 +124,6 @@ class extends Component {
                     <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
                 </x-slot:append>
             </x-input>
-
         @endverbatim
     </x-code>
 </div>

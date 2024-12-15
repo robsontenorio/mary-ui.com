@@ -43,7 +43,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Notice it only works combined with the <code>separator</code> attribute.

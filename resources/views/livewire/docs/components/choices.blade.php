@@ -131,7 +131,7 @@ class extends Component {
         Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
     </x-alert>
 
-    <x-anchor title="Selection" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Selection" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         By default, it will look up for:
@@ -171,7 +171,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Select All" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Select All" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         This option only works for <strong>multiple and non-searchable</strong> exclusively.
@@ -197,7 +197,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Compact mode" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Compact mode" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         This option only works for <strong>multiple and non-searchable</strong> exclusively.
@@ -242,7 +242,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Searchable (frontend)" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searchable (frontend)" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         If you judge you don't have a huge list of items, you can make it searchable offline on <strong>"frontend side"</strong>.
@@ -277,7 +277,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Searchable (server)" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searchable (server)" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options from <strong>"server
@@ -409,7 +409,7 @@ class extends Component {
     </x-code>
     <!-- @formatter:on -->
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You have full control on rendering items by using the <code>&#x40;scope('item', $object)</code> special blade directive.
@@ -473,10 +473,10 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Note about large numbers" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Note about large numbers" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
-        This components uses the options <code>id</code> values to handle selection.
+        This component uses the options <code>id</code> values to handle selection.
         It tries to determine if these values are a <code>int</code> or <code>string</code>.
     </p>
     <p>
@@ -511,7 +511,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Events" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can catch component events just like described on Livewire docs.

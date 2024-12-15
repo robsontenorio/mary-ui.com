@@ -22,7 +22,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Rating" />
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         It controls the rating based on a integer number. For "not rated" set its model value as "0".

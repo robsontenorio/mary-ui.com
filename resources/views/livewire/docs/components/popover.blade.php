@@ -18,7 +18,7 @@ class extends Component {
         This component uses the the built-in Alpine's <a href="https://alpinejs.dev/plugins/anchor" target="_blank">anchor plugin</a>.
     </p>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -37,7 +37,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Position and Offset" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Position and Offset" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         As this component uses Alpine's anchor plugin,
@@ -57,7 +57,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Styling" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Styling" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')

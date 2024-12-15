@@ -24,7 +24,7 @@ new #[Title('Layout')] class extends Component {
         you already have the "Only sidebar" layout in place.
     </x-alert>
 
-    <x-anchor title="Only sidebar" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Only sidebar" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         This layout has only a collapsible Sidebar. It fits nicely for an "enterprise layout", which needs more vertical spacing.
@@ -99,7 +99,7 @@ new #[Title('Layout')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="With Navbar" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="With Navbar" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render>
         @verbatim('docs')

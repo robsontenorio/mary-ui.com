@@ -16,7 +16,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Tabs" />
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -38,7 +38,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Use slots to customize the tab label.
@@ -64,7 +64,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disabled state" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disabled state" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code>
         @verbatim('docs')
@@ -85,7 +85,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Customisation" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Customisation" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
         Remember to add these custom classes on Tailwind <strong>safelist</strong>.

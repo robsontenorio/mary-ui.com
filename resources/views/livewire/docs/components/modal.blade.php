@@ -23,7 +23,7 @@ class extends Component {
 
     <x-anchor title="Modal" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render language="php">
         public bool $myModal1 = false;
@@ -42,7 +42,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Complex" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Complex" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code no-render language="php">
         public bool $myModal2 = false;
@@ -65,7 +65,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Persistent" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Persistent" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Add the <code>persistent</code> attribute to prevent modal close on click outside or when pressing `ESC` key.
@@ -86,7 +86,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Styling" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Styling" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
         Remember to add <code>box-class</code> custom classes on Tailwind <strong>safelist</strong>.

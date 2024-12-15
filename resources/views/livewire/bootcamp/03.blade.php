@@ -17,7 +17,7 @@ class extends Component {
         As you can see on the existing <code>users/index.blade.php</code> example component you can already sort and filter, but the data is hardcoded. Let's fix it now!
     </p>
 
-    <x-anchor title="Table component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Table component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Table docs" link="/docs/components/table" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -58,7 +58,7 @@ class extends Component {
         Notice the <code>users.age</code> column is empty because we have removed it from migrations. Let's fix it on the next topic.
     </p>
 
-    <x-anchor title="Sorting" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Sorting" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         As you noticed on example source code, we have a <code>$sortBy</code> property to control the sorting column and its direction.
@@ -107,7 +107,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Pagination" size="text-2xl" class="mt-10 !mb-5" />
 
     <img src="/bootcamp/03-b.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
@@ -169,7 +169,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Clear filters" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Clear filters" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         There is a "bug" on pagination...
@@ -225,7 +225,7 @@ class extends Component {
         Pro tip: You could create a trait like <code>ClearsFilters</code> with those methods above to reuse the logic.
     </x-alert>
 
-    <x-anchor title="Table CSS" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Table CSS" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can apply CSS on the table headers and make it responsive just like that. Check it at mobile size.
@@ -238,9 +238,10 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <p>You can even decorate rows and cells with custom CSS, in addition to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for more.</p>
+    <p>You can even decorate rows and cells with custom CSS, in addition to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for
+        more.</p>
 
-    <x-anchor title="Header component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Header component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Header docs" link="/docs/components/header" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -256,7 +257,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Toast component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Toast component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Toast docs" link="/docs/components/toast" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -277,7 +278,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Drawer component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Drawer component" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Drawer docs" link="/docs/components/drawer" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
@@ -351,14 +352,15 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Challenge" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Challenge" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-button label="Button docs" link="/docs/components/button" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
 
     <img src="/bootcamp/03-d.png" class="rounded-lg border shadow-xl p-3 my-10" />
 
     <p>
-        If you are using a drawer you will probably have a few more filter options. In order to have a better UX it would be nice to display how many filters the user have selected.
+        If you are using a drawer you will probably have a few more filter options. In order to have a better UX it would be nice to display how many filters the user have
+        selected.
     </p>
 
     <p>

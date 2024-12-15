@@ -44,7 +44,7 @@ class extends Component {
         If you need to nicely display images see <a href="/docs/components/image-gallery" wire:navigate>Image Gallery</a> component.
     </x-alert>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     {{--@formatter:off--}}
     <x-code>
@@ -64,7 +64,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         First, add <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> and
@@ -108,7 +108,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         The following example considers that you named it as <code>library</code> and you are <strong>editing an existing user</strong>.
@@ -160,13 +160,13 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
-    <x-anchor title="S3 storage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="S3 storage" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Make sure to proper configure <strong>CDN CORS</strong> on your S3 provider, by listing your local and production environment addresses. Otherwise, cropper won't work.
     </p>
 
-    <x-anchor title="Sync options" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Sync options" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         If you are using default variable names described on "Setup" and "Example" topics above, <strong>you are good to go</strong>.
@@ -189,7 +189,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Labels" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         Here are all default labels.
@@ -209,7 +209,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Cropper settings" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Cropper settings" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
         You can set or override any <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
