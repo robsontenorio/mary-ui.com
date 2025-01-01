@@ -559,6 +559,24 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Note about slots" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        On next sections you will see the special <code>&#x40;scope</code> directive.
+        If you are using Livewire components inside that, you need to generate a random ID for each render, otherwise it will fail because the way Livewire works.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render>
+        @verbatim('docs')
+            @scope('anything', $something)
+                {{-- This is PHP function to generate random ids  --}}
+                <livewire:my-component :key="uniqid()" />
+            @endscope
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
 
     <p>

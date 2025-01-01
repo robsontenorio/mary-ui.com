@@ -28,7 +28,7 @@ class extends Component {
     </p>
 
     <p>
-        If you are enjoying maryUI <a href="https://github.com/robsontenorio/mary">give it a start</a> on GitHub and <a href="https://github.com/sponsors/robsontenorio">sponsor
+        If you are enjoying maryUI <a href="https://github.com/robsontenorio/mary">give it a star</a> on GitHub and <a href="https://github.com/sponsors/robsontenorio">sponsor
             it</a>.
     </p>
 
