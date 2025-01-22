@@ -101,4 +101,27 @@ class extends Component {
             <x-button label="Open " @click="$wire.myModal4 = true" />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Native Dialog Behavior" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        When passing the <code>id</code> attribute to the component, it is necessary to use it in the same way you would
+        with the <code>&lt;dialog&gt;</code> element.
+    </p>
+
+    <br>
+
+    <x-code class="flex gap-5">
+        @verbatim('docs')
+            <x-modal id="my_modal_1">
+                Hello!
+                <x-slot:actions>
+                    <x-button label="Cancel" onclick="my_modal_1.close()" />
+                </x-slot:actions>
+            </x-modal>
+
+            <x-button label="Open " onclick="my_modal_1.showModal()" />
+        @endverbatim
+    </x-code>
+    
 </div>
