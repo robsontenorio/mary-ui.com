@@ -183,7 +183,7 @@ class extends Component {
             <x-table
                 :headers="$headers"
                 :rows="$users"
-                :link="route('users.show', ['username' => ['username'], 'id' => ['id']])"
+                :link="route('users.show', ['username' => ['username'], 'id' => '[id]'])"
             />
         @endverbatim
     </x-code>
