@@ -1,4 +1,4 @@
-FROM robsontenorio/laravel:3.0 as base
+FROM robsontenorio/laravel:3.5 as base
 COPY --chown=appuser:appuser . .
 
 FROM base as local
