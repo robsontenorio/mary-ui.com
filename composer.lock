@@ -4230,16 +4230,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "1.41.6",
+            "version": "1.41.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "557f5ebcd90fd21762b8e702647c78f468d3f98d"
+                "reference": "364708bbed8a954bb9072957cc7cbcd8b3301c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/557f5ebcd90fd21762b8e702647c78f468d3f98d",
-                "reference": "557f5ebcd90fd21762b8e702647c78f468d3f98d",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/364708bbed8a954bb9072957cc7cbcd8b3301c09",
+                "reference": "364708bbed8a954bb9072957cc7cbcd8b3301c09",
                 "shasum": ""
             },
             "require": {
@@ -4305,7 +4305,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/1.41.6"
+                "source": "https://github.com/robsontenorio/mary/tree/1.41.8"
             },
             "funding": [
                 {
@@ -4313,7 +4313,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-03T14:54:19+00:00"
+            "time": "2025-02-03T22:09:17+00:00"
         },
         {
             "name": "symfony/clock",
