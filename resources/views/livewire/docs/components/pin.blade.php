@@ -46,19 +46,13 @@ class extends Component {
 
     <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
 
-    <p>
-        The <code>hide</code> property allows you not to show what you are typing.<br>
-        You can use the <code>hideType</code> property to choose the type of icon that hides your code. Available Styles:
-        <ul>
-            <li>circle</li>
-            <li>disc</li>
-            <li>square</li>
-        </ul>
-    </p>
+    <p>You can use any compatible <code>text-secure</code> HTML symbol.</p>
 
-    <x-code>
+    <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-pin wire:model="pin2" size="4" numeric hide hideType="disc"/>
+            <x-pin wire:model="pin1" size="3" hide />
+            <x-pin wire:model="pin1" size="3" hide hide-type="circle" />
+            <x-pin wire:model="pin1" size="3" hide hide-type="square" />
         @endverbatim
     </x-code>
 
