@@ -125,6 +125,17 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Icon Classes" size="text-2xl" class="mt-10 mb-5" />
+
+    <x-code>
+        @verbatim('docs')
+            <x-dropdown label="Settings" class="btn-outline">
+                <x-menu-item title="Custom Icon Classes" icon="bi.bell-fill" icon-classes="w-9 h-9 text-blue-600"/>
+                <x-menu-item title="Custom Icon Classes" icon="bi.bell-fill" />
+            </x-dropdown>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="No anchor" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
