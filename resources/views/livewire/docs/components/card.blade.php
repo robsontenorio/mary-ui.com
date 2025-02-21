@@ -69,4 +69,19 @@ class extends Component {
         @endverbatim
     </x-code>
 
+
+    <x-anchor title="SEO headings" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        This feature allows you to decide which <code>h</code> HTML tags to use to improve SEO
+    </p>
+
+    <x-code class="grid lg:grid-cols-2 gap-8 bg-base-200 ">
+        @verbatim('docs')
+            <x-card titleSEO="h1" title="Your stats" subtitleSEO="h2" subtitle="Always triggers" separator>
+                <x-button label="Save" wire:click="save" />
+            </x-card>
+        @endverbatim
+    </x-code>
+
 </div>
