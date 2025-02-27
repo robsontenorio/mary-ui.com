@@ -23,21 +23,6 @@ class extends Component {
         toggle.
     </x-alert>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
-
-    <p>
-        Enable native Tailwind dark mode support on <code>tailwind.config.js</code>.
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="javascript">
-        export default {
-            ...
-            darkMode: 'class', // [tl! highlight]
-        }
-    </x-code>
-    {{--@formatter:on--}}
-
     <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="flex gap-5 items-center">
@@ -90,33 +75,36 @@ class extends Component {
 
     <x-anchor title="Custom theme toggle" size="text-2xl" class="mt-10 !mb-5" />
 
+    <x-alert icon="o-light-bulb">
+        It is not expected to have more than one <strong>x-theme-toggle</strong> on the same page. Make sure to <strong>refresh the page</strong> while toying around with the theme
+        toggle. Then, click on the theme toggle from the main navbar of this docs to back to default "light" and "dark" themes.
+    </x-alert>
+
     <p>
         By default, this component uses the standard "light" and "dark" themes shipped with <strong>daisyUI</strong>. But, you can customize them by passing the theme names.
     </p>
 
     <p>
-        First, you need to set this additional themes at <code>tailwind.config.js</code> as described on <a href="https://daisyui.com/docs/themes" target="_blank">daisyUI docs</a>.
+        First, you need to set this additional themes at <code>app.css</code> as described on <a href="https://daisyui.com/docs/themes" target="_blank">daisyUI docs</a>.
     </p>
 
     {{--@formatter:off--}}
     <x-code no-render language="javascript">
         @verbatim('docs')
-            daisyui: {
-                themes: ["light", "dark", "aqua", "cupcake"],
-            },
+            @plugin "daisyui" {
+                themes: light --default, dark --prefersdark, retro, aqua;
+            }
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <p>
+        Then, set the theme names on <code>x-theme-toggle</code> component.
+    </p>
 
     <x-code>
         @verbatim('docs')
             <x-theme-toggle darkTheme="aqua" lightTheme="retro" />
         @endverbatim
     </x-code>
-
-    <x-alert icon="o-light-bulb">
-        It is not expected to have more than one <strong>x-theme-toggle</strong> on the same page. Make sure to <strong>refresh the page</strong> while toying around with the theme
-        toggle. Then, click on the theme toggle from the main navbar of this docs to back to default "light" and "dark" themes.
-    </x-alert>
-
 </div>

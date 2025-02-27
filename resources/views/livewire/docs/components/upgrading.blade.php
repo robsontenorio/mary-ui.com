@@ -9,16 +9,40 @@ new #[Title('Upgrading')] class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to v2" />
 
+    <x-anchor title="maryUI v2" size="text-2xl" class="mt-10 !mb-5" />
+
     <p>
-        maryUI v2 has been updated to use <b>daisyUI v5</b> and <b>Tailwind v4</b>.
-        The following migration guide shows the new Tailwind feature that allows to configure it without the need of a <code>tailwind.config.js</code> file.
+        The most noticeable change in maryUI v2 is the look and feel, because it <b>follows daisyUI`s</b> design system and its default theme.
+        Please, read the changelog ahead for more details.
     </p>
 
-    <x-alert icon="o-light-bulb" class="bg-warning/10 mb-8">
-        There are some notable changes in Tailwind and daisyUI <b>you should be aware</b>. Please, refer to its own changelogs for more information..
-    </x-alert>
+    <x-anchor title="daisyUI v5" size="text-2xl" class="mt-10 !mb-5" />
+    <p>
+        In v5, <b>daisyUI has changed the default theme</b> to a more modern and clean look. Remember you can always change the theme, tweak
+        themes variables or even override it with Tailwind, once maryUI does not ship with any custom CSS classes.
+    </p>
+    <p>
+        Please, refer to its own changelog for more information.
+    </p>
 
-    <hr />
+    <x-anchor title="Tailwind v4" size="text-2xl" class="mt-10 !mb-5" />
+
+    <p>
+        There are some notable changes in Tailwind <b>you should be aware</b>. Please, refer to its own changelog for more information.
+    </p>
+
+    <p>
+        The following migration guide shows the new Tailwind feature that allows to configure it without the need of a <code>tailwind.config.js</code> file, in favor of <code>app.css</code>
+        approach.
+    </p>
+
+    <x-anchor title="Upgrade it" size="text-2xl" class="mt-10 !mb-5" />
+
+    <p>Upgrade to Laravel 12.</p>
+
+    <x-code no-render language="bash">
+        # Please, see Laravel 12 upgrade guide.
+    </x-code>
 
     <p>Install maryUI v2.</p>
 
@@ -38,8 +62,8 @@ new #[Title('Upgrading')] class extends Component {
             # Remove unnecessary dependencies from your `package.json`
             yarn remove autoprefixer postcss
 
-            # Add new dependencies
-            yarn add -D daisyui@next tailwindcss@next @tailwindcss/vite@next
+            # Update and add new dependencies
+            yarn add --dev daisyui tailwindcss @tailwindcss/vite
         @endverbatim
     </x-code>
 
@@ -74,16 +98,29 @@ new #[Title('Upgrading')] class extends Component {
             @import "tailwindcss";      <!-- [tl! add] -->
             @plugin "daisyui";          <!-- [tl! add] -->
 
-            @source "../views/**/**/*.blade.php";       <!-- [tl! add] -->
-            @source "../../app/**/**/*.php";            <!-- [tl! add] -->
-            @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";     <!-- [tl! add] -->
-            @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';    <!-- [tl! add] -->
+            // For maryUI
+            @source "../../app/**/**/*.php"; <!-- [tl! add] -->
+            @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php"; <!-- [tl! add] -->
+
+            // Laravel 12+ defaults
+            @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php'; <!-- [tl! add] -->
+            @source '../../storage/framework/views/*.php'; <!-- [tl! add] -->
+            @source "../**/*.blade.php"; <!-- [tl! add] -->
+            @source "../**/*.js"; <!-- [tl! add] -->
+            @source "../**/*.vue"; <!-- [tl! add] -->
 
             // Your styles goes here ...
+            // ...
         @endverbatim
     </x-code>
 
-    <hr />
+    <p>Make sure to clear the view cache.</p>
+
+    <x-code no-render language="bash">
+        php artisan view:clear
+    </x-code>
+
+    <hr class="border-base-300" />
 
     <x-anchor title="Changelog" size="text-2xl" class="mt-10 !mb-5" />
 
@@ -162,7 +199,7 @@ new #[Title('Upgrading')] class extends Component {
     {{--        composer require livewire/livewire--}}
     {{--    </x-code>--}}
 
-    <x-anchor title="Recent releases" size="text-2xl" class="mt-10 !mb-5" />
+    {{--    <x-anchor title="Recent releases" size="text-2xl" class="mt-10 !mb-5" />--}}
 
-    <livewire:releases lazy />
+    {{--    <livewire:releases lazy />--}}
 </div>

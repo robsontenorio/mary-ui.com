@@ -25,9 +25,9 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-header title="Personal address" subtitle="Your home address" separator />
+            <x-header title="Personal address" subtitle="Default with separator" separator />
 
-            <x-header title="Personal address" subtitle="Your home address" size="text-xl" separator />
+            <x-header title="Personal address" subtitle="With custom size" size="text-xl" separator />
 
             <x-header title="With Anchor" subtitle="Click on title to get anchor link" with-anchor />
 

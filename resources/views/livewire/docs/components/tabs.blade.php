@@ -49,7 +49,7 @@ class extends Component {
                 <x-tab name="users-tab">
                     <x-slot:label>  {{-- [tl! highlight:3] --}}
                         Users
-                        <x-badge value="3" class="badge-primary" />
+                        <x-badge value="3" class="badge-primary badge-sm" />
                     </x-slot:label>
 
                     <div>Users</div>

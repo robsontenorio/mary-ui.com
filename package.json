@@ -6,10 +6,10 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.0.0-alpha.34",
-        "daisyui": "^5.0.0-alpha.38",
-        "laravel-vite-plugin": "^1.0.6",
-        "tailwindcss": "^4.0.0-alpha.34",
-        "vite": "^5.4.11"
+        "@tailwindcss/vite": "^4.0.9",
+        "daisyui": "^5.0.0-beta.9",
+        "laravel-vite-plugin": "^1.2.0",
+        "tailwindcss": "^4.0.9",
+        "vite": "^6.2.0"
     }
 }

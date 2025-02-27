@@ -67,7 +67,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-steps wire:model="step" class="border my-5 p-5">
+            <x-steps wire:model="step" class="border-t mt-5 py-5">
                 <x-step step="1" text="Register">
                     Register step
                 </x-step>

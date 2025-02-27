@@ -21,9 +21,9 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            <x-kbd class="kbd-sm">K</x-kbd>
-            <x-kbd>b</x-kbd>
-            <x-kbd class="kbd-lg">d</x-kbd>
+            <x-kbd>A</x-kbd>
+            <x-kbd class="kbd-lg">B</x-kbd>
+            <x-kbd class="kbd-xl">C</x-kbd>
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
@@ -31,7 +31,7 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            Press <x-kbd>F</x-kbd> to pay respects.
+            Press <x-kbd>⌘</x-kbd> <x-kbd>P</x-kbd> to pay.
         @endverbatim
     </x-code>
     {{--@formatter:on--}}

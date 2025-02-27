@@ -95,11 +95,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-primary/5 text-center p-2 text-sm dark:bg-base-300">
-        <x-icon name="o-sparkles" class="h-4 w-4" />
-        maryUI 2 is here!
-        <a href="/docs/upgrading" class="underline font-black">Upgrade &rarr;</a>
-    </div>
+    {{--    <div class="bg-primary/5 text-center p-2 text-sm dark:bg-base-300">--}}
+    {{--        <x-icon name="o-sparkles" class="h-4 w-4" />--}}
+    {{--        maryUI 2 is here!--}}
+    {{--        <a href="/docs/upgrading" class="underline font-black">Upgrade &rarr;</a>--}}
+    {{--    </div>--}}
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">

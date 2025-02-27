@@ -25,7 +25,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-collapse>
+            <x-collapse separator>
                 <x-slot:heading>
                     Hello
                 </x-slot:heading>

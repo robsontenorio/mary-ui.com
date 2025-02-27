@@ -18,10 +18,9 @@ class extends Component {
 
     <x-code class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
-            @php
-                $user = App\Models\User::first();
-            @endphp
-
+            @php                                         // [tl! .docs-hide]
+                $user = App\Models\User::first();        // [tl! .docs-hide]
+            @endphp                                     <!-- [tl! .docs-hide] -->
             <x-avatar :image="$user->avatar" />
 
             {{-- Manipulate avatar imagem with CSS classes --}}
@@ -61,8 +60,8 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <hr class="my-10" />
-    <x-anchor title="API" size="text-2xl" class="mt-10 !mb-5" />
-    <x-api-generator :class-name="Avatar::class" />
-    <div class="mb-64"></div>
+    {{--    <hr class="my-10" />--}}
+    {{--    <x-anchor title="API" size="text-2xl" class="mt-10 !mb-5" />--}}
+    {{--    <x-api-generator :class-name="Avatar::class" />--}}
+    {{--    <div class="mb-64"></div>--}}
 </div>

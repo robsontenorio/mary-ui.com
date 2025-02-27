@@ -16,12 +16,12 @@ class extends Component {
     <x-anchor title="Requirements" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
-        Make sure you a have a <strong>fresh Laravel 11</strong> project up and running on your browser, <strong>without any starter kit</strong>.
+        Make sure you a have a <strong>fresh Laravel 12+</strong> project up and running on your browser, <strong>without any starter kit</strong>.
         Yes, you can use maryUI with Jetstream/Breeze on your own projects, but let's keep things simple for now and start from the ground.
     </p>
 
     <ul>
-        <li>Fresh Laravel 11 project up and running.</li>
+        <li>Fresh Laravel 12+ project up and running.</li>
         <li>No starter kit.</li>
         <li>SQLite database.</li>
     </ul>

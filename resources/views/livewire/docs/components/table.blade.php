@@ -427,19 +427,6 @@ class extends Component {
     </p>
 
     <p>
-        As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="javascript">
-        content: [
-            // Add this [tl! highlight .animate-bounce]
-            './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        ],
-    </x-code>
-    {{--@formatter:on--}}
-
-    <p>
         Then, use <code>WithPagination</code> trait from Livewire itself, as described on
         <a href="https://livewire.laravel.com/docs/pagination#basic-usage" target="_blank">Livewire docs</a>.
     </p>

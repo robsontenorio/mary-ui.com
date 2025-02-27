@@ -24,6 +24,8 @@ class extends Component {
             <x-badge value="Hello" class="badge-primary badge-soft " />
 
             <x-badge value="Hello" class="badge-warning" />
+
+            <x-badge value="Hello" class="badge-error badge-dash" />
         @endverbatim
     </x-code>
 
@@ -33,16 +35,12 @@ class extends Component {
         @verbatim('docs')
             <x-button>
                 Inbox
-                <x-badge value="+99" class="badge-neutral" />
+                <x-badge value="+99" class="badge-neutral badge-sm" />
             </x-button>
 
             <x-button class="indicator">
                 Inbox
-                <x-badge value="7" class="badge-secondary indicator-item" />
-            </x-button>
-
-            <x-button icon="o-bell" class="btn-circle relative">
-                <x-badge value="2" class="badge-error absolute -right-2 -top-2" />
+                <x-badge value="7" class="badge-secondary badge-sm indicator-item" />
             </x-button>
         @endverbatim
     </x-code>

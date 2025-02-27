@@ -209,7 +209,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Laravel 11 solution.
+        Example of solution.
     </x-alert>
 
     {{--@formatter:off--}}

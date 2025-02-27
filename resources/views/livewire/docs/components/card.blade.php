@@ -27,8 +27,8 @@ class extends Component {
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
         @verbatim('docs')
-            <x-card title="Your stats" subtitle="Our findings about you" shadow separator>
-                I have title, subtitle, separator and shadow.
+            <x-card title="Your stats" subtitle="Our findings about you" separator class="shadow-sm">
+                I have title, subtitle and separator.
             </x-card>
 
             <x-card title="Nice things">

@@ -31,14 +31,17 @@ class extends Component {
 
     <x-code class="flex flex-wrap gap-3 items-baseline">
         @verbatim('docs')
+            {{--  DEFAULT --}}
+            <x-button label="Hi!" />
+
             {{--  COLOR AND STYLE --}}
-            <x-button label="Hi!" class="btn-outline" />
+            <x-button label="Hi!" class="btn-primary" />
             <x-button label="How" class="btn-warning" />
             <x-button label="Are" class="btn-success" />
-            <x-button label="You?" class="btn-error btn-sm" />
+            <x-button label="You?" class="btn-error btn-sm btn-soft" />
 
             {{-- SLOT--}}
-            <x-button class="btn-primary">
+            <x-button class="btn-primary btn-dash">
                 With default slot 😃
             </x-button>
 
@@ -49,6 +52,7 @@ class extends Component {
             {{-- SQUARE --}}
             <x-button icon="o-user" class="btn-circle btn-ghost" />
             <x-button icon="o-user" class="btn-square" />
+
         @endverbatim
     </x-code>
 
@@ -59,9 +63,9 @@ class extends Component {
 
     <x-code class="flex flex-wrap gap-3">
         @verbatim('docs')
-            <x-button label="Hello" icon-right="o-x-circle" />
+            <x-button label="Hello" icon="o-check" />
 
-            <x-button label="There" icon="o-check" />
+            <x-button label="There" icon-right="o-x-circle" />
         @endverbatim
     </x-code>
 
@@ -132,7 +136,7 @@ class extends Component {
             <x-button label="Self target" wire:click="save" icon-right="o-lock-closed" spinner />
 
             <x-form wire:submit="save2">
-                <x-input label="Name" inline />
+                <x-input placeholder="Name" />
                 <x-slot:actions>
                     {{-- No target spinner --}}
                     <x-button label="No target" />

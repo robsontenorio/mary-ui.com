@@ -40,7 +40,7 @@ class extends Component {
 
             <x-rating wire:model="ranking3" class="!mask-diamond bg-accent" />
 
-            <x-rating wire:model="ranking4" class="!mask-heart bg-secondary rating-lg" />
+            <x-rating wire:model="ranking4" class="!mask-heart bg-secondary rating-xl" />
 
         @endverbatim
     </x-code>
