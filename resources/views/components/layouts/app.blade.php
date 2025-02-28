@@ -130,7 +130,7 @@
 
     <x-main with-nav>
         <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
-            <x-menu activate-by-route class="mt-5 flex gap-3 w-full">
+            <x-menu activate-by-route class="mt-5 flex gap-3">
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />

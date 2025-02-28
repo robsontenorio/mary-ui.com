@@ -101,4 +101,16 @@ class extends Component {
             <x-button label="Open " @click="$wire.myModal4 = true" />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Disable focus trap" size="text-2xl" class="mt-10 mb-5" />
+
+    <p>
+        By default the focus trap is enabled, but you can disable it by adding the <code>without-trap-focus</code> attribute.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            <x-modal without-trap-focus ... />
+        @endverbatim
+    </x-code>
 </div>

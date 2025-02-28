@@ -59,7 +59,7 @@ class extends Component {
     <x-anchor title="Components" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
-        The maryUI components provide a great DX and you don't have to worry about maintaining the components by yourself.
+        The maryUI components provides a great DX and you don't have to worry about maintaining the components by yourself.
     </p>
 
     <p>

@@ -44,7 +44,19 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Events" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Security" size="text-2xl" class="mt-10 !mb-5" />
+
+    <p>You can use any compatible <code>text-secure</code> HTML symbol.</p>
+
+    <x-code class="grid gap-5">
+        @verbatim('docs')
+            <x-pin wire:model="pin1" size="3" hide />
+            <x-pin wire:model="pin1" size="3" hide hide-type="circle" />
+            <x-pin wire:model="pin1" size="3" hide hide-type="square" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
 
     <p>
         The <code>@completed</code> and <code>@incomplete</code> events are triggered respectively when the pin is completed or is incomplete.
