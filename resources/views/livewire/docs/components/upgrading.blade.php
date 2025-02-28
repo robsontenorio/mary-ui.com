@@ -18,17 +18,17 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="daisyUI v5" size="text-2xl" class="mt-10 !mb-5" />
     <p>
-        In v5, <b>daisyUI has changed the default theme</b> to a more modern and clean look. Remember you can always change the theme, tweak
+        In v5, <b>daisyUI has changed the default theme</b> to a more modern and clean look. Remember that you can always change the theme, tweak
         themes variables or even override it with Tailwind, once maryUI does not ship with any custom CSS classes.
     </p>
     <p>
-        Please, refer to its own changelog for more information.
+        Please, refer to its own release notes and changelog for more information.
     </p>
 
     <x-anchor title="Tailwind v4" size="text-2xl" class="mt-10 !mb-5" />
 
     <p>
-        There are some notable changes in Tailwind <b>you should be aware</b>. Please, refer to its own changelog for more information.
+        There are some notable changes in Tailwind <b>you should be aware</b>. Please, refer to its own release notes and changelog for more information.
     </p>
 
     <p>
@@ -41,7 +41,7 @@ new #[Title('Upgrading')] class extends Component {
     <p>Upgrade to Laravel 12.</p>
 
     <x-code no-render language="bash">
-        # Please, see Laravel 12 upgrade guide.
+        # Please, see the Laravel 12 upgrade guide.
     </x-code>
 
     <p>Install maryUI v2.</p>
@@ -91,26 +91,28 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-code no-render language="blade">
         @verbatim('docs')
+            /* Remove these and any other `@tailwind` directives that you have it */
             @tailwind base;             <!-- [tl! remove] -->
             @tailwind components;       <!-- [tl! remove] -->
             @tailwind utilities;        <!-- [tl! remove] -->
 
+            /* Tailwind v4 way */
             @import "tailwindcss";      <!-- [tl! add] -->
             @plugin "daisyui";          <!-- [tl! add] -->
 
-            // For maryUI
-            @source "../../app/**/**/*.php"; <!-- [tl! add] -->
-            @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php"; <!-- [tl! add] -->
-
-            // Laravel 12+ defaults
+            /* Laravel 12 defaults */
             @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php'; <!-- [tl! add] -->
             @source '../../storage/framework/views/*.php'; <!-- [tl! add] -->
             @source "../**/*.blade.php"; <!-- [tl! add] -->
             @source "../**/*.js"; <!-- [tl! add] -->
             @source "../**/*.vue"; <!-- [tl! add] -->
 
-            // Your styles goes here ...
-            // ...
+            /* For maryUI */
+            @source "../../app/**/**/*.php"; <!-- [tl! add] -->
+            @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php"; <!-- [tl! add] -->
+
+            /* Your styles goes here ... */
+            /* ... */
         @endverbatim
     </x-code>
 
@@ -124,17 +126,38 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="Changelog" size="text-2xl" class="mt-10 !mb-5" />
 
-    <x-anchor title="All input components" size="text-lg" class="!mb-5" />
+    <x-anchor title="Themes" size="text-lg" class="!mb-5 mt-10" />
+    <p>
+        Remember that daisyUI has changed the default look and feel of many components.
+        For more info on how to customize themes and variables, check daisyUI <a href="https://daisyui.com/docs/themes/" target="_blank">theme docs</a>.
+    </p>
+
+    <p>If you use <b>pre-built</b> daisyUI themes, that is the Tailwind v4 way to use it through plugins.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="blade">
+        @verbatim('docs')
+            @plugin "daisyui"       <!-- [tl! remove] -->
+
+            @plugin "daisyui" {     <!-- [tl! add] -->
+                themes: light --default, dark --prefersdark, retro, aqua;  <!-- [tl! add] -->
+            }  <!-- [tl! add] -->
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="All input components" size="text-lg" class="!mb-5 mt-10" />
 
     <p>
         The primary style was removed from all input components.
-        If you want to make it primary, you should add the proper <code>xxxxx-primary</code> class, depending on the component.
+        If you want to make it looks like as before, you should add the respective <code>primary</code> class, depending on the component.
     </p>
 
     {{--@formatter:off--}}
     <x-code class="grid lg:grid-cols-2 gap-16">
     @verbatim('docs')
-        <div class="grid gap-5 border border-dashed border-base-300 rounded p-5"> <!-- [tl! .docs-hide] -->
+        <div class="grid gap-5 bg-base-200/80 rounded p-8"> <!-- [tl! .docs-hide] -->
         {{-- Default --}}
         <x-input label="Input" />
         <x-select label="Select" />
@@ -142,9 +165,9 @@ new #[Title('Upgrading')] class extends Component {
         <x-checkbox label="Checkbox" />
         // And so on for other components ...
         </div>  <!-- [tl! .docs-hide] -->
-        <div class="grid gap-5 border border-dashed border-base-300 rounded p-5"> <!-- [tl! .docs-hide] -->
+        <div class="grid gap-5 bg-base-200/80 rounded p-8"> <!-- [tl! .docs-hide] -->
 
-        {{-- Make it primary --}}
+        {{-- If you like the primary style --}}
         <x-input label="Input" class="input-primary" />
         <x-select label="Select" class="select-primary" />
         <x-datetime label="Date" class="input-primary" />

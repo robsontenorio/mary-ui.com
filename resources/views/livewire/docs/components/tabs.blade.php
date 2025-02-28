@@ -95,9 +95,9 @@ class extends Component {
         @verbatim('docs')
             <x-tabs
                 wire:model="selectedTab"
-                active-class="bg-primary rounded text-white"
+                active-class="bg-primary rounded !text-white"
                 label-class="font-semibold"
-                label-div-class="bg-primary/5 p-2 rounded"
+                label-div-class="bg-primary/5 rounded"
             >
                 <x-tab name="users-tab" label="Users">
                     <div>All</div>
