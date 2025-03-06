@@ -23,6 +23,29 @@ class extends Component {
         toggle.
     </x-alert>
 
+    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
+
+    <p>
+        Make sure your <code>app.css</code> has this settings.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code language="sass" no-render>
+        @verbatim('docs')
+            /* Tailwind */
+            @import "tailwindcss";
+
+            /* daisyUI */
+            @plugin "daisyui" {
+                themes: light --default, dark --prefersdark;
+            }
+
+            /* Dark theme variant support */
+            @custom-variant dark (&:where(.dark, .dark *));
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
     <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="flex gap-5 items-center">
@@ -89,7 +112,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="javascript">
+    <x-code no-render language="sass">
         @verbatim('docs')
             @plugin "daisyui" {
                 themes: light --default, dark --prefersdark, retro, aqua;

@@ -23,7 +23,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-dashed">
+            <x-menu class="border border-base-300">
                 <x-menu-item title="Home" icon="o-envelope" />
 
                 <x-menu-item title="Messages" icon="o-paper-airplane" badge="78+" badge-classes="float-right" />
@@ -45,7 +45,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-dashed w-64">
+            <x-menu class="border border-base-300 w-64">
                 <x-menu-item title="Hello" />
                 <x-menu-item title="There" />
 
@@ -72,7 +72,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-dashed w-64">
+            <x-menu class="border border-base-300 w-96">
                 <x-menu-sub title="Home" icon="o-home">
                     <x-menu-item title="Users" icon="o-user" />
                     <x-menu-item title="Folders" icon="o-folder" />
@@ -194,7 +194,7 @@ class extends Component {
             <x-menu class="border border-dashed">
                 <x-menu-item icon="o-chart-pie">
                     Charts
-                    <x-badge value="2" class="bg-warning" />
+                    <x-badge value="2" class="badge-soft badge-sm w-1 rounded-full" />
                     <x-icon name="o-heart" class="text-secondary" />
                 </x-menu-item>
             </x-menu>

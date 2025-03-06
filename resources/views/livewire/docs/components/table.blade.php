@@ -411,7 +411,7 @@ class extends Component {
             {{-- You will learn about custom slots on next sections --}}
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy">
                 @scope('cell_city', $user)
-                    <x-badge :value="$user->city->name" class="badge-primary" />
+                    <x-badge :value="$user->city->name" class="badge-primary badge-soft" />
                 @endscope
             </x-table>
 
@@ -469,20 +469,15 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="css">
-        /* Active page highlight */
+    <x-code no-render language="sass">
+        /** General button **/
+        .mary-table-pagination button {
+            @apply cursor-pointer
+        }
+
+        /** Active button **/
         .mary-table-pagination span[aria-current="page"] > span {
             @apply bg-primary text-base-100
-        }
-
-        /* For dark mode*/
-        .mary-table-pagination span[aria-disabled="true"] span {
-            @apply bg-inherit
-        }
-
-        /* For dark mode*/
-        .mary-table-pagination button {
-            @apply bg-base-100
         }
     </x-code>
     {{--@formatter:on--}}

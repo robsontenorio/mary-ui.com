@@ -4,6 +4,8 @@
     themes: light --default, dark --prefersdark, retro, aqua;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @source "../../app/**/**/*.php";
 @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -74,14 +76,9 @@ p {
     @apply bg-primary text-base-100
 }
 
-.mary-table-pagination span[aria-disabled="true"] span {
-    @apply bg-inherit
-}
-
 .mary-table-pagination button {
-    @apply bg-base-100
+    @apply cursor-pointer
 }
-
 
 /**
 * Image Library landing page demo

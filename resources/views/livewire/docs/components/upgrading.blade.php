@@ -19,7 +19,7 @@ new #[Title('Upgrading')] class extends Component {
     <x-anchor title="daisyUI v5" size="text-2xl" class="mt-10 !mb-5" />
     <p>
         In v5, <b>daisyUI has changed the default theme</b> to a more modern and clean look. Remember that you can always change the theme, tweak
-        themes variables or even override it with Tailwind, once maryUI does not ship with any custom CSS classes.
+        theme variables or even override it with Tailwind, once maryUI does not ship with any custom CSS classes.
     </p>
     <p>
         Please, refer to its own release notes and changelog for more information.
@@ -87,18 +87,27 @@ new #[Title('Upgrading')] class extends Component {
     </x-code>
     <!-- @formatter:on -->
 
-    Edit the top of your <code>app.css</code> file to look like this.
+    <p>Edit the top of your <code>app.css</code> file to look like this. Remember this is the <b>Tailwind v4 preferred setup</b>. Not daisyUI or maryUI.</p>
 
+    {{--@formatter:off--}}
     <x-code no-render language="blade">
         @verbatim('docs')
-            /* Remove these and any other `@tailwind` directives that you have it */
+            /* Remove these and any other `@tailwind` directives that if have it */
             @tailwind base;             <!-- [tl! remove] -->
             @tailwind components;       <!-- [tl! remove] -->
             @tailwind utilities;        <!-- [tl! remove] -->
+            ...        <!-- [tl! remove] -->
 
-            /* Tailwind v4 way */
+            /* Tailwind */
             @import "tailwindcss";      <!-- [tl! add] -->
-            @plugin "daisyui";          <!-- [tl! add] -->
+
+            /* daisyUI */
+            @plugin "daisyui" {         <!-- [tl! add] -->
+                themes: light --default, dark --prefersdark;  // Themes  <!-- [tl! add] -->
+            }   <!-- [tl! add] -->
+
+            /* Dark theme variant support */
+            @custom-variant dark (&:where(.dark, .dark *)); <!-- [tl! add] -->
 
             /* Laravel 12 defaults */
             @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php'; <!-- [tl! add] -->
@@ -115,11 +124,18 @@ new #[Title('Upgrading')] class extends Component {
             /* ... */
         @endverbatim
     </x-code>
+    {{--@formatter:on--}}
 
     <p>Make sure to clear the view cache.</p>
 
     <x-code no-render language="bash">
         php artisan view:clear
+    </x-code>
+
+    <p>Run it.</p>
+
+    <x-code no-render language="bash">
+        yarn dev
     </x-code>
 
     <hr class="border-base-300" />
@@ -136,13 +152,15 @@ new #[Title('Upgrading')] class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="blade">
+    <x-code no-render language="sass">
         @verbatim('docs')
-            @plugin "daisyui"       <!-- [tl! remove] -->
+            /* Example for additional `aqua` and `retro` themes. */
+            @plugin "daisyui" {
+                themes: light --default, dark --prefersdark, retro, aqua;
+            }
 
-            @plugin "daisyui" {     <!-- [tl! add] -->
-                themes: light --default, dark --prefersdark, retro, aqua;  <!-- [tl! add] -->
-            }  <!-- [tl! add] -->
+            /* Remeber to add the dark variant theme support */
+            @custom-variant dark (&:where(.dark, .dark *));
         @endverbatim
     </x-code>
     {{--@formatter:on--}}

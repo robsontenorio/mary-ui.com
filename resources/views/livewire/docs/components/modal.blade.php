@@ -94,7 +94,7 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-modal wire:model="myModal4" class="backdrop-blur" box-class="bg-red-50 p-10 w-64">
+            <x-modal wire:model="myModal4" class="backdrop-blur" box-class="bg-primary text-white p-10 w-64">
                 Hello!
             </x-modal>
 
