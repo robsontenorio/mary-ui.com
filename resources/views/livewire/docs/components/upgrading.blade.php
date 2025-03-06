@@ -42,6 +42,7 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-code no-render language="bash">
         # Please, see the Laravel 12 upgrade guide.
+        # It is a good time to upgrade Livewire as well
     </x-code>
 
     <p>Install maryUI v2.</p>
@@ -63,7 +64,7 @@ new #[Title('Upgrading')] class extends Component {
             yarn remove autoprefixer postcss
 
             # Update and add new dependencies
-            yarn add --dev daisyui tailwindcss @tailwindcss/vite
+            yarn add --dev daisyui tailwindcss @tailwindcss/vite laravel-vite-plugin vite
         @endverbatim
     </x-code>
 
@@ -181,7 +182,8 @@ new #[Title('Upgrading')] class extends Component {
         <x-select label="Select" />
         <x-datetime label="Date" />
         <x-checkbox label="Checkbox" />
-        // And so on for other components ...
+        <x-hr /> <!-- [tl! .docs-hide] -->
+        And so on  ...
         </div>  <!-- [tl! .docs-hide] -->
         <div class="grid gap-5 bg-base-200/80 rounded p-8"> <!-- [tl! .docs-hide] -->
 
@@ -190,9 +192,21 @@ new #[Title('Upgrading')] class extends Component {
         <x-select label="Select" class="select-primary" />
         <x-datetime label="Date" class="input-primary" />
         <x-checkbox label="Checkbox" class="checkbox-primary" />
-        // And so on for other components ...
+        <x-hr /> <!-- [tl! .docs-hide] -->
+        And so on  ...
         </div> <!-- [tl! .docs-hide] -->
     @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <p>If you previously have override the inputs <code>hint</code> and <code>error</code> classes, these are the new defaults from daisyUI.</p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="php">
+        @verbatim('docs')
+            public ?string $hintClass = 'fieldset-label',
+            public ?string $errorClass = 'text-error',
+        @endverbatim
     </x-code>
     {{--@formatter:on--}}
 
