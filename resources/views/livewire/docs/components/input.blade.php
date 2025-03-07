@@ -90,7 +90,7 @@ class extends Component {
 
     <x-code class="grid gap-8">
         @verbatim('docs')
-            <x-input label="Default money" wire:model="money1" prefix="USD" money inline />
+            <x-input label="Default money" wire:model="money1" prefix="USD" money />
 
             {{-- Notice that `locale` accepts any valid locale --}}
             <x-input
@@ -98,7 +98,6 @@ class extends Component {
                 wire:model="money2"
                 suffix="R$"
                 money
-                inline
                 locale="pt-BR" />
         @endverbatim
     </x-code>
@@ -110,18 +109,17 @@ class extends Component {
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]
             @endphp                                             <!-- [tl! .docs-hide] -->
-
             <x-input label="Prepend a select">
                 <x-slot:prepend>
-                    {{-- Add `rounded-e-none` class (RTL support) --}}
-                    <x-select icon="o-user" :options="$users" class="rounded-e-none bg-base-200" />
+                    {{-- Add `join-item` to all prepended elements --}}
+                    <x-select icon="o-user" :options="$users" class="join-item bg-base-200" />
                 </x-slot:prepend>
             </x-input>
 
             <x-input label="Append a button">
                 <x-slot:append>
-                    {{-- Add `rounded-s-none` class (RTL support) --}}
-                    <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
+                    {{-- Add `join-item` to all appended elements --}}
+                    <x-button label="I am a button" class="btn-primary join-item" />
                 </x-slot:append>
             </x-input>
         @endverbatim

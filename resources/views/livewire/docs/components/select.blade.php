@@ -115,12 +115,12 @@ class extends Component {
             @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select label="Slots"  :options="$users" single>
                 <x-slot:prepend>
-                    {{--  Add `rounded-e-none` (RTL support) --}}
-                    <x-button icon="o-trash" class="rounded-e-none" />
+                    {{-- Add `join-item` to all prepended elements --}}
+                    <x-button icon="o-trash" class="join-item" />
                 </x-slot:prepend>
                 <x-slot:append>
-                    {{--  Add `rounded-s-none` (RTL support) --}}
-                    <x-button label="Create" icon="o-plus" class="rounded-s-none btn-primary" />
+                    {{-- Add `join-item` to all appended elements --}}
+                    <x-button label="Create" icon="o-plus" class="join-item btn-primary" />
                 </x-slot:append>
             </x-select>
         @endverbatim
