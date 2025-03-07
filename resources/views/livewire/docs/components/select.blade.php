@@ -52,6 +52,7 @@ class extends Component {
 
             <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
 
+            <div class="mt-1"></div><!-- [tl! .docs-hide] -->
             <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline />
         @endverbatim
     </x-code>
