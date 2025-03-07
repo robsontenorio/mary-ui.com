@@ -34,10 +34,10 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-datetime label="My date" wire:model="myDate" icon="o-calendar" />
+            <x-datetime label="My date" wire:model="myDate" />
 
             {{-- Notice `type="datetime-local"` --}}
-            <x-datetime label="Date + Time" wire:model="myDate" icon="o-calendar" type="datetime-local" />
+            <x-datetime label="Date + Time" wire:model="myDate" type="datetime-local" />
 
             {{-- Notice `type="time"` --}}
             <x-datetime label="Time" wire:model="myDate" icon="o-calendar" type="time" />

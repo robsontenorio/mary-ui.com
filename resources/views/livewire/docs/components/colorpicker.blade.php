@@ -36,9 +36,9 @@ class extends Component {
         @verbatim('docs')
             <x-colorpicker wire:model="color1" />
 
-            <x-colorpicker wire:model="color2" label="Select a color" hint="Please, a nice color" icon="o-swatch" />
+            <x-colorpicker wire:model="color2" label="Select a color" hint="A nice color" icon="o-swatch" />
 
-            <x-colorpicker wire:model="color3" label="Select a color" inline required />
+            <x-colorpicker wire:model="color3" label="Select a color" inline />
         @endverbatim
     </x-code>
 </div>
