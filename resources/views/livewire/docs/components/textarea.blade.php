@@ -26,12 +26,12 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             <x-textarea
-                label="Bio"
+                label="Biography"
                 wire:model="bio"
                 placeholder="Your story ..."
                 hint="Max 1000 chars"
                 rows="5"
-                inline />
+            />
         @endverbatim
     </x-code>
 </div>
