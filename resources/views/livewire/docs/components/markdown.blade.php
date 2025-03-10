@@ -132,4 +132,35 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Dark mode" size="text-2xl" class="mt-10 !mb-5" />
+
+    <p>
+        By default, the EasyMDE does not support natively the dark mode. If you want to support dark mode, here is a example. Feel free to change it.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Please, make sure you have configured the dark mode through the <a href="/docs/components/theme-toggle">Theme Toggle</a> component.
+    </x-alert>
+
+    {{--@formatter:off--}}
+    <x-code language="css" no-render>
+        @verbatim('docs')
+        .EasyMDEContainer .CodeMirror {
+            @apply bg-base-100 text-base-content
+        }
+
+        .EasyMDEContainer .CodeMirror {
+            @apply bg-base-100 text-base-content
+        }
+
+        .EasyMDEContainer .CodeMirror-cursor {
+            @apply border border-b-base-100
+        }
+
+        .EasyMDEContainer .editor-toolbar > button:hover, .EasyMDEContainer .editor-toolbar > .active {
+            @apply bg-base-100 text-base-content
+        }
+        @endverbatim
+    </x-code>
+
 </div>

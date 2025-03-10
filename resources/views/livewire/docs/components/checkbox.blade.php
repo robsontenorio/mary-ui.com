@@ -33,13 +33,13 @@ class extends Component {
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-checkbox label="Left" wire:model="item1" hint="You agree with terms" />
-            <hr /><!-- [tl! .docs-hide] -->
+            <hr class="border-base-300" /><!-- [tl! .docs-hide] -->
 
-            <x-checkbox label="Right" wire:model="item2" right class="checkbox-primary" />
-            <hr /><!-- [tl! .docs-hide] -->
+            <x-checkbox label="Right" wire:model="item2" right />
+            <hr class="border-base-300" /><!-- [tl! .docs-hide] -->
 
-            <x-checkbox label="Right Tight" wire:model="item3" class="checkbox-warning" right tight />
-            <hr /><!-- [tl! .docs-hide] -->
+            <x-checkbox label="Tight" wire:model="item3" right tight />
+            <hr class="border-base-300" /><!-- [tl! .docs-hide] -->
 
             {{-- Notice Tailwind alignment class for long lines --}}
             <x-checkbox wire:model="item4" class="self-start">

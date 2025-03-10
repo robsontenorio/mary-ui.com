@@ -117,4 +117,14 @@ class extends Component {
             <x-editor wire:model="text2" :config="$config" />
         @endverbatim
     </x-code>
+
+    <x-anchor title="Dark mode" size="text-2xl" class="mt-10 !mb-5" />
+
+    <p>
+        Unfortunately, TinyMCE does not support dark mode toggle on the fly. But, if you refresh the page the editor will respect the user's preference.
+    </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Please, make sure you have configured the dark mode through the <a href="/docs/components/theme-toggle">Theme Toggle</a> component.
+    </x-alert>
 </div>

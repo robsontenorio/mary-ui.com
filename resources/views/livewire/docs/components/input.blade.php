@@ -24,6 +24,10 @@ class extends Component {
 
     <x-anchor title="Input" />
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Mostly features presented here also works for other input components.
+    </x-alert>
+
     <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
 
     <x-code class="grid gap-5">
@@ -33,10 +37,6 @@ class extends Component {
             <x-input label="Right icon" wire:model="address" icon-right="o-map-pin" />
 
             <x-input label="Name" wire:model="name" placeholder="Clearable field" clearable />
-
-            <x-input label="Primary" wire:model="name" class="input-primary" />
-
-            <x-input label="Warning" wire:model="name" class="input-warning" />
 
             <x-input label="Prefix & Suffix" wire:model="name" prefix="www" suffix=".com" />
         @endverbatim
@@ -56,7 +56,7 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-input label="Inline label" inline />
+            <x-input label="Inline label" placeholder="Type here" inline />
         @endverbatim
     </x-code>
 

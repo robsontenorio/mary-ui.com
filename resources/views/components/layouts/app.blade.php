@@ -95,11 +95,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-primary/5 text-center p-2 text-sm dark:bg-base-300">--}}
-    {{--        <x-icon name="o-sparkles" class="h-4 w-4" />--}}
-    {{--        maryUI 2 is here!--}}
-    {{--        <a href="/docs/upgrading" class="underline font-black">Upgrade &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-warning/10 text-center p-2 text-sm border border-b-base-300 ">
+        <x-icon name="o-sparkles" class="h-4 w-4" />
+        maryUI 2 beta1 available!
+        <a href="/docs/upgrading" class="underline font-black">Try it &rarr;</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -129,7 +129,7 @@
     </x-nav>
 
     <x-main with-nav>
-        <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
+        <x-slot:sidebar drawer="main-drawer" class="bg-base-100" collapsible>
             <x-menu activate-by-route class="mt-5 flex gap-3">
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
@@ -137,8 +137,8 @@
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
                     <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
-                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
+                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">
