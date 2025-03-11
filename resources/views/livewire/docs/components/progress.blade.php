@@ -28,11 +28,11 @@ class extends Component {
     <x-code class="flex gap-8">
         @verbatim('docs')
             <x-loading />
-            <x-loading class="text-primary loading-lg" />
+            <x-loading class="progress-primary" />
             <x-loading class="loading-dots" />
             <x-loading class="loading-bars" />
             <x-loading class="loading-ring" />
-            <x-loading class="loading-infinity" />
+            <x-loading class="loading-infinity loading-xs" />
         @endverbatim
     </x-code>
 

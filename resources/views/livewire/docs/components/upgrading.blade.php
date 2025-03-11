@@ -11,12 +11,12 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="Why" size="text-2xl" class="mt-10 !mb-5" />
 
-    <p>If you wanna to use Laravel 12+ you should upgrade.</p>
+    <p>If you want to use <b>Laravel 12+</b> you should upgrade.</p>
 
     <ul>
         <li><b>Tailwind 4</b> brings a lot of new features and improvements.</li>
-        <li><b>Laravel 12</b> uses the new CSS setup from Tailwind 4.</li>
-        <li><b>daisyUI 5</b> uses all the new Tailwind 4 features.</li>
+        <li><b>Laravel 12</b> default skeleton uses the new CSS setup from <b>Tailwind 4.</b></li>
+        <li><b>daisyUI 5</b> uses a lot of <b>Tailwind 4</b> features.</li>
         <li><b>maryUI 2</b> is here to stick to the new defaults.</li>
     </ul>
 
@@ -24,19 +24,6 @@ new #[Title('Upgrading')] class extends Component {
     <p>
         There are some notable changes in Tailwind and daisyUI <b>you should be aware</b>. Please, refer to its own release notes and changelog for more information.
     </p>
-
-    <x-anchor title="Default theme" size="text-2xl" class="mt-10 !mb-5" />
-
-    <p>The most noticeable change in maryUI 2 is the appearance, because we follow daisyUI`s design system. And it has changed to a more modern look and feel.</p>
-
-    <p>
-        Remember that you can always change the theme, tweak theme variables or even override it with Tailwind,
-        once maryUI does not ship with any custom CSS classes.
-    </p>
-
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Avoid deeper CSS tweaks and use theme variables instead.
-    </x-alert>
 
     <x-anchor title="Upgrade it" size="text-2xl" class="mt-10 !mb-5" />
 
@@ -138,23 +125,38 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="Changelog" size="text-2xl" class="mt-10 !mb-5" />
 
-    <x-anchor title="Themes" size="text-lg" class="!mb-5 mt-10" />
+    <x-anchor title="Appearance" size="text-lg" class="!mb-5 mt-10" />
+
+    <p>The most noticeable change in maryUI 2 is the appearance, because we follow daisyUI`s design system. And it has changed to a more modern look and feel.</p>
 
     <p>
-        Remember that daisyUI has changed the default look and feel of many components.
+        Remember that you can always change the theme, tweak theme variables or even override it with Tailwind,
+        once maryUI does not ship with any custom CSS classes.
         For more info on how to customize themes and variables, check daisyUI <a href="https://daisyui.com/docs/themes/" target="_blank">theme docs</a>.
     </p>
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Avoid deeper CSS tweaks and use theme variables instead.
+    </x-alert>
+
+    <x-anchor title="Small CSS changes" size="text-lg" class="!mb-5 mt-10" />
+
     <p>
-        If you use <b>pre-built</b> daisyUI themes, that is the Tailwind 4 way to use it through plugins.
+        Some components classes were internally rearranged to better control of spacing and positioning. Consider to revisit the docs examples and compare with your current
+        implementation.
+    </p>
+
+    <x-anchor title="Theme Toggle" size="text-lg" class="!mb-5 mt-10" />
+    <p>
+        This is the Tailwind 4 way to use themes and toggle the dark mode. See <a href="/docs/components/theme-toggle">Theme Toggle</a> for more info.
     </p>
 
     {{--@formatter:off--}}
     <x-code no-render language="sass">
         @verbatim('docs')
-            /* Example for additional `aqua` and `retro` themes. */
+            /* daisyUI */
             @plugin "daisyui" {
-                themes: light --default, dark --prefersdark, retro, aqua;
+                themes: light --default, dark --prefersdark;
             }
 
             /* Remeber to add the dark variant theme support */
@@ -175,7 +177,7 @@ new #[Title('Upgrading')] class extends Component {
     </x-alert>
 
     {{--@formatter:off--}}
-    <x-code class="grid lg:grid-cols-2 gap-8">
+    <x-code no-render class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
             <div class="grid gap-5 bg-base-200/80 rounded p-8"> <!-- [tl! .docs-hide] -->
             {{-- Default --}}

@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Spotlight" />
 
-    <x-button label="Spotlight docs" link="/docs/components/spotlight" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
+    <x-button label="Spotlight docs" link="/docs/components/spotlight" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
 
     <p>
         Give superpowers to your users and allow them to search for anything.
@@ -21,7 +21,7 @@ class extends Component {
         Check the docs for more.
     </p>
 
-    <img src="/bootcamp/05-c.png" class="rounded-lg border shadow-xl mb-10 p-3" />
+    <img src="/bootcamp/05-c.png" class="rounded-lg border border-base-300 mb-10" />
 
     <x-anchor title="Searching" size="text-2xl" class="mt-10 !mb-5" />
 

@@ -33,9 +33,12 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-modal wire:model="myModal1" class="backdrop-blur">
-                <div class="mb-5">Press `ESC`, click outside or click `CANCEL` to close.</div>
-                <x-button label="Cancel" @click="$wire.myModal1 = false" />
+            <x-modal wire:model="myModal1" title="Hey" class="backdrop-blur">
+                Press `ESC`, click outside or click `CANCEL` to close.
+
+                <x-slot:actions>
+                    <x-button label="Cancel" @click="$wire.myModal1 = false" />
+                </x-slot:actions>
             </x-modal>
 
             <x-button label="Open" @click="$wire.myModal1 = true" />
@@ -52,13 +55,17 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-modal wire:model="myModal2" title="Hello" subtitle="Livewire example" separator>
-                <div>Hey!</div>
+            <x-modal wire:model="myModal2" title="Hello" subtitle="Livewire example">
+                <x-form no-separator>
+                    <x-input label="Name" icon="o-user" placeholder="The full name" />
+                    <x-input label="Email" icon="o-envelope" placeholder="The e-mail" />
 
-                <x-slot:actions>
-                    <x-button label="Cancel" @click="$wire.myModal2 = false" />
-                    <x-button label="Confirm" class="btn-primary" />
-                </x-slot:actions>
+                    {{-- Notice we are using now the `actions` slot from `x-form`, not from modal --}}
+                    <x-slot:actions>
+                        <x-button label="Cancel" @click="$wire.myModal2 = false" />
+                        <x-button label="Confirm" class="btn-primary" />
+                    </x-slot:actions>
+                </x-form>
             </x-modal>
 
             <x-button label="Open" @click="$wire.myModal2 = true" />
@@ -75,8 +82,11 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-modal wire:model="myModal3" persistent>
-                <div>Processing ...</div>
+            <x-modal wire:model="myModal3" title="Payment confirmation" persistent separator>
+                <div class="flex justify-between">
+                    Please, wait ...
+                    <x-loading class="loading-infinity" />
+                </div>
                 <x-slot:actions>
                     <x-button label="Cancel" @click="$wire.myModal3 = false" />
                 </x-slot:actions>
@@ -94,7 +104,7 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            <x-modal wire:model="myModal4" class="backdrop-blur" box-class="bg-primary text-white p-10 w-64">
+            <x-modal wire:model="myModal4" class="backdrop-blur" box-class="bg-warning/30 border w-64">
                 Hello!
             </x-modal>
 

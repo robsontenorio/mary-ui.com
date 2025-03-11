@@ -10,20 +10,20 @@
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
     {{--  Meta description  --}}
-    <meta name="description" content="MaryUI is a set of gorgeous Laravel Blade UI Components made for Livewire 3 and styled around daisyUI + Tailwind">
+    <meta name="description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
-    <meta property="og:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="og:description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-03">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
-    <meta property="twitter:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="twitter:description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-03">
 
     {{--  Currency  --}}
@@ -97,8 +97,8 @@
             {{ $slot }}
         </x-slot:content>
         <x-slot:footer>
-            <hr />
-            <div class="justify-center items-baseline flex my-10">
+            <hr class="border-base-300" />
+            <div class="justify-center items-center flex my-10">
                 <x-mary-brand />
                 <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
             </div>

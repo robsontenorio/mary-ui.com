@@ -32,7 +32,7 @@ class extends Component {
                 </x-tab>
             </x-tabs>
 
-            <hr class="my-5">
+            <hr class="my-5 border-base-300">
 
             <x-button label="Change to Musics" @click="$wire.selectedTab = 'musics-tab'" />
         @endverbatim

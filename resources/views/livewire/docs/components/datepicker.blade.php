@@ -60,13 +60,13 @@ class extends Component {
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
         @verbatim('docs')
             @php
-                $config1 = ['altFormat' => 'm/d/Y'];
+                $config1 = ['altFormat' => 'd/m/Y'];
                 $config2 = ['mode' => 'range'];
             @endphp
 
             <x-datepicker label="Date" wire:model="myDate1" icon="o-calendar" hint="Hi!" />
             <x-datepicker label="Alt" wire:model="myDate2" icon="o-calendar" :config="$config1" />
-            <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" inline />
+            <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" />
         @endverbatim
     </x-code>
 

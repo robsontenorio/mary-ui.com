@@ -91,6 +91,12 @@ new #[Layout('components.layouts.landing')] class extends Component {
 <div class="docs landing">
     <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-32 pt-52 pb-32 px-5 lg:px-20 rounded-box">
         <div class="text-center">
+            {{--            <span class="bg-warning text-center p-2 text-sm rounded">--}}
+            {{--                <x-icon name="o-sparkles" class="h-4 w-4" />--}}
+            {{--                maryUI 2 beta1 available!--}}
+            {{--                <a href="/docs/upgrading" class="underline font-black">Try it &rarr;</a>--}}
+            {{--            </span>--}}
+
             <div class="flex gap-5 justify-center items-center my-10">
                 <img src="/laravel.png" class="w-12 h-12" />
                 <img src="/livewire.png" class="w-13 h-11" />
@@ -98,18 +104,16 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <img src="/daisy.png" class="w-9 h-12" />
             </div>
 
-            <span class="bg-warning text-center p-2 text-sm rounded">
-                <x-icon name="o-sparkles" class="h-4 w-4" />
-                maryUI 2 beta1 available!
-                <a href="/docs/upgrading" class="underline font-black">Try it &rarr;</a>
-            </span>
-
-            <br><br><br>
-
-            <div class="text-xl leading-10 lg:text-4xl lg:leading-relaxed">
-                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel Blade UI Components</span>
-                <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
-                and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
+            <div class="text-xl lg:text-4xl lg:leading-12 justify-self-auto m-auto">
+                <div>
+                    Gorgeous <b>Livewire UI</b> components
+                </div>
+                <div>
+                    styled with <b>daisyUI + Tailwind</b>.
+                </div>
+            </div>
+            <div class="lg:text-lg text-base-content/50  pt-5">
+                Enjoy an all-in-one developer and user experience.
             </div>
 
             <div class="mt-10 flex gap-3 justify-center">
@@ -286,7 +290,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             @endverbatim
         </x-code>
 
-        <hr class="my-12" />
+        <hr class="my-12 border-base-300" />
 
         <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
@@ -334,10 +338,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 @php                                    // [tl! .docs-hide]
                     $showDrawer = $this->showDrawer;    // [tl! .docs-hide]
                 @endphp                                 {{-- [tl! .docs-hide] --}}
-                <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" />
-
-                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button separator class="w-11/12 lg:w-1/3">
-                    <div>Click outside, on `CANCEL` button or `CLOSE` icon to close.</div>
+                <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" /><!-- [tl! .docs-hide] -->
+                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button class="w-11/12 lg:w-1/3">
+                    Click outside, on `CANCEL` button or `CLOSE` icon to close.
 
                     <x-slot:actions>
                         <x-button label="Cancel" wire:click="$toggle('showDrawer')" />
@@ -347,17 +350,16 @@ new #[Layout('components.layouts.landing')] class extends Component {
             @endverbatim
         </x-code>
 
-        <hr class="my-12" />
+        <hr class="my-12 border-base-300" />
 
         <x-code side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
                 @php                                    // [tl! .docs-hide]
                     $myModal = $this->myModal;    // [tl! .docs-hide]
                 @endphp                                 {{-- [tl! .docs-hide] --}}
-                <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" />
-
-                <x-modal wire:model="myModal" title="Hello" subtitle="Livewire example" separator>
-                    <div>Click outside, press `ESC` or click `CANCEL` button to close.</div>
+                <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" /> <!-- [tl! .docs-hide] -->
+                <x-modal wire:model="myModal" title="Hello">
+                    Click outside, press `ESC` or click `CANCEL` button to close.
 
                     <x-slot:actions>
                         <x-button label="Cancel" wire:click="$toggle('myModal')" />

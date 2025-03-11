@@ -10,20 +10,20 @@
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
     {{--  Meta description  --}}
-    <meta name="description" content="MaryUI is a set of gorgeous Laravel Blade UI Components made for Livewire 3 and styled around daisyUI + Tailwind">
+    <meta name="description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
-    <meta property="og:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="og:description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind.">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-03">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
-    <meta property="twitter:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="twitter:description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-03">
 
     {{-- Flatpickr --}}
@@ -95,7 +95,7 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-warning/10 text-center p-2 text-sm border border-b-base-300 ">
+    <div class="bg-warning/10 text-center p-2 text-sm">
         <x-icon name="o-sparkles" class="h-4 w-4" />
         maryUI 2 beta1 available!
         <a href="/docs/upgrading" class="underline font-black">Try it &rarr;</a>
@@ -216,7 +216,7 @@
 
             {{ $slot }}
 
-            <hr class="my-10" />
+            <hr class="my-10 border-base-300" />
 
             <div class="flex justify-center items-center">
                 <x-mary-brand />

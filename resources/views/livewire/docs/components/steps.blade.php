@@ -67,7 +67,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-steps wire:model="step" class="border-t mt-5 py-5">
+            <x-steps wire:model="step" class="border-y border-base-300 my-5 py-5">
                 <x-step step="1" text="Register">
                     Register step
                 </x-step>
@@ -100,7 +100,7 @@ class extends Component {
                 <x-step step="3" text="C" data-content="✓" step-classes="!step-success" />
             </x-steps>
 
-            <hr class="my-5" />
+            <hr class="my-5 border-base-300" />
 
             <x-button label="Previous" wire:click="prev2" />
             <x-button label="Next" wire:click="next2" />
