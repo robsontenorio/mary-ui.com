@@ -14,9 +14,11 @@ class extends Component {
 
     public int $user3 = 1;
 
-    public string $user4;
+    public int $user4 = 1;
 
     public int $user5 = 1;
+
+    public int $user6 = 1;
 }
 
 ?>
@@ -24,6 +26,10 @@ class extends Component {
 <div class="docs">
 
     <x-anchor title="Radio" />
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Alternatively check the <a href="/docs/components/group" wire:navigate>Group</a> component.
+    </x-alert>
 
     <x-anchor title="Default attributes" size="text-2xl" class="mt-10 !mb-5" />
 
@@ -38,31 +44,31 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-8 lg:flex justify-around">
+    <x-code class="grid gap-8 lg:flex lg:justify-around">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-            @endphp
-
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
+            @endphp                                         {{-- [tl! .docs-hide]--}}
             <x-radio label="Select one" :options="$users" wire:model="user1" />
 
-            <x-radio label="Select one" :options="$users" wire:model="user2" inline />
-
+            <x-radio label="Select one inline" :options="$users" wire:model="user2" inline />
         @endverbatim
     </x-code>
 
     <x-anchor title="Hint" size="text-2xl" class="mt-10 !mb-5" />
 
-    <x-code>
+    <x-code class="grid gap-8 lg:flex lg:justify-around">
         @verbatim('docs')
             @php
                 $users = [
-                    ['id' => 1 , 'name' => 'Mary', 'hint' => 'I am Mary' ],
-                    ['id' => 2 , 'name' => 'Joe', 'hint' => 'I am Joe' ],
+                    ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],
+                    ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],
                 ];
             @endphp
 
-            <x-radio label="Select one" :options="$users" wire:model="user3" />
+            <x-radio label="Select one option" :options="$users" wire:model="user3" />
+
+            <x-radio label="Select one option" :options="$users" wire:model="user4" inline />
         @endverbatim
     </x-code>
 
@@ -87,8 +93,8 @@ class extends Component {
                 option-value="custom_key"
                 option-label="other_name"
                 option-hint="my_hint"
-                wire:model="user4"
-                class="radio-sm" />
+                wire:model="user5"
+            />
         @endverbatim
     </x-code>
 
@@ -108,8 +114,7 @@ class extends Component {
                 ];
             @endphp
 
-            <x-radio
-                label="Select one" :options="$users" wire:model="user5" />
+            <x-radio label="Select one" :options="$users" wire:model="user6" />
         @endverbatim
     </x-code>
 

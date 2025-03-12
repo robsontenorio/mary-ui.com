@@ -104,11 +104,11 @@ class extends Component {
                 <x-menu-separator />
 
                 <x-menu-item @click.stop="">
-                    <x-checkbox label="Activate" />
+                    <x-checkbox label="Hard mode" hint="Make things harder" />
                 </x-menu-item>
 
                 <x-menu-item @click.stop="">
-                    <x-toggle label="Sleep mode" right />
+                    <x-checkbox label="Transparent checkout" hint="Make things easier" />
                 </x-menu-item>
             </x-dropdown>
         @endverbatim

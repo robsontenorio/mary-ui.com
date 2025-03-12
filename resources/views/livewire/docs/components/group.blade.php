@@ -10,15 +10,19 @@ new
 class extends Component {
     public int $selectedUser = 1;
 
-    public int $selectedUser2;
+    public int $selectedUser2 = 1;
 
-    public int $selectedUser3;
+    public int $selectedUser3 = 1;
 }
 
 ?>
 
 <div class="docs">
     <x-anchor title="Group" />
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        If you need a classic radio check the <a href="/docs/components/radio" wire:navigate>Radio</a> component.
+    </x-alert>
 
     <x-anchor title="Default attributes" size="text-2xl" class="mt-10 !mb-5" />
 
@@ -35,12 +39,10 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-            @endphp
-
-            <x-group label="Select one" :options="$users" wire:model="selectedUser" />
-
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
+            <x-group label="Select one" :options="$users" wire:model="selectedUser" hint="Pick one" />
         @endverbatim
     </x-code>
 
@@ -52,18 +54,16 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-            @endphp
-
+            @php                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
+            @endphp                                             <!-- [tl! .docs-hide] -->
             <x-group
                 label="Select one"
                 :options="$users"
                 option-value="custom_key"
                 option-label="other_name"
                 wire:model="selectedUser2"
-                hint="Choose wisely"
-                class="bg-orange-50 [&:checked]:!bg-orange-200 !border-orange-500 !text-orange-500" />
+                class="[&:checked]:!btn-primary " />
         @endverbatim
     </x-code>
 

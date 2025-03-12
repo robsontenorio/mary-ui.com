@@ -30,7 +30,7 @@ new #[Title('Upgrading')] class extends Component {
     <div class="collapse bg-base-100 border-base-300 border collapse-arrow">
         <input type="checkbox" />
         <div class="collapse-title font-semibold">Using <code>app.css</code> (recommended)</div>
-        <div class="collapse-content text-sm overflow-x-auto">
+        <div class="collapse-content overflow-x-auto bg-base-200/70 px-8 border-t border-base-300">
 
             <p>Upgrade to Laravel 12.</p>
 
@@ -169,7 +169,7 @@ new #[Title('Upgrading')] class extends Component {
 
     <p>
         The primary style was removed from all input components.
-        If you want to make it looks like as before, you should add the respective <code>primary</code> class, depending on the component.
+        If you want to make it looks like as before, you can add the respective <code>primary</code> class, depending on the component.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
