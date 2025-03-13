@@ -99,7 +99,7 @@ new #[Title('Upgrading')] class extends Component {
 
                     /* daisyUI */
                     @plugin "daisyui" {         <!-- [tl! add] -->
-                    themes: light --default, dark --prefersdark;  // Themes  <!-- [tl! add] -->
+                    themes: light --default, dark --prefersdark;   <!-- [tl! add] -->
                     }   <!-- [tl! add] -->
 
                     /* Dark theme variant support */
