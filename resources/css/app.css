@@ -84,16 +84,16 @@ p {
 * Image Library landing page demo
 */
 
-#image-library-landing-demo label {
-    @apply text-base-100
-}
-
-#image-library-landing-demo .label-text-alt {
+#image-library-landing-demo .fieldset-label {
     @apply text-base-100
 }
 
 #image-library-landing-demo .relative {
     @apply bg-base-100 rounded-lg
+}
+
+#image-library-landing-demo .progress {
+    @apply !progress-neutral
 }
 
 /**

@@ -264,7 +264,7 @@ class extends Component {
         @verbatim('docs')
             <x-form wire:submit="save6">
                 {{-- Full error bag --}}
-                {{-- All attributes are optional, remove it and give a try--}}
+                {{-- All attributes are optional --}}
                 <x-errors title="Oops!" description="Please, fix them." icon="o-face-frown" />
 
                 <x-input label="Age" wire:model="age" />

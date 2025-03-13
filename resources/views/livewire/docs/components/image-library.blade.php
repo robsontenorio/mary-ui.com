@@ -35,13 +35,12 @@ class extends Component {
 
     <p>
         This component manages <strong>multiple image upload</strong> and is powered by Livewire`s
-        <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload</a>, including all features like file size/type validation
-        and <strong>automatic</strong> storage persistence on <strong>local</strong> and <strong>S3</strong> disks.
+        <a href="https://livewire.laravel.com/docs/uploads" target="_blank">file upload</a>, including all its features like file validations.
+        It also handles <strong>automatic</strong> storage persistence on <strong>local</strong> and <strong>S3</strong> disks.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        If you need a native file upload or want to handle only one image see the <a href="/docs/components/file" wire:navigate>File</a> component. <br>
-        If you need to nicely display images see <a href="/docs/components/image-gallery" wire:navigate>Image Gallery</a> component.
+        For simple use cases, prefer using the <a href="/docs/components/file" wire:navigate>File</a> component.
     </x-alert>
 
     <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
