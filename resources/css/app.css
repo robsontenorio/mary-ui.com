@@ -64,8 +64,8 @@ p {
 * Spotlight
 */
 
-#marySpotlight > div {
-    @apply pt-1
+#marySpotlight a {
+    @apply no-underline
 }
 
 /**
