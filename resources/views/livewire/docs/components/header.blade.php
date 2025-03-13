@@ -25,13 +25,13 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-header title="Personal address" subtitle="Default with separator" separator />
+            <x-header title="Default size" subtitle="With subtitle and separator" separator />
 
-            <x-header title="Personal address" subtitle="With custom size" size="text-xl" separator />
+            <x-header title="Custom size" size="text-xl" separator />
 
-            <x-header title="With Anchor" subtitle="Click on title to get anchor link" with-anchor />
+            <x-header title="With Anchor" subtitle="Click on title " with-anchor separator />
 
-            <x-header title="Users" subtitle="Check this on mobile">
+            <x-header title="Users" subtitle="This is responsive" separator>
                 <x-slot:middle class="!justify-end">
                     <x-input icon="o-bolt" placeholder="Search..." />
                 </x-slot:middle>
