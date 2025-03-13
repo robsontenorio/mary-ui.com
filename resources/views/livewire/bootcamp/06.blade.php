@@ -5,13 +5,13 @@ use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
 new
-#[Title('maryUI Bootcamp - Jetstream & Breeze')]
+#[Title('maryUI Bootcamp - Authentication')]
 #[Layout('components.layouts.bootcamp', ['description' => 'Move faster, code less. Get the job done.'])]
 class extends Component {
 }; ?>
 
 <div class="docs">
-    <x-anchor title="Jetstream & Breeze" />
+    <x-anchor title="Authentication" />
 
     <p>
         If you have a project with Jetstream/Breeze the maryUI installer adds a global prefix <code>x-mary-</code> on maryUI components to avoid naming collision.
@@ -143,7 +143,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        Create an empty layout at <code>resources/views/components/layouts/empty.blade.php</code> to use it as our login page.
+        Create an empty layout at <code>resources/views/components/layouts/empty.blade.php</code> to use it as our login/registration template.
     </p>
 
     <x-code no-render>
@@ -284,7 +284,7 @@ class extends Component {
 
             new
             #[Layout('components.layouts.empty')]       // <-- The same `empty` layout
-            #[Title('Login')]
+            #[Title('Registration')]
             class extends Component {
 
                 #[Rule('required')]

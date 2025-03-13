@@ -92,7 +92,7 @@
                 <x-menu-item title="Listing users" link="/bootcamp/03" icon="fas.dice-three" />
                 <x-menu-item title="Updating users" link="/bootcamp/04" icon="fas.dice-four" />
                 <x-menu-item title="Spotlight" link="/bootcamp/05" icon="fas.dice-five" />
-                <x-menu-item title="Jetstream & Breeze" link="/bootcamp/06" icon="fas.dice-six" />
+                <x-menu-item title="Authentication" link="/bootcamp/06" icon="fas.dice-six" />
                 <x-menu-separator />
                 <x-menu-item title="A wrap" link="/bootcamp/07" icon="fas.dice" />
 
