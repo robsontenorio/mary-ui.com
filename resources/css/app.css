@@ -80,6 +80,11 @@ p {
     @apply cursor-pointer
 }
 
+/* Just for the website */
+.mary-table-pagination p {
+    @apply my-0
+}
+
 /**
 * Image Library landing page demo
 */

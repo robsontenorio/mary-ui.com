@@ -45,13 +45,12 @@ class extends Component {
                 $user = App\Models\User::first();
             @endphp
 
-            <x-avatar :image="$user->avatar" class="!w-24">
-
-                <x-slot:title class="text-3xl pl-2">
+            <x-avatar :image="$user->avatar" class="!w-22">
+                <x-slot:title class="text-3xl !font-bold pl-2">
                     {{ $user->username }}
                 </x-slot:title>
 
-                <x-slot:subtitle class="text-gray-500 flex flex-col gap-1 mt-2 pl-2">
+                <x-slot:subtitle class="grid gap-1 mt-2 pl-2 text-xs">
                     <x-icon name="o-paper-airplane" label="12 posts" />
                     <x-icon name="o-chat-bubble-left" label="45 comments" />
                 </x-slot:subtitle>
