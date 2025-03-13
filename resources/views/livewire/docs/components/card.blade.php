@@ -41,7 +41,7 @@ class extends Component {
                     <x-button icon="o-share" class="btn-circle btn-sm" />
                     <x-icon name="o-heart" class="cursor-pointer" />
                 </x-slot:menu>
-                <x-slot:actions>
+                <x-slot:actions separator>
                     <x-button label="Ok" class="btn-primary" />
                 </x-slot:actions>
             </x-card>

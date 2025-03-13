@@ -216,7 +216,7 @@
 
             {{ $slot }}
 
-            <hr class="my-10 border-base-300" />
+            <hr class="my-10 border-base-content/10" />
 
             <div class="flex justify-center items-center">
                 <x-mary-brand />

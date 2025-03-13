@@ -60,7 +60,7 @@ class extends Component {
         @verbatim('docs')
             <x-dropdown>
                 <x-slot:trigger>
-                    <x-button icon="o-bell" class="btn-circle btn-outline" />
+                    <x-button icon="o-bell" class="btn-circle" />
                 </x-slot:trigger>
 
                 <x-menu-item title="Archive" />
@@ -89,7 +89,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-dropdown label="Settings" class="btn-outline">
+            <x-dropdown label="Settings">
                 {{-- By default any click closes dropdown --}}
                 <x-menu-item title="Close after click" />
 
@@ -118,7 +118,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-dropdown label="Settings" class="btn-outline">
+            <x-dropdown label="Settings">
                 <x-menu-item title="Spinner" wire:click.stop="delete2" spinner="delete2" />
                 <x-menu-item title="Spinner" wire:click.stop="delete3" spinner="delete3" icon="o-trash" />
             </x-dropdown>

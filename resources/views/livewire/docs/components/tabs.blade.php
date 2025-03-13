@@ -97,7 +97,7 @@ class extends Component {
                 wire:model="selectedTab"
                 active-class="bg-primary rounded !text-white"
                 label-class="font-semibold"
-                label-div-class="bg-primary/5 rounded"
+                label-div-class="bg-primary/5 rounded w-fit p-2"
             >
                 <x-tab name="users-tab" label="Users">
                     <div>All</div>

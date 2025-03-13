@@ -70,7 +70,7 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             <div class="flex gap-5">
-                <x-input placeholder="Name ..." wire:model.live.debounce="name" />
+                <x-input placeholder="Type ..." wire:model.live.debounce="name" />
                 <x-button label="Save" wire:click="save" />
             </div>
 
