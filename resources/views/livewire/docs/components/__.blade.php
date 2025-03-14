@@ -13,7 +13,7 @@ class extends Component {
 
 <div class="docs">
     <x-anchor title="..." />
-    <x-anchor title="..." size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="..." size="text-xl" class="mt-14" />
 
     <p>
         // paragraphs

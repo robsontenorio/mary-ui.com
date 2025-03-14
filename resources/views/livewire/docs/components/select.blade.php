@@ -43,21 +43,21 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" />
 
             <x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" />
 
             <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
 
+            <span></span><!-- [tl! .docs-hide] -->
             <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
     <p>
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
@@ -65,10 +65,9 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                             // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select
                 label="Alternative"
                 :options="$users"
@@ -81,7 +80,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disable options" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disable options" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -103,7 +102,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <p>
         You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
@@ -112,25 +111,24 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select label="Slots"  :options="$users" single>
                 <x-slot:prepend>
-                    {{--  Add `rounded-e-none` (RTL support) --}}
-                    <x-button icon="o-trash" class="rounded-e-none" />
+                    {{-- Add `join-item` to all prepended elements --}}
+                    <x-button icon="o-trash" class="join-item" />
                 </x-slot:prepend>
                 <x-slot:append>
-                    {{--  Add `rounded-s-none` (RTL support) --}}
-                    <x-button label="Create" icon="o-plus" class="rounded-s-none btn-primary" />
+                    {{-- Add `join-item` to all appended elements --}}
+                    <x-button label="Create" icon="o-plus" class="join-item btn-primary" />
                 </x-slot:append>
             </x-select>
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Group" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Group" size="text-xl" class="mt-14" />
 
     <p>
         This component uses the native HTML grouped select.

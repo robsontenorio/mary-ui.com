@@ -52,7 +52,7 @@ class extends Component {
 <div class="">
     <x-anchor title="Steps" />
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <p>
         This components uses <code>ul</code> and <code>li</code> html tags. Make sure you have an extra rule to not override them on your custom CSS.
@@ -67,7 +67,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-steps wire:model="step" class="border my-5 p-5">
+            <x-steps wire:model="step" class="border-y border-base-300 my-5 py-5">
                 <x-step step="1" text="Register">
                     Register step
                 </x-step>
@@ -86,7 +86,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Style" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Style" size="text-xl" class="mt-14" />
 
     <p>
         Remember if you are using deeper CSS classes than <code>steps-xxxx</code> provided by daisyUI you must configure Tailwind <strong>safelist</strong>.
@@ -100,7 +100,7 @@ class extends Component {
                 <x-step step="3" text="C" data-content="✓" step-classes="!step-success" />
             </x-steps>
 
-            <hr class="my-5" />
+            <hr class="my-5 border-base-300" />
 
             <x-button label="Previous" wire:click="prev2" />
             <x-button label="Next" wire:click="next2" />

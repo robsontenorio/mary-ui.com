@@ -55,7 +55,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Table" />
 
-    <x-anchor title="Simple" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Simple" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -74,7 +74,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No headers & No hover" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No headers & No hover" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -92,7 +92,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Formatters" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Formatters" size="text-xl" class="mt-14" />
 
     <p>
         The table component includes the basic <code>date</code> and <code>currency</code> formatters. You can also use a <code>closure</code> to make any kind of transformation.
@@ -126,7 +126,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Click to navigate" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Click to navigate" size="text-xl" class="mt-14" />
 
     <p>
         The following <code>{tokens}</code> will be replaced by actual values <strong>on each row</strong> based on any <code>key</code>
@@ -188,7 +188,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Header classes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Header classes" size="text-xl" class="mt-14" />
 
     <p>
         Any class set on <code>$headers</code> will be applied to respective columns.
@@ -215,7 +215,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Row and cell decoration" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row and cell decoration" size="text-xl" class="mt-14" />
 
     <p>
         It is possible to define custom logic to apply background colors, or any class, on rows and/or cells.
@@ -305,7 +305,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Sort" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Sort" size="text-xl" class="mt-14" />
 
     <p>
         Declare a property <code>$sortBy</code> within following pattern bellow.
@@ -411,7 +411,7 @@ class extends Component {
             {{-- You will learn about custom slots on next sections --}}
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy">
                 @scope('cell_city', $user)
-                    <x-badge :value="$user->city->name" class="badge-primary" />
+                    <x-badge :value="$user->city->name" class="badge-primary badge-soft" />
                 @endscope
             </x-table>
 
@@ -419,25 +419,12 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Pagination" size="text-xl" class="mt-14" />
 
     <p>
         Notice maryUI uses directly all features offered by Laravel and Livewire itself, including default pagination links and deeper customizations.
         For further details, please, refer to their docs.
     </p>
-
-    <p>
-        As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="javascript">
-        content: [
-            // Add this [tl! highlight .animate-bounce]
-            './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        ],
-    </x-code>
-    {{--@formatter:on--}}
 
     <p>
         Then, use <code>WithPagination</code> trait from Livewire itself, as described on
@@ -482,20 +469,15 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="css">
-        /* Active page highlight */
+    <x-code no-render language="sass">
+        /** General button **/
+        .mary-table-pagination button {
+            @apply cursor-pointer
+        }
+
+        /** Active button **/
         .mary-table-pagination span[aria-current="page"] > span {
             @apply bg-primary text-base-100
-        }
-
-        /* For dark mode*/
-        .mary-table-pagination span[aria-disabled="true"] span {
-            @apply bg-inherit
-        }
-
-        /* For dark mode*/
-        .mary-table-pagination button {
-            @apply bg-base-100
         }
     </x-code>
     {{--@formatter:on--}}
@@ -559,7 +541,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Note about slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Note about slots" size="text-xl" class="mt-14" />
 
     <p>
         On next sections you will see the special <code>&#x40;scope</code> directive.
@@ -577,7 +559,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Header slot" size="text-xl" class="mt-14" />
 
     <p>
         You can override any header by using <code>&#x40;scope('header_XXX', $header)</code> special blade directive,
@@ -614,7 +596,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Cell slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Cell slot" size="text-xl" class="mt-14" />
 
     <p>
         You can override any row by using <code>&#x40;scope('cell_XXX', $row)</code> special blade directive, in which <code>XXX</code> is any <code>key</code> from
@@ -675,7 +657,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Inject external variables" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Inject external variables" size="text-xl" class="mt-14" />
 
     <p>
         You can inject any external variables into any <strong>cell scope</strong> like this.
@@ -702,7 +684,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Loop context" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Loop context" size="text-xl" class="mt-14" />
 
     <p>
         You can access the <a href="https://laravel.com/docs/10.x/blade#the-loop-variable" target="_blank">loop context</a>
@@ -729,7 +711,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Empty Slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Empty Slot" size="text-xl" class="mt-14" />
 
     <p>
         You can customize the empty text message by using one of the following approaches.
@@ -758,7 +740,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Row selection" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row selection" size="text-xl" class="mt-14" />
 
     <p>
         Use <code>selectable</code> attribute in conjunction with <code>wire:model</code> to manage selection state.
@@ -806,7 +788,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Row expansion" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row expansion" size="text-xl" class="mt-14" />
     <p>
         Use <code>expandable</code> attribute in conjunction with <code>wire:model</code> to manage expansion state.
     </p>

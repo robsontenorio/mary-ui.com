@@ -89,8 +89,14 @@ new #[Layout('components.layouts.landing')] class extends Component {
 ?>
 
 <div class="docs landing">
-    <div class="bg-gradient-to-r from-white via-purple-50 to-white dark:bg-none dark:bg-base-200 -mt-32 pt-52 pb-32 px-5 lg:px-20 rounded-box">
+    <div class="bg-gradient-to-r from-base-100 via-purple-50  to-base-100 dark:via-base-200 -mt-32 pt-52 pb-32 px-5 lg:px-20 rounded-box">
         <div class="text-center">
+            {{--            <span class="bg-warning text-center p-2 text-sm rounded">--}}
+            {{--                <x-icon name="o-sparkles" class="h-4 w-4" />--}}
+            {{--                maryUI 2 beta1 available!--}}
+            {{--                <a href="/docs/upgrading" class="underline font-black">Try it &rarr;</a>--}}
+            {{--            </span>--}}
+
             <div class="flex gap-5 justify-center items-center my-10">
                 <img src="/laravel.png" class="w-12 h-12" />
                 <img src="/livewire.png" class="w-13 h-11" />
@@ -98,10 +104,16 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <img src="/daisy.png" class="w-9 h-12" />
             </div>
 
-            <div class="text-xl leading-10 lg:text-4xl lg:leading-relaxed">
-                Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel Blade UI Components</span>
-                <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
-                and styled around <span class="underline decoration-sky-400  rounded  font-bold">daisyUI + Tailwind</span>
+            <div class="text-xl lg:text-4xl lg:leading-12 justify-self-auto m-auto">
+                <div>
+                    Gorgeous UI components for <b>Livewire</b>
+                </div>
+                <div>
+                    powered by <b>daisyUI</b> and <b>Tailwind</b>
+                </div>
+            </div>
+            <div class="lg:text-lg text-base-content/50  pt-5">
+                Be amazed at how much you can achieve with minimal effort.
             </div>
 
             <div class="mt-10 flex gap-3 justify-center">
@@ -125,8 +137,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
     </div>
 
     <div class="px-5 lg:px-20 pt-10 pb-20">
-        <div class="font-extrabold text-4xl py-10">
-            Amazing components.
+        <div class="font-extrabold text-4xl py-10 mb-10">
+            <span class="underline decoration-pink-500">Amazing components</span>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-x-16 gap-y-8">
@@ -168,9 +180,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
     </div>
 
-    <div class="px-5 lg:px-20 pt-20 bg-base-200/50 rounded-box">
-        <div class="font-extrabold text-4xl pt-10 text-right">
-            Delightful demos.
+    <div class="px-5 lg:px-20 mt-10 pt-10 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
+        <div class="font-extrabold text-4xl pt-20 text-right">
+            <span class="underline decoration-pink-500">Remastered demos</span>
         </div>
 
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
@@ -238,7 +250,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     <div class="px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
-            Lists
+            <span class="underline decoration-pink-500">Lists</span>
         </div>
 
         <x-code side-by-side render-col-span="4" code-col-span="8">
@@ -258,9 +270,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
+    <div class="px-5 lg:px-20 py-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
         <div class="font-extrabold text-4xl py-10 text-right">
-            Multi selection
+            <span class="underline decoration-pink-500">Multi selection</span>
         </div>
 
         <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
@@ -278,7 +290,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             @endverbatim
         </x-code>
 
-        <hr class="my-12" />
+        <hr class="my-12 border-base-300" />
 
         <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
@@ -298,7 +310,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     <div class=" px-5 lg:px-20 py-20">
         <div class="font-extrabold text-4xl py-10">
-            Forms.
+            <span class="underline decoration-pink-500">Forms</span>
         </div>
 
         <x-code side-by-side render-col-span="5" code-col-span="7">
@@ -316,9 +328,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 pt-10 pb-20 bg-base-200/50 rounded-box">
+    <div class="px-5 lg:px-20 pt-10 pb-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
         <div class="font-extrabold text-4xl pt-10 pb-20 text-right">
-            Drawer & Modal
+            <span class="underline decoration-pink-500">Dialogs</span>
         </div>
 
         <x-code side-by-side invert render-col-span="3" code-col-span="9">
@@ -326,10 +338,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 @php                                    // [tl! .docs-hide]
                     $showDrawer = $this->showDrawer;    // [tl! .docs-hide]
                 @endphp                                 {{-- [tl! .docs-hide] --}}
-                <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" />
-
-                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button separator class="w-11/12 lg:w-1/3">
-                    <div>Click outside, on `CANCEL` button or `CLOSE` icon to close.</div>
+                <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" /><!-- [tl! .docs-hide] -->
+                <x-drawer wire:model="showDrawer" title="Hello!" with-close-button class="w-11/12 lg:w-1/3">
+                    Click outside, on `CANCEL` button or `CLOSE` icon to close.
 
                     <x-slot:actions>
                         <x-button label="Cancel" wire:click="$toggle('showDrawer')" />
@@ -339,17 +350,16 @@ new #[Layout('components.layouts.landing')] class extends Component {
             @endverbatim
         </x-code>
 
-        <hr class="my-12" />
+        <hr class="my-12 border-base-300" />
 
         <x-code side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
                 @php                                    // [tl! .docs-hide]
                     $myModal = $this->myModal;    // [tl! .docs-hide]
                 @endphp                                 {{-- [tl! .docs-hide] --}}
-                <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" />
-
-                <x-modal wire:model="myModal" title="Hello" subtitle="Livewire example" separator>
-                    <div>Click outside, press `ESC` or click `CANCEL` button to close.</div>
+                <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" /> <!-- [tl! .docs-hide] -->
+                <x-modal wire:model="myModal" title="Hello">
+                    Click outside, press `ESC` or click `CANCEL` button to close.
 
                     <x-slot:actions>
                         <x-button label="Cancel" wire:click="$toggle('myModal')" />
@@ -362,7 +372,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     <div class="px-5 lg:px-20 py-20 rounded-box">
         <div class="font-extrabold text-4xl py-10">
-            Easy Tables.
+            <span class="underline decoration-pink-500">Easy tables</span>
         </div>
 
         {{--@formatter:off--}}
@@ -386,9 +396,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
         {{--@formatter:on--}}
     </div>
 
-    <div class="px-5 lg:px-20 py-20 bg-base-200/50 rounded-box">
-        <div class="font-extrabold text-4xl py-10">
-            Full Tables.
+    <div class="px-5 lg:px-20 py-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
+        <div class="font-extrabold text-4xl py-10 text-right">
+            <span class="underline decoration-pink-500">Full tables</span>
         </div>
 
         {{--@formatter:off--}}
@@ -452,13 +462,11 @@ new #[Layout('components.layouts.landing')] class extends Component {
     </div>
 
     <div class="my-20 text-center">
-
-        <div class="font-extrabold text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-box py-16 text-base-100 flex items-center justify-center gap-5">
-            And more ...
-
-            <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="!no-underline btn-outline text-base-100" />
-
+        <div class="font-extrabold text-4xl py-10">
+            <span class="underline decoration-pink-500">Enjoy a full set of UI components ...</span>
         </div>
+
+        <x-button label="LET`S DO IT" icon-right="o-arrow-right" link="/docs/installation" class="!no-underline bg-pink-500 text-base-100" />
     </div>
 
     <div class="docs">

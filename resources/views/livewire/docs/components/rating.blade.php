@@ -22,7 +22,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Rating" />
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <p>
         It controls the rating based on a integer number. For "not rated" set its model value as "0".
@@ -40,7 +40,7 @@ class extends Component {
 
             <x-rating wire:model="ranking3" class="!mask-diamond bg-accent" />
 
-            <x-rating wire:model="ranking4" class="!mask-heart bg-secondary rating-lg" />
+            <x-rating wire:model="ranking4" class="!mask-heart bg-secondary rating-xl" />
 
         @endverbatim
     </x-code>

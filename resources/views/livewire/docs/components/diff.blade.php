@@ -18,7 +18,7 @@ class extends Component {
         This component is a wrapper around <a href="https://diff2html.xyz" target="_blank">diff2html</a> with a simpler API to quickly show diff between two strings.
     </p>
 
-    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Install" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -26,14 +26,14 @@ class extends Component {
                 ...
 
                 {{--  DIFF2HTML  --}}
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
-                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/xcode.min.css" />
+                <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/css/diff2html.min.css" />
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/js/diff2html-ui.min.js"></script>
             </head>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Examples" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Examples" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')

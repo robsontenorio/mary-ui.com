@@ -15,7 +15,12 @@ class extends Component {
 
     <x-code class="bg-base-200 grid md:grid-cols-4 gap-5">
         @verbatim('docs')
-            <x-stat title="Messages" value="44" icon="o-envelope" tooltip="Hello" />
+            <x-stat
+                title="Messages"
+                value="44"
+                icon="o-envelope"
+                tooltip="Hello"
+                color="text-primary" />
 
             <x-stat
                 title="Sales"

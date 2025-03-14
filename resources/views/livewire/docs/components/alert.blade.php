@@ -31,14 +31,16 @@ class extends Component {
                 </x-slot:actions>
             </x-alert>
 
-            <x-alert title="I have a shadow" icon="o-exclamation-triangle" shadow />
+            <x-alert title="I am soft" icon="o-exclamation-triangle" class="alert-info alert-soft" />
+
+            <x-alert title="I am outlined" icon="o-exclamation-triangle" class="alert-info alert-outline" />
 
             <x-alert title="Dismissible" description="Click the close icon" icon="o-exclamation-triangle" dismissible />
         @endverbatim
     </x-code>
 
-    <hr class="my-10" />
-    <x-anchor title="API" size="text-2xl" class="mt-10 mb-5" />
-    <x-api-generator :class-name="Alert::class" />
-    <div class="mb-64"></div>
+    {{--    <hr class="my-10 border-base-300" />--}}
+    {{--    <x-anchor title="API" size="text-xl" class="mt-14" />--}}
+    {{--    <x-api-generator :class-name="Alert::class" />--}}
+    {{--    <div class="mb-64"></div>--}}
 </div>

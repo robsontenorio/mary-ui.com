@@ -8,19 +8,30 @@ new
 #[Title('Radio')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI radio component with builtin validation support.'])]
 class extends Component {
-    public int $selectedUser = 1;
+    public int $user1 = 1;
 
-    public int $selectedUser2;
+    public int $user2 = 1;
 
-    public int $selectedUser3;
+    public int $user3 = 1;
+
+    public int $user4 = 1;
+
+    public int $user5 = 1;
+
+    public int $user6 = 1;
 }
 
 ?>
 
 <div class="docs">
+
     <x-anchor title="Radio" />
 
-    <x-anchor title="Default attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Alternatively check the <a href="/docs/components/group" wire:navigate>Group</a> component.
+    </x-alert>
+
+    <x-anchor title="Default attributes" size="text-xl" class="mt-14" />
 
     <p>
         By default, it will look up for:
@@ -33,18 +44,35 @@ class extends Component {
 
     <br>
 
-    <x-code>
+    <x-code class="grid gap-8 lg:flex lg:justify-around">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-            @endphp
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
+            @endphp                                         {{-- [tl! .docs-hide]--}}
+            <x-radio label="Select one" :options="$users" wire:model="user1" />
 
-            <x-radio label="Select one" :options="$users" wire:model="selectedUser" />
-
+            <x-radio label="Select one inline" :options="$users" wire:model="user2" inline />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Hint" size="text-xl" class="mt-14" />
+
+    <x-code class="grid gap-8 lg:flex lg:justify-around">
+        @verbatim('docs')
+            @php
+                $users = [
+                    ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],
+                    ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],
+                ];
+            @endphp
+
+            <x-radio label="Select one option" :options="$users" wire:model="user3" />
+
+            <x-radio label="Select one option" :options="$users" wire:model="user4" inline />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
     <p>
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
@@ -53,7 +81,10 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::take(3)->get();
+                $users = [
+                    ['custom_key' => 's134' , 'other_name' => 'Mary', 'my_hint' => 'I am Mary' ],
+                    ['custom_key' => 'f782' , 'other_name' => 'Joe', 'my_hint' => 'I am Joe' ],
+                ];
             @endphp
 
             <x-radio
@@ -61,13 +92,13 @@ class extends Component {
                 :options="$users"
                 option-value="custom_key"
                 option-label="other_name"
-                wire:model="selectedUser2"
-                hint="Choose wisely"
-                class="bg-red-50" />
+                option-hint="my_hint"
+                wire:model="user5"
+            />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disable options" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disable options" size="text-xl" class="mt-14" />
     <p>
         You can disable options by setting the <code>disabled</code> attribute.
     </p>
@@ -83,8 +114,7 @@ class extends Component {
                 ];
             @endphp
 
-            <x-radio
-                label="Select one" :options="$users" wire:model="selectedUser3" />
+            <x-radio label="Select one" :options="$users" wire:model="user6" />
         @endverbatim
     </x-code>
 

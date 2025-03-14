@@ -10,17 +10,19 @@ new
 #[Layout('components.layouts.app', ['description' => 'Livewire ui tags components with automatic add.'])]
 class extends Component {
     #[Rule('required')]
-    public array $tags = ['tech', 'gaming', 'art'];
+    public array $tags = ['tech'];
 }; ?>
 
 <div class="docs">
     <x-anchor title="Tags" />
 
     <p>
-        <x-alert icon="o-light-bulb" class="markdown mb-10">
-            For complex multiple inputs see <a href="/docs/components/choices" wire:navigate>Choices</a> component, which supports online async search.
-        </x-alert>
+        This component allows to enter any kind of text, without any preset or autocompletion values. It will automatically add the text as a tag when you hit enter.
     </p>
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        For complex multiple inputs or preset values see <a href="/docs/components/choices" wire:navigate>Choices</a> component, that also supports online and offline search.
+    </x-alert>
 
     <x-code>
         @verbatim('docs')

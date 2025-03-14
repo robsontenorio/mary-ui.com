@@ -42,7 +42,7 @@ class extends Component {
         Take a look at <a href="/docs/components/select" wire:navigate>Select</a> for value selection.
     </x-alert>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -54,13 +54,13 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom Trigger" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom Trigger" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
             <x-dropdown>
                 <x-slot:trigger>
-                    <x-button icon="o-bell" class="btn-circle btn-outline" />
+                    <x-button icon="o-bell" class="btn-circle" />
                 </x-slot:trigger>
 
                 <x-menu-item title="Archive" />
@@ -69,7 +69,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Right alignment" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Right alignment" size="text-xl" class="mt-14" />
 
     <x-code class="flex justify-end">
         @verbatim('docs')
@@ -81,7 +81,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Click propagation" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Click propagation" size="text-xl" class="mt-14" />
 
     <p>
         By default, any click closes the dropdown. Just use <code>@click.stop</code> or <code>wire:click.stop</code> to prevent this behavior.
@@ -89,7 +89,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-dropdown label="Settings" class="btn-outline">
+            <x-dropdown label="Settings">
                 {{-- By default any click closes dropdown --}}
                 <x-menu-item title="Close after click" />
 
@@ -104,28 +104,28 @@ class extends Component {
                 <x-menu-separator />
 
                 <x-menu-item @click.stop="">
-                    <x-checkbox label="Activate" />
+                    <x-checkbox label="Hard mode" hint="Make things harder" />
                 </x-menu-item>
 
                 <x-menu-item @click.stop="">
-                    <x-toggle label="Sleep mode" right />
+                    <x-checkbox label="Transparent checkout" hint="Make things easier" />
                 </x-menu-item>
             </x-dropdown>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Spinner" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Spinner" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
-            <x-dropdown label="Settings" class="btn-outline">
+            <x-dropdown label="Settings">
                 <x-menu-item title="Spinner" wire:click.stop="delete2" spinner="delete2" />
                 <x-menu-item title="Spinner" wire:click.stop="delete3" spinner="delete3" icon="o-trash" />
             </x-dropdown>
         @endverbatim
     </x-code>
 
-    <x-anchor title="No anchor" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No anchor" size="text-xl" class="mt-14" />
 
     <p>
         By default, this component works with Alpine's anchor plugin.

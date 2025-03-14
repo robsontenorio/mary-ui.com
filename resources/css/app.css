@@ -1,69 +1,96 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@plugin "daisyui" {
+    themes: light --default, dark --prefersdark, retro, aqua;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../../app/**/**/*.php";
+@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
 
 p {
-    @apply my-5 leading-8
+    @apply my-5 leading-8 text-base-content/70
 }
 
-#marySpotlight > div {
-    @apply pt-1
-}
+/**
+* Docs `a` tag
+*/
 
-#marySpotlight a {
-    @apply !no-underline
-}
-
-.docs > ul li {
-    @apply list-disc ml-10 pb-2
-}
-
-.docs > :not(h1, h2, h3, h4, h5) a {
-    @apply link
+.docs a {
+    @apply underline
 }
 
 .docs .mockup a, .docs .mary-header-anchor a, .api-generator a {
     @apply !no-underline
 }
 
-.landing pre {
-    @apply !my-0
+/**
+* Docs `ul`/`li` tags
+*/
+
+.docs > ul li {
+    @apply list-disc ml-10 pb-2
+    text-base-content/70
 }
 
-/* Hide elements from <x-code> component when necessary */
+
+/**
+* Hide some elements on code blocks
+*/
 .docs-hide {
     @apply hidden
 }
 
-/* Adjust for anchor links considering top nav height */
+
+/**
+* Adjust for anchor links considering top nav height
+*/
+
 .mary-header-anchor {
-    @apply scroll-mt-24
+    @apply scroll-mt-30
 }
+
+/**
+* Spotlight
+*/
+
+#marySpotlight a {
+    @apply no-underline
+}
+
+/**
+* Mary Table paginator
+*/
 
 .mary-table-pagination span[aria-current="page"] > span {
     @apply bg-primary text-base-100
 }
 
-.mary-table-pagination span[aria-disabled="true"] span {
-    @apply bg-inherit
-}
-
 .mary-table-pagination button {
-    @apply bg-base-100
+    @apply cursor-pointer
 }
 
-.cropper-point {
-    width: 10px !important;
-    height: 10px !important;
+/* Just for the website */
+.mary-table-pagination p {
+    @apply my-0
 }
 
+/**
+* Image Library landing page demo
+*/
 
-#image-library-landing-demo label {
-    @apply text-base-100
-}
-
-#image-library-landing-demo .label-text-alt {
+#image-library-landing-demo .fieldset-label {
     @apply text-base-100
 }
 
@@ -71,6 +98,22 @@ p {
     @apply bg-base-100 rounded-lg
 }
 
+#image-library-landing-demo .progress {
+    @apply !progress-neutral
+}
+
+/**
+* Cropper
+*/
+
+.cropper-point {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+/**
+ * EasyMDE demo
+ */
 
 .EasyMDEContainer h1 {
     @apply text-4xl font-bold mb-5
@@ -84,35 +127,42 @@ p {
     @apply text-lg font-bold mb-3
 }
 
-/*
- Margin and rounding are personal preferences,
- overflow-x-auto is recommended.
+.EasyMDEContainer .CodeMirror {
+    @apply bg-base-100 text-base-content
+}
+
+.EasyMDEContainer .CodeMirror {
+    @apply bg-base-100 text-base-content
+}
+
+.EasyMDEContainer .CodeMirror-cursor {
+    @apply border border-b-base-100
+}
+
+.EasyMDEContainer .editor-toolbar > button:hover, .EasyMDEContainer .editor-toolbar > .active {
+    @apply bg-base-100 text-base-content
+}
+
+/**
+* Torchlight style and `code`/`pre` tags
 */
+
+.landing pre {
+    @apply !my-0
+}
+
 pre {
     @apply my-4 rounded-lg overflow-x-auto;
 }
 
-/*
- Add some vertical padding and expand the width
- to fill its container. The horizontal padding
- comes at the line level so that background
- colors extend edge to edge.
-*/
 pre code.torchlight {
     @apply block rounded-lg py-4 min-w-max text-sm;
 }
 
-/*
- Horizontal line padding.
-*/
 pre code.torchlight .line {
     @apply px-4 py-0.5;
 }
 
-/*
- Push the code away from the line numbers and
- summary caret indicators.
-*/
 pre code.torchlight .line-number,
 pre code.torchlight .summary-caret {
     @apply mr-4;

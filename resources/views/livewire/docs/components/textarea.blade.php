@@ -21,17 +21,17 @@ class extends Component {
         If you need a rich text editor check the <a href="/docs/components/editor" wire:navigate>Editor</a> component.
     </x-alert>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
             <x-textarea
-                label="Bio"
+                label="Biography"
                 wire:model="bio"
                 placeholder="Your story ..."
                 hint="Max 1000 chars"
                 rows="5"
-                inline />
+            />
         @endverbatim
     </x-code>
 </div>

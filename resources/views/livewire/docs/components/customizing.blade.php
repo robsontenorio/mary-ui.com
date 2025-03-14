@@ -21,4 +21,6 @@ new #[Title('Customizing')] class extends Component {
         <li><a href="https://daisyui.com/docs/themes" target="_blank">Themes</a></li>
     </ul>
 
+    <div class="pb-96"></div>
+
 </div>

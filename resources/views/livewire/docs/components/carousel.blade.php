@@ -14,7 +14,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Carousel" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <p>
         It supports swipe gestures on mobile.
@@ -43,7 +43,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No indicators" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No indicators" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -67,7 +67,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No arrows" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No arrows" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -92,7 +92,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Full" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Full" size="text-xl" class="mt-14" />
     <p>
         Play around removing some attributes. The only required attribute is <code>image</code>.
     </p>
@@ -129,7 +129,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom slot" size="text-xl" class="mt-14" />
     <p>
         By using the special blade directive <code>&#64;scope</code> you have access to the current item from loop.
         Notice also you have access to the Laravel`s <code>$loop</code> variable.

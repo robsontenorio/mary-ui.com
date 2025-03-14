@@ -23,8 +23,8 @@ class extends Component {
 <div>
 
     <x-anchor title="Input" />
-
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -38,7 +38,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="States" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="States" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -48,15 +48,15 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Inline" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Inline" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-input label="Inline label" inline />
+            <x-input label="Inline label" placeholder="Type here" inline />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Password" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Password" size="text-xl" class="mt-14" />
 
     <p>
         Notice all above attributes will work with the password component.
@@ -71,7 +71,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Currency" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Currency" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -86,7 +86,7 @@ class extends Component {
 
     <x-code class="grid gap-8">
         @verbatim('docs')
-            <x-input label="Default money" wire:model="money1" prefix="USD" money inline />
+            <x-input label="Default money" wire:model="money1" prefix="USD" money />
 
             {{-- Notice that `locale` accepts any valid locale --}}
             <x-input
@@ -94,33 +94,30 @@ class extends Component {
                 wire:model="money2"
                 suffix="R$"
                 money
-                inline
                 locale="pt-BR" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-8">
+    <x-code class="grid gap-5">
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(5)->get();
-            @endphp
-
+            @php                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]
+            @endphp                                             <!-- [tl! .docs-hide] -->
             <x-input label="Prepend a select">
                 <x-slot:prepend>
-                    {{-- Add `rounded-e-none` class (RTL support) --}}
-                    <x-select icon="o-user" :options="$users" class="rounded-e-none bg-base-200" />
+                    {{-- Add `join-item` to all prepended elements --}}
+                    <x-select icon="o-user" :options="$users" class="join-item bg-base-200" />
                 </x-slot:prepend>
             </x-input>
 
             <x-input label="Append a button">
                 <x-slot:append>
-                    {{-- Add `rounded-s-none` class (RTL support) --}}
-                    <x-button label="I am a button" icon="o-check" class="btn-primary rounded-s-none" />
+                    {{-- Add `join-item` to all appended elements --}}
+                    <x-button label="I am a button" class="btn-primary join-item" />
                 </x-slot:append>
             </x-input>
-
         @endverbatim
     </x-code>
 </div>

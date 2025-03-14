@@ -11,23 +11,14 @@ new #[Title('Layout')] class extends Component {
     <x-anchor title="Layout" />
 
     <p>
-        You can play around by placing <strong>daisyUI/Tailwind</strong> classes on components or slots, from the examples below.
-        Also, try to entirely remove some components or slots.
-    </p>
-    <p>
-        You are free to make your own layout decision. But here is a suggestion to quickly get started. The default Livewire app template lives in
-        <code>views/components/layouts/app.blade.php</code>.
+        You can play around with <strong>daisyUI/Tailwind</strong> classes on the following examples.
+        The default Livewire app template lives in <code>views/components/layouts/app.blade.php</code>.
     </p>
 
-    <x-alert icon="o-light-bulb">
-        If you have used the <strong>automatic installer</strong> in a brand-new project without Jetstream/Breeze
-        you already have the "Only sidebar" layout in place.
-    </x-alert>
-
-    <x-anchor title="Only sidebar" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Only sidebar" size="text-xl" class="mt-14" />
 
     <p>
-        This layout has only a collapsible Sidebar. It fits nicely for an "enterprise layout", which needs more vertical spacing.
+        This layout has only a collapsible sidebar and <b>it is already on your project</b>.
     </p>
 
     <x-code no-render>
@@ -41,7 +32,7 @@ new #[Title('Layout')] class extends Component {
                 @vite(['resources/css/app.css', 'resources/js/app.js'])
             </head>
 
-            <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200">
+            <body class="min-h-screen font-sans antialiased bg-base-200">
 
                 {{-- NAVBAR mobile only --}}
                 <x-nav sticky class="lg:hidden">
@@ -99,7 +90,7 @@ new #[Title('Layout')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="With Navbar" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="With Navbar" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
