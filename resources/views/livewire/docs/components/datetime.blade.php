@@ -22,7 +22,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Date Time" />
 
-    <x-anchor title="Native HTML" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Native HTML" size="text-xl" class="mt-14" />
 
     <p>
         If you have no constraints regarding dates' selection, just stick with this approach, which renders nice natively on all devices and covers most of the use cases.

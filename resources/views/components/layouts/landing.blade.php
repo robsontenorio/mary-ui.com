@@ -10,20 +10,20 @@
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
     {{--  Meta description  --}}
-    <meta name="description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
+    <meta name="description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
-    <meta property="og:description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
+    <meta property="og:description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-03">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
-    <meta property="twitter:description" content="Gorgeous Livewire UI components styled with daisyUI + Tailwind">
+    <meta property="twitter:description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2024-03-03">
 
     {{--  Currency  --}}
@@ -76,18 +76,16 @@
         </x-slot:brand>
         <x-slot:actions class="flex !gap-1 lg:!gap-4">
             <span class="hidden lg:inline-flex gap-4">
-                <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
-                <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
-                <x-button label="News" icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external responsive />
+                <x-button label="Bootcamp" link="/bootcamp/01" class="btn-ghost" />
+                <x-button label="Docs" link="/docs/installation" class="btn-ghost" />
+                <x-button label="News" link="https://twitter.com/robsontenorio" class="btn-ghost" />
+                <x-button label="Source" link="https://github.com/robsontenorio/mary" class="btn-ghost" external />
+                <x-button label="Sponsor" link="https://github.com/sponsors/robsontenorio" external class="btn-ghost text-pink-500" />
             </span>
 
-            <x-button label="Source" icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm " external responsive />
-
-            <span class="hidden lg:inline-flex">
-                <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
-            </span>
-
+            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
+            <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
+            <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
             <div id="doc-search" class="mr-2 lg:mr-8">...</div>
         </x-slot:actions>
     </x-nav>
@@ -97,10 +95,14 @@
             {{ $slot }}
         </x-slot:content>
         <x-slot:footer>
-            <hr class="border-base-300" />
-            <div class="justify-center items-center flex my-10">
-                <x-mary-brand />
-                <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
+            <hr class="border-base-content/10 my-10" />
+
+            <div class="text-center text-sm text-base-content/70 pb-10">
+                Made with
+                <x-icon name="o-heart" class="text-pink-500 w-4 h-4" />
+                by
+                <a href="https://x.com/robsontenorio" class="underline">Robson Tenório</a> and <a href="https://github.com/robsontenorio/mary" class="underline">contributors</a>.
+                <x-button icon="fab.github" link="" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
             </div>
         </x-slot:footer>
     </x-main>

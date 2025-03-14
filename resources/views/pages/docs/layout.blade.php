@@ -24,7 +24,7 @@ new #[Title('Layout')] class extends Component {
         you already have the "Only sidebar" layout in place.
     </x-alert>
 
-    <x-anchor title="Only sidebar" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Only sidebar" size="text-xl" class="mt-14" />
 
     <p>
         This layout has only a collapsible Sidebar. It fits nicely for an "enterprise layout", which needs more vertical spacing.
@@ -41,7 +41,7 @@ new #[Title('Layout')] class extends Component {
                 @vite(['resources/css/app.css', 'resources/js/app.js'])
             </head>
 
-            <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200">
+            <body class="min-h-screen font-sans antialiased bg-base-200">
 
                 {{-- NAVBAR mobile only --}}
                 <x-nav sticky class="lg:hidden">
@@ -99,7 +99,7 @@ new #[Title('Layout')] class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="With Navbar" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="With Navbar" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')

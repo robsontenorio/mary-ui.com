@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb28465be64e574775cf8566e973dcdc",
+    "content-hash": "58b8ebe0612387e568a03c48b9510f20",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4233,12 +4233,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "d51d8aefbc8e0a0b6b0471cc0cfa6c68de893534"
+                "reference": "e74ccdf79e6e85c2dac51419bc9495b80a1e9ba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/d51d8aefbc8e0a0b6b0471cc0cfa6c68de893534",
-                "reference": "d51d8aefbc8e0a0b6b0471cc0cfa6c68de893534",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/e74ccdf79e6e85c2dac51419bc9495b80a1e9ba4",
+                "reference": "e74ccdf79e6e85c2dac51419bc9495b80a1e9ba4",
                 "shasum": ""
             },
             "require": {
@@ -4278,7 +4278,7 @@
                     "homepage": "https://github.com/robsontenorio"
                 }
             ],
-            "description": "Gorgeous Livewire UI components styled with daisyUI + Tailwind",
+            "description": "Gorgeous UI components for Livewire powered by daisyUI and Tailwind",
             "homepage": "https://mary-ui.com",
             "keywords": [
                 "DaisyUI",
@@ -4312,7 +4312,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-13T04:07:35+00:00"
+            "time": "2025-03-14T03:05:51+00:00"
         },
         {
             "name": "symfony/clock",

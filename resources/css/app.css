@@ -20,7 +20,7 @@
 }
 
 p {
-    @apply my-5 leading-8
+    @apply my-5 leading-8 text-base-content/70
 }
 
 /**
@@ -41,6 +41,7 @@ p {
 
 .docs > ul li {
     @apply list-disc ml-10 pb-2
+    text-base-content/70
 }
 
 
@@ -57,7 +58,7 @@ p {
 */
 
 .mary-header-anchor {
-    @apply scroll-mt-24
+    @apply scroll-mt-30
 }
 
 /**

@@ -106,7 +106,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
             <div class="text-xl lg:text-4xl lg:leading-12 justify-self-auto m-auto">
                 <div>
-                    Gorgeous components for <b>Livewire</b>
+                    Gorgeous UI components for <b>Livewire</b>
                 </div>
                 <div>
                     powered by <b>daisyUI</b> and <b>Tailwind</b>
@@ -182,7 +182,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     <div class="px-5 lg:px-20 mt-10 pt-10 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
         <div class="font-extrabold text-4xl pt-20 text-right">
-            <span class="underline decoration-pink-500">Delightful demos</span>
+            <span class="underline decoration-pink-500">Remastered demos</span>
         </div>
 
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">

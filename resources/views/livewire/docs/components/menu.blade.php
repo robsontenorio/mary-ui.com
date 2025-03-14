@@ -19,7 +19,7 @@ class extends Component {
         sidebar slot.
     </p>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
@@ -41,7 +41,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Separator and Sub-menus" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Separator and Sub-menus" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
@@ -87,7 +87,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Enabled state" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Enabled state" size="text-xl" class="mt-14" />
     <p>
         You can control the visibility of menus with the <code>enabled</code> attribute.
     </p>
@@ -109,7 +109,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Manual active state" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Manual active state" size="text-xl" class="mt-14" />
 
     <p>
         You can manually define the active menu item by placing <code>active</code> attribute and choose a custom active color with <code>active-bg-color</code> attribute.
@@ -125,7 +125,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Automatic active state" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Automatic active state" size="text-xl" class="mt-14" />
 
     <p>
         You can automatically activate a menu item when current route matches the base <code>link</code> and its nested route variations by using the <code>activate-by-route</code>
@@ -187,7 +187,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
@@ -201,7 +201,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Cloud providers" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Cloud providers" size="text-xl" class="mt-14" />
 
     <p>
         Some cloud providers put your app behind a proxy and force all routes to <strong>https</strong>.

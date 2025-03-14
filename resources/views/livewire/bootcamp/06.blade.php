@@ -14,92 +14,19 @@ class extends Component {
     <x-anchor title="Authentication" />
 
     <p>
-        If you have a project with Jetstream/Breeze the maryUI installer adds a global prefix <code>x-mary-</code> on maryUI components to avoid naming collision.
-        You are ready to go, just add maryUI components to your project.
-    </p>
-
-    <x-anchor title="Trade-off" size="text-2xl" class="mt-10 !mb-5" />
-
-    <p>
-        Remember that starter kits add a dozen files that you probably will not use. You have to tweak and maintain
-        them by yourself, because they are copied into your project.
-    </p>
-
-    <p>
-        On the other hand you can think it is a waste of time to build everything from the ground.
-        But at least later you will have minimal code to maintain.
-    </p>
-
-    <ul>
-        <li><strong>Stater kit:</strong> works out of the box, but adds extra code to maintain.</li>
-        <li><strong>From the ground:</strong> needs extra time to setup, but adds minimal code.</li>
-    </ul>
-
-    <p>
-        Let's see how easy it is to implement exactly the features we need from the ground in no time, without starter kits.
+        Let's see how easy it is to implement authentication and registration features from the ground in no time, <b>without any starter kits.</b>
     </p>
     <ul>
-        <li>Layout</li>
-        <li>Components</li>
-        <li>Authentication</li>
-        <li>Register</li>
+        <li>Routes</li>
+        <li>Template</li>
+        <li>Login</li>
+        <li>Registration</li>
     </ul>
 
-    <x-alert icon="o-light-bulb" class="markdown my-10">
-        Go ahead and add Authentication and Register as described on the following sections.
-    </x-alert>
-
-    <x-anchor title="Layout" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Routes" size="text-xl" class="mt-14" />
 
     <p>
-        There's not much to say here. As you can see on this Bootcamp, maryUI ships with a default layout. You can look for another layout alternative in the docs, but this is very
-        personal.
-    </p>
-
-    <x-anchor title="Components" size="text-2xl" class="mt-10 !mb-5" />
-
-    <p>
-        The maryUI components provides a great DX and you don't have to worry about maintaining the components by yourself.
-    </p>
-
-    <p>
-        <strong>Breeze</strong>
-    </p>
-    <x-code no-render>
-        @verbatim('docs')
-            <div>
-                <x-input-label for="name" :value="__('Name')" />
-                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                <x-input-error :messages="$errors->get('name')" class="mt-2" />
-            </div>
-        @endverbatim
-    </x-code>
-
-    <p>
-        <strong>Jetstream</strong>
-    </p>
-    <x-code no-render>
-        @verbatim('docs')
-            <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
-        @endverbatim
-    </x-code>
-
-    <p>
-        <strong>maryUI</strong>
-    </p>
-    <x-code no-render>
-        @verbatim('docs')
-            <x-mary-input label="Name" wire:model="name" />
-        @endverbatim
-    </x-code>
-
-    <x-anchor title="Authentication" size="text-2xl" class="mt-10 !mb-5" />
-
-    <p>
-        Here is what <code>routes/web.php</code> looks like with Authentication.
+        Here is what <code>routes/web.php</code> looks like with authentication.
     </p>
     <ul>
         <li>Login route.</li>
@@ -142,8 +69,10 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
+    <x-anchor title="Template" size="text-xl" class="mt-14" />
+
     <p>
-        Create an empty layout at <code>resources/views/components/layouts/empty.blade.php</code> to use it as our login/registration template.
+        Create an new layout at <code>resources/views/components/layouts/empty.blade.php</code>. We are going to use this layout for the login and registration pages.
     </p>
 
     <x-code no-render>
@@ -156,7 +85,7 @@ class extends Component {
                 <meta name="csrf-token" content="{{ csrf_token() }}">
                 @vite(['resources/css/app.css', 'resources/js/app.js'])
             </head>
-            <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200">
+            <body class="min-h-screen font-sans antialiased bg-base-200">
                 {{-- You could elaborate the layout here --}}
                 {{-- The important part is to have a different layout from the main app layout --}}
                 <x-main full-width>
@@ -169,8 +98,10 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Login page" size="text-xl" class="mt-14" />
+
     <p>
-        And here is the login component.
+        Create the login component.
     </p>
 
     <x-code no-render language="zsh">
@@ -186,7 +117,7 @@ class extends Component {
             use Livewire\Volt\Component;
 
             new
-            #[Layout('components.layouts.empty')]       // <-- Here is the `empty` layout
+            #[Layout('components.layouts.empty')]       // [tl! highlight] <-- Here is the `empty` layout
             #[Title('Login')]
             class extends Component {
 
@@ -247,10 +178,10 @@ class extends Component {
         The default app layout shipped with maryUI shows the authenticated user and logout button for you.
     </p>
 
-    <x-anchor title="Register" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Registration page" size="text-xl" class="mt-14" />
 
     <p>
-        Add this <strong>public</strong> extra route to <code>web.php</code>.
+        Add this <strong>public</strong> route to <code>web.php</code>.
     </p>
 
     {{--@formatter:off--}}
@@ -258,7 +189,13 @@ class extends Component {
         @verbatim('docs')
             use Livewire\Volt\Volt;
 
+            // Public routes
             Volt::route('/register', 'register'); // [tl! highlight]
+
+            // Protected routes here
+            Route::middleware('auth')->group(function () {
+                // ...
+            });
 
         @endverbatim
     </x-code>
@@ -283,7 +220,7 @@ class extends Component {
             use Illuminate\Support\Facades\Hash;
 
             new
-            #[Layout('components.layouts.empty')]       // <-- The same `empty` layout
+            #[Layout('components.layouts.empty')]       // [tl! highlight] <-- The same `empty` layout
             #[Title('Registration')]
             class extends Component {
 

@@ -57,7 +57,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Alternative attributes" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
     <p>
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
@@ -80,7 +80,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disable options" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Disable options" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -102,7 +102,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <p>
         You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
@@ -128,7 +128,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Group" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Group" size="text-xl" class="mt-14" />
 
     <p>
         This component uses the native HTML grouped select.

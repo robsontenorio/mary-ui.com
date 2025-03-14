@@ -24,7 +24,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Button" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
     <p>
         You can apply any daisyUI/Tailwind style.
     </p>
@@ -56,7 +56,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Icons" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Icons" size="text-xl" class="mt-14" />
     <p>
         Icons left and right. See <a href="/docs/components/icon" wire:navigate>Icons</a>.
     </p>
@@ -69,7 +69,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Tooltips" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Tooltips" size="text-xl" class="mt-14" />
     <p>
         Tooltips are disabled on small screens.
     </p>
@@ -86,7 +86,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Badges" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Badges" size="text-xl" class="mt-14" />
     <br>
 
     <x-code class="flex flex-wrap gap-3">
@@ -97,7 +97,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Responsive" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Responsive" size="text-xl" class="mt-14" />
     <p>
         On small screens the label is hidden. Icon and badge are keep.
     </p>
@@ -110,7 +110,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Links" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Links" size="text-xl" class="mt-14" />
     <p>
         You can make a button act as a link by placing a <code>link</code> property. You can use all the options described above for ordinary buttons.
     </p>
@@ -128,7 +128,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Spinners" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Spinners" size="text-xl" class="mt-14" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         @verbatim('docs')

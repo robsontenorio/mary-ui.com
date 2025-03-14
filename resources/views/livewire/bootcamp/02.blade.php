@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Setup" />
 
-    <x-anchor title="Requirements" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Requirements" size="text-xl" class="mt-14" />
 
     <p>
         Make sure you a have a <strong>fresh Laravel 12+</strong> project up and running on your browser, <strong>without any starter kit</strong>.
@@ -31,10 +31,10 @@ class extends Component {
     </x-code>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceed, we recommend you to make a local commit on each step to keep track of what is going on. After you have Laravel up and running it is time to commit.
+        Before proceeding, make a local commit to keep track of what is going on.
     </x-alert>
 
-    <x-anchor title="Install maryUI" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Install maryUI" size="text-xl" class="mt-14" />
 
     <p>
         Make sure you have selected <strong>"Volt"</strong> during this install.
@@ -47,17 +47,12 @@ class extends Component {
     </x-code>
 
     <p>
-        Then, start the dev server.
+        Then, start the dev server and <strong>... check the browser</strong>.
     </p>
 
     <x-code no-render language="bash">
-        yarn dev # or `npm run dev`
+        yarn dev
     </x-code>
-
-    <p class="mb-10">
-        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... Check the browser!</strong>
-    </p>
 
     <p>
         We are using Livewire Volt, take a look at:
@@ -67,20 +62,20 @@ class extends Component {
         <li><code>resources/views/livewire/users/index.blade.php</code>.</li>
     </ul>
 
-    <img src="/bootcamp/02-a.png" class="rounded-lg shadow border border-base-300 my-10" />
+    <img src="/bootcamp/02-a.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Check the source code diff and commit it.
     </x-alert>
 
-    <x-anchor title="Improving the example" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Improving the example" size="text-xl" class="mt-14" />
 
     <p>
         You have a basic working example, but the <strong>data is hardcoded</strong>.
         Let's make it work with a real database and add some new models and relationships.
     </p>
 
-    <img src="/bootcamp/02-b.png" class="rounded-lg shadow border border-base-300 mb-10" />
+    <img src="/bootcamp/02-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed things up.
@@ -105,7 +100,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Check the source code diff and commit it.
+        Before proceeding, make a local commit to keep track of what is going on.
     </x-alert>
 
     <div class="text-right mt-10">

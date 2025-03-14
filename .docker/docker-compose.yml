@@ -1,6 +1,6 @@
 services:
     ######## APP ########
-    app:
+    mary-docs:
         build:
             context: ..
             dockerfile: .docker/Dockerfile

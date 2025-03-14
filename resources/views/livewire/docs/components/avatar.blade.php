@@ -37,7 +37,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
@@ -60,7 +60,7 @@ class extends Component {
     </x-code>
 
     {{--    <hr class="my-10" />--}}
-    {{--    <x-anchor title="API" size="text-2xl" class="mt-10 !mb-5" />--}}
+    {{--    <x-anchor title="API" size="text-xl" class="mt-14" />--}}
     {{--    <x-api-generator :class-name="Avatar::class" />--}}
     {{--    <div class="mb-64"></div>--}}
 </div>

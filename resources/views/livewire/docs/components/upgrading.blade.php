@@ -9,7 +9,7 @@ new #[Title('Upgrading')] class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to v2" />
 
-    <x-anchor title="Why" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Why" size="text-xl" class="mt-14" />
 
     <p>If you want to use <b>Laravel 12+</b> you should upgrade.</p>
 
@@ -20,12 +20,12 @@ new #[Title('Upgrading')] class extends Component {
         <li><b>maryUI 2</b> is here to stick to the new defaults.</li>
     </ul>
 
-    <x-anchor title="Important" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Important" size="text-xl" class="mt-14" />
     <p>
         There are some notable changes in Tailwind and daisyUI <b>you should be aware</b>. Please, refer to its own release notes and changelog for more information.
     </p>
 
-    <x-anchor title="Upgrade it" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Upgrade it" size="text-xl" class="mt-14" />
 
     <div class="collapse bg-base-100 border-base-300 border collapse-arrow">
         <input type="checkbox" />
@@ -45,7 +45,8 @@ new #[Title('Upgrading')] class extends Component {
 
             <x-code no-render language="bash">
                 @verbatim('docs')
-                    composer require robsontenorio/mary:^2.0
+                    # This will change after v2 release
+                    composer require robsontenorio/mary:V2.x-dev
                 @endverbatim
             </x-code>
 
@@ -123,7 +124,7 @@ new #[Title('Upgrading')] class extends Component {
         </div>
     </div>
 
-    <x-anchor title="Changelog" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Changelog" size="text-xl" class="mt-14" />
 
     <x-anchor title="Appearance" size="text-lg" class="!mb-5 mt-10" />
 
@@ -257,7 +258,7 @@ new #[Title('Upgrading')] class extends Component {
     {{--        composer require livewire/livewire--}}
     {{--    </x-code>--}}
 
-    {{--    <x-anchor title="Recent releases" size="text-2xl" class="mt-10 !mb-5" />--}}
+    {{--    <x-anchor title="Recent releases" size="text-xl" class="mt-14" />--}}
 
     {{--    <livewire:releases lazy />--}}
 </div>

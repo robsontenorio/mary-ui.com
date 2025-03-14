@@ -17,9 +17,9 @@ class extends Component {
         Let's build a nice form layout that contains a file upload and cropping components!
     </p>
 
-    <img src="/bootcamp/04-a.png" class="rounded-lg border border-base-300 shadow mb-10" />
+    <img src="/bootcamp/04-a.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
-    <x-anchor title="New Components & Routes" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="New Components & Routes" size="text-xl" class="mt-14" />
 
     Let's create some new Volt components by using the <code>class</code> syntax.
 
@@ -61,22 +61,22 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-button label="Menu docs" link="/docs/components/menu" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Menu docs" link="/docs/components/menu" icon="o-arrow-up-right" external class="btn-sm !no-underline" />
 
     <p>
         Here, we are making use of the <code>x-menu</code> and <code>x-menu-item</code> components. They work seamless among the default sidebar shipped by maryUI.
         Additionally, it keeps the correct menu item selected based on the user's current route and sub-routes, as they navigate deeply.
     </p>
 
-    <x-anchor title="Form components" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Form components" size="text-xl" class="mt-14" />
 
     <div class="flex gap-3">
-        <x-button label="Form docs" link="/docs/components/form" icon-right="o-arrow-up-right" external class=" btn-sm btn-outline !no-underline" />
-        <x-button label="Input docs" link="/docs/components/input" icon-right="o-arrow-up-right" external class=" btn-sm btn-outline !no-underline" />
-        <x-button label="Select docs" link="/docs/components/input" icon-right="o-arrow-up-right" external class=" btn-sm btn-outline !no-underline" />
+        <x-button label="Form docs" link="/docs/components/form" icon="o-arrow-up-right" external class=" btn-sm !no-underline" />
+        <x-button label="Input docs" link="/docs/components/input" icon="o-arrow-up-right" external class=" btn-sm !no-underline" />
+        <x-button label="Select docs" link="/docs/components/input" icon="o-arrow-up-right" external class=" btn-sm !no-underline" />
     </div>
 
-    <img src="/bootcamp/04-g.png" class="rounded-lg border border-base-300 shadow my-10" />
+    <img src="/bootcamp/04-g.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         First, we need to create a link from our table to the new edit component. This is easier than anything with the <code>x-table</code> component.
@@ -126,7 +126,7 @@ class extends Component {
         models.
     </p>
 
-    <img src="/bootcamp/04-aa.png" class="rounded-lg border border-base-300 shadow my-10" />
+    <img src="/bootcamp/04-aa.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     {{--@formatter:off--}}
     <x-code no-render>
@@ -208,7 +208,7 @@ class extends Component {
         Check in the browser if it is working... <strong>and if the form is not filled.</strong>
     </p>
 
-    <img src="/bootcamp/04-g.png" class="rounded-lg border border-base-300 shadow mb-10" />
+    <img src="/bootcamp/04-g.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         We can "fix" this by using the Livewire <code>mount()</code> method and its handy <code>fill()</code> method to fill
@@ -249,11 +249,11 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="File component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="File component" size="text-xl" class="mt-14" />
 
-    <x-button label="File docs" link="/docs/components/file" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="File docs" link="/docs/components/file" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-h.png" class="rounded-lg border border-base-300 shadow my-10" />
+    <img src="/bootcamp/04-h.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Let's make it cool and add a user avatar.
@@ -314,7 +314,7 @@ class extends Component {
         We stored it for you at <code>your-app/public/empty-user.jpg</code> during the Bootcamp setup.
     </p>
 
-    <img src="/bootcamp/04-hh.png" class="rounded-lg border border-base-300 shadow my-10" />
+    <img src="/bootcamp/04-hh.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         If you select an image and hit "Save" <strong>of course the image won't be uploaded.</strong> There are certainly many ways to do it, but here is a way to get started.
@@ -349,7 +349,7 @@ class extends Component {
         And how about cropping the avatar image?
     </p>
 
-    <img src="/bootcamp/04-hhh.png" class="rounded-lg border border-base-300 shadow mb-10" />
+    <img src="/bootcamp/04-hhh.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         First, add Cropper.js.
@@ -378,7 +378,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Better layout" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Better layout" size="text-xl" class="mt-14" />
 
     <p>
         That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty trick we use on all maryUI
@@ -386,7 +386,7 @@ class extends Component {
         Just place a nice image on the right side.
     </p>
 
-    <img src="/bootcamp/04-b.png" class="rounded-lg border border-base-300 shadow mb-10" />
+    <img src="/bootcamp/04-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -412,11 +412,11 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Choices component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Choices component" size="text-xl" class="mt-14" />
 
-    <x-button label="Choices docs" link="/docs/components/choices" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Choices docs" link="/docs/components/choices" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-i.png" class="rounded-lg border border-base-300 shadow my-10" />
+    <img src="/bootcamp/04-i.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         This component is intended to be used for building complex selection interfaces for single and multiple values. It also supports a frontend or server values
@@ -505,11 +505,11 @@ class extends Component {
         Pro tip: for larger lists use the <code>x-choices</code> component variation.
     </x-alert>
 
-    <x-anchor title="Rich Text Editor component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Rich Text Editor component" size="text-xl" class="mt-14" />
 
-    <x-button label="Rich Text Editor docs" link="/docs/components/editor" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Rich Text Editor docs" link="/docs/components/editor" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-j.png" class="rounded-lg border border-base-300 shadow my-10" />
+    <img src="/bootcamp/04-j.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         This component is a wrapper around <a href="https://www.tiny.cloud" target="_blank">TinyMCE,</a> and it automatically uploads images and files to <strong>local</strong>
@@ -566,14 +566,14 @@ class extends Component {
         Uploading images only works for <strong>authenticated users</strong> on your app. We will implement it on last section of the Bootcamp.
     </x-alert>
 
-    <x-anchor title="Better layout (2)" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Better layout (2)" size="text-xl" class="mt-14" />
 
     <p>
         If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes, like the example bellow, for clear group related information.
         This is just another alternative, so use the one that works best for you.
     </p>
 
-    <img src="/bootcamp/04-e.png" class="rounded-lg border border-base-300 shadow mb-10" />
+    <img src="/bootcamp/04-e.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -611,11 +611,11 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Display the avatar on Table component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Display the avatar on Table component" size="text-xl" class="mt-14" />
 
-    <x-button label="Avatar docs" link="/docs/components/avatar" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Avatar docs" link="/docs/components/avatar" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-c.png" class="rounded-lg border border-base-300 shadow mt-5 p-5" />
+    <img src="/bootcamp/04-c.png" class="rounded-lg border border-base-300 shadow mt-5 border-dashed" />
 
     <p>
         Move back to <code>users/index</code> and add a new column in the <code>$headers</code> property.
@@ -645,7 +645,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Challenge" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Challenge" size="text-xl" class="mt-14" />
 
     <p>
         We will not show you the <code>users/create</code> component because it is pretty much the same as <code>users/edit</code>, right?
@@ -655,7 +655,7 @@ class extends Component {
         Put a "create" button now and go ahead and implement it!
     </p>
 
-    <img src="/bootcamp/04-d.png" class="rounded-lg border border-base-300 shadow p-5" />
+    <img src="/bootcamp/04-d.png" class="rounded-lg border border-base-300 border-dashed shadow" />
 
     <x-code no-render>
         @verbatim('docs')

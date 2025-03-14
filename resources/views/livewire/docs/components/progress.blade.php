@@ -23,7 +23,7 @@ class extends Component {
         If you need rich progress charts see <a href="/docs/components/chart" wire:navigate>Chart</a> component.
     </x-alert>
 
-    <x-anchor title="Loading" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Loading" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-8">
         @verbatim('docs')
@@ -36,7 +36,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Bars" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Bars" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-8">
         @verbatim('docs')
@@ -47,7 +47,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Radial" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Radial" size="text-xl" class="mt-14" />
 
     <x-code class="flex flex-wrap gap-8">
         @verbatim('docs')
@@ -61,7 +61,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Special <HR>" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Special <HR>" size="text-xl" class="mt-14" />
 
     <p>
         It is intended to be part of layout, but acts as an indeterminate progress indicator to any target or specific targets.

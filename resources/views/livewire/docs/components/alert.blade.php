@@ -40,7 +40,7 @@ class extends Component {
     </x-code>
 
     {{--    <hr class="my-10 border-base-300" />--}}
-    {{--    <x-anchor title="API" size="text-2xl" class="mt-10 !mb-5" />--}}
+    {{--    <x-anchor title="API" size="text-xl" class="mt-14" />--}}
     {{--    <x-api-generator :class-name="Alert::class" />--}}
     {{--    <div class="mb-64"></div>--}}
 </div>

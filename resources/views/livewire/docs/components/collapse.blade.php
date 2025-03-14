@@ -21,7 +21,7 @@ class extends Component {
         This component can be used for showing and hiding content. It can be used standalone or wrapped into the "Accordion" component.
     </p>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -36,7 +36,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Livewire" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Livewire" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -47,7 +47,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Style" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Style" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -62,7 +62,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No icon" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="No icon" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -77,7 +77,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Accordion" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Accordion" size="text-xl" class="mt-14" />
 
     <p>
         You can group multiple <code>x-collapse</code> by wrapping it on a <code>x-accordion</code> component.

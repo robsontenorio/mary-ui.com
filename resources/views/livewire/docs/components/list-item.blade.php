@@ -42,7 +42,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots and other attributes" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Slots and other attributes" size="text-xl" class="mt-14" />
 
     <p>
         You can override all slots. It also supports nested properties.

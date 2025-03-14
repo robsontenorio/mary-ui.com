@@ -18,7 +18,7 @@ class extends Component {
         This component only works with the <b>main layout</b> component.
     </x-alert>
 
-    <x-anchor title="Attributes" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Attributes" size="text-xl" class="mt-14" />
 
     <!-- @formatter:off -->
     <x-code no-render>
@@ -37,7 +37,7 @@ class extends Component {
     </x-code>
     <!-- @formatter:on -->
 
-    <x-anchor title="Right side" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Right side" size="text-xl" class="mt-14" />
 
     <p>
         By default, the sidebar is on the <b>left side</b>. But you can easily move it to the right side by adding the <code>right</code> attribute.

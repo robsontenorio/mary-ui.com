@@ -42,7 +42,7 @@ class extends Component {
         Take a look at <a href="/docs/components/select" wire:navigate>Select</a> for value selection.
     </x-alert>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -54,7 +54,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom Trigger" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Custom Trigger" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -69,7 +69,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Right alignment" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Right alignment" size="text-xl" class="mt-14" />
 
     <x-code class="flex justify-end">
         @verbatim('docs')
@@ -81,7 +81,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Click propagation" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Click propagation" size="text-xl" class="mt-14" />
 
     <p>
         By default, any click closes the dropdown. Just use <code>@click.stop</code> or <code>wire:click.stop</code> to prevent this behavior.
@@ -114,7 +114,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Spinner" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Spinner" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -125,7 +125,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No anchor" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="No anchor" size="text-xl" class="mt-14" />
 
     <p>
         By default, this component works with Alpine's anchor plugin.

@@ -23,7 +23,7 @@ class extends Component {
         toggle.
     </x-alert>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
     <p>
         Make sure your <code>app.css</code> has this settings.
@@ -46,7 +46,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5 items-center">
         @verbatim('docs')
@@ -57,7 +57,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Manual activation" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Manual activation" size="text-xl" class="mt-14" />
 
     <p>
         You can toggle theme from anywhere by dispatching a <code>mary-theme-toggle</code> event.
@@ -96,7 +96,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Custom theme toggle" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Custom theme toggle" size="text-xl" class="mt-14" />
 
     <x-alert icon="o-light-bulb">
         It is not expected to have more than one <strong>x-theme-toggle</strong> on the same page. Make sure to <strong>refresh the page</strong> while toying around with the theme

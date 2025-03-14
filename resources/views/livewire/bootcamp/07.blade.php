@@ -36,7 +36,7 @@ class extends Component {
         See you on <a href="https://twitter.com/robsontenorio" target="_blank">Twitter!</a>
     </p>
 
-    <div class="flex justify-between mt-10">
+    <div class="flex justify-between mt-10 mb-40">
         <x-button label="Jetstream & Breeze" link="/bootcamp/05" icon="o-arrow-left" class="!no-underline btn-ghost" />
     </div>
 </div>

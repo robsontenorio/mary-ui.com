@@ -18,7 +18,7 @@ class extends Component {
         This component is a wrapper around <a href="https://diff2html.xyz" target="_blank">diff2html</a> with a simpler API to quickly show diff between two strings.
     </p>
 
-    <x-anchor title="Install" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Install" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -33,7 +33,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Examples" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Examples" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')

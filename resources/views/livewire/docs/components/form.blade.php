@@ -98,7 +98,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Form" />
 
-    <x-anchor title="Basics" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basics" size="text-xl" class="mt-14" />
 
     <p>
         Once you submit a form you get for free:
@@ -131,7 +131,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No `separator`" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No `separator`" size="text-xl" class="mt-14" />
 
     <p>
         To avoid having the separator line above the actions slot, add <code>no-separator</code> attribute.
@@ -150,7 +150,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom error field" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom error field" size="text-xl" class="mt-14" />
     <p>
         By default, it uses the model name to retrieve the validation errors. If you want to display validation errors for a custom error field, you can use the
         <code>error-field</code> attribute.
@@ -178,7 +178,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Omit errors" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Omit errors" size="text-xl" class="mt-14" />
     <p>
         If for some reason you want to omit the error message, you can use the <code>omit-error</code> attribute.
     </p>
@@ -199,7 +199,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="First message only" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="First message only" size="text-xl" class="mt-14" />
     <p>
         If you have multiple validation messages for the same filed and want to show only the first error message, you can use the <code>first-error-only</code> attribute.
     </p>
@@ -231,7 +231,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Custom error style" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom error style" size="text-xl" class="mt-14" />
     <p>
         You can customize the error message style by using the <code>error-class</code> attribute.
     </p>
@@ -250,7 +250,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Full error bag" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Full error bag" size="text-xl" class="mt-14" />
     <p>
         As you can see above, all validation errors are automatically displayed for each input.
         Additionally, you can display <strong>entire error bag</strong> with <code>x-errors</code> component.

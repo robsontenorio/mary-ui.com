@@ -1,7 +1,7 @@
 {
     "name": "robsontenorio/mary-ui.com",
     "type": "project",
-    "description": "Gorgeous Livewire UI components styled with daisyUI + Tailwind",
+    "description": "Gorgeous UI components for Livewire powered by daisyUI and Tailwind",
     "keywords": [
         "laravel",
         "livewire3",
@@ -15,7 +15,7 @@
     "require": {
         "php": "^8.2|^8.3|^8.4",
         "davidhsianturi/blade-bootstrap-icons": "^1.5",
-        "laravel/framework": "^11.44",
+        "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "league/flysystem-aws-s3-v3": "^3.28",
         "livewire/livewire": "^3.6",

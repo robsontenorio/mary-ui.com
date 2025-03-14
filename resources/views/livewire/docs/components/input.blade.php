@@ -23,12 +23,8 @@ class extends Component {
 <div>
 
     <x-anchor title="Input" />
-
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Mostly features presented here also works for other input components.
-    </x-alert>
-
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 !mb-5" />
+    
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -42,7 +38,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="States" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="States" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -52,7 +48,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Inline" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Inline" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')
@@ -60,7 +56,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Password" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Password" size="text-xl" class="mt-14" />
 
     <p>
         Notice all above attributes will work with the password component.
@@ -75,7 +71,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Currency" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Currency" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -102,7 +98,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5">
         @verbatim('docs')

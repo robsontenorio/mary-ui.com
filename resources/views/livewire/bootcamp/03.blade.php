@@ -17,11 +17,11 @@ class extends Component {
         As you can see on the existing <code>users/index.blade.php</code> example component you can already sort and filter, but the data is hardcoded. Let's fix it now!
     </p>
 
-    <x-anchor title="Table component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Table component" size="text-xl" class="mt-14" />
 
-    <x-button label="Table docs" link="/docs/components/table" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Table docs" link="/docs/components/table" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/03-a.png" class="rounded-lg shadow border border-base-300 my-10" />
+    <img src="/bootcamp/03-a.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         The <code>x-table</code> is a powerful component. You can easily display data, paginate, customize rows using slots, or make it sortable, clickable, selectable or
@@ -58,7 +58,7 @@ class extends Component {
         Notice the <code>users.age</code> column is empty because we have removed it from migrations. Let's fix it on the next topic.
     </p>
 
-    <x-anchor title="Sorting" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Sorting" size="text-xl" class="mt-14" />
 
     <p>
         As you noticed on example source code, we have a <code>$sortBy</code> property to control the sorting column and its direction.
@@ -107,9 +107,9 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Pagination" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Pagination" size="text-xl" class="mt-14" />
 
-    <img src="/bootcamp/03-b.png" class="rounded-lg shadow border border-base-300 my-10" />
+    <img src="/bootcamp/03-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
@@ -169,7 +169,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Clear filters" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Clear filters" size="text-xl" class="mt-14" />
 
     <p>
         There is a "bug" on pagination...
@@ -225,7 +225,7 @@ class extends Component {
         Pro tip: You could create a trait like <code>ClearsFilters</code> with those methods above to reuse the logic.
     </x-alert>
 
-    <x-anchor title="Table CSS" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Table CSS" size="text-xl" class="mt-14" />
 
     <p>
         You can apply CSS on the table headers and make it responsive just like that. Check it at mobile size.
@@ -241,9 +241,9 @@ class extends Component {
     <p>You can even decorate rows and cells with custom CSS, in addition to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for
         more.</p>
 
-    <x-anchor title="Header component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Header component" size="text-xl" class="mt-14" />
 
-    <x-button label="Header docs" link="/docs/components/header" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Header docs" link="/docs/components/header" icon="o-link" external class="btn-sm !no-underline" />
 
     <p>
         Check the example's source code to see how useful the<code>x-header</code> component is. It includes a progress indicator, has built-in layout
@@ -257,9 +257,9 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Toast component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Toast component" size="text-xl" class="mt-14" />
 
-    <x-button label="Toast docs" link="/docs/components/toast" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Toast docs" link="/docs/components/toast" icon="o-link" external class="btn-sm !no-underline" />
 
     <p>
         The maryUI installer already set up <code>x-toast</code> for you.
@@ -278,11 +278,11 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Drawer component" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Drawer component" size="text-xl" class="mt-14" />
 
-    <x-button label="Drawer docs" link="/docs/components/drawer" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Drawer docs" link="/docs/components/drawer" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/03-c.png" class="rounded-lg shadow border border-base-300 my-10" />
+    <img src="/bootcamp/03-c.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         The <code>x-drawer</code> component is a great way to avoid interrupting the users flow when it is necessary to quickly execute a secondary action.
@@ -337,7 +337,7 @@ class extends Component {
         Finally, place an <code>x-select</code> component inside the drawer, with a small CSS grid to make it look even better.
     </p>
 
-    <x-button label="Select docs" link="/docs/components/select" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
+    <x-button label="Select docs" link="/docs/components/select" icon="o-link" external class="btn-sm !no-underline" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -352,23 +352,23 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Challenge" size="text-2xl" class="mt-10 !mb-5" />
+    <x-anchor title="Challenge" size="text-xl" class="mt-14" />
 
-    <x-button label="Button docs" link="/docs/components/button" icon-right="o-arrow-up-right" external class="btn-outline btn-sm !no-underline" />
-
-    <img src="/bootcamp/03-d.png" class="rounded-lg shadow border border-base-300 my-10" />
+    <x-button label="Button docs" link="/docs/components/button" icon="o-link" external class="btn-sm !no-underline" />
 
     <p>
         If you are using a drawer you will probably have a few more filter options. In order to have a better UX it would be nice to display how many filters the user have
         selected.
     </p>
 
+    <img src="/bootcamp/03-d.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+
     <p>
         Tip: use the button <code>badge</code> property and an extra method on your component to count how many filters are filled.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
-        Before proceeding, we recommend that you make a local commit in order to keep track of what is going on.
+        Before proceeding, make a local commit to keep track of what is going on.
     </x-alert>
 
     <div class="flex justify-between mt-10">
