@@ -87,39 +87,40 @@ new #[Title('Upgrading')] class extends Component {
 
             <p>Edit the top of your <code>app.css</code> file to look like this. Remember this is the <b>Tailwind 4 preferred setup</b>. Not daisyUI or maryUI.</p>
 
+            <!-- @formatter:off -->
             <x-code no-render language="blade">
                 @verbatim('docs')
-                    /* Remove these and any other `@tailwind` directives that if have it */
-                    @tailwind base;             <!-- [tl! remove] -->
-                    @tailwind components;       <!-- [tl! remove] -->
-                    @tailwind utilities;        <!-- [tl! remove] -->
-                    ...        <!-- [tl! remove] -->
+                /* Remove these and any other `@tailwind` directives if you have it */
+                @tailwind base;             <!-- [tl! remove] -->
+                @tailwind components;       <!-- [tl! remove] -->
+                @tailwind utilities;        <!-- [tl! remove] -->
+                ...        <!-- [tl! remove] -->
 
-                    /* Tailwind */
-                    @import "tailwindcss";      <!-- [tl! add] -->
+                /* Tailwind */
+                @import "tailwindcss";      <!-- [tl! add] -->
 
-                    /* daisyUI */
-                    @plugin "daisyui" {         <!-- [tl! add] -->
+                /* daisyUI */
+                @plugin "daisyui" {         <!-- [tl! add] -->
                     themes: light --default, dark --prefersdark;   <!-- [tl! add] -->
-                    }   <!-- [tl! add] -->
+                }   <!-- [tl! add] -->
 
-                    /* Dark theme variant support */
-                    @custom-variant dark (&:where(.dark, .dark *)); <!-- [tl! add] -->
+                /* maryUI */
+                @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php"; <!-- [tl! add] -->
 
-                    /* Laravel 12 defaults */
-                    @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php"; <!-- [tl! add] -->
-                    @source "../../storage/framework/views/*.php"; <!-- [tl! add] -->
-                    @source "../**/*.blade.php"; <!-- [tl! add] -->
-                    @source "../**/*.js"; <!-- [tl! add] -->
-                    @source "../**/*.vue"; <!-- [tl! add] -->
+                /* Dark theme variant support */
+                @custom-variant dark (&:where(.dark, .dark *)); <!-- [tl! add] -->
 
-                    /* For maryUI */
-                    @source "../../app/**/**/*.php"; <!-- [tl! add] -->
-                    @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php"; <!-- [tl! add] -->
+                /* Laravel 12 defaults */
+                @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php"; <!-- [tl! add] -->
+                @source "../../storage/framework/views/*.php"; <!-- [tl! add] -->
+                @source "../**/*.blade.php"; <!-- [tl! add] -->
+                @source "../**/*.js"; <!-- [tl! add] -->
+                @source "../**/*.vue"; <!-- [tl! add] -->
 
-                    /* Your styles goes here ... */
-                    /* ... */
+                /* Your styles goes here ... */
+                /* ... */
                 @endverbatim
+                <!-- @formatter:on -->
             </x-code>
         </div>
     </div>
