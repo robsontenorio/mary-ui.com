@@ -95,11 +95,12 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-warning/10 text-center p-2 text-sm">--}}
-    {{--        <x-icon name="o-sparkles" class="h-4 w-4" />--}}
-    {{--        maryUI 2 beta1 available!--}}
-    {{--        <a href="/docs/upgrading" class="underline font-black">Try it &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-primary/10 text-center p-2 text-sm">
+        <x-icon name="o-fire" class="h-4 w-4" />
+        v2 beta docs.
+        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>
+        <a href="https://mary-ui.com" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -220,7 +221,6 @@
                 <x-icon name="o-heart" class="text-pink-500 w-4 h-4" />
                 by
                 <a href="https://x.com/robsontenorio" class="underline">Robson Tenório</a> and <a href="https://github.com/robsontenorio/mary" class="underline">contributors</a>.
-                <x-button icon="fab.github" link="" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
             </div>
         </x-slot:content>
     </x-main>

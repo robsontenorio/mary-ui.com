@@ -9,6 +9,15 @@ new #[Title('Upgrading')] class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to v2" />
 
+    <x-alert title="This is a beta version. Some components can change before the final release (March 31st)." class="alert-warning" />
+
+    <x-anchor title="WIP" size="text-xl" class="mt-14" />
+    <ul>
+        <li>Migrate the "Choices" component.</li>
+        <li>Remaster the Bootcamp.</li>
+        <li>Remaster the demos.</li>
+    </ul>
+
     <x-anchor title="Why" size="text-xl" class="mt-14" />
 
     <p>If you want to use <b>Laravel 12+</b> you should upgrade.</p>
@@ -32,12 +41,11 @@ new #[Title('Upgrading')] class extends Component {
         <div class="collapse-title font-semibold">Using <code>app.css</code> (recommended)</div>
         <div class="collapse-content overflow-x-auto bg-base-200/70 px-8 border-t border-base-300">
 
-            <p>Upgrade to Laravel 12.</p>
+            <p>Upgrade to Laravel 12 (optional).</p>
 
             <x-code no-render language="bash">
                 @verbatim('docs')
-                    # Please, see the Laravel 12 upgrade guide.
-                    # It is a good time to upgrade Livewire as well.
+                    # It is a good time to upgrade all the things.
                 @endverbatim
             </x-code>
 
@@ -85,7 +93,7 @@ new #[Title('Upgrading')] class extends Component {
             </x-code>
             <!-- @formatter:on -->
 
-            <p>Edit the top of your <code>app.css</code> file to look like this. Remember this is the <b>Tailwind 4 preferred setup</b>. Not daisyUI or maryUI.</p>
+            <p>Edit the top of your <code>app.css</code> file to look like this. Remember this is the <b>Tailwind 4 preferred setup</b>, not daisyUI or maryUI.</p>
 
             <!-- @formatter:off -->
             <x-code no-render language="blade">
@@ -236,30 +244,4 @@ new #[Title('Upgrading')] class extends Component {
     @endverbatim
     </x-code>
     {{--@formatter:on--}}
-
-    {{--    <p>--}}
-    {{--        You should keep an eye on maryUI's <a href="https://github.com/robsontenorio/mary/releases">releases page</a> to stay updated.--}}
-    {{--    </p>--}}
-
-    {{--    <x-code no-render language="bash">--}}
-    {{--        composer require robsontenorio/mary--}}
-    {{--    </x-code>--}}
-
-    {{--    <p>--}}
-    {{--        As maryUI uses <strong>daisyUI</strong> and <strong>Tailwind</strong> you should consider as well upgrade regularly their NPM packages and dependencies.--}}
-    {{--    </p>--}}
-
-    {{--    <x-code no-render language="bash">--}}
-    {{--        yarn add --D daisyui tailwindcss postcss autoprefixer--}}
-    {{--    </x-code>--}}
-
-    {{--    <p>For sure, you want to keep Livewire updated as well.</p>--}}
-
-    {{--    <x-code no-render language="bash">--}}
-    {{--        composer require livewire/livewire--}}
-    {{--    </x-code>--}}
-
-    {{--    <x-anchor title="Recent releases" size="text-xl" class="mt-14" />--}}
-
-    {{--    <livewire:releases lazy />--}}
 </div>

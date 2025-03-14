@@ -27,6 +27,11 @@ new #[Title('Installation')] class extends Component {
 
     <x-anchor title="Automatic install" size="text-xl" class="mt-14 !mb-5" />
 
+    <p>
+        After installing make sure to check the <a href="/docs/layout" wire:navigate>Layout</a>
+        and <a href="/docs/layout" wire:navigate>Sidebar</a> docs.
+    </p>
+
     <x-code no-render language="bash">
         composer require robsontenorio/mary
 
@@ -44,13 +49,9 @@ new #[Title('Installation')] class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... You are done!</strong>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>You are done!</strong>
     </p>
-
-    <x-alert icon="o-light-bulb">
-        Go to the <a href="/docs/layout" wire:navigate>Layout</a> section to quickly get started.
-    </x-alert>
 
     <x-anchor title="Renaming components" size="text-xl" class="mt-14" />
     <p>

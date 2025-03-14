@@ -102,7 +102,6 @@
                 <x-icon name="o-heart" class="text-pink-500 w-4 h-4" />
                 by
                 <a href="https://x.com/robsontenorio" class="underline">Robson Tenório</a> and <a href="https://github.com/robsontenorio/mary" class="underline">contributors</a>.
-                <x-button icon="fab.github" link="" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
             </div>
         </x-slot:footer>
     </x-main>
