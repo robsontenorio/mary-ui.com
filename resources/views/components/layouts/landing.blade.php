@@ -86,7 +86,7 @@
             <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
             <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
             <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
-            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
+            {{--            <div id="doc-search" class="mr-2 lg:mr-8">...</div>--}}
         </x-slot:actions>
     </x-nav>
 
