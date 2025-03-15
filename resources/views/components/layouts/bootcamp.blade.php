@@ -50,11 +50,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-green-50 text-center p-2 text-sm dark:bg-base-300">--}}
-    {{--        <x-badge value="new" class="badge-sm bg-green-500 text-white" />--}}
-    {{--        The real time chat demo:--}}
-    {{--        <a href="https://ping.mary-ui.com" target="_blank" class="underline font-black">Ping &rarr;</a>--}}
-    {{--    </div>--}}
+    <div class="bg-warning/10 text-center p-2 text-sm">
+        <x-icon name="o-fire" class="h-4 w-4" />
+        maryUI v2 available!
+        <a href="https://v2.mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Try it &rarr;</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">

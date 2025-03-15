@@ -98,6 +98,13 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <img src="/daisy.png" class="w-9 h-12" />
             </div>
 
+            <span class="bg-warning/70 p-2 rounded text-sm px-4 mb-10">
+                <x-icon name="o-fire" class="h-4 w-4 mb-0.5" />
+                maryUI v2 beta available!
+                <a href="https://v2.mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Try it &rarr;</a>
+            </span>
+            <br><br>
+
             <div class="text-xl leading-10 lg:text-4xl lg:leading-relaxed">
                 Gorgeous <span class="underline decoration-green-400  rounded  font-bold">Laravel Blade UI Components</span>
                 <br>made for <span class="underline decoration-yellow-400  rounded  font-bold">Livewire 3</span>
