@@ -9,7 +9,7 @@ new #[Title('Upgrading')] class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to v2" />
 
-    <x-alert title="This is a beta version. Some components can change before the final release (March 31st)." class="alert-warning" />
+    <x-alert title="This is a beta version. Some components can change before the final release (March 31st)." class="bg-warning/40" />
 
     <x-anchor title="WIP" size="text-xl" class="mt-14" />
     <ul>

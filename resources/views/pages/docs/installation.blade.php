@@ -27,6 +27,11 @@ new #[Title('Installation')] class extends Component {
 
     <x-anchor title="Automatic install" size="text-xl" class="mt-14 !mb-5" />
 
+    <span class="rounded py-2 px-4 bg-warning/40 text-sm">
+        If you already have a <b>maryUI v1</b> you must follow the
+        <a href="/docs/upgrading">upgrade guide</a>, instead of installing again.
+    </span>
+
     <p>
         After installing make sure to check the <a href="/docs/layout" wire:navigate>Layout</a>
         and <a href="/docs/layout" wire:navigate>Sidebar</a> docs.
