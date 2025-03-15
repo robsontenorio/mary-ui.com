@@ -17,14 +17,14 @@
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
     <meta property="og:description" content="Laravel blade components for Livewire 3.">
-    <meta property="og:image" content="https://mary-ui.com/mary-banner.png">
+    <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2025-03-14">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
     <meta property="twitter:description" content="Laravel blade components for Livewire 3.">
-    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png">
+    <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2025-03-14">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
