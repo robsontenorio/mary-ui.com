@@ -36,6 +36,13 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="Upgrade it" size="text-xl" class="mt-14" />
 
+    <span class="rounded py-2 px-4 bg-warning/40 text-sm">
+        If you are starting a new project you must follow the
+        <a href="/docs/installation">installation guide</a> instead.
+    </span>
+
+    <br><br>
+
     <div class="collapse bg-base-100 border-base-300 border collapse-arrow">
         <input type="checkbox" />
         <div class="collapse-title font-semibold">Using <code>app.css</code> (recommended)</div>
