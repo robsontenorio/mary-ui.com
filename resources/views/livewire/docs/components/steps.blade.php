@@ -89,7 +89,7 @@ class extends Component {
     <x-anchor title="Style" size="text-xl" class="mt-14" />
 
     <p>
-        Remember if you are using deeper CSS classes than <code>steps-xxxx</code> provided by daisyUI you must configure Tailwind <strong>safelist</strong>.
+        Remember if you are using deeper CSS classes than <code>steps-xxxx</code> provided by daisyUI you must configure the Tailwind <strong>safelist</strong>.
     </p>
 
     <x-code>

@@ -23,13 +23,22 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-base-300">
-                <x-menu-item title="Home" icon="o-envelope" />
+            <x-menu class="border border-base-content/10 !w-64">
+                <x-menu-item title="Home" icon="o-home" />
 
-                <x-menu-item title="Messages" icon="o-paper-airplane" badge="78+" badge-classes="float-right" />
+                <x-menu-item title="Messages" icon="o-envelope" badge="1" badge-classes="badge-error badge-soft" />
 
-                <x-menu-item title="Hello" icon="o-sparkles" badge="new" badge-classes="!badge-warning" />
+                <x-menu-item title="My settings" icon="o-bolt" badge="new" badge-classes="float-right" />
+            </x-menu>
+        @endverbatim
+    </x-code>
 
+    <x-anchor title="Links" size="text-xl" class="mt-14" />
+
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu class="border border-base-content/10">
+                {{-- Default --}}
                 <x-menu-item title="Internal link" icon="o-arrow-down" link="/docs/components/alert" />
 
                 {{-- Notice `external` --}}
@@ -45,21 +54,18 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-base-300 w-64">
+            <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-item title="Hello" />
                 <x-menu-item title="There" />
 
-                {{-- Simple separator --}}
                 <x-menu-separator />
 
-                {{-- Submenu --}}
                 <x-menu-sub title="Settings" icon="o-cog-6-tooth">
                     <x-menu-item title="Wifi" icon="o-wifi" />
                     <x-menu-item title="Archives" icon="o-archive-box" />
                 </x-menu-sub>
 
-                {{-- Separator with title and icon --}}
-                <x-menu-separator title="Magic" icon="o-sparkles" />
+                <x-menu-separator />
 
                 <x-menu-item title="Wifi" icon="o-wifi" />
             </x-menu>
@@ -72,7 +78,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-base-300 w-96">
+            <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-sub title="Home" icon="o-home">
                     <x-menu-item title="Users" icon="o-user" />
                     <x-menu-item title="Folders" icon="o-folder" />
@@ -94,7 +100,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-dashed w-64">
+            <x-menu class="border border-base-content/10">
                 <x-menu-item title="Users" icon="o-user" />
 
                 {{-- Notice `enabled` --}}
@@ -112,15 +118,18 @@ class extends Component {
     <x-anchor title="Manual active state" size="text-xl" class="mt-14" />
 
     <p>
-        You can manually define the active menu item by placing <code>active</code> attribute and choose a custom active color with <code>active-bg-color</code> attribute.
+        You can manually define the active menu item by placing <code>active</code> attribute.
     </p>
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu active-bg-color="bg-purple-500/10" class="border border-dashed">
+            <x-menu class="border border-base-content/10">
+                <x-menu-item title="Hey" />
+
                 {{-- Notice `active` --}}
                 <x-menu-item title="Hi" active />
-                <x-menu-item title="Some style" class="text-purple-500 font-bold" />
+
+                <x-menu-item title="You" />
             </x-menu>
         @endverbatim
     </x-code>
@@ -148,9 +157,9 @@ class extends Component {
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
             {{-- Notice `activate-by-route` --}}
-            <x-menu activate-by-route class="border border-dashed">
+            <x-menu activate-by-route class="border border-base-content/10">
                 {{-- It is active because you are right now browsing this url --}}
-                <x-menu-item title="Home" link="/docs/components/menu" />
+                <x-menu-item title="Menu component" link="/docs/components/menu" />
 
                 <x-menu-item title="Party" />
             </x-menu>
@@ -187,15 +196,35 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Custom style" size="text-xl" class="mt-14" />
+
+    <p>
+        You can define any style for the current active menu with <code>active-bg-color</code>. Also, for each menu item you can freely place any CSS.
+    </p>
+
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu activate-by-route active-bg-color="font-black" class="border border-base-content/10 !w-64">
+                <x-menu-item title="Hello" />
+                <x-menu-item title="There" />
+
+                <x-menu-separator />
+
+                <x-menu-sub title="Docs" icon="o-book-open">
+                    <x-menu-item title="Table" />
+                    <x-menu-item title="Menu" link="/docs/components/menu" />
+                </x-menu-sub>
+            </x-menu>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
-            <x-menu class="border border-dashed">
-                <x-menu-item icon="o-chart-pie">
-                    Charts
-                    <x-badge value="2" class="badge-soft badge-sm w-1 rounded-full" />
-                    <x-icon name="o-heart" class="text-secondary" />
+            <x-menu class="border border-base-content/10 !w-64">
+                <x-menu-item>
+                    My <b>settings</b>
                 </x-menu-item>
             </x-menu>
         @endverbatim

@@ -127,7 +127,7 @@
     <x-toast />
 
     {{-- Spotlight --}}
-    <x-spotlight />
+    <x-spotlight search-text="Type 'a' ..." />
 
     {{-- Star --}}
     <script async defer src="https://buttons.github.io/buttons.js"></script>

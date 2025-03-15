@@ -114,7 +114,7 @@ class extends Component {
 
     <p>
         You can trigger the Spotlight component by dispatching a <code>mary-search-open</code> event.
-        Probably you want to put this search button inside a navbar. In this case place an empty <code>x-data</code> as describe bellow.
+        Probably you want to put this search button inside a navbar. In this case place an empty <code>x-data</code> as describe below.
     </p>
 
     <x-button label="Search" icon="o-magnifying-glass" @click.stop="$dispatch('mary-search-open')" />

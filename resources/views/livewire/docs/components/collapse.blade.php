@@ -47,15 +47,15 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Style" size="text-xl" class="mt-14" />
+    <x-anchor title="Style and alternative icon" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
             <x-collapse collapse-plus-minus>
-                <x-slot:heading class="!bg-blue-50 italic text-red-500">
+                <x-slot:heading class="bg-warning/20">
                     How ...
                 </x-slot:heading>
-                <x-slot:content class="!bg-blue-100">
+                <x-slot:content class="bg-primary/10">
                     <div class="mt-5">Are you?</div>
                 </x-slot:content>
             </x-collapse>

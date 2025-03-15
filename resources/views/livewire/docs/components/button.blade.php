@@ -25,9 +25,6 @@ class extends Component {
     <x-anchor title="Button" />
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
-    <p>
-        You can apply any daisyUI/Tailwind style.
-    </p>
 
     <x-code class="flex flex-wrap gap-3 items-baseline">
         @verbatim('docs')
@@ -57,9 +54,6 @@ class extends Component {
     </x-code>
 
     <x-anchor title="Icons" size="text-xl" class="mt-14" />
-    <p>
-        Icons left and right. See <a href="/docs/components/icon" wire:navigate>Icons</a>.
-    </p>
 
     <x-code class="flex flex-wrap gap-3">
         @verbatim('docs')
@@ -99,7 +93,7 @@ class extends Component {
 
     <x-anchor title="Responsive" size="text-xl" class="mt-14" />
     <p>
-        On small screens the label is hidden. Icon and badge are keep.
+        On small screens the label is hidden. Icon and badge are kept.
     </p>
 
     <x-code class="flex flex-wrap gap-3">

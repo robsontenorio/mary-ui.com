@@ -308,7 +308,7 @@ class extends Component {
     <x-anchor title="Sort" size="text-xl" class="mt-14" />
 
     <p>
-        Declare a property <code>$sortBy</code> within following pattern bellow.
+        Declare a property <code>$sortBy</code> within following pattern below.
         It will be updated when you click on table headers.
         So, you can use it to order your query.
     </p>

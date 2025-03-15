@@ -128,7 +128,7 @@
     </x-nav>
 
     <x-main with-nav>
-        <x-slot:sidebar drawer="main-drawer" class="bg-base-100" collapsible>
+        <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
             <x-menu activate-by-route active-bg-color="font-black" class="sm:mt-6">
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
@@ -137,7 +137,7 @@
                     <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
-                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
+                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">
@@ -145,8 +145,8 @@
                     <x-menu-item title="Input" link="/docs/components/input" />
                     <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
                     <x-menu-item title="Toggle" link="/docs/components/toggle" />
-                    <x-menu-item title="Group" link="/docs/components/group" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
-                    <x-menu-item title="Radio" link="/docs/components/radio" badge="new" badge-classes="badge-warning badge-xs float-right" class="block" />
+                    <x-menu-item title="Group" link="/docs/components/group" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Radio" link="/docs/components/radio" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                     <x-menu-item title="Select" link="/docs/components/select" />
                     <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Choices" link="/docs/components/choices" />
@@ -243,6 +243,6 @@
     <x-toast />
 
     {{-- Spotlight --}}
-    <x-spotlight />
+    <x-spotlight search-text="Type 'a' ..." />
 </body>
 </html>

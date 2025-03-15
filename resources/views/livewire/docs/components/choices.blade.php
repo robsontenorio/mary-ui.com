@@ -480,7 +480,7 @@ class extends Component {
         It tries to determine if these values are a <code>int</code> or <code>string</code>.
     </p>
     <p>
-        But, due to Javascript limitation with large numbers like these bellow, it will break.
+        But, due to Javascript limitation with large numbers like these below, it will break.
     </p>
 
     {{--@formatter:off--}}

@@ -517,7 +517,7 @@ class extends Component {
     </p>
 
     <p>
-        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url bellow. Also remember to add your local address on the allowed
+        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url below. Also remember to add your local address on the allowed
         domains list.
     </p>
 
@@ -569,7 +569,7 @@ class extends Component {
     <x-anchor title="Better layout (2)" size="text-xl" class="mt-14" />
 
     <p>
-        If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes, like the example bellow, for clear group related information.
+        If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes, like the example below, for clear group related information.
         This is just another alternative, so use the one that works best for you.
     </p>
 

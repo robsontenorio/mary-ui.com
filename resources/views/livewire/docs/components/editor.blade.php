@@ -36,7 +36,7 @@ class extends Component {
     <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
     <p>
-        Create an account on TinyMCE site and replace <code>YOUR-KEY-HERE</code> on url bellow.
+        Create an account on TinyMCE site and replace <code>YOUR-KEY-HERE</code> on url below.
         If you don't want to rely on cloud setup, just download TinyMCE SDK and self-host the source code.
     </p>
 

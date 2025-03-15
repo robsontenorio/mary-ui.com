@@ -160,7 +160,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     <kbd class="kbd">⌘</kbd> <span class="text-base-100">+</span> <kbd class="kbd">G</kbd>
                     <span class="text-base-100 ml-5 italic">(meta key + G)</span>
 
-                    <p class="text-base-100">Search for "a" to see what kind of content it returns.</p>
+                    <div class="text-base-100 mt-12 text-sm">Search for "a" to see what kind of content it returns.</div>
                 </div>
             </div>
             <div>
@@ -182,7 +182,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     <div class="px-5 lg:px-20 mt-10 pt-10 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
         <div class="font-extrabold text-4xl pt-20 text-right">
-            <span class="underline decoration-pink-500">Remastered demos</span>
+            <div class="underline decoration-pink-500 mb-2">Delightfull demos</div>
+            <div class="bg-warning px-1 text-xs rounded text-right float-right clear-both font-bold">Will be updated soon to v2</div>
         </div>
 
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
@@ -384,7 +385,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     $users = User::with('city')->take(4)->get();
 
                     $headers = [
-                        ['key' => 'id', 'label' => '#', 'class' => 'w-1 bg-yellow-500/20'], # <-- CSS
+                        ['key' => 'id', 'label' => '#', 'class' => 'w-1 bg-warning/20'], # <-- CSS
                         ['key' => 'name', 'label' => 'Nice Name', 'class' => 'hidden lg:table-cell'], # <-- responsive
                         ['key' => 'city.name', 'label' => 'City']   # <-- nested object
                     ];
@@ -424,7 +425,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
                     $cell_decoration = [
                         'name' => [
-                            'bg-yellow-500/20 italic' => fn(User $user) => Str::of($user->name)->startsWith('A')
+                            'bg-warning/20 italic' => fn(User $user) => Str::of($user->name)->startsWith('A')
                         ]
                     ];
                 @endphp
@@ -470,6 +471,6 @@ new #[Layout('components.layouts.landing')] class extends Component {
     </div>
 
     <div class="docs">
-        <x-spotlight />
+        <x-spotlight search-text="Type 'a' ..." />
     </div>
 </div>

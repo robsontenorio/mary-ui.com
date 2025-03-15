@@ -78,7 +78,7 @@ class extends Component {
             <x-hr />
 
             <div>
-                The above HR always triggers. The bellow only on target action.
+                The above HR always triggers. The below only on target action.
             </div>
 
             {{-- Only on `save` action --}}

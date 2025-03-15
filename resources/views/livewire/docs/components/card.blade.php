@@ -51,7 +51,7 @@ class extends Component {
     <x-anchor title="Progress indicator" size="text-xl" class="mt-14" />
 
     <p>
-        This features only works when you have in place <code>title</code> and <code>separator</code> attributes.
+        This feature only works when you have in place <code>title</code> and <code>separator</code> attributes.
     </p>
 
     <x-code class="grid lg:grid-cols-2 gap-8 bg-base-200 ">

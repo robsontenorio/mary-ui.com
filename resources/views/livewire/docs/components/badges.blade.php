@@ -18,6 +18,8 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             <x-badge value="Hello" />
+        
+            <x-badge value="Hello" class="badge-soft" />
 
             <x-badge value="Hello" class="badge-primary" />
 

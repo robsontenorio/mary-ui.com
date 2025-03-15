@@ -100,7 +100,7 @@ class extends Component {
 
     <x-alert icon="o-light-bulb">
         It is not expected to have more than one <strong>x-theme-toggle</strong> on the same page. Make sure to <strong>refresh the page</strong> while toying around with the theme
-        toggle. Then, click on the theme toggle from the main navbar of this docs to back to default "light" and "dark" themes.
+        toggle.
     </x-alert>
 
     <p>

@@ -22,10 +22,6 @@ class extends Component {
 
     <x-anchor title="Default" size="text-xl" class="mt-14" />
 
-    <p>
-        The default behavior accept any character.
-    </p>
-
     <x-code>
         @verbatim('docs')
             <x-pin wire:model="pin1" size="3" />

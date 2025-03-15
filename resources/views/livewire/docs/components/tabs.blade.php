@@ -39,10 +39,7 @@ class extends Component {
     </x-code>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
-
-    <p>
-        Use slots to customize the tab label.
-    </p>
+    
     <x-code>
         @verbatim('docs')
             <x-tabs wire:model="selectedTab">

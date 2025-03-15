@@ -41,10 +41,9 @@ class extends Component {
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            @php
-                $user = App\Models\User::first();
-            @endphp
-
+            @php                                    // [tl! .docs-hide]
+                $user = App\Models\User::first();   // [tl! .docs-hide]
+            @endphp                                 <!-- [tl! .docs-hide] -->
             <x-avatar :image="$user->avatar" class="!w-22">
                 <x-slot:title class="text-3xl !font-bold pl-2">
                     {{ $user->username }}
