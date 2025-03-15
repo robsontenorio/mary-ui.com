@@ -13,6 +13,10 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Timeline" />
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Alternately check the <a href="/docs/components/Steps" wire:navigate>Steps</a> component.
+    </x-alert>
+
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>

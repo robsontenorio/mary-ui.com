@@ -49,8 +49,12 @@ class extends Component {
     }
 }; ?>
 
-<div class="">
+<div class="docs">
     <x-anchor title="Steps" />
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Alternately check the <a href="/docs/components/timeline" wire:navigate>Timeline</a> component.
+    </x-alert>
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
@@ -67,7 +71,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-steps wire:model="step" class="border-y border-base-300 my-5 py-5">
+            <x-steps wire:model="step" class="border-y border-base-content/10 my-5 py-5">
                 <x-step step="1" text="Register">
                     Register step
                 </x-step>
@@ -100,7 +104,7 @@ class extends Component {
                 <x-step step="3" text="C" data-content="✓" step-classes="!step-success" />
             </x-steps>
 
-            <hr class="my-5 border-base-300" />
+            <hr class="my-5 border-base-content/10" />
 
             <x-button label="Previous" wire:click="prev2" />
             <x-button label="Next" wire:click="next2" />
