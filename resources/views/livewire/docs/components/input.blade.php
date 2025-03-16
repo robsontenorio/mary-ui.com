@@ -23,24 +23,27 @@ class extends Component {
 <div>
 
     <x-anchor title="Input" />
-    
+
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            <x-input label="Name" placeholder="Your name" icon="o-user" hint="Your full name" />
+            <x-input label="Name" wire:model="name" placeholder="Your name" icon="o-user" hint="Your full name" />
 
             <x-input label="Right icon" wire:model="address" icon-right="o-map-pin" />
 
-            <x-input label="Name" wire:model="name" placeholder="Clearable field" clearable />
+            <x-input label="Clearable" wire:model="name" placeholder="Clearable field" clearable />
 
             <x-input label="Prefix & Suffix" wire:model="name" prefix="www" suffix=".com" />
+
+            <span></span><!-- [tl! .docs-hide] -->
+            <x-input label="Inline label" wire:model="name" placeholder="Hey, inline..." inline />
         @endverbatim
     </x-code>
 
     <x-anchor title="States" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-input label="Disabled" value="It is disabled" disabled />
 
@@ -48,21 +51,13 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Inline" size="text-xl" class="mt-14" />
-
-    <x-code class="grid gap-5">
-        @verbatim('docs')
-            <x-input label="Inline label" placeholder="Type here" inline />
-        @endverbatim
-    </x-code>
-
     <x-anchor title="Password" size="text-xl" class="mt-14" />
 
     <p>
-        Notice all above attributes will work with the password component.
+        All above attributes will work with the password component.
     </p>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-password label="Toggle" hint="It toggles visibility" wire:model="password" clearable />
             <x-password label="Right toggle" wire:model="password" right />
@@ -84,23 +79,18 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-code class="grid gap-8">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-input label="Default money" wire:model="money1" prefix="USD" money />
 
             {{-- Notice that `locale` accepts any valid locale --}}
-            <x-input
-                label="Custom money"
-                wire:model="money2"
-                suffix="R$"
-                money
-                locale="pt-BR" />
+            <x-input label="Custom money" wire:model="money2" prefix="R$" locale="pt-BR" money />
         @endverbatim
     </x-code>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]
@@ -115,7 +105,7 @@ class extends Component {
             <x-input label="Append a button">
                 <x-slot:append>
                     {{-- Add `join-item` to all appended elements --}}
-                    <x-button label="I am a button" class="btn-primary join-item" />
+                    <x-button label="I am a button" class="join-item btn-primary" />
                 </x-slot:append>
             </x-input>
         @endverbatim

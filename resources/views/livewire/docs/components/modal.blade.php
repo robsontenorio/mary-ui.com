@@ -25,12 +25,6 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code no-render language="php">
-        public bool $myModal1 = false;
-    </x-code>
-
-    <br>
-
     <x-code class="flex gap-5">
         @verbatim('docs')
             <x-modal wire:model="myModal1" title="Hey" class="backdrop-blur">
@@ -45,13 +39,11 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Complex" size="text-xl" class="mt-14" />
-
     <x-code no-render language="php">
-        public bool $myModal2 = false;
+        public bool $myModal1 = false;
     </x-code>
 
-    <br>
+    <x-anchor title="Complex" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')

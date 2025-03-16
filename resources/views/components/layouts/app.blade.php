@@ -135,7 +135,7 @@
                     <x-menu-item title="Layout" link="/docs/layout" />
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
                     <x-menu-item title="Demos" link="/docs/demos" />
-                    <x-menu-item title="Customizing" link="/docs/customizing" />
+                    <x-menu-item title="Customizing" link="/docs/customizing" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
                     <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                 </x-menu-sub>

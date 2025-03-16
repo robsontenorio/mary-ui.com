@@ -57,7 +57,7 @@ class extends Component {
         See all <code>$config</code> options at <a href="https://flatpickr.js.org/options/" target="_blank">flatpickr`s docs</a>.
     </p>
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = ['altFormat' => 'd/m/Y'];
@@ -66,7 +66,8 @@ class extends Component {
 
             <x-datepicker label="Date" wire:model="myDate1" icon="o-calendar" hint="Hi!" />
             <x-datepicker label="Alt" wire:model="myDate2" icon="o-calendar" :config="$config1" />
-            <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" />
+            <span></span> <!-- [tl! .docs-hide] -->
+            <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" inline />
         @endverbatim
     </x-code>
 
@@ -105,7 +106,7 @@ class extends Component {
         Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config. Instead, set locale on component config object.
     </p>
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = ['locale' => 'pt'];
@@ -135,7 +136,7 @@ class extends Component {
             </head>
     </x-code>
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = [

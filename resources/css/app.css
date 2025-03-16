@@ -1,19 +1,61 @@
 @import "tailwindcss";
 
+/* daisyUI with two extra themes `aqua` and `retro`  */
 @plugin "daisyui" {
     themes: light --default, dark --prefersdark, retro, aqua;
 }
 
+/** Used only on `Customizing` docs **/
+@plugin "daisyui/theme" {
+    name: "mytheme";
+    default: true; /* set as default */
+    prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+    color-scheme: light; /* color of browser-provided UI */
+    --radius-field: 2.25rem;
+}
+
+/** Used only on `Customizing` docs **/
+@plugin "daisyui/theme" {
+    name: "mytheme2";
+    default: true; /* set as default */
+    prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+    color-scheme: light; /* color of browser-provided UI */
+}
+
+/** Used only on `Customizing` docs **/
+[data-theme="mytheme2"] {
+    .input {
+        @apply outline-none;
+    }
+
+    .fieldset-legend {
+        @apply text-[1.09rem] font-bold;
+    }
+
+    .fieldset-label {
+        @apply italic;
+    }
+
+    .select {
+        @apply outline-none  rounded-3xl;
+    }
+}
+
+/** Dark variable support */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/** maryUI **/
 @source "../../app/**/**/*.php";
 @source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+
+/** Laravel 12 defaults **/
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source "../**/*.blade.php";
 @source "../**/*.js";
 @source "../**/*.vue";
 
+/** This comes with Laravel 12 **/
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';

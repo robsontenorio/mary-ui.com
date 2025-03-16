@@ -130,7 +130,7 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
+        <b>Pro tip:</b> Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on all devices.
     </x-alert>
 
     <x-anchor title="Selection" size="text-xl" class="mt-14" />

@@ -74,20 +74,17 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No headers & No hover" size="text-xl" class="mt-14" />
+    <x-anchor title="No headers & no hover" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
-                $headers = [
-                    ['key' => 'name', 'label' => 'Name'],
-                    ['key' => 'city.name', 'label' => 'City'],
-                ];
-            @endphp
-
-            {{-- Notice `no-headers` --}}
+            @php                                                            // [tl! .docs-hide]
+                $users = App\Models\User::with('city')->take(3)->get();     // [tl! .docs-hide]
+                $headers = [                                                // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Name'],                   // [tl! .docs-hide]
+                    ['key' => 'city.name', 'label' => 'City'],              // [tl! .docs-hide]
+                ];                                                          // [tl! .docs-hide]
+            @endphp                                                         <!-- [tl! .docs-hide] -->
             <x-table :headers="$headers" :rows="$users" no-headers no-hover />
         @endverbatim
     </x-code>
@@ -104,11 +101,9 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::take(2)->get();
-
+                $users = App\Models\User::take(2)->get();                           // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'name', 'label' => 'Name'],
-                    //
+                    // It calls PHP Carbon::parse($value)->format($pattern)
                     ['key' => 'created_at', 'label' => 'Date', 'format' => ['date', 'd/m/Y']],
 
                     // It calls number_format()
@@ -145,16 +140,14 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
-                $headers = [
-                    ['key' => 'id', 'label' => '#'],
-                    ['key' => 'username', 'label' => 'Username'],
-                    ['key' => 'city.name', 'label' => 'City'],
-                ];
-            @endphp
-
+            @php                                                                // [tl! .docs-hide]
+                $users = App\Models\User::with('city')->take(3)->get();         // [tl! .docs-hide]
+                $headers = [                                                    // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#'],                            // [tl! .docs-hide]
+                    ['key' => 'username', 'label' => 'Username'],               // [tl! .docs-hide]
+                    ['key' => 'city.name', 'label' => 'City'],                  // [tl! .docs-hide]
+                ];                                                              // [tl! .docs-hide]
+            @endphp                                                             <!-- [tl! .docs-hide] -->
             {{-- Notice `link` --}}
             {{-- Check browser url on next page --}}
             <x-table :headers="$headers" :rows="$users" link="/docs/installation/?from={username}" />
@@ -200,10 +193,9 @@ class extends Component {
         @verbatim('docs')
             @php
                 use App\Models\User;            // [tl! .docs-hide]
-                $users = User::take(3)->get();
-
+                $users = User::take(3)->get();  // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20 w-1'],
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20 w-1'],
                     ['key' => 'username', 'label' => 'Username'],
                     ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'], // Responsive
                     ['key' => 'bio', 'label' => 'Bio', 'hidden' => 'true'], // Alternative approach
@@ -249,8 +241,8 @@ class extends Component {
                 // If more than one condition is `true` the respective classes will be merged.
 
                 $row_decoration = [
-                    'bg-yellow-500/25' => fn(User $user) => $user->isAdmin,
-                    'text-red-500' => fn(User $user) => $user->isAdmin && $user->isInactive,
+                    'bg-warning/20' => fn(User $user) => $user->isAdmin,
+                    'text-error' => fn(User $user) => $user->isAdmin && $user->isInactive,
                     'underline font-bold' => fn(User $user) => $user->isInactive // <-- combined classes
                 ];
             @endphp
@@ -259,6 +251,8 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <br>
 
     <p>
         You can do the same for cells.
@@ -291,10 +285,10 @@ class extends Component {
 
                 $cell_decoration = [
                     'city.name' => [
-                        'bg-yellow-500/25 underline' => fn(User $user) => !$user->city->isAvailable,
+                        'bg-warning/20 underline' => fn(User $user) => !$user->city->isAvailable,
                     ],
                     'username' => [
-                        'text-yellow-500' => fn(User $user) => $user->isAdmin,
+                        'text-warning' => fn(User $user) => $user->isAdmin,
                         'bg-dark-300' => fn(User $user) => $user->isInactive
                     ]
                 ];
@@ -528,7 +522,6 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                // Remember to define a model to bind the value
                 $users = App\Models\User::paginate($this->perPage);
             @endphp
 
@@ -572,10 +565,9 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
+                $users = App\Models\User::with('city')->take(2)->get();     // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20'], # <--- custom CSS
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20'], # <--- custom CSS
                     ['key' => 'name', 'label' => 'Nice Name'],
                     ['key' => 'city.name', 'label' => 'City'], # <---- nested attributes
                 ];
@@ -615,8 +607,7 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(3)->get();
-
+                $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
                 $headers = [
                     ['key' => 'id', 'label' => '#'],
                     ['key' => 'name', 'label' => 'Nice Name'],
@@ -634,7 +625,7 @@ class extends Component {
 
                 {{-- You can name the injected object as you wish  --}}
                 @scope('cell_name', $stuff)
-                    <x-badge :value="$stuff->name" class="badge-info" />
+                    <x-badge :value="$stuff->name" class="badge-soft" />
                 @endscope
 
                 {{-- Notice the `dot` notation for nested attribute cell's slot --}}
@@ -694,14 +685,12 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::with('city')->take(3)->get();
-
-                $headers = [
-                    ['key' => 'name', 'label' => 'Nice Name'],
-                ];
-            @endphp
-
+            @php                                                        // [tl! .docs-hide]
+                $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
+                $headers = [                                            // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],          // [tl! .docs-hide]
+                ];                                                      // [tl! .docs-hide]
+            @endphp                                                     <!-- [tl! .docs-hide] -->
             <x-table :headers="$headers" :rows="$users">
                 @scope('cell_name', $user)
                     ({{  $loop->index }}) {{ $user->name }}
@@ -754,15 +743,13 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-
-                $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
-                    ['key' => 'name', 'label' => 'Nice Name'],
-                ];
-            @endphp
-
+            @php                                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();                   // [tl! .docs-hide]
+                $headers = [                                                // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],      // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],              // [tl! .docs-hide]
+                ];                                                          // [tl! .docs-hide]
+            @endphp                                                         <!-- [tl! .docs-hide] -->
             {{-- Notice `selectable` and `wire:model` --}}
             {{-- See `@row-selection` output on console  --}}
             {{-- You can use any `$wire.METHOD` on `@row-selection` --}}
@@ -772,6 +759,8 @@ class extends Component {
                 wire:model="selected"
                 selectable
                 @row-selection="console.log($event.detail)" />
+
+            <x-hr />
 
             <x-button label="Save" icon="o-check" wire:click="save" spinner />
         @endverbatim
@@ -802,15 +791,13 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-
-                $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'hidden'],
-                    ['key' => 'name', 'label' => 'Nice Name'],
-                ];
-            @endphp
-
+            @php                                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();                       // [tl! .docs-hide]
+                $headers = [                                                    // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#', 'class' => 'hidden'],      // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],                  // [tl! .docs-hide]
+                ];                                                              // [tl! .docs-hide]
+            @endphp                                                             <!-- [tl! .docs-hide] -->
             {{-- Notice `expandable` and `wire:model` --}}
             <x-table :headers="$headers" :rows="$users" wire:model="expanded" expandable>
 
@@ -820,7 +807,6 @@ class extends Component {
                         Hello, {{ $user->name }}!
                     </div>
                 @endscope
-
             </x-table>
 
         @endverbatim

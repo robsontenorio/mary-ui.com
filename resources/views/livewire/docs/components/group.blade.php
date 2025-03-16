@@ -42,7 +42,7 @@ class extends Component {
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
             @endphp                                         <!-- [tl! .docs-hide] -->
-            <x-group label="Select one" :options="$users" wire:model="selectedUser" hint="Pick one" />
+            <x-group label="Select one" wire:model="selectedUser" :options="$users" hint="Pick one" />
         @endverbatim
     </x-code>
 
@@ -60,10 +60,10 @@ class extends Component {
             <x-group
                 label="Select one"
                 :options="$users"
+                wire:model="selectedUser2"
                 option-value="custom_key"
                 option-label="other_name"
-                wire:model="selectedUser2"
-                class="[&:checked]:!btn-primary " />
+                class="[&:checked]:!btn-primary btn-sm" />
         @endverbatim
     </x-code>
 
@@ -78,12 +78,12 @@ class extends Component {
                 $users = [
                     ['id' => 1, 'name' => 'John'],
                     ['id' => 2, 'name' => 'Doe'],
-                    ['id' => 3, 'name' => 'Mary', 'disabled' => true],
+                    ['id' => 3, 'name' => 'Mary', 'disabled' => true],  // <-- This
                     ['id' => 4, 'name' => 'Kate'],
                 ];
             @endphp
 
-            <x-group label="Select one" :options="$users" wire:model="selectedUser3" />
+            <x-group label="Select one" wire:model="selectedUser3" :options="$users" />
         @endverbatim
     </x-code>
 

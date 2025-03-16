@@ -14,8 +14,9 @@ new #[Title('Upgrading')] class extends Component {
     <x-anchor title="WIP" size="text-xl" class="mt-14" />
     <ul>
         <li>Migrate the "Choices" component.</li>
-        <li>Remaster the Bootcamp.</li>
-        <li>Remaster the demos.</li>
+        <li>Review the Bootcamp.</li>
+        <li>Upgrade the demos.</li>
+        <li>Release a brand new cool demo.</li>
     </ul>
 
     <x-anchor title="Why" size="text-xl" class="mt-14" />
@@ -152,8 +153,8 @@ new #[Title('Upgrading')] class extends Component {
         For more info on how to customize themes and variables, check daisyUI <a href="https://daisyui.com/docs/themes/" target="_blank">theme docs</a>.
     </p>
 
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Avoid deeper CSS tweaks and use theme variables instead.
+    <x-alert icon="o-light-bulb" class="my-10">
+        <b>Pro tip:</b> avoid to tweak things and stick to defaults. DaisyUI themes are carefully hand crafted with all UX/UI things in mind.
     </x-alert>
 
     <x-anchor title="Small CSS changes" size="text-lg" class="!mb-5 mt-10" />

@@ -30,7 +30,7 @@ class extends Component {
 
     <x-anchor title="Checkbox" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-checkbox label="Left" wire:model="item1" />
 

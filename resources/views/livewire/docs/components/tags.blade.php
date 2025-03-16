@@ -10,7 +10,7 @@ new
 #[Layout('components.layouts.app', ['description' => 'Livewire ui tags components with automatic add.'])]
 class extends Component {
     #[Rule('required')]
-    public array $tags = ['tech'];
+    public array $tags = ['tech', 'gaming'];
 }; ?>
 
 <div class="docs">
@@ -24,7 +24,7 @@ class extends Component {
         For complex multiple inputs or preset values see <a href="/docs/components/choices" wire:navigate>Choices</a> component, that also supports online and offline search.
     </x-alert>
 
-    <x-code>
+    <x-code class="grid gap-10 sm:px-64">
         @verbatim('docs')
             <x-tags label="Tags" wire:model="tags" icon="o-home" hint="Hit enter to create a new tag" />
         @endverbatim

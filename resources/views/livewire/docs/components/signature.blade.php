@@ -72,7 +72,7 @@ class extends Component {
                 wire:model="signature3"
                 clear-text="Delete it!"
                 height="100"
-                class="border-4 !bg-info" />
+                class="border-4 !bg-info/10" />
         @endverbatim
     </x-code>
 

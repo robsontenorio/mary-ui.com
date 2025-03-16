@@ -32,38 +32,52 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-            @endphp
-
+            @php                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
+            @endphp                                             <!-- [tl! .docs-hide] -->
             @foreach($users as $user)
-                <x-list-item :item="$user" link="/docs/installation" />
+                <x-list-item :item="$user" sub-value="username" link="/docs/installation" />
             @endforeach
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots and other attributes" size="text-xl" class="mt-14" />
-
-    <p>
-        You can override all slots. It also supports nested properties.
-    </p>
-
-    <br>
+    <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
-            @php
-                $user1 = App\Models\User::inRandomOrder()->first();
-                $user2 = App\Models\User::inRandomOrder()->first();
-            @endphp
-
+            @php                                                        // [tl! .docs-hide]
+                $user1 = App\Models\User::inRandomOrder()->first();     // [tl! .docs-hide]
+            @endphp                                                     <!-- [tl! .docs-hide] -->
             {{-- Notice `city.name`. It supports nested properties --}}
             <x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />
+        @endverbatim
+    </x-code>
 
-            {{-- All slots --}}
-            <x-list-item :item="$user2" no-separator no-hover>
+    <x-anchor title="No separator & no hover" size="text-xl" class="mt-14" />
+
+    {{--@formatter:off--}}
+    <x-code>
+        @verbatim('docs')
+            @php                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
+            @endphp                                             <!-- [tl! .docs-hide] -->
+            <!-- [tl! .docs-hide] --> @foreach($users as $user)
+            <x-list-item :item="$user" no-separator no-hover />
+            @endforeach                                         <!-- [tl! .docs-hide] -->
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
+
+    <x-code>
+        @verbatim('docs')
+            @php                                                        // [tl! .docs-hide]
+                $user1 = App\Models\User::inRandomOrder()->first();     // [tl! .docs-hide]
+            @endphp                                                     <!-- [tl! .docs-hide] -->
+            <x-list-item :item="$user1">
                 <x-slot:avatar>
-                    <x-badge value="top user" class="badge-primary" />
+                    <x-badge value="top user" class="badge-primary badge-soft" />
                 </x-slot:avatar>
                 <x-slot:value>
                     Custom value
@@ -72,7 +86,7 @@ class extends Component {
                     Custom sub-value
                 </x-slot:sub-value>
                 <x-slot:actions>
-                    <x-button icon="o-trash" class="text-red-500" wire:click="delete(1)" spinner />
+                    <x-button icon="o-trash" class="btn-sm" wire:click="delete(1)" spinner />
                 </x-slot:actions>
             </x-list-item>
         @endverbatim

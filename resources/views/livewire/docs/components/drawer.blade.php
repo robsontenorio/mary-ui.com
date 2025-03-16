@@ -23,12 +23,6 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code no-render language="php">
-        public bool $showDrawer1 = false;
-        public bool $showDrawer2 = false;
-    </x-code>
-    <br>
-
     <x-code class="flex gap-5">
         @verbatim('docs')
             {{-- Left --}}
@@ -47,13 +41,14 @@ class extends Component {
             <x-button label="Open Right" wire:click="$toggle('showDrawer2')" />
         @endverbatim
     </x-code>
+    
+    <x-code no-render language="php">
+        public bool $showDrawer1 = false;
+        public bool $showDrawer2 = false;
+    </x-code>
 
     <x-anchor title="Complex" size="text-xl" class="mt-14" />
 
-    <x-code no-render language="php">
-        public bool $showDrawer3 = false;
-    </x-code>
-    <br>
     <x-code class="flex gap-5">
         @verbatim('docs')
             <x-drawer

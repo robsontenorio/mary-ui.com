@@ -21,14 +21,14 @@ class extends Component {
     <x-anchor title="Select" />
 
     <p>
-        This component is intended to be used as a simple native HTML value selection. It will best fit for most use cases on web apps.
+        This component is intended to be used as a simple native HTML value selection. It renders nice on all devices.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
         If you need a rich selection value interface or async search check the <a href="/docs/components/choices" wire:navigate>Choices</a> component.
     </x-alert>
 
-    <x-anchor title="Default attributes" size="text-2xl" classf="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14 !mb-5" />
 
     <p>
         By default, it will look up for:
@@ -41,19 +41,19 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
             @endphp                                         <!-- [tl! .docs-hide] -->
-            <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" />
+            <x-select label="Master user" wire:model="selectedUser" :options="$users" icon="o-user" />
 
-            <x-select label="Right icon" icon-right="o-user" :options="$users" wire:model="selectedUser" />
+            <x-select label="Right icon" wire:model="selectedUser" :options="$users" icon-right="o-user" />
 
-            <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
+            <x-select label="Prefix" wire:model="selectedUser" :options="$users" prefix="Hey" hint="Hey ho!" />
 
             <span></span><!-- [tl! .docs-hide] -->
-            <x-select label="Master user" icon="o-user" :options="$users" wire:model="selectedUser" inline />
+            <x-select label="Inline label" wire:model="selectedUser" icon="o-user" :options="$users" inline />
         @endverbatim
     </x-code>
 
@@ -63,70 +63,65 @@ class extends Component {
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                             // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
             @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select
                 label="Alternative"
+                wire:model="selectedUser2"
                 :options="$users"
                 option-value="custom_key"
-                option-label="other_name"
-                placeholder="Select a user"
-                placeholder-value="0" {{-- Set a value for placeholder. Default is `null` --}}
-                hint="Select one, please."
-                wire:model="selectedUser2" />
+                option-label="other_name" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disable options" size="text-xl" class="mt-14" />
+    <x-anchor title="Placeholder" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
+        @verbatim('docs')
+            @php                                             // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
+            <x-select
+                label="Users"
+                wire:model="selectedUser2"
+                :options="$users"
+                placeholder="Select a user"
+                placeholder-value="0" {{-- Set a value for placeholder. Default is `null` --}}
+            />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="States" size="text-xl" class="mt-14" />
+    <p>
+        Notice that browser standards <b>does not support "readonly"</b>.
+    </p>
+
+    <x-code class="grid gap-5 sm:px-64">
+        @verbatim('docs')
+            @php                                             // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
+            <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Disabled options" size="text-xl" class="mt-14" />
+
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $users = [
-                    [
-                        'id' => 1,
-                        'name' => 'Joe'
-                    ],
-                    [
-                        'id' => 2,
-                        'name' => 'Mary',
-                        'disabled' => true
-                    ]
+                    ['id' => 1, 'name' => 'Joe'],
+                    ['id' => 2,'name' => 'Mary','disabled' => true] // <-- this
                 ];
             @endphp
 
             <x-select label="Disabled options" :options="$users" wire:model="selectedUser3" />
         @endverbatim
     </x-code>
-
-    <x-anchor title="Slots" size="text-xl" class="mt-14" />
-
-    <p>
-        You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code>
-        @verbatim('docs')
-            @php                                            // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
-            <x-select label="Slots"  :options="$users" single>
-                <x-slot:prepend>
-                    {{-- Add `join-item` to all prepended elements --}}
-                    <x-button icon="o-trash" class="join-item" />
-                </x-slot:prepend>
-                <x-slot:append>
-                    {{-- Add `join-item` to all appended elements --}}
-                    <x-button label="Create" icon="o-plus" class="join-item btn-primary" />
-                </x-slot:append>
-            </x-select>
-        @endverbatim
-    </x-code>
-    {{--@formatter:on--}}
 
     <x-anchor title="Group" size="text-xl" class="mt-14" />
 
@@ -135,7 +130,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code class="gap gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $grouped = [
@@ -152,7 +147,33 @@ class extends Component {
                 ];
             @endphp
 
-            <x-select-group label="Group Select Demo" :options="$grouped" wire:model="selectedUser" />
+            <x-select-group label="Group Select" :options="$grouped" wire:model="selectedUser" />
+        @endverbatim
+    </x-code>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
+
+    <p>
+        You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code class="gap gap-5 sm:px-32">
+        @verbatim('docs')
+            @php                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
+            @endphp                                         <!-- [tl! .docs-hide] -->
+            <x-select label="Slots"  :options="$users" single>
+                <x-slot:prepend>
+                    {{-- Add `join-item` to all prepended elements --}}
+                    <x-button icon="o-trash" class="join-item" />
+                </x-slot:prepend>
+                <x-slot:append>
+                    {{-- Add `join-item` to all appended elements --}}
+                    <x-button label="Create" icon="o-plus" class="join-item btn-primary" />
+                </x-slot:append>
+            </x-select>
         @endverbatim
     </x-code>
     {{--@formatter:on--}}

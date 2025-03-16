@@ -23,15 +23,11 @@ class extends Component {
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code class="grid gap-10">
         @verbatim('docs')
-            <x-textarea
-                label="Biography"
-                wire:model="bio"
-                placeholder="Your story ..."
-                hint="Max 1000 chars"
-                rows="5"
-            />
+            <x-textarea label="Biography" wire:model="bio" placeholder="Here ..." hint="Max 1000 chars" rows="5" />
+
+            <x-textarea label="Biography" wire:model="bio" placeholder="Inline" rows="5" inline />
         @endverbatim
     </x-code>
 </div>

@@ -32,15 +32,16 @@ class extends Component {
         For advanced date picker see the <a href="/docs/components/datepicker" wire:navigate>Date Picker</a> component.
     </x-alert>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-datetime label="My date" wire:model="myDate" />
 
             {{-- Notice `type="datetime-local"` --}}
             <x-datetime label="Date + Time" wire:model="myDate" type="datetime-local" />
 
+            <span></span> <!-- [tl! .docs-hide] -->
             {{-- Notice `type="time"` --}}
-            <x-datetime label="Time" wire:model="myDate" icon="o-calendar" type="time" />
+            <x-datetime label="Time" wire:model="myDate" icon="o-calendar" type="time" inline />
         @endverbatim
     </x-code>
 </div>

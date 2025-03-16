@@ -49,9 +49,9 @@ class extends Component {
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
             @endphp                                         {{-- [tl! .docs-hide]--}}
-            <x-radio label="Select one" :options="$users" wire:model="user1" />
+            <x-radio label="Select one" wire:model="user1" :options="$users" />
 
-            <x-radio label="Select one inline" :options="$users" wire:model="user2" inline />
+            <x-radio label="Select one inline" wire:model="user2" :options="$users" inline />
         @endverbatim
     </x-code>
 
@@ -66,9 +66,9 @@ class extends Component {
                 ];
             @endphp
 
-            <x-radio label="Select one option" :options="$users" wire:model="user3" />
+            <x-radio label="Select one option" wire:model="user3" :options="$users" />
 
-            <x-radio label="Select one option" :options="$users" wire:model="user4" inline />
+            <x-radio label="Select one option" wire:model="user4" :options="$users" inline />
         @endverbatim
     </x-code>
 
@@ -90,10 +90,10 @@ class extends Component {
             <x-radio
                 label="Select one"
                 :options="$users"
+                wire:model="user5"
                 option-value="custom_key"
                 option-label="other_name"
                 option-hint="my_hint"
-                wire:model="user5"
             />
         @endverbatim
     </x-code>

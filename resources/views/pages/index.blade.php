@@ -434,6 +434,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                                 ->orderBy(...array_values($this->sortBy))
                                 ->paginate(3);
 
+                    // Headers settings
                     $headers = [
                         ['key' => 'id', 'label' => '#', 'class' => 'w-1'], # <-- CSS
                         ['key' => 'name', 'label' => 'Nice Name'],
@@ -441,26 +442,27 @@ new #[Layout('components.layouts.landing')] class extends Component {
                         ['key' => 'city.name', 'label' => 'City', 'sortable' => false, 'class' => 'hidden lg:table-cell']   # <-- nested object
                     ];
 
+                    // Decoration conditions
                     $cell_decoration = [
                         'name' => [
-                            'bg-warning/20 italic' => fn(User $user) => Str::of($user->name)->startsWith('A')
+                            'bg-warning/10 italic' => fn(User $user) => str($user->name)->startsWith('A')
                         ]
                     ];
                 @endphp
 
                 <x-table
-                    wire:model="expanded"
+                    wire:model="expanded"                                        {{-- Controls rows expansion --}}
                     :headers="$headers"
                     :rows="$users"
-                    :cell-decoration="$cell_decoration"
-                    :sort-by="$sortBy"
-                    link="/docs/components/table?user_id={id}&city={city.name}"  {{-- Make rows clickables --}}
-                    expandable
-                    with-pagination
+                    :cell-decoration="$cell_decoration"                          {{-- Decoration logic --}}
+                    :sort-by="$sortBy"                                           {{-- Make it sortable --}}
+                    link="/docs/components/table?user_id={id}&city={city.name}"  {{-- Make rows clickable --}}
+                    expandable                                                   {{-- Make it expand --}}
+                    with-pagination                                              {{-- Enable pagination --}}
                 >
                     {{--  Expansion slot --}}
                     @scope('expansion', $user)
-                        <div class="border border-dashed rounded-lg p-5 ">
+                        <div class="border border-base-content/20 border-dashed rounded p-5 ">
                             Hello, {{ $user->name }}!
                         </div>
                     @endscope
@@ -472,7 +474,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
                     {{-- Cell scope --}}
                     @scope('cell_username', $user)
-                        <x-badge :value="$user->username" class="badge-primary" />
+                        <x-badge :value="$user->username" class="badge-primary badge-soft" />
                     @endscope
                 </x-table>
             @endverbatim

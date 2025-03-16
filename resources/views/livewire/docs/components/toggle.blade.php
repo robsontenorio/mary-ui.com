@@ -22,7 +22,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Toggle" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-toggle label="Left" wire:model="item1" />
 
