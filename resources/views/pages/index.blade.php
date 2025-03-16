@@ -441,20 +441,12 @@ new #[Layout('components.layouts.landing')] class extends Component {
                         ['key' => 'username', 'label' => 'Username', 'class' => 'hidden lg:table-cell'], # <--- responsive
                         ['key' => 'city.name', 'label' => 'City', 'sortable' => false, 'class' => 'hidden lg:table-cell']   # <-- nested object
                     ];
-
-                    // Decoration conditions
-                    $cell_decoration = [
-                        'name' => [
-                            'bg-warning/10 italic' => fn(User $user) => str($user->name)->startsWith('A')
-                        ]
-                    ];
                 @endphp
 
                 <x-table
                     wire:model="expanded"                                        {{-- Controls rows expansion --}}
                     :headers="$headers"
                     :rows="$users"
-                    :cell-decoration="$cell_decoration"                          {{-- Decoration logic --}}
                     :sort-by="$sortBy"                                           {{-- Make it sortable --}}
                     link="/docs/components/table?user_id={id}&city={city.name}"  {{-- Make rows clickable --}}
                     expandable                                                   {{-- Make it expand --}}

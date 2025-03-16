@@ -112,19 +112,6 @@ class extends Component {
     <img src="/bootcamp/03-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
-        As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="javascript">
-        content: [
-        // Add this [tl! highlight .animate-bounce]
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        ],
-    </x-code>
-    {{--@formatter:on--}}
-
-    <p>
         Go back to <code>users/index.blade</code> and use the <code>WithPagination</code> trait from Livewire itself, as described in
         <a href="https://livewire.laravel.com/docs/pagination#basic-usage" target="_blank">Livewire docs</a>.
     </p>
@@ -182,7 +169,7 @@ class extends Component {
     </ul>
 
     <p>
-        Actually <strong>it is not a bug in itself</strong>, but a Livewire pagination particularity (not maryUI) you must be aware when you change filters.
+        Actually <strong>it is not a bug in itself</strong>, but a Laravel/Livewire pagination particularity (not maryUI) you must be aware when you change filters.
     </p>
 
     <p>
@@ -222,7 +209,7 @@ class extends Component {
     {{--@formatter:on--}}
 
     <x-alert icon="o-light-bulb" class="markdown">
-        Pro tip: You could create a trait like <code>ClearsFilters</code> with those methods above to reuse the logic.
+        <b>Pro tip:</b> You could create a trait like <code>ClearsFilters</code> with those methods above to reuse the logic.
     </x-alert>
 
     <x-anchor title="Table CSS" size="text-xl" class="mt-14" />

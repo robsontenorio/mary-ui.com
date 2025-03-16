@@ -534,6 +534,17 @@ class extends Component {
     </x-code>
 
     <p>
+        If you don't want to rely on cloud setup, just download TinyMCE SDK and self-host the source code.
+    </p>
+
+    <x-code no-render>
+        @verbatim('docs')
+            {{-- Check TinyMCE dos for self-hosted version --}}
+            <script src="/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+        @endverbatim
+    </x-code>
+
+    <p>
         Add a <code>$bio</code> property in the component, since we added the <code>users.bio</code> column during the Bootcamp setup.
     </p>
 
@@ -558,7 +569,7 @@ class extends Component {
     <x-code no-render>
         @verbatim('docs')
             <x-choices-offline ... />
-            <x-editor wire:model="bio" label="Bio" hint="The great biography" /> {{-- [tl! highlight]--}}
+            <x-editor wire:model="bio" label="Biography" hint="The great biography" /> {{-- [tl! highlight]--}}
         @endverbatim
     </x-code>
 

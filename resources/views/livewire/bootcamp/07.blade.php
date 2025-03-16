@@ -14,22 +14,22 @@ class extends Component {
     <x-anchor title="A wrap" />
 
     <p>
-        We could expand this Bootcamp forever adding more and more cool features, but we are done for now.
+        We could expand this Bootcamp forever by adding more and more cool features, but we are done for now.
     </p>
 
     <p>
-        Take a look at docs and see by yourself how much you can do with less code.
-        Every component has been carefully handcrafted to provide an extreme DX.
+        Take a look at docs and see by yourself on how much you can do with less code.
+        Every component has been carefully handcrafted to provide an extreme DX/UX/UI.
     </p>
 
     <p>
-        Also check the <a href="/docs/demos" target="_blank">maryUI demos</a> and get amazed by how much great stuff you can do.
+        Also check the <a href="/docs/demos">maryUI demos</a> and get amazed by how much great stuff you can do.
         Each demo contains <strong>real world code</strong> and straight approaches to get the most out of maryUI and Livewire.
     </p>
 
     <p>
-        If you are enjoying maryUI <a href="https://github.com/robsontenorio/mary">give it a star</a> on GitHub and <a href="https://github.com/sponsors/robsontenorio">sponsor
-            it</a>.
+        If you are enjoying maryUI <a href="https://github.com/robsontenorio/mary" target="_blank">give it a star</a> on GitHub
+        and <a href="https://github.com/sponsors/robsontenorio" target="_blank">sponsor it</a>.
     </p>
 
     <p>

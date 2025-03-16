@@ -41,7 +41,8 @@ class extends Component {
     </p>
 
     <x-code no-render language="bash">
-        composer require robsontenorio/mary
+        # This will change after v2 release
+        composer require robsontenorio/mary:V2.x-dev
 
         php artisan mary:install
     </x-code>
