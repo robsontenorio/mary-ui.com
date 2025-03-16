@@ -14,27 +14,22 @@ new #[Title('Customizing')] class extends Component {
         <strong>Any configuration or CSS</strong> provided by <strong>daisyUI or Tailwind</strong> are valid for maryUI components.
         Here are some useful links:
     </p>
-    <ul>
-        <li>
-            <x-button label="Customize" link="https://daisyui.com/docs/customize" class="btn-ghost !no-underline" icon="o-link" external />
-        </li>
-        <li>
-            <x-button label="Config" link="https://daisyui.com/docs/config" class="btn-ghost !no-underline" icon="o-link" external />
-        </li>
-        <li>
-            <x-button label="Colors" link="https://daisyui.com/docs/colors" class="btn-ghost !no-underline" icon="o-link" external />
-        </li>
-        <li>
-            <x-button label="Utilities and variables" link="https://daisyui.com/docs/utilities" class="btn-ghost !no-underline" icon="o-link" external badge="new"
-                      badge-classes="badge-warning badge-xs !no-underline" />
-        </li>
-        <li>
-            <x-button label="Themes" link="https://daisyui.com/docs/themes" class="btn-ghost !no-underline" icon="o-link" external />
-        </li>
-        <li>
-            <x-button label="Theme generator" link="https://daisyui.com/theme-generator" class="btn-ghost !no-underline" icon="o-link" external badge="new"
-                      badge-classes="badge-warning badge-xs !no-underline" />
-    </ul>
+
+    <div class="grid gap-3 justify-items-start">
+        <x-button label="Customize" link="https://daisyui.com/docs/customize" class="btn-ghost !no-underline" icon="o-link" external />
+
+        <x-button label="Config" link="https://daisyui.com/docs/config" class="btn-ghost !no-underline" icon="o-link" external />
+
+        <x-button label="Colors" link="https://daisyui.com/docs/colors" class="btn-ghost !no-underline" icon="o-link" external />
+
+        <x-button label="Utilities and variables" link="https://daisyui.com/docs/utilities" class="btn-ghost !no-underline" icon="o-link" external badge="new"
+                  badge-classes="badge-warning badge-xs !no-underline" />
+
+        <x-button label="Themes" link="https://daisyui.com/docs/themes" class="btn-ghost !no-underline" icon="o-link" external />
+
+        <x-button label="Theme generator" link="https://daisyui.com/theme-generator" class="btn-ghost !no-underline" icon="o-link" external badge="new"
+                  badge-classes="badge-warning badge-xs !no-underline" />
+    </div>
 
     <x-alert icon="o-light-bulb" class="my-10">
         <b>Pro tip:</b> avoid to tweak things and stick to defaults. DaisyUI themes are carefully hand crafted with all UX/UI things in mind.

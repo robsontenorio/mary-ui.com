@@ -82,8 +82,7 @@ p {
 */
 
 .docs > ul li {
-    @apply list-disc ml-10 pb-2
-    text-base-content/70
+    @apply list-disc ml-10 pb-2 text-base-content/70
 }
 
 
