@@ -46,6 +46,14 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public string $text = '<p>It automatically upload images using <b>local</b> or <b>S3</b> disks.</p>';
 
+    public int $level = 10;
+
+    public $role_id = 2;
+
+    public $city_id = 2;
+
+    public $email = true;
+
     public function mount()
     {
         // TinyMCE (image upload)
@@ -249,7 +257,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
     </div>
 
-    <div class="px-5 lg:px-20 py-20">
+    <div class="px-5 py-20">
         <div class="font-extrabold text-4xl py-10">
             <span class="underline decoration-pink-500">Lists</span>
         </div>
@@ -309,16 +317,26 @@ new #[Layout('components.layouts.landing')] class extends Component {
     {{--        </x-code>--}}
     {{--    </div>--}}
 
-    <div class=" px-5 lg:px-20 py-20">
+    <div class=" px-5 py-20">
         <div class="font-extrabold text-4xl py-10">
             <span class="underline decoration-pink-500">Forms</span>
         </div>
 
         <x-code side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
+                @php                                                // [tl! .docs-hide]
+                    $cities = App\Models\City::take(3)->get();      // [tl! .docs-hide]
+                     $roles = [                                                                     // [tl! .docs-hide]
+                        ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],     // [tl! .docs-hide]
+                        ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],             // [tl! .docs-hide]
+                    ];                                                                              // [tl! .docs-hide]
+                @endphp                                             <!-- [tl! .docs-hide] -->
                 <x-form wire:submit="save">
-                    <x-input label="Name" wire:model="name" icon="o-user" placeholder="Hello" />
+                    <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
                     <x-input label="Amount" wire:model="amount" prefix="USD" money />
+                    <x-select label="City" wire:model="city_id" icon="o-flag" :options="$cities" />
+                    <x-range label="Level" wire:model="level" hint="Select a level" class="range-xs" />
+                    <x-toggle label="E-mails" wire:model="email" hint="No spam, please." right />
 
                     <x-slot:actions>
                         <x-button label="Cancel" />
@@ -329,7 +347,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 pt-10 pb-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
+    <div class="px-5 pt-10 pb-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
         <div class="font-extrabold text-4xl pt-10 pb-20 text-right">
             <span class="underline decoration-pink-500">Dialogs</span>
         </div>
@@ -371,7 +389,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    <div class="px-5 lg:px-20 py-20 rounded-box">
+    <div class="px-5 py-20 rounded-box">
         <div class="font-extrabold text-4xl py-10">
             <span class="underline decoration-pink-500">Easy tables</span>
         </div>

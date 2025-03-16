@@ -318,10 +318,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
   integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
 
-daisyui@^5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.4.tgz#afac841df7ddfe6173501e22d0bfd2a677f736b9"
-  integrity sha512-9X3oX/k9hPBCslAECk8kYfvwgrz6Grs0lN7VI0/ZTM/hUfq1uFREHxCcBCCq0QROpN183N19B1hTNRWGipO2Eg==
+daisyui@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.0.3.tgz#a07894de9fa72772ccba598202cfb438b35be22c"
+  integrity sha512-27dou80uFNgxVcmQNzS8QFBoE1/01u7N0smdGqA2pHbaRPTFoHdJfXNzilpvt/0jAVu8cMEhrVPoYxpdxLwumA==
 
 detect-libc@^2.0.3:
   version "2.0.3"
