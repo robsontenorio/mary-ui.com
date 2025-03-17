@@ -106,8 +106,8 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... You are done!</strong>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>You are done!</strong>
     </p>
 
     <x-anchor title="Manual activation" size="text-xl" class="mt-14" />

@@ -63,6 +63,9 @@ new #[Title('Upgrading')] class extends Component {
                 @verbatim('docs')
                     # This will change after v2 release
                     composer require robsontenorio/mary:V2.x-dev
+
+                    # Clear the view cache
+                    php artisan view:cache
                 @endverbatim
             </x-code>
 

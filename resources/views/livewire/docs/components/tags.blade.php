@@ -24,9 +24,9 @@ class extends Component {
         For complex multiple inputs or preset values see <a href="/docs/components/choices" wire:navigate>Choices</a> component, that also supports online and offline search.
     </x-alert>
 
-    <x-code class="grid gap-10 sm:px-64">
+    <x-code class="grid gap-10 sm:px-32">
         @verbatim('docs')
-            <x-tags label="Tags" wire:model="tags" icon="o-home" hint="Hit enter to create a new tag" />
+            <x-tags label="Tags" wire:model="tags" icon="o-home" hint="Hit enter" clearable />
         @endverbatim
     </x-code>
     <x-code language="php" no-render>

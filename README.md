@@ -35,7 +35,3 @@ composer start
 ```
 
 **🔥 See http://localhost:8018**
-
-<br>
-
-:warning: It uses SQLITE for dynamic examples.

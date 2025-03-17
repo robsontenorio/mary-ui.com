@@ -51,6 +51,8 @@
             "Composer\\Config::disableProcessTimeout",
             "composer install",
             "php artisan key:generate",
+            "php artisan cache:clear",
+            "php artisan view:clear",
             "touch database/database.sqlite",
             "php artisan migrate:fresh --seed",
             "php artisan storage:link",
