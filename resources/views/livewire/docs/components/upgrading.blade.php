@@ -149,12 +149,11 @@ new #[Title('Upgrading')] class extends Component {
 
     <p>
         Remember that you can always change the theme, tweak theme variables or even override it with Tailwind,
-        once maryUI does not ship with any custom CSS classes.
-        For more info on how to customize themes and variables, check daisyUI <a href="https://daisyui.com/docs/themes/" target="_blank">theme docs</a>.
+        once maryUI does not ship with any custom CSS classes. See <a href="/docs/customizing">Customizing</a> docs.
     </p>
 
     <x-alert icon="o-light-bulb" class="my-10">
-        <b>Pro tip:</b> avoid to tweak things and stick to defaults. DaisyUI themes are carefully hand crafted with all UX/UI things in mind.
+        <b>Pro tip:</b> stick to the defaults, avoid to tweak things. DaisyUI themes are carefully hand crafted with all UX/UI things in mind.
     </x-alert>
 
     <x-anchor title="Small CSS changes" size="text-lg" class="!mb-5 mt-10" />
@@ -163,6 +162,54 @@ new #[Title('Upgrading')] class extends Component {
         Some components classes were internally rearranged to better control of spacing and positioning. Consider to revisit the docs examples and compare with your current
         implementation.
     </p>
+
+    <x-anchor title="Tailwind 4" size="text-lg" class="!mb-5 mt-10" />
+
+    <p>
+        This is not about maryUI. But, if you notice some weird style on your app, consider to visit the <a href="https://tailwindcss.com/docs/upgrade-guide">Tailwind 4
+            upgrading guide.</a>
+    </p>
+
+    <p>
+        Here is an example:
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="bash">
+        @verbatim('docs')
+            # There is no default border color anymore
+            <hr/>
+
+            # You have to add it by yourself
+            <hr class="border-t border-t-base-content/10" />
+
+            # Or add it on your `app.css`
+            hr {
+                @apply border-t border-t-base-content/10
+            }
+        @endverbatim
+    </x-code>
+    {{--@formatter:one--}}
+
+    <x-anchor title="daisyUI 5" size="text-lg" class="!mb-5 mt-10" />
+
+    <p>
+        There also some small changes about daisyUI. If you notice some weird style on your app you should take look at its own changelog.
+    </p>
+
+    <p>
+        For example, the <code>bg-base-100</code>, <code>bg-base-200</code> and <code>bg-base-300</code> classes has a smoothed color now.
+        That means, you can simplify like this
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code no-render language="html">
+        @verbatim('docs')
+            <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200"> <!-- [tl! remove] -->
+            <body class="min-h-screen font-sans antialiased bg-base-200"> <!-- [tl! add] -->
+        @endverbatim
+    </x-code>
+
 
     <x-anchor title="Theme Toggle" size="text-lg" class="!mb-5 mt-10" />
     <p>
@@ -234,21 +281,19 @@ new #[Title('Upgrading')] class extends Component {
     <x-anchor title="Radio vs Group" size="text-lg" class="!mb-5 mt-10" />
 
     <p>
-        The <code>x-radio</code> component was renamed to <code>x-group</code>, and now there is a new component called <code>x-radio</code>. They have the same API.
+        The <code>x-radio</code> component was renamed to <code>x-group</code>, and now there is a new component called <code>x-radio</code>.
+        See <a href="/docs/components/radio">Radio</a> and <a href="/docs/components/group">Group</a> docs.
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="grid lg:grid-cols-2 gap-24">
+    <x-code class="grid lg:grid-cols-2 gap-12 sm:px-24">
     @verbatim('docs')
         @php                                            // [tl! .docs-hide]
             $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
         @endphp                                         <!-- [tl! .docs-hide] -->
-        <div class="grid gap-5 border border-dashed border-base-300 rounded p-5"> <!-- [tl! .docs-hide] -->
         <x-radio label="Radio" :options="$users" wire:model="user" />
-        </div> <!-- [tl! .docs-hide] -->
-        <div class="grid gap-5 border border-dashed border-base-300 rounded p-5"> <!-- [tl! .docs-hide] -->
+
         <x-group label="Group" :options="$users" wire:model="user" />
-        </div> <!-- [tl! .docs-hide] -->
     @endverbatim
     </x-code>
     {{--@formatter:on--}}

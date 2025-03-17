@@ -32,7 +32,7 @@ new #[Title('Customizing')] class extends Component {
     </div>
 
     <x-alert icon="o-light-bulb" class="my-10">
-        <b>Pro tip:</b> avoid to tweak things and stick to defaults. DaisyUI themes are carefully hand crafted with all UX/UI things in mind.
+        <b>Pro tip:</b> stick to the defaults, avoid to tweak things. DaisyUI themes are carefully hand crafted with all UX/UI things in mind.
     </x-alert>
 
     <x-anchor title="Theme variables" size="text-xl" class="mt-14 !mb-5" />
