@@ -62,13 +62,6 @@ class extends Component {
         This components uses <code>ul</code> and <code>li</code> html tags. Make sure you have an extra rule to not override them on your custom CSS.
     </p>
 
-    <x-code no-render language="php">
-        @verbatim('docs')
-            // step model
-            public int $step = 2;
-        @endverbatim
-    </x-code>
-
     <x-code>
         @verbatim('docs')
             <x-steps wire:model="step" class="border-y border-base-content/10 my-5 py-5">
@@ -78,7 +71,7 @@ class extends Component {
                 <x-step step="2" text="Payment">
                     Payment step
                 </x-step>
-                <x-step step="3" text="Receive Product" class="bg-orange-500/20">
+                <x-step step="3" text="Receive Product" class="bg-warning/20">
                     Receive Product
                 </x-step>
             </x-steps>
@@ -90,25 +83,49 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Style" size="text-xl" class="mt-14" />
+    <x-code no-render language="php">
+        @verbatim('docs')
+            // Step model
+            public int $step = 2;
+        @endverbatim
+    </x-code>
 
+    <x-anchor title="Customizing" size="text-xl" class="mt-14" />
+
+    <p class="step-info">
+        Remember that if you are using deeper CSS classes than <code>steps-xxxx</code> provided by daisyUI you must configure the Tailwind <strong>safelist</strong>.
+    </p>
+
+    <p>Steps color and content.</p>
+
+    <x-code>
+        @verbatim('docs')
+            <x-steps wire:model="example" steps-color="step-primary">
+                <x-step step="1" text="A" />
+                <x-step step="2" text="B" icon="o-user" />
+                <x-step step="3" text="C" data-content="✓" />
+            </x-steps>
+            <hr class="my-5 border-base-content/10" />      <!-- [tl! .docs-hide] -->
+            <x-button label="Previous" wire:click="prev2" />   <!-- [tl! .docs-hide] -->
+            <x-button label="Next" wire:click="next2" /> <!-- [tl! .docs-hide] -->
+        @endverbatim
+    </x-code>
+
+    <br>
     <p>
-        Remember if you are using deeper CSS classes than <code>steps-xxxx</code> provided by daisyUI you must configure the Tailwind <strong>safelist</strong>.
+        You can modify the stepper style itself using the <code>stepper-classes</code> attribute.
     </p>
 
     <x-code>
         @verbatim('docs')
-            <x-steps wire:model="example" steps-color="step-warning">
+            <x-steps wire:model="example" stepper-classes="w-full p-5 bg-base-200">
                 <x-step step="1" text="A" />
                 <x-step step="2" text="B" />
-                <x-step step="3" text="C" data-content="✓" step-classes="!step-success" />
+                <x-step step="3" text="C" />
             </x-steps>
-
-            <hr class="my-5 border-base-content/10" />
-
-            <x-button label="Previous" wire:click="prev2" />
-            <x-button label="Next" wire:click="next2" />
-
+            <hr class="my-5 border-base-content/10" />      <!-- [tl! .docs-hide] -->
+            <x-button label="Previous" wire:click="prev2" />   <!-- [tl! .docs-hide] -->
+            <x-button label="Next" wire:click="next2" /> <!-- [tl! .docs-hide] -->
         @endverbatim
     </x-code>
 
