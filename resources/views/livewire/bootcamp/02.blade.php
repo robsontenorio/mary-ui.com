@@ -48,7 +48,7 @@ class extends Component {
     </x-code>
 
     <p>
-        Then, start the dev server and <strong>... check the browser</strong>.
+        Start the dev server and <strong>... check the browser</strong>.
     </p>
 
     <x-code no-render language="bash">

@@ -300,7 +300,7 @@ class extends Component {
         @verbatim('docs')
             <x-form wire:submit="save">
                 <x-file label="Avatar" wire:model="photo" accept="image/png, image/jpeg"> <!-- [tl! highlight:2] -->
-                    <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
+                    <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-36 rounded-lg" />
                 </x-file>
 
                 <x-input label="Name" ... />
@@ -595,7 +595,7 @@ class extends Component {
                     {{--  Basic section [tl! highlight:20] --}}
                     <div class="lg:grid grid-cols-5">
                         <div class="col-span-2">
-                            <x-header title="Basic" subtitle="Basic info from user" size="text-2xl" />
+                            <x-header title="Basic" subtitle="Basic info from user" size="text-lg" />
                         </div>
                         <div class="col-span-3 grid gap-3">
                             ... {{-- some fields here --}}
@@ -607,7 +607,7 @@ class extends Component {
 
                     <div class="lg:grid grid-cols-5">
                         <div class="col-span-2">
-                            <x-header title="Details" subtitle="More about the user" size="text-2xl" />
+                            <x-header title="Details" subtitle="More about the user" size="text-lg" />
                         </div>
                         <div class="col-span-3 grid gap-3">
                             ... {{-- another fields here --}}

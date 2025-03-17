@@ -52,7 +52,7 @@ new #[Title('Customizing')] class extends Component {
         <x-code no-render language="less">
             @verbatim('docs')
             @plugin "daisyui/theme" {
-                name: "light";              /* the theme name you wanna override */
+                name: "light";              /* the theme name you want to override */
                 default: true;              /* set as default */
                 prefersdark: false;         /* set as default dark mode (prefers-color-scheme:dark) */
                 color-scheme: light;        /* color of browser-provided UI */
