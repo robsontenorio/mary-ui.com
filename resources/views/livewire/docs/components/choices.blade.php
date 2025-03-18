@@ -145,7 +145,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -179,7 +179,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -205,7 +205,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -228,7 +228,7 @@ class extends Component {
         You can combine <code>allow-all</code> and <code>compact</code>
     </p>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -253,7 +253,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                               // [tl! .docs-hide]
                     $users = $this->users;                    // [tl! .docs-hide]
@@ -288,7 +288,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                                                  // [tl! .docs-hide]
                     $usersSearchable = $this->usersSearchable;                    // [tl! .docs-hide]
@@ -364,7 +364,7 @@ class extends Component {
         Another approach is to use <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
     </p>
 
-    <x-code>
+    <x-code class="sm:px-64">
         @verbatim('docs')
             @php                                                              // [tl! .docs-hide]
                 $usersSearchableMinChars = $this->usersSearchableMinChars;    // [tl! .docs-hide]
@@ -377,6 +377,7 @@ class extends Component {
                 search-function="searchMinChars"
                 debounce="300ms" {{-- Default is `250ms`--}}
                 min-chars="2" {{-- Default is `0`--}}
+                hint="Type at least 2 chars"
                 single
                 searchable />
         @endverbatim
@@ -421,20 +422,20 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code class="sm:px-32">
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users; @endphp     <!-- [tl! .docs-hide] -->
             </div>                                      <!-- [tl! .docs-hide] -->
             <x-choices label="Slots (online)" wire:model="user_custom_slot_id" :options="$users" single>
-                {{-- Item slot--}}
+                {{-- Item slot --}}
                 @scope('item', $user)
                     <x-list-item :item="$user" sub-value="bio">
                         <x-slot:avatar>
-                            <x-icon name="o-user" class="bg-orange-100 p-2 w-8 h8 rounded-full" />
+                            <x-icon name="o-user" class="bg-primary/10 p-2 w-9 h-9 rounded-full" />
                         </x-slot:avatar>
                         <x-slot:actions>
-                            <x-badge :value="$user->username" />
+                            <x-badge :value="$user->username" class="badge-soft badge-primary badge-sm" />
                         </x-slot:actions>
                     </x-list-item>
                 @endscope
@@ -454,7 +455,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code class="sm:px-32">
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->

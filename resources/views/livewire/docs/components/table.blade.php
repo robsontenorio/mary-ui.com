@@ -16,7 +16,7 @@ class extends Component {
     use Toast, WithPagination;
 
     public string $style = 'traditional';
-    
+
     public array $selected = [1, 3];
 
     public array $expanded = [2];
@@ -487,7 +487,7 @@ class extends Component {
             </x-slot:content>
         </x-collapse>
         <x-collapse name="minimalist" separator>
-            <x-slot:heading>Minimalist</x-slot:heading>
+            <x-slot:heading>Minimalist (used in this docs)</x-slot:heading>
             <x-slot:content>
                 <x-code no-render language="sass">
         .mary-table-pagination {

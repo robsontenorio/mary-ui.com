@@ -279,43 +279,43 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </x-code>
     </div>
 
-    {{--    <div class="px-5 lg:px-20 py-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">--}}
-    {{--        <div class="font-extrabold text-4xl py-10 text-right">--}}
-    {{--            <span class="underline decoration-pink-500">Multi selection</span>--}}
-    {{--        </div>--}}
+    <div class="px-5 lg:px-20 py-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
+        <div class="font-extrabold text-4xl py-10 text-right">
+            <span class="underline decoration-pink-500">Multi selection</span>
+        </div>
 
-    {{--        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">--}}
-    {{--            @verbatim('docs')--}}
-    {{--                @php                              // [tl! .docs-hide]--}}
-    {{--                    $users = $this->users;       // [tl! .docs-hide]--}}
-    {{--                @endphp                         --}}{{-- [tl! .docs-hide] --}}
-    {{--                <x-choices--}}
-    {{--                    label="Users - server side"--}}
-    {{--                    wire:model="selected_users"--}}
-    {{--                    :options="$users"--}}
-    {{--                    icon="s-bolt"--}}
-    {{--                    hint="Search happens on server side"--}}
-    {{--                    searchable />--}}
-    {{--            @endverbatim--}}
-    {{--        </x-code>--}}
+        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
+            @verbatim('docs')
+                @php                              // [tl! .docs-hide]
+                        $users = $this->users;       // [tl! .docs-hide]
+                @endphp                          <!-- [tl! .docs-hide]-->
+                <x-choices
+                    label="Users - server side"
+                    wire:model="selected_users"
+                    :options="$users"
+                    icon="o-bolt"
+                    hint="Search happens on server side"
+                    searchable />
+            @endverbatim
+        </x-code>
 
-    {{--        <hr class="my-12 border-base-300" />--}}
+        <hr class="my-12 border-base-300" />
 
-    {{--        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">--}}
-    {{--            @verbatim('docs')--}}
-    {{--                @php                                    // [tl! .docs-hide]--}}
-    {{--                    $cities = App\Models\City::all();   // [tl! .docs-hide]--}}
-    {{--                @endphp                                 --}}{{-- [tl! .docs-hide] --}}
-    {{--                <x-choices-offline--}}
-    {{--                    label="Cities - frontend side"--}}
-    {{--                    wire:model="selected_cities"--}}
-    {{--                    :options="$cities"--}}
-    {{--                    icon="s-bolt-slash"--}}
-    {{--                    hint="Search happens on frontend side"--}}
-    {{--                    searchable />--}}
-    {{--            @endverbatim--}}
-    {{--        </x-code>--}}
-    {{--    </div>--}}
+        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
+            @verbatim('docs')
+                @php                                    // [tl! .docs-hide]
+                        $cities = App\Models\City::all();   // [tl! .docs-hide]
+                @endphp                                  <!-- [tl! .docs-hide] -->
+                <x-choices-offline
+                    label="Cities - frontend side"
+                    wire:model="selected_cities"
+                    :options="$cities"
+                    icon="s-bolt-slash"
+                    hint="Search happens on frontend side"
+                    searchable />
+            @endverbatim
+        </x-code>
+    </div>
 
     <div class=" px-5 py-20">
         <div class="font-extrabold text-4xl py-10">

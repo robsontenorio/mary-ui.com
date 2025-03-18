@@ -204,6 +204,7 @@ class extends Component {
 
     <x-code class="grid gap-5 justify-center">
         @verbatim('docs')
+            {{-- We use this style on maryUI docs --}}
             <x-menu activate-by-route active-bg-color="font-black" class="border border-base-content/10 !w-64">
                 <x-menu-item title="Hello" />
                 <x-menu-item title="There" />
