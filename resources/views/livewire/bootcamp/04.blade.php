@@ -17,7 +17,7 @@ class extends Component {
         Let's build a nice form layout that contains a file upload and cropping components!
     </p>
 
-    <img src="/bootcamp/04-a.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-a.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-anchor title="New Components & Routes" size="text-xl" class="mt-14" />
 
@@ -76,7 +76,7 @@ class extends Component {
         <x-button label="Select docs" link="/docs/components/input" icon="o-arrow-up-right" external class=" btn-sm !no-underline" />
     </div>
 
-    <img src="/bootcamp/04-g.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-g.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         First, we need to create a link from our table to the new edit component. This is easier than anything with the <code>x-table</code> component.
@@ -126,7 +126,7 @@ class extends Component {
         models.
     </p>
 
-    <img src="/bootcamp/04-aa.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-aa.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     {{--@formatter:off--}}
     <x-code no-render>
@@ -208,7 +208,7 @@ class extends Component {
         Check in the browser if it is working... <strong>and if the form is not filled.</strong>
     </p>
 
-    <img src="/bootcamp/04-g.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-g.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         We can "fix" this by using the Livewire <code>mount()</code> method and its handy <code>fill()</code> method to fill
@@ -253,7 +253,7 @@ class extends Component {
 
     <x-button label="File docs" link="/docs/components/file" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-h.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-h.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Let's make it cool and add a user avatar.
@@ -314,7 +314,7 @@ class extends Component {
         We stored it for you at <code>your-app/public/empty-user.jpg</code> during the Bootcamp setup.
     </p>
 
-    <img src="/bootcamp/04-hh.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-hh.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         If you select an image and hit "Save" <strong>of course the image won't be uploaded.</strong> There are certainly many ways to do it, but here is a way to get started.
@@ -349,7 +349,7 @@ class extends Component {
         And how about cropping the avatar image?
     </p>
 
-    <img src="/bootcamp/04-hhh.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-hhh.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         First, add Cropper.js.
@@ -386,7 +386,7 @@ class extends Component {
         Just place a nice image on the right side.
     </p>
 
-    <img src="/bootcamp/04-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-b.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -416,7 +416,7 @@ class extends Component {
 
     <x-button label="Choices docs" link="/docs/components/choices" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-i.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-i.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         This component is intended to be used for building complex selection interfaces for single and multiple values. It also supports a frontend or server values
@@ -509,7 +509,7 @@ class extends Component {
 
     <x-button label="Rich Text Editor docs" link="/docs/components/editor" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-j.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-j.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         This component is a wrapper around <a href="https://www.tiny.cloud" target="_blank">TinyMCE,</a> and it automatically uploads images and files to <strong>local</strong>
@@ -584,7 +584,7 @@ class extends Component {
         This is just another alternative, so use the one that works best for you.
     </p>
 
-    <img src="/bootcamp/04-e.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/04-e.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -626,7 +626,7 @@ class extends Component {
 
     <x-button label="Avatar docs" link="/docs/components/avatar" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/04-c.png" class="rounded-lg border border-base-300 shadow mt-5 border-dashed" />
+    <img src="/bootcamp/04-c.png?new=2025" class="rounded-lg border border-base-300 shadow mt-5 border-dashed" />
 
     <p>
         Move back to <code>users/index</code> and add a new column in the <code>$headers</code> property.
@@ -666,7 +666,7 @@ class extends Component {
         Put a "create" button now and go ahead and implement it!
     </p>
 
-    <img src="/bootcamp/04-d.png" class="rounded-lg border border-base-300 border-dashed shadow" />
+    <img src="/bootcamp/04-d.png?new=2025" class="rounded-lg border border-base-300 border-dashed shadow" />
 
     <x-code no-render>
         @verbatim('docs')

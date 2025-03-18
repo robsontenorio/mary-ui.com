@@ -418,7 +418,7 @@ class extends Component {
     <x-anchor title="Pagination" size="text-xl" class="mt-14" />
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="https://mary-ui.com/bootcamp/03#pagination">Bootcamp</a>.
+        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="/bootcamp/03#pagination">Bootcamp</a>.
     </x-alert>
 
     <p>

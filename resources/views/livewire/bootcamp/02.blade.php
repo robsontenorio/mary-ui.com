@@ -48,12 +48,17 @@ class extends Component {
     </x-code>
 
     <p>
-        Start the dev server and <strong>... check the browser</strong>.
+        Start the dev server.
     </p>
 
     <x-code no-render language="bash">
         yarn dev
     </x-code>
+
+    <p>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>Check the browser!</strong>
+    </p>
 
     <p>
         We are using Livewire Volt, take a look at:
@@ -63,7 +68,7 @@ class extends Component {
         <li><code>resources/views/livewire/users/index.blade.php</code>.</li>
     </ul>
 
-    <img src="/bootcamp/02-a.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/02-a.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Check the source code diff and commit it.
@@ -76,7 +81,7 @@ class extends Component {
         Let's make it work with a real database and add some new models and relationships.
     </p>
 
-    <img src="/bootcamp/02-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/02-b.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed things up.

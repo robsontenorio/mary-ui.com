@@ -21,7 +21,7 @@ class extends Component {
         Check the docs for more.
     </p>
 
-    <img src="/bootcamp/05-c.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/05-c.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-anchor title="Searching" size="text-xl" class="mt-14" />
 
@@ -81,7 +81,12 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        <strong>That's it!</strong> You are done, try to hit <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>That is it!</strong>
+    </p>
+
+    <p>
+        Try to hit <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">

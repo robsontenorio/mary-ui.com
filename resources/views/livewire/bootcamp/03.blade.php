@@ -21,7 +21,7 @@ class extends Component {
 
     <x-button label="Table docs" link="/docs/components/table" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/03-a.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/03-a.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         The <code>x-table</code> is a powerful component. You can easily display data, paginate, customize rows using slots, or make it sortable, clickable, selectable or
@@ -109,7 +109,7 @@ class extends Component {
 
     <x-anchor title="Pagination" size="text-xl" class="mt-14" />
 
-    <img src="/bootcamp/03-b.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/03-b.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Go back to <code>users/index.blade</code> and use the <code>WithPagination</code> trait from Livewire itself, as described in
@@ -269,7 +269,7 @@ class extends Component {
 
     <x-button label="Drawer docs" link="/docs/components/drawer" icon="o-link" external class="btn-sm !no-underline" />
 
-    <img src="/bootcamp/03-c.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/03-c.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         The <code>x-drawer</code> component is a great way to avoid interrupting the users flow when it is necessary to quickly execute a secondary action.
@@ -348,7 +348,7 @@ class extends Component {
         selected.
     </p>
 
-    <img src="/bootcamp/03-d.png" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/bootcamp/03-d.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Tip: use the button <code>badge</code> property and an extra method on your component to count how many filters are filled.

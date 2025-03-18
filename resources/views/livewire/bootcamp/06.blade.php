@@ -173,6 +173,7 @@ class extends Component {
     </x-code>
 
     <p>
+        <x-icon name="o-bolt" class="text-warning" />
         <strong>That is it!</strong>
     </p>
     <p>
@@ -289,6 +290,7 @@ class extends Component {
     </x-code>
 
     <p>
+        <x-icon name="o-bolt" class="text-warning" />
         <strong>It is done!</strong>
     </p>
 

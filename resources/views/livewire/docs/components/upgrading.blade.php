@@ -35,10 +35,10 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="Upgrade it" size="text-xl" class="mt-14" />
 
-    <span class="rounded py-2 px-4 bg-warning/40 text-sm">
+    <div class="w-fit rounded py-2 px-4 bg-warning/40 text-sm">
         If you are starting a new project you must follow the
         <a href="/docs/installation">installation guide</a> instead.
-    </span>
+    </div>
 
     <br><br>
 

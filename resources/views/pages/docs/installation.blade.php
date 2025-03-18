@@ -27,10 +27,10 @@ new #[Title('Installation')] class extends Component {
 
     <x-anchor title="Automatic install" size="text-xl" class="mt-14 !mb-5" />
 
-    <span class="rounded py-2 px-4 bg-warning/40 text-sm">
+    <div class="w-fit rounded py-2 px-4 bg-warning/40 text-sm">
         If you already have a <b>maryUI v1</b> project you must follow the
         <a href="/docs/upgrading">upgrade guide</a> instead.
-    </span>
+    </div>
 
     <p>
         After installing make sure to check the <a href="/docs/layout" wire:navigate>Layout</a>
@@ -95,22 +95,23 @@ new #[Title('Installation')] class extends Component {
         php artisan view:clear
     </x-code>
 
-    <x-anchor title="Jetstream and Breeze" size="text-xl" class="mt-14" />
+    <x-anchor title="Starter kits" size="text-xl" class="mt-14" />
 
     <x-alert icon="o-light-bulb">
         If you are facing some UI glitches, try to remove <code>@tailwindcss/forms</code> plugin.
     </x-alert>
 
     <p>
-        For existing projects that uses <strong>Jetstream</strong> or <strong>Breeze</strong>, the installer will publish <code>config/mary.php</code>
-        with a global prefix on maryUI components to avoid name collision. So, you need to use components like this:
-    </p>
-    <p>
-        <code>x-mary-button</code> , <code>x-mary-card</code> <code>x-mary-icon</code> ...
+        For existing projects that uses <strong>starter kits</strong> (Breeze, Jetstream and FluxUI), the installer will publish <code>config/mary.php</code>
+        with a global prefix on maryUI components to avoid name collision.
     </p>
 
     <p>
-        The maryUI components provides a great DX that probably you may want to use its components instead of default Jetstream/Breeze components.
+        So, you need to use components like this: <code>x-mary-button</code> , <code>x-mary-card</code> <code>x-mary-icon</code> ...
+    </p>
+
+    <p>
+        The maryUI components provides a great DX that probably you may want to use its components instead.
     </p>
 
     <p>
