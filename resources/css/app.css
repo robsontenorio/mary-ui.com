@@ -113,13 +113,62 @@ p {
 * Mary Table paginator
 */
 
-.mary-table-pagination span[aria-current="page"] > span {
-    @apply bg-primary text-base-100
+.mary-table-pagination {
+    button, span {
+        @apply text-xs border-none
+    }
+
+    button {
+        @apply cursor-pointer
+    }
+
+    span[aria-current="page"] > span {
+        @apply bg-base-content/5
+    }
+
+    button, span[aria-current="page"] > span, span[aria-disabled="true"] span {
+        @apply py-1 px-2
+    }
 }
 
-.mary-table-pagination button {
-    @apply cursor-pointer
-}
+/*.mary-table-pagination button, span[aria-current="page"] {*/
+/*    @apply px-2.5 py-1.5 font-normal cursor-pointer text-xs*/
+/*}*/
+
+/*!** Dots page button **!*/
+/*.mary-table-pagination span[aria-disabled="true"] span {*/
+/*    @apply px-2.5 py-1.5*/
+/*}*/
+
+/*!** Active button **!*/
+/*.mary-table-pagination span[aria-current="page"] > span {*/
+/*    @apply px-2.5 py-1.5 bg-base-content/5 font-black text-base-content*/
+/*}*/
+
+
+/*.mary-table-pagination span[aria-current="page"] > span {*/
+/*    @apply !font-bold text-base-content bg-none !border-none !py-1 !px-2 !m-0*/
+/*}*/
+
+/*.mary-table-pagination button {*/
+/*    @apply cursor-pointer !py-1 !px-2 !m-0 !border-0 !font-normal rounded  text-base-content/40*/
+/*}*/
+
+/*.mary-table-pagination button:hover {*/
+/*    @apply cursor-pointer bg-base-content/5*/
+/*}*/
+
+/*.mary-table-pagination span[aria-disabled="true"] span {*/
+/*    @apply !border-none !py-1 !px-2*/
+/*}*/
+
+/*.mary-table-pagination nav p {*/
+/*    @apply !text-xs*/
+/*}*/
+
+/*.mary-table-pagination nav span.shadow-sm {*/
+/*    @apply border border-base-content/5*/
+/*}*/
 
 /* Just for the website */
 .mary-table-pagination p {

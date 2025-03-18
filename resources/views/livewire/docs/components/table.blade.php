@@ -15,6 +15,8 @@ new
 class extends Component {
     use Toast, WithPagination;
 
+    public string $style = 'traditional';
+    
     public array $selected = [1, 3];
 
     public array $expanded = [2];
@@ -415,6 +417,10 @@ class extends Component {
 
     <x-anchor title="Pagination" size="text-xl" class="mt-14" />
 
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="https://mary-ui.com/bootcamp/03#pagination">Bootcamp</a>.
+    </x-alert>
+
     <p>
         Notice maryUI uses directly all features offered by Laravel and Livewire itself, including default pagination links and deeper customizations.
         For further details, please, refer to their docs.
@@ -463,7 +469,11 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="sass">
+    <x-accordion wire:model="style">
+        <x-collapse name="traditional" separator>
+            <x-slot:heading>Traditional</x-slot:heading>
+            <x-slot:content>
+                <x-code no-render language="sass">
         /** General button **/
         .mary-table-pagination button {
             @apply cursor-pointer
@@ -473,18 +483,41 @@ class extends Component {
         .mary-table-pagination span[aria-current="page"] > span {
             @apply bg-primary text-base-100
         }
-    </x-code>
+                </x-code>
+            </x-slot:content>
+        </x-collapse>
+        <x-collapse name="minimalist" separator>
+            <x-slot:heading>Minimalist</x-slot:heading>
+            <x-slot:content>
+                <x-code no-render language="sass">
+        .mary-table-pagination {
+            button, span {
+                @apply text-xs border-none
+            }
+
+            button {
+                @apply cursor-pointer
+            }
+
+            span[aria-current="page"] > span {
+                @apply bg-base-content/5
+            }
+
+            button, span[aria-current="page"] > span, span[aria-disabled="true"] span {
+                @apply py-1 px-2
+            }
+        }
+                </x-code>
+            </x-slot:content>
+        </x-collapse>
+    </x-accordion>
     {{--@formatter:on--}}
 
-    <br>
+    <br><br>
 
     <p>
         You also can control the number of items per page by using the <code>per-page</code> attribute, as well the displayed values using <code>per-page-values</code>.
     </p>
-
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="https://mary-ui.com/bootcamp/03#pagination">Bootcamp</a>.
-    </x-alert>
 
     <x-code>
         @verbatim('docs')
