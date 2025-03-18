@@ -122,8 +122,6 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Choices" />
 
-    <x-alert title="This component is still been worked for v2." class="bg-warning/40" />
-
     <p>
         This component is intended to be used to build complex selection interfaces for single and multiple values.
         It also supports <strong>search</strong> on frontend or server, when dealing with large lists.

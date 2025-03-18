@@ -13,7 +13,6 @@ new #[Title('Upgrading')] class extends Component {
 
     <x-anchor title="WIP" size="text-xl" class="mt-14" />
     <ul>
-        <li>Migrate the "Choices" component.</li>
         <li>Upgrade the demos.</li>
         <li>Release a brand new cool demo.</li>
     </ul>
