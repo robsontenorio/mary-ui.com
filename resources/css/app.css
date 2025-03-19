@@ -22,22 +22,28 @@
     color-scheme: light; /* color of browser-provided UI */
 }
 
-/** Used only on `Customizing` docs **/
+
 [data-theme="mytheme2"] {
-    .input {
-        @apply outline-none;
+    .input:not([class*="!input-error"]),
+    .select:not([class*="!select-error"]),
+    .toggle:not([class*="!toggle-error"]) {
+        @apply border-primary outline-primary
+    }
+
+    .checkbox:checked, .toggle:checked, .radio:checked {
+        @apply text-primary;
+    }
+
+    .btn:checked {
+        @apply bg-primary border-none shadow-none;
     }
 
     .fieldset-legend {
-        @apply text-[1.09rem] font-bold;
+        @apply text-[0.9rem];
     }
 
-    .fieldset-label {
-        @apply italic;
-    }
-
-    .select {
-        @apply outline-none  rounded-3xl;
+    .fieldset-label, .fieldset .text-error {
+        @apply text-sm
     }
 }
 

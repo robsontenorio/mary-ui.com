@@ -1,10 +1,36 @@
 <?php
 
+use App\Models\User;
 use Livewire\Attributes\Title;
+use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
 new #[Title('Customizing')] class extends Component {
-    //
+    #[Validate('required')]
+    public int $user_id = 1;
+
+    #[Validate('required')]
+    public ?string $name = null;
+
+    #[Validate('required')]
+    public ?int $country_id = null;
+
+    public function save()
+    {
+        $this->validate();
+    }
+
+    public function users()
+    {
+        return User::take(3)->get();
+    }
+
+    public function with(): array
+    {
+        return [
+            'users' => $this->users()
+        ];
+    }
 }; ?>
 
 <div class="docs">
@@ -72,30 +98,49 @@ new #[Title('Customizing')] class extends Component {
     </p>
 
     <div data-theme="mytheme2">
+        {{--@formatter:off--}}
         <x-code class="grid gap-5">
             @verbatim('docs')
-                <x-input label="Name" hint="Hey" />
-                <x-select />
+                @php                            // [tl! .docs-hide]
+                    $users = $this->users();      // [tl! .docs-hide]
+                @endphp                         <!-- [tl! .docs-hide] -->
+                <x-form wire:submit="save"> <!-- [tl! .docs-hide] -->
+                <x-input label="Name" placeholder="Hello" hint="The full name" wire:model="name" />
+                <x-select label="Country" placeholder="Select one" wire:model="country_id" />
+                <x-toggle label="Terms" label="Select one" />
+                <x-group label="User" label="Select one" wire:model="user_id" :options="$users" />
+                <x-slot:actions><!-- [tl! .docs-hide] -->
+                    <x-button type="submit" class="btn-primary" label="Save" /><!-- [tl! .docs-hide] -->
+                </x-slot:actions><!-- [tl! .docs-hide] -->
+                </x-form><!-- [tl! .docs-hide] -->
             @endverbatim
         </x-code>
+        {{--@formatter:on--}}
+
         {{--@formatter:off--}}
         <x-code no-render language="less">
             @verbatim('docs')
-            .input {
-                @apply outline-none;
-            }
+                .input:not([class*="!input-error"]),
+                .select:not([class*="!select-error"]),
+                .toggle:not([class*="!checkbox-error"]) {
+                    @apply border-primary outline-primary
+                }
 
-            .select {
-                @apply outline-none  rounded-3xl;
-            }
+                .checkbox:checked, .toggle:checked, .radio:checked {
+                    @apply text-primary;
+                }
 
-            .fieldset-legend {
-                @apply text-[1.09rem] font-bold;
-            }
+                .btn:checked {
+                    @apply bg-primary border-none shadow-none;
+                }
 
-            .fieldset-label {
-                @apply italic;
-            }
+                .fieldset-legend {
+                    @apply text-[0.9rem];
+                }
+
+                .fieldset-label, .fieldset .text-error {
+                    @apply text-sm
+                }
             @endverbatim
         </x-code>
         {{--@formatter:on--}}
