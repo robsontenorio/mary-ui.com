@@ -142,6 +142,52 @@ new #[Layout('components.layouts.landing')] class extends Component {
         <div class="text-center mt-5">
             <x-button label="Sponsor" link="https://github.com/sponsors/robsontenorio" icon-right="o-arrow-right" external class="!no-underline" />
         </div>
+        {{--        <div class="grid gap-16 sm:grid-cols-2  pt-10">--}}
+        {{--            <div>--}}
+        {{--                <div class="text-4xl pb-10 text-center">--}}
+        {{--                    <span class="underline decoration-pink-500 font-bold">Sponsors</span>--}}
+        {{--                    <x-icon name="o-heart" class="w-10 h-10 text-pink-500" />--}}
+        {{--                </div>--}}
+        {{--                <div class="min-h-[86px]">--}}
+        {{--                    <livewire:sponsors lazy="on-load" />--}}
+        {{--                </div>--}}
+        {{--                <div class="text-center mt-5 text-xs">--}}
+        {{--                    <a href="https://github.com/sponsors/robsontenorio" target="_blank">--}}
+        {{--                        Sponsor--}}
+        {{--                        <x-icon name="o-arrow-right" class="w-4 h-4" />--}}
+        {{--                    </a>--}}
+        {{--                </div>--}}
+        {{--            </div>--}}
+        {{--            <div class="min-h-[86px]">--}}
+        {{--                <div class="text-center">--}}
+        {{--                    <div class="text-4xl pb-10">--}}
+        {{--                        <span class="underline decoration-pink-500 font-bold">Partners</span>--}}
+        {{--                        <x-icon name="o-heart" class="w-10 h-10 text-pink-500" />--}}
+        {{--                    </div>--}}
+        {{--                    <div class="mb-8 -mt-3">--}}
+        {{--                        <x-icon name="o-squares-plus" class="w-10 h-10 opacity-50" />--}}
+        {{--                    </div>--}}
+        {{--                    <div class="text-base-content/60 text-xs">--}}
+        {{--                        Showcase your brand here for--}}
+        {{--                        <b class="font-black text-base-content">--}}
+        {{--                            <livewire:analytics lazy="on-load" />--}}
+        {{--                        </b>--}}
+        {{--                        monthly visitors.--}}
+
+        {{--                        <div class="mt-5 justify-center flex gap-5 text-xs">--}}
+        {{--                            <a href="https://github.com/sponsors/robsontenorio" target="_blank">--}}
+        {{--                                Sponsor--}}
+        {{--                                <x-icon name="o-arrow-right" class="w-4 h-4" />--}}
+        {{--                            </a>--}}
+        {{--                            <a href="https://mary-ui.pirsch.io" target="_blank">--}}
+        {{--                                Open analytics--}}
+        {{--                                <x-icon name="o-arrow-right" class="w-4 h-4" />--}}
+        {{--                            </a>--}}
+        {{--                        </div>--}}
+        {{--                    </div>--}}
+        {{--                </div>--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
     </div>
 
     <div class="px-5 lg:px-20 pt-10 pb-20">
