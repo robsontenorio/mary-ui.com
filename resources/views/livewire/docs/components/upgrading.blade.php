@@ -137,8 +137,8 @@ new #[Title('Upgrading')] class extends Component {
                 /* Your styles goes here ... */
                 /* ... */
                 @endverbatim
-                <!-- @formatter:on -->
             </x-code>
+            <!-- @formatter:on -->
         </div>
     </div>
 
