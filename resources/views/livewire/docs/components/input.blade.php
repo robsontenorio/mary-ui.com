@@ -90,7 +90,7 @@ class extends Component {
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code class="grid gap-5 sm:px-16">
         @verbatim('docs')
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]

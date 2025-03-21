@@ -159,7 +159,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="gap gap-5 sm:px-32">
+    <x-code class="gap gap-5 sm:px-16">
         @verbatim('docs')
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
