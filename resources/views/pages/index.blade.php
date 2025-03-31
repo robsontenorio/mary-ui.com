@@ -100,8 +100,8 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
             <span class="bg-warning/70 p-2 rounded text-sm px-4 mb-10">
                 <x-icon name="o-fire" class="h-4 w-4 mb-0.5" />
-                maryUI v2 beta available!
-                <a href="https://v2.mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Try it &rarr;</a>
+                maryUI v1 is deprecated!
+                <a href="https://mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade to v2 &rarr;</a>
             </span>
             <br><br>
 

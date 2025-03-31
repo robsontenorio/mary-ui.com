@@ -111,7 +111,7 @@ class extends Component {
     </ul>
 
     <x-alert icon="o-light-bulb" class="my-5">
-        Make sure to add <a href="https://mary-ui.com/docs/components/input#currency">Currency</a> library to make money
+        Make sure to add <a href="/docs/components/input#currency">Currency</a> library to make money
         input work.
     </x-alert>
 

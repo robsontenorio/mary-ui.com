@@ -53,10 +53,10 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-warning/10 text-center p-2 text-sm">
+    <div class="bg-warning text-center p-2 text-sm">
         <x-icon name="o-fire" class="h-4 w-4" />
-        maryUI v2 beta is available!
-        <a href="https://v2.mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Try it &rarr;</a>
+        maryUI v1 is deprecated!
+        <a href="https://mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade to v2 &rarr;</a>
     </div>
     <x-nav sticky>
         <x-slot:brand>
