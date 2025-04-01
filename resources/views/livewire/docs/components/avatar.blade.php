@@ -21,7 +21,7 @@ class extends Component {
             @php                                         // [tl! .docs-hide]
                 $user = App\Models\User::first();        // [tl! .docs-hide]
             @endphp                                     <!-- [tl! .docs-hide] -->
-            <x-avatar :image="$user->avatar" />
+            <x-avatar :image="$user->avatar" alt="My image" />
 
             {{-- Manipulate avatar imagem with CSS classes --}}
             <x-avatar :image="$user->avatar" class="!w-14 !rounded-lg" />

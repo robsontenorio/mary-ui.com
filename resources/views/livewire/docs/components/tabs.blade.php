@@ -9,6 +9,14 @@ new
 #[Layout('components.layouts.app', ['description' => 'Livewire UI tabs component with icons and dynamic selection.'])]
 class extends Component {
     public string $selectedTab = 'tricks-tab';
+
+    public string $myTab = 'tricks-tab';
+
+    public string $someTab = 'users-tab';
+
+    public string $selection = 'tricks-tab';
+
+    public string $tabSelected = 'tricks-tab';
 }
 
 ?>
@@ -31,18 +39,17 @@ class extends Component {
                     <div>Musics</div>
                 </x-tab>
             </x-tabs>
-
-            <hr class="my-5 border-base-300">
+            <hr class="my-5 border-base-300"><!-- [tl! .docs-hide] -->
 
             <x-button label="Change to Musics" @click="$wire.selectedTab = 'musics-tab'" />
         @endverbatim
     </x-code>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
-    
+
     <x-code>
         @verbatim('docs')
-            <x-tabs wire:model="selectedTab">
+            <x-tabs wire:model="myTab">
                 <x-tab name="users-tab">
                     <x-slot:label>  {{-- [tl! highlight:3] --}}
                         Users
@@ -65,7 +72,7 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            <x-tabs wire:model="selectedTab">
+            <x-tabs wire:model="someTab">
                 <x-tab name="users-tab" label="Users">
                     <div>Users</div>
                 </x-tab>
@@ -82,6 +89,24 @@ class extends Component {
         @endverbatim
     </x-code>
 
+    <x-anchor title="Hidden state" size="text-xl" class="mt-14" />
+
+    <x-code>
+        @verbatim('docs')
+            <x-tabs wire:model="someTab">
+                <x-tab name="users-tab" label="Users">
+                    <div>Users</div>
+                </x-tab>
+                <x-tab name="tricks-tab" label="Tricks" hidden>
+                    <div>Tricks</div>
+                </x-tab>
+                <x-tab name="musics-tab" label="Musics">
+                    <div>Musics</div>
+                </x-tab>
+            </x-tabs>
+        @endverbatim
+    </x-code>
+
     <x-anchor title="Customisation" size="text-xl" class="mt-14" />
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
@@ -91,7 +116,7 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             <x-tabs
-                wire:model="selectedTab"
+                wire:model="tabSelected"
                 active-class="bg-primary rounded !text-white"
                 label-class="font-semibold"
                 label-div-class="bg-primary/5 rounded w-fit p-2"
