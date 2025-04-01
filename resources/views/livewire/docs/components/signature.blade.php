@@ -24,7 +24,7 @@ class extends Component {
         This component is a wrapper around <a href="https://github.com/szimek/signature_pad" target="_blank">signature_pad</a>, for more details refer to its docs.
     </p>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -37,7 +37,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <p>
         It just extracts the signature as a <strong>base64 string</strong> after the end of each stroke.
@@ -62,7 +62,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Customize" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Customize" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -72,7 +72,7 @@ class extends Component {
                 wire:model="signature3"
                 clear-text="Delete it!"
                 height="100"
-                class="border-4 !bg-info" />
+                class="border-4 !bg-info/10" />
         @endverbatim
     </x-code>
 

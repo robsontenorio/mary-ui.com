@@ -13,7 +13,11 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Timeline" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Alternately check the <a href="/docs/components/steps" wire:navigate>Steps</a> component.
+    </x-alert>
+
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -32,7 +36,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Icons" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Icons" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')

@@ -12,7 +12,7 @@ class extends Component {
 
     public bool $item2 = false;
 
-    public bool $item3 = false;
+    public bool $item3 = true;
 
     public bool $item4 = true;
 }
@@ -22,19 +22,19 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Toggle" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-toggle label="Left" wire:model="item1" />
-            <hr />
 
-            <x-toggle label="Right" wire:model="item2" right hint="Activate stuff" />
-            <hr />
+            <x-toggle label="Left" wire:model="item1" hint="Please, turn it off now!" />
+            <hr class="border-base-300" /> <!-- [tl! .docs-hide] -->
 
-            <x-toggle label="Right Tight" wire:model="item3" class="toggle-warning" right tight />
-            <hr />
+            <x-toggle label="Right" wire:model="item2" right />
 
-            {{-- Notice Tailwind alignment class for long lines --}}
-            <x-toggle wire:model="item4" class="self-start">
+            <x-toggle label="Right" wire:model="item2" hint="Please, turn it off now!" right />
+            <hr class="border-base-300" /><!-- [tl! .docs-hide] -->
+
+            <x-toggle wire:model="item3" class="self-start">
                 <x-slot:label>
                     This is <br>a very <br> long line.
                 </x-slot:label>

@@ -16,7 +16,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Tabs" />
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -32,24 +32,21 @@ class extends Component {
                 </x-tab>
             </x-tabs>
 
-            <hr class="my-5">
+            <hr class="my-5 border-base-300">
 
             <x-button label="Change to Musics" @click="$wire.selectedTab = 'musics-tab'" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
-
-    <p>
-        Use slots to customize the tab label.
-    </p>
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
+    
     <x-code>
         @verbatim('docs')
             <x-tabs wire:model="selectedTab">
                 <x-tab name="users-tab">
                     <x-slot:label>  {{-- [tl! highlight:3] --}}
                         Users
-                        <x-badge value="3" class="badge-primary" />
+                        <x-badge value="3" class="badge-primary badge-sm" />
                     </x-slot:label>
 
                     <div>Users</div>
@@ -64,7 +61,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disabled state" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disabled state" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -85,7 +82,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Customisation" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Customisation" size="text-xl" class="mt-14" />
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
         Remember to add these custom classes on Tailwind <strong>safelist</strong>.
@@ -95,9 +92,9 @@ class extends Component {
         @verbatim('docs')
             <x-tabs
                 wire:model="selectedTab"
-                active-class="bg-primary rounded text-white"
+                active-class="bg-primary rounded !text-white"
                 label-class="font-semibold"
-                label-div-class="bg-primary/5 p-2 rounded"
+                label-div-class="bg-primary/5 rounded w-fit p-2"
             >
                 <x-tab name="users-tab" label="Users">
                     <div>All</div>

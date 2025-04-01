@@ -15,6 +15,8 @@ new
 class extends Component {
     use Toast, WithPagination;
 
+    public string $style = 'traditional';
+
     public array $selected = [1, 3];
 
     public array $expanded = [2];
@@ -55,7 +57,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Table" />
 
-    <x-anchor title="Simple" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Simple" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -74,25 +76,22 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No headers & No hover" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No headers & no hover" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
-                $headers = [
-                    ['key' => 'name', 'label' => 'Name'],
-                    ['key' => 'city.name', 'label' => 'City'],
-                ];
-            @endphp
-
-            {{-- Notice `no-headers` --}}
+            @php                                                            // [tl! .docs-hide]
+                $users = App\Models\User::with('city')->take(3)->get();     // [tl! .docs-hide]
+                $headers = [                                                // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Name'],                   // [tl! .docs-hide]
+                    ['key' => 'city.name', 'label' => 'City'],              // [tl! .docs-hide]
+                ];                                                          // [tl! .docs-hide]
+            @endphp                                                         <!-- [tl! .docs-hide] -->
             <x-table :headers="$headers" :rows="$users" no-headers no-hover />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Formatters" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Formatters" size="text-xl" class="mt-14" />
 
     <p>
         The table component includes the basic <code>date</code> and <code>currency</code> formatters. You can also use a <code>closure</code> to make any kind of transformation.
@@ -104,11 +103,9 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::take(2)->get();
-
+                $users = App\Models\User::take(2)->get();                           // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'name', 'label' => 'Name'],
-                    //
+                    // It calls PHP Carbon::parse($value)->format($pattern)
                     ['key' => 'created_at', 'label' => 'Date', 'format' => ['date', 'd/m/Y']],
 
                     // It calls number_format()
@@ -126,7 +123,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Click to navigate" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Click to navigate" size="text-xl" class="mt-14" />
 
     <p>
         The following <code>{tokens}</code> will be replaced by actual values <strong>on each row</strong> based on any <code>key</code>
@@ -145,16 +142,14 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
-                $headers = [
-                    ['key' => 'id', 'label' => '#'],
-                    ['key' => 'username', 'label' => 'Username'],
-                    ['key' => 'city.name', 'label' => 'City'],
-                ];
-            @endphp
-
+            @php                                                                // [tl! .docs-hide]
+                $users = App\Models\User::with('city')->take(3)->get();         // [tl! .docs-hide]
+                $headers = [                                                    // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#'],                            // [tl! .docs-hide]
+                    ['key' => 'username', 'label' => 'Username'],               // [tl! .docs-hide]
+                    ['key' => 'city.name', 'label' => 'City'],                  // [tl! .docs-hide]
+                ];                                                              // [tl! .docs-hide]
+            @endphp                                                             <!-- [tl! .docs-hide] -->
             {{-- Notice `link` --}}
             {{-- Check browser url on next page --}}
             <x-table :headers="$headers" :rows="$users" link="/docs/installation/?from={username}" />
@@ -188,7 +183,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Header classes" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Header classes" size="text-xl" class="mt-14" />
 
     <p>
         Any class set on <code>$headers</code> will be applied to respective columns.
@@ -200,10 +195,9 @@ class extends Component {
         @verbatim('docs')
             @php
                 use App\Models\User;            // [tl! .docs-hide]
-                $users = User::take(3)->get();
-
+                $users = User::take(3)->get();  // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20 w-1'],
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20 w-1'],
                     ['key' => 'username', 'label' => 'Username'],
                     ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'], // Responsive
                     ['key' => 'bio', 'label' => 'Bio', 'hidden' => 'true'], // Alternative approach
@@ -215,7 +209,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Row and cell decoration" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row and cell decoration" size="text-xl" class="mt-14" />
 
     <p>
         It is possible to define custom logic to apply background colors, or any class, on rows and/or cells.
@@ -249,8 +243,8 @@ class extends Component {
                 // If more than one condition is `true` the respective classes will be merged.
 
                 $row_decoration = [
-                    'bg-yellow-500/25' => fn(User $user) => $user->isAdmin,
-                    'text-red-500' => fn(User $user) => $user->isAdmin && $user->isInactive,
+                    'bg-warning/20' => fn(User $user) => $user->isAdmin,
+                    'text-error' => fn(User $user) => $user->isAdmin && $user->isInactive,
                     'underline font-bold' => fn(User $user) => $user->isInactive // <-- combined classes
                 ];
             @endphp
@@ -259,6 +253,8 @@ class extends Component {
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
+
+    <br>
 
     <p>
         You can do the same for cells.
@@ -291,10 +287,10 @@ class extends Component {
 
                 $cell_decoration = [
                     'city.name' => [
-                        'bg-yellow-500/25 underline' => fn(User $user) => !$user->city->isAvailable,
+                        'bg-warning/20 underline' => fn(User $user) => !$user->city->isAvailable,
                     ],
                     'username' => [
-                        'text-yellow-500' => fn(User $user) => $user->isAdmin,
+                        'text-warning' => fn(User $user) => $user->isAdmin,
                         'bg-dark-300' => fn(User $user) => $user->isInactive
                     ]
                 ];
@@ -305,10 +301,10 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Sort" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Sort" size="text-xl" class="mt-14" />
 
     <p>
-        Declare a property <code>$sortBy</code> within following pattern bellow.
+        Declare a property <code>$sortBy</code> within following pattern below.
         It will be updated when you click on table headers.
         So, you can use it to order your query.
     </p>
@@ -411,7 +407,7 @@ class extends Component {
             {{-- You will learn about custom slots on next sections --}}
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy">
                 @scope('cell_city', $user)
-                    <x-badge :value="$user->city->name" class="badge-primary" />
+                    <x-badge :value="$user->city->name" class="badge-primary badge-soft" />
                 @endscope
             </x-table>
 
@@ -419,25 +415,16 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Pagination" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Pagination" size="text-xl" class="mt-14" />
+
+    <x-alert icon="o-light-bulb" class="markdown mb-10">
+        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="/bootcamp/03#pagination">Bootcamp</a>.
+    </x-alert>
 
     <p>
         Notice maryUI uses directly all features offered by Laravel and Livewire itself, including default pagination links and deeper customizations.
         For further details, please, refer to their docs.
     </p>
-
-    <p>
-        As described on <a href="https://laravel.com/docs/10.x/pagination" target="_blank">Laravel docs</a> you need to adjust your <code>tailwind.config.js</code>
-    </p>
-
-    {{--@formatter:off--}}
-    <x-code no-render language="javascript">
-        content: [
-            // Add this [tl! highlight .animate-bounce]
-            './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        ],
-    </x-code>
-    {{--@formatter:on--}}
 
     <p>
         Then, use <code>WithPagination</code> trait from Livewire itself, as described on
@@ -482,33 +469,55 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="css">
-        /* Active page highlight */
+    <x-accordion wire:model="style">
+        <x-collapse name="traditional" separator>
+            <x-slot:heading>Traditional</x-slot:heading>
+            <x-slot:content>
+                <x-code no-render language="sass">
+        /** General button **/
+        .mary-table-pagination button {
+            @apply cursor-pointer
+        }
+
+        /** Active button **/
         .mary-table-pagination span[aria-current="page"] > span {
             @apply bg-primary text-base-100
         }
+                </x-code>
+            </x-slot:content>
+        </x-collapse>
+        <x-collapse name="minimalist" separator>
+            <x-slot:heading>Minimalist (used in this docs)</x-slot:heading>
+            <x-slot:content>
+                <x-code no-render language="sass">
+        .mary-table-pagination {
+            button, span {
+                @apply text-xs border-none
+            }
 
-        /* For dark mode*/
-        .mary-table-pagination span[aria-disabled="true"] span {
-            @apply bg-inherit
-        }
+            button {
+                @apply cursor-pointer
+            }
 
-        /* For dark mode*/
-        .mary-table-pagination button {
-            @apply bg-base-100
+            span[aria-current="page"] > span {
+                @apply bg-base-content/5
+            }
+
+            button, span[aria-current="page"] > span, span[aria-disabled="true"] span {
+                @apply py-1 px-2
+            }
         }
-    </x-code>
+                </x-code>
+            </x-slot:content>
+        </x-collapse>
+    </x-accordion>
     {{--@formatter:on--}}
 
-    <br>
+    <br><br>
 
     <p>
         You also can control the number of items per page by using the <code>per-page</code> attribute, as well the displayed values using <code>per-page-values</code>.
     </p>
-
-    <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Pagination is tricky! See an example of an potential issue and how to fix it at <a href="/bootcamp/03#pagination">Bootcamp</a>.
-    </x-alert>
 
     <x-code>
         @verbatim('docs')
@@ -546,7 +555,6 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                // Remember to define a model to bind the value
                 $users = App\Models\User::paginate($this->perPage);
             @endphp
 
@@ -559,7 +567,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Note about slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Note about slots" size="text-xl" class="mt-14" />
 
     <p>
         On next sections you will see the special <code>&#x40;scope</code> directive.
@@ -577,7 +585,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Header slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Header slot" size="text-xl" class="mt-14" />
 
     <p>
         You can override any header by using <code>&#x40;scope('header_XXX', $header)</code> special blade directive,
@@ -590,10 +598,9 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(2)->get();
-
+                $users = App\Models\User::with('city')->take(2)->get();     // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-red-500/20'], # <--- custom CSS
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20'], # <--- custom CSS
                     ['key' => 'name', 'label' => 'Nice Name'],
                     ['key' => 'city.name', 'label' => 'City'], # <---- nested attributes
                 ];
@@ -614,7 +621,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Cell slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Cell slot" size="text-xl" class="mt-14" />
 
     <p>
         You can override any row by using <code>&#x40;scope('cell_XXX', $row)</code> special blade directive, in which <code>XXX</code> is any <code>key</code> from
@@ -633,8 +640,7 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             @php
-                $users = App\Models\User::with('city')->take(3)->get();
-
+                $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
                 $headers = [
                     ['key' => 'id', 'label' => '#'],
                     ['key' => 'name', 'label' => 'Nice Name'],
@@ -652,7 +658,7 @@ class extends Component {
 
                 {{-- You can name the injected object as you wish  --}}
                 @scope('cell_name', $stuff)
-                    <x-badge :value="$stuff->name" class="badge-info" />
+                    <x-badge :value="$stuff->name" class="badge-soft" />
                 @endscope
 
                 {{-- Notice the `dot` notation for nested attribute cell's slot --}}
@@ -675,7 +681,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Inject external variables" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Inject external variables" size="text-xl" class="mt-14" />
 
     <p>
         You can inject any external variables into any <strong>cell scope</strong> like this.
@@ -702,7 +708,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Loop context" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Loop context" size="text-xl" class="mt-14" />
 
     <p>
         You can access the <a href="https://laravel.com/docs/10.x/blade#the-loop-variable" target="_blank">loop context</a>
@@ -712,14 +718,12 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::with('city')->take(3)->get();
-
-                $headers = [
-                    ['key' => 'name', 'label' => 'Nice Name'],
-                ];
-            @endphp
-
+            @php                                                        // [tl! .docs-hide]
+                $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
+                $headers = [                                            // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],          // [tl! .docs-hide]
+                ];                                                      // [tl! .docs-hide]
+            @endphp                                                     <!-- [tl! .docs-hide] -->
             <x-table :headers="$headers" :rows="$users">
                 @scope('cell_name', $user)
                     ({{  $loop->index }}) {{ $user->name }}
@@ -729,7 +733,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Empty Slot" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Empty Slot" size="text-xl" class="mt-14" />
 
     <p>
         You can customize the empty text message by using one of the following approaches.
@@ -758,7 +762,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Row selection" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row selection" size="text-xl" class="mt-14" />
 
     <p>
         Use <code>selectable</code> attribute in conjunction with <code>wire:model</code> to manage selection state.
@@ -772,15 +776,13 @@ class extends Component {
 
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-
-                $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
-                    ['key' => 'name', 'label' => 'Nice Name'],
-                ];
-            @endphp
-
+            @php                                                            // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();                   // [tl! .docs-hide]
+                $headers = [                                                // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],      // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],              // [tl! .docs-hide]
+                ];                                                          // [tl! .docs-hide]
+            @endphp                                                         <!-- [tl! .docs-hide] -->
             {{-- Notice `selectable` and `wire:model` --}}
             {{-- See `@row-selection` output on console  --}}
             {{-- You can use any `$wire.METHOD` on `@row-selection` --}}
@@ -790,6 +792,8 @@ class extends Component {
                 wire:model="selected"
                 selectable
                 @row-selection="console.log($event.detail)" />
+
+            <x-hr />
 
             <x-button label="Save" icon="o-check" wire:click="save" spinner />
         @endverbatim
@@ -806,7 +810,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Row expansion" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Row expansion" size="text-xl" class="mt-14" />
     <p>
         Use <code>expandable</code> attribute in conjunction with <code>wire:model</code> to manage expansion state.
     </p>
@@ -820,15 +824,13 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code>
         @verbatim('docs')
-            @php
-                $users = App\Models\User::take(3)->get();
-
-                $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'hidden'],
-                    ['key' => 'name', 'label' => 'Nice Name'],
-                ];
-            @endphp
-
+            @php                                                                // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();                       // [tl! .docs-hide]
+                $headers = [                                                    // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#', 'class' => 'hidden'],      // [tl! .docs-hide]
+                    ['key' => 'name', 'label' => 'Nice Name'],                  // [tl! .docs-hide]
+                ];                                                              // [tl! .docs-hide]
+            @endphp                                                             <!-- [tl! .docs-hide] -->
             {{-- Notice `expandable` and `wire:model` --}}
             <x-table :headers="$headers" :rows="$users" wire:model="expanded" expandable>
 
@@ -838,7 +840,6 @@ class extends Component {
                         Hello, {{ $user->name }}!
                     </div>
                 @endscope
-
             </x-table>
 
         @endverbatim

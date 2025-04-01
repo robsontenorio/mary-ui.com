@@ -18,10 +18,9 @@ class extends Component {
 
     <x-code class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
-            @php
-                $user = App\Models\User::first();
-            @endphp
-
+            @php                                         // [tl! .docs-hide]
+                $user = App\Models\User::first();        // [tl! .docs-hide]
+            @endphp                                     <!-- [tl! .docs-hide] -->
             <x-avatar :image="$user->avatar" />
 
             {{-- Manipulate avatar imagem with CSS classes --}}
@@ -38,21 +37,19 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
-            @php
-                $user = App\Models\User::first();
-            @endphp
-
-            <x-avatar :image="$user->avatar" class="!w-24">
-
-                <x-slot:title class="text-3xl pl-2">
+            @php                                    // [tl! .docs-hide]
+                $user = App\Models\User::first();   // [tl! .docs-hide]
+            @endphp                                 <!-- [tl! .docs-hide] -->
+            <x-avatar :image="$user->avatar" class="!w-22">
+                <x-slot:title class="text-3xl !font-bold pl-2">
                     {{ $user->username }}
                 </x-slot:title>
 
-                <x-slot:subtitle class="text-gray-500 flex flex-col gap-1 mt-2 pl-2">
+                <x-slot:subtitle class="grid gap-1 mt-2 pl-2 text-xs">
                     <x-icon name="o-paper-airplane" label="12 posts" />
                     <x-icon name="o-chat-bubble-left" label="45 comments" />
                 </x-slot:subtitle>
@@ -61,8 +58,8 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <hr class="my-10" />
-    <x-anchor title="API" size="text-2xl" class="mt-10 mb-5" />
-    <x-api-generator :class-name="Avatar::class" />
-    <div class="mb-64"></div>
+    {{--    <hr class="my-10" />--}}
+    {{--    <x-anchor title="API" size="text-xl" class="mt-14" />--}}
+    {{--    <x-api-generator :class-name="Avatar::class" />--}}
+    {{--    <div class="mb-64"></div>--}}
 </div>

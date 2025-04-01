@@ -62,7 +62,7 @@ new class extends Component {
             </a>
         @endforeach
     </div>
-    <div class="text-xs text-gray-300 dark:text-gray-600 text-center mt-5">
+    <div class="text-xs text-base-content/40 text-center mt-5">
         Private sponsors are not listed here.
     </div>
 </div>

@@ -26,7 +26,7 @@ class extends Component {
         The following examples uses `.live` to make sure you see the changes.
     </x-alert>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -34,7 +34,7 @@ class extends Component {
                 $level = $this->level;  // [tl! .docs-hide]
             @endphp                     {{-- [tl! .docs-hide] --}}
             <x-range wire:model.live.debounce="level" label="Select a level" hint="Greater than 10." />
-            <hr class="my-5" /> <!-- [tl! .docs-hide] -->
+            <x-hr /> <!-- [tl! .docs-hide] -->
             <x-badge value="Selected: {{ $level }}" class="badge-neutral" /> <!-- [tl! .docs-hide] -->
         @endverbatim
     </x-code>
@@ -46,7 +46,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Step & Range" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Step & Range" size="text-xl" class="mt-14" />
 
     <p>
         You can also set the range limits with <code>min</code> and <code>max</code> attributes. Use the <code>step</code> attribute to control the increased value when sliding.
@@ -64,9 +64,9 @@ class extends Component {
                 step="10"
                 label="Select a level"
                 hint="Greater than 30."
-                class="range-accent" />
-            <hr class="my-5" /> <!-- [tl! .docs-hide] -->
-            <x-badge value="Selected: {{ $level2 }}" class="badge-accent" /> <!-- [tl! .docs-hide] -->
+                class="range-primary range-xs" />
+            <x-hr /> <!-- [tl! .docs-hide] -->
+            <x-badge value="Selected: {{ $level2 }}" class="badge-primary" /> <!-- [tl! .docs-hide] -->
         @endverbatim
     </x-code>
 

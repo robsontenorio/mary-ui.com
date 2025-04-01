@@ -63,7 +63,7 @@ class extends Component {
 
     <x-anchor title="Toast" />
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <p>
         Place <strong>toast tag</strong> anywhere on the main layout.
@@ -130,7 +130,7 @@ class extends Component {
         session()->flash('mary.toast.description', $description);
     </x-code>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <p>
         The shortcuts are branded with default colors and icons.
@@ -184,7 +184,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Default position" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Default position" size="text-xl" class="mt-14" />
 
     <p>
         The default position is <code>toast-top toast-end</code>. You can change it by passing the <code>position</code> parameter.
@@ -201,7 +201,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Custom style" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom style" size="text-xl" class="mt-14" />
 
     <p>
         You can use any daisyUI/Tailwind classes. It also supports HTML.
@@ -233,7 +233,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Using an Exception" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Using an Exception" size="text-xl" class="mt-14" />
 
     <p>
         The previous approach uses a Trait and works only inside Livewire components. If you are trying to trigger a toast from outside a Livewire context, you can use the <code>ToastException</code>

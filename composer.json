@@ -1,7 +1,7 @@
 {
     "name": "robsontenorio/mary-ui.com",
     "type": "project",
-    "description": "Laravel Blade UI Components for Livewire 3",
+    "description": "Gorgeous UI components for Livewire powered by daisyUI and Tailwind",
     "keywords": [
         "laravel",
         "livewire3",
@@ -18,10 +18,10 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
         "league/flysystem-aws-s3-v3": "^3.28",
-        "livewire/livewire": "^3.5",
-        "livewire/volt": "^1.6",
+        "livewire/livewire": "^3.6",
+        "livewire/volt": "^1.7",
         "owenvoke/blade-fontawesome": "^2.6",
-        "robsontenorio/mary": "^1.41",
+        "robsontenorio/mary": "^2.0",
         "torchlight/torchlight-laravel": "^0.6.0"
     },
     "require-dev": {
@@ -53,6 +53,7 @@
             "php artisan key:generate",
             "touch database/database.sqlite",
             "php artisan migrate:fresh --seed",
+            "php artisan optimize:clear",
             "php artisan storage:link",
             "rm -rf public/build",
             "yarn install",

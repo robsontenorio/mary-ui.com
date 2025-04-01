@@ -18,6 +18,12 @@ return [
         'token' => env('GITHUB_TOKEN')
     ],
 
+    'pirsch' => [
+        'client_id' => env('PIRSCH_CLIENT_ID'),
+        'client_secret' => env('PIRSCH_CLIENT_SECRET'),
+        'dashboard_id' => env('PIRSCH_DASHBOARD_ID'),
+    ],
+
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

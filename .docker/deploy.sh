@@ -9,12 +9,13 @@ yarn install
 yarn build
 
 touch database/database.sqlite
+
+# DO NOT this in real world.
+# This refresh the database on every deploy
 php artisan migrate:fresh --seed --force
 
 php artisan storage:link
-php artisan config:cache
-php artisan view:cache
-php artisan route:cache
+php artisan optimize
 php artisan icons:cache
 
 echo '------ Deploy completed ------'

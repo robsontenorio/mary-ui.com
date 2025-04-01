@@ -98,7 +98,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Form" />
 
-    <x-anchor title="Basics" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basics" size="text-xl" class="mt-14" />
 
     <p>
         Once you submit a form you get for free:
@@ -117,7 +117,7 @@ class extends Component {
 
     <br>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save">
                 <x-input label="Name" wire:model="name" />
@@ -131,39 +131,37 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="No `separator`" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No `separator`" size="text-xl" class="mt-14" />
 
     <p>
         To avoid having the separator line above the actions slot, add <code>no-separator</code> attribute.
     </p>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save" no-separator>
                 <x-input label="Name" wire:model="name" />
 
                 <x-slot:actions>
-                    <x-button label="Cancel" />
                     <x-button label="Click me!" class="btn-primary" type="submit" spinner="save" />
                 </x-slot:actions>
             </x-form>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom error field" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom error field" size="text-xl" class="mt-14" />
     <p>
         By default, it uses the model name to retrieve the validation errors. If you want to display validation errors for a custom error field, you can use the
         <code>error-field</code> attribute.
     </p>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save4">
                 {{-- Notice `error_field` --}}
                 <x-input label="Custom error field" wire:model="salary" error-field="total_salary" />
 
                 <x-slot:actions>
-                    <x-button label="Cancel" />
                     <x-button label="Click me!" class="btn-primary" type="submit" spinner="save4" />
                 </x-slot:actions>
             </x-form>
@@ -178,12 +176,12 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Omit errors" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Omit errors" size="text-xl" class="mt-14" />
     <p>
         If for some reason you want to omit the error message, you can use the <code>omit-error</code> attribute.
     </p>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save2">
                 <x-input label="Address" wire:model="address" />
@@ -192,19 +190,18 @@ class extends Component {
                 <x-input label="Number" wire:model="number" omit-error hint="This is required, but we suppress the error message" />
 
                 <x-slot:actions>
-                    <x-button label="Cancel" />
                     <x-button label="Click me!" class="btn-primary" type="submit" spinner="save2" />
                 </x-slot:actions>
             </x-form>
         @endverbatim
     </x-code>
 
-    <x-anchor title="First message only" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="First message only" size="text-xl" class="mt-14" />
     <p>
         If you have multiple validation messages for the same filed and want to show only the first error message, you can use the <code>first-error-only</code> attribute.
     </p>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save3">
                 <x-input label="Magic word 1" wire:model="magicWord1" />
@@ -213,7 +210,6 @@ class extends Component {
                 <x-input label="Magic word 2" wire:model="magicWord2" first-error-only />
 
                 <x-slot:actions>
-                    <x-button label="Cancel" />
                     <x-button label="Click me!" class="btn-primary" type="submit" spinner="save3" />
                 </x-slot:actions>
             </x-form>
@@ -231,26 +227,25 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Custom error style" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom error style" size="text-xl" class="mt-14" />
     <p>
         You can customize the error message style by using the <code>error-class</code> attribute.
     </p>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save5">
                 {{--  Custom CSS class. Remeber to configure Tailwind safelist --}}
                 <x-input label="Full name" wire:model="full_name" error-class="bg-blue-500 p-1" />
 
                 <x-slot:actions>
-                    <x-button label="Cancel" />
                     <x-button label="Click me!" class="btn-primary" type="submit" spinner="save5" />
                 </x-slot:actions>
             </x-form>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Full error bag" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Full error bag" size="text-xl" class="mt-14" />
     <p>
         As you can see above, all validation errors are automatically displayed for each input.
         Additionally, you can display <strong>entire error bag</strong> with <code>x-errors</code> component.
@@ -260,11 +255,11 @@ class extends Component {
         Currently, it <strong>does not work</strong> with multiple forms on same screen.
     </x-alert>
 
-    <x-code>
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save6">
                 {{-- Full error bag --}}
-                {{-- All attributes are optional, remove it and give a try--}}
+                {{-- All attributes are optional --}}
                 <x-errors title="Oops!" description="Please, fix them." icon="o-face-frown" />
 
                 <x-input label="Age" wire:model="age" />

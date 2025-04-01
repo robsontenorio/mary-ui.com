@@ -21,11 +21,11 @@ class extends Component {
         This component can be used for showing and hiding content. It can be used standalone or wrapped into the "Accordion" component.
     </p>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
-            <x-collapse>
+            <x-collapse separator>
                 <x-slot:heading>
                     Hello
                 </x-slot:heading>
@@ -36,7 +36,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Livewire" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Livewire" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -47,22 +47,22 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Style" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Style and alternative icon" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
             <x-collapse collapse-plus-minus>
-                <x-slot:heading class="!bg-blue-50 italic text-red-500">
+                <x-slot:heading class="bg-warning/20">
                     How ...
                 </x-slot:heading>
-                <x-slot:content class="!bg-blue-100">
+                <x-slot:content class="bg-primary/10">
                     <div class="mt-5">Are you?</div>
                 </x-slot:content>
             </x-collapse>
         @endverbatim
     </x-code>
 
-    <x-anchor title="No icon" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="No icon" size="text-xl" class="mt-14" />
 
     <x-code>
         @verbatim('docs')
@@ -77,7 +77,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Accordion" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Accordion" size="text-xl" class="mt-14" />
 
     <p>
         You can group multiple <code>x-collapse</code> by wrapping it on a <code>x-accordion</code> component.

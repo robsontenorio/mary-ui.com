@@ -23,7 +23,7 @@ class extends Component {
         This a good option to display images from <a href="/docs/components/image-library" wire:navigate>Image Library</a> component.
     </x-alert>
 
-    <x-anchor title="Setup" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -37,7 +37,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <p>
         By default, the height of previews will be equal to the original images heights. Use some CSS to set max height.

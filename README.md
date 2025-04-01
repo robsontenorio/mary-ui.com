@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking for [mary components repository](https://github.com/robsontenorio/mary)?
+This is the source code of [mary-ui.com](https://mary-ui.com) . Are you looking for [maryUI components repository](https://github.com/robsontenorio/mary)?
 
 ## Sponsor
 
@@ -18,7 +18,7 @@ Come to say hello on [maryUI Discord](https://discord.gg/c2Dv8T2X2s)
 
 ## Contributing
 
-This website is made with Laravel, Livewire, Volt and maryUI.
+This website is made with Laravel, Livewire Volt and maryUI.
 
 Clone the repository.
 
@@ -26,12 +26,7 @@ Clone the repository.
 git clone git@github.com:robsontenorio/mary-ui.com.git
 ```
 
-Create `.env` from `.env.example` and adjust few vars.
-
-```bash
-APP_ENV=local
-APP_DEBUG=true
-```
+Create the `.env` from `.env.example`.
 
 Install, migrate and start.
 
@@ -39,8 +34,4 @@ Install, migrate and start.
 composer start
 ```
 
-**Done! See http://localhost:8018**
-
-<br>
-
-:warning: It uses SQLITE for dynamic examples.
+**🔥 See http://localhost:8018**

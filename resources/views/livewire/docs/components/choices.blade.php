@@ -128,10 +128,10 @@ class extends Component {
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">
-        Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on every device.
+        <b>Pro tip:</b> Most of time you just need a simple <a href="/docs/components/select" wire:navigate>Select</a> component, which renders nice natively on all devices.
     </x-alert>
 
-    <x-anchor title="Selection" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Selection" size="text-xl" class="mt-14" />
 
     <p>
         By default, it will look up for:
@@ -145,7 +145,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -171,7 +171,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Select All" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Select All" size="text-xl" class="mt-14" />
 
     <p>
         This option only works for <strong>multiple and non-searchable</strong> exclusively.
@@ -179,7 +179,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -197,7 +197,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Compact mode" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Compact mode" size="text-xl" class="mt-14" />
 
     <p>
         This option only works for <strong>multiple and non-searchable</strong> exclusively.
@@ -205,7 +205,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -228,7 +228,7 @@ class extends Component {
         You can combine <code>allow-all</code> and <code>compact</code>
     </p>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -242,7 +242,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Searchable (frontend)" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searchable (frontend)" size="text-xl" class="mt-14" />
 
     <p>
         If you judge you don't have a huge list of items, you can make it searchable offline on <strong>"frontend side"</strong>.
@@ -253,7 +253,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                               // [tl! .docs-hide]
                     $users = $this->users;                    // [tl! .docs-hide]
@@ -277,7 +277,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Searchable (server)" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searchable (server)" size="text-xl" class="mt-14" />
 
     <p>
         When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options from <strong>"server
@@ -288,7 +288,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                                                  // [tl! .docs-hide]
                     $usersSearchable = $this->usersSearchable;                    // [tl! .docs-hide]
@@ -364,7 +364,7 @@ class extends Component {
         Another approach is to use <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
     </p>
 
-    <x-code>
+    <x-code class="sm:px-64">
         @verbatim('docs')
             @php                                                              // [tl! .docs-hide]
                 $usersSearchableMinChars = $this->usersSearchableMinChars;    // [tl! .docs-hide]
@@ -377,6 +377,7 @@ class extends Component {
                 search-function="searchMinChars"
                 debounce="300ms" {{-- Default is `250ms`--}}
                 min-chars="2" {{-- Default is `0`--}}
+                hint="Type at least 2 chars"
                 single
                 searchable />
         @endverbatim
@@ -409,7 +410,7 @@ class extends Component {
     </x-code>
     <!-- @formatter:on -->
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <p>
         You have full control on rendering items by using the <code>&#x40;scope('item', $object)</code> special blade directive.
@@ -421,20 +422,20 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code class="sm:px-32">
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users; @endphp     <!-- [tl! .docs-hide] -->
             </div>                                      <!-- [tl! .docs-hide] -->
             <x-choices label="Slots (online)" wire:model="user_custom_slot_id" :options="$users" single>
-                {{-- Item slot--}}
+                {{-- Item slot --}}
                 @scope('item', $user)
                     <x-list-item :item="$user" sub-value="bio">
                         <x-slot:avatar>
-                            <x-icon name="o-user" class="bg-orange-100 p-2 w-8 h8 rounded-full" />
+                            <x-icon name="o-user" class="bg-primary/10 p-2 w-9 h-9 rounded-full" />
                         </x-slot:avatar>
                         <x-slot:actions>
-                            <x-badge :value="$user->username" />
+                            <x-badge :value="$user->username" class="badge-soft badge-primary badge-sm" />
                         </x-slot:actions>
                     </x-list-item>
                 @endscope
@@ -454,33 +455,33 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code class="sm:px-32">
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
             </div>                                      <!-- [tl! .docs-hide] -->
             <x-choices label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
                 <x-slot:prepend>
-                    {{-- Add `rounded-e-none` (RTL support) --}}
-                    <x-button icon="o-trash" class="rounded-e-none" />
+                    {{-- Add `join-item` to all prepended elements --}}
+                    <x-button icon="o-trash" class="join-item" />
                 </x-slot:prepend>
                 <x-slot:append>
-                    {{-- Add `rounded-e-none` (RTL support) --}}
-                    <x-button label="Create" icon="o-plus" class="rounded-s-none btn-primary" />
+                    {{-- Add `join-item` to all appended elements --}}
+                    <x-button label="Create" icon="o-plus" class="join-item btn-primary" />
                 </x-slot:append>
             </x-choices>
         @endverbatim
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Note about large numbers" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Note about large numbers" size="text-xl" class="mt-14" />
 
     <p>
-        This components uses the options <code>id</code> values to handle selection.
+        This component uses the options <code>id</code> values to handle selection.
         It tries to determine if these values are a <code>int</code> or <code>string</code>.
     </p>
     <p>
-        But, due to Javascript limitation with large numbers like these bellow, it will break.
+        But, due to Javascript limitation with large numbers like these below, it will break.
     </p>
 
     {{--@formatter:off--}}
@@ -511,7 +512,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Events" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Events" size="text-xl" class="mt-14" />
 
     <p>
         You can catch component events just like described on Livewire docs.

@@ -41,11 +41,11 @@ class extends Component {
         If you need a simple progress bar see the <a href="/docs/components/progress" wire:navigate>Progress</a> component.
     </x-alert>
 
-    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Install" size="text-xl" class="mt-14" />
 
     <p>
         This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
-        So, it accepts any valid configuration described in its docs.
+        So, it accepts any valid configuration described on its docs.
     </p>
 
     <x-code no-render>
@@ -59,7 +59,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <p>
         Check all available options in the <a href="https://www.chartjs.org" target="_blank">Chart.js</a> docs.

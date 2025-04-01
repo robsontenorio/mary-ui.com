@@ -23,12 +23,12 @@ class extends Component {
 
     <x-anchor title="Card" />
 
-    <x-anchor title="Basics" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Basics" size="text-xl" class="mt-14" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
         @verbatim('docs')
             <x-card title="Your stats" subtitle="Our findings about you" shadow separator>
-                I have title, subtitle, separator and shadow.
+                I have title, subtitle and separator.
             </x-card>
 
             <x-card title="Nice things">
@@ -41,17 +41,17 @@ class extends Component {
                     <x-button icon="o-share" class="btn-circle btn-sm" />
                     <x-icon name="o-heart" class="cursor-pointer" />
                 </x-slot:menu>
-                <x-slot:actions>
+                <x-slot:actions separator>
                     <x-button label="Ok" class="btn-primary" />
                 </x-slot:actions>
             </x-card>
         @endverbatim
     </x-code>
 
-    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Progress indicator" size="text-xl" class="mt-14" />
 
     <p>
-        This features only works when you have in place <code>title</code> and <code>separator</code> attributes.
+        This feature only works when you have in place <code>title</code> and <code>separator</code> attributes.
     </p>
 
     <x-code class="grid lg:grid-cols-2 gap-8 bg-base-200 ">

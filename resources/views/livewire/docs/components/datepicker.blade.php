@@ -37,7 +37,7 @@ class extends Component {
         For native date time selection see <a href="/docs/components/datetime" wire:navigate>Date Time</a> component.
     </x-alert>
 
-    <x-anchor title="Install" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Install" size="text-xl" class="mt-14" />
 
     <x-code no-render>
         @verbatim('docs')
@@ -51,26 +51,27 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <p>
         See all <code>$config</code> options at <a href="https://flatpickr.js.org/options/" target="_blank">flatpickr`s docs</a>.
     </p>
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
-                $config1 = ['altFormat' => 'm/d/Y'];
+                $config1 = ['altFormat' => 'd/m/Y'];
                 $config2 = ['mode' => 'range'];
             @endphp
 
             <x-datepicker label="Date" wire:model="myDate1" icon="o-calendar" hint="Hi!" />
             <x-datepicker label="Alt" wire:model="myDate2" icon="o-calendar" :config="$config1" />
+            <span></span> <!-- [tl! .docs-hide] -->
             <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" inline />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Localization and global settings" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Localization and global settings" size="text-xl" class="mt-14" />
 
     <p>
         First add extra locale packages, then set up a global flatpickr object.
@@ -99,13 +100,13 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Per component" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Per component" size="text-xl" class="mt-14" />
 
     <p>
         Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config. Instead, set locale on component config object.
     </p>
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = ['locale' => 'pt'];
@@ -117,7 +118,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Plugins" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Plugins" size="text-xl" class="mt-14" />
 
     <p>
         Here is a example for <code>monthSelectPlugin</code>. Please, refer to flatpickr`s docs for more plugins and how about to install them.
@@ -135,7 +136,7 @@ class extends Component {
             </head>
     </x-code>
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = [

@@ -17,7 +17,7 @@ new #[Title('Contributing')] class extends Component {
         Here is an example of <a href="https://github.com/robsontenorio/mary/pull/503">refactoring PR</a>.
     </p>
 
-    <x-anchor title="Components" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Components" size="text-xl" class="mt-14" />
 
     <p>
         Clone the repository into some folder <strong>inside your app</strong>.
@@ -39,7 +39,7 @@ new #[Title('Contributing')] class extends Component {
         "repositories": {
             "robsontenorio/mary": {
                 "type": "path",
-                "url": "/path/to/mary", // <- change the path  [tl! highlight .animate-bounce]
+                "url": "/var/www/app/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
                 "options": {
                     "symlink": true
                 }
@@ -57,21 +57,17 @@ new #[Title('Contributing')] class extends Component {
     </x-code>
 
     <p>
-        Start dev
+        Start the dev server.
     </p>
 
     <x-code no-render language="bash">
         yarn dev
     </x-code>
 
-    <x-anchor title="Docs" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Docs" size="text-xl" class="mt-14" />
 
     <p>
-        This website is made with Laravel, Livewire, Volt and maryUI.
-    </p>
-
-    <p>
-        Clone the repository.
+        This website is made with Laravel, Livewire Volt and maryUI.
     </p>
 
     <x-code no-render language="bash">
@@ -79,12 +75,11 @@ new #[Title('Contributing')] class extends Component {
     </x-code>
 
     <p>
-        Create <code>.env</code> from <code>.env.example</code> and adjust a few vars.
+        Create the <code>.env</code> from <code>.env.example</code>.
     </p>
 
     <x-code no-render language="bash">
-        APP_ENV=local
-        APP_DEBUG=true
+        cp .env .env.example
     </x-code>
 
     <p>
@@ -96,11 +91,7 @@ new #[Title('Contributing')] class extends Component {
     </x-code>
 
     <p>
-        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>Done! See <a href="http://localhost:8018">http://localhost:8018</a></strong>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>See <a href="http://localhost:8018">http://localhost:8018</a></strong>
     </p>
-
-    <x-alert icon="o-light-bulb">
-        It uses SQLITE for dynamic examples.
-    </x-alert>
 </div>

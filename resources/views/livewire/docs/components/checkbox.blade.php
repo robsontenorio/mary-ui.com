@@ -11,7 +11,7 @@ new
 class extends Component {
     public bool $item1 = true;
 
-    public bool $item2 = false;
+    public bool $item2 = true;
 
     public bool $item3 = false;
 
@@ -30,18 +30,18 @@ class extends Component {
 
     <x-anchor title="Checkbox" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code class="grid gap-5 sm:px-64">
         @verbatim('docs')
+            <x-checkbox label="Left" wire:model="item1" />
+
             <x-checkbox label="Left" wire:model="item1" hint="You agree with terms" />
-            <hr />
+            <hr class="border-base-300" /><!-- [tl! .docs-hide] -->
 
             <x-checkbox label="Right" wire:model="item2" right />
-            <hr />
 
-            <x-checkbox label="Right Tight" wire:model="item3" class="checkbox-warning" right tight />
-            <hr />
+            <x-checkbox label="Right" wire:model="item2" hint="You agree with terms" right />
+            <hr class="border-base-300" /><!-- [tl! .docs-hide] -->
 
-            {{-- Notice Tailwind alignment class for long lines --}}
             <x-checkbox wire:model="item4" class="self-start">
                 <x-slot:label>
                     This is <br>a very <br> long line.

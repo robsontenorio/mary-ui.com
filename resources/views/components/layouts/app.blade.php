@@ -10,20 +10,20 @@
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
 
     {{--  Meta description  --}}
-    <meta name="description" content="MaryUI is a set of gorgeous Laravel Blade UI Components made for Livewire 3 and styled around daisyUI + Tailwind">
+    <meta name="description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind">
 
     {{-- Open Graph / Facebook --}}
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mary-ui.com/">
     <meta property="og:title" content="maryUI">
-    <meta property="og:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="og:description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind.">
     <meta property="og:image" content="https://mary-ui.com/mary-banner.png?new=2025-03-14">
 
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://mary-ui.com/">
     <meta property="twitter:title" content="maryUI">
-    <meta property="twitter:description" content="Laravel Blade UI Components for Livewire 3.">
+    <meta property="twitter:description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind.">
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2025-03-14">
 
     {{-- Flatpickr --}}
@@ -39,9 +39,9 @@
     <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
 
     {{-- DIFF2HTML --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/xcode.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/css/diff2html.min.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/js/diff2html-ui.min.js"></script>
 
     {{-- Chart.js  --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -98,10 +98,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-warning text-center p-2 text-sm">
+    <div class="bg-success/10 text-center p-2 text-sm">
         <x-icon name="o-fire" class="h-4 w-4" />
-        maryUI v1 is deprecated!
-        <a href="https://mary-ui.com/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade to v2 &rarr;</a>
+        maryUI v2 released!
+        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>
+        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>
     </div>
     <x-nav sticky>
         <x-slot:brand>
@@ -115,42 +116,41 @@
         </x-slot:brand>
         <x-slot:actions class="flex !gap-1 lg:!gap-4">
             <span class="hidden lg:inline-flex gap-4">
-                <x-button label="Sponsor" icon="o-heart" link="https://github.com/sponsors/robsontenorio" external class="btn-sm btn-ghost text-pink-500" />
-                <x-button label="Bootcamp" icon="o-code-bracket" link="/bootcamp/01" class="btn-sm btn-ghost text-yellow-600" />
-                <x-button label="Docs" icon="o-book-open" link="/docs/installation" class="btn-sm btn-ghost" />
-                <x-button label="News" icon="fab.twitter" link="https://twitter.com/robsontenorio" class="btn-ghost btn-sm" external responsive />
+                <x-button label="Bootcamp" link="/bootcamp/01" class="btn-ghost" />
+                <x-button label="Docs" link="/docs/installation" class="btn-ghost" />
+                <x-button label="News" link="https://twitter.com/robsontenorio" class="btn-ghost" external />
+                <x-button label="Source" link="https://github.com/robsontenorio/mary" class="btn-ghost" external />
+                <x-button label="Sponsor" link="https://github.com/sponsors/robsontenorio" external class="btn-ghost text-pink-500" />
             </span>
 
-            <x-button label="Source" icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-ghost btn-sm " external responsive />
-
-            <span class="hidden lg:inline-flex">
-                <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
-            </span>
-
+            <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
+            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
+            <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
             <div id="doc-search" class="mr-2 lg:mr-8">...</div>
         </x-slot:actions>
     </x-nav>
 
     <x-main with-nav>
         <x-slot:sidebar drawer="main-drawer" class="bg-base-100">
-            <x-menu activate-by-route class="mt-5 flex gap-3">
+            <x-menu activate-by-route active-bg-color="font-black" class="sm:mt-6">
                 <x-menu-sub title="Get started" icon="o-sparkles" class="font-bold">
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
                     <x-menu-item title="Demos" link="/docs/demos" />
-                    <x-menu-item title="Customizing" link="/docs/customizing" />
-                    <x-menu-item title="Upgrading" link="/docs/upgrading" />
+                    <x-menu-item title="Customizing" link="/docs/customizing" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
+                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">
                     <x-menu-item title="Form" link="/docs/components/form" />
                     <x-menu-item title="Input" link="/docs/components/input" />
+                    <x-menu-item title="Select" link="/docs/components/select" />
                     <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
                     <x-menu-item title="Toggle" link="/docs/components/toggle" />
-                    <x-menu-item title="Radio" link="/docs/components/radio" />
-                    <x-menu-item title="Select" link="/docs/components/select" />
+                    <x-menu-item title="Group" link="/docs/components/group" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Radio" link="/docs/components/radio" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                     <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Choices" link="/docs/components/choices" />
                     <x-menu-item title="Date Time" link="/docs/components/datetime" />
@@ -214,15 +214,17 @@
             </x-menu>
         </x-slot:sidebar>
 
-        <x-slot:content class="lg:max-w-4xl">
+        <x-slot:content class="lg:max-w-4xl !pt-10">
 
             {{ $slot }}
 
-            <hr class="my-10" />
+            <hr class="my-10 border-base-content/10" />
 
-            <div class="flex justify-center items-center">
-                <x-mary-brand />
-                <x-button label="Sponsor" icon="s-heart" link="https://github.com/sponsors/robsontenorio" class="btn-ghost btn-sm text-red-500" external />
+            <div class="text-center text-sm text-base-content/70">
+                Made with
+                <x-icon name="o-heart" class="text-pink-500 w-4 h-4" />
+                by
+                <a href="https://x.com/robsontenorio" class="underline">Robson Tenório</a> and <a href="https://github.com/robsontenorio/mary" class="underline">contributors</a>.
             </div>
         </x-slot:content>
     </x-main>
@@ -244,6 +246,6 @@
     <x-toast />
 
     {{-- Spotlight --}}
-    <x-spotlight />
+    <x-spotlight search-text="Type 'a' ..." />
 </body>
 </html>

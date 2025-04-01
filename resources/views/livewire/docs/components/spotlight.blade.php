@@ -22,7 +22,7 @@ class extends Component {
         <strong>It does not index your site</strong>, so you need to implement by yourself a global search function.
     </p>
 
-    <x-anchor title="Try it" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Try it" size="text-xl" class="mt-14" />
 
     <p>
         Search for "a" to see what kind of content it returns. In this example, all links point to this page itself.
@@ -35,7 +35,7 @@ class extends Component {
     <p class="my-5"></p>
     <kbd class="kbd">◆ meta</kbd> + <kbd class="kbd">G</kbd>
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <p>
         Place the <strong>spotlight tag</strong> somewhere on the main layout.
@@ -106,15 +106,15 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        <x-icon name="o-sparkles" class="text-yellow-500 w-7 h-7" />
-        <strong>... You are done!</strong>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>You are done!</strong>
     </p>
 
-    <x-anchor title="Manual activation" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Manual activation" size="text-xl" class="mt-14" />
 
     <p>
         You can trigger the Spotlight component by dispatching a <code>mary-search-open</code> event.
-        Probably you want to put this search button inside a navbar. In this case place an empty <code>x-data</code> as describe bellow.
+        Probably you want to put this search button inside a navbar. In this case place an empty <code>x-data</code> as describe below.
     </p>
 
     <x-button label="Search" icon="o-magnifying-glass" @click.stop="$dispatch('mary-search-open')" />
@@ -140,13 +140,13 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Security" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Security" size="text-xl" class="mt-14" />
 
     <x-alert class="alert-error" icon="o-shield-exclamation">
         As maryUI exposes a <strong>public route</strong> to make Spotlight work, remember to apply any security concern <strong>directly on your search method</strong>.
     </x-alert>
 
-    <x-anchor title="Example" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <p>
         You can organize your search however you want. Don't be restricted exclusively to the approach shown in this example.
@@ -216,7 +216,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Options" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Options" size="text-xl" class="mt-14" />
 
     <p>
         You can change the <code>shortcut</code> with any combination supported
@@ -233,7 +233,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Changing the search class" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Changing the search class" size="text-xl" class="mt-14" />
 
     <p>
         If for some reason you want to change the search class, publish the config file.
@@ -256,7 +256,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Slots" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <p>
         Add anything you want and dispatch a <code>mary-search</code> event with an extra query string.

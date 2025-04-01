@@ -25,13 +25,13 @@ class extends Component {
 
     <x-code class="grid gap-5">
         @verbatim('docs')
-            <x-header title="Personal address" subtitle="Your home address" separator />
+            <x-header title="Default size" subtitle="With subtitle and separator" separator />
 
-            <x-header title="Personal address" subtitle="Your home address" size="text-xl" separator />
+            <x-header title="Custom size" size="text-xl" separator />
 
-            <x-header title="With Anchor" subtitle="Click on title to get anchor link" with-anchor />
+            <x-header title="With Anchor" subtitle="Click on title " with-anchor separator />
 
-            <x-header title="Users" subtitle="Check this on mobile">
+            <x-header title="Users" subtitle="This is responsive" separator>
                 <x-slot:middle class="!justify-end">
                     <x-input icon="o-bolt" placeholder="Search..." />
                 </x-slot:middle>
@@ -43,7 +43,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Progress indicator" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Progress indicator" size="text-xl" class="mt-14" />
 
     <p>
         Notice it only works combined with the <code>separator</code> attribute.

@@ -49,7 +49,7 @@ class extends Component {
         For multiple image upload see <a href="/docs/components/image-library" wire:navigate>Image Library</a> component.
     </x-alert>
 
-    <x-anchor title="Single file" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Single file" size="text-xl" class="mt-14" />
 
     <p>
         Livewire itself triggers real time validation for single file upload.
@@ -75,7 +75,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Multiple files" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Multiple files" size="text-xl" class="mt-14" />
 
     <p>
         Livewire itself <strong>does not</strong> trigger real time validation for multiple file upload, like single file upload.
@@ -103,7 +103,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Image preview" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Image preview" size="text-xl" class="mt-14" />
 
     <p>
         It only works for single image.
@@ -130,7 +130,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Image Crop" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Image Crop" size="text-xl" class="mt-14" />
 
     <p>
         It only works for single image.
@@ -200,7 +200,7 @@ class extends Component {
     </x-code>
     {{--@formatter:on--}}
 
-    <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Labels" size="text-xl" class="mt-14" />
 
     <p>
         Here are all default labels.

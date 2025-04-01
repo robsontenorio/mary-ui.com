@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Spotlight" />
 
-    <x-button label="Spotlight docs" link="/docs/components/spotlight" icon-right="o-arrow-up-right" external class="btn-outline btn-sm" />
+    <x-button label="Spotlight docs" link="/docs/components/spotlight" icon="o-link" external class="btn-sm !no-underline" />
 
     <p>
         Give superpowers to your users and allow them to search for anything.
@@ -21,9 +21,9 @@ class extends Component {
         Check the docs for more.
     </p>
 
-    <img src="/bootcamp/05-c.png" class="rounded-lg border shadow-xl mb-10 p-3" />
+    <img src="/bootcamp/05-c.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
-    <x-anchor title="Searching" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Searching" size="text-xl" class="mt-14" />
 
     <p>
         Place the <strong>spotlight tag</strong> somewhere in the main layout.
@@ -81,7 +81,12 @@ class extends Component {
     {{--@formatter:on--}}
 
     <p>
-        <strong>That's it!</strong> You are done, try to hit <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
+        <x-icon name="o-bolt" class="text-warning" />
+        <strong>That is it!</strong>
+    </p>
+
+    <p>
+        Try to hit <kbd class="kbd">Ctrl/Cmd</kbd> + <kbd class="kbd">G</kbd>
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
@@ -90,6 +95,6 @@ class extends Component {
 
     <div class="flex justify-between mt-10">
         <x-button label="Updating users" link="/bootcamp/04" icon="o-arrow-left" class="!no-underline btn-ghost" />
-        <x-button label="Jetstream & Breeze" link="/bootcamp/06" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
+        <x-button label="Authentication" link="/bootcamp/06" icon-right="o-arrow-right" class="!no-underline btn-ghost" />
     </div>
 </div>

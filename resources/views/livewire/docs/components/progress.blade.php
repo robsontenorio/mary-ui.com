@@ -23,20 +23,20 @@ class extends Component {
         If you need rich progress charts see <a href="/docs/components/chart" wire:navigate>Chart</a> component.
     </x-alert>
 
-    <x-anchor title="Loading" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Loading" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-8">
         @verbatim('docs')
             <x-loading />
-            <x-loading class="text-primary loading-lg" />
+            <x-loading class="progress-primary" />
             <x-loading class="loading-dots" />
             <x-loading class="loading-bars" />
             <x-loading class="loading-ring" />
-            <x-loading class="loading-infinity" />
+            <x-loading class="loading-infinity loading-xs" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Bars" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Bars" size="text-xl" class="mt-14" />
 
     <x-code class="grid gap-8">
         @verbatim('docs')
@@ -47,7 +47,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Radial" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Radial" size="text-xl" class="mt-14" />
 
     <x-code class="flex flex-wrap gap-8">
         @verbatim('docs')
@@ -61,7 +61,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Special <HR>" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Special <HR>" size="text-xl" class="mt-14" />
 
     <p>
         It is intended to be part of layout, but acts as an indeterminate progress indicator to any target or specific targets.
@@ -70,7 +70,7 @@ class extends Component {
     <x-code>
         @verbatim('docs')
             <div class="flex gap-5">
-                <x-input placeholder="Name ..." wire:model.live.debounce="name" />
+                <x-input placeholder="Type ..." wire:model.live.debounce="name" />
                 <x-button label="Save" wire:click="save" />
             </div>
 
@@ -78,7 +78,7 @@ class extends Component {
             <x-hr />
 
             <div>
-                The above HR always triggers. The bellow only on target action.
+                The above HR always triggers. The below only on target action.
             </div>
 
             {{-- Only on `save` action --}}

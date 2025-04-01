@@ -24,21 +24,21 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Button" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
-    <p>
-        You can apply any daisyUI/Tailwind style.
-    </p>
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code class="flex flex-wrap gap-3 items-baseline">
         @verbatim('docs')
+            {{--  DEFAULT --}}
+            <x-button label="Hi!" />
+
             {{--  COLOR AND STYLE --}}
-            <x-button label="Hi!" class="btn-outline" />
+            <x-button label="Hi!" class="btn-primary" />
             <x-button label="How" class="btn-warning" />
             <x-button label="Are" class="btn-success" />
-            <x-button label="You?" class="btn-error btn-sm" />
+            <x-button label="You?" class="btn-error btn-sm btn-soft" />
 
             {{-- SLOT--}}
-            <x-button class="btn-primary">
+            <x-button class="btn-primary btn-dash">
                 With default slot 😃
             </x-button>
 
@@ -49,23 +49,21 @@ class extends Component {
             {{-- SQUARE --}}
             <x-button icon="o-user" class="btn-circle btn-ghost" />
             <x-button icon="o-user" class="btn-square" />
+
         @endverbatim
     </x-code>
 
-    <x-anchor title="Icons" size="text-2xl" class="mt-10 mb-5" />
-    <p>
-        Icons left and right. See <a href="/docs/components/icon" wire:navigate>Icons</a>.
-    </p>
+    <x-anchor title="Icons" size="text-xl" class="mt-14" />
 
     <x-code class="flex flex-wrap gap-3">
         @verbatim('docs')
-            <x-button label="Hello" icon-right="o-x-circle" />
+            <x-button label="Hello" icon="o-check" />
 
-            <x-button label="There" icon="o-check" />
+            <x-button label="There" icon-right="o-x-circle" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Tooltips" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Tooltips" size="text-xl" class="mt-14" />
     <p>
         Tooltips are disabled on small screens.
     </p>
@@ -82,7 +80,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Badges" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Badges" size="text-xl" class="mt-14" />
     <br>
 
     <x-code class="flex flex-wrap gap-3">
@@ -93,9 +91,9 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Responsive" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Responsive" size="text-xl" class="mt-14" />
     <p>
-        On small screens the label is hidden. Icon and badge are keep.
+        On small screens the label is hidden. Icon and badge are kept.
     </p>
 
     <x-code class="flex flex-wrap gap-3">
@@ -106,7 +104,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Links" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Links" size="text-xl" class="mt-14" />
     <p>
         You can make a button act as a link by placing a <code>link</code> property. You can use all the options described above for ordinary buttons.
     </p>
@@ -124,7 +122,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Spinners" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Spinners" size="text-xl" class="mt-14" />
 
     <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         @verbatim('docs')
@@ -132,7 +130,7 @@ class extends Component {
             <x-button label="Self target" wire:click="save" icon-right="o-lock-closed" spinner />
 
             <x-form wire:submit="save2">
-                <x-input label="Name" inline />
+                <x-input placeholder="Name" />
                 <x-slot:actions>
                     {{-- No target spinner --}}
                     <x-button label="No target" />

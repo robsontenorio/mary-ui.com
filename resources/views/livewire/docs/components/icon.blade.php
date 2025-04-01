@@ -14,7 +14,7 @@ class extends Component {
 
     <x-anchor title="Icon" />
 
-    <x-anchor title="Default iconset" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Default iconset" size="text-xl" class="mt-14" />
     <p>
         All the default icons are powered by <a href="https://blade-ui-kit.com/blade-icons?set=1#search" target="_blank">Blade Hero Icons</a> and you can use them right away.
     </p>
@@ -29,7 +29,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Labels" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Labels" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
@@ -39,7 +39,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Alternative iconset" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Alternative iconset" size="text-xl" class="mt-14" />
 
     <p>
         You can install any compatible blade iconset <a href="https://github.com/blade-ui-kit/blade-icons#icon-packages" target="_blank">listed here</a>.
@@ -64,7 +64,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Caching" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Caching" size="text-xl" class="mt-14" />
     <p>
         As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at the
         <strong>production environment</strong>.

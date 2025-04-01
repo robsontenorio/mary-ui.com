@@ -21,13 +21,7 @@ class extends Component {
 
     <x-anchor title="Drawer" />
 
-    <x-anchor title="Basic" size="text-2xl" class="mt-10 mb-5" />
-
-    <x-code no-render language="php">
-        public bool $showDrawer1 = false;
-        public bool $showDrawer2 = false;
-    </x-code>
-    <br>
+    <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
@@ -47,13 +41,14 @@ class extends Component {
             <x-button label="Open Right" wire:click="$toggle('showDrawer2')" />
         @endverbatim
     </x-code>
-
-    <x-anchor title="Complex" size="text-2xl" class="mt-10 mb-5" />
-
+    
     <x-code no-render language="php">
-        public bool $showDrawer3 = false;
+        public bool $showDrawer1 = false;
+        public bool $showDrawer2 = false;
     </x-code>
-    <br>
+
+    <x-anchor title="Complex" size="text-xl" class="mt-14" />
+
     <x-code class="flex gap-5">
         @verbatim('docs')
             <x-drawer
@@ -78,7 +73,7 @@ class extends Component {
         @endverbatim
     </x-code>
 
-    <x-anchor title="Disable focus trap" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Disable focus trap" size="text-xl" class="mt-14" />
 
     <p>
         By default the focus trap is enabled, but you can disable it by adding the <code>without-trap-focus</code> attribute.
