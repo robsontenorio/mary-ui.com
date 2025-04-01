@@ -98,11 +98,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-primary/10 text-center p-2 text-sm">
+    <div class="bg-success/10 text-center p-2 text-sm">
         <x-icon name="o-fire" class="h-4 w-4" />
-        v2 beta docs.
+        maryUI v2 released!
         <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>
-        <a href="https://mary-ui.com" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>
+        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>
     </div>
     <x-nav sticky>
         <x-slot:brand>
@@ -118,7 +118,7 @@
             <span class="hidden lg:inline-flex gap-4">
                 <x-button label="Bootcamp" link="/bootcamp/01" class="btn-ghost" />
                 <x-button label="Docs" link="/docs/installation" class="btn-ghost" />
-                <x-button label="News" link="https://twitter.com/robsontenorio" class="btn-ghost" />
+                <x-button label="News" link="https://twitter.com/robsontenorio" class="btn-ghost" external />
                 <x-button label="Source" link="https://github.com/robsontenorio/mary" class="btn-ghost" external />
                 <x-button label="Sponsor" link="https://github.com/sponsors/robsontenorio" external class="btn-ghost text-pink-500" />
             </span>
@@ -126,7 +126,7 @@
             <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
             <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
             <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
-            {{--            <div id="doc-search" class="mr-2 lg:mr-8">...</div>--}}
+            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
         </x-slot:actions>
     </x-nav>
 

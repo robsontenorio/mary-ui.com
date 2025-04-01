@@ -21,7 +21,7 @@
         "livewire/livewire": "^3.6",
         "livewire/volt": "^1.7",
         "owenvoke/blade-fontawesome": "^2.6",
-        "robsontenorio/mary": "V2.x-dev",
+        "robsontenorio/mary": "^2.0",
         "torchlight/torchlight-laravel": "^0.6.0"
     },
     "require-dev": {
@@ -51,10 +51,9 @@
             "Composer\\Config::disableProcessTimeout",
             "composer install",
             "php artisan key:generate",
-            "php artisan cache:clear",
-            "php artisan view:clear",
             "touch database/database.sqlite",
             "php artisan migrate:fresh --seed",
+            "php artisan optimize:clear",
             "php artisan storage:link",
             "rm -rf public/build",
             "yarn install",

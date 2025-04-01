@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58b8ebe0612387e568a03c48b9510f20",
+    "content-hash": "52c12c898eec4f7630a86d5bd8bb4fbf",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4229,16 +4229,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "v2.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "2dea9f47a4e69183f511381de81d04795443f35a"
+                "reference": "0b76374f2e4462eb7f7a92b40eef62dfa3d3858c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/2dea9f47a4e69183f511381de81d04795443f35a",
-                "reference": "2dea9f47a4e69183f511381de81d04795443f35a",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/0b76374f2e4462eb7f7a92b40eef62dfa3d3858c",
+                "reference": "0b76374f2e4462eb7f7a92b40eef62dfa3d3858c",
                 "shasum": ""
             },
             "require": {
@@ -4304,7 +4304,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/v2"
+                "source": "https://github.com/robsontenorio/mary/tree/2.0.0"
             },
             "funding": [
                 {
@@ -4312,7 +4312,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-20T13:24:29+00:00"
+            "time": "2025-04-01T00:47:35+00:00"
         },
         {
             "name": "symfony/clock",
@@ -10258,9 +10258,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "robsontenorio/mary": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

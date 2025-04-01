@@ -9,14 +9,6 @@ new #[Title('Upgrading')] class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to v2" />
 
-    <x-alert title="This is a beta version. Some components can change before the final release (March 31st)." class="bg-warning/40" />
-
-    <x-anchor title="WIP" size="text-xl" class="mt-14" />
-    <ul>
-        <li>Upgrade the demos.</li>
-        <li>Release a brand new cool demo.</li>
-    </ul>
-
     <x-anchor title="Why" size="text-xl" class="mt-14" />
 
     <p>If you want to use <b>Laravel 12+</b> you should upgrade.</p>
@@ -59,11 +51,10 @@ new #[Title('Upgrading')] class extends Component {
 
             <x-code no-render language="bash">
                 @verbatim('docs')
-                    # This will change after v2 release
-                    composer require robsontenorio/mary:V2.x-dev
+                    composer require robsontenorio/mary:^2.0
 
                     # Clear the view cache
-                    php artisan view:cache
+                    php artisan view:clear
                 @endverbatim
             </x-code>
 
