@@ -118,15 +118,16 @@
             <span class="hidden lg:inline-flex gap-4">
                 <x-button label="Bootcamp" link="/bootcamp/01" class="btn-ghost" />
                 <x-button label="Docs" link="/docs/installation" class="btn-ghost" />
-                <x-button label="News" link="https://twitter.com/robsontenorio" class="btn-ghost" external />
-                <x-button label="Source" link="https://github.com/robsontenorio/mary" class="btn-ghost" external />
                 <x-button label="Sponsor" link="https://github.com/sponsors/robsontenorio" external class="btn-ghost text-pink-500" />
             </span>
 
             <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
-            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle mr-4 lg:hidden" external />
+            <x-button icon="fab.discord" link="https://discord.gg/c2Dv8T2X2s" class="btn-sm btn-ghost btn-circle me-2 hidden sm:inline-flex" external />
+            <x-button icon="fab.x-twitter" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle me-2 hidden sm:inline-flex" external />
+            <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle me-2" external />
+            <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
             <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
-            <div id="doc-search" class="mr-2 lg:mr-8">...</div>
+            <div id="doc-search" class="me-2">...</div>
         </x-slot:actions>
     </x-nav>
 
