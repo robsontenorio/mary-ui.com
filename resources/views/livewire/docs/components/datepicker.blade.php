@@ -18,6 +18,8 @@ class extends Component {
 
     public ?string $myDate5 = '';
 
+    public ?string $myDate6 = '';
+
     public function save()
     {
     }
@@ -152,6 +154,26 @@ class extends Component {
             @endphp
 
             <x-datepicker label="Month" wire:model="myDate5" icon="o-calendar" :config="$config1" />
+        @endverbatim
+    </x-code>
+
+    <x-anchor title="Disable dates" size="text-xl" class="mt-14" />
+
+    <p>
+        Here is a example for <code>disable</code>.
+        Please, refer to flatpickr`s docs for <a href="https://flatpickr.js.org/examples/#disabling-dates" target="_blank">more examples.</a>
+    </p>
+
+    <x-code class="grid gap-5 sm:px-64">
+        @verbatim('docs')
+            @php
+                $config1 = [
+                    // An array of dates
+                    'disable' => [now()->addDays(1), now()->addDays(2), now()->addDays(3)]
+               ];
+            @endphp
+
+            <x-datepicker label="Date" wire:model="myDate6" icon="o-calendar" :config="$config1" />
         @endverbatim
     </x-code>
 </div>
