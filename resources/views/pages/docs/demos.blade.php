@@ -16,8 +16,8 @@ class extends Component {
 
     <p class="mb-10">
         Deep dive into the source code of these demos and
-        <span class="bg-warning p-1 font-bold dark:text-white">get amazed</span>
-        how much you can do with <span class="underline decoration-warning font-bold">minimal effort</span> learning by example.
+        <span class="bg-warning/10 p-1 font-bold">get amazed</span>
+        at how much you can do with <span class="underline decoration-warning font-bold">minimal effort</span> learning by example.
         Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of maryUI and Livewire.
     </p>
 
