@@ -154,7 +154,7 @@ class extends Component {
             <x-choices label="Single" wire:model="user_id" :options="$users" single />
 
             {{-- public array $users_multi_ids = []; --}}
-            <x-choices label="Multiple" wire:model="users_multi_ids" :options="$users" />
+            <x-choices label="Multiple" wire:model="users_multi_ids" :options="$users" clearable />
 
             {{-- Custom options --}}
             <x-choices
