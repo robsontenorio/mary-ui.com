@@ -46,6 +46,7 @@ Volt::route('/docs/components/toast', 'docs.components.toast');
 Volt::route('/docs/components/alert', 'docs.components.alert');
 Volt::route('/docs/components/avatar', 'docs.components.avatar');
 Volt::route('/docs/components/badges', 'docs.components.badges');
+Volt::route('/docs/components/breadcrumbs', 'docs.components.breadcrumbs');
 Volt::route('/docs/components/button', 'docs.components.button');
 Volt::route('/docs/components/card', 'docs.components.card');
 Volt::route('/docs/components/carousel', 'docs.components.carousel');

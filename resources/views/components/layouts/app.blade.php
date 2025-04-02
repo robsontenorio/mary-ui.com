@@ -181,6 +181,7 @@
                 <x-menu-sub title="UI" icon="o-cursor-arrow-rays">
                     <x-menu-item title="Alert" link="/docs/components/alert" />
                     <x-menu-item title="Avatar" link="/docs/components/avatar" />
+                    <x-menu-item title="Breadcrumbs" link="/docs/components/breadcrumbs" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                     <x-menu-item title="Button" link="/docs/components/button" />
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
