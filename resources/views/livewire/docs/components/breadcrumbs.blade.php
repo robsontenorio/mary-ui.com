@@ -13,7 +13,16 @@ class extends Component {
 <div class="docs">
 
     <x-anchor title="Breadcrumbs" />
+
+    <p>
+        This component uses <code>ul</code> and <code>li</code> HTML tags. Make sure you have an extra rule to not override them on your custom CSS.
+    </p>
+
     <x-anchor title="Default" size="text-xl" class="mt-14" />
+
+    <p>
+        On small screens, it automatically hides all intermediate items.
+    </p>
 
     <x-code>
         @verbatim('docs')
@@ -24,40 +33,41 @@ class extends Component {
                     ['label' => 'Add document'],
                 ];
             @endphp
+
             <x-breadcrumbs :items="$breadcrumbs" />
         @endverbatim
     </x-code>
 
-    <x-anchor title="Custom seperator, icons & links" size="text-xl" class="mt-14" />
+    <x-anchor title="Custom separator, icons & links" size="text-xl" class="mt-14" />
 
     <x-code class="flex gap-5">
         @verbatim('docs')
             @php
                 $breadcrumbs = [
                     [
-                        'label' => 'Home',
                         'link' => '#default',
-                        'icon' => 'o-home',
+                        'icon' => 's-home',
                     ],
                     [
                         'label' => 'Documents',
-                        'link' => '#custom-seperator-icons-links',
-                        'icon' => 'o-document-text',
+                        'link' => '/docs/components/breadcrumbs',
+                        'icon' => 'o-document',
                     ],
                     [
                         'label' => 'Add document',
-                        'link' => '#tooltip-customization',
-                        'icon' => 'o-plus-circle',
+                        'icon' => 'o-plus',
                     ],
                 ];
             @endphp
-            <x-breadcrumbs :items="$breadcrumbs" seperator="o-chevron-right" />
+
+            <x-breadcrumbs :items="$breadcrumbs" separator="o-slash" />
+
         @endverbatim
     </x-code>
 
     <x-anchor title="Tooltip & customization" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code>
         @verbatim('docs')
             @php
                 $breadcrumbs = [
@@ -81,12 +91,15 @@ class extends Component {
                     ],
                 ];
             @endphp
-            <x-breadcrumbs :items="$breadcrumbs" seperator="m-minus" 
-                seperatorClass="h-8 w-8 rotate-90 -mx-2 text-secondary" 
-                class="bg-base-300 p-3 rounded-box shadow-md" 
-                iconClass="text-warning" 
-                linkItemClass="btn btn-primary btn-sm" 
-                textItemClass="btn btn-primary btn-outline btn-sm pointer-events-none" />
+
+            <x-breadcrumbs
+                :items="$breadcrumbs"
+                seperator="m-minus"
+                separator-class="text-warning"
+                class="bg-base-300 p-3 rounded-box"
+                icon-class="text-warning"
+                link-item-class="underline text-sm font-bold"
+            />
         @endverbatim
     </x-code>
 </div>
