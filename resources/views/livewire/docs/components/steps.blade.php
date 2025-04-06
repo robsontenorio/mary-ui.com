@@ -59,7 +59,7 @@ class extends Component {
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     <p>
-        This components uses <code>ul</code> and <code>li</code> html tags. Make sure you have an extra rule to not override them on your custom CSS.
+        This component uses <code>ul</code> and <code>li</code> HTML tags. Make sure you have an extra rule to not override them on your custom CSS.
     </p>
 
     <x-code>

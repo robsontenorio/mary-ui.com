@@ -151,7 +151,7 @@ class extends Component {
                     $users = $this->users;   // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
             {{-- Notice `single` --}}
-            <x-choices label="Single" wire:model="user_id" :options="$users" single />
+            <x-choices label="Single" wire:model="user_id" :options="$users" single clearable />
 
             {{-- public array $users_multi_ids = []; --}}
             <x-choices label="Multiple" wire:model="users_multi_ids" :options="$users" clearable />
@@ -266,6 +266,7 @@ class extends Component {
                 :options="$users"
                 placeholder="Search ..."
                 single
+                clearable
                 searchable />
 
             <x-choices-offline
@@ -273,6 +274,7 @@ class extends Component {
                 wire:model="users_multi_searchable_offline_ids"
                 :options="$users"
                 placeholder="Search ..."
+                clearable
                 searchable />
         @endverbatim
     </x-code>
