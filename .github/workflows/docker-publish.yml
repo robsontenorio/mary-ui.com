@@ -5,6 +5,7 @@ on:
     tags:
       - "[0-9]+.[0-9]+.[0-9]+" # any `x.y.z` tag builds the `production` iamge
       - "stage-*" # the `stage-xxxx` pattern tag builds the`stage` image
+      - "v1-*" # the `v1-xxxx` pattern tag builds the `v1` image
 
 env:
   REGISTRY: ghcr.io
