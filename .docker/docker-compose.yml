@@ -1,12 +1,14 @@
 services:
-    ######## APP ########
     mary:
         build:
             context: ..
             dockerfile: .docker/Dockerfile
-            target: local
+            target: base
+        environment:
+            - SERVER_NAME=:8018
+        tty: true
         volumes:
-            - ../:/var/www/app:cached
+            - ../:/app:cached
         ports:
-            - 8018:8080
+            - 8018:8018
             - 5174:5174

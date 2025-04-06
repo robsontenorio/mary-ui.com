@@ -94,11 +94,11 @@ class extends Component {
 
             <x-breadcrumbs
                 :items="$breadcrumbs"
-                seperator="m-minus"
+                separator="m-minus"
                 separator-class="text-warning"
                 class="bg-base-300 p-3 rounded-box"
                 icon-class="text-warning"
-                link-item-class="underline text-sm font-bold"
+                link-item-class="text-sm font-bold"
             />
         @endverbatim
     </x-code>

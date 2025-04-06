@@ -45,11 +45,11 @@ class extends Component {
         You can install any compatible blade iconset <a href="https://github.com/blade-ui-kit/blade-icons#icon-packages" target="_blank">listed here</a>.
     </p>
     <p>
-        Here is an example for FontAwsome and Bootstrap iconsets.
+        Here is an example for FontAwsome and Lucide iconsets.
     </p>
     <x-code no-render language="bash">
         composer require owenvoke/blade-fontawesome
-        composer require davidhsianturi/blade-bootstrap-icons
+        composer require mallardduck/blade-lucide-icons
     </x-code>
 
     <x-code class="flex gap-5">
@@ -59,8 +59,8 @@ class extends Component {
             <x-icon name="far.circle-play" />
             <x-icon name="fab.facebook" />
 
-            {{-- Bootstrap --}}
-            <x-icon name="bi.bell-fill" />
+            {{-- Lucide --}}
+            <x-icon name="lucide.activity" />
         @endverbatim
     </x-code>
 

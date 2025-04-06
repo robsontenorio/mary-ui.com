@@ -1,4 +1,5 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "robsontenorio/mary-ui.com",
     "type": "project",
     "description": "Gorgeous UI components for Livewire powered by daisyUI and Tailwind",
@@ -13,26 +14,26 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2|^8.3|^8.4",
-        "davidhsianturi/blade-bootstrap-icons": "^1.5",
-        "laravel/framework": "^11.9",
-        "laravel/tinker": "^2.9",
-        "league/flysystem-aws-s3-v3": "^3.28",
+        "php": "^8.2",
+        "laravel/framework": "^12.7",
+        "laravel/tinker": "^2.10.1",
+        "league/flysystem-aws-s3-v3": "^3.29",
         "livewire/livewire": "^3.6",
         "livewire/volt": "^1.7",
-        "owenvoke/blade-fontawesome": "^2.6",
-        "robsontenorio/mary": "^2.0",
-        "torchlight/torchlight-laravel": "^0.6.0"
+        "mallardduck/blade-lucide-icons": "^1.23",
+        "owenvoke/blade-fontawesome": "^2.9",
+        "robsontenorio/mary": "dev-main",
+        "torchlight/torchlight-laravel": "^0.6.1"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
+        "fakerphp/faker": "^1.24",
+        "laravel/pail": "^1.2",
+        "laravel/pint": "^1.21",
+        "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.0",
-        "pestphp/pest": "^2.35",
-        "pestphp/pest-plugin-laravel": "^2.4",
-        "spatie/laravel-ignition": "^2.8"
+        "nunomaduro/collision": "^8.8",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.1"
     },
     "autoload": {
         "psr-4": {
@@ -73,6 +74,10 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
         ]
     },
     "extra": {
