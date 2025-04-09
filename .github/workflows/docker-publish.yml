@@ -41,10 +41,6 @@ jobs:
               echo "IS_STAGE=true" >> $GITHUB_OUTPUT
           fi
 
-          if [[ "${{ github.event.ref }}" =~ ^refs/tags/v1-.*$ ]]; then
-              echo "IS_V1=true" >> $GITHUB_OUTPUT
-          fi
-
       - name: "Extract Docker metadata (tags, labels)"
         id: meta
         uses: docker/metadata-action@v5
@@ -53,9 +49,8 @@ jobs:
           flavor: |
             latest=false
           tags: |
-            type=raw,value=production,enable=${{ steps.check-tag.outputs.IS_PRODUCTION == 'true' }}
-            type=raw,value=stage,enable=${{ steps.check-tag.outputs.IS_STAGE == 'true' }}
-            type=raw,value=v1,enable=${{ steps.check-tag.outputs.IS_V1 == 'true' }}
+            type=raw,value=production,enable=${{  steps.check-tag.outputs.IS_PRODUCTION == 'true' }}
+            type=raw,value=stage,enable=${{  steps.check-tag.outputs.IS_STAGE == 'true' }}
 
       - name: "Build and push Docker images"
         uses: docker/build-push-action@v6
@@ -66,3 +61,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: "Deployment webhook"
+        if: success()
+        run: |
+          curl -X POST "${{ secrets.DEPLOY_WEBHOOK }}"
