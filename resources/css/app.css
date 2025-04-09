@@ -5,6 +5,25 @@
     themes: light --default, dark --prefersdark, retro, aqua;
 }
 
+/** Dark variable support */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/** maryUI **/
+@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+
+/** Laravel 12 defaults **/
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+/** This comes with Laravel 12 **/
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
 /** Used only on `Customizing` docs **/
 @plugin "daisyui/theme" {
     name: "mytheme";
@@ -22,7 +41,7 @@
     color-scheme: light; /* color of browser-provided UI */
 }
 
-
+/** Used only on `Customizing` docs **/
 [data-theme="mytheme2"] {
     .input:not([class*="!input-error"]),
     .select:not([class*="!select-error"]),
@@ -47,25 +66,9 @@
     }
 }
 
-/** Dark variable support */
-@custom-variant dark (&:where(.dark, .dark *));
-
-/** maryUI **/
-@source "../../app/**/**/*.php";
-@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
-
-/** Laravel 12 defaults **/
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source "../**/*.blade.php";
-@source "../**/*.js";
-@source "../**/*.vue";
-
-/** This comes with Laravel 12 **/
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-}
+/**
+* Better spacing
+ */
 
 p {
     @apply my-5 leading-8 text-base-content/70

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c91086d7f003386277761c2375b8184",
+    "content-hash": "62614d8fe35fc59e7631e1a91f9b7ffb",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4215,16 +4215,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "dev-main",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "caed464d0299b671cf938a1a6f5c65cbdfbccaed"
+                "reference": "f8c694d481d0e138b93f421ccf6feb672183147a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/caed464d0299b671cf938a1a6f5c65cbdfbccaed",
-                "reference": "caed464d0299b671cf938a1a6f5c65cbdfbccaed",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/f8c694d481d0e138b93f421ccf6feb672183147a",
+                "reference": "f8c694d481d0e138b93f421ccf6feb672183147a",
                 "shasum": ""
             },
             "require": {
@@ -4237,7 +4237,6 @@
                 "orchestra/testbench": "^8|^9|^10",
                 "phpunit/phpunit": "^10|^11"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4291,7 +4290,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/main"
+                "source": "https://github.com/robsontenorio/mary/tree/2.1.0"
             },
             "funding": [
                 {
@@ -4299,7 +4298,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-04T17:32:31+00:00"
+            "time": "2025-04-09T14:59:34+00:00"
         },
         {
             "name": "symfony/clock",
@@ -10084,9 +10083,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "robsontenorio/mary": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

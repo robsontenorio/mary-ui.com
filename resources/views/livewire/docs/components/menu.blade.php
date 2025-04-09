@@ -25,9 +25,19 @@ class extends Component {
         @verbatim('docs')
             <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-item title="Home" icon="o-home" />
+                <x-menu-item title="Messages" icon="o-envelope" />
+                <x-menu-item title="My settings" icon="o-bolt" />
+            </x-menu>
+        @endverbatim
+    </x-code>
 
-                <x-menu-item title="Messages" icon="o-envelope" badge="1" badge-classes="badge-error badge-soft" />
+    <x-anchor title="Customising" size="text-xl" class="mt-14" />
 
+    <x-code class="grid gap-5 justify-center">
+        @verbatim('docs')
+            <x-menu class="border border-base-content/10 !w-64">
+                <x-menu-item title="Home" icon="o-home" class="text-secondary" icon-classes="text-secondary" />
+                <x-menu-item title="Messages" icon="o-envelope" badge="1" badge-classes="badge-soft badge-error" />
                 <x-menu-item title="My settings" icon="o-bolt" badge="new" badge-classes="float-right" />
             </x-menu>
         @endverbatim
@@ -60,7 +70,7 @@ class extends Component {
 
                 <x-menu-separator />
 
-                <x-menu-sub title="Settings" icon="o-cog-6-tooth">
+                <x-menu-sub title="Settings" icon="o-cog-6-tooth" icon-classes="text-warning">
                     <x-menu-item title="Wifi" icon="o-wifi" />
                     <x-menu-item title="Archives" icon="o-archive-box" />
                 </x-menu-sub>

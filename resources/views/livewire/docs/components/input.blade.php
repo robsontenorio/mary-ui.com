@@ -62,7 +62,8 @@ class extends Component {
             <x-password label="Toggle" hint="It toggles visibility" wire:model="password" clearable />
             <x-password label="Right toggle" wire:model="password" right />
             <x-password label="Custom icons" wire:model="password" password-icon="o-lock-closed" password-visible-icon="o-lock-open" />
-            <x-password label="Without toggle" wire:model="password" only-password />
+            <div></div> <!-- [tl! .docs-hide] -->
+            <x-password label="Without toggle" wire:model="password" only-password inline />
         @endverbatim
     </x-code>
 
