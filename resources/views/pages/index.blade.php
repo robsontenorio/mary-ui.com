@@ -106,10 +106,10 @@ new #[Layout('components.layouts.landing')] class extends Component {
             {{--            </span>--}}
 
             <div class="flex gap-5 justify-center items-center my-10">
-                <img src="/laravel.png" class="w-12 h-12" />
-                <img src="/livewire.png" class="w-13 h-11" />
-                <img src="/tailwind.png" class="w-13 h-11" />
-                <img src="/daisy.png" class="w-9 h-12" />
+                <img src="/laravel.png" class="object-contain w-12 h-12" />
+                <img src="/livewire.png" class="object-contain w-13 h-11" />
+                <img src="/tailwind.png" class="object-contain w-13 h-11" />
+                <img src="/daisy.png" class="object-contain w-9 h-12" />
             </div>
 
             <div class="text-xl lg:text-4xl lg:leading-12 justify-self-auto m-auto">
