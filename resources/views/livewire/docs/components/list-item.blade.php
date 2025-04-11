@@ -30,7 +30,7 @@ class extends Component {
 
     <br>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
@@ -39,11 +39,11 @@ class extends Component {
                 <x-list-item :item="$user" sub-value="username" link="/docs/installation" />
             @endforeach
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                        // [tl! .docs-hide]
                 $user1 = App\Models\User::inRandomOrder()->first();     // [tl! .docs-hide]
@@ -51,12 +51,12 @@ class extends Component {
             {{-- Notice `city.name`. It supports nested properties --}}
             <x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No separator & no hover" size="text-xl" class="mt-14" />
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
@@ -65,12 +65,12 @@ class extends Component {
             <x-list-item :item="$user" no-separator no-hover />
             @endforeach                                         <!-- [tl! .docs-hide] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                        // [tl! .docs-hide]
                 $user1 = App\Models\User::inRandomOrder()->first();     // [tl! .docs-hide]
@@ -90,5 +90,5 @@ class extends Component {
                 </x-slot:actions>
             </x-list-item>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

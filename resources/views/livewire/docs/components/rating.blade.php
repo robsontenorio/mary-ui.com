@@ -28,7 +28,7 @@ class extends Component {
         It controls the rating based on a integer number. For "not rated" set its model value as "0".
     </p>
 
-    <x-code class="grid gap-5">
+    <x-code-example class="grid gap-5">
         @verbatim('docs')
             {{-- Not rated --}}
             {{-- public int $ranking0 = 0; --}}
@@ -43,5 +43,5 @@ class extends Component {
             <x-rating wire:model="ranking4" class="!mask-heart bg-secondary rating-xl" />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

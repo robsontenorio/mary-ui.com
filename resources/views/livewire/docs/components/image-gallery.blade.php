@@ -25,7 +25,7 @@ class extends Component {
 
     <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -35,7 +35,7 @@ class extends Component {
                 <link href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css" rel="stylesheet">
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
@@ -43,7 +43,7 @@ class extends Component {
         By default, the height of previews will be equal to the original images heights. Use some CSS to set max height.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $images = [
@@ -57,5 +57,5 @@ class extends Component {
 
             <x-image-gallery :images="$images" class="h-40 rounded-box" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

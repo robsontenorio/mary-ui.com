@@ -44,7 +44,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-dropdown>
                 <x-menu-item title="Archive" icon="o-archive-box" />
@@ -52,11 +52,11 @@ class extends Component {
                 <x-menu-item title="Restore" icon="o-arrow-path" />
             </x-dropdown>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Custom Trigger" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-dropdown>
                 <x-slot:trigger>
@@ -67,11 +67,11 @@ class extends Component {
                 <x-menu-item title="Move" />
             </x-dropdown>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Right alignment" size="text-xl" class="mt-14" />
 
-    <x-code class="flex justify-end">
+    <x-code-example class="flex justify-end">
         @verbatim('docs')
             {{-- Use `right` if dropdown is on right side of screen --}}
             <x-dropdown label="Hello" class="btn-warning" right>
@@ -79,7 +79,7 @@ class extends Component {
                 <x-menu-item title="Yes!" />
             </x-dropdown>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Click propagation" size="text-xl" class="mt-14" />
 
@@ -87,7 +87,7 @@ class extends Component {
         By default, any click closes the dropdown. Just use <code>@click.stop</code> or <code>wire:click.stop</code> to prevent this behavior.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-dropdown label="Settings">
                 {{-- By default any click closes dropdown --}}
@@ -112,18 +112,18 @@ class extends Component {
                 </x-menu-item>
             </x-dropdown>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Spinner" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-dropdown label="Settings">
                 <x-menu-item title="Spinner" wire:click.stop="delete2" spinner="delete2" />
                 <x-menu-item title="Spinner" wire:click.stop="delete3" spinner="delete3" icon="o-trash" />
             </x-dropdown>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No anchor" size="text-xl" class="mt-14" />
 
@@ -132,7 +132,7 @@ class extends Component {
         If you don't want to use it, just add <code>no-x-anchor</code> to the dropdown to manually control the position.
     </p>
 
-    <x-code class="flex justify-between">
+    <x-code-example class="flex justify-between">
         @verbatim('docs')
             <x-dropdown label="Default" no-x-anchor>
                 <x-menu-item title="Hey" />
@@ -149,5 +149,5 @@ class extends Component {
                 <x-menu-item title="It should align correctly on right side?" />
             </x-dropdown>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

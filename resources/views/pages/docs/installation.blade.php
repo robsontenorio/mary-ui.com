@@ -26,26 +26,26 @@ new #[Title('Installation')] class extends Component {
     </p>
 
     <x-anchor title="Automatic install" size="text-xl" class="mt-14 !mb-5" />
-    
+
     <p>
         After installing make sure to check the <a href="/docs/layout" wire:navigate>Layout</a>
         and <a href="/docs/layout" wire:navigate>Sidebar</a> docs.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         composer require robsontenorio/mary
 
         php artisan mary:install
-    </x-code>
+    </x-code-example>
 
     <p>
         Then, start the dev server.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         yarn dev   # or `npm run dev`
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -58,12 +58,12 @@ new #[Title('Installation')] class extends Component {
         If for some reason you need to rename maryUI components using a custom prefix, publish the config file.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan vendor:publish --tag mary.config
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             return [
                 /**
@@ -80,14 +80,14 @@ new #[Title('Installation')] class extends Component {
                 'prefix' => ''
             ];
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     Make sure to clear view cache after renaming.
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan view:clear
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Starter kits" size="text-xl" class="mt-14" />
 
@@ -111,7 +111,7 @@ new #[Title('Installation')] class extends Component {
     <p>
         <strong>Breeze</strong>
     </p>
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div>
                 <x-input-label for="name" :value="__('Name')" />
@@ -119,34 +119,35 @@ new #[Title('Installation')] class extends Component {
                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         <strong>Jetstream</strong>
     </p>
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         <strong>maryUI</strong>
     </p>
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-mary-input label="Name" wire:model="name" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         <strong>Still not convinced?</strong>
     </p>
 
     <p>
-        Go to the <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort, from the ground with no starter kits.
+        Go to the <a href="/bootcamp/01">Bootcamp</a> and get amazed how much you can do with minimal effort,
+        from the ground with no starter kits.
     </p>
 </div>

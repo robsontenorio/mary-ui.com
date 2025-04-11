@@ -62,7 +62,7 @@ class extends Component {
         This component uses <code>ul</code> and <code>li</code> HTML tags. Make sure you have an extra rule to not override them on your custom CSS.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-steps wire:model="step" class="border-y border-base-content/10 my-5 py-5">
                 <x-step step="1" text="Register">
@@ -81,14 +81,14 @@ class extends Component {
             <x-button label="Previous" wire:click="prev" />
             <x-button label="Next" wire:click="next" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             // Step model
             public int $step = 2;
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Customizing" size="text-xl" class="mt-14" />
 
@@ -98,7 +98,7 @@ class extends Component {
 
     <p>Steps color and content.</p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-steps wire:model="example" steps-color="step-primary">
                 <x-step step="1" text="A" />
@@ -109,14 +109,14 @@ class extends Component {
             <x-button label="Previous" wire:click="prev2" />   <!-- [tl! .docs-hide] -->
             <x-button label="Next" wire:click="next2" /> <!-- [tl! .docs-hide] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <br>
     <p>
         You can modify the stepper style itself using the <code>stepper-classes</code> attribute.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-steps wire:model="example" stepper-classes="w-full p-5 bg-base-200">
                 <x-step step="1" text="A" />
@@ -127,6 +127,6 @@ class extends Component {
             <x-button label="Previous" wire:click="prev2" />   <!-- [tl! .docs-hide] -->
             <x-button label="Next" wire:click="next2" /> <!-- [tl! .docs-hide] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

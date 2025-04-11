@@ -15,7 +15,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Alert" />
 
-    <x-code class="grid gap-5">
+    <x-code-example class="grid gap-5">
         @verbatim('docs')
             <x-alert title="You have 10 messages" icon="o-exclamation-triangle" />
 
@@ -37,7 +37,7 @@ class extends Component {
 
             <x-alert title="Dismissible" description="Click the close icon" icon="o-exclamation-triangle" dismissible />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--    <hr class="my-10 border-base-300" />--}}
     {{--    <x-anchor title="API" size="text-xl" class="mt-14" />--}}

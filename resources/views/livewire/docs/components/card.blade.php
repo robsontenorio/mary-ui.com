@@ -25,7 +25,7 @@ class extends Component {
 
     <x-anchor title="Basics" size="text-xl" class="mt-14" />
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
+    <x-code-example class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-base-200">
         @verbatim('docs')
             <x-card title="Your stats" subtitle="Our findings about you" shadow separator>
                 I have title, subtitle and separator.
@@ -46,7 +46,7 @@ class extends Component {
                 </x-slot:actions>
             </x-card>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Progress indicator" size="text-xl" class="mt-14" />
 
@@ -54,7 +54,7 @@ class extends Component {
         This feature only works when you have in place <code>title</code> and <code>separator</code> attributes.
     </p>
 
-    <x-code class="grid lg:grid-cols-2 gap-8 bg-base-200 ">
+    <x-code-example class="grid lg:grid-cols-2 gap-8 bg-base-200 ">
         @verbatim('docs')
             {{-- Notice `progress-indicator` --}}
             <x-card title="Your stats" subtitle="Always triggers" separator progress-indicator>
@@ -67,6 +67,6 @@ class extends Component {
             </x-card>
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

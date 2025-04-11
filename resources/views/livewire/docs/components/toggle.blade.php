@@ -22,7 +22,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Toggle" />
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-toggle label="Left" wire:model="item1" />
 
@@ -40,5 +40,5 @@ class extends Component {
                 </x-slot:label>
             </x-toggle>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

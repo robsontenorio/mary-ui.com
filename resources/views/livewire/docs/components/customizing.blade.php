@@ -68,14 +68,14 @@ new #[Title('Customizing')] class extends Component {
     </p>
 
     <div data-theme="mytheme">
-        <x-code class="grid gap-5">
+        <x-code-example class="grid gap-5">
             @verbatim('docs')
                 <x-input />
                 <x-select />
             @endverbatim
-        </x-code>
+        </x-code-example>
         {{--@formatter:off--}}
-        <x-code no-render language="less">
+        <x-code-example no-render language="less">
             @verbatim('docs')
             @plugin "daisyui/theme" {
                 name: "light";              /* the theme name you want to override */
@@ -87,7 +87,7 @@ new #[Title('Customizing')] class extends Component {
                 --radius-field: 2.25rem;
             }
             @endverbatim
-        </x-code>
+        </x-code-example>
         {{--@formatter:on--}}
     </div>
 
@@ -99,7 +99,7 @@ new #[Title('Customizing')] class extends Component {
 
     <div data-theme="mytheme2">
         {{--@formatter:off--}}
-        <x-code class="grid gap-5">
+        <x-code-example class="grid gap-5">
             @verbatim('docs')
                 @php                            // [tl! .docs-hide]
                     $users = $this->users();      // [tl! .docs-hide]
@@ -114,11 +114,11 @@ new #[Title('Customizing')] class extends Component {
                 </x-slot:actions><!-- [tl! .docs-hide] -->
                 </x-form><!-- [tl! .docs-hide] -->
             @endverbatim
-        </x-code>
+        </x-code-example>
         {{--@formatter:on--}}
 
         {{--@formatter:off--}}
-        <x-code no-render language="less">
+        <x-code-example no-render language="less">
             @verbatim('docs')
                 .input:not([class*="!input-error"]),
                 .select:not([class*="!select-error"]),
@@ -142,7 +142,7 @@ new #[Title('Customizing')] class extends Component {
                     @apply text-sm
                 }
             @endverbatim
-        </x-code>
+        </x-code-example>
         {{--@formatter:on--}}
     </div>
 
@@ -152,14 +152,14 @@ new #[Title('Customizing')] class extends Component {
         You can apply any CSS class to individual components for edge cases.
     </p>
 
-    <x-code class="grid gap-5">
+    <x-code-example class="grid gap-5">
         @verbatim('docs')
             <x-input placeholder="Default" />
             <x-input placeholder="No outline" class="!outline-none" />
             <x-input placeholder="Primary" class="input-primary text-primary" />
             <x-select placeholder="Size" class="select-xl" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <div class="pb-96"></div>
 

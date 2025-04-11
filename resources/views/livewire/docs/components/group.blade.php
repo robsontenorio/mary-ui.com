@@ -37,14 +37,14 @@ class extends Component {
 
     <br>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
             @endphp                                         <!-- [tl! .docs-hide] -->
             <x-group label="Select one" wire:model="selectedUser" :options="$users" hint="Pick one" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
@@ -52,7 +52,7 @@ class extends Component {
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
@@ -65,14 +65,14 @@ class extends Component {
                 option-label="other_name"
                 class="[&:checked]:!btn-primary btn-sm" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Disable options" size="text-xl" class="mt-14" />
     <p>
         You can disable options by setting the <code>disabled</code> attribute.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = [
@@ -85,6 +85,6 @@ class extends Component {
 
             <x-group label="Select one" wire:model="selectedUser3" :options="$users" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

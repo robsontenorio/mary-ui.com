@@ -20,7 +20,7 @@ class extends Component {
 
     <x-anchor title="Install" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -31,11 +31,11 @@ class extends Component {
                 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html@3.4.48/bundles/js/diff2html-ui.min.js"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Examples" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $old = '{"age": 24, "name": "Mary"}';
@@ -46,5 +46,5 @@ class extends Component {
             {{-- The `file-name` determines highlight language --}}
             <x-diff :old="$old" :new="$new" file-name="extra.json" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

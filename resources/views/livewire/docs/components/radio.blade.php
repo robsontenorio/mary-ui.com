@@ -44,7 +44,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-8 lg:flex lg:justify-around">
+    <x-code-example class="grid gap-8 lg:flex lg:justify-around">
         @verbatim('docs')
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
@@ -53,11 +53,11 @@ class extends Component {
 
             <x-radio label="Select one inline" wire:model="user2" :options="$users" inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Hint" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-8 lg:flex lg:justify-around">
+    <x-code-example class="grid gap-8 lg:flex lg:justify-around">
         @verbatim('docs')
             @php
                 $users = [
@@ -70,7 +70,7 @@ class extends Component {
 
             <x-radio label="Select one option" wire:model="user4" :options="$users" inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
@@ -78,7 +78,7 @@ class extends Component {
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = [
@@ -96,14 +96,14 @@ class extends Component {
                 option-hint="my_hint"
             />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Disable options" size="text-xl" class="mt-14" />
     <p>
         You can disable options by setting the <code>disabled</code> attribute.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = [
@@ -116,6 +116,6 @@ class extends Component {
 
             <x-radio label="Select one" :options="$users" wire:model="user6" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

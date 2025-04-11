@@ -41,7 +41,7 @@ class extends Component {
 
     <x-anchor title="Install" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -51,7 +51,7 @@ class extends Component {
                 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
@@ -59,7 +59,7 @@ class extends Component {
         See all <code>$config</code> options at <a href="https://flatpickr.js.org/options/" target="_blank">flatpickr`s docs</a>.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = ['altFormat' => 'd/m/Y'];
@@ -71,7 +71,7 @@ class extends Component {
             <span></span> <!-- [tl! .docs-hide] -->
             <x-datepicker label="Range" wire:model="myDate3" icon="o-calendar" :config="$config2" inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Localization and global settings" size="text-xl" class="mt-14" />
 
@@ -80,7 +80,7 @@ class extends Component {
         See more at <a href="https://flatpickr.js.org/localization/" target="_blank">flatpickr`s docs</a>.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -100,15 +100,16 @@ class extends Component {
                 </script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Per component" size="text-xl" class="mt-14" />
 
     <p>
-        Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config. Instead, set locale on component config object.
+        Just add extra locale packages as described above, but <strong>don't apply</strong> global locale config.
+        Instead, set locale on component config object.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = ['locale' => 'pt'];
@@ -118,7 +119,7 @@ class extends Component {
             <x-datepicker label="Portuguese" wire:model="myDate1" icon="o-calendar" :config="$config1" />
             <x-datepicker label="French" wire:model="myDate1" icon="o-calendar" :config="$config2" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Plugins" size="text-xl" class="mt-14" />
 
@@ -126,7 +127,7 @@ class extends Component {
         Here is a example for <code>monthSelectPlugin</code>. Please, refer to flatpickr`s docs for more plugins and how about to install them.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -136,9 +137,9 @@ class extends Component {
                 <link href="https://unpkg.com/flatpickr/dist/plugins/monthSelect/style.css" rel="stylesheet">
                 @endverbatim
             </head>
-    </x-code>
+    </x-code-example>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = [
@@ -155,16 +156,17 @@ class extends Component {
 
             <x-datepicker label="Month" wire:model="myDate5" icon="o-calendar" :config="$config1" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Disable dates" size="text-xl" class="mt-14" />
 
     <p>
         Here is a example for <code>disable</code>.
-        Please, refer to flatpickr`s docs for <a href="https://flatpickr.js.org/examples/#disabling-dates" target="_blank">more examples.</a>
+        Please, refer to flatpickr`s docs for
+        <a href="https://flatpickr.js.org/examples/#disabling-dates" target="_blank">more examples.</a>
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $config1 = [
@@ -175,5 +177,5 @@ class extends Component {
 
             <x-datepicker label="Date" wire:model="myDate6" icon="o-calendar" :config="$config1" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

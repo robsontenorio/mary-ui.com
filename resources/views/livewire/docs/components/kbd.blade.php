@@ -19,21 +19,21 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-kbd>A</x-kbd>
             <x-kbd class="kbd-lg">B</x-kbd>
             <x-kbd class="kbd-xl">C</x-kbd>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             Press <x-kbd>⌘</x-kbd> <x-kbd>P</x-kbd> to pay.
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
 </div>

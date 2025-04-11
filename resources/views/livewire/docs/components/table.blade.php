@@ -59,7 +59,7 @@ class extends Component {
 
     <x-anchor title="Simple" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::with('city')->take(5)->get();
@@ -74,11 +74,11 @@ class extends Component {
             {{-- You can use any `$wire.METHOD` on `@row-click` --}}
             <x-table :headers="$headers" :rows="$users" striped @row-click="alert($event.detail.name)" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No headers & no hover" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                            // [tl! .docs-hide]
                 $users = App\Models\User::with('city')->take(3)->get();     // [tl! .docs-hide]
@@ -89,18 +89,19 @@ class extends Component {
             @endphp                                                         <!-- [tl! .docs-hide] -->
             <x-table :headers="$headers" :rows="$users" no-headers no-hover />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Formatters" size="text-xl" class="mt-14" />
 
     <p>
-        The table component includes the basic <code>date</code> and <code>currency</code> formatters. You can also use a <code>closure</code> to make any kind of transformation.
+        The table component includes the basic <code>date</code> and <code>currency</code> formatters.
+        You can also use a <code>closure</code> to make any kind of transformation.
     </p>
     <p>
         For more complex scenarios you can use the <code>cell slot</code> described on the next sections.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::take(2)->get();                           // [tl! .docs-hide]
@@ -121,7 +122,7 @@ class extends Component {
             {{-- Notice `no-headers` --}}
             <x-table :headers="$headers" :rows="$users" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Click to navigate" size="text-xl" class="mt-14" />
 
@@ -140,7 +141,7 @@ class extends Component {
 
     <br>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                                // [tl! .docs-hide]
                 $users = App\Models\User::with('city')->take(3)->get();         // [tl! .docs-hide]
@@ -154,26 +155,26 @@ class extends Component {
             {{-- Check browser url on next page --}}
             <x-table :headers="$headers" :rows="$users" link="/docs/installation/?from={username}" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         The above approach makes puts a <code>href</code> on each cell. You can disable it for specific columns by setting <code>disableLink</code>.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         $headers = [
             ...
             ['key' => 'city.name', 'label' => 'City', 'disableLink' => true], // <--- Here!
         ];
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         You can also use the below special notation to link to specific route.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-table
                 :headers="$headers"
@@ -181,7 +182,7 @@ class extends Component {
                 :link="route('users.show', ['username' => '[username]', 'id' => '[id]'])"
             />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Header classes" size="text-xl" class="mt-14" />
 
@@ -191,7 +192,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 use App\Models\User;            // [tl! .docs-hide]
@@ -206,7 +207,7 @@ class extends Component {
 
             <x-table :headers="$headers" :rows="$users"  />
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Row and cell decoration" size="text-xl" class="mt-14" />
@@ -217,7 +218,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 use App\Models\User;            // [tl! .docs-hide]
@@ -251,7 +252,7 @@ class extends Component {
 
             <x-table :headers="$headers" :rows="$users" :row-decoration="$row_decoration" />
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <br>
@@ -261,7 +262,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 use App\Models\User;            // [tl! .docs-hide]
@@ -298,7 +299,7 @@ class extends Component {
 
             <x-table :headers="$headers" :rows="$users" :cell-decoration="$cell_decoration" />
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Sort" size="text-xl" class="mt-14" />
@@ -310,7 +311,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
 
         public function users(): Collection
@@ -320,7 +321,7 @@ class extends Component {
                 ->take(3)
                 ->get();
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <br>
@@ -328,7 +329,7 @@ class extends Component {
         By default, <strong>all columns</strong> will be sortable. Check the following example to <strong>disable sorting</strong> on specific columns.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = $this->users();  // [tl! .docs-hide]
@@ -344,7 +345,7 @@ class extends Component {
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy" />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <br>
     <p>
@@ -352,13 +353,13 @@ class extends Component {
         It will add an extra column on result.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             // It will add an extra column `city_name` on User collection
             User::withAggregate('city', 'name')-> ...
         @endverbatim
-    </x-code>
-    <x-code>
+    </x-code-example>
+    <x-code-example>
 
         @verbatim('docs')
             @php
@@ -375,24 +376,25 @@ class extends Component {
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy" />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <br>
 
     <p>
         In the following example we need <code>City</code> as complex object to use it in a custom slot.
-        But, it must be sorted by a custom column. So we make use of same approach of <code>withAggregate</code> combined with a <code>sortBy</code> per column.
+        But, it must be sorted by a custom column.
+        So we make use of same approach of <code>withAggregate</code> combined with a <code>sortBy</code> per column.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             // It will add an extra column `city_name` on User collection
             User::withAggregate('city', 'name')-> ...
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = $this->users();  // [tl! .docs-hide]
@@ -412,7 +414,7 @@ class extends Component {
             </x-table>
 
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Pagination" size="text-xl" class="mt-14" />
@@ -432,19 +434,19 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         use Livewire\WithPagination;
 
         class ShowUsers extends Component
         {
             use WithPagination;
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <br>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::paginate(3);
@@ -459,12 +461,13 @@ class extends Component {
             <x-table :headers="$headers" :rows="$users" with-pagination />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <br>
 
     <p>
-        Here are some useful styles to add on <code>app.css</code>. Notice this is about default classes provided by Laravel paginator links <strong>not maryUI itself</strong>.
+        Here are some useful styles to add on <code>app.css</code>.
+        Notice this is about default classes provided by Laravel paginator links <strong>not maryUI itself</strong>.
         Fell free to change it.
     </p>
 
@@ -473,7 +476,7 @@ class extends Component {
         <x-collapse name="traditional" separator>
             <x-slot:heading>Traditional</x-slot:heading>
             <x-slot:content>
-                <x-code no-render language="sass">
+                <x-code-example no-render language="sass">
         /** General button **/
         .mary-table-pagination button {
             @apply cursor-pointer
@@ -483,13 +486,13 @@ class extends Component {
         .mary-table-pagination span[aria-current="page"] > span {
             @apply bg-primary text-base-100
         }
-                </x-code>
+                </x-code-example>
             </x-slot:content>
         </x-collapse>
         <x-collapse name="minimalist" separator>
             <x-slot:heading>Minimalist (used in this docs)</x-slot:heading>
             <x-slot:content>
-                <x-code no-render language="sass">
+                <x-code-example no-render language="sass">
         .mary-table-pagination {
             button, span {
                 @apply text-xs border-none
@@ -507,7 +510,7 @@ class extends Component {
                 @apply py-1 px-2
             }
         }
-                </x-code>
+                </x-code-example>
             </x-slot:content>
         </x-collapse>
     </x-accordion>
@@ -519,7 +522,7 @@ class extends Component {
         You also can control the number of items per page by using the <code>per-page</code> attribute, as well the displayed values using <code>per-page-values</code>.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $perPage = $this->perPage;  // [tl! .docs-hide]
@@ -544,7 +547,7 @@ class extends Component {
             />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <br>
 
@@ -552,7 +555,7 @@ class extends Component {
         MarUI also provides its own pagination component. You can use it with other components, so it is not limited to tables.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::paginate($this->perPage);
@@ -565,24 +568,25 @@ class extends Component {
             {{-- The pagination component --}}
             <x-pagination :rows="$users" wire:model.live="perPage" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Note about slots" size="text-xl" class="mt-14" />
 
     <p>
         On next sections you will see the special <code>&#x40;scope</code> directive.
-        If you are using Livewire components inside that, you need to generate a random ID for each render, otherwise it will fail because the way Livewire works.
+        If you are using Livewire components inside that, you need to generate a random ID for each render,
+        otherwise it will fail because the way that Livewire works.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             @scope('anything', $something)
                 {{-- This is PHP function to generate random ids  --}}
                 <livewire:my-component :key="uniqid()" />
             @endscope
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Header slot" size="text-xl" class="mt-14" />
@@ -595,7 +599,7 @@ class extends Component {
     <br>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::with('city')->take(2)->get();     // [tl! .docs-hide]
@@ -618,7 +622,7 @@ class extends Component {
                 @endscope
             </x-table>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Cell slot" size="text-xl" class="mt-14" />
@@ -637,7 +641,7 @@ class extends Component {
     <br>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
@@ -678,7 +682,7 @@ class extends Component {
 
             </x-table>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Inject external variables" size="text-xl" class="mt-14" />
@@ -688,7 +692,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
@@ -705,7 +709,7 @@ class extends Component {
                 @endscope
             </x-table>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Loop context" size="text-xl" class="mt-14" />
@@ -716,7 +720,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                        // [tl! .docs-hide]
                 $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
@@ -730,7 +734,7 @@ class extends Component {
                 @endscope
             </x-table>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Empty Slot" size="text-xl" class="mt-14" />
@@ -739,7 +743,7 @@ class extends Component {
         You can customize the empty text message by using one of the following approaches.
     </p>
 
-    <x-code class="grid gap-10">
+    <x-code-example class="grid gap-10">
         @verbatim('docs')
             @php                                                    // [tl! .docs-hide]
                 $users = [];                                        // [tl! .docs-hide]
@@ -760,7 +764,7 @@ class extends Component {
                 </x-slot:empty>
             </x-table>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Row selection" size="text-xl" class="mt-14" />
 
@@ -768,13 +772,13 @@ class extends Component {
         Use <code>selectable</code> attribute in conjunction with <code>wire:model</code> to manage selection state.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         public array $selected = [1, 3];
-    </x-code>
+    </x-code-example>
 
     <br>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();                   // [tl! .docs-hide]
@@ -797,32 +801,32 @@ class extends Component {
 
             <x-button label="Save" icon="o-check" wire:click="save" spinner />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         By default, it will look up for <code>$row->id</code> attribute. You can customize this with <code>selectable-key</code> attribute.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- Uses `$row->mycode` as selection key --}}
             <x-table ... selectable selectable-key="mycode" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Row expansion" size="text-xl" class="mt-14" />
     <p>
         Use <code>expandable</code> attribute in conjunction with <code>wire:model</code> to manage expansion state.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         public array $expanded = [2];
-    </x-code>
+    </x-code-example>
 
     <br>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(3)->get();                       // [tl! .docs-hide]
@@ -843,28 +847,28 @@ class extends Component {
             </x-table>
 
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         By default, it will look up for <code>$row->id</code> attribute. You can customize this with <code>expandable-key</code> attribute.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- Uses `$row->mycode` as expandable key --}}
             <x-table ... expandable expandable-key="mycode" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         You can also control the expansion icon visibility by using <code>expandable-condition</code> attribute.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- It will check each row for the `is_admin` field --}}
             <x-table ... expandable expandable-condition="is_admin" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

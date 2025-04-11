@@ -70,14 +70,14 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
                 <x-toast />  <!-- [tl! highlight .animate-bounce] -->
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -85,7 +85,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Mary\Traits\Toast;
 
@@ -118,17 +118,17 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         For convenience this component flashes the following messages to make testing easier.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         session()->flash('mary.toast.title', $title);
         session()->flash('mary.toast.description', $description);
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
@@ -136,7 +136,7 @@ class extends Component {
         The shortcuts are branded with default colors and icons.
     </p>
 
-    <x-code class="grid lg:flex gap-5">
+    <x-code-example class="grid lg:flex gap-5">
         @verbatim('docs')
             <x-button label="Default" class="btn-success" wire:click="save" spinner />
 
@@ -144,10 +144,10 @@ class extends Component {
 
             <x-button label="Save and redirect" class="btn-warning" wire:click="save3" spinner />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function save()
             {
@@ -181,7 +181,7 @@ class extends Component {
                 );
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Default position" size="text-xl" class="mt-14" />
@@ -191,14 +191,14 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
                 <x-toast position="toast-top toast-center" />
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Custom style" size="text-xl" class="mt-14" />
@@ -207,14 +207,14 @@ class extends Component {
         You can use any daisyUI/Tailwind classes. It also supports HTML.
     </p>
 
-    <x-code class="grid lg:flex gap-5">
+    <x-code-example class="grid lg:flex gap-5">
         @verbatim('docs')
             <x-button label="Like" wire:click="save4" icon="o-heart" spinner />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function save4()
             {
@@ -230,19 +230,19 @@ class extends Component {
                 );
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Using an Exception" size="text-xl" class="mt-14" />
 
     <p>
-        The previous approach uses a Trait and works only inside Livewire components. If you are trying to trigger a toast from outside a Livewire context, you can use the <code>ToastException</code>
-        to do so.
+        The previous approach uses a Trait and works only inside Livewire components.
+        If you are trying to trigger a toast from outside a Livewire context, you can use the <code>ToastException</code> to do so.
         This class has a number of shortcut functions to make it easier to use, and it's possible to overwrite all defaults.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
         use Mary\Exceptions\ToastException;
 
@@ -257,20 +257,22 @@ class extends Component {
             throw ToastException::info(...);
         }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
-        The livewire request hook <code>fail</code> method is used to handle the client side rendering of the toasts. If you already have hooks set up, the hook to render the toast
-        will be called second.
+        The livewire request hook <code>fail</code> method is used to handle the client side rendering of the toasts.
+        If you already have hooks set up, the hook to render the toast will be called second.
+    </p>
+    <p>
         If you have a toast call in your existing hook, it will be de-bounced so only one call is used.
-        The livewire fail hook is given a <code>preventDefault()</code> function to call if you wish to stop the event bubbling up, this behaviour is respected by the second hook
-        configured by toast.
+        The livewire fail hook is given a <code>preventDefault()</code> function to call if you wish to stop the event bubbling up,
+        this behaviour is respected by the second hook configured by toast.
         If you want to disable this call, you can chain the <code>permitDefault()</code> method on your exception.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
         use Mary\Exceptions\ToastException;
 
@@ -279,7 +281,7 @@ class extends Component {
             throw ToastException::info('Do not prevent default on client side')->permitDefault();
         }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
 </div>

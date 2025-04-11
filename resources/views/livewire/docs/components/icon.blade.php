@@ -19,7 +19,7 @@ class extends Component {
         All the default icons are powered by <a href="https://blade-ui-kit.com/blade-icons?set=1#search" target="_blank">Blade Hero Icons</a> and you can use them right away.
     </p>
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-icon name="o-envelope" />
 
@@ -27,17 +27,17 @@ class extends Component {
 
             <x-icon name="o-envelope" class="w-12 h-12 bg-orange-500 text-white p-2 rounded-full" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Labels" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-icon name="o-envelope" label="Messages" />
 
             <x-icon name="s-envelope" class="w-9 h-9 text-green-500 text-2xl" label="Messages" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Alternative iconset" size="text-xl" class="mt-14" />
 
@@ -47,12 +47,12 @@ class extends Component {
     <p>
         Here is an example for FontAwsome and Lucide iconsets.
     </p>
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         composer require owenvoke/blade-fontawesome
         composer require mallardduck/blade-lucide-icons
-    </x-code>
+    </x-code-example>
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             {{-- FontAwsome variants --}}
             <x-icon name="fas.cloud" />
@@ -62,14 +62,14 @@ class extends Component {
             {{-- Lucide --}}
             <x-icon name="lucide.activity" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Caching" size="text-xl" class="mt-14" />
     <p>
         As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at the
         <strong>production environment</strong>.
     </p>
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan icons:cache
-    </x-code>
+    </x-code-example>
 </div>

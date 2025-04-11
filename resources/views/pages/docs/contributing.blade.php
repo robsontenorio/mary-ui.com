@@ -23,16 +23,16 @@ new #[Title('Contributing')] class extends Component {
         Clone the repository into some folder <strong>inside your app</strong>.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         git clone git@github.com:robsontenorio/mary.git
-    </x-code>
+    </x-code-example>
 
     <p>
         Change <code>composer.json</code> from <strong>your app</strong>.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="javascript">
+    <x-code-example no-render language="javascript">
         "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
 
         // Add this block  [tl! highlight]
@@ -45,24 +45,24 @@ new #[Title('Contributing')] class extends Component {
                 }
             }
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         Require the package again for local symlink.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         composer require robsontenorio/mary
-    </x-code>
+    </x-code-example>
 
     <p>
         Start the dev server.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         yarn dev
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Docs" size="text-xl" class="mt-14" />
 
@@ -70,25 +70,25 @@ new #[Title('Contributing')] class extends Component {
         This website is made with Laravel, Livewire Volt and maryUI.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         git clone git@github.com:robsontenorio/mary-ui.com.git
-    </x-code>
+    </x-code-example>
 
     <p>
         Create the <code>.env</code> from <code>.env.example</code>.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         cp .env .env.example
-    </x-code>
+    </x-code-example>
 
     <p>
         Install, migrate and start.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         composer start
-    </x-code>
+    </x-code-example>
 
     <p>
         <x-icon name="o-bolt" class="text-warning" />

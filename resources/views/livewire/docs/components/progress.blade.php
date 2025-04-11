@@ -25,7 +25,7 @@ class extends Component {
 
     <x-anchor title="Loading" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-8">
+    <x-code-example class="flex gap-8">
         @verbatim('docs')
             <x-loading />
             <x-loading class="progress-primary" />
@@ -34,22 +34,22 @@ class extends Component {
             <x-loading class="loading-ring" />
             <x-loading class="loading-infinity loading-xs" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Bars" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-8">
+    <x-code-example class="grid gap-8">
         @verbatim('docs')
             <x-progress value="12" max="100" />
             <x-progress value="12" max="100" class="progress-warning h-3" />
             <x-progress value="12" max="100" class="w-56 progress-error" />
             <x-progress class="progress-primary h-0.5" indeterminate />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Radial" size="text-xl" class="mt-14" />
 
-    <x-code class="flex flex-wrap gap-8">
+    <x-code-example class="flex flex-wrap gap-8">
         @verbatim('docs')
             <x-progress-radial value="56" />
             <x-progress-radial value="78" unit="h" class="text-warning" />
@@ -59,7 +59,7 @@ class extends Component {
             <x-progress-radial value="12" class="bg-primary text-primary-content border-4 border-primary" />
             <x-progress-radial value="98" class="text-success" style="--size:6rem; --thickness: 2px" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Special <HR>" size="text-xl" class="mt-14" />
 
@@ -67,7 +67,7 @@ class extends Component {
         It is intended to be part of layout, but acts as an indeterminate progress indicator to any target or specific targets.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <div class="flex gap-5">
                 <x-input placeholder="Type ..." wire:model.live.debounce="name" />
@@ -85,5 +85,5 @@ class extends Component {
             <x-hr target="save" />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

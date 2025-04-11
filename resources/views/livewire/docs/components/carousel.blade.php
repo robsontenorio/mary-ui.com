@@ -20,7 +20,7 @@ class extends Component {
         It supports swipe gestures on mobile.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $slides = [
@@ -41,11 +41,11 @@ class extends Component {
 
             <x-carousel :slides="$slides" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No indicators" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                                        // [tl! .docs-hide]
                 $slides = [                                                             // [tl! .docs-hide]
@@ -65,11 +65,11 @@ class extends Component {
             @endphp                                                                     <!-- [tl! .docs-hide] -->
             <x-carousel :slides="$slides" without-indicators />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No arrows" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                                    // [tl! .docs-hide]
                 $slides = [                                                         // [tl! .docs-hide]
@@ -90,14 +90,14 @@ class extends Component {
             {{-- Notice you can also override some wrapper CSS classes. --}}
             <x-carousel :slides="$slides" without-arrows class="!h-32 !rounded-none" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Full" size="text-xl" class="mt-14" />
     <p>
         Play around removing some attributes. The only required attribute is <code>image</code>.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $slides = [
@@ -127,7 +127,7 @@ class extends Component {
 
             <x-carousel :slides="$slides" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Custom slot" size="text-xl" class="mt-14" />
     <p>
@@ -136,7 +136,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $slides = [
@@ -163,7 +163,7 @@ class extends Component {
                 @endscope
             </x-carousel>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
 </div>

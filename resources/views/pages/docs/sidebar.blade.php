@@ -21,7 +21,7 @@ class extends Component {
     <x-anchor title="Attributes" size="text-xl" class="mt-14" />
 
     <!-- @formatter:off -->
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-slot:sidebar
                 drawer="main-drawer"          {{-- Drawer ID trigger for mobile --}}
@@ -34,7 +34,7 @@ class extends Component {
                 ...
             </x-slot:sidebar>
         @endverbatim
-    </x-code>
+    </x-code-example>
     <!-- @formatter:on -->
 
     <x-anchor title="Right side" size="text-xl" class="mt-14" />
@@ -43,7 +43,7 @@ class extends Component {
         By default, the sidebar is on the <b>left side</b>. But you can easily move it to the right side by adding the <code>right</code> attribute.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-main>
                 <x-slot:sidebar ... right>
@@ -51,13 +51,13 @@ class extends Component {
                 </x-slot:sidebar>
             </x-main>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         The following example shows how to move the sidebar (the drawer) to the right side <b>only for mobile devices</b>.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-main>
                 <x-slot:sidebar ... right-mobile>
@@ -65,5 +65,5 @@ class extends Component {
                 </x-slot:sidebar>
             </x-main>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

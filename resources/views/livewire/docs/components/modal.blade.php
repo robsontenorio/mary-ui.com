@@ -25,7 +25,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-modal wire:model="myModal1" title="Hey" class="backdrop-blur">
                 Press `ESC`, click outside or click `CANCEL` to close.
@@ -37,15 +37,15 @@ class extends Component {
 
             <x-button label="Open" @click="$wire.myModal1 = true" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         public bool $myModal1 = false;
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Complex" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-modal wire:model="myModal2" title="Hello" subtitle="Livewire example">
                 <x-form no-separator>
@@ -62,7 +62,7 @@ class extends Component {
 
             <x-button label="Open" @click="$wire.myModal2 = true" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Persistent" size="text-xl" class="mt-14" />
 
@@ -72,7 +72,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-modal wire:model="myModal3" title="Payment confirmation" persistent separator>
                 <div class="flex justify-between">
@@ -86,7 +86,7 @@ class extends Component {
 
             <x-button label="Open Persistent" @click="$wire.myModal3 = true" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Styling" size="text-xl" class="mt-14" />
 
@@ -94,7 +94,7 @@ class extends Component {
         Remember to add <code>box-class</code> custom classes on Tailwind <strong>safelist</strong>.
     </x-alert>
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-modal wire:model="myModal4" class="backdrop-blur" box-class="bg-warning/30 border w-64">
                 Hello!
@@ -102,7 +102,7 @@ class extends Component {
 
             <x-button label="Open " @click="$wire.myModal4 = true" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Disable focus trap" size="text-xl" class="mt-14" />
 
@@ -110,9 +110,9 @@ class extends Component {
         By default the focus trap is enabled, but you can disable it by adding the <code>without-trap-focus</code> attribute.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-modal without-trap-focus ... />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

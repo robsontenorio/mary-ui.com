@@ -26,7 +26,7 @@ class extends Component {
 
     <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -35,7 +35,7 @@ class extends Component {
                 <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
@@ -43,28 +43,28 @@ class extends Component {
         It just extracts the signature as a <strong>base64 string</strong> after the end of each stroke.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-signature wire:model="signature1" hint="Please, sign it." />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         So, you can display it later as a regular image.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                                  // [tl! .docs-hide]
                 $signature2 = $this->signature2;     // [tl! .docs-hide]
             @endphp                                             {{-- [tl! .docs-hide] --}}
             <img src="{{ $signature2 }}" class="bg-pink-100 h-24 rounded-lg" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Customize" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             {{-- Do not set the `width`. It is always 100% --}}
 
@@ -74,28 +74,28 @@ class extends Component {
                 height="100"
                 class="border-4 !bg-info/10" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         If you want to set the <code>width</code> use an outer div.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div class="w-44">
                 <x-signature ... />
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         You can set any configuration describe at <a href="https://github.com/szimek/signature_pad" target="_blank">signature_pad</a> docs.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-signature wire:model="signature4" :config="['penColor' => 'red']" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

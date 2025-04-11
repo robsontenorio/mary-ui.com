@@ -26,7 +26,7 @@ class extends Component {
 
     <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-tabs wire:model="selectedTab">
                 <x-tab name="users-tab" label="Users" icon="o-users">
@@ -43,11 +43,11 @@ class extends Component {
 
             <x-button label="Change to Musics" @click="$wire.selectedTab = 'musics-tab'" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-tabs wire:model="myTab">
                 <x-tab name="users-tab">
@@ -66,11 +66,11 @@ class extends Component {
                 </x-tab>
             </x-tabs>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Disabled state" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-tabs wire:model="someTab">
                 <x-tab name="users-tab" label="Users">
@@ -87,11 +87,11 @@ class extends Component {
                 </x-tab>
             </x-tabs>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Hidden state" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-tabs wire:model="someTab">
                 <x-tab name="users-tab" label="Users">
@@ -105,7 +105,7 @@ class extends Component {
                 </x-tab>
             </x-tabs>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Customisation" size="text-xl" class="mt-14" />
 
@@ -113,7 +113,7 @@ class extends Component {
         Remember to add these custom classes on Tailwind <strong>safelist</strong>.
     </x-alert>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-tabs
                 wire:model="tabSelected"
@@ -132,6 +132,6 @@ class extends Component {
                 </x-tab>
             </x-tabs>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

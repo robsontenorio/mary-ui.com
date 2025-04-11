@@ -16,7 +16,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Avatar" />
 
-    <x-code class="grid lg:grid-cols-2 gap-8">
+    <x-code-example class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
             @php                                         // [tl! .docs-hide]
                 $user = App\Models\User::first();        // [tl! .docs-hide]
@@ -35,11 +35,11 @@ class extends Component {
             {{-- Placeholder --}}
             <x-avatar placeholder="RT" title="Robson Tenório" subtitle="@robsontenorio" class="!w-10" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             @php                                    // [tl! .docs-hide]
                 $user = App\Models\User::first();   // [tl! .docs-hide]
@@ -56,7 +56,7 @@ class extends Component {
 
             </x-avatar>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--    <hr class="my-10" />--}}
     {{--    <x-anchor title="API" size="text-xl" class="mt-14" />--}}

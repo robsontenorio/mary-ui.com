@@ -41,7 +41,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
@@ -55,7 +55,7 @@ class extends Component {
             <span></span><!-- [tl! .docs-hide] -->
             <x-select label="Inline label" wire:model="selectedUser" icon="o-user" :options="$users" inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Alternative attributes" size="text-xl" class="mt-14" />
 
@@ -63,7 +63,7 @@ class extends Component {
         Just set <code>option-value</code> and <code>option-label</code> representing the desired targets.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                             // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
@@ -75,11 +75,11 @@ class extends Component {
                 option-value="custom_key"
                 option-label="other_name" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Placeholder" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                             // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
@@ -92,25 +92,25 @@ class extends Component {
                 placeholder-value="0" {{-- Set a value for placeholder. Default is `null` --}}
             />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="States" size="text-xl" class="mt-14" />
     <p>
         Notice that browser standards <b>does not support "readonly"</b>.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                             // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
             @endphp                                         <!-- [tl! .docs-hide] -->
             <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Disabled options" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $users = [
@@ -121,7 +121,7 @@ class extends Component {
 
             <x-select label="Disabled options" :options="$users" wire:model="selectedUser3" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Group" size="text-xl" class="mt-14" />
 
@@ -130,7 +130,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="gap gap-5 sm:px-64">
+    <x-code-example class="gap gap-5 sm:px-64">
         @verbatim('docs')
             @php
                 $grouped = [
@@ -149,7 +149,7 @@ class extends Component {
 
             <x-select-group label="Group Select" :options="$grouped" wire:model="selectedUser" />
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
@@ -159,7 +159,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="gap gap-5 sm:px-16">
+    <x-code-example class="gap gap-5 sm:px-16">
         @verbatim('docs')
             @php                                            // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
@@ -175,6 +175,6 @@ class extends Component {
                 </x-slot:append>
             </x-select>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 </div>

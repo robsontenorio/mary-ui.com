@@ -55,25 +55,25 @@ class extends Component {
         Livewire itself triggers real time validation for single file upload.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $file = $this->file;      // [tl! .docs-hide]
             @endphp                         {{-- [tl! .docs-hide] --}}
             <x-file wire:model="file" label="Receipt" hint="Only PDF" accept="application/pdf" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         You can use validation rule from Laravel.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             #[Rule('required|max:10')]
             public $file;
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Multiple files" size="text-xl" class="mt-14" />
 
@@ -82,26 +82,26 @@ class extends Component {
         So, remember to call <code>$this->validate()</code> before saving the files.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                               // [tl! .docs-hide]
                 $photos = $this->photos;      // [tl! .docs-hide]
             @endphp                           {{-- [tl! .docs-hide] --}}
             <x-file wire:model="photos" label="Documents" multiple />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Here is a validation trick for multiple file upload.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             #[Rule(['photos' => 'required'])]          // A separated rule to make it required
             #[Rule(['photos.*' => 'image|max:100'])]   // Notice `*` syntax for validate each file
             public array $photos = [];
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Image preview" size="text-xl" class="mt-14" />
 
@@ -118,7 +118,7 @@ class extends Component {
         <strong>Click</strong> on image to change it.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo = $this->photo;      // [tl! .docs-hide]
@@ -128,7 +128,7 @@ class extends Component {
                 <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Image Crop" size="text-xl" class="mt-14" />
 
@@ -141,7 +141,7 @@ class extends Component {
         First, add <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> library.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -150,13 +150,13 @@ class extends Component {
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Now you can use the <code>crop-after-change</code> property.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo2 = $this->photo2;      // [tl! .docs-hide]
@@ -166,13 +166,14 @@ class extends Component {
                 <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
-        You can set or override any <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
+        You can set or override any
+        <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             @php
                 $config = ['guides' => false];
@@ -182,22 +183,23 @@ class extends Component {
                 ...
             </x-file>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
-        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspect browser console to hack the CSS that works best for you.
+        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspect browser
+        console to hack the CSS that works best for you.
         We are using the following on this page.
     </p>
 
     {{--@formatter:off--}}
-    <x-code language="css" no-render>
+    <x-code-example language="css" no-render>
         @verbatim('docs')
             .cropper-point {
                 width: 10px !important;
                 height: 10px !important;
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Labels" size="text-xl" class="mt-14" />
@@ -206,7 +208,7 @@ class extends Component {
         Here are all default labels.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $photo5 = $this->photo5;      // [tl! .docs-hide]
@@ -223,5 +225,5 @@ class extends Component {
                 ...
             </x-file>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

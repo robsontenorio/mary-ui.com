@@ -19,9 +19,9 @@ class extends Component {
         // paragraphs
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             ...
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

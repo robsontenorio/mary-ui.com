@@ -117,7 +117,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save">
                 <x-input label="Name" wire:model="name" />
@@ -129,7 +129,7 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No `separator`" size="text-xl" class="mt-14" />
 
@@ -137,7 +137,7 @@ class extends Component {
         To avoid having the separator line above the actions slot, add <code>no-separator</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save" no-separator>
                 <x-input label="Name" wire:model="name" />
@@ -147,7 +147,7 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Custom error field" size="text-xl" class="mt-14" />
     <p>
@@ -155,7 +155,7 @@ class extends Component {
         <code>error-field</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save4">
                 {{-- Notice `error_field` --}}
@@ -166,14 +166,14 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             $this->addError('total_salary', 'This is a custom error message for total salary field.');
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Omit errors" size="text-xl" class="mt-14" />
@@ -181,7 +181,7 @@ class extends Component {
         If for some reason you want to omit the error message, you can use the <code>omit-error</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save2">
                 <x-input label="Address" wire:model="address" />
@@ -194,14 +194,15 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="First message only" size="text-xl" class="mt-14" />
     <p>
-        If you have multiple validation messages for the same filed and want to show only the first error message, you can use the <code>first-error-only</code> attribute.
+        If you have multiple validation messages for the same filed and want to show only the first error message,
+        you can use the <code>first-error-only</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save3">
                 <x-input label="Magic word 1" wire:model="magicWord1" />
@@ -214,17 +215,17 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             $this->validate([
                 'magicWord1' => 'starts_with:Hello|ends_with:world',
                 'magicWord2' => 'starts_with:Hello|ends_with:world',
             ]);
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Custom error style" size="text-xl" class="mt-14" />
@@ -232,7 +233,7 @@ class extends Component {
         You can customize the error message style by using the <code>error-class</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save5">
                 {{--  Custom CSS class. Remeber to configure Tailwind safelist --}}
@@ -243,7 +244,7 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Full error bag" size="text-xl" class="mt-14" />
     <p>
@@ -255,7 +256,7 @@ class extends Component {
         Currently, it <strong>does not work</strong> with multiple forms on same screen.
     </x-alert>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-form wire:submit="save6">
                 {{-- Full error bag --}}
@@ -270,5 +271,5 @@ class extends Component {
                 </x-slot:actions>
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

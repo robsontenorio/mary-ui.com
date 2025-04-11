@@ -21,7 +21,7 @@ new #[Title('Layout')] class extends Component {
         This layout has only a collapsible sidebar and <b>it is already on your project</b>.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             ...
 
@@ -88,11 +88,11 @@ new #[Title('Layout')] class extends Component {
                 <x-toast />
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="With Navbar" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             ...
 
@@ -164,5 +164,5 @@ new #[Title('Layout')] class extends Component {
                 <x-toast />
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

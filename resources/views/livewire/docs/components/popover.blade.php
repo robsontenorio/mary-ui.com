@@ -20,7 +20,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                        // [tl! .docs-hide]
                 $user = App\Models\User::first();       // [tl! .docs-hide]
@@ -35,7 +35,7 @@ class extends Component {
                 </x-slot:content>
             </x-popover>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Position and Offset" size="text-xl" class="mt-14" />
 
@@ -44,7 +44,7 @@ class extends Component {
         you can use same parameters described on its docs for <code>offset</code> and <code>position</code>.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-popover position="top-start" offset="20">
                 <x-slot:trigger>
@@ -55,11 +55,11 @@ class extends Component {
                 </x-slot:content>
             </x-popover>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Styling" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                                        // [tl! .docs-hide]
                 $user = App\Models\User::first();       // [tl! .docs-hide]
@@ -74,5 +74,5 @@ class extends Component {
                 </x-slot:content>
             </x-popover>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

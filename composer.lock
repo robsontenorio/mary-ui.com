@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62614d8fe35fc59e7631e1a91f9b7ffb",
+    "content-hash": "f64706de0061109bff8afcdb841b4c47",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4215,16 +4215,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "2.1.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "f8c694d481d0e138b93f421ccf6feb672183147a"
+                "reference": "e685ab121288024830e047644be46b5918e47db2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/f8c694d481d0e138b93f421ccf6feb672183147a",
-                "reference": "f8c694d481d0e138b93f421ccf6feb672183147a",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/e685ab121288024830e047644be46b5918e47db2",
+                "reference": "e685ab121288024830e047644be46b5918e47db2",
                 "shasum": ""
             },
             "require": {
@@ -4290,7 +4290,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/2.1.0"
+                "source": "https://github.com/robsontenorio/mary/tree/2.2.1"
             },
             "funding": [
                 {
@@ -4298,7 +4298,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-09T14:59:34+00:00"
+            "time": "2025-04-11T01:18:25+00:00"
         },
         {
             "name": "symfony/clock",

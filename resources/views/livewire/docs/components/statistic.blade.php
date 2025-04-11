@@ -13,7 +13,7 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Statistic" />
 
-    <x-code class="bg-base-200 grid md:grid-cols-4 gap-5">
+    <x-code-example class="bg-base-200 grid md:grid-cols-4 gap-5">
         @verbatim('docs')
             <x-stat
                 title="Messages"
@@ -45,5 +45,5 @@ class extends Component {
                 color="text-pink-500"
                 tooltip-right="Gosh!" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

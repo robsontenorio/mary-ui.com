@@ -19,7 +19,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             {{-- Cut top edge with `first` --}}
             <x-timeline-item title="Register" first />
@@ -34,11 +34,11 @@ class extends Component {
             {{-- Cut bottom edge with `last` --}}
             <x-timeline-item title="Shipment" pending last description="It is shiped :)" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Icons" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-timeline-item title="Order placed" first icon="o-map-pin" />
 
@@ -48,5 +48,5 @@ class extends Component {
 
             <x-timeline-item title="Delivered" pending last icon="o-gift" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

@@ -23,7 +23,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-collapse separator>
                 <x-slot:heading>
@@ -34,22 +34,22 @@ class extends Component {
                 </x-slot:content>
             </x-collapse>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Livewire" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-collapse wire:model="show" separator class="bg-base-200">
                 <x-slot:heading>Hey</x-slot:heading>
                 <x-slot:content>There!</x-slot:content>
             </x-collapse>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Style and alternative icon" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-collapse collapse-plus-minus>
                 <x-slot:heading class="bg-warning/20">
@@ -60,11 +60,11 @@ class extends Component {
                 </x-slot:content>
             </x-collapse>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="No icon" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-collapse no-icon>
                 <x-slot:heading>
@@ -75,7 +75,7 @@ class extends Component {
                 </x-slot:content>
             </x-collapse>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Accordion" size="text-xl" class="mt-14" />
 
@@ -83,7 +83,7 @@ class extends Component {
         You can group multiple <code>x-collapse</code> by wrapping it on a <code>x-accordion</code> component.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-accordion wire:model="group">
                 <x-collapse name="group1">
@@ -100,11 +100,11 @@ class extends Component {
                 </x-collapse>
             </x-accordion>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public string $group = 'group1';
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

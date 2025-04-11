@@ -145,7 +145,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -169,7 +169,7 @@ class extends Component {
                 hint="It has custom options"
                 single />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Select All" size="text-xl" class="mt-14" />
 
@@ -179,7 +179,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -195,7 +195,7 @@ class extends Component {
                 allow-all-text="Select all stuff"
                 remove-all-text="Delete all things" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Compact mode" size="text-xl" class="mt-14" />
 
@@ -205,7 +205,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -220,7 +220,7 @@ class extends Component {
                 compact
                 compact-text="stuff chosen" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <br>
 
@@ -228,7 +228,7 @@ class extends Component {
         You can combine <code>allow-all</code> and <code>compact</code>
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                              // [tl! .docs-hide]
                     $users = $this->users;   // [tl! .docs-hide]
@@ -240,20 +240,19 @@ class extends Component {
                 compact
                 allow-all />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Searchable (frontend)" size="text-xl" class="mt-14" />
 
     <p>
         If you judge you don't have a huge list of items, you can make it searchable offline on <strong>"frontend side"</strong>.
-        But, <strong>if you have a huge list</strong> it is a better idea to make it searchable on <strong>"server side"</strong>, otherwise you can face some slow down on
-        frontend.
-        See on next section.
+        But, <strong>if you have a huge list</strong> it is a better idea to make it searchable on <strong>"server side"</strong>,
+        otherwise you can face some slow down on frontend. See on the next section.
     </p>
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                               // [tl! .docs-hide]
                     $users = $this->users;                    // [tl! .docs-hide]
@@ -277,20 +276,19 @@ class extends Component {
                 clearable
                 searchable />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Searchable (server)" size="text-xl" class="mt-14" />
 
     <p>
-        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get fresh options from <strong>"server
-            side"</strong> while
-        typing.
+        When dealing with large options list use <code>searchable</code> parameter. By default, it calls <code>search()</code> method to get
+        fresh options from <strong>"server side"</strong> while typing.
         You can change the method's name by using <code>search-function</code> parameter.
     </p>
 
     <br>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             @php                                                                  // [tl! .docs-hide]
                     $usersSearchable = $this->usersSearchable;                    // [tl! .docs-hide]
@@ -315,15 +313,17 @@ class extends Component {
                 no-result-text="Ops! Nothing here ..."
                 searchable />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
-        You must also consider displaying pre-selected items on list, when it <strong>first renders</strong> and <strong>while searching</strong>.
-        There are many approaches to make it work, but here is an example for <strong>single search</strong> using <strong>Volt.</strong>
+        You must also consider displaying pre-selected items on list,
+        when it <strong>first renders</strong> and <strong>while searching</strong>.
+        There are many approaches to make it work, but here is an example for <strong>single search</strong> using
+        <strong>Volt.</strong>
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             new class extends Component {
 
@@ -354,7 +354,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -366,7 +366,7 @@ class extends Component {
         Another approach is to use <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
     </p>
 
-    <x-code class="sm:px-64">
+    <x-code-example class="sm:px-64">
         @verbatim('docs')
             @php                                                              // [tl! .docs-hide]
                 $usersSearchableMinChars = $this->usersSearchableMinChars;    // [tl! .docs-hide]
@@ -383,13 +383,13 @@ class extends Component {
                 single
                 searchable />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         You can pass any extra arbitrary search parameters like this.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- Notice `search-function` with extra arbitrary parameters --}}
             <x-choices
@@ -399,17 +399,17 @@ class extends Component {
                 search-function="searchExtra(123, 'thing')"
                 searchable />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <!-- @formatter:off -->
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
         public function search(string $value = '', int $extra1 = 0, string $extra2 = '')
         {
             // The first parameter is the default and comes from the search input.
         }
         @endverbatim
-    </x-code>
+    </x-code-example>
     <!-- @formatter:on -->
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
@@ -424,7 +424,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="sm:px-32">
+    <x-code-example class="sm:px-32">
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users; @endphp     <!-- [tl! .docs-hide] -->
@@ -448,7 +448,7 @@ class extends Component {
                 @endscope
             </x-choices>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <br>
@@ -457,7 +457,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="sm:px-32">
+    <x-code-example class="sm:px-32">
         @verbatim('docs')
             <div>                                       <!-- [tl! .docs-hide] -->
                 @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
@@ -473,7 +473,7 @@ class extends Component {
                 </x-slot:append>
             </x-choices>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Note about large numbers" size="text-xl" class="mt-14" />
@@ -487,7 +487,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public array $options = [
                 [
@@ -500,19 +500,19 @@ class extends Component {
                 ],
             ];
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         As workaround, define the <code>id</code> as a string and use <strong>values-as-string</strong> attribute instead.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-choices ... values-as-string />
             <x-choices-offline ... values-as-string />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Events" size="text-xl" class="mt-14" />
 
@@ -522,15 +522,15 @@ class extends Component {
     </p>
 
     <p>
-        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component. Because it is a custom event, you must
-        access the key(s) via the <code>detail.value</code> property on the event.
+        The payload contains a <strong>single key</strong> or an <strong>array of keys</strong>, depending on how you set the component.
+        Because it is a custom event, you must access the key(s) via the <code>detail.value</code> property on the event.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-choices ... @change-selection="console.log($event.detail.value)" />
             <x-choices-offline ... @change-selection="console.log($event.detail.value)" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

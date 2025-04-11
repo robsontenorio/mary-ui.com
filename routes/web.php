@@ -70,6 +70,7 @@ Volt::route('/docs/components/theme-toggle', 'docs.components.theme-toggle');
 Volt::route('/docs/components/datepicker', 'docs.components.datepicker');
 Volt::route('/docs/components/calendar', 'docs.components.calendar');
 Volt::route('/docs/components/chart', 'docs.components.chart');
+Volt::route('/docs/components/code', 'docs.components.code');
 Volt::route('/docs/components/diff', 'docs.components.diff');
 Volt::route('/docs/components/editor', 'docs.components.editor');
 Volt::route('/docs/components/image-gallery', 'docs.components.image-gallery');

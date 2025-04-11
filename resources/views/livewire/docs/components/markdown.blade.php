@@ -36,7 +36,7 @@ class extends Component {
 
     <x-anchor title="Setup" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -48,16 +48,16 @@ class extends Component {
                 <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         If you are using the <strong>local disk</strong> remember to run this.
     </p>
-    <x-code language="bash" no-render>
+    <x-code-example language="bash" no-render>
         @verbatim('docs')
             php artisan storage:link
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
@@ -66,11 +66,11 @@ class extends Component {
         On all examples we already have a random user logged in.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-markdown wire:model="text" label="Blog post" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Upload settings" size="text-xl" class="mt-14" />
 
@@ -79,11 +79,11 @@ class extends Component {
         You can change it like this.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-markdown ... disk="s3" folder="super/cool/images" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Customizing" size="text-xl" class="mt-14" />
 
@@ -91,7 +91,7 @@ class extends Component {
         You can add or override any setting provided by <strong>EasyMDE</strong>. Check its docs for more.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $config = [
@@ -103,13 +103,14 @@ class extends Component {
 
             <x-markdown wire:model="text2" :config="$config" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Preview style" size="text-xl" class="mt-14" />
 
     <p>
         Remember that Tailwind get rid of the basic styles of <code>H1, H2, H3</code> ...
-        So, you need to put it back on your <code>app.css</code> to make the <strong>preview</strong> and <strong>side-by-side</strong> buttons work nice.
+        So, you need to put it back on your <code>app.css</code> to make the
+        <strong>preview</strong> and <strong>side-by-side</strong> buttons work nice.
     </p>
 
     <p>
@@ -117,7 +118,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code language="css" no-render>
+    <x-code-example language="css" no-render>
         .EasyMDEContainer h1 {
             @apply text-4xl font-bold mb-5
         }
@@ -129,7 +130,7 @@ class extends Component {
         .EasyMDEContainer h3 {
             @apply text-lg font-bold mb-3
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Dark mode" size="text-xl" class="mt-14" />
@@ -143,7 +144,7 @@ class extends Component {
     </x-alert>
 
     {{--@formatter:off--}}
-    <x-code language="css" no-render>
+    <x-code-example language="css" no-render>
         @verbatim('docs')
         .EasyMDEContainer .CodeMirror {
             @apply bg-base-100 text-base-content
@@ -161,6 +162,6 @@ class extends Component {
             @apply bg-base-100 text-base-content
         }
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

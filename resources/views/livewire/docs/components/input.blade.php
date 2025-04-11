@@ -26,7 +26,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-input label="Name" wire:model="name" placeholder="Your name" icon="o-user" hint="Your full name" />
 
@@ -39,17 +39,17 @@ class extends Component {
             <span></span><!-- [tl! .docs-hide] -->
             <x-input label="Inline label" wire:model="name" placeholder="Hey, inline..." inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="States" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-input label="Disabled" value="It is disabled" disabled />
 
             <x-input label="Read only" value="Read only" readonly />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Password" size="text-xl" class="mt-14" />
 
@@ -57,7 +57,7 @@ class extends Component {
         All above attributes will work with the password component.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-password label="Toggle" hint="It toggles visibility" wire:model="password" clearable />
             <x-password label="Right toggle" wire:model="password" right />
@@ -65,11 +65,11 @@ class extends Component {
             <div></div> <!-- [tl! .docs-hide] -->
             <x-password label="Without toggle" wire:model="password" only-password inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Currency" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -78,20 +78,20 @@ class extends Component {
                 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-input label="Default money" wire:model="money1" prefix="USD" money />
 
             {{-- Notice that `locale` accepts any valid locale --}}
             <x-input label="Custom money" wire:model="money2" prefix="R$" locale="pt-BR" money />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 sm:px-16">
+    <x-code-example class="grid gap-5 sm:px-16">
         @verbatim('docs')
             @php                                                // [tl! .docs-hide]
                 $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]
@@ -110,5 +110,5 @@ class extends Component {
                 </x-slot:append>
             </x-input>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

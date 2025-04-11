@@ -335,7 +335,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             <span class="underline decoration-pink-500">Lists</span>
         </div>
 
-        <x-code side-by-side render-col-span="4" code-col-span="8">
+        <x-code-example side-by-side render-col-span="4" code-col-span="8">
             @verbatim('docs')
                 @php
                     $users = App\Models\User::take(3)->get();
@@ -349,7 +349,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </x-list-item>
                 @endforeach
             @endverbatim
-        </x-code>
+        </x-code-example>
     </div>
 
     <div class="px-5 lg:px-20 py-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
@@ -357,7 +357,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             <span class="underline decoration-pink-500">Multi selection</span>
         </div>
 
-        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
+        <x-code-example side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
                 @php                              // [tl! .docs-hide]
                         $users = $this->users;       // [tl! .docs-hide]
@@ -370,11 +370,11 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     hint="Search happens on server side"
                     searchable />
             @endverbatim
-        </x-code>
+        </x-code-example>
 
         <hr class="my-12 border-base-300" />
 
-        <x-code side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
+        <x-code-example side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
                 @php                                    // [tl! .docs-hide]
                         $cities = App\Models\City::all();   // [tl! .docs-hide]
@@ -387,7 +387,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     hint="Search happens on frontend side"
                     searchable />
             @endverbatim
-        </x-code>
+        </x-code-example>
     </div>
 
     <div class=" px-5 py-20">
@@ -395,7 +395,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             <span class="underline decoration-pink-500">Forms</span>
         </div>
 
-        <x-code side-by-side render-col-span="5" code-col-span="7">
+        <x-code-example side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
                 @php                                                // [tl! .docs-hide]
                     $cities = App\Models\City::take(3)->get();      // [tl! .docs-hide]
@@ -417,7 +417,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </x-slot:actions>
                 </x-form>
             @endverbatim
-        </x-code>
+        </x-code-example>
     </div>
 
     <div class="px-5 pt-10 pb-20 bg-gradient-to-r from-base-100 via-purple-50 to-base-100 dark:via-base-200">
@@ -425,7 +425,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
             <span class="underline decoration-pink-500">Dialogs</span>
         </div>
 
-        <x-code side-by-side invert render-col-span="3" code-col-span="9">
+        <x-code-example side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
                 @php                                    // [tl! .docs-hide]
                     $showDrawer = $this->showDrawer;    // [tl! .docs-hide]
@@ -440,11 +440,11 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </x-slot:actions>
                 </x-drawer>
             @endverbatim
-        </x-code>
+        </x-code-example>
 
         <hr class="my-12 border-base-300" />
 
-        <x-code side-by-side invert render-col-span="3" code-col-span="9">
+        <x-code-example side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
                 @php                                    // [tl! .docs-hide]
                     $myModal = $this->myModal;    // [tl! .docs-hide]
@@ -459,7 +459,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </x-slot:actions>
                 </x-modal>
             @endverbatim
-        </x-code>
+        </x-code-example>
     </div>
 
     <div class="px-5 py-20 rounded-box">
@@ -468,7 +468,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
 
         {{--@formatter:off--}}
-        <x-code side-by-side render-col-span="5" code-col-span="7" class="grid gap-5">
+        <x-code-example side-by-side render-col-span="5" code-col-span="7" class="grid gap-5">
 
             @verbatim('docs')
                 @php
@@ -484,7 +484,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
                 <x-table :rows="$users" :headers="$headers" striped />
             @endverbatim
-        </x-code>
+        </x-code-example>
         {{--@formatter:on--}}
     </div>
 
@@ -494,7 +494,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         </div>
 
         {{--@formatter:off--}}
-        <x-code>
+        <x-code-example>
             @verbatim('docs')
                 @php
                     use App\Models\User; // [tl! .docs-hide]
@@ -543,7 +543,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     @endscope
                 </x-table>
             @endverbatim
-        </x-code>
+        </x-code-example>
         {{--@formatter:on--}}
     </div>
 

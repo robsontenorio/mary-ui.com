@@ -30,7 +30,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
@@ -41,7 +41,7 @@ class extends Component {
                 <x-spotlight />  <!-- [tl! highlight] -->
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -49,7 +49,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             namespace App\Support;
 
@@ -77,7 +77,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>

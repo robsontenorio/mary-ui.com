@@ -39,7 +39,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Illuminate\Support\Facades\Route;
             use Livewire\Volt\Volt;
@@ -66,7 +66,7 @@ class extends Component {
             });
 
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Template" size="text-xl" class="mt-14" />
@@ -75,7 +75,7 @@ class extends Component {
         Create an new layout at <code>resources/views/components/layouts/empty.blade.php</code>. We are going to use this layout for the login and registration pages.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <!DOCTYPE html>
             <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -96,7 +96,7 @@ class extends Component {
             </body>
             </html>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Login page" size="text-xl" class="mt-14" />
 
@@ -104,12 +104,12 @@ class extends Component {
         Create the login component.
     </p>
 
-    <x-code no-render language="zsh">
+    <x-code-example no-render language="zsh">
         php artisan make:volt login --class
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Livewire\Attributes\Layout;
             use Livewire\Attributes\Rule;
@@ -149,10 +149,10 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div class="md:w-96 mx-auto mt-20">
                 <div class="mb-10">
@@ -170,7 +170,7 @@ class extends Component {
                 </x-form>
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         <x-icon name="o-bolt" class="text-warning" />
@@ -188,7 +188,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Livewire\Volt\Volt;
 
@@ -201,19 +201,19 @@ class extends Component {
             });
 
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         Create the registration form.
     </p>
 
-    <x-code no-render language="zsh">
+    <x-code-example no-render language="zsh">
         php artisan make:volt register --class
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use App\Models\User;
             use Livewire\Attributes\Layout;
@@ -264,10 +264,10 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div class="md:w-96 mx-auto mt-20">
                 <div class="mb-10">
@@ -287,7 +287,7 @@ class extends Component {
                 </x-form>
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         <x-icon name="o-bolt" class="text-warning" />

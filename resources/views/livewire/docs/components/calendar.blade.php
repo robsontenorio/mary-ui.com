@@ -25,7 +25,7 @@ class extends Component {
 
     <x-anchor title="Install" size="text-xl" class="mt-14" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -35,7 +35,7 @@ class extends Component {
                 <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         In the following examples we use dynamic dates to keep this example udpated to current month.
@@ -44,7 +44,7 @@ class extends Component {
 
     <x-anchor title="Single month" size="text-xl" class="mt-14" />
 
-    <x-code class="bg-base-200 grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <x-code-example class="bg-base-200 grid grid-cols-1 lg:grid-cols-2 gap-5">
         @verbatim('docs')
             @php
                 $events = [
@@ -77,11 +77,11 @@ class extends Component {
             {{-- Shortcuts config to `locale`, `sunday-start` and weekend-highlight --}}
             <x-calendar locale="pt-BR" weekend-highlight sunday-start />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Multiple months" size="text-xl" class="mt-14" />
 
-    <x-code class="bg-base-200">
+    <x-code-example class="bg-base-200">
         @verbatim('docs')
             @php
                 $events = [
@@ -99,5 +99,5 @@ class extends Component {
 
             <x-calendar :events="$events" months="3" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

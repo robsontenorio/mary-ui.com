@@ -23,7 +23,7 @@ class extends Component {
 
     <x-anchor title="Header" />
 
-    <x-code class="grid gap-5">
+    <x-code-example class="grid gap-5">
         @verbatim('docs')
             <x-header title="Default size" subtitle="With subtitle and separator" separator />
 
@@ -41,7 +41,7 @@ class extends Component {
                 </x-slot:actions>
             </x-header>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Progress indicator" size="text-xl" class="mt-14" />
 
@@ -49,7 +49,7 @@ class extends Component {
         Notice it only works combined with the <code>separator</code> attribute.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             {{--  This fires when you call any action on the page  --}}
             <x-header title="Always fires" separator progress-indicator />
@@ -61,5 +61,5 @@ class extends Component {
 
             <x-button label="Save action" wire:click="save" class="btn-warning" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

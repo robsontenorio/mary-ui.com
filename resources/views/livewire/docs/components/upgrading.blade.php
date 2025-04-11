@@ -41,26 +41,26 @@ new #[Title('Upgrading')] class extends Component {
 
             <p>Upgrade to Laravel 12 (optional).</p>
 
-            <x-code no-render language="bash">
+            <x-code-example no-render language="bash">
                 @verbatim('docs')
                     # It is a good time to upgrade all the things.
                 @endverbatim
-            </x-code>
+            </x-code-example>
 
             <p>Install maryUI v2.</p>
 
-            <x-code no-render language="bash">
+            <x-code-example no-render language="bash">
                 @verbatim('docs')
                     composer require robsontenorio/mary:^2.0
 
                     # Clear the view cache
                     php artisan view:clear
                 @endverbatim
-            </x-code>
+            </x-code-example>
 
             <p>Adjust your JS dependencies.</p>
 
-            <x-code no-render language="bash">
+            <x-code-example no-render language="bash">
                 @verbatim('docs')
                     # Remove `tailwind.config.js` and `postcss.config.js` from your project.
                     rm tailwind.config.js postcss.config.js
@@ -71,12 +71,12 @@ new #[Title('Upgrading')] class extends Component {
                     # Update and add new dependencies
                     yarn add --dev daisyui tailwindcss @tailwindcss/vite laravel-vite-plugin vite
                 @endverbatim
-            </x-code>
+            </x-code-example>
 
             <p>Add the following lines to your <code>vite.config.js</code> file.</p>
 
             <!-- @formatter:off -->
-            <x-code no-render language="javascript">
+            <x-code-example no-render language="javascript">
                 @verbatim('docs')
                     import {defineConfig} from 'vite';
                     import laravel from 'laravel-vite-plugin';
@@ -90,13 +90,13 @@ new #[Title('Upgrading')] class extends Component {
                     ]
 
                 @endverbatim
-            </x-code>
+            </x-code-example>
             <!-- @formatter:on -->
 
             <p>Edit the top of your <code>app.css</code> file to look like this. Remember this is the <b>Tailwind 4 preferred setup</b>, not daisyUI or maryUI.</p>
 
             <!-- @formatter:off -->
-            <x-code no-render language="blade">
+            <x-code-example no-render language="blade">
                 @verbatim('docs')
                 /* Remove these and any other `@tailwind` directives if you have it */
                 @tailwind base;             <!-- [tl! remove] -->
@@ -128,7 +128,7 @@ new #[Title('Upgrading')] class extends Component {
                 /* Your styles goes here ... */
                 /* ... */
                 @endverbatim
-            </x-code>
+            </x-code-example>
             <!-- @formatter:on -->
         </div>
     </div>
@@ -167,7 +167,7 @@ new #[Title('Upgrading')] class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         @verbatim('docs')
             # There is no default border color anymore
             <hr/>
@@ -180,7 +180,7 @@ new #[Title('Upgrading')] class extends Component {
                 @apply border-t border-t-base-content/10
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:one--}}
 
     <x-anchor title="daisyUI 5" size="text-lg" class="!mb-5 mt-10" />
@@ -195,12 +195,12 @@ new #[Title('Upgrading')] class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="html">
+    <x-code-example no-render language="html">
         @verbatim('docs')
             <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200"> <!-- [tl! remove] -->
             <body class="min-h-screen font-sans antialiased bg-base-200"> <!-- [tl! add] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 
     <x-anchor title="Theme Toggle" size="text-lg" class="!mb-5 mt-10" />
@@ -209,7 +209,7 @@ new #[Title('Upgrading')] class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="sass">
+    <x-code-example no-render language="sass">
         @verbatim('docs')
             /* daisyUI */
             @plugin "daisyui" {
@@ -219,7 +219,7 @@ new #[Title('Upgrading')] class extends Component {
             /* Remeber to add the dark variant theme support */
             @custom-variant dark (&:where(.dark, .dark *));
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="All input components" size="text-lg" class="!mb-5 mt-10" />
@@ -234,7 +234,7 @@ new #[Title('Upgrading')] class extends Component {
     </x-alert>
 
     {{--@formatter:off--}}
-    <x-code no-render class="grid lg:grid-cols-2 gap-8">
+    <x-code-example no-render class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
             <div class="grid gap-5 bg-base-200/80 rounded p-8"> <!-- [tl! .docs-hide] -->
             {{-- Default --}}
@@ -256,18 +256,18 @@ new #[Title('Upgrading')] class extends Component {
             And so on  ...
             </div> <!-- [tl! .docs-hide] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>If you previously have override the inputs <code>hint</code> and <code>error</code> classes, these are the new defaults from daisyUI.</p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public ?string $hintClass = 'fieldset-label',
             public ?string $errorClass = 'text-error',
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Radio vs Group" size="text-lg" class="!mb-5 mt-10" />
@@ -278,7 +278,7 @@ new #[Title('Upgrading')] class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code class="grid lg:grid-cols-2 gap-12 sm:px-24">
+    <x-code-example class="grid lg:grid-cols-2 gap-12 sm:px-24">
     @verbatim('docs')
         @php                                            // [tl! .docs-hide]
             $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
@@ -287,6 +287,6 @@ new #[Title('Upgrading')] class extends Component {
 
         <x-group label="Group" :options="$users" wire:model="user" />
     @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 </div>

@@ -24,7 +24,7 @@ class extends Component {
         On small screens, it automatically hides all intermediate items.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $breadcrumbs = [
@@ -36,11 +36,11 @@ class extends Component {
 
             <x-breadcrumbs :items="$breadcrumbs" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Custom separator, icons & links" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             @php
                 $breadcrumbs = [
@@ -63,11 +63,11 @@ class extends Component {
             <x-breadcrumbs :items="$breadcrumbs" separator="o-slash" />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Tooltip & customization" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $breadcrumbs = [
@@ -101,5 +101,5 @@ class extends Component {
                 link-item-class="text-sm font-bold"
             />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

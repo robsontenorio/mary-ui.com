@@ -35,7 +35,7 @@ class extends Component {
         This component uses the native OS color picker.
     </p>
 
-    <x-code class="grid gap-5 sm:px-64">
+    <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
             <x-colorpicker wire:model="color1" label="Pick a color" hint="A nice color" />
 
@@ -46,5 +46,5 @@ class extends Component {
             <span></span> <!-- [tl! .docs-hide] -->
             <x-colorpicker wire:model="color4" label="Color" placeholder="Inline example" inline />
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

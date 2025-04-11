@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Code extends Component
+class CodeExample extends Component
 {
     public function __construct(
         public string $language = 'blade',

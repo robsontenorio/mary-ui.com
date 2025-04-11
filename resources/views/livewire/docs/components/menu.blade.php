@@ -21,7 +21,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-item title="Home" icon="o-home" />
@@ -29,11 +29,11 @@ class extends Component {
                 <x-menu-item title="My settings" icon="o-bolt" />
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Customising" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-item title="Home" icon="o-home" class="text-secondary" icon-classes="text-secondary" />
@@ -41,11 +41,11 @@ class extends Component {
                 <x-menu-item title="My settings" icon="o-bolt" badge="new" badge-classes="float-right" />
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Links" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10">
                 {{-- Default --}}
@@ -58,11 +58,11 @@ class extends Component {
                 <x-menu-item title="Internal without wire:navigate" icon="o-power" link="/docs/components/menu" no-wire-navigate />
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Separator and Sub-menus" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-item title="Hello" />
@@ -80,13 +80,13 @@ class extends Component {
                 <x-menu-item title="Wifi" icon="o-wifi" />
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         You can manually force the submenu keep open.
     </p>
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-sub title="Home" icon="o-home">
@@ -101,14 +101,14 @@ class extends Component {
                 </x-menu-sub>
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Enabled state" size="text-xl" class="mt-14" />
     <p>
         You can control the visibility of menus with the <code>enabled</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10">
                 <x-menu-item title="Users" icon="o-user" />
@@ -123,7 +123,7 @@ class extends Component {
                 </x-menu-sub>
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Manual active state" size="text-xl" class="mt-14" />
 
@@ -131,7 +131,7 @@ class extends Component {
         You can manually define the active menu item by placing <code>active</code> attribute.
     </p>
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10">
                 <x-menu-item title="Hey" />
@@ -142,13 +142,13 @@ class extends Component {
                 <x-menu-item title="You" />
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Automatic active state" size="text-xl" class="mt-14" />
 
     <p>
-        You can automatically activate a menu item when current route matches the base <code>link</code> and its nested route variations by using the <code>activate-by-route</code>
-        attribute.
+        You can automatically activate a menu item when current route matches the base <code>link</code>
+        and its nested route variations by using the <code>activate-by-route</code> attribute.
     </p>
     <p>
         For example, <code>link="/users"</code> will activate same menu item when you deep navigate for these routes:
@@ -164,7 +164,7 @@ class extends Component {
 
     <br>
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             {{-- Notice `activate-by-route` --}}
             <x-menu activate-by-route class="border border-base-content/10">
@@ -175,13 +175,13 @@ class extends Component {
             </x-menu>
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         If you use Laravel named routes, combine with the <code>route</code> param that matches the named route.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-menu activate-by-route>
                 <x-menu-sub title="Attendance">
@@ -189,14 +189,15 @@ class extends Component {
                     <x-menu-item title="View" link="{{ route('attendance.list') }}" route="attendance.list" />
                 </x-menu-sub>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
-        If for some reason you need to use "conflicting" routes on main menu. Use the attribute <code>exact</code> do handle it properly.
+        If for some reason you need to use "conflicting" routes on main menu.
+        Use the attribute <code>exact</code> to handle it properly.
         Although it is not recommended to have this kind of route on the main menu, you have this option.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-menu activate-by-route>
                 {{-- Notice `exact` --}}
@@ -204,15 +205,16 @@ class extends Component {
                 <x-menu-item title="Something 101" link="/something/101" exact />
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Custom style" size="text-xl" class="mt-14" />
 
     <p>
-        You can define any style for the current active menu with <code>active-bg-color</code>. Also, for each menu item you can freely place any CSS.
+        You can define any style for the current active menu with <code>active-bg-color</code>.
+        Also, for each menu item you can freely place any CSS.
     </p>
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             {{-- We use this style on maryUI docs --}}
             <x-menu activate-by-route active-bg-color="font-black" class="border border-base-content/10 !w-64">
@@ -227,11 +229,11 @@ class extends Component {
                 </x-menu-sub>
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
-    <x-code class="grid gap-5 justify-center">
+    <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10 !w-64">
                 <x-menu-item>
@@ -239,7 +241,7 @@ class extends Component {
                 </x-menu-item>
             </x-menu>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Cloud providers" size="text-xl" class="mt-14" />
 
@@ -253,7 +255,7 @@ class extends Component {
     </x-alert>
 
     {{--@formatter:off--}}
-    <x-code language="php" no-render>
+    <x-code-example language="php" no-render>
         @verbatim('docs')
             // bootstrap/app.php
 
@@ -264,6 +266,6 @@ class extends Component {
                 })
                 ...
     @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 </div>

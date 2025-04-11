@@ -42,14 +42,14 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
                 <x-spotlight />  <!-- [tl! highlight .animate-bounce] -->
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -57,7 +57,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             namespace App\Support;
 
@@ -70,7 +70,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -78,7 +78,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             [
                 'name' => 'Mary',                           // Any string
@@ -87,7 +87,7 @@ class extends Component {
                 'avatar' => 'http://...'                    // Any image url
             ]
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -95,14 +95,14 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             [
                 // ...
                 'icon' => Blade::render("<x-icon name='o-bolt' />")
             ]
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -120,7 +120,7 @@ class extends Component {
     <x-button label="Search" icon="o-magnifying-glass" @click.stop="$dispatch('mary-search-open')" />
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- Place an empty `x-data` on body--}}
             <body ... x-data>
@@ -137,7 +137,7 @@ class extends Component {
                 <x-spotlight />
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Security" size="text-xl" class="mt-14" />
@@ -154,7 +154,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
         namespace App\Support;
 
@@ -213,7 +213,7 @@ class extends Component {
             }
         }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Options" size="text-xl" class="mt-14" />
@@ -223,7 +223,7 @@ class extends Component {
         <a href="https://livewire.laravel.com/docs/actions#listening-for-specific-keys">by Livewire</a>.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-spotlight
                 shortcut="meta.slash"
@@ -231,7 +231,7 @@ class extends Component {
                 no-results-text="Ops! Nothing here."
                 url="/custom/search/url/here" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Changing the search class" size="text-xl" class="mt-14" />
 
@@ -239,12 +239,12 @@ class extends Component {
         If for some reason you want to change the search class, publish the config file.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan vendor:publish --tag mary.config
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             // ...
             'components' => [
@@ -253,7 +253,7 @@ class extends Component {
                 ]
             ]
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
@@ -266,7 +266,7 @@ class extends Component {
         You can do it in many ways. But, in this example we built it with Alpine.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-spotlight>
                 <div
@@ -279,14 +279,14 @@ class extends Component {
                 </div>
             </x-spotlight>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Then, adjust your <code>search</code> method to handle those new request parameters.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             class Spotlight
             {
@@ -295,7 +295,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
 </div>

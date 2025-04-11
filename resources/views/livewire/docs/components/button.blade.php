@@ -26,7 +26,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code class="flex flex-wrap gap-3 items-baseline">
+    <x-code-example class="flex flex-wrap gap-3 items-baseline">
         @verbatim('docs')
             {{--  DEFAULT --}}
             <x-button label="Hi!" />
@@ -51,24 +51,24 @@ class extends Component {
             <x-button icon="o-user" class="btn-square" />
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Icons" size="text-xl" class="mt-14" />
 
-    <x-code class="flex flex-wrap gap-3">
+    <x-code-example class="flex flex-wrap gap-3">
         @verbatim('docs')
             <x-button label="Hello" icon="o-check" />
 
             <x-button label="There" icon-right="o-x-circle" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Tooltips" size="text-xl" class="mt-14" />
     <p>
         Tooltips are disabled on small screens.
     </p>
 
-    <x-code class="flex flex-wrap gap-3">
+    <x-code-example class="flex flex-wrap gap-3">
         @verbatim('docs')
             <x-button label="Up" tooltip="Mary" />
 
@@ -78,38 +78,39 @@ class extends Component {
 
             <x-button label="Right" tooltip-right="Amanda" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Badges" size="text-xl" class="mt-14" />
     <br>
 
-    <x-code class="flex flex-wrap gap-3">
+    <x-code-example class="flex flex-wrap gap-3">
         @verbatim('docs')
             <x-button label="Hello" badge="12" />
 
             <x-button label="There" badge="8" badge-classes="badge-warning" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Responsive" size="text-xl" class="mt-14" />
     <p>
         On small screens the label is hidden. Icon and badge are kept.
     </p>
 
-    <x-code class="flex flex-wrap gap-3">
+    <x-code-example class="flex flex-wrap gap-3">
         @verbatim('docs')
             <x-button label="There" icon="o-home" badge="12" responsive />
 
             <x-button label="There" icon="o-check" responsive />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Links" size="text-xl" class="mt-14" />
     <p>
-        You can make a button act as a link by placing a <code>link</code> property. You can use all the options described above for ordinary buttons.
+        You can make a button act as a link by placing a <code>link</code> property.
+        You can use all the options described above for ordinary buttons.
     </p>
 
-    <x-code class="flex flex-wrap gap-3">
+    <x-code-example class="flex flex-wrap gap-3">
         @verbatim('docs')
             {{--  It uses `wire:navigate` --}}
             <x-button label="Go to installation" link="/docs/installation" class="btn-ghost" />
@@ -120,11 +121,11 @@ class extends Component {
             {{--  Notice `external` for external links  --}}
             <x-button label="Google" link="https://google.com" external icon="o-link" tooltip="Go away!" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Spinners" size="text-xl" class="mt-14" />
 
-    <x-code class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <x-code-example class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         @verbatim('docs')
             {{-- It automatically targets to self `wire:click` action  --}}
             <x-button label="Self target" wire:click="save" icon-right="o-lock-closed" spinner />
@@ -141,6 +142,6 @@ class extends Component {
             </x-form>
 
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

@@ -22,11 +22,11 @@ class extends Component {
 
     <x-anchor title="Default" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-pin wire:model="pin1" size="3" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Numeric" size="text-xl" class="mt-14" />
 
@@ -34,23 +34,23 @@ class extends Component {
         The <code>numeric</code> property modifies the behavior to accept only numbers.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-pin wire:model="pin2" size="4" numeric />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Security" size="text-xl" class="mt-14" />
 
     <p>You can use any compatible <code>text-secure</code> HTML symbol.</p>
 
-    <x-code class="grid gap-5">
+    <x-code-example class="grid gap-5">
         @verbatim('docs')
             <x-pin wire:model="pin1" size="3" hide />
             <x-pin wire:model="pin1" size="3" hide hide-type="circle" />
             <x-pin wire:model="pin1" size="3" hide hide-type="square" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Events" size="text-xl" class="mt-14" />
 
@@ -58,7 +58,7 @@ class extends Component {
         The <code>@completed</code> and <code>@incomplete</code> events are triggered respectively when the pin is completed or is incomplete.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-pin wire:model="pin3" size="5" @completed="$wire.show = true" @incomplete="$wire.show = false" />
 
@@ -68,5 +68,5 @@ class extends Component {
                 </x-alert>
             </template>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>

@@ -24,11 +24,11 @@ class extends Component {
     Let's create some new Volt components by using the <code>class</code> syntax.
 
     {{--@formatter:off--}}
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan make:volt index --class             # Home
         php artisan make:volt users/create --class      # Create
         php artisan make:volt users/edit --class        # Edit
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -36,13 +36,13 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         Volt::route('/', 'users.index'); // [tl! remove]
         Volt::route('/', 'index');                          // Home [tl! add]
         Volt::route('/users', 'users.index');               // User (list) [tl! add]
         Volt::route('/users/create', 'users.create');       // User (create) [tl! add]
         Volt::route('/users/{user}/edit', 'users.edit');    // User (edit) [tl! add]
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -50,7 +50,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             // resources/views/components/layouts/app.blade.php
 
@@ -58,7 +58,7 @@ class extends Component {
             <x-menu-item title="Home" icon="o-sparkles" link="/" /> <!-- [tl! add] -->
             <x-menu-item title="Users" icon="o-users" link="/users" /> <!-- [tl! add] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-button label="Menu docs" link="/docs/components/menu" icon="o-arrow-up-right" external class="btn-sm !no-underline" />
@@ -84,7 +84,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- livewire/users/index.blade.php --}}
             <x-table ... link="users/{id}/edit">
@@ -92,7 +92,7 @@ class extends Component {
             {{-- You could pass any parameter based on model columns' name --}}
             <x-table ... link="users/{id}/edit?name={name}&city={city.name}">
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -105,7 +105,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use App\Models\User; // [tl! highlight:1]
             use Mary\Traits\Toast;
@@ -118,25 +118,25 @@ class extends Component {
                 public User $user;
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
-        Let's add an <code>x-header</code> in the blade section to test if the User parameter is working. And It will work because of the Laravel route binding mechanism for
-        models.
+        Let's add an <code>x-header</code> in the blade section to test if the User parameter is working.
+        And It will work because of the Laravel route binding mechanism for models.
     </p>
 
     <img src="/bootcamp/04-aa.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div>
                 // <!-- [tl! remove] -->
                 <x-header title="Update {{ $user->name }}" separator /> <!-- [tl! add] -->
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -145,7 +145,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Livewire\Attributes\Rule; //[tl! highlight:1]
             use App\Models\Country;
@@ -175,7 +175,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -183,7 +183,7 @@ class extends Component {
         You will discover in the docs that most of the components have a set of available properties and slots that will make things easier for you.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div>
                 <x-header title="Update {{ $user->name }}" separator />
@@ -202,7 +202,7 @@ class extends Component {
                 </x-form>
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Check in the browser if it is working... <strong>and if the form is not filled.</strong>
@@ -216,14 +216,14 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function mount(): void
             {
                 $this->fill($this->user);
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -232,7 +232,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function save(): void
             {
@@ -246,7 +246,7 @@ class extends Component {
                 $this->success('User updated with success.', redirectTo: '/users');
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="File component" size="text-xl" class="mt-14" />
@@ -267,16 +267,17 @@ class extends Component {
         In order to upload files with Laravel remember you need to create a storage link to make the local disk available.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan storage:link
-    </x-code>
+    </x-code-example>
 
     <p>
-        Add a new <code>$photo</code> property to store the temporary file upload and use the <code>WithFileUploads</code> trait from Livewire itself, as described in its docs.
+        Add a new <code>$photo</code> property to store the temporary file upload and use the <code>WithFileUploads</code>
+        trait from Livewire itself, as described in its docs.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Livewire\WithFileUploads; // [tl! highlight]
 
@@ -289,14 +290,15 @@ class extends Component {
                 public $photo;
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
-        Now, let's add the cool <code>x-file</code> component. In this case, we are using its default slot to display an image instead of the default browser's file input field.
+        Now, let's add the cool <code>x-file</code> component.
+        In this case, we are using its default slot to display an image instead of the default browser's file input field.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-form wire:submit="save">
                 <x-file label="Avatar" wire:model="photo" accept="image/png, image/jpeg"> <!-- [tl! highlight:2] -->
@@ -307,7 +309,7 @@ class extends Component {
                 ...
             </x-form>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         As you can see above, we display a generic image as a placeholder if the user doesn't have an avatar.
@@ -317,11 +319,12 @@ class extends Component {
     <img src="/bootcamp/04-hh.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
-        If you select an image and hit "Save" <strong>of course the image won't be uploaded.</strong> There are certainly many ways to do it, but here is a way to get started.
+        If you select an image and hit "Save" <strong>of course the image won't be uploaded.</strong>
+        There are certainly many ways to do it, but here is a way to get started.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
         public function save()
         {
@@ -338,7 +341,7 @@ class extends Component {
             $this->success('User updated.', redirectTo: '/users');
         }
     @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -355,7 +358,7 @@ class extends Component {
         First, add Cropper.js.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{--  /resources/views/components/layouts/app.blade.php --}}
 
@@ -366,29 +369,29 @@ class extends Component {
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Then you can use the <code>crop-after-change</code> property <strong>and you are done!</strong>
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-file ... crop-after-change>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Better layout" size="text-xl" class="mt-14" />
 
     <p>
-        That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty trick we use on all maryUI
-        demos.
+        That previous form we built looks a bit ugly because all the default components use the full width available on the screen. Here is a dirty
+        trick we use on all maryUI demos.
         Just place a nice image on the right side.
     </p>
 
     <img src="/bootcamp/04-b.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div>
                 <x-header title="Update {{ $user->name }}" separator />
@@ -410,7 +413,7 @@ class extends Component {
                 </div>
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Choices component" size="text-xl" class="mt-14" />
 
@@ -419,8 +422,8 @@ class extends Component {
     <img src="/bootcamp/04-i.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
-        This component is intended to be used for building complex selection interfaces for single and multiple values. It also supports a frontend or server values
-        <strong>search</strong>.
+        This component is intended to be used for building complex selection interfaces for single and multiple values.
+        It also supports a frontend or server values <strong>search</strong>.
     </p>
 
     <p>
@@ -439,7 +442,7 @@ class extends Component {
     </ul>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use App\Models\Language; //[tl! highlight]
             ...
@@ -481,14 +484,14 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         On blade section we will use the <code>x-choices-offline</code> component variation to easily implement a multi selection feature.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-select label="Country" ... />
 
@@ -499,7 +502,7 @@ class extends Component {
                 :options="$languages"
                 searchable />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Pro tip: for larger lists use the <code>x-choices</code> component variation.
@@ -517,11 +520,11 @@ class extends Component {
     </p>
 
     <p>
-        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url below. Also remember to add your local address on the allowed
-        domains list.
+        Create an account on the TinyMCE website and replace <code>YOUR-KEY-HERE</code> with your key in the url below.
+        Also remember to add your local address on the allowed domains list.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{--  /resources/views/components/layouts/app.blade.php --}}
 
@@ -531,25 +534,25 @@ class extends Component {
                 <script src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         If you don't want to rely on cloud setup, just download TinyMCE SDK and self-host the source code.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- Check TinyMCE dos for self-hosted version --}}
             <script src="/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Add a <code>$bio</code> property in the component, since we added the <code>users.bio</code> column during the Bootcamp setup.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             new class extends Component {
                 ...
@@ -559,19 +562,19 @@ class extends Component {
                 ...
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         And easily add the <code>x-editor</code> component.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-choices-offline ... />
             <x-editor wire:model="bio" label="Biography" hint="The great biography" /> {{-- [tl! highlight]--}}
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Uploading images only works for <strong>authenticated users</strong> on your app. We will implement it on last section of the Bootcamp.
@@ -580,13 +583,14 @@ class extends Component {
     <x-anchor title="Better layout (2)" size="text-xl" class="mt-14" />
 
     <p>
-        If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes, like the example below, for clear group related information.
+        If you have a massive amount of fields, another trick is to create sections using Tailwind grid classes,
+        like the example below, for clear group related information.
         This is just another alternative, so use the one that works best for you.
     </p>
 
     <img src="/bootcamp/04-e.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <div>
                 <x-header title="Update {{ $user->name }}" separator />
@@ -620,7 +624,7 @@ class extends Component {
                 </x-form>
             </div>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Display the avatar on Table component" size="text-xl" class="mt-14" />
 
@@ -633,19 +637,19 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             ['key' => 'avatar', 'label' => '', 'class' => 'w-1'], // [tl! add]
             ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Now, let's customize the table rows with the special <code>&#64;scope</code> directive. You can place anything here, check Table docs for more.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-table ... >
                 @scope('cell_avatar', $user)                                                    <!-- [tl! highlight:2] -->
@@ -653,7 +657,7 @@ class extends Component {
                 @endscope
             </x-table>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Challenge" size="text-xl" class="mt-14" />
@@ -668,14 +672,14 @@ class extends Component {
 
     <img src="/bootcamp/04-d.png?new=2025" class="rounded-lg border border-base-300 border-dashed shadow" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-slot:actions>
                 <x-button label="Filters" ... />
                 <x-button label="Create" link="/users/create" responsive icon="o-plus" class="btn-primary" />   <!-- [tl! highlight] -->
             </x-slot:actions>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Before proceeding, we recommend that you make a local commit to keep track of what is going on.

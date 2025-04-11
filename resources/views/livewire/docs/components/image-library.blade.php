@@ -46,7 +46,7 @@ class extends Component {
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
     {{--@formatter:off--}}
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $files = $this->files;      // [tl! .docs-hide]
@@ -60,7 +60,7 @@ class extends Component {
                 label="Product images"
                 hint="Max 100Kb" />
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Setup" size="text-xl" class="mt-14" />
@@ -70,7 +70,7 @@ class extends Component {
         <a href="https://sortablejs.github.io/Sortable/" target="_blank">Sortable.js</a>.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -82,29 +82,29 @@ class extends Component {
                 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Add a new <code>json</code> column on your migration files to represent the image library metadata.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         // Users table migration
         $table->json('library')->nullable();
-    </x-code>
+    </x-code-example>
 
     <p>
         Cast that column as <code>AsCollection</code>.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         // User model
         protected $casts = [
             ...
             'library' => AsCollection::class,
         ];
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
@@ -114,7 +114,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Livewire\WithFileUploads;
             use Mary\Traits\WithMediaSync;
@@ -157,12 +157,13 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
     <x-anchor title="S3 storage" size="text-xl" class="mt-14" />
 
     <p>
-        Make sure to proper configure <strong>CDN CORS</strong> on your S3 provider, by listing your local and production environment addresses. Otherwise, cropper won't work.
+        Make sure to proper configure <strong>CDN CORS</strong> on your S3 provider, by listing your local and production environment addresses.
+        Otherwise, cropper won't work.
     </p>
 
     <x-anchor title="Sync options" size="text-xl" class="mt-14" />
@@ -173,7 +174,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             $this->syncMedia(
                 model: $this->user,         // A model that has an image library
@@ -185,7 +186,7 @@ class extends Component {
                 disk: 'public'              // Storage disk. Also works with 's3'
             );
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Labels" size="text-xl" class="mt-14" />
@@ -194,19 +195,19 @@ class extends Component {
         Here are all default labels.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-image-library
-                    ...
-                    change-text="Change"
-                    crop-text="Crop"
-                    remove-text="Remove"
-                    crop-title-text="Crop image"
-                    crop-cancel-text="Cancel"
-                    crop-save-text="Crop"
-                    add-files-text="Add images" />
+                ...
+                change-text="Change"
+                crop-text="Crop"
+                remove-text="Remove"
+                crop-title-text="Crop image"
+                crop-cancel-text="Cancel"
+                crop-save-text="Crop"
+                add-files-text="Add images" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Cropper settings" size="text-xl" class="mt-14" />
 
@@ -214,7 +215,7 @@ class extends Component {
         You can set or override any <a href="https://fengyuanchen.github.io/cropperjs/" target="_blank">Cropper.js</a> option.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             @php
                 $config = [ 'guides' => false ];
@@ -222,22 +223,23 @@ class extends Component {
 
             <x-image-library ... :crop-config="$config" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
-        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS, just inspect browser console to hack the CSS that works best for you.
+        Once <strong>Cropper.js</strong> does not offer an easy way to customize its CSS,
+        just inspect browser console to hack the CSS that works best for you.
         We are using the following on this page.
     </p>
 
     {{--@formatter:off--}}
-    <x-code language="css" no-render>
+    <x-code-example language="css" no-render>
         @verbatim('docs')
             .cropper-point {
                 width: 10px !important;
                 height: 10px !important;
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
 </div>

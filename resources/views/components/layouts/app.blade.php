@@ -71,6 +71,10 @@
     {{-- Signature Pad  --}}
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></script>
 
+    {{-- Ace Editor --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ext-language_tools.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Algolia docsearch --}}
@@ -206,6 +210,7 @@
                 <x-menu-sub title="Third-party" icon="o-puzzle-piece">
                     <x-menu-item title="Calendar" link="/docs/components/calendar" />
                     <x-menu-item title="Chart" link="/docs/components/chart" />
+                    <x-menu-item title="Code" link="/docs/components/code" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                     <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                     <x-menu-item title="Diff" link="/docs/components/diff" />
                     <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />

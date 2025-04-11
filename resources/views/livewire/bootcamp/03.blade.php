@@ -28,18 +28,18 @@ class extends Component {
         expandable.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-table :headers="$headers" :rows="$users" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Let's replace <strong>entirely</strong> the <code>users()</code> method to make it use an Eloquent query.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         use Illuminate\Database\Eloquent\Builder;
 
         public function users(): Collection
@@ -50,7 +50,7 @@ class extends Component {
                 ->orderBy(...array_values($this->sortBy))
                 ->get();
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -65,47 +65,47 @@ class extends Component {
         It works automatically when you click on the table headers.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-table :headers="$headers" :rows="$users" :sort-by="$sortBy" ... />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         In our <code>$headers</code> property let's replace the <code>age</code> column for <code>country.name</code> and refresh the page to see the result.
         Nice! Table component works with <strong>dot notation.</strong>
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             ['key' => 'age', 'label' => 'Age', 'class' => 'w-20'], // [tl! remove]
             ['key' => 'country.name', 'label' => 'Country'], // [tl! add]
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         But, if you try to sort by the <code>country</code> column you will get <strong>an error</strong>. Let's fix this by using an Eloquent trick.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             // It will add an extra column `country_name` on User collection
             User::query()
                 ->withAggregate('country', 'name') // [tl! highlight]
                 -> ...
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     Finally, adjust the <code>headers</code> property to sort by the new custom column.
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             ['key' => 'country.name', 'label' => 'Country'], // [tl! remove]
             ['key' => 'country_name', 'label' => 'Country'], // [tl! add]
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Pagination" size="text-xl" class="mt-14" />
 
@@ -117,32 +117,32 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         use Livewire\WithPagination; // [tl! highlight]
 
         new class extends Component
         {
             use WithPagination; // [tl! highlight]
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         Add the <code>with-pagination</code> property on the <code>x-table</code> component.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-table ... with-pagination>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Finally, make some changes to use an Eloquent paginated query. Notice that the return type is changed.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         use Illuminate\Pagination\LengthAwarePaginator; // [tl! highlight]
 
         public function users(): LengthAwarePaginator // [tl! highlight]
@@ -153,7 +153,7 @@ class extends Component {
                 ->orderBy(...array_values($this->sortBy))
                 ->paginate(5); // No more `->get()`  [tl! highlight]
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Clear filters" size="text-xl" class="mt-14" />
@@ -177,7 +177,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             // Reset pagination when any component property changes
             public function updated($property): void
@@ -187,7 +187,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -195,7 +195,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
         // Clear filters
         public function clear(): void
@@ -205,7 +205,7 @@ class extends Component {
             $this->success('Filters cleared.', position: 'toast-bottom');
         }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-alert icon="o-light-bulb" class="markdown">
@@ -218,15 +218,17 @@ class extends Component {
         You can apply CSS on the table headers and make it responsive just like that. Check it at mobile size.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             ['key' => 'country_name', 'label' => 'Country'], // [tl! remove]
             ['key' => 'country_name', 'label' => 'Country', 'class' => 'hidden lg:table-cell'], // [tl! add]
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <p>You can even decorate rows and cells with custom CSS, in addition to use custom slots to override cells. You can do even more with maryUI tables. Check the docs for
-        more.</p>
+    <p>
+        You can even decorate rows and cells with custom CSS, in addition to use custom slots to override cells.
+        You can do even more with maryUI tables. Check the docs for more.
+    </p>
 
     <x-anchor title="Header component" size="text-xl" class="mt-14" />
 
@@ -237,12 +239,12 @@ class extends Component {
         and is responsive. Check it at mobile size.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             {{-- Let's change the title --}}
             <x-header title="Users" separator progress-indicator ... />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Toast component" size="text-xl" class="mt-14" />
 
@@ -256,13 +258,13 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         public function delete(User $user): void
         {
             $user->delete();
             $this->warning("$user->name deleted", 'Good bye!', position: 'toast-bottom');
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <x-anchor title="Drawer component" size="text-xl" class="mt-14" />
@@ -276,18 +278,18 @@ class extends Component {
         It comes with a handy close button and a default layout.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-drawer wire:model="drawer" title="Filters" right separator with-close-button ... />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         Let's add a new filter <strong>by country</strong>.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use App\Models\Country;  // [tl! highlight]
 
@@ -317,7 +319,7 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -326,7 +328,7 @@ class extends Component {
 
     <x-button label="Select docs" link="/docs/components/select" icon="o-link" external class="btn-sm !no-underline" />
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-drawer ...>
                 ...
@@ -337,15 +339,15 @@ class extends Component {
 
             </x-drawer>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Challenge" size="text-xl" class="mt-14" />
 
     <x-button label="Button docs" link="/docs/components/button" icon="o-link" external class="btn-sm !no-underline" />
 
     <p>
-        If you are using a drawer you will probably have a few more filter options. In order to have a better UX it would be nice to display how many filters the user have
-        selected.
+        If you are using a drawer you will probably have a few more filter options.
+        In order to have a better UX it would be nice to display how many filters the user have selected.
     </p>
 
     <img src="/bootcamp/03-d.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />

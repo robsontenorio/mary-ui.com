@@ -28,7 +28,7 @@ class extends Component {
 
     <x-anchor title="Basic" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                        // [tl! .docs-hide]
                 $level = $this->level;  // [tl! .docs-hide]
@@ -37,22 +37,23 @@ class extends Component {
             <x-hr /> <!-- [tl! .docs-hide] -->
             <x-badge value="Selected: {{ $level }}" class="badge-neutral" /> <!-- [tl! .docs-hide] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             #[Rule('required|gt:10')]
             public int $level = 10;
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Step & Range" size="text-xl" class="mt-14" />
 
     <p>
-        You can also set the range limits with <code>min</code> and <code>max</code> attributes. Use the <code>step</code> attribute to control the increased value when sliding.
+        You can also set the range limits with <code>min</code> and <code>max</code> attributes.
+        Use the <code>step</code> attribute to control the increased value when sliding.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                          // [tl! .docs-hide]
                 $level2 = $this->level2;  // [tl! .docs-hide]
@@ -68,13 +69,13 @@ class extends Component {
             <x-hr /> <!-- [tl! .docs-hide] -->
             <x-badge value="Selected: {{ $level2 }}" class="badge-primary" /> <!-- [tl! .docs-hide] -->
         @endverbatim
-    </x-code>
+    </x-code-example>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             #[Rule('required|gt:30')]
             public int $level2 = 30;
         @endverbatim
-    </x-code>
+    </x-code-example>
 
 </div>

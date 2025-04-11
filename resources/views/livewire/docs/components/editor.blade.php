@@ -44,7 +44,7 @@ class extends Component {
         Also remember to add your local and production addresses on the allowed domains list.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -55,16 +55,16 @@ class extends Component {
                 <script src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <p>
         If you are using the <strong>local disk</strong> remember to run this.
     </p>
-    <x-code language="bash" no-render>
+    <x-code-example language="bash" no-render>
         @verbatim('docs')
             php artisan storage:link
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
 
@@ -73,14 +73,14 @@ class extends Component {
         On all examples we already have a random user logged in.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php                        // [tl! .docs-hide]
                 $text = $this->text;    // [tl! .docs-hide]
             @endphp                     {{-- [tl! .docs-hide] --}}
             <x-editor wire:model="text" label="Description" hint="The full product description" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Upload settings" size="text-xl" class="mt-14" />
 
@@ -89,11 +89,11 @@ class extends Component {
         You can change it like this.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <x-editor ... disk="s3" folder="super/cool/images" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Customizing" size="text-xl" class="mt-14" />
 
@@ -101,7 +101,7 @@ class extends Component {
         You can add or override any setting provided by <strong>TinyMCE</strong>. Check its docs for more.
     </p>
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             @php
                 $config = [
@@ -116,12 +116,13 @@ class extends Component {
 
             <x-editor wire:model="text2" :config="$config" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Dark mode" size="text-xl" class="mt-14" />
 
     <p>
-        Unfortunately, TinyMCE does not support dark mode toggle on the fly. But, if you refresh the page the editor will respect the user's preference.
+        Unfortunately, TinyMCE does not support dark mode toggle on the fly.
+        But, if you refresh the page the editor will respect the user's preference.
     </p>
 
     <x-alert icon="o-light-bulb" class="markdown mb-10">

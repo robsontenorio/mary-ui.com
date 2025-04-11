@@ -48,7 +48,7 @@ class extends Component {
         So, it accepts any valid configuration described on its docs.
     </p>
 
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
@@ -57,7 +57,7 @@ class extends Component {
                 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
             </head>
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
@@ -65,7 +65,7 @@ class extends Component {
         Check all available options in the <a href="https://www.chartjs.org" target="_blank">Chart.js</a> docs.
     </p>
 
-    <x-code class="grid lg:grid-cols-2  items-start justify-center gap-10">
+    <x-code-example class="grid lg:grid-cols-2  items-start justify-center gap-10">
         @verbatim('docs')
             <div class="grid gap-5">
                 <x-button label="Randomize" wire:click="randomize" class="btn-primary" spinner />
@@ -74,10 +74,10 @@ class extends Component {
 
             <x-chart wire:model="myChart" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         public array $myChart = [
             'type' => 'pie',
             'data' => [
@@ -101,6 +101,6 @@ class extends Component {
             $type = $this->myChart['type'] == 'bar' ? 'pie' : 'bar';
             Arr::set($this->myChart, 'type', $type);
         }
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 </div>

@@ -26,9 +26,9 @@ class extends Component {
         <li>SQLite database.</li>
     </ul>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         laravel new myapp
-    </x-code>
+    </x-code-example>
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Before proceeding, make a local commit to keep track of what is going on.
@@ -40,19 +40,19 @@ class extends Component {
         Make sure you have selected <strong>"Volt"</strong> during this install.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         composer require robsontenorio/mary
 
         php artisan mary:install
-    </x-code>
+    </x-code-example>
 
     <p>
         Start the dev server.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         yarn dev
-    </x-code>
+    </x-code-example>
 
     <p>
         <x-icon name="o-bolt" class="text-warning" />
@@ -87,9 +87,9 @@ class extends Component {
         After running it, it is important to take a <strong>look at the database</strong> to see what is going on.
     </p>
 
-    <x-code no-render language="bash">
+    <x-code-example no-render language="bash">
         php artisan mary:bootcamp
-    </x-code>
+    </x-code-example>
 
     <ul class="my-10">
         <li>Create a new <code>Country</code> model.</li>

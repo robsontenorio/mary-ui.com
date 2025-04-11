@@ -15,7 +15,7 @@ class extends Component {
     <x-anchor title="Badges" />
     <x-anchor title="Standalone" size="text-xl" class="mt-14" />
 
-    <x-code>
+    <x-code-example>
         @verbatim('docs')
             <x-badge value="Hello" />
 
@@ -29,11 +29,11 @@ class extends Component {
 
             <x-badge value="Hello" class="badge-error badge-dash" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     <x-anchor title="Combined" size="text-xl" class="mt-14" />
 
-    <x-code class="flex gap-5">
+    <x-code-example class="flex gap-5">
         @verbatim('docs')
             <x-button>
                 Inbox
@@ -45,5 +45,5 @@ class extends Component {
                 <x-badge value="7" class="badge-secondary badge-sm indicator-item" />
             </x-button>
         @endverbatim
-    </x-code>
+    </x-code-example>
 </div>
