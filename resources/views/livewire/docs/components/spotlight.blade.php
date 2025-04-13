@@ -197,7 +197,7 @@ class extends Component {
             // Static search, but it could come from a database
             public function actions(string $search = '')
             {
-                $icon = Blade::render("<x-icon name='o-bolt' class='w-11 h-11 p-2 bg-yellow-50 rounded-full' />");
+                $icon = Blade::render("<x-icon name='o-bolt' class='w-11 h-11 p-2 bg-warning/10 rounded-full' />");
 
                 return collect([
                     [
