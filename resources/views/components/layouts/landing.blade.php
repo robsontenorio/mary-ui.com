@@ -50,9 +50,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 
-    {{--  Pirsch Analytics  --}}
-    <script defer src="https://api.pirsch.io/pa.js" id="pianjs" data-code="rOVAXMnSEiydpyfzhgPnLVbX6iWcik7m"></script>
-
     {{-- Umami Analytics --}}
     <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
 
