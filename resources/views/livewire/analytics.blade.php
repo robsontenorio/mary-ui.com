@@ -10,16 +10,21 @@ new class extends Component {
         try {
             return Cache::remember('mary-statistics', 3600, function () {
                 $token = Http::retry(3, 100)
-                    ->post("https://api.pirsch.io/api/v1/token", [
-                        'client_id' => config('services.pirsch.client_id'),
-                        'client_secret' => config('services.pirsch.client_secret')
+                    ->baseUrl(config('services.umami.api'))
+                    ->post("/auth/login", [
+                        'username' => config('services.umami.user'),
+                        'password' => config('services.umami.password')
                     ])
-                    ->json('access_token');
+                    ->json('token');
+
+                $startAt = now()->subDays(30)->getTimestampMs();
+                $endAt = now()->getTimestampMs();
 
                 $visitors = Http::retry(3, 100)
                     ->withToken($token)
-                    ->get("https://api.pirsch.io/api/v1/statistics/visitor?id=" . config("services.pirsch.dashboard_id"))
-                    ->json('0.visitors');
+                    ->baseUrl(config('services.umami.api'))
+                    ->get("/websites/" . config('services.umami.site_id') . "/stats?startAt={$startAt}&endAt={$endAt}&unit=day&compare=false")
+                    ->json('visitors.value');
 
                 return Number::format($visitors);
             });

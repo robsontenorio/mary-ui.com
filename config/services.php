@@ -18,10 +18,11 @@ return [
         'token' => env('GITHUB_TOKEN')
     ],
 
-    'pirsch' => [
-        'client_id' => env('PIRSCH_CLIENT_ID'),
-        'client_secret' => env('PIRSCH_CLIENT_SECRET'),
-        'dashboard_id' => env('PIRSCH_DASHBOARD_ID'),
+    'umami' => [
+        'api' => env('UMAMI_API'),
+        'site_id' => env('UMAMI_SITE_ID'),
+        'user' => env('UMAMI_USER'),
+        'password' => env('UMAMI_PASSWORD')
     ],
 
     'postmark' => [

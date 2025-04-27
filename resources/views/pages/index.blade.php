@@ -179,7 +179,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
         {{--                                Sponsor--}}
         {{--                                <x-icon name="o-arrow-right" class="w-4 h-4" />--}}
         {{--                            </a>--}}
-        {{--                            <a href="https://mary-ui.pirsch.io" target="_blank">--}}
+        {{--                            <a href="https://analytics.robsontenorio.com/share/PZ2Kf5nHYg6fp4Lt/mary-ui.com" target="_blank">--}}
         {{--                                Open analytics--}}
         {{--                                <x-icon name="o-arrow-right" class="w-4 h-4" />--}}
         {{--                            </a>--}}
