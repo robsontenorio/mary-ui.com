@@ -35,6 +35,9 @@
     {{--  Pirsch Analytics  --}}
     <script defer src="https://api.pirsch.io/pa.js" id="pianjs" data-code="rOVAXMnSEiydpyfzhgPnLVbX6iWcik7m"></script>
 
+    {{-- Umami Analytics --}}
+    <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
+
     <!-- Google tag (gtag.js) -->
     @if(config('app.env') == 'production')
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
@@ -53,12 +56,12 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-success/10 text-center p-2 text-sm">
-        <x-icon name="o-fire" class="h-4 w-4" />
-        maryUI v2 released!
-        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>
-        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>
-    </div>
+    {{--    <div class="bg-success/10 text-center p-2 text-sm">--}}
+    {{--        <x-icon name="o-fire" class="h-4 w-4" />--}}
+    {{--        maryUI v2 released!--}}
+    {{--        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>--}}
+    {{--        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>--}}
+    {{--    </div>--}}
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">

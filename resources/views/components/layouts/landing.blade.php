@@ -53,6 +53,9 @@
     {{--  Pirsch Analytics  --}}
     <script defer src="https://api.pirsch.io/pa.js" id="pianjs" data-code="rOVAXMnSEiydpyfzhgPnLVbX6iWcik7m"></script>
 
+    {{-- Umami Analytics --}}
+    <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
+
     <!-- Google tag (gtag.js) -->
     @if(config('app.env') == 'production')
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>

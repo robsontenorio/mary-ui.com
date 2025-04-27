@@ -84,6 +84,9 @@
     {{--  Pirsch Analytics  --}}
     <script defer src="https://api.pirsch.io/pa.js" id="pianjs" data-code="rOVAXMnSEiydpyfzhgPnLVbX6iWcik7m"></script>
 
+    {{-- Umami Analytics --}}
+    <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
+
     <!-- Google tag (gtag.js) -->
     @if(config('app.env') == 'production')
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
@@ -102,12 +105,12 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-success/10 text-center p-2 text-sm">
-        <x-icon name="o-fire" class="h-4 w-4" />
-        maryUI v2 released!
-        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>
-        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>
-    </div>
+    {{--    <div class="bg-success/10 text-center p-2 text-sm">--}}
+    {{--        <x-icon name="o-fire" class="h-4 w-4" />--}}
+    {{--        maryUI v2 released!--}}
+    {{--        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>--}}
+    {{--        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>--}}
+    {{--    </div>--}}
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -142,10 +145,10 @@
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
-                    <x-menu-item title="Demos" link="/docs/demos" badge="updated" badge-classes="badge-success badge-xs float-right mt-1" class="block" />
-                    <x-menu-item title="Customizing" link="/docs/customizing" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Demos" link="/docs/demos" />
+                    <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
-                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">
@@ -154,8 +157,8 @@
                     <x-menu-item title="Select" link="/docs/components/select" />
                     <x-menu-item title="Checkbox" link="/docs/components/checkbox" />
                     <x-menu-item title="Toggle" link="/docs/components/toggle" />
-                    <x-menu-item title="Group" link="/docs/components/group" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
-                    <x-menu-item title="Radio" link="/docs/components/radio" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Group" link="/docs/components/group" />
+                    <x-menu-item title="Radio" link="/docs/components/radio" />
                     <x-menu-item title="Color Picker" link="/docs/components/colorpicker" />
                     <x-menu-item title="Choices" link="/docs/components/choices" />
                     <x-menu-item title="Date Time" link="/docs/components/datetime" />
@@ -185,7 +188,7 @@
                 <x-menu-sub title="UI" icon="o-cursor-arrow-rays">
                     <x-menu-item title="Alert" link="/docs/components/alert" />
                     <x-menu-item title="Avatar" link="/docs/components/avatar" />
-                    <x-menu-item title="Breadcrumbs" link="/docs/components/breadcrumbs" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Breadcrumbs" link="/docs/components/breadcrumbs" />
                     <x-menu-item title="Button" link="/docs/components/button" />
                     <x-menu-item title="Badges" link="/docs/components/badges" />
                     <x-menu-item title="Card" link="/docs/components/card" />
@@ -210,7 +213,7 @@
                 <x-menu-sub title="Third-party" icon="o-puzzle-piece">
                     <x-menu-item title="Calendar" link="/docs/components/calendar" />
                     <x-menu-item title="Chart" link="/docs/components/chart" />
-                    <x-menu-item title="Code" link="/docs/components/code" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Code" link="/docs/components/code" />
                     <x-menu-item title="Date Picker" link="/docs/components/datepicker" />
                     <x-menu-item title="Diff" link="/docs/components/diff" />
                     <x-menu-item title="Image Gallery" link="/docs/components/image-gallery" />
@@ -218,6 +221,10 @@
                     <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
                     <x-menu-item title="Signature" link="/docs/components/signature" />
                 </x-menu-sub>
+
+                <x-menu-separator />
+
+                <x-menu-item title="Go to v1 docs" link="https://v1.mary-ui.com" icon="o-backward" external />
             </x-menu>
         </x-slot:sidebar>
 
