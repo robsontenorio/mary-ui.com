@@ -92,6 +92,41 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
+    <x-anchor title="Autoplay" size="text-xl" class="mt-14" />
+
+    <x-code-example>
+        @verbatim('docs')
+            @php                                                                    // [tl! .docs-hide]
+                $slides = [                                                         // [tl! .docs-hide]
+                   [                                                                // [tl! .docs-hide]
+                        'image' => '/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
+                    ],                                                              // [tl! .docs-hide]
+                    [                                                               // [tl! .docs-hide]
+                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
+                    ],                                                              // [tl! .docs-hide]
+                     [                                                              // [tl! .docs-hide]
+                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
+                    ],                                                              // [tl! .docs-hide]
+                    [                                                               // [tl! .docs-hide]
+                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
+                    ],                                                              // [tl! .docs-hide]
+                ];                                                                  // [tl! .docs-hide]
+            @endphp                                                                 <!-- [tl! .docs-hide] -->
+            <x-carousel :slides="$slides" autoplay class="!h-32" />
+        @endverbatim
+    </x-code-example>
+
+    <p>
+        You can change interval by passing the <code>interval</code> attribute.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            {{--  Default interval is 2000 milliseconds. --}}
+            <x-carousel ... autoplay interval="3000" />
+        @endverbatim
+    </x-code-example>
+
     <x-anchor title="Full" size="text-xl" class="mt-14" />
     <p>
         Play around removing some attributes. The only required attribute is <code>image</code>.

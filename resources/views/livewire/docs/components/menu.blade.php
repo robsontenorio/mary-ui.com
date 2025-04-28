@@ -103,24 +103,18 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
-    <x-anchor title="Enabled state" size="text-xl" class="mt-14" />
+    <x-anchor title="Hidden & Disabled" size="text-xl" class="mt-14" />
     <p>
-        You can control the visibility of menus with the <code>enabled</code> attribute.
+        You can control the visibility of menus with the <code>hidden</code> attribute,
+        or keep it visible but with a <code>disabled</code> state.
     </p>
 
     <x-code-example class="grid gap-5 justify-center">
         @verbatim('docs')
             <x-menu class="border border-base-content/10">
                 <x-menu-item title="Users" icon="o-user" />
-
-                {{-- Notice `enabled` --}}
-                <x-menu-item title="Folders" icon="o-folder" :enabled="false" />
-
-                {{-- Notice `enabled` --}}
-                <x-menu-sub title="Settings" icon="o-cog-6-tooth" :enabled="false">
-                    <x-menu-item title="Wifi" icon="o-wifi" />
-                    <x-menu-item title="Archives" icon="o-archive-box" />
-                </x-menu-sub>
+                <x-menu-item title="Folders" icon="o-folder" hidden />
+                <x-menu-item title="Events" icon="o-bolt" disabled />
             </x-menu>
         @endverbatim
     </x-code-example>

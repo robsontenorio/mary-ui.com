@@ -55,7 +55,7 @@ class extends Component {
         Livewire itself triggers real time validation for single file upload.
     </p>
 
-    <x-code-example>
+    <x-code-example class="sm:px-64">
         @verbatim('docs')
             @php                            // [tl! .docs-hide]
                 $file = $this->file;      // [tl! .docs-hide]
@@ -82,7 +82,7 @@ class extends Component {
         So, remember to call <code>$this->validate()</code> before saving the files.
     </p>
 
-    <x-code-example>
+    <x-code-example class="sm:px-64">
         @verbatim('docs')
             @php                               // [tl! .docs-hide]
                 $photos = $this->photos;      // [tl! .docs-hide]
