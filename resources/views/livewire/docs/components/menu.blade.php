@@ -115,6 +115,11 @@ class extends Component {
                 <x-menu-item title="Users" icon="o-user" />
                 <x-menu-item title="Folders" icon="o-folder" hidden />
                 <x-menu-item title="Events" icon="o-bolt" disabled />
+
+                <x-menu-sub title="Settings" icon="o-cog-6-tooth" disabled>
+                    <x-menu-item title="Wifi" icon="o-wifi" />
+                    <x-menu-item title="Archives" icon="o-archive-box" />
+                </x-menu-sub>
             </x-menu>
         @endverbatim
     </x-code-example>

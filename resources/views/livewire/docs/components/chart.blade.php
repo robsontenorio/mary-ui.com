@@ -37,16 +37,16 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Chart" />
 
+    <p>
+        This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
+        So, it accepts any valid configuration described on its docs.
+    </p>
+
     <x-alert icon="o-light-bulb" class="markdown mb-10">
         If you need a simple progress bar see the <a href="/docs/components/progress" wire:navigate>Progress</a> component.
     </x-alert>
 
     <x-anchor title="Install" size="text-xl" class="mt-14" />
-
-    <p>
-        This component is a wrapper around <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
-        So, it accepts any valid configuration described on its docs.
-    </p>
 
     <x-code-example no-render>
         @verbatim('docs')
