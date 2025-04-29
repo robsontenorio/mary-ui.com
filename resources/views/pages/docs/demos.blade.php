@@ -21,12 +21,27 @@ class extends Component {
         Each demo contains <span class="underline decoration-warning font-bold">real world code</span> and straight approaches to get the most out of maryUI and Livewire.
     </p>
 
-    <div class="bg-base-content/5 w-fit rounded px-2 py-1 text-xs">
-        All demos have been updated to Laravel 12 and maryUI v2!<br>
-        If you’ve previously purchased any of them, consider buying again to support the project ❤️.
-    </div>
-
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-8 mt-16">
+        {{-- BIRD --}}
+        <div>
+            <span href=###" target="_blank">
+                <div class="mockup-browser  bg-base-300 hover:scale-105 transition-all shadow-xl">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <img src="/bird-demo.png?u=2025-04-09" class="h-48 w-full" />
+                    </div>
+                </div>
+            </span>
+            <div class="mt-5">
+                <x-header title="Bird" size="text-xl">
+                    <x-slot:subtitle>
+                        Coming soon
+                        <x-badge value="new" class="badge-xs badge-warning" />
+                    </x-slot:subtitle>
+                </x-header>
+
+            </div>
+        </div>
         {{-- PING --}}
         <div>
             <a href="https://ping.mary-ui.com" target="_blank">

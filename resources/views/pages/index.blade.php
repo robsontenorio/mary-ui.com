@@ -241,6 +241,26 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
         <div class="mt-10 pb-24 grid lg:grid overflow-x-auto lg:grid-cols-3 gap-16 p-10">
 
+            {{--   BIRD DEMO  --}}
+            <div>
+                <div class="mockup-browser  bg-base-300 hover:scale-105 transition-all shadow-xl">
+                    <div class="mockup-browser-toolbar"></div>
+                    <div>
+                        <span>
+                            <img src="/bird-demo.png?u=2025-04-09" class="h-36 w-full" />
+                        </span>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <x-header title="Bird" size="text-xl">
+                        <x-slot:subtitle>
+                            Coming soon
+                            <x-badge value="new" class="badge-xs badge-warning" />
+                        </x-slot:subtitle>
+                    </x-header>
+                </div>
+            </div>
+
             {{--   PING DEMO  --}}
             <div>
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
@@ -252,14 +272,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </div>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Ping" size="text-xl">
-                        <x-slot:subtitle>
-                            <div class="mb-2">The real time chat demo.</div>
-                            <div class="lg:tooltip lg:tooltip-right" data-tip="This demo has been updated to Laravel 12 and maryUI v2.">
-                                <x-badge class="badge-success badge-xs" value="updated to v2" />
-                            </div>
-                        </x-slot:subtitle>
-                    </x-header>
+                    <x-header title="Ping" subtitle="The real time chat demo." size="text-xl" />
                 </div>
             </div>
 
@@ -274,14 +287,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </div>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Flow" size="text-xl">
-                        <x-slot:subtitle>
-                            <div class="mb-2">The dashboard demo.</div>
-                            <div class="lg:tooltip tooltip-right" data-tip="This demo has been updated to Laravel 12 and maryUI v2.">
-                                <x-badge class="badge-success badge-xs" value="updated to v2" />
-                            </div>
-                        </x-slot:subtitle>
-                    </x-header>
+                    <x-header title="Flow" subtitle="The dashboard demo." size="text-xl" />
                 </div>
             </div>
 
@@ -296,14 +302,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </div>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Orange" size="text-xl">
-                        <x-slot:subtitle>
-                            <div class="mb-2">The refreshing storefront demo.</div>
-                            <div class="lg:tooltip tooltip-left" data-tip="This demo has been updated to Laravel 12 and maryUI v2.">
-                                <x-badge class="badge-success badge-xs" value="updated to v2" />
-                            </div>
-                        </x-slot:subtitle>
-                    </x-header>
+                    <x-header title="Orange" subtitle="The refreshing storefront demo." size="text-xl" />
                 </div>
             </div>
 
@@ -316,14 +315,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     </a>
                 </div>
                 <div class="mt-5">
-                    <x-header title="Paper" size="text-xl">
-                        <x-slot:subtitle>
-                            <div class="mb-2">The elegant and minimalist demo.</div>
-                            <div class="lg:tooltip lg:tooltip-right" data-tip="This demo has been updated to Laravel 12 and maryUI v2.">
-                                <x-badge class="badge-success badge-xs" value="updated to v2" />
-                            </div>
-                        </x-slot:subtitle>
-                    </x-header>
+                    <x-header title="Paper" subtitle="The elegant and minimalist demo." size="text-xl" />
                 </div>
             </div>
 
