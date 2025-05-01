@@ -138,21 +138,21 @@ class extends Component {
 
     <x-anchor title="Dialog" />
 
-    <x-anchor title="Usage" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Usage" size="text-xl" class="mt-14" />
 
     <p>
         Place <strong>dialog tag</strong> anywhere on the main layout.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
                 <x-dialog />  <!-- [tl! highlight .animate-bounce] -->
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -160,7 +160,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             use Mary\Traits\Dialog;
 
@@ -195,25 +195,25 @@ class extends Component {
                 }
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
         For convenience this component flashes the following messages to make testing easier.
     </p>
 
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         session()->flash('mary.dialog.title', $title);
         session()->flash('mary.dialog.description', $description);
-    </x-code>
+    </x-code-example>
 
-    <x-anchor title="Examples" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Examples" size="text-xl" class="mt-14" />
 
     <p>
         The shortcuts are branded with default colors and icons.
     </p>
 
-    <x-code class="grid lg:flex gap-5">
+    <x-code-example class="grid lg:flex gap-5">
         @verbatim('docs')
             <x-button label="Basic" wire:click="showBasic" />
 
@@ -225,10 +225,10 @@ class extends Component {
 
             <x-button label="Info" class="btn-info" wire:click="showInfo" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function showBasic()
             {
@@ -287,23 +287,23 @@ class extends Component {
                 );
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
-    <x-anchor title="Confirmation Dialog" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Confirmation Dialog" size="text-xl" class="mt-14" />
 
     <p>
         The confirmation dialog allows you to define actions to be executed when the user confirms or cancels.
     </p>
 
-    <x-code class="grid lg:flex gap-5">
+    <x-code-example class="grid lg:flex gap-5">
         @verbatim('docs')
             <x-button label="Confirm Action" wire:click="showConfirm" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function showConfirm()
             {
@@ -335,10 +335,10 @@ class extends Component {
                 // Handle the cancellation action
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
-    <x-anchor title="Positioning" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Positioning" size="text-xl" class="mt-14" />
 
     <p>
         You can position the dialog by passing the <code>position</code> parameter. Available positions are:
@@ -355,30 +355,30 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
                 <x-dialog position="top" />
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
-    <x-anchor title="Custom Dialog" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Custom Dialog" size="text-xl" class="mt-14" />
 
     <p>
         You can customize the dialog by passing additional parameters.
     </p>
 
-    <x-code class="grid lg:flex gap-5">
+    <x-code-example class="grid lg:flex gap-5">
         @verbatim('docs')
             <x-button label="Custom Dialog" wire:click="showCustom" />
         @endverbatim
-    </x-code>
+    </x-code-example>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             public function showCustom()
             {
@@ -397,24 +397,24 @@ class extends Component {
                 );
             }
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
-    <x-anchor title="Backdrop and Blur" size="text-2xl" class="mt-10 mb-5" />
+    <x-anchor title="Backdrop and Blur" size="text-xl" class="mt-14" />
 
     <p>
         You can control the backdrop and blur effect by passing the <code>backdrop</code> and <code>blur</code> parameters.
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render>
+    <x-code-example no-render>
         @verbatim('docs')
             <body>
                 ...
                 <x-dialog :showBackdrop="true" :blurBackdrop="true" />
             </body>
         @endverbatim
-    </x-code>
+    </x-code-example>
     {{--@formatter:on--}}
 
     <p>
@@ -422,7 +422,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code no-render language="php">
+    <x-code-example no-render language="php">
         @verbatim('docs')
             $this->dialog(
                 title: 'Dialog with Blur',
@@ -431,7 +431,59 @@ class extends Component {
                 blur: true
             );
         @endverbatim
-    </x-code>
+    </x-code-example>
+    {{--@formatter:on--}}
+
+    <x-anchor title="Using an Exception" size="text-xl" class="mt-14" />
+
+    <p>
+        The previous approach uses a Trait and works only inside Livewire components.
+        If you are trying to trigger a dialog from outside a Livewire context, you can use the <code>DialogException</code> to do so.
+        This class has a number of shortcut functions to make it easier to use, and it's possible to overwrite all defaults.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code-example no-render language="php">
+        @verbatim('docs')
+        use Mary\Exceptions\DialogException;
+
+        public function notALivewireMethod()
+        {
+            throw DialogException::error('Operation Failed', 'Your operation could not complete');
+
+            // Shortcuts with the same API from Dialog trait
+            throw DialogException::success(...);
+            throw DialogException::error(...);
+            throw DialogException::warning(...);
+            throw DialogException::info(...);
+            throw DialogException::confirm(...);
+        }
+        @endverbatim
+    </x-code-example>
+    {{--@formatter:on--}}
+
+    <p>
+        The livewire request hook <code>fail</code> method is used to handle the client side rendering of the dialogs.
+        If you already have hooks set up, the hook to render the dialog will be called second.
+    </p>
+    <p>
+        If you have a dialog call in your existing hook, it will be de-bounced so only one call is used.
+        The livewire fail hook is given a <code>preventDefault()</code> function to call if you wish to stop the event bubbling up,
+        this behaviour is respected by the second hook configured by dialog.
+        If you want to disable this call, you can chain the <code>permitDefault()</code> method on your exception.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code-example no-render language="php">
+        @verbatim('docs')
+        use Mary\Exceptions\DialogException;
+
+        public function notALivewireMethod()
+        {
+            throw DialogException::info('Information', 'Do not prevent default on client side')->permitDefault();
+        }
+        @endverbatim
+    </x-code-example>
     {{--@formatter:on--}}
 
 </div>
