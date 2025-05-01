@@ -41,6 +41,7 @@ Volt::route('/docs/components/menu', 'docs.components.menu');
 Volt::route('/docs/components/drawer', 'docs.components.drawer');
 Volt::route('/docs/components/modal', 'docs.components.modal');
 Volt::route('/docs/components/toast', 'docs.components.toast');
+Volt::route('/docs/components/dialog', 'docs.components.dialog');
 
 // UI
 Volt::route('/docs/components/alert', 'docs.components.alert');
