@@ -10,25 +10,25 @@ new
 #[Title('Form')]
 #[Layout('components.layouts.app', ['description' => 'Livewire UI form component with builtin validation, spinner, money/currency and actions slot.'])]
 class extends Component {
-    public string $name = '';
+    public $name = '';
 
-    public ?float $amount = null;
+    public $amount = null;
 
-    public ?string $address = null;
+    public $address = null;
 
-    public ?int $number = null;
+    public $number = null;
 
-    public ?string $email = null;
+    public $email = null;
 
-    public ?int $age = null;
+    public $age = null;
 
-    public ?string $magicWord1 = null;
+    public $magicWord1 = null;
 
-    public ?string $magicWord2 = null;
+    public $magicWord2 = null;
 
-    public ?int $salary = null;
+    public $salary = null;
 
-    public ?string $full_name = null;
+    public $full_name = null;
 
     public array $state = [
         'name' => null,
@@ -38,8 +38,6 @@ class extends Component {
 
     public function save(): void
     {
-        sleep(1);
-
         $this->validate([
             'name' => 'required|min:20',
             'amount' => 'required|decimal:0,2'
@@ -48,8 +46,6 @@ class extends Component {
 
     public function save2(): void
     {
-        sleep(1);
-
         $this->validate([
             'address' => 'required|min:20',
             'number' => 'required|integer'
@@ -58,8 +54,6 @@ class extends Component {
 
     public function save3(): void
     {
-        sleep(1);
-
         $this->validate([
             'magicWord1' => 'starts_with:Hello|ends_with:world',
             'magicWord2' => 'starts_with:Hello|ends_with:world',
@@ -68,15 +62,11 @@ class extends Component {
 
     public function save4(): void
     {
-        sleep(1);
-
         $this->addError('total_salary', 'This is a custom error message for total salary field.');
     }
 
     public function save5(): void
     {
-        sleep(1);
-
         $this->validate([
             'full_name' => 'required|min:20',
         ]);
@@ -84,8 +74,6 @@ class extends Component {
 
     public function save6(): void
     {
-        sleep(1);
-
         $this->validate([
             'email' => 'required|email',
             'age' => 'required|integer'

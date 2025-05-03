@@ -72,13 +72,11 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
     public function save()
     {
-        sleep(1);
         $this->validate();
     }
 
     public function delete()
     {
-        sleep(1);
     }
 
     public function search(?string $term = '')
