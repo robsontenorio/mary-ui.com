@@ -685,6 +685,30 @@ class extends Component {
     </x-code-example>
     {{--@formatter:on--}}
 
+    <x-anchor title="Footer slot" size="text-xl" class="mt-14" />
+
+    {{--@formatter:off--}}
+    <x-code-example>
+        @verbatim('docs')
+            @php                                                        // [tl! .docs-hide]
+                use App\Models\User;                                    // [tl! .docs-hide]
+                $users = User::take(3)->get();                          // [tl! .docs-hide]
+                $headers = [                                             // [tl! .docs-hide]
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],   // [tl! .docs-hide]
+                    ['key' => 'username', 'label' => 'Username'],        // [tl! .docs-hide]
+                ];                                                       // [tl! .docs-hide]
+            @endphp                                                      <!-- [tl! .docs-hide] -->
+            <x-table :headers="$headers" :rows="$users">
+                <x-slot:footer class="bg-base-200 text-right">
+                    <tr>
+                        <td colspan="2">The footer</td>
+                    </tr>
+                </x-slot:footer>
+            </x-table>
+        @endverbatim
+    </x-code-example>
+    {{--@formatter:on--}}
+
     <x-anchor title="Inject external variables" size="text-xl" class="mt-14" />
 
     <p>
