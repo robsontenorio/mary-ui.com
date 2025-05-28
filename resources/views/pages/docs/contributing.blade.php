@@ -39,7 +39,7 @@ new #[Title('Contributing')] class extends Component {
         "repositories": {
             "robsontenorio/mary": {
                 "type": "path",
-                "url": "/app/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
+                "url": "/var/www/html/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
                 "options": {
                     "symlink": true
                 }
