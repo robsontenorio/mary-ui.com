@@ -115,4 +115,16 @@ class extends Component {
             <x-modal without-trap-focus ... />
         @endverbatim
     </x-code-example>
+
+    <x-anchor title="Close event" size="text-xl" class="mt-14" />
+
+    <p>
+        If you want to execute some code when the modal is closed, you can use the <code>@close</code> directive.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-modal @close="$wire.someMethod()" ... />
+        @endverbatim
+    </x-code-example>
 </div>

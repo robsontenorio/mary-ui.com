@@ -85,4 +85,16 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
+    <x-anchor title="Close event" size="text-xl" class="mt-14" />
+
+    <p>
+        If you want to execute some code when the drawer is closed, you can use the <code>@close</code> directive.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-drawer @close="$wire.someMethod()" ... />
+        @endverbatim
+    </x-code-example>
+
 </div>
