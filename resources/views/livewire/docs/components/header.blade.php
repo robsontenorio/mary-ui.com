@@ -57,7 +57,7 @@ class extends Component {
             <x-header title="Always fires" separator progress-indicator />
 
             {{-- This fires when you call the `save` action --}}
-            <x-header title="Only by `save`" separator progress-indicator="save" />
+            <x-header title="Only by `save`" separator progress-indicator="save" progress-indicator-class="progress-warning" />
 
             <x-button label="Some action" wire:click="something" />
 
