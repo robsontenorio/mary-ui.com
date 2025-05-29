@@ -14,9 +14,9 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^12.7",
-        "laravel/tinker": "^2.10.1",
+        "php": "^8.4",
+        "laravel/framework": "^12.16",
+        "laravel/tinker": "^2.10",
         "league/flysystem-aws-s3-v3": "^3.29",
         "livewire/livewire": "^3.6",
         "livewire/volt": "^1.7",

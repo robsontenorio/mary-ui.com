@@ -895,4 +895,56 @@ class extends Component {
             <x-table ... expandable expandable-condition="is_admin" />
         @endverbatim
     </x-code-example>
+
+    <x-anchor title="Overflow elements" size="text-xl" class="mt-14" />
+
+    <p>
+        Due to <a href="https://github.com/w3c/csswg-drafts/issues/4092" target="_blank">this CSS limitation</a>,
+        the content inside the table will be truncated if you are using any floating divs or dropdowns.
+    </p>
+
+    <p>
+        Below is an example of how to handle the case of dropdowns.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code-example no-render language="css">
+        @verbatim('docs')
+            table {
+                @apply !static
+            }
+
+            /** This is the dropdown component inside the table **/
+            /** Make sure to handle it properly if you are using other floating element **/
+            table details.dropdown {
+                @apply !static
+            }
+        @endverbatim
+    </x-code-example>
+    {{--@formatter:on--}}
+
+    <p>
+        Alternatively, you can create a class for such specific cases.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code-example no-render language="css">
+        @verbatim('docs')
+            table.myTable {
+                @apply !static
+            }
+
+            table.myTable details.dropdown {
+                @apply !static
+            }
+        @endverbatim
+    </x-code-example>
+    {{--@formatter:on--}}
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-table class="myTable" ... />
+        @endverbatim
+    </x-code-example>
+
 </div>
