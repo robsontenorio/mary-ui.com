@@ -524,7 +524,7 @@ new #[Layout('components.layouts.landing')] class extends Component {
 
                     {{-- Actions Slot --}}
                     @scope('actions', $user)
-                        <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner />
+                        <x-button icon="o-trash" wire:click="delete({{ $user->id }})" spinner class="btn-circle btn-ghost" />
                     @endscope
 
                     {{-- Cell scope --}}
