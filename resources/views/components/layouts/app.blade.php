@@ -180,6 +180,7 @@
                     <x-menu-item title="Drawer" link="/docs/components/drawer" />
                     <x-menu-item title="Modal" link="/docs/components/modal" />
                     <x-menu-item title="Toast" link="/docs/components/toast" />
+                    <x-menu-item title="Dialog" link="/docs/components/dialog" />
                 </x-menu-sub>
 
                 <x-menu-sub title="UI" icon="o-cursor-arrow-rays">
@@ -255,6 +256,9 @@
 
     {{-- Toast --}}
     <x-toast />
+
+    {{-- Dialog --}}
+    <x-dialog />
 
     {{-- Spotlight --}}
     <x-spotlight search-text="Type 'a' ..." />
