@@ -35,7 +35,7 @@ class extends Component {
             <div class="mt-5">
                 <x-header title="Bird" size="text-xl">
                     <x-slot:subtitle>
-                        The Issue tracker
+                        The Issue Tracker
                         <x-badge value="Available on June 5" class="badge-xs badge-warning" />
                     </x-slot:subtitle>
                 </x-header>
