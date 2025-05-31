@@ -244,16 +244,18 @@ new #[Layout('components.layouts.landing')] class extends Component {
                 <div class="mockup-browser  bg-base-300 hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <span>
-                            <img src="/bird-demo.png?u=2025-04-09" class="h-36 w-full" />
-                        </span>
+                        <div>
+                            <a href="https://bird.mary-ui.com" target="_blank">
+                                <img src="/bird-demo.png?u=2025-06-01" />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="mt-5">
                     <x-header title="Bird" size="text-xl">
                         <x-slot:subtitle>
-                            Coming soon
-                            <x-badge value="new" class="badge-xs badge-warning" />
+                            The issue Tracker
+                            <x-badge value="Available on June 5" class="badge-xs badge-warning" />
                         </x-slot:subtitle>
                     </x-header>
                 </div>

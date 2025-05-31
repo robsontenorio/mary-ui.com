@@ -24,19 +24,19 @@ class extends Component {
     <div class="grid lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-8 mt-16">
         {{-- BIRD --}}
         <div>
-            <span href=###" target="_blank">
+            <a href="https://bird.mary-ui.com" target="_blank">
                 <div class="mockup-browser  bg-base-300 hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/bird-demo.png?u=2025-04-09" class="h-48 w-full" />
+                        <img src="/bird-demo.png?u=2025-06-01" class="h-48 w-full" />
                     </div>
                 </div>
-            </span>
+            </a>
             <div class="mt-5">
                 <x-header title="Bird" size="text-xl">
                     <x-slot:subtitle>
-                        Coming soon
-                        <x-badge value="new" class="badge-xs badge-warning" />
+                        The issue tracker
+                        <x-badge value="Available on June 5" class="badge-xs badge-warning" />
                     </x-slot:subtitle>
                 </x-header>
 
