@@ -102,12 +102,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-success/10 text-center p-2 text-sm">--}}
-    {{--        <x-icon name="o-fire" class="h-4 w-4" />--}}
-    {{--        maryUI v2 released!--}}
-    {{--        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>--}}
-    {{--        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>--}}
-    {{--    </div>--}}
+    <div class="bg-info/10 text-center p-2 text-sm">
+        <x-icon name="lucide.bird" class="h-4 w-4" />
+        Bird
+        <a href="https://bird.mary-ui.com" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2" target="_blank">available now →</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -142,7 +141,7 @@
                     <x-menu-item title="Installation" link="/docs/installation" />
                     <x-menu-item title="Layout" link="/docs/layout" />
                     <x-menu-item title="Sidebar" link="/docs/sidebar" />
-                    <x-menu-item title="Demos" link="/docs/demos" />
+                    <x-menu-item title="Demos" link="/docs/demos" badge="new" badge-classes="badge-secondary badge-xs" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
                     <x-menu-item title="Upgrading to v2" link="/docs/upgrading" />
