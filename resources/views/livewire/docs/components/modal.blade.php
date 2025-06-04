@@ -116,15 +116,15 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
-    <x-anchor title="Close event" size="text-xl" class="mt-14" />
+    <x-anchor title="Events" size="text-xl" class="mt-14" />
 
     <p>
-        If you want to execute some code when the modal is closed, you can use the <code>@close</code> directive.
+        You can listen to the <code>open</code> and <code>close</code> events to perform actions when the modal is opened or closed.
     </p>
 
     <x-code-example no-render>
         @verbatim('docs')
-            <x-modal @close="$wire.someMethod()" ... />
+            <x-modal @close="$wire.someMethod()" @open="$wire.otherMethod()" ... />
         @endverbatim
     </x-code-example>
 </div>
