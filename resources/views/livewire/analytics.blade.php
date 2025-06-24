@@ -36,9 +36,9 @@ new class extends Component {
     public function placeholder()
     {
         return <<<'HTML'
-        <span class="text-center">
+        <div class="text-center inline-block">
             <span class="loading loading-dots"></span>
-        </span>
+        </div>
         HTML;
     }
 
