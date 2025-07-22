@@ -69,4 +69,16 @@ class extends Component {
             </template>
         @endverbatim
     </x-code-example>
+
+    <x-anchor title="Spacing" size="text-xl" class="mt-14" />
+
+    <p>
+        You can remove the gap between the pins by using the <code>no-gap</code> property.
+    </p>
+
+    <x-code-example>
+        @verbatim('docs')
+            <x-pin wire:model="pin3" size="5" no-gap />
+        @endverbatim
+    </x-code-example>
 </div>

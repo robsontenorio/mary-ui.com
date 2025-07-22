@@ -138,7 +138,7 @@ class extends Component {
                 $slides = [
                     [
                         'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',
-                        'title' => 'Front end developers',
+                        'title' => 'Frontend developers',
                         'description' => 'We love last week frameworks.',
                         'url' => '/docs/installation',
                         'urlText' => 'Get started',
@@ -177,7 +177,7 @@ class extends Component {
                 $slides = [
                     [
                         'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',
-                        'title' => 'Front end developers',
+                        'title' => 'Frontend developers',
                     ],
                     [
                         'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',

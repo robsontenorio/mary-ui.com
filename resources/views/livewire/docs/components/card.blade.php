@@ -69,4 +69,15 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
+    <x-anchor title="Styling" size="text-xl" class="mt-14" />
+
+    <x-code-example class="bg-base-200 ">
+        @verbatim('docs')
+            {{-- Notice `progress-indicator` --}}
+            <x-card title="Style" separator class="p-2 bg-warning/40" body-class="p-2 bg-info">
+                Hey!
+            </x-card>
+        @endverbatim
+    </x-code-example>
+
 </div>

@@ -245,7 +245,6 @@ new #[Layout('components.layouts.landing')] class extends Component {
                     <x-header title="Bird" size="text-xl">
                         <x-slot:subtitle>
                             The Issue Tracker
-                            <x-badge value="new" class="badge-xs badge-secondary" />
                         </x-slot:subtitle>
                     </x-header>
                 </div>
