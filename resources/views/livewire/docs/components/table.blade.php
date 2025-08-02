@@ -552,7 +552,7 @@ class extends Component {
     <br>
 
     <p>
-        MarUI also provides its own pagination component. You can use it with other components, so it is not limited to tables.
+        MaryUI also provides its own pagination component. You can use it with other components, so it is not limited to tables.
     </p>
 
     <x-code-example>
