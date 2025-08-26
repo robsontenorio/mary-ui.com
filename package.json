@@ -6,11 +6,11 @@
         "dev": "vite"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.1.8",
+        "@tailwindcss/vite": "^4.1.12",
         "axios": "^1.8.2",
         "daisyui": "^5.0.42",
-        "laravel-vite-plugin": "^1.2.0",
-        "tailwindcss": "^4.1.8",
-        "vite": "^6.3.5"
+        "laravel-vite-plugin": "^2.0.0",
+        "tailwindcss": "^4.1.12",
+        "vite": "^7.1.3"
     }
 }

@@ -4353,16 +4353,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "2.4.5",
+            "version": "2.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "4e028507b1233bdd927c0acf250291fea8422c1d"
+                "reference": "983c733058205f69a1edf68037633e522c43870f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/4e028507b1233bdd927c0acf250291fea8422c1d",
-                "reference": "4e028507b1233bdd927c0acf250291fea8422c1d",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/983c733058205f69a1edf68037633e522c43870f",
+                "reference": "983c733058205f69a1edf68037633e522c43870f",
                 "shasum": ""
             },
             "require": {
@@ -4428,7 +4428,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/2.4.5"
+                "source": "https://github.com/robsontenorio/mary/tree/2.4.6"
             },
             "funding": [
                 {
@@ -4436,7 +4436,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-23T15:34:55+00:00"
+            "time": "2025-08-26T13:12:18+00:00"
         },
         {
             "name": "sentry/sentry",
