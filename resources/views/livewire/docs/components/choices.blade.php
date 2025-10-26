@@ -311,6 +311,7 @@ class extends Component {
                 placeholder="Search ..."
                 search-function="searchMulti"
                 no-result-text="Ops! Nothing here ..."
+                no-progress
                 searchable />
         @endverbatim
     </x-code-example>

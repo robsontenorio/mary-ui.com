@@ -85,6 +85,18 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
+    <x-anchor title="Without Backdrop Close" size="text-xl" class="mt-14" />
+
+    <p>
+        This prevents the drawer from closing when clicking outside.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-drawer without-backdrop-close ... />
+        @endverbatim
+    </x-code-example>
+
     <x-anchor title="Events" size="text-xl" class="mt-14" />
 
     <p>

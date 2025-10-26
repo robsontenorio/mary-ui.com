@@ -11,7 +11,8 @@ use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\WithMediaSync;
 
-new #[Layout('components.layouts.landing')] class extends Component {
+new #[Layout('components.layouts.landing')]
+class extends Component {
     use WithFileUploads, WithMediaSync, WithPagination;
 
     #[Rule(['files.*' => 'image|max:100'])]
@@ -153,7 +154,9 @@ new #[Layout('components.layouts.landing')] class extends Component {
                         <x-icon name="o-heart" class="w-10 h-10 text-pink-500" />
                     </div>
                     <div class="mb-8 -mt-3">
-                        <x-icon name="o-squares-plus" class="w-10 h-10 opacity-50" />
+                        <a href="https://naqrat.sa" target="_blank">
+                            <img src="partners/naqrat.png" class="inline-block h-24 rounded object-contain" />
+                        </a>
                     </div>
                     <div class="text-base-content/60 text-xs">
                         Showcase your brand here for
