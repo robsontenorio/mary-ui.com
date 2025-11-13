@@ -3,7 +3,8 @@
 use Livewire\Attributes\Title;
 use Livewire\Volt\Component;
 
-new #[Title('Upgrading')]
+new
+#[Title('Upgrading')]
 class extends Component {
 }; ?>
 
