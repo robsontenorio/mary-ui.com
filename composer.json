@@ -21,7 +21,7 @@
         "livewire/livewire": "^4.0@beta",
         "mallardduck/blade-lucide-icons": "^1.23",
         "owenvoke/blade-fontawesome": "^2.9",
-        "robsontenorio/mary": "dev-main",
+        "robsontenorio/mary": "dev-livewire-4",
         "sentry/sentry-laravel": "^4.13",
         "torchlight/torchlight-laravel": "^0.6.1"
     },

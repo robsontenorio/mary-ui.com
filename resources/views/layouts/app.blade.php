@@ -102,11 +102,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-info/10 text-center p-2 text-sm">--}}
-    {{--        <x-icon name="lucide.bird" class="h-4 w-4" />--}}
-    {{--        Bird--}}
-    {{--        <a href="https://bird.mary-ui.com" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2" target="_blank">available now →</a>--}}
-    {{--    </div>--}}
+    <div class="bg-info/10 text-center p-2 text-sm">
+        <x-icon name="o-bolt" class="h-4 w-4" />
+        Livewire 4
+        <a href="https://bird.mary-ui.com" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2" target="_blank">Upgrade →</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
@@ -144,7 +144,8 @@
                     <x-menu-item title="Demos" link="/docs/demos" />
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
-                    <x-menu-item title="Upgrading to v2" link="/docs/upgrading" />
+                    <x-menu-item title="Upgrading from v1" link="/docs/upgrading" />
+                    <x-menu-item title="Livewire 4" link="/docs/livewire4" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">

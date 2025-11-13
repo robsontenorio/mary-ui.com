@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a77de7d854404c7898a3a31aaf1971b2",
+    "content-hash": "0ab4302e7ea95d28c47f023b1cc59868",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4281,11 +4281,11 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "dev-main",
+            "version": "dev-livewire-4",
             "dist": {
                 "type": "path",
                 "url": "/var/www/html/packages/mary",
-                "reference": "da994de22f4c8926c511dc4590ff368c538e34f4"
+                "reference": "578054225056502b377ebaf56c0e5af6d9232856"
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.0",

@@ -1,12 +1,14 @@
 <?php
 
+// GENERAL
 Route::livewire('/', 'pages::index');
 Route::livewire('/docs/installation', 'pages::docs.installation');
 Route::livewire('/docs/layout', 'pages::docs.layout');
 Route::livewire('/docs/sidebar', 'pages::docs.sidebar');
 Route::livewire('/docs/demos', 'pages::docs.demos');
-Route::livewire('/docs/customizing', 'pages::docs.components.customizing');
-Route::livewire('/docs/upgrading', 'pages::docs.components.upgrading');
+Route::livewire('/docs/customizing', 'pages::docs.customizing');
+Route::livewire('/docs/upgrading', 'pages::docs.upgrading');
+Route::livewire('/docs/livewire4', 'pages::docs.livewire4');
 Route::livewire('/docs/contributing', 'pages::docs.contributing');
 
 // FORMS
