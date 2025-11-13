@@ -31,7 +31,7 @@
     {{-- Algolia docsearch --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
-    
+
     {{-- Umami Analytics --}}
     <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
 
@@ -53,12 +53,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    {{--    <div class="bg-success/10 text-center p-2 text-sm">--}}
-    {{--        <x-icon name="o-fire" class="h-4 w-4" />--}}
-    {{--        maryUI v2 released!--}}
-    {{--        <a href="/docs/upgrading" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">Upgrade guide</a>--}}
-    {{--        <a href="https://v1.mary-ui.com" class="hidden sm:inline-block underline font-black border-l border-l-base-content/30 pl-2 ml-2">Back to v1</a>--}}
-    {{--    </div>--}}
+    <div class="bg-info/10 text-center p-2 text-sm">
+        <x-icon name="o-bolt" class="h-4 w-4" />
+        Livewire 4 - Beta
+        <a href="/docs/livewire4" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">try it →</a>
+    </div>
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">
