@@ -18,11 +18,11 @@
         "laravel/framework": "^12.16",
         "laravel/tinker": "^2.10",
         "league/flysystem-aws-s3-v3": "^3.29",
-        "livewire/livewire": "^3.6",
-        "livewire/volt": "^1.7",
+        "livewire/livewire": "^4.0@beta",
+        "livewire/volt": "^1.9",
         "mallardduck/blade-lucide-icons": "^1.23",
         "owenvoke/blade-fontawesome": "^2.9",
-        "robsontenorio/mary": "^2.4",
+        "robsontenorio/mary": "dev-main",
         "sentry/sentry-laravel": "^4.13",
         "torchlight/torchlight-laravel": "^0.6.1"
     },
@@ -95,6 +95,15 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "robsontenorio/mary": {
+            "type": "path",
+            "url": "/var/www/html/packages/mary",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
 }

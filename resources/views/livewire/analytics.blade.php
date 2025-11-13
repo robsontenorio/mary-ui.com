@@ -2,7 +2,7 @@
 
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new class extends Component {
     public function visitors(): int|string

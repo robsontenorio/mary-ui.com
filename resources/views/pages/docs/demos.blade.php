@@ -2,11 +2,11 @@
 
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new
 #[Title("Demos")]
-#[Layout('components.layouts.app', ['description' => "Gorgeous demos built with maryUI"])]
+#[Layout('layouts.app', ['description' => "Gorgeous demos built with maryUI"])]
 class extends Component {
     //
 }; ?>

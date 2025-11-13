@@ -6,12 +6,12 @@ use Illuminate\Support\Collection;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\WithMediaSync;
 
-new #[Layout('components.layouts.landing')]
+new #[Layout('layouts.landing')]
 class extends Component {
     use WithFileUploads, WithMediaSync, WithPagination;
 
