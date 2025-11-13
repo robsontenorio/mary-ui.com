@@ -51,6 +51,16 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
+    <x-anchor title="Popover" size="text-xl" class="mt-14" />
+
+    <x-code-example class="grid gap-5 sm:px-64">
+        @verbatim('docs')
+            <x-input label="Name" wire:model="name" popover="Hey" />
+
+            <x-input label="Name" wire:model="name" popover="Hello" popover-icon="o-information-circle" />
+        @endverbatim
+    </x-code-example>
+
     <x-anchor title="Password" size="text-xl" class="mt-14" />
 
     <p>
