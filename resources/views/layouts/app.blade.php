@@ -145,8 +145,7 @@
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
                     <x-menu-item title="Upgrading from v1" link="/docs/upgrading" />
-                    <x-menu-item title="Livewire 4" link="https://livewire4.mary-ui.com/docs/livewire4" external badge="new" badge-classes="badge-warning badge-xs float-right mt-1"
-                                 class="block" />
+                    <x-menu-item title="Livewire 4" link="/docs/livewire4" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">

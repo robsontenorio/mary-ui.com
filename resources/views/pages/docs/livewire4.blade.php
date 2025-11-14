@@ -77,11 +77,13 @@ class extends Component {
     <x-anchor title="Existing projects" size="text-xl" class="mt-14" />
 
     <p>
-        Install Livewire 4 Beta.
+        Install Livewire 4.
     </p>
 
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
+            # TODO: update this when Livewire 4 is released
+
             composer require livewire/livewire:^4.0@beta
         @endverbatim
     </x-code-example>
