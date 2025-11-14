@@ -1,14 +1,15 @@
 <?php
 
 use Livewire\Attributes\Title;
-use Livewire\Component;
+use Livewire\Volt\Component;
 
-new #[Title('Upgrading')]
+new
+#[Title('Upgrading')]
 class extends Component {
 }; ?>
 
 <div class="docs">
-    <x-anchor title="Upgrading to v2" />
+    <x-anchor title="Upgrading from v1" />
 
     <x-anchor title="Why" size="text-xl" class="mt-14" />
 

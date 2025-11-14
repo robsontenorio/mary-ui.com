@@ -56,6 +56,17 @@ class extends Component {
             css: 'bg-pink-500 text-base-100'
         );
     }
+
+    public function save5()
+    {
+        // Your stuff here ...
+
+        // Toast
+        $this->success(
+            'Custom progress class',
+            progressClass: 'progress-error'
+        );
+    }
 }
 ?>
 
@@ -143,6 +154,8 @@ class extends Component {
             <x-button label="Quick" class="btn-error" wire:click="save2" spinner />
 
             <x-button label="Save and redirect" class="btn-warning" wire:click="save3" spinner />
+
+            <x-button label="Custom Progress" class="btn-success" wire:click="save5" spinner />
         @endverbatim
     </x-code-example>
 
@@ -178,6 +191,17 @@ class extends Component {
                     'It is working with redirect',
                     'You were redirected to another url ...',
                     redirectTo: '/docs/components/form'
+                );
+            }
+
+            public function save5()
+            {
+                // Your stuff here ...
+
+                // Toast
+                $this->success(
+                    'Custom progress class',
+                    progressClass: 'progress-error'
                 );
             }
         @endverbatim

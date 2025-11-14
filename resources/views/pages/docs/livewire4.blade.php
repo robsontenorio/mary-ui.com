@@ -25,7 +25,7 @@ class extends Component {
 
     <x-anchor title="Do I need this?" size="text-xl" class="mt-14" />
 
-    <p>If you use class-based components with <b>Volt</b>, yes</p>
+    <p>If you use class-based components with <b>Volt</b>, yes.</p>
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
@@ -165,7 +165,6 @@ class extends Component {
 
     <x-code-example no-render language="bash">
         @verbatim('docs')
-            # Clear the cache
             php artisan config:clear
             php artisan view:clear
         @endverbatim
