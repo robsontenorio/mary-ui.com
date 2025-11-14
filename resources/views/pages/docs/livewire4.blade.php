@@ -165,7 +165,6 @@ class extends Component {
 
     <x-code-example no-render language="bash">
         @verbatim('docs')
-            # Clear the cache
             php artisan config:clear
             php artisan view:clear
         @endverbatim
