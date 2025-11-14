@@ -1,7 +1,7 @@
 <?php
 
 use Livewire\Attributes\Title;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new
 #[Title('Upgrading')]

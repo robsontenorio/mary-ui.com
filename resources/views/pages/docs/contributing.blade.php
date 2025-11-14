@@ -68,7 +68,7 @@ class extends Component {
     <x-anchor title="Docs" size="text-xl" class="mt-14" />
 
     <p>
-        This website is made with Laravel, Livewire Volt and maryUI.
+        This website is made with Laravel, Livewire and maryUI.
     </p>
 
     <x-code-example no-render language="bash">

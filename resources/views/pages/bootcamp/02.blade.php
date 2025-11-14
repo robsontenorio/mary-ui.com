@@ -36,10 +36,6 @@ class extends Component {
 
     <x-anchor title="Install maryUI" size="text-xl" class="mt-14" />
 
-    <p>
-        Make sure you have selected <strong>"Volt"</strong> during this install.
-    </p>
-
     <x-code-example no-render language="bash">
         composer require robsontenorio/mary
 
@@ -60,14 +56,14 @@ class extends Component {
     </p>
 
     <p>
-        We are using Livewire Volt, take a look at:
+        We are using Livewire single file components, take a look at:
     </p>
     <ul>
         <li><code>routes/web.php</code></li>
-        <li><code>resources/views/livewire/users/index.blade.php</code>.</li>
+        <li><code>resources/views/pages/users/index.blade.php</code>.</li>
     </ul>
 
-    <img src="/bootcamp/02-a.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/images/bootcamp/02-a.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-alert icon="o-light-bulb" class="markdown my-10">
         Check the source code diff and commit it.
@@ -80,7 +76,7 @@ class extends Component {
         Let's make it work with a real database and add some new models and relationships.
     </p>
 
-    <img src="/bootcamp/02-b.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/images/bootcamp/02-b.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <p>
         Creating models has nothing to do with maryUI. So, we have created a command to do it for you and speed things up.

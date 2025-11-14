@@ -5,22 +5,23 @@
     "description": "Gorgeous UI components for Livewire powered by daisyUI and Tailwind",
     "keywords": [
         "laravel",
-        "livewire3",
+        "livewire",
         "blade",
         "components",
         "ui",
         "daisyUI",
-        "tailwind"
+        "tailwind",
+        "alpinejs"
     ],
     "license": "MIT",
     "require": {
         "php": "^8.4",
-        "laravel/framework": "^12.16",
+        "laravel/framework": "^12.26",
         "laravel/tinker": "^2.10",
         "league/flysystem-aws-s3-v3": "^3.29",
         "livewire/livewire": "^4.0@beta",
-        "mallardduck/blade-lucide-icons": "^1.23",
-        "owenvoke/blade-fontawesome": "^2.9",
+        "mallardduck/blade-lucide-icons": "^1.24",
+        "owenvoke/blade-fontawesome": "^3.0",
         "robsontenorio/mary": "dev-livewire-4",
         "sentry/sentry-laravel": "^4.13",
         "torchlight/torchlight-laravel": "^0.6.1"

@@ -319,8 +319,7 @@ class extends Component {
     <p>
         You must also consider displaying pre-selected items on list,
         when it <strong>first renders</strong> and <strong>while searching</strong>.
-        There are many approaches to make it work, but here is an example for <strong>single search</strong> using
-        <strong>Volt.</strong>
+        There are many approaches to make it work, but here is an example for <strong>single search</strong>.
     </p>
 
     {{--@formatter:off--}}

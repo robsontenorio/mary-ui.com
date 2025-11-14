@@ -41,11 +41,8 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
         @verbatim('docs')
-            use Illuminate\Support\Facades\Route;
-            use Livewire\Volt\Volt;
-
             // Users will be redirected to this route if not logged in
-            Volt::route('/login', 'login')->name('login');
+            Route::livewire('/login', 'pages::login')->name('login');
 
             // Define the logout
             Route::get('/logout', function () {
@@ -58,10 +55,10 @@ class extends Component {
 
             // Protected routes here
             Route::middleware('auth')->group(function () {
-                Volt::route('/', 'index');
-                Volt::route('/users', 'users.index');
-                Volt::route('/users/create', 'users.create');
-                Volt::route('/users/{user}/edit', 'users.edit');
+                Route::livewire('/', 'pages::index');
+                Route::livewire('/users', 'pages::users.index');
+                Route::livewire('/users/create', 'pages::users.create');
+                Route::livewire('/users/{user}/edit', 'pages::users.edit');
                 // ... more
             });
 
@@ -105,7 +102,7 @@ class extends Component {
     </p>
 
     <x-code-example no-render language="zsh">
-        php artisan make:volt login --class
+        php artisan livewire:make pages::login
     </x-code-example>
 
     {{--@formatter:off--}}
@@ -190,10 +187,8 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
         @verbatim('docs')
-            use Livewire\Volt\Volt;
-
             // Public routes
-            Volt::route('/register', 'register'); // [tl! highlight]
+            Route::livewire('/register', 'pages::register'); // [tl! highlight]
 
             // Protected routes here
             Route::middleware('auth')->group(function () {
@@ -209,7 +204,7 @@ class extends Component {
     </p>
 
     <x-code-example no-render language="zsh">
-        php artisan make:volt register --class
+        php artisan livewire:make pages::register
     </x-code-example>
 
     {{--@formatter:off--}}

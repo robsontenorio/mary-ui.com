@@ -28,14 +28,14 @@ class extends Component {
         <x-button label="Ready? Go!" link="/bootcamp/02" icon-right="o-arrow-right" class="btn-neutral my-5 !no-underline" />
     </div>
     <div class="px-10 my-10">
-        <img src="/bootcamp/01-c.png?new=2025" class="rounded-lg border border-base-300 shadow-xl rotate-1" />
+        <img src="/images/bootcamp/01-c.png?new=2025" class="rounded-lg border border-base-300 shadow-xl rotate-1" />
     </div>
 
     <div class="flex gap-5 overflow-x-auto pb-10 pt-5 px-3">
-        <img src="/bootcamp/01-a.png?new=2025" class="rounded-lg border border-base-300 h-64 -rotate-1" />
-        <img src="/bootcamp/01-b.png?new=2025" class="rounded-lg border border-base-300 h-64 -rotate-1" />
-        <img src="/bootcamp/01-e.png?new=2025" class="rounded-lg border border-base-300 h-64 rotate-1" />
-        <img src="/bootcamp/01-d.png?new=2025" class="rounded-lg border border-base-300 h-64 -rotate-1" />
+        <img src="/images/bootcamp/01-a.png?new=2025" class="rounded-lg border border-base-300 h-64 -rotate-1" />
+        <img src="/images/bootcamp/01-b.png?new=2025" class="rounded-lg border border-base-300 h-64 -rotate-1" />
+        <img src="/images/bootcamp/01-e.png?new=2025" class="rounded-lg border border-base-300 h-64 rotate-1" />
+        <img src="/images/bootcamp/01-d.png?new=2025" class="rounded-lg border border-base-300 h-64 -rotate-1" />
     </div>
 
     <div class="text-center my-10">

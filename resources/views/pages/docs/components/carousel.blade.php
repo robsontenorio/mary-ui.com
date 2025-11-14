@@ -25,16 +25,16 @@ class extends Component {
             @php
                 $slides = [
                     [
-                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',
                     ],
                     [
-                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
                     ],
                     [
-                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
                     ],
                     [
-                        'image' => '/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
                     ],
                 ];
             @endphp
@@ -50,16 +50,16 @@ class extends Component {
             @php                                                                        // [tl! .docs-hide]
                 $slides = [                                                             // [tl! .docs-hide]
                     [                                                                    // [tl! .docs-hide]
-                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',      // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',      // [tl! .docs-hide]
                     ],                                                                  // [tl! .docs-hide]
                     [                                                                   // [tl! .docs-hide]
-                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',         // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',         // [tl! .docs-hide]
                     ],                                                                  // [tl! .docs-hide]
                     [                                                                  // [tl! .docs-hide]
-                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',      // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',      // [tl! .docs-hide]
                     ],                                                                  // [tl! .docs-hide]
                     [                                                                   // [tl! .docs-hide]
-                        'image' => '/photos/photo-1572635148818-ef6fd45eb394.jpg',      // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',      // [tl! .docs-hide]
                     ],                                                                  // [tl! .docs-hide]
                 ];                                                                      // [tl! .docs-hide]
             @endphp                                                                     <!-- [tl! .docs-hide] -->
@@ -74,16 +74,16 @@ class extends Component {
             @php                                                                    // [tl! .docs-hide]
                 $slides = [                                                         // [tl! .docs-hide]
                    [                                                                // [tl! .docs-hide]
-                        'image' => '/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                     [                                                               // [tl! .docs-hide]
-                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                      [                                                              // [tl! .docs-hide]
-                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                     [                                                               // [tl! .docs-hide]
-                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                 ];                                                                  // [tl! .docs-hide]
             @endphp                                                                 <!-- [tl! .docs-hide] -->
@@ -99,16 +99,16 @@ class extends Component {
             @php                                                                    // [tl! .docs-hide]
                 $slides = [                                                         // [tl! .docs-hide]
                    [                                                                // [tl! .docs-hide]
-                        'image' => '/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                     [                                                               // [tl! .docs-hide]
-                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                      [                                                              // [tl! .docs-hide]
-                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                     [                                                               // [tl! .docs-hide]
-                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
                     ],                                                              // [tl! .docs-hide]
                 ];                                                                  // [tl! .docs-hide]
             @endphp                                                                 <!-- [tl! .docs-hide] -->
@@ -137,24 +137,24 @@ class extends Component {
             @php
                 $slides = [
                     [
-                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
                         'title' => 'Frontend developers',
                         'description' => 'We love last week frameworks.',
                         'url' => '/docs/installation',
                         'urlText' => 'Get started',
                     ],
                     [
-                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
                         'title' => 'Full stack developers',
                         'description' => 'Where burnout is just a fancy term for Tuesday.',
                     ],
                     [
-                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',
                         'url' => '/docs/installation',
                         'urlText' => 'Let`s go!',
                     ],
                     [
-                        'image' => '/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
                         'url' => '/docs/installation',
                     ],
                 ];
@@ -176,15 +176,15 @@ class extends Component {
             @php
                 $slides = [
                     [
-                        'image' => '/photos/photo-1559703248-dcaaec9fab78.jpg',
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
                         'title' => 'Frontend developers',
                     ],
                     [
-                        'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
                         'title' => 'Full stack developers',
                     ],
                     [
-                        'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',
                         'title' => 'Hey!',
                     ],
                 ];

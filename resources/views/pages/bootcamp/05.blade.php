@@ -21,7 +21,7 @@ class extends Component {
         Check the docs for more.
     </p>
 
-    <img src="/bootcamp/05-c.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
+    <img src="/images/bootcamp/05-c.png?new=2025" class="rounded-lg shadow border border-base-300 my-10 border-dashed p-2" />
 
     <x-anchor title="Searching" size="text-xl" class="mt-14" />
 
