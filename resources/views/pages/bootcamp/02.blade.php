@@ -38,7 +38,7 @@ class extends Component {
 
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
-            composer require robsontenorio/mary
+            composer require robsontenorio/mary:dev-livewire-4
 
             php artisan mary:install
         @endverbatim

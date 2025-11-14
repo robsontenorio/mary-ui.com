@@ -23,6 +23,10 @@ class extends Component {
         This is about Livewire/Volt and <b>has nothing to do</b> with maryUI.
     </p>
 
+    <p>
+        This site is running with <b>Livewire 4</b>. If you find some bug, please report it.
+    </p>
+
     <x-anchor title="Do I need this?" size="text-xl" class="mt-14" />
 
     <p>If you use class-based components with <b>Volt</b>, yes.</p>
@@ -56,7 +60,21 @@ class extends Component {
         Now Livewire offers native support for class-based components. So, you need <b>to remove Volt</b> to avoid conflicts.
     </p>
 
-    <x-anchor title="Upgrade" size="text-xl" class="mt-14" />
+    <x-anchor title="Brand new projects" size="text-xl" class="mt-14" />
+
+    <p>
+        Just install maryUI from <code>dev-livewire-4</code> branch and you are done!
+    </p>
+
+    <x-code-example no-render language="shellscript">
+        @verbatim('docs')
+            composer require robsontenorio/mary:dev-livewire-4
+
+            php artisan mary:install
+        @endverbatim
+    </x-code-example>
+
+    <x-anchor title="Existing projects" size="text-xl" class="mt-14" />
 
     <p>
         Install Livewire 4 Beta.

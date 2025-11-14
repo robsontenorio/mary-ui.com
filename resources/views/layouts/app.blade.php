@@ -102,9 +102,9 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-info/10 text-center p-2 text-sm">
+    <div class="bg-secondary/20 text-center p-2 text-sm">
         <x-icon name="o-bolt" class="h-4 w-4" />
-        Livewire 4 - Beta
+        Docs running with Livewire 4 - Beta
         <a href="/docs/livewire4" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">try it →</a>
     </div>
     <x-nav sticky>
@@ -145,7 +145,8 @@
                     <x-menu-item title="Customizing" link="/docs/customizing" />
                     <x-menu-item title="Contributing" link="/docs/contributing" />
                     <x-menu-item title="Upgrading from v1" link="/docs/upgrading" />
-                    <x-menu-item title="Livewire 4" link="/docs/livewire4" badge="new" badge-classes="badge-warning badge-xs float-right mt-1" class="block" />
+                    <x-menu-item title="Livewire 4" link="https://livewire4.mary-ui.com/docs/livewire4" external badge="new" badge-classes="badge-warning badge-xs float-right mt-1"
+                                 class="block" />
                 </x-menu-sub>
 
                 <x-menu-sub title="Forms" icon="o-code-bracket-square">
@@ -222,6 +223,7 @@
                 <x-menu-separator />
 
                 <x-menu-item title="Go to v1 docs" link="https://v1.mary-ui.com" icon="o-backward" external />
+                <x-menu-item title="Go to stable docs" link="https://mary-ui.com" icon="o-backward" external />
             </x-menu>
         </x-slot:sidebar>
 
