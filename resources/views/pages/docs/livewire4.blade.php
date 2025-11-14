@@ -175,6 +175,7 @@ class extends Component {
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
             rm app/providers/VoltServiceProvider.php
+        
             composer remove livewire/volt
         @endverbatim
     </x-code-example>
@@ -186,6 +187,7 @@ class extends Component {
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
             php artisan config:clear
+
             php artisan view:clear
         @endverbatim
     </x-code-example>
