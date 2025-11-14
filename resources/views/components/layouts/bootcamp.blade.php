@@ -56,7 +56,7 @@
     <div class="bg-info/10 text-center p-2 text-sm">
         <x-icon name="o-bolt" class="h-4 w-4" />
         Livewire 4 - Beta
-        <a href="/docs/livewire4" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">try it →</a>
+        <a href="https://livewire4.mary-ui.com/docs/livewire4" target="_blank" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">try it →</a>
     </div>
     <x-nav sticky>
         <x-slot:brand>
