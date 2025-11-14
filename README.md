@@ -1,4 +1,4 @@
-<p align="center"><img width="200" src="public/mary.png"></p>
+<p align="center"><img width="200" src="public/images/mary.png"></p>
 
 ## Introduction
 
@@ -18,7 +18,7 @@ Come to say hello on [maryUI Discord](https://discord.gg/c2Dv8T2X2s)
 
 ## Contributing
 
-This website is made with Laravel, Livewire Volt and maryUI.
+This website is made with Laravel, Livewire and maryUI.
 
 Clone the repository.
 

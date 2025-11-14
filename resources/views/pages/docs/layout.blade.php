@@ -1,9 +1,10 @@
 <?php
 
 use Livewire\Attributes\Title;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
-new #[Title('Layout')] class extends Component {
+new #[Title('Layout')]
+class extends Component {
 }
 ?>
 

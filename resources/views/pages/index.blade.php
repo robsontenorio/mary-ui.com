@@ -6,12 +6,12 @@ use Illuminate\Support\Collection;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\WithMediaSync;
 
-new #[Layout('components.layouts.landing')]
+new #[Layout('layouts.landing')]
 class extends Component {
     use WithFileUploads, WithMediaSync, WithPagination;
 
@@ -105,10 +105,10 @@ class extends Component {
             {{--            </span>--}}
 
             <div class="flex gap-5 justify-center items-center my-10">
-                <img src="/laravel.png" class="object-contain w-9 h-9" />
-                <img src="/livewire.png" class="object-contain w-11 h-9" />
-                <img src="/tailwind.png" class="object-contain w-13 h-11" />
-                <img src="/daisyui.png" class="object-contain w-9 h-12" />
+                <img src="/images/tech/laravel.png" class="object-contain w-9 h-9" />
+                <img src="/images/tech/livewire.png" class="object-contain w-11 h-9" />
+                <img src="/images/tech/tailwind.png" class="object-contain w-13 h-11" />
+                <img src="/images/tech/daisyui.png" class="object-contain w-9 h-12" />
             </div>
 
             <div class="text-xl lg:text-4xl lg:leading-12 justify-self-auto m-auto">
@@ -155,7 +155,7 @@ class extends Component {
                     </div>
                     <div class="mb-8 -mt-3">
                         <a href="https://naqrat.sa" target="_blank">
-                            <img src="partners/naqrat.png" class="inline-block h-24 rounded object-contain" />
+                            <img src="/images/partners/naqrat.png" class="inline-block h-24 rounded object-contain" />
                         </a>
                     </div>
                     <div class="text-base-content/60 text-xs">
@@ -190,11 +190,11 @@ class extends Component {
             <div>
                 @php
                     $images = [
-                        '/photos/photo-1559703248-dcaaec9fab78.jpg',
-                        '/photos/photo-1572635148818-ef6fd45eb394.jpg',
-                        '/photos/photo-1565098772267-60af42b81ef2.jpg',
-                        '/photos/photo-1494253109108-2e30c049369b.jpg',
-                        '/photos/photo-1550258987-190a2d41a8ba.jpg',
+                        '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
+                        '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                        '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
+                        '/images/photos/photo-1494253109108-2e30c049369b.jpg',
+                        '/images/photos/photo-1550258987-190a2d41a8ba.jpg',
                     ]
                 @endphp
 
@@ -239,7 +239,7 @@ class extends Component {
                     <div>
                         <div>
                             <a href="https://bird.mary-ui.com" target="_blank">
-                                <img src="/bird-demo.png?u=2025-06-01" />
+                                <img src="/images/demos/bird-demo.png?u=2025-06-01" />
                             </a>
                         </div>
                     </div>
@@ -259,7 +259,7 @@ class extends Component {
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <a href="https://ping.mary-ui.com" target="_blank">
-                            <img src="/ping-demo.png?u=2025-04-09" />
+                            <img src="/images/demos/ping-demo.png?u=2025-04-09" />
                         </a>
                     </div>
                 </div>
@@ -274,7 +274,7 @@ class extends Component {
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <a href="https://flow.mary-ui.com" target="_blank">
-                            <img src="/flow-demo.png?u=2025-04-09" />
+                            <img src="/images/demos/flow-demo.png?u=2025-04-09" />
                         </a>
                     </div>
                 </div>
@@ -289,7 +289,7 @@ class extends Component {
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <a href="https://orange.mary-ui.com" target="_blank">
-                            <img src="/orange-demo.png?u=2025-04-09" />
+                            <img src="/images/demos/orange-demo.png?u=2025-04-09" />
                         </a>
                     </div>
                 </div>
@@ -303,7 +303,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <a href="https://paper.mary-ui.com" target="_blank">
-                        <img src="/paper-demo.png?u=2025-04-09" />
+                        <img src="/images/demos/paper-demo.png?u=2025-04-09" />
                     </a>
                 </div>
                 <div class="mt-5">
@@ -453,7 +453,6 @@ class extends Component {
 
         {{--@formatter:off--}}
         <x-code-example side-by-side render-col-span="5" code-col-span="7" class="grid gap-5">
-
             @verbatim('docs')
                 @php
                     use App\Models\User; // [tl! .docs-hide]

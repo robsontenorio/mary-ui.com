@@ -2,11 +2,11 @@
 
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
 new
 #[Title('Sidebar')]
-#[Layout('components.layouts.app', ['description' => 'Livewire UI sidebar component'])]
+#[Layout('layouts.app', ['description' => 'Livewire UI sidebar component'])]
 class extends Component {
     //
 }; ?>
