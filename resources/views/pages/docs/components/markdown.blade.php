@@ -53,7 +53,7 @@ class extends Component {
     <p>
         If you are using the <strong>local disk</strong> remember to run this.
     </p>
-    <x-code-example language="bash" no-render>
+    <x-code-example language="shellscript" no-render>
         @verbatim('docs')
             php artisan storage:link
         @endverbatim

@@ -24,10 +24,12 @@ class extends Component {
     Let's create some new components.
 
     {{--@formatter:off--}}
-    <x-code-example no-render language="bash">
-        php artisan livewire:make pages::index              # Home
-        php artisan livewire:make pages::users/create       # Create
-        php artisan livewire:make pages::users/edit         # Edit
+    <x-code-example no-render language="shellscript">
+        @verbatim('docs')
+            php artisan livewire:make pages::index              # Home
+            php artisan livewire:make pages::users/create       # Create
+            php artisan livewire:make pages::users/edit         # Edit
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -37,11 +39,13 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        Route::livewire('/', 'pages::users.index'); // [tl! remove]
-        Route::livewire('/', 'pages::index');                          // Home [tl! add]
-        Route::livewire('/users', 'pages::users.index');               // User (list) [tl! add]
-        Route::livewire('/users/create', 'pages::users.create');       // User (create) [tl! add]
-        Route::livewire('/users/{user}/edit', 'pages::users.edit');    // User (edit) [tl! add]
+        @verbatim('docs')
+            Route::livewire('/', 'pages::users.index'); // [tl! remove]
+            Route::livewire('/', 'pages::index');                          // Home [tl! add]
+            Route::livewire('/users', 'pages::users.index');               // User (list) [tl! add]
+            Route::livewire('/users/create', 'pages::users.create');       // User (create) [tl! add]
+            Route::livewire('/users/{user}/edit', 'pages::users.edit');    // User (edit) [tl! add]
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -267,7 +271,7 @@ class extends Component {
         In order to upload files with Laravel remember you need to create a storage link to make the local disk available.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         php artisan storage:link
     </x-code-example>
 
@@ -326,21 +330,21 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
         @verbatim('docs')
-        public function save()
-        {
-            $data = $this->validate();
+            public function save()
+            {
+                $data = $this->validate();
 
-            $this->user->update($data);
+                $this->user->update($data);
 
-            // Upload file and save the avatar `url` on User model
-            if ($this->photo) { // [tl! highlight:3]
-                $url = $this->photo->store('users', 'public');
-                $this->user->update(['avatar' => "/storage/$url"]);
+                // Upload file and save the avatar `url` on User model
+                if ($this->photo) { // [tl! highlight:3]
+                    $url = $this->photo->store('users', 'public');
+                    $this->user->update(['avatar' => "/storage/$url"]);
+                }
+
+                $this->success('User updated.', redirectTo: '/users');
             }
-
-            $this->success('User updated.', redirectTo: '/users');
-        }
-    @endverbatim
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 

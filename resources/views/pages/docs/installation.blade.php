@@ -33,10 +33,12 @@ class extends Component {
         and <a href="/docs/layout" wire:navigate>Sidebar</a> docs.
     </p>
 
-    <x-code-example no-render language="bash">
-        composer require robsontenorio/mary
+    <x-code-example no-render language="shellscript">
+        @verbatim('docs')
+            composer require robsontenorio/mary
 
-        php artisan mary:install
+            php artisan mary:install
+        @endverbatim
     </x-code-example>
 
     <p>
@@ -44,7 +46,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         yarn dev   # or `npm run dev`
     </x-code-example>
     {{--@formatter:on--}}
@@ -59,7 +61,7 @@ class extends Component {
         If for some reason you need to rename maryUI components using a custom prefix, publish the config file.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         php artisan vendor:publish --tag mary.config
     </x-code-example>
 
@@ -86,7 +88,7 @@ class extends Component {
 
     Make sure to clear view cache after renaming.
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         php artisan view:clear
     </x-code-example>
 

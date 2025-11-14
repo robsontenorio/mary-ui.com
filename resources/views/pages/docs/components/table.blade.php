@@ -477,15 +477,17 @@ class extends Component {
             <x-slot:heading>Traditional</x-slot:heading>
             <x-slot:content>
                 <x-code-example no-render language="sass">
-        /** General button **/
-        .mary-table-pagination button {
-            @apply cursor-pointer
-        }
+                    @verbatim('docs')
+                        /** General button **/
+                        .mary-table-pagination button {
+                            @apply cursor-pointer
+                        }
 
-        /** Active button **/
-        .mary-table-pagination span[aria-current="page"] > span {
-            @apply bg-primary text-base-100
-        }
+                        /** Active button **/
+                        .mary-table-pagination span[aria-current="page"] > span {
+                            @apply bg-primary text-base-100
+                        }
+                    @endverbatim
                 </x-code-example>
             </x-slot:content>
         </x-collapse>
@@ -493,23 +495,25 @@ class extends Component {
             <x-slot:heading>Minimalist (used in this docs)</x-slot:heading>
             <x-slot:content>
                 <x-code-example no-render language="sass">
-        .mary-table-pagination {
-            button, span {
-                @apply text-xs border-none
-            }
+                    @verbatim('docs')
+                        .mary-table-pagination {
+                            button, span {
+                                @apply text-xs border-none
+                            }
 
-            button {
-                @apply cursor-pointer
-            }
+                            button {
+                                @apply cursor-pointer
+                            }
 
-            span[aria-current="page"] > span {
-                @apply bg-base-content/5
-            }
+                            span[aria-current="page"] > span {
+                                @apply bg-base-content/5
+                            }
 
-            button, span[aria-current="page"] > span, span[aria-disabled="true"] span {
-                @apply py-1 px-2
-            }
-        }
+                            button, span[aria-current="page"] > span, span[aria-disabled="true"] span {
+                                @apply py-1 px-2
+                            }
+                        }
+                    @endverbatim
                 </x-code-example>
             </x-slot:content>
         </x-collapse>

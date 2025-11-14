@@ -101,7 +101,7 @@ class extends Component {
         Create the login component.
     </p>
 
-    <x-code-example no-render language="zsh">
+    <x-code-example no-render language="shellscript">
         php artisan livewire:make pages::login
     </x-code-example>
 
@@ -203,7 +203,7 @@ class extends Component {
         Create the registration form.
     </p>
 
-    <x-code-example no-render language="zsh">
+    <x-code-example no-render language="shellscript">
         php artisan livewire:make pages::register
     </x-code-example>
 

@@ -43,7 +43,7 @@ class extends Component {
 
             <p>Upgrade to Laravel 12 (optional).</p>
 
-            <x-code-example no-render language="bash">
+            <x-code-example no-render language="shellscript">
                 @verbatim('docs')
                     # It is a good time to upgrade all the things.
                 @endverbatim
@@ -51,7 +51,7 @@ class extends Component {
 
             <p>Install maryUI v2.</p>
 
-            <x-code-example no-render language="bash">
+            <x-code-example no-render language="shellscript">
                 @verbatim('docs')
                     composer require robsontenorio/mary:^2.0
 
@@ -62,7 +62,7 @@ class extends Component {
 
             <p>Adjust your JS dependencies.</p>
 
-            <x-code-example no-render language="bash">
+            <x-code-example no-render language="shellscript">
                 @verbatim('docs')
                     # Remove `tailwind.config.js` and `postcss.config.js` from your project.
                     rm tailwind.config.js postcss.config.js
@@ -169,7 +169,7 @@ class extends Component {
     </p>
 
     {{--@formatter:off--}}
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             # There is no default border color anymore
             <hr/>

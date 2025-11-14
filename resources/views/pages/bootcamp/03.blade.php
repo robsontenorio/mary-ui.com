@@ -40,16 +40,18 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        use Illuminate\Database\Eloquent\Builder;
+        @verbatim('docs')
+            use Illuminate\Database\Eloquent\Builder;
 
-        public function users(): Collection
-        {
-            return User::query()
-                ->with(['country'])
-                ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
-                ->orderBy(...array_values($this->sortBy))
-                ->get();
-        }
+            public function users(): Collection
+            {
+                return User::query()
+                    ->with(['country'])
+                    ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
+                    ->orderBy(...array_values($this->sortBy))
+                    ->get();
+            }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -118,12 +120,14 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        use Livewire\WithPagination; // [tl! highlight]
+        @verbatim('docs')
+            use Livewire\WithPagination; // [tl! highlight]
 
-        new class extends Component
-        {
-            use WithPagination; // [tl! highlight]
-        }
+            new class extends Component
+            {
+                use WithPagination; // [tl! highlight]
+            }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -143,16 +147,18 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        use Illuminate\Pagination\LengthAwarePaginator; // [tl! highlight]
+        @verbatim('docs')
+            use Illuminate\Pagination\LengthAwarePaginator; // [tl! highlight]
 
-        public function users(): LengthAwarePaginator // [tl! highlight]
-        {
-            return User::query()
-                ->withAggregate('country', 'name')
-                ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
-                ->orderBy(...array_values($this->sortBy))
-                ->paginate(5); // No more `->get()`  [tl! highlight]
-        }
+            public function users(): LengthAwarePaginator // [tl! highlight]
+            {
+                return User::query()
+                    ->withAggregate('country', 'name')
+                    ->when($this->search, fn(Builder $q) => $q->where('name', 'like', "%$this->search%"))
+                    ->orderBy(...array_values($this->sortBy))
+                    ->paginate(5); // No more `->get()`  [tl! highlight]
+            }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -197,13 +203,13 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
         @verbatim('docs')
-        // Clear filters
-        public function clear(): void
-        {
-            $this->reset();
-            $this->resetPage(); // [tl! highlight]
-            $this->success('Filters cleared.', position: 'toast-bottom');
-        }
+            // Clear filters
+            public function clear(): void
+            {
+                $this->reset();
+                $this->resetPage(); // [tl! highlight]
+                $this->success('Filters cleared.', position: 'toast-bottom');
+            }
         @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
@@ -259,11 +265,13 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        public function delete(User $user): void
-        {
-            $user->delete();
-            $this->warning("$user->name deleted", 'Good bye!', position: 'toast-bottom');
-        }
+        @verbatim('docs')
+            public function delete(User $user): void
+            {
+                $user->delete();
+                $this->warning("$user->name deleted", 'Good bye!', position: 'toast-bottom');
+            }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 

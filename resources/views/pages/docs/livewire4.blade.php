@@ -62,7 +62,7 @@ class extends Component {
         Install Livewire 4 Beta.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             composer require livewire/livewire:^4.0@beta
         @endverbatim
@@ -109,7 +109,7 @@ class extends Component {
         Move all the layout files.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             `resources/views/components/layouts/*.blade.php` ➡️ `resources/views/layouts/*.blade.php
 
@@ -152,7 +152,7 @@ class extends Component {
         Remove Volt.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             rm app/providers/VoltServiceProvider.php
             composer remove livewire/volt
@@ -163,7 +163,7 @@ class extends Component {
         Clear the cache.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             php artisan config:clear
             php artisan view:clear

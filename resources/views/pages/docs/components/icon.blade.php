@@ -45,16 +45,21 @@ class extends Component {
         You can install any compatible blade iconset <a href="https://github.com/blade-ui-kit/blade-icons#icon-packages" target="_blank">listed here</a>.
     </p>
     <p>
-        Here is an example for FontAwsome and Lucide iconsets.
+        Here is an example for Font Awesome and Lucide iconsets.
     </p>
-    <x-code-example no-render language="bash">
-        composer require owenvoke/blade-fontawesome
-        composer require mallardduck/blade-lucide-icons
+    <x-code-example no-render language="shellscript">
+        @verbatim('docs')
+            # Font Awesome
+            composer require owenvoke/blade-fontawesome
+
+            # Lucide
+            composer require mallardduck/blade-lucide-icons
+        @endverbatim
     </x-code-example>
 
     <x-code-example class="flex gap-5">
         @verbatim('docs')
-            {{-- FontAwsome variants --}}
+            {{-- Font Awesome variants --}}
             <x-icon name="fas.cloud" />
             <x-icon name="far.circle-play" />
             <x-icon name="fab.facebook" />
@@ -69,7 +74,7 @@ class extends Component {
         As advised by <a href="https://github.com/blade-ui-kit/blade-icons#caching">Blade Icons docs</a> it is a good idea to put icons on cache at the
         <strong>production environment</strong>.
     </p>
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         php artisan icons:cache
     </x-code-example>
 </div>

@@ -28,7 +28,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/bird-demo.png?u=2025-06-01" class="h-48 w-full" />
+                        <img src="/images/demos/bird-demo.png?u=2025-06-01" class="h-48 w-full" />
                     </div>
                 </div>
             </a>
@@ -48,7 +48,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/ping-demo.png?u=2025-04-09" />
+                        <img src="/images/demos/ping-demo.png?u=2025-04-09" />
                     </div>
                 </div>
             </a>
@@ -63,7 +63,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/flow-demo.png?u=2025-04-09" />
+                        <img src="/images/demos/flow-demo.png?u=2025-04-09" />
                     </div>
                 </div>
             </a>
@@ -78,7 +78,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/orange-demo.png?u=2025-04-09" />
+                        <img src="/images/demos/orange-demo.png?u=2025-04-09" />
                     </div>
                 </div>
             </a>
@@ -93,7 +93,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <div>
-                        <img src="/paper-demo.png?u=2025-04-09" />
+                        <img src="/images/demos/paper-demo.png?u=2025-04-09" />
                     </div>
                 </div>
             </a>

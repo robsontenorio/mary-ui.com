@@ -68,30 +68,6 @@ class extends Component {
         This is the advised approach for applying a global style across the components, through the daisyUI theming system.
     </p>
 
-    <div data-theme="mytheme">
-        <x-code-example class="grid gap-5">
-            @verbatim('docs')
-                <x-input />
-                <x-select />
-            @endverbatim
-        </x-code-example>
-        {{--@formatter:off--}}
-        <x-code-example no-render language="less">
-            @verbatim('docs')
-            @plugin "daisyui/theme" {
-                name: "light";              /* the theme name you want to override */
-                default: true;              /* set as default */
-                prefersdark: false;         /* set as default dark mode (prefers-color-scheme:dark) */
-                color-scheme: light;        /* color of browser-provided UI */
-
-                /* Custom styles ...*/
-                --radius-field: 2.25rem;
-            }
-            @endverbatim
-        </x-code-example>
-        {{--@formatter:on--}}
-    </div>
-
     <x-anchor title="Through `app.css`" size="text-xl" class="mt-14 !mb-5" />
 
     <p>
@@ -119,7 +95,7 @@ class extends Component {
         {{--@formatter:on--}}
 
         {{--@formatter:off--}}
-        <x-code-example no-render language="less">
+        <x-code-example no-render language="css">
             @verbatim('docs')
                 .input:not([class*="!input-error"]),
                 .select:not([class*="!select-error"]),

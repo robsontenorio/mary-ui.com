@@ -43,8 +43,10 @@ class extends Component {
     </x-code-example>
 
     <x-code-example no-render language="php">
-        public bool $showDrawer1 = false;
-        public bool $showDrawer2 = false;
+        @verbatim('docs')
+            public bool $showDrawer1 = false;
+            public bool $showDrawer2 = false;
+        @endverbatim
     </x-code-example>
 
     <x-anchor title="Complex" size="text-xl" class="mt-14" />

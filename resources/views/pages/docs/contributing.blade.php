@@ -24,7 +24,7 @@ class extends Component {
         Clone the repository into some folder <strong>inside your app</strong>.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         git clone git@github.com:robsontenorio/mary.git
     </x-code-example>
 
@@ -53,7 +53,7 @@ class extends Component {
         Require the package again for local symlink.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         composer require robsontenorio/mary
     </x-code-example>
 
@@ -61,7 +61,7 @@ class extends Component {
         Start the dev server.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         yarn dev
     </x-code-example>
 
@@ -71,7 +71,7 @@ class extends Component {
         This website is made with Laravel, Livewire and maryUI.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         git clone git@github.com:robsontenorio/mary-ui.com.git
     </x-code-example>
 
@@ -79,7 +79,7 @@ class extends Component {
         Create the <code>.env</code> from <code>.env.example</code>.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         cp .env .env.example
     </x-code-example>
 
@@ -87,7 +87,7 @@ class extends Component {
         Install, migrate and start.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         composer start
     </x-code-example>
 

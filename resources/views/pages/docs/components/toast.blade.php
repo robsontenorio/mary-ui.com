@@ -137,8 +137,10 @@ class extends Component {
     </p>
 
     <x-code-example no-render language="php">
-        session()->flash('mary.toast.title', $title);
-        session()->flash('mary.toast.description', $description);
+        @verbatim('docs')
+            session()->flash('mary.toast.title', $title);
+            session()->flash('mary.toast.description', $description);
+        @endverbatim
     </x-code-example>
 
     <x-anchor title="Example" size="text-xl" class="mt-14" />
@@ -268,18 +270,18 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
         @verbatim('docs')
-        use Mary\Exceptions\ToastException;
+            use Mary\Exceptions\ToastException;
 
-        public function notALivewireMethod()
-        {
-            throw ToastException::error('Your operation could not complete');
+            public function notALivewireMethod()
+            {
+                throw ToastException::error('Your operation could not complete');
 
-            // Shortcuts with the same API from Toast trait
-            throw ToastException::success(...);
-            throw ToastException::error(...);
-            throw ToastException::warning(...);
-            throw ToastException::info(...);
-        }
+                // Shortcuts with the same API from Toast trait
+                throw ToastException::success(...);
+                throw ToastException::error(...);
+                throw ToastException::warning(...);
+                throw ToastException::info(...);
+            }
         @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
@@ -298,12 +300,12 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
         @verbatim('docs')
-        use Mary\Exceptions\ToastException;
+            use Mary\Exceptions\ToastException;
 
-        public function notALivewireMethod()
-        {
-            throw ToastException::info('Do not prevent default on client side')->permitDefault();
-        }
+            public function notALivewireMethod()
+            {
+                throw ToastException::info('Do not prevent default on client side')->permitDefault();
+            }
         @endverbatim
     </x-code-example>
     {{--@formatter:on--}}

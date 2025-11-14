@@ -26,7 +26,7 @@ class extends Component {
         <li>SQLite database.</li>
     </ul>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         laravel new myapp
     </x-code-example>
 
@@ -36,17 +36,19 @@ class extends Component {
 
     <x-anchor title="Install maryUI" size="text-xl" class="mt-14" />
 
-    <x-code-example no-render language="bash">
-        composer require robsontenorio/mary
+    <x-code-example no-render language="shellscript">
+        @verbatim('docs')
+            composer require robsontenorio/mary
 
-        php artisan mary:install
+            php artisan mary:install
+        @endverbatim
     </x-code-example>
 
     <p>
         Start the dev server.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         yarn dev
     </x-code-example>
 
@@ -83,7 +85,7 @@ class extends Component {
         After running it, it is important to take a <strong>look at the database</strong> to see what is going on.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         php artisan mary:bootcamp
     </x-code-example>
 

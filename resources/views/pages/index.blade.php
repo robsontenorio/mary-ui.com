@@ -453,7 +453,6 @@ class extends Component {
 
         {{--@formatter:off--}}
         <x-code-example side-by-side render-col-span="5" code-col-span="7" class="grid gap-5">
-
             @verbatim('docs')
                 @php
                     use App\Models\User; // [tl! .docs-hide]

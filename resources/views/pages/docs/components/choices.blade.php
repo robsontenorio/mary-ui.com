@@ -404,10 +404,10 @@ class extends Component {
     <!-- @formatter:off -->
     <x-code-example no-render language="php">
         @verbatim('docs')
-        public function search(string $value = '', int $extra1 = 0, string $extra2 = '')
-        {
-            // The first parameter is the default and comes from the search input.
-        }
+            public function search(string $value = '', int $extra1 = 0, string $extra2 = '')
+            {
+                // The first parameter is the default and comes from the search input.
+            }
         @endverbatim
     </x-code-example>
     <!-- @formatter:on -->

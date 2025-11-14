@@ -239,7 +239,7 @@ class extends Component {
         If for some reason you want to change the search class, publish the config file.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         php artisan vendor:publish --tag mary.config
     </x-code-example>
 

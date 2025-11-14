@@ -103,9 +103,10 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-16">
         @verbatim('docs')
-            @php                                                // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();       // [tl! .docs-hide]
-            @endphp                                             <!-- [tl! .docs-hide] -->
+            <!-- [tl! .docs-hide:2] -->
+            @php
+                $users = App\Models\User::take(5)->get();
+            @endphp
             <x-input label="Prepend a select">
                 <x-slot:prepend>
                     {{-- Add `join-item` to all prepended elements --}}
