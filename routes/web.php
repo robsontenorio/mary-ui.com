@@ -9,6 +9,7 @@ Volt::route('/docs/sidebar', 'docs.sidebar');
 Volt::route('/docs/demos', 'docs.demos');
 Volt::route('/docs/customizing', 'docs.components.customizing');
 Volt::route('/docs/upgrading', 'docs.components.upgrading');
+Volt::route('/docs/livewire4', 'docs.livewire4');
 Volt::route('/docs/contributing', 'docs.contributing');
 
 // FORMS
