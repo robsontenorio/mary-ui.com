@@ -186,7 +186,9 @@ class extends Component {
                 <x-menu-sub title="Attendance">
                     <x-menu-item title="Start" link="{{ route('attendance.index') }}" route="attendance.index" />
                     <x-menu-item title="View" link="{{ route('attendance.list') }}" route="attendance.list" />
+                    <x-menu-item title="Inbox" route="messages" :route-params="['folder' => 'inbox']" />
                 </x-menu-sub>
+            </x-menu>
         @endverbatim
     </x-code-example>
 
