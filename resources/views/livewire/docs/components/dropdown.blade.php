@@ -150,4 +150,35 @@ class extends Component {
             </x-dropdown>
         @endverbatim
     </x-code-example>
+
+    <x-anchor title="Scroll height" size="text-xl" class="mt-14" />
+
+    <p>
+        You can add the <code>scroll</code> property to allow scrolling and control the height with <code>max-height</code>.
+    </p>
+
+    <x-code-example class="flex justify-between">
+        @verbatim('docs')
+            @php     // [tl! .docs-hide]
+                $array = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];  // [tl! .docs-hide]
+            @endphp  <!-- [tl! .docs-hide] -->
+            <x-dropdown label="Default">
+                @foreach ($array as $item)
+                    <x-menu-item title="Dropdown Item {{ $item }}" />
+                @endforeach
+            </x-dropdown>
+
+            <x-dropdown label="Scroll" scroll>
+                @foreach ($array as $item)
+                    <x-menu-item title="Dropdown Item {{ $item }}" />
+                @endforeach
+            </x-dropdown>
+
+            <x-dropdown label="Custom Scroll" scroll max-height="max-h-64">
+                @foreach ($array as $item)
+                    <x-menu-item title="Dropdown Item {{ $item }}" />
+                @endforeach
+            </x-dropdown>
+        @endverbatim
+    </x-code-example>
 </div>

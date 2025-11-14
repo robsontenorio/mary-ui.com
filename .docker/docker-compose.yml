@@ -1,5 +1,7 @@
+name: mary
+
 services:
-    mary:
+    app:
         build:
             context: ..
             dockerfile: .docker/Dockerfile
