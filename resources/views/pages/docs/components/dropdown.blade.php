@@ -159,9 +159,9 @@ class extends Component {
 
     <x-code-example class="flex justify-between">
         @verbatim('docs')
-            @php     // [tl! .docs-hide]
-                $array = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];  // [tl! .docs-hide]
-            @endphp  <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $array = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
+            @endphp
             <x-dropdown label="Default">
                 @foreach ($array as $item)
                     <x-menu-item title="Dropdown Item {{ $item }}" />

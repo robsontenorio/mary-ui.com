@@ -71,8 +71,8 @@ class extends Component {
                 <x-step step="2" text="Payment">
                     Payment step
                 </x-step>
-                <x-step step="3" text="Receive Product" class="bg-warning/20">
-                    Receive Product
+                <x-step step="3" text="Product shipped" class="bg-warning/20">
+                    Product shipped
                 </x-step>
             </x-steps>
 
@@ -105,9 +105,9 @@ class extends Component {
                 <x-step step="2" text="B" icon="o-user" />
                 <x-step step="3" text="C" data-content="✓" />
             </x-steps>
-            <hr class="my-5 border-base-content/10" />      <!-- [tl! .docs-hide] -->
-            <x-button label="Previous" wire:click="prev2" />   <!-- [tl! .docs-hide] -->
-            <x-button label="Next" wire:click="next2" /> <!-- [tl! .docs-hide] -->
+            <hr class="my-5 border-base-content/10" />      <!-- [tl! .docs-hide:2] -->
+            <x-button label="Previous" wire:click="prev2" />
+            <x-button label="Next" wire:click="next2" />
         @endverbatim
     </x-code-example>
 
@@ -123,9 +123,9 @@ class extends Component {
                 <x-step step="2" text="B" />
                 <x-step step="3" text="C" />
             </x-steps>
-            <hr class="my-5 border-base-content/10" />      <!-- [tl! .docs-hide] -->
-            <x-button label="Previous" wire:click="prev2" />   <!-- [tl! .docs-hide] -->
-            <x-button label="Next" wire:click="next2" /> <!-- [tl! .docs-hide] -->
+            <hr class="my-5 border-base-content/10" />      <!-- [tl! .docs-hide:2] -->
+            <x-button label="Previous" wire:click="prev2" />
+            <x-button label="Next" wire:click="next2" />
         @endverbatim
     </x-code-example>
 

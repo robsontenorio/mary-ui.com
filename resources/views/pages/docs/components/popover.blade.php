@@ -22,9 +22,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                        // [tl! .docs-hide]
-                $user = App\Models\User::first();       // [tl! .docs-hide]
-            @endphp                                     <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $user = App\Models\User::first();
+            @endphp
             <x-popover>
                 <x-slot:trigger>
                     <x-avatar :image="$user->avatar" :title="$user->username" />
@@ -61,9 +61,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                        // [tl! .docs-hide]
-                $user = App\Models\User::first();       // [tl! .docs-hide]
-            @endphp                                     <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $user = App\Models\User::first();
+            @endphp
             <x-popover>
                 <x-slot:trigger class="bg-base-200 p-2 rounded-lg">
                     {{ $user->username }}

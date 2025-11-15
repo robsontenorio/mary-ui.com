@@ -34,8 +34,8 @@ class extends Component {
                 $level = $this->level;
             @endphp
             <x-range wire:model.live.debounce="level" label="Select a level" hint="Greater than 10." />
-            <x-hr /> <!-- [tl! .docs-hide] -->
-            <x-badge value="Selected: {{ $level }}" class="badge-neutral" /> <!-- [tl! .docs-hide] -->
+            <x-hr /> <!-- [tl! .docs-hide:1] -->
+            <x-badge value="Selected: {{ $level }}" class="badge-neutral" />
         @endverbatim
     </x-code-example>
 

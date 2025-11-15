@@ -75,9 +75,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                        // [tl! .docs-hide]
-                $text = $this->text;    // [tl! .docs-hide]
-            @endphp                     {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $text = $this->text;
+            @endphp
             <x-editor wire:model="text" label="Description" hint="The full product description" />
         @endverbatim
     </x-code-example>

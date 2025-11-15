@@ -18,9 +18,9 @@ class extends Component {
 
     <x-code-example class="grid lg:grid-cols-2 gap-8">
         @verbatim('docs')
-            @php                                         // [tl! .docs-hide]
-                $user = App\Models\User::first();        // [tl! .docs-hide]
-            @endphp                                     <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $user = App\Models\User::first();
+            @endphp
             <x-avatar :image="$user->avatar" alt="My image" />
 
             {{-- Manipulate avatar imagem with CSS classes --}}
@@ -41,9 +41,9 @@ class extends Component {
 
     <x-code-example class="flex gap-5">
         @verbatim('docs')
-            @php                                    // [tl! .docs-hide]
-                $user = App\Models\User::first();   // [tl! .docs-hide]
-            @endphp                                 <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $user = App\Models\User::first();
+            @endphp
             <x-avatar :image="$user->avatar" class="!w-22">
                 <x-slot:title class="text-3xl !font-bold pl-2">
                     {{ $user->username }}

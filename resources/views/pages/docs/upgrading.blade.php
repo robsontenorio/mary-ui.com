@@ -54,7 +54,7 @@ class extends Component {
             <x-code-example no-render language="shellscript">
                 @verbatim('docs')
                     composer require robsontenorio/mary:^2.0
-                
+
                     php artisan view:clear
                 @endverbatim
             </x-code-example>
@@ -280,14 +280,14 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example class="grid lg:grid-cols-2 gap-12 sm:px-24">
-    @verbatim('docs')
-        @php                                            // [tl! .docs-hide]
-            $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
-        @endphp                                         <!-- [tl! .docs-hide] -->
-        <x-radio label="Radio" :options="$users" wire:model="user" />
+        @verbatim('docs')
+            @php    // [tl! .docs-hide:2]
+                $users = App\Models\User::take(3)->get();
+            @endphp
+            <x-radio label="Radio" :options="$users" wire:model="user" />
 
-        <x-group label="Group" :options="$users" wire:model="user" />
-    @endverbatim
+            <x-group label="Group" :options="$users" wire:model="user" />
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 </div>

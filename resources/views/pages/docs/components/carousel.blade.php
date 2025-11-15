@@ -47,22 +47,22 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                                        // [tl! .docs-hide]
-                $slides = [                                                             // [tl! .docs-hide]
-                    [                                                                    // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',      // [tl! .docs-hide]
-                    ],                                                                  // [tl! .docs-hide]
-                    [                                                                   // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',         // [tl! .docs-hide]
-                    ],                                                                  // [tl! .docs-hide]
-                    [                                                                  // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',      // [tl! .docs-hide]
-                    ],                                                                  // [tl! .docs-hide]
-                    [                                                                   // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',      // [tl! .docs-hide]
-                    ],                                                                  // [tl! .docs-hide]
-                ];                                                                      // [tl! .docs-hide]
-            @endphp                                                                     <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:15]
+                $slides = [
+                    [
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                    ],
+                ];
+            @endphp
             <x-carousel :slides="$slides" without-indicators />
         @endverbatim
     </x-code-example>
@@ -71,22 +71,22 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                                    // [tl! .docs-hide]
-                $slides = [                                                         // [tl! .docs-hide]
-                   [                                                                // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                    [                                                               // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                     [                                                              // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                    [                                                               // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                ];                                                                  // [tl! .docs-hide]
-            @endphp                                                                 <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:15]
+                $slides = [
+                   [
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
+                    ],
+                     [
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
+                    ],
+                ];
+            @endphp
             {{-- Notice you can also override some wrapper CSS classes. --}}
             <x-carousel :slides="$slides" without-arrows class="!h-32 !rounded-none" />
         @endverbatim
@@ -96,22 +96,22 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                                    // [tl! .docs-hide]
-                $slides = [                                                         // [tl! .docs-hide]
-                   [                                                                // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',  // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                    [                                                               // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',  // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                     [                                                              // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',  // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                    [                                                               // [tl! .docs-hide]
-                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',     // [tl! .docs-hide]
-                    ],                                                              // [tl! .docs-hide]
-                ];                                                                  // [tl! .docs-hide]
-            @endphp                                                                 <!-- [tl! .docs-hide] -->
+            @php        // [tl! .docs-hide:15]
+                $slides = [
+                   [
+                        'image' => '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
+                    ],
+                     [
+                        'image' => '/images/photos/photo-1494253109108-2e30c049369b.jpg',
+                    ],
+                    [
+                        'image' => '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
+                    ],
+                ];
+            @endphp
             <x-carousel :slides="$slides" autoplay class="!h-32" />
         @endverbatim
     </x-code-example>

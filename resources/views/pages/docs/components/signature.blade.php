@@ -55,9 +55,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                  // [tl! .docs-hide]
-                $signature2 = $this->signature2;     // [tl! .docs-hide]
-            @endphp                                             {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $signature2 = $this->signature2;
+            @endphp
             <img src="{{ $signature2 }}" class="bg-pink-100 h-24 rounded-lg" />
         @endverbatim
     </x-code-example>

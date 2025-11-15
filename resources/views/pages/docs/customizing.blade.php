@@ -79,18 +79,21 @@ class extends Component {
         {{--@formatter:off--}}
         <x-code-example class="grid gap-5">
             @verbatim('docs')
-                @php                            // [tl! .docs-hide]
-                    $users = $this->users();      // [tl! .docs-hide]
-                @endphp                         <!-- [tl! .docs-hide] -->
+                @php    // [tl! .docs-hide:2]
+                    $users = $this->users();
+                @endphp
                 <x-form wire:submit="save"> <!-- [tl! .docs-hide] -->
                 <x-input label="Name" placeholder="Hello" hint="The full name" wire:model="name" />
+
                 <x-select label="Country" placeholder="Select one" wire:model="country_id" />
+
                 <x-toggle label="Terms" label="Select one" />
+
                 <x-group label="User" label="Select one" wire:model="user_id" :options="$users" />
-                <x-slot:actions><!-- [tl! .docs-hide] -->
-                    <x-button type="submit" class="btn-primary" label="Save" /><!-- [tl! .docs-hide] -->
-                </x-slot:actions><!-- [tl! .docs-hide] -->
-                </x-form><!-- [tl! .docs-hide] -->
+                <x-slot:actions><!-- [tl! .docs-hide:3] -->
+                    <x-button type="submit" class="btn-primary" label="Save" />
+                </x-slot:actions>
+                </x-form>
             @endverbatim
         </x-code-example>
         {{--@formatter:on--}}
@@ -133,8 +136,11 @@ class extends Component {
     <x-code-example class="grid gap-5">
         @verbatim('docs')
             <x-input placeholder="Default" />
+
             <x-input placeholder="No outline" class="!outline-none" />
+
             <x-input placeholder="Primary" class="input-primary text-primary" />
+        
             <x-select placeholder="Size" class="select-xl" />
         @endverbatim
     </x-code-example>
