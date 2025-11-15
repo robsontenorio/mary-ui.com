@@ -30,9 +30,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                        // [tl! .docs-hide]
-                $level = $this->level;  // [tl! .docs-hide]
-            @endphp                     {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:2]
+                $level = $this->level;
+            @endphp
             <x-range wire:model.live.debounce="level" label="Select a level" hint="Greater than 10." />
             <x-hr /> <!-- [tl! .docs-hide] -->
             <x-badge value="Selected: {{ $level }}" class="badge-neutral" /> <!-- [tl! .docs-hide] -->
@@ -55,9 +55,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                          // [tl! .docs-hide]
-                $level2 = $this->level2;  // [tl! .docs-hide]
-            @endphp                       {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:2]
+                $level2 = $this->level2;
+            @endphp
             <x-range
                 wire:model.live.debounce="level2"
                 min="20"
@@ -77,5 +77,4 @@ class extends Component {
             public int $level2 = 30;
         @endverbatim
     </x-code-example>
-
 </div>

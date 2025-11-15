@@ -11,7 +11,8 @@ use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\WithMediaSync;
 
-new #[Layout('layouts.landing')]
+new
+#[Layout('layouts.landing')]
 class extends Component {
     use WithFileUploads, WithMediaSync, WithPagination;
 
@@ -321,10 +322,9 @@ class extends Component {
 
         <x-code-example side-by-side render-col-span="4" code-col-span="8">
             @verbatim('docs')
-                @php
+                @php    // [tl! .docs-hide:2]
                     $users = App\Models\User::take(3)->get();
                 @endphp
-
                 @foreach($users as $user)
                     <x-list-item :item="$user" sub-value="username" link="/docs/installation">
                         <x-slot:actions>
@@ -343,9 +343,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
-                @php                              // [tl! .docs-hide]
-                        $users = $this->users;       // [tl! .docs-hide]
-                @endphp                          <!-- [tl! .docs-hide]-->
+                @php     // [tl! .docs-hide:2]
+                        $users = $this->users;
+                @endphp
                 <x-choices
                     label="Users - server side"
                     wire:model="selected_users"
@@ -360,9 +360,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
-                @php                                    // [tl! .docs-hide]
-                        $cities = App\Models\City::all();   // [tl! .docs-hide]
-                @endphp                                  <!-- [tl! .docs-hide] -->
+                @php             // [tl! .docs-hide:2]
+                        $cities = App\Models\City::all();
+                @endphp
                 <x-choices-offline
                     label="Cities - frontend side"
                     wire:model="selected_cities"
@@ -381,13 +381,13 @@ class extends Component {
 
         <x-code-example side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
-                @php                                                // [tl! .docs-hide]
-                    $cities = App\Models\City::take(3)->get();      // [tl! .docs-hide]
-                     $roles = [                                                                     // [tl! .docs-hide]
-                        ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],     // [tl! .docs-hide]
-                        ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],             // [tl! .docs-hide]
-                    ];                                                                              // [tl! .docs-hide]
-                @endphp                                             <!-- [tl! .docs-hide] -->
+                @php    // [tl! .docs-hide:6]
+                    $cities = App\Models\City::take(3)->get();
+                     $roles = [
+                        ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],
+                        ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],
+                    ];
+                @endphp
                 <x-form wire:submit="save">
                     <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
                     <x-input label="Amount" wire:model="amount" prefix="USD" money />
@@ -411,9 +411,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
-                @php                                    // [tl! .docs-hide]
-                    $showDrawer = $this->showDrawer;    // [tl! .docs-hide]
-                @endphp                                 {{-- [tl! .docs-hide] --}}
+                @php    // [tl! .docs-hide:2]
+                    $showDrawer = $this->showDrawer;
+                @endphp
                 <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" /><!-- [tl! .docs-hide] -->
                 <x-drawer wire:model="showDrawer" title="Hello!" with-close-button class="w-11/12 lg:w-1/3">
                     Click outside, on `CANCEL` button or `CLOSE` icon to close.
@@ -430,9 +430,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
-                @php                                    // [tl! .docs-hide]
-                    $myModal = $this->myModal;    // [tl! .docs-hide]
-                @endphp                                 {{-- [tl! .docs-hide] --}}
+                @php    // [tl! .docs-hide:2]
+                    $myModal = $this->myModal;
+                @endphp
                 <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" /> <!-- [tl! .docs-hide] -->
                 <x-modal wire:model="myModal" title="Hello">
                     Click outside, press `ESC` or click `CANCEL` button to close.

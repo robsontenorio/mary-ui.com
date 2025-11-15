@@ -48,11 +48,11 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example>
         @verbatim('docs')
-            @php                            // [tl! .docs-hide]
-                $files = $this->files;      // [tl! .docs-hide]
-                $library = $this->library;    // [tl! .docs-hide]
-                $user = $this->user;        // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:4]
+                $files = $this->files;
+                $library = $this->library;
+                $user = $this->user;
+            @endphp
             <x-image-library
                 wire:model="files"                 {{-- Temprary files --}}
                 wire:library="library"             {{-- Library metadata property --}}
@@ -89,8 +89,10 @@ class extends Component {
     </p>
 
     <x-code-example no-render language="php">
-        // Users table migration
-        $table->json('library')->nullable();
+        @verbatim('docs')
+            // Users table migration
+            $table->json('library')->nullable();
+        @endverbatim
     </x-code-example>
 
     <p>
@@ -99,11 +101,14 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        // User model
-        protected $casts = [
-            ...
-            'library' => AsCollection::class,
-        ];
+        @verbatim('docs')
+            // User model
+
+            protected $casts = [
+                ...
+                'library' => AsCollection::class,
+            ];
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 

@@ -3,7 +3,8 @@
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Contributing')]
+new
+#[Title('Contributing')]
 class extends Component {
 }
 ?>
@@ -34,18 +35,20 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="javascript">
-        "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
+        @verbatim('docs')
+            "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
 
-        // Add this block  [tl! highlight]
-        "repositories": {
-            "robsontenorio/mary": {
-                "type": "path",
-                "url": "/var/www/html/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
-                "options": {
-                    "symlink": true
+            // Add this block  [tl! highlight]
+            "repositories": {
+                "robsontenorio/mary": {
+                    "type": "path",
+                    "url": "/var/www/html/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
+                    "options": {
+                        "symlink": true
+                    }
                 }
             }
-        }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 

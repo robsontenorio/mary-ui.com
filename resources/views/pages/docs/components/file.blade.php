@@ -57,9 +57,9 @@ class extends Component {
 
     <x-code-example class="sm:px-64">
         @verbatim('docs')
-            @php                            // [tl! .docs-hide]
-                $file = $this->file;      // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:2]
+                $file = $this->file;
+            @endphp
             <x-file wire:model="file" label="Receipt" hint="Only PDF" accept="application/pdf" />
         @endverbatim
     </x-code-example>
@@ -84,9 +84,9 @@ class extends Component {
 
     <x-code-example class="sm:px-64">
         @verbatim('docs')
-            @php                               // [tl! .docs-hide]
-                $photos = $this->photos;      // [tl! .docs-hide]
-            @endphp                           {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:2]
+                $photos = $this->photos;
+            @endphp
             <x-file wire:model="photos" label="Documents" multiple />
         @endverbatim
     </x-code-example>
@@ -120,10 +120,10 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                            // [tl! .docs-hide]
-                $photo = $this->photo;      // [tl! .docs-hide]
-                $user = $this->user;        // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:3]
+                $photo = $this->photo;
+                $user = $this->user;
+            @endphp
             <x-file wire:model="photo" accept="image/png, image/jpeg">
                 <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
@@ -158,10 +158,10 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                            // [tl! .docs-hide]
-                $photo2 = $this->photo2;      // [tl! .docs-hide]
-                $user = $this->user;        // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:3]
+                $photo2 = $this->photo2;
+                $user = $this->user;
+            @endphp
             <x-file wire:model="photo2" accept="image/png" crop-after-change>
                 <img src="{{ $user->avatar ?? '/empty-user.jpg' }}" class="h-40 rounded-lg" />
             </x-file>
@@ -210,10 +210,10 @@ class extends Component {
 
     <x-code-example no-render>
         @verbatim('docs')
-            @php                            // [tl! .docs-hide]
-                $photo5 = $this->photo5;      // [tl! .docs-hide]
-                $user = $this->user;        // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php     // [tl! .docs-hide:3]
+                $photo5 = $this->photo5;
+                $user = $this->user;
+            @endphp
             <x-file
                 ...
                 change-text="Change"

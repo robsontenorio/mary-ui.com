@@ -43,9 +43,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                                            // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $users = App\Models\User::take(5)->get();
+            @endphp
             <x-select label="Master user" wire:model="selectedUser" :options="$users" icon="o-user" />
 
             <x-select label="Right icon" wire:model="selectedUser" :options="$users" icon-right="o-user" />
@@ -65,9 +65,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                                             // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(5)->get();
+            @endphp
             <x-select
                 label="Alternative"
                 wire:model="selectedUser2"
@@ -81,15 +81,15 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                                             // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(5)->get();
+            @endphp
             <x-select
                 label="Users"
                 wire:model="selectedUser2"
                 :options="$users"
                 placeholder="Select a user"
-                placeholder-value="0" {{-- Set a value for placeholder. Default is `null` --}}
+                placeholder-value="0" {{-- Default is `null` [tl! highlight]--}}
             />
         @endverbatim
     </x-code-example>
@@ -101,9 +101,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                                             // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $users = App\Models\User::take(5)->get();
+            @endphp
             <x-select label="Disabled" :options="$users" wire:model="selectedUser" disabled />
         @endverbatim
     </x-code-example>
@@ -115,7 +115,7 @@ class extends Component {
             @php
                 $users = [
                     ['id' => 1, 'name' => 'Joe'],
-                    ['id' => 2,'name' => 'Mary','disabled' => true] // <-- this
+                    ['id' => 2,'name' => 'Mary','disabled' => true] // <-- this [tl! highlight]
                 ];
             @endphp
 
@@ -158,13 +158,12 @@ class extends Component {
         You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
     </p>
 
-    {{--@formatter:off--}}
     <x-code-example class="gap gap-5 sm:px-16">
         @verbatim('docs')
-            @php                                            // [tl! .docs-hide]
-                $users = App\Models\User::take(5)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
-            <x-select label="Slots"  :options="$users" single>
+            @php    // [tl! .docs-hide:2]
+                $users = App\Models\User::take(5)->get();
+            @endphp
+            <x-select label="Slots" :options="$users" single>
                 <x-slot:prepend>
                     {{-- Add `join-item` to all prepended elements --}}
                     <x-button icon="o-trash" class="join-item" />
@@ -176,5 +175,5 @@ class extends Component {
             </x-select>
         @endverbatim
     </x-code-example>
-    {{--@formatter:on--}}
+
 </div>

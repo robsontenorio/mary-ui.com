@@ -145,11 +145,12 @@ class extends Component {
 
     <br>
 
+    {{--@formatter:off--}}
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                              // [tl! .docs-hide]
-                    $users = $this->users;   // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                    $users = $this->users;
+            @endphp
             {{-- Notice `single` --}}
             <x-choices label="Single" wire:model="user_id" :options="$users" single clearable />
 
@@ -165,11 +166,12 @@ class extends Component {
                 option-sub-label="city.name"
                 option-avatar="other_avatar"
                 icon="o-users"
-                height="max-h-96" {{-- Default is `max-h-64`  --}}
+                height="max-h-96"                   {{-- Default is `max-h-64`  --}}
                 hint="It has custom options"
                 single />
         @endverbatim
     </x-code-example>
+    {{--@formatter:on--}}
 
     <x-anchor title="Select All" size="text-xl" class="mt-14" />
 
@@ -181,9 +183,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                              // [tl! .docs-hide]
-                    $users = $this->users;   // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $users = $this->users;
+            @endphp
             {{-- Notice `allow-all` --}}
             <x-choices label="Multiple" wire:model="users_all_ids" :options="$users" allow-all />
 
@@ -207,9 +209,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                              // [tl! .docs-hide]
-                    $users = $this->users;   // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $users = $this->users;
+            @endphp
             {{-- Notice `compact` --}}
             <x-choices label="Compact" wire:model="users_compact_ids" :options="$users" compact />
 
@@ -230,9 +232,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                              // [tl! .docs-hide]
-                    $users = $this->users;   // [tl! .docs-hide]
-            @endphp                         {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $users = $this->users;
+            @endphp
             <x-choices
                 label="Select All + Compact"
                 wire:model="users_all_compact_ids"
@@ -254,9 +256,9 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                                               // [tl! .docs-hide]
-                    $users = $this->users;                    // [tl! .docs-hide]
-            @endphp                                           {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $users = $this->users;
+            @endphp
             {{-- Notice `searchable` --}}
             {{-- Notice this is a different component, but with same API --}}
             <x-choices-offline
@@ -266,7 +268,7 @@ class extends Component {
                 placeholder="Search ..."
                 single
                 clearable
-                searchable />
+                searchable />           {{-- [tl! highlight] --}}
 
             <x-choices-offline
                 label="Multiple (frontend)"
@@ -274,7 +276,7 @@ class extends Component {
                 :options="$users"
                 placeholder="Search ..."
                 clearable
-                searchable />
+                searchable />   {{-- [tl! highlight] --}}
         @endverbatim
     </x-code-example>
 
@@ -290,17 +292,17 @@ class extends Component {
 
     <x-code-example class="grid gap-5 sm:px-64">
         @verbatim('docs')
-            @php                                                                  // [tl! .docs-hide]
-                    $usersSearchable = $this->usersSearchable;                    // [tl! .docs-hide]
-                    $usersMultiSearchable = $this->usersMultiSearchable;          // [tl! .docs-hide]
-            @endphp                                                               {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:3]
+                    $usersSearchable = $this->usersSearchable;
+                    $usersMultiSearchable = $this->usersMultiSearchable;
+            @endphp
             {{-- Notice `searchable` + `single` --}}
             <x-choices
                 label="Searchable + Single"
                 wire:model="user_searchable_id"
                 :options="$usersSearchable"
                 placeholder="Search ..."
-                single
+                single {{-- [tl! highlight:1] --}}
                 searchable />
 
             {{-- Notice custom `search-function` --}}
@@ -309,7 +311,7 @@ class extends Component {
                 wire:model="users_multi_searchable_ids"
                 :options="$usersMultiSearchable"
                 placeholder="Search ..."
-                search-function="searchMulti"
+                search-function="searchMulti" {{-- [tl! highlight] --}}
                 no-result-text="Ops! Nothing here ..."
                 no-progress
                 searchable />
@@ -350,7 +352,7 @@ class extends Component {
                         ->take(5)
                         ->orderBy('name')
                         ->get()
-                        ->merge($selectedOption);     // <-- Adds selected option
+                        ->merge($selectedOption);     // <-- Adds selected option [tl! highlight]
                 }
             }
         @endverbatim
@@ -363,27 +365,29 @@ class extends Component {
     </p>
 
     <p>
-        Another approach is to use <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
+        Combine it with <code>min-chars</code> attribute to avoid hit <strong>search method</strong> itself until you have typed such amount of chars.
     </p>
 
+    {{--@formatter:off--}}
     <x-code-example class="sm:px-64">
         @verbatim('docs')
-            @php                                                              // [tl! .docs-hide]
-                $usersSearchableMinChars = $this->usersSearchableMinChars;    // [tl! .docs-hide]
-            @endphp                                                           {{-- [tl! .docs-hide] --}}
+            @php    // [tl! .docs-hide:2]
+                $usersSearchableMinChars = $this->usersSearchableMinChars;
+            @endphp
             {{-- Notice `min-chars` and `debounce` --}}
             <x-choices
                 label="Searchable + Single + Debounce + Min chars"
                 wire:model="user_searchable_min_chars_id"
                 :options="$usersSearchableMinChars"
                 search-function="searchMinChars"
-                debounce="300ms" {{-- Default is `250ms`--}}
-                min-chars="2" {{-- Default is `0`--}}
+                debounce="300ms"                {{-- Default is `250ms` [tl! highlight:1]--}}
+                min-chars="2"                   {{-- Default is `0` --}}
                 hint="Type at least 2 chars"
                 single
                 searchable />
         @endverbatim
     </x-code-example>
+    {{--@formatter:on--}}
 
     <p>
         You can pass any extra arbitrary search parameters like this.
@@ -396,7 +400,7 @@ class extends Component {
                 label="Extra parameters"
                 wire:model="user_id"
                 :options="$users"
-                search-function="searchExtra(123, 'thing')"
+                search-function="searchExtra(123, 'thing')" {{-- [tl! highlight]--}}
                 searchable />
         @endverbatim
     </x-code-example>
@@ -426,9 +430,9 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example class="sm:px-32">
         @verbatim('docs')
-            <div>                                       <!-- [tl! .docs-hide] -->
-                @php $users = $this->users; @endphp     <!-- [tl! .docs-hide] -->
-            </div>                                      <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $users = $this->users;
+            @endphp
             <x-choices label="Slots (online)" wire:model="user_custom_slot_id" :options="$users" single>
                 {{-- Item slot --}}
                 @scope('item', $user)
@@ -456,12 +460,11 @@ class extends Component {
         You can <strong>append or prepend</strong> anything like this. Make sure to use appropriated css round class on left or right.
     </p>
 
-    {{--@formatter:off--}}
     <x-code-example class="sm:px-32">
         @verbatim('docs')
-            <div>                                       <!-- [tl! .docs-hide] -->
-                @php $users = $this->users @endphp      <!-- [tl! .docs-hide] -->
-            </div>                                      <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:2]
+                $users = $this->users
+            @endphp
             <x-choices label="Slots" wire:model="user_custom_slot_id" :options="$users" single>
                 <x-slot:prepend>
                     {{-- Add `join-item` to all prepended elements --}}
@@ -474,7 +477,6 @@ class extends Component {
             </x-choices>
         @endverbatim
     </x-code-example>
-    {{--@formatter:on--}}
 
     <x-anchor title="Note about large numbers" size="text-xl" class="mt-14" />
 
@@ -491,11 +493,11 @@ class extends Component {
         @verbatim('docs')
             public array $options = [
                 [
-                    'id' => 264454000038134081,  # <-- Javascript won't handle this number
+                    'id' => 264454000038134081,  # <-- Javascript won't handle this number // [tl! highlight]
                     'name' => 'Test 1',
                 ],
                 [
-                    'id' => '264454000038134082',  # <-- It is good!
+                    'id' => '264454000038134082',  # <-- It is good! // [tl! highlight]
                     'name' => 'Test 2',
                 ],
             ];

@@ -3,7 +3,8 @@
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Title('Layout')]
+new
+#[Title('Layout')]
 class extends Component {
 }
 ?>

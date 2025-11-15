@@ -67,7 +67,7 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#'],
                     ['key' => 'name', 'label' => 'Nice Name'],
-                    ['key' => 'city.name', 'label' => 'City'] # <---- nested attributes
+                    ['key' => 'city.name', 'label' => 'City']       // <-- nested attributes [tl! highlight]
                 ];
             @endphp
 
@@ -80,13 +80,13 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                            // [tl! .docs-hide]
-                $users = App\Models\User::with('city')->take(3)->get();     // [tl! .docs-hide]
-                $headers = [                                                // [tl! .docs-hide]
-                    ['key' => 'name', 'label' => 'Name'],                   // [tl! .docs-hide]
-                    ['key' => 'city.name', 'label' => 'City'],              // [tl! .docs-hide]
-                ];                                                          // [tl! .docs-hide]
-            @endphp                                                         <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:6]
+                $users = App\Models\User::with('city')->take(3)->get();
+                $headers = [
+                    ['key' => 'name', 'label' => 'Name'],
+                    ['key' => 'city.name', 'label' => 'City'],
+                ];
+            @endphp
             <x-table :headers="$headers" :rows="$users" no-headers no-hover />
         @endverbatim
     </x-code-example>
@@ -119,7 +119,6 @@ class extends Component {
                 ];
             @endphp
 
-            {{-- Notice `no-headers` --}}
             <x-table :headers="$headers" :rows="$users" />
         @endverbatim
     </x-code-example>
@@ -143,14 +142,14 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                                // [tl! .docs-hide]
-                $users = App\Models\User::with('city')->take(3)->get();         // [tl! .docs-hide]
-                $headers = [                                                    // [tl! .docs-hide]
-                    ['key' => 'id', 'label' => '#'],                            // [tl! .docs-hide]
-                    ['key' => 'username', 'label' => 'Username'],               // [tl! .docs-hide]
-                    ['key' => 'city.name', 'label' => 'City'],                  // [tl! .docs-hide]
-                ];                                                              // [tl! .docs-hide]
-            @endphp                                                             <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:7]
+                $users = App\Models\User::with('city')->take(3)->get();
+                $headers = [
+                    ['key' => 'id', 'label' => '#'],
+                    ['key' => 'username', 'label' => 'Username'],
+                    ['key' => 'city.name', 'label' => 'City'],
+                ];
+            @endphp
             {{-- Notice `link` --}}
             {{-- Check browser url on next page --}}
             <x-table :headers="$headers" :rows="$users" link="/docs/installation/?from={username}" />
@@ -163,10 +162,12 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        $headers = [
-            ...
-            ['key' => 'city.name', 'label' => 'City', 'disableLink' => true], // <--- Here!
-        ];
+        @verbatim('docs')
+            $headers = [
+                ...
+                ['key' => 'city.name', 'label' => 'City', 'disableLink' => true],
+            ];
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -179,7 +180,7 @@ class extends Component {
             <x-table
                 :headers="$headers"
                 :rows="$users"
-                :link="route('users.show', ['username' => '[username]', 'id' => '[id]'])"
+                :link="route('users.show', ['username' => '[username]', 'id' => '[id]'])" {{-- [tl! highlight] --}}
             />
         @endverbatim
     </x-code-example>
@@ -195,13 +196,12 @@ class extends Component {
     <x-code-example>
         @verbatim('docs')
             @php
-                use App\Models\User;            // [tl! .docs-hide]
-                $users = User::take(3)->get();  // [tl! .docs-hide]
+                $users = App\Models\User::take(3)->get();  // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20 w-1'],
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20 w-1'], // Custom CSS
                     ['key' => 'username', 'label' => 'Username'],
-                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'], // Responsive
-                    ['key' => 'bio', 'label' => 'Bio', 'hidden' => 'true'], // Alternative approach
+                    ['key' => 'email', 'label' => 'E-mail', 'class' => 'hidden lg:table-cell'], // Responsive hide
+                    ['key' => 'bio', 'label' => 'Bio', 'hidden' => 'true'], // Force hide
                 ];
             @endphp
 
@@ -312,15 +312,17 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
+        @verbatim('docs')
+            public array $sortBy = ['column' => 'name', 'direction' => 'asc'];
 
-        public function users(): Collection
-        {
-            return User::query()
-                ->orderBy(...array_values($this->sortBy))
-                ->take(3)
-                ->get();
-        }
+            public function users(): Collection
+            {
+                return User::query()
+                    ->orderBy(...array_values($this->sortBy))
+                    ->take(3)
+                    ->get();
+            }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -337,7 +339,7 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'w-16'],
                     ['key' => 'name', 'label' => 'Name', 'class' => 'w-72'],
-                    ['key' => 'email', 'label' => 'E-mail', 'sortable' => false], // <--- Won't be sortable
+                    ['key' => 'email', 'label' => 'E-mail', 'sortable' => false], // <--- Won't be sortable [tl! highlight]
                 ];
             @endphp
 
@@ -355,7 +357,7 @@ class extends Component {
 
     <x-code-example no-render language="php">
         @verbatim('docs')
-            // It will add an extra column `city_name` on User collection
+            // It will add an extra column `city_name` on User collection.
             User::withAggregate('city', 'name')-> ...
         @endverbatim
     </x-code-example>
@@ -368,7 +370,7 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#', 'class' => 'w-16'],
                     ['key' => 'name', 'label' => 'Name', 'class' => 'w-72'],
-                    ['key' => 'city_name', 'label' => 'City'], // <--- Notice 'city_name' syntax
+                    ['key' => 'city_name', 'label' => 'City'], // <--- Notice 'city_name' syntax [tl! highlight]
                 ];
             @endphp
 
@@ -435,12 +437,14 @@ class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="php">
-        use Livewire\WithPagination;
+        @verbatim('docs')
+            use Livewire\WithPagination;    // [tl! highlight]
 
-        class ShowUsers extends Component
-        {
-            use WithPagination;
-        }
+            class ShowUsers extends Component
+            {
+                use WithPagination; // [tl! highlight]
+            }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -530,7 +534,7 @@ class extends Component {
         @verbatim('docs')
             @php
                 $perPage = $this->perPage;  // [tl! .docs-hide]
-                // Remember to define a model to bind the value
+                // Remember to define a variable to bind the value
                 // public int $perPage = 3;
 
                 // Also use it here.
@@ -545,9 +549,9 @@ class extends Component {
             <x-table
                 :headers="$headers"
                 :rows="$users"
+                :per-page-values="[3, 5, 10]" {{-- [tl! highlight] --}}
+                per-page="perPage" {{-- [tl! highlight] --}}
                 with-pagination
-                per-page="perPage"
-                :per-page-values="[3, 5, 10]" {{-- Notice the `:` bind --}}
             />
 
         @endverbatim
@@ -608,9 +612,9 @@ class extends Component {
             @php
                 $users = App\Models\User::with('city')->take(2)->get();     // [tl! .docs-hide]
                 $headers = [
-                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20'], # <--- custom CSS
+                    ['key' => 'id', 'label' => '#', 'class' => 'bg-error/20 w-1'],
                     ['key' => 'name', 'label' => 'Nice Name'],
-                    ['key' => 'city.name', 'label' => 'City'], # <---- nested attributes
+                    ['key' => 'city.name', 'label' => 'City'],
                 ];
             @endphp
 
@@ -652,8 +656,8 @@ class extends Component {
                 $headers = [
                     ['key' => 'id', 'label' => '#'],
                     ['key' => 'name', 'label' => 'Nice Name'],
-                    ['key' => 'city.name', 'label' => 'City'],      # <-- nested attributes
-                    ['key' => 'fakeColumn', 'label' => 'Fake City'] # <-- this column does not exists
+                    ['key' => 'city.name', 'label' => 'City'],
+                    ['key' => 'fakeColumn', 'label' => 'Fake City'] # <-- this column does not exist // [tl! highlight]
                 ];
             @endphp
 
@@ -694,14 +698,13 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example>
         @verbatim('docs')
-            @php                                                        // [tl! .docs-hide]
-                use App\Models\User;                                    // [tl! .docs-hide]
-                $users = User::take(3)->get();                          // [tl! .docs-hide]
-                $headers = [                                             // [tl! .docs-hide]
-                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],   // [tl! .docs-hide]
-                    ['key' => 'username', 'label' => 'Username'],        // [tl! .docs-hide]
-                ];                                                       // [tl! .docs-hide]
-            @endphp                                                      <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:6]
+                $users = App\Models\User::take(3)->get();
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
+                    ['key' => 'username', 'label' => 'Username'],
+                ];
+            @endphp
             <x-table :headers="$headers" :rows="$users">
                 <x-slot:footer class="bg-base-200 text-right">
                     <tr>
@@ -750,15 +753,15 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example>
         @verbatim('docs')
-            @php                                                        // [tl! .docs-hide]
-                $users = App\Models\User::with('city')->take(3)->get(); // [tl! .docs-hide]
-                $headers = [                                            // [tl! .docs-hide]
-                    ['key' => 'name', 'label' => 'Nice Name'],          // [tl! .docs-hide]
-                ];                                                      // [tl! .docs-hide]
-            @endphp                                                     <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:5]
+                $users = App\Models\User::with('city')->take(3)->get();
+                $headers = [
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
             <x-table :headers="$headers" :rows="$users">
                 @scope('cell_name', $user)
-                    ({{  $loop->index }}) {{ $user->name }}
+                    {{  $loop->index }} - {{ $user->name }}
                 @endscope
             </x-table>
         @endverbatim
@@ -773,15 +776,15 @@ class extends Component {
 
     <x-code-example class="grid gap-10">
         @verbatim('docs')
-            @php                                                    // [tl! .docs-hide]
-                $users = [];                                        // [tl! .docs-hide]
-                $headers = [                                        // [tl! .docs-hide]
-                    ['key' => 'name', 'label' => 'Nice Name'],      // [tl! .docs-hide]
-                    ['key' => 'email', 'label' => 'E-mail'],        // [tl! .docs-hide]
-                    ['key' => 'bio', 'label' => 'Bio'],             // [tl! .docs-hide]
-                    ['key' => 'city.name', 'label' => 'City'],      // [tl! .docs-hide]
-                ];                                                  // [tl! .docs-hide]
-            @endphp                                                 <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:8]
+                $users = [];
+                $headers = [
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                    ['key' => 'email', 'label' => 'E-mail'],
+                    ['key' => 'bio', 'label' => 'Bio'],
+                    ['key' => 'city.name', 'label' => 'City'],
+                ];
+            @endphp
             <x-table :headers="$headers" :rows="$users" show-empty-text />
 
             <x-table :headers="$headers" :rows="$users" show-empty-text empty-text="Nothing Here!" />
@@ -808,13 +811,13 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                            // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();                   // [tl! .docs-hide]
-                $headers = [                                                // [tl! .docs-hide]
-                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],      // [tl! .docs-hide]
-                    ['key' => 'name', 'label' => 'Nice Name'],              // [tl! .docs-hide]
-                ];                                                          // [tl! .docs-hide]
-            @endphp                                                         <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:6]
+                $users = App\Models\User::take(3)->get();
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
             {{-- Notice `selectable` and `wire:model` --}}
             {{-- See `@row-selection` output on console  --}}
             {{-- You can use any `$wire.METHOD` on `@row-selection` --}}
@@ -856,13 +859,13 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example>
         @verbatim('docs')
-            @php                                                                // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();                       // [tl! .docs-hide]
-                $headers = [                                                    // [tl! .docs-hide]
-                    ['key' => 'id', 'label' => '#', 'class' => 'hidden'],      // [tl! .docs-hide]
-                    ['key' => 'name', 'label' => 'Nice Name'],                  // [tl! .docs-hide]
-                ];                                                              // [tl! .docs-hide]
-            @endphp                                                             <!-- [tl! .docs-hide] -->
+            @php    // [tl! .docs-hide:6]
+                $users = App\Models\User::take(3)->get();
+                $headers = [
+                    ['key' => 'id', 'label' => '#', 'class' => 'hidden'],
+                    ['key' => 'name', 'label' => 'Nice Name'],
+                ];
+            @endphp
             {{-- Notice `expandable` and `wire:model` --}}
             <x-table :headers="$headers" :rows="$users" wire:model="expanded" expandable>
 

@@ -39,9 +39,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                            // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
-            @endphp                                         <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(3)->get();
+            @endphp
             <x-group label="Select one" wire:model="selectedUser" :options="$users" hint="Pick one" />
         @endverbatim
     </x-code-example>
@@ -54,9 +54,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
-            @endphp                                             <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(3)->get();
+            @endphp
             <x-group
                 label="Select one"
                 :options="$users"

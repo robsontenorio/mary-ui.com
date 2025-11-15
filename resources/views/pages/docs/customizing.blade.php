@@ -5,7 +5,8 @@ use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
-new #[Title('Customizing')]
+new
+#[Title('Customizing')]
 class extends Component {
     #[Validate('required')]
     public int $user_id = 1;
@@ -71,7 +72,7 @@ class extends Component {
     <x-anchor title="Through `app.css`" size="text-xl" class="mt-14 !mb-5" />
 
     <p>
-        Use this as secondary approach, when theme variables is not enough.
+        Use this as secondary approach, when theme variables are not enough.
     </p>
 
     <div data-theme="mytheme2">

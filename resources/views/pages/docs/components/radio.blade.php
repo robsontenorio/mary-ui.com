@@ -46,9 +46,9 @@ class extends Component {
 
     <x-code-example class="grid gap-8 lg:flex lg:justify-around">
         @verbatim('docs')
-            @php                                            // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();   // [tl! .docs-hide]
-            @endphp                                         {{-- [tl! .docs-hide]--}}
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(3)->get();
+            @endphp
             <x-radio label="Select one" wire:model="user1" :options="$users" />
 
             <x-radio label="Select one inline" wire:model="user2" :options="$users" inline />

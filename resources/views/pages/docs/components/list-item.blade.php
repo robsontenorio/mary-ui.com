@@ -32,9 +32,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
-            @endphp                                             <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(3)->get();
+            @endphp
             @foreach($users as $user)
                 <x-list-item :item="$user" sub-value="username" link="/docs/installation" />
             @endforeach
@@ -45,9 +45,9 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                        // [tl! .docs-hide]
-                $user1 = App\Models\User::inRandomOrder()->first();     // [tl! .docs-hide]
-            @endphp                                                     <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $user1 = App\Models\User::inRandomOrder()->first();
+            @endphp
             {{-- Notice `city.name`. It supports nested properties --}}
             <x-list-item :item="$user1" value="other_name" sub-value="city.name" avatar="other_avatar" />
         @endverbatim
@@ -55,26 +55,24 @@ class extends Component {
 
     <x-anchor title="No separator & no hover" size="text-xl" class="mt-14" />
 
-    {{--@formatter:off--}}
     <x-code-example>
         @verbatim('docs')
-            @php                                                // [tl! .docs-hide]
-                $users = App\Models\User::take(3)->get();       // [tl! .docs-hide]
-            @endphp                                             <!-- [tl! .docs-hide] -->
-            <!-- [tl! .docs-hide] --> @foreach($users as $user)
-            <x-list-item :item="$user" no-separator no-hover />
-            @endforeach                                         <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $users = App\Models\User::take(3)->get();
+            @endphp
+            @foreach($users as $user)
+                <x-list-item :item="$user" no-separator no-hover />
+            @endforeach
         @endverbatim
     </x-code-example>
-    {{--@formatter:on--}}
 
     <x-anchor title="Slots" size="text-xl" class="mt-14" />
 
     <x-code-example>
         @verbatim('docs')
-            @php                                                        // [tl! .docs-hide]
-                $user1 = App\Models\User::inRandomOrder()->first();     // [tl! .docs-hide]
-            @endphp                                                     <!-- [tl! .docs-hide] -->
+            @php     // [tl! .docs-hide:2]
+                $user1 = App\Models\User::inRandomOrder()->first();
+            @endphp
             <x-list-item :item="$user1">
                 <x-slot:avatar>
                     <x-badge value="top user" class="badge-primary badge-soft" />

@@ -54,8 +54,7 @@ class extends Component {
             <x-code-example no-render language="shellscript">
                 @verbatim('docs')
                     composer require robsontenorio/mary:^2.0
-
-                    # Clear the view cache
+                
                     php artisan view:clear
                 @endverbatim
             </x-code-example>
