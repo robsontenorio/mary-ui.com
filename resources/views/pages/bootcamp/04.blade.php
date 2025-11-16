@@ -405,9 +405,6 @@ class extends Component {
                     <div>
                         <x-form wire:submit="save">
                             ...
-                            <x-slot:actions>
-                                ...
-                            </x-slot:actions>
                         </x-form>
                     </div>  <!-- [tl! highlight:5] -->
                     <div>
