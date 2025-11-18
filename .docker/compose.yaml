@@ -9,5 +9,5 @@ services:
         volumes:
             - ../:/var/www/html:cached
         ports:
-            - 8018:8080
-            - 5174:5174
+            - "8018:8080"
+            - "5174:5174"
