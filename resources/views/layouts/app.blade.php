@@ -82,7 +82,9 @@
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin />
 
     {{-- Umami Analytics --}}
-    <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
+    @if(app()->isProduction())
+        <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
+    @endif
 
     <!-- Google tag (gtag.js) -->
     @if(config('app.env') == 'production')

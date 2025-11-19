@@ -22,8 +22,9 @@ class CodeExample extends Component
 
     public function highlight(string $code): string
     {
-        // TODO: cache
-        return new Engine()->codeToHtml($code, $this->language, $this->theme);
+        return cache()->rememberForever(md5($code), function () use ($code) {
+            return new Engine()->codeToHtml($code, $this->language, $this->theme);
+        });
     }
 
     public function render(): View|Closure|string

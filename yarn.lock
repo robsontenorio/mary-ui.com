@@ -451,10 +451,10 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-daisyui@^5.5.3:
-  version "5.5.3"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.5.3.tgz#09c2919c5c79fc0e0627460631b20ca6669474aa"
-  integrity sha512-xcDZlujfSHu3AbwXY1mpl25YXDLyzonsBX1YtiIyhvWGTnVIsX4krD5A7mm6RyiwDRlmKbPvMUPPxivQE4Nsvg==
+daisyui@^5.5.5:
+  version "5.5.5"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.5.5.tgz#900ae8a83fc46fbf7db02b0230988d5801c56d74"
+  integrity sha512-ekvI93ZkWIJoCOtDl0D2QMxnWvTejk9V5nWBqRv+7t0xjiBXqAK5U6o6JE2RPvlIC3EqwNyUoIZSdHX9MZK3nw==
 
 delayed-stream@~1.0.0:
   version "1.0.0"
