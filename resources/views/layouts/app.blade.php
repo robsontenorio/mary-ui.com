@@ -87,7 +87,7 @@
     @endif
 
     <!-- Google tag (gtag.js) -->
-    @if(config('app.env') == 'production')
+    @if(app()->isProduction())
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
