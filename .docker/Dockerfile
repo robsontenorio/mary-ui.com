@@ -1,10 +1,8 @@
-FROM robsontenorio/laravel:3.5 as base
-COPY --chown=appuser:appuser . .
+# Base
+FROM robsontenorio/laravel:sideup AS base
+COPY --chown=www-data:www-data . .
 
-FROM base as local
-CMD ["/usr/local/bin/start"]
-
-FROM base as deploy
-RUN chmod a+x .docker/deploy.sh
-CMD ["/bin/sh", "-c", ".docker/deploy.sh && /usr/local/bin/start"]
+# Production
+FROM base AS production
+ENV RUN_DEPLOY=true
 
