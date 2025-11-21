@@ -82,10 +82,6 @@ class extends Component {
         Create the <code>.env</code> from <code>.env.example</code>.
     </p>
 
-    <x-code-example no-render language="shellscript">
-        cp .env .env.example
-    </x-code-example>
-
     <p>
         Install, migrate and start.
     </p>

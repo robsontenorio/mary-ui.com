@@ -26,8 +26,6 @@ Clone the repository.
 git clone git@github.com:robsontenorio/mary-ui.com.git
 ```
 
-Create the `.env` from `.env.example`.
-
 Install, migrate and start.
 
 ```bash
