@@ -1,8 +1,14 @@
 # Base
-FROM robsontenorio/laravel:sideup-php8.5 AS base
+FROM robsontenorio/laravel:sideup AS base
 COPY --chown=www-data:www-data . .
 
+# Build
+FROM base AS build
+RUN cp .env.example .env
+RUN composer install --prefer-dist --no-interaction --no-progress --ansi
+RUN yarn install && yarn build
+
 # Production
-FROM base AS production
+FROM build AS production
 ENV RUN_DEPLOY=true
 
