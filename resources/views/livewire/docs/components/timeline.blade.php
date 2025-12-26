@@ -49,4 +49,22 @@ class extends Component {
             <x-timeline-item title="Delivered" pending last icon="o-gift" />
         @endverbatim
     </x-code-example>
+
+    <x-anchor title="Customize" size="text-xl" class="mt-14" />
+
+    <x-code-example>
+        @verbatim('docs')
+            <x-timeline-item
+                title="Order placed"
+                first
+                connector-active-class="border-s-success"
+                bullet-active-class="bg-success" />
+
+            <x-timeline-item
+                title="Delivered"
+                pending
+                connector-pending-class="border-s-error"
+                bullet-pending-class="bg-error" />
+        @endverbatim
+    </x-code-example>
 </div>

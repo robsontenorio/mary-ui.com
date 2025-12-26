@@ -64,4 +64,17 @@ class extends Component {
             <x-button label="Save action" wire:click="save" class="btn-warning" />
         @endverbatim
     </x-code-example>
+
+    <x-anchor title="H1 tag" size="text-xl" class="mt-14" />
+
+    <p>
+        By default this components uses a <code>div</code> to render the content.
+        You can change it to an <code>h1</code> tag by adding the <code>use-h1</code> attribute.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-header title="Hello" use-h1 />
+        @endverbatim
+    </x-code-example>
 </div>

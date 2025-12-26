@@ -18,11 +18,11 @@
         "laravel/framework": "^12.16",
         "laravel/tinker": "^2.10",
         "league/flysystem-aws-s3-v3": "^3.29",
-        "livewire/livewire": "^3.6",
+        "livewire/livewire": "^3.7",
         "livewire/volt": "^1.7",
         "mallardduck/blade-lucide-icons": "^1.23",
         "owenvoke/blade-fontawesome": "^2.9",
-        "robsontenorio/mary": "^2.4",
+        "robsontenorio/mary": "^2.5",
         "sentry/sentry-laravel": "^4.13",
         "torchlight/torchlight-laravel": "^0.6.1"
     },

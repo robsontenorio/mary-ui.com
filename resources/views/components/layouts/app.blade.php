@@ -126,7 +126,7 @@
 
             <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
             <x-button icon="fab.discord" link="https://discord.gg/c2Dv8T2X2s" class="btn-sm btn-ghost btn-circle me-2 hidden sm:inline-flex" external />
-            <x-button icon="fab.x-twitter" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle me-2 hidden sm:inline-flex" external />
+            <x-button icon="fab.x-twitter" link="https://x.com/robsontenorio" class="btn-sm btn-ghost btn-circle me-2 hidden sm:inline-flex" external />
             <x-button icon="fab.github" link="https://github.com/robsontenorio/mary" class="btn-sm btn-ghost btn-circle me-2" external />
             <div class="border-l border-l-base-content/20 hidden sm:block">&nbsp;</div>
             <x-theme-toggle class="btn btn-sm btn-circle btn-ghost" />
