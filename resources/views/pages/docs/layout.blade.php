@@ -14,7 +14,7 @@ class extends Component {
 
     <p>
         You can play around with <strong>daisyUI/Tailwind</strong> classes on the following examples.
-        The default Livewire app template lives in <code>views/components/layouts/app.blade.php</code>.
+        The default Livewire app template lives in <code>views/layouts/app.blade.php</code>.
     </p>
 
     <x-anchor title="Only sidebar" size="text-xl" class="mt-14" />

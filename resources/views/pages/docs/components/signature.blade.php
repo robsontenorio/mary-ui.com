@@ -32,7 +32,7 @@ class extends Component {
                 ...
 
                 {{-- Signature Pad  --}}
-                <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></script>
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>

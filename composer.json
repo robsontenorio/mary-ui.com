@@ -16,13 +16,13 @@
     "license": "MIT",
     "require": {
         "php": "^8.4",
-        "laravel/framework": "^12.39",
+        "laravel/framework": "^12.47",
         "laravel/tinker": "^2.10",
         "league/flysystem-aws-s3-v3": "^3.29",
-        "livewire/livewire": "^4.0@beta",
+        "livewire/livewire": "^4.0",
         "mallardduck/blade-lucide-icons": "^1.24",
         "owenvoke/blade-fontawesome": "^3.0",
-        "robsontenorio/mary": "^2.4",
+        "robsontenorio/mary": "^2.6",
         "sentry/sentry-laravel": "^4.19",
         "torchlight/engine": "^0.1.0"
     },
@@ -84,9 +84,6 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
-        ],
-        "pre-package-uninstall": [
-            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
     },
     "extra": {

@@ -43,6 +43,9 @@ class CodeExample extends Component
 
             // Remove the amount of identation, once per line
             $code = preg_replace('/^ {' . $indent . '}/m', '', $code);
+
+            // Temporary due to a Livewire v4.0.0 bug
+            $code = str($code)->replace('SCRIPT', 'script')->toString();
         @endphp
 
         <div x-classes="lg:col-span-3 lg:col-span-4 lg:col-span-5 lg:col-span-6 lg:col-span-7 lg:col-span-8 lg:col-span-9"></div>

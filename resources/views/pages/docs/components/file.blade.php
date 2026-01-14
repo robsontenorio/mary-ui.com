@@ -146,7 +146,7 @@ class extends Component {
             <head>
                 ...
                 {{-- Cropper.js --}}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+                <SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></SCRIPT>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
             </head>
         @endverbatim

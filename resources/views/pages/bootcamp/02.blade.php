@@ -38,9 +38,7 @@ class extends Component {
 
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
-            # TODO: update this when Livewire 4 is released
-
-            composer require robsontenorio/mary:dev-livewire-4
+            composer require robsontenorio/mary
 
             php artisan mary:install
         @endverbatim

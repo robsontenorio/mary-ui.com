@@ -54,7 +54,7 @@ class extends Component {
                 ...
 
                 {{-- Chart.js  --}}
-                <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>

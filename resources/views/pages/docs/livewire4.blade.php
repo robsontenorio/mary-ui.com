@@ -14,17 +14,17 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to Livewire 4" />
 
+    <x-anchor title="Brand new projects" size="text-xl" class="mt-14" />
+
+    <p>
+        You are good to go. Nothing to do here.
+    </p>
+
     <x-anchor title="Important" size="text-xl" class="mt-14" />
     <p>
         There are <b>no changes</b> in maryUI components.
-    </p>
-
-    <p>
         This is about Livewire/Volt and <b>has nothing to do</b> with maryUI.
-    </p>
-
-    <p>
-        This site is running with <b>Livewire 4</b>. If you find some bug, please report it.
+        For more info check the official Livewire upgrade guide <a href="https://livewire.laravel.com/docs/4.x/upgrading" target="_blank">here</a>.
     </p>
 
     <x-anchor title="Do I need this?" size="text-xl" class="mt-14" />
@@ -60,33 +60,7 @@ class extends Component {
         Now Livewire offers native support for class-based components. So, you need <b>to remove Volt</b> to avoid conflicts.
     </p>
 
-    <x-anchor title="Brand new projects" size="text-xl" class="mt-14" />
-
-    <p>
-        Just install maryUI from <code>dev-livewire-4</code> branch and you are done!
-    </p>
-
-    <x-code-example no-render language="shellscript">
-        @verbatim('docs')
-            composer require robsontenorio/mary:dev-livewire-4
-
-            php artisan mary:install
-        @endverbatim
-    </x-code-example>
-
     <x-anchor title="Existing projects" size="text-xl" class="mt-14" />
-
-    <p>
-        Install Livewire 4.
-    </p>
-
-    <x-code-example no-render language="shellscript">
-        @verbatim('docs')
-            # TODO: update this when Livewire 4 is released
-
-            composer require livewire/livewire:^4.0@beta
-        @endverbatim
-    </x-code-example>
 
     <p>
         Make all components to extend from <code>Livewire\Component</code>.
@@ -175,7 +149,7 @@ class extends Component {
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
             rm app/providers/VoltServiceProvider.php
-        
+
             composer remove livewire/volt
         @endverbatim
     </x-code-example>

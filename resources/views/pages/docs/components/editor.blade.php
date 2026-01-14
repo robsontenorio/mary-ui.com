@@ -52,7 +52,7 @@ class extends Component {
                 <meta name="csrf-token" content="{{ csrf_token() }}">
 
                 {{-- TinyMCE --}}
-                <script src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+                <SCRIPT src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>

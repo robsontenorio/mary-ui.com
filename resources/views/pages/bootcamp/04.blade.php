@@ -56,7 +56,7 @@ class extends Component {
     {{--@formatter:off--}}
     <x-code-example no-render>
         @verbatim('docs')
-            // resources/views/components/layouts/app.blade.php
+            // resources/views/layouts/app.blade.php
 
             <x-menu-item title="Hello" icon="o-sparkles" link="/" /> <!-- [tl! remove] -->
             <x-menu-item title="Home" icon="o-sparkles" link="/" /> <!-- [tl! add] -->
@@ -369,7 +369,7 @@ class extends Component {
             <head>
                 ...
                 {{-- Cropper.js --}}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+                <SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></SCRIPT>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
             </head>
         @endverbatim
@@ -527,12 +527,12 @@ class extends Component {
 
     <x-code-example no-render>
         @verbatim('docs')
-            {{--  /resources/views/components/layouts/app.blade.php --}}
+            {{--  /resources/views/layouts/app.blade.php --}}
 
             <head>
                 ...
                 {{-- TinyMCE --}}
-                <script src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+                <SCRIPT src="https://cdn.tiny.cloud/1/YOUR-KEY-HERE/tinymce/6/tinymce.min.js" referrerpolicy="origin"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>
@@ -544,7 +544,7 @@ class extends Component {
     <x-code-example no-render>
         @verbatim('docs')
             {{-- Check TinyMCE dos for self-hosted version --}}
-            <script src="/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+            <SCRIPT src="/tinymce/tinymce.min.js" referrerpolicy="origin"></SCRIPT>
         @endverbatim
     </x-code-example>
 
@@ -654,7 +654,7 @@ class extends Component {
         @verbatim('docs')
             <x-table ... >
                 @scope('cell_avatar', $user)                                                    <!-- [tl! highlight:2] -->
-                    <x-avatar image="{{ $user->avatar ?? '/empty-user.jpg' }}" class="!w-10" />
+                    <x-avatar image="{{ $user->avatar ?? '/empty-user.jpg' }}" class="!w-10 !h-10" />
                 @endscope
             </x-table>
         @endverbatim

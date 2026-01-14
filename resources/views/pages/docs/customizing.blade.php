@@ -50,13 +50,11 @@ class extends Component {
 
         <x-button label="Colors" link="https://daisyui.com/docs/colors" class="btn-ghost !no-underline" icon="o-link" external />
 
-        <x-button label="Utilities and variables" link="https://daisyui.com/docs/utilities" class="btn-ghost !no-underline" icon="o-link" external badge="new"
-                  badge-classes="badge-warning badge-xs !no-underline" />
+        <x-button label="Utilities and variables" link="https://daisyui.com/docs/utilities" class="btn-ghost !no-underline" icon="o-link" external />
 
         <x-button label="Themes" link="https://daisyui.com/docs/themes" class="btn-ghost !no-underline" icon="o-link" external />
 
-        <x-button label="Theme generator" link="https://daisyui.com/theme-generator" class="btn-ghost !no-underline" icon="o-link" external badge="new"
-                  badge-classes="badge-warning badge-xs !no-underline" />
+        <x-button label="Theme generator" link="https://daisyui.com/theme-generator" class="btn-ghost !no-underline" icon="o-link" external />
     </div>
 
     <x-alert icon="o-light-bulb" class="my-10">
@@ -140,7 +138,7 @@ class extends Component {
             <x-input placeholder="No outline" class="!outline-none" />
 
             <x-input placeholder="Primary" class="input-primary text-primary" />
-        
+
             <x-select placeholder="Size" class="select-xl" />
         @endverbatim
     </x-code-example>

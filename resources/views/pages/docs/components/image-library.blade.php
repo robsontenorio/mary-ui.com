@@ -75,11 +75,11 @@ class extends Component {
             <head>
                 ...
                 {{-- Cropper.js --}}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+                <SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></SCRIPT>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" />
 
                 {{-- Sortable.js --}}
-                <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></script>
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.1/Sortable.min.js"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>

@@ -51,8 +51,8 @@ class extends Component {
             <head>
                 ...
                 {{-- Ace Editor --}}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ace.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ext-language_tools.min.js"></script>
+                <SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ace.min.js"></SCRIPT>
+                <SCRIPT src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ext-language_tools.min.js"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>

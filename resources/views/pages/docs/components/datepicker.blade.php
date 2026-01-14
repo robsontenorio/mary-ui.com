@@ -48,7 +48,7 @@ class extends Component {
 
                 {{-- Flatpickr  --}}
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/flatpickr"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>
@@ -87,17 +87,17 @@ class extends Component {
 
                 {{-- Flatpickr  --}}
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/flatpickr"></SCRIPT>
 
                 {{-- It will not apply locale yet  --}}
-                <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
-                <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
-                <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+                <SCRIPT src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></SCRIPT>
+                <SCRIPT src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></SCRIPT>
+                <SCRIPT src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></SCRIPT>
 
                 {{-- You need to set here the default locale or any global flatpickr settings--}}
-                <script>
+                <SCRIPT>
                     flatpickr.localize(flatpickr.l10ns.fr);
-                </script>
+                </SCRIPT>
             </head>
         @endverbatim
     </x-code-example>
@@ -133,7 +133,7 @@ class extends Component {
                 ...
 
                 {{-- MonthSelectPlugin  --}}
-                <script src="https://unpkg.com/flatpickr/dist/plugins/monthSelect/index.js"></script>
+                <SCRIPT src="https://unpkg.com/flatpickr/dist/plugins/monthSelect/index.js"></SCRIPT>
                 <link href="https://unpkg.com/flatpickr/dist/plugins/monthSelect/style.css" rel="stylesheet">
                 @endverbatim
             </head>

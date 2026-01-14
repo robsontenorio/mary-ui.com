@@ -25,17 +25,18 @@ class extends Component {
 
     <x-anchor title="Install" size="text-xl" class="mt-14" />
 
+    {{--@formatter:off--}}
     <x-code-example no-render>
         @verbatim('docs')
             <head>
                 ...
-
                 {{-- Vanilla Calendar --}}
-                <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.js"></script>
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.js"></SCRIPT>
                 <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
             </head>
         @endverbatim
     </x-code-example>
+    {{--@formatter:on--}}
 
     <p>
         In the following examples we use dynamic dates to keep this example udpated to current month.

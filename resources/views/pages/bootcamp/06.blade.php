@@ -69,7 +69,7 @@ class extends Component {
     <x-anchor title="Template" size="text-xl" class="mt-14" />
 
     <p>
-        Create an new layout at <code>resources/views/components/layouts/empty.blade.php</code>. We are going to use this layout for the login and registration pages.
+        Create an new layout at <code>resources/views/layouts/empty.blade.php</code>. We are going to use this layout for the login and registration pages.
     </p>
 
     <x-code-example no-render>
@@ -114,7 +114,7 @@ class extends Component {
             use Livewire\Component;
 
             new
-            #[Layout('components.layouts.empty')]       // [tl! highlight] <-- Here is the `empty` layout
+            #[Layout('layouts.empty')]       // [tl! highlight] <-- Here is the `empty` layout
             #[Title('Login')]
             class extends Component {
 
@@ -218,7 +218,7 @@ class extends Component {
             use Illuminate\Support\Facades\Hash;
 
             new
-            #[Layout('components.layouts.empty')]       // [tl! highlight] <-- The same `empty` layout
+            #[Layout('layouts.empty')]       // [tl! highlight] <-- The same `empty` layout
             #[Title('Registration')]
             class extends Component {
 

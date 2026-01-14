@@ -142,6 +142,7 @@ class extends Component {
                         'description' => 'We love last week frameworks.',
                         'url' => '/docs/installation',
                         'urlText' => 'Get started',
+                        'lazy' => true,     // Enable lazy loading for this image. Default is eager.
                     ],
                     [
                         'image' => '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
