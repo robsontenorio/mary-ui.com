@@ -1,9 +1,11 @@
 <?php
 
 use Livewire\Attributes\Title;
-use Livewire\Volt\Component;
+use Livewire\Component;
 
-new #[Title('Contributing')] class extends Component {
+new
+#[Title('Contributing')]
+class extends Component {
 }
 ?>
 <div class="docs">
@@ -23,7 +25,7 @@ new #[Title('Contributing')] class extends Component {
         Clone the repository into some folder <strong>inside your app</strong>.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         git clone git@github.com:robsontenorio/mary.git
     </x-code-example>
 
@@ -33,18 +35,20 @@ new #[Title('Contributing')] class extends Component {
 
     {{--@formatter:off--}}
     <x-code-example no-render language="javascript">
-        "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
+        @verbatim('docs')
+            "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
 
-        // Add this block  [tl! highlight]
-        "repositories": {
-            "robsontenorio/mary": {
-                "type": "path",
-                "url": "/var/www/html/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
-                "options": {
-                    "symlink": true
+            // Add this block  [tl! highlight]
+            "repositories": {
+                "robsontenorio/mary": {
+                    "type": "path",
+                    "url": "/var/www/html/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
+                    "options": {
+                        "symlink": true
+                    }
                 }
             }
-        }
+        @endverbatim
     </x-code-example>
     {{--@formatter:on--}}
 
@@ -52,7 +56,7 @@ new #[Title('Contributing')] class extends Component {
         Require the package again for local symlink.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         composer require robsontenorio/mary
     </x-code-example>
 
@@ -60,17 +64,17 @@ new #[Title('Contributing')] class extends Component {
         Start the dev server.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         yarn dev
     </x-code-example>
 
     <x-anchor title="Docs" size="text-xl" class="mt-14" />
 
     <p>
-        This website is made with Laravel, Livewire Volt and maryUI.
+        This website is made with Laravel, Livewire and maryUI.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         git clone git@github.com:robsontenorio/mary-ui.com.git
     </x-code-example>
 
@@ -78,15 +82,11 @@ new #[Title('Contributing')] class extends Component {
         Create the <code>.env</code> from <code>.env.example</code>.
     </p>
 
-    <x-code-example no-render language="bash">
-        cp .env .env.example
-    </x-code-example>
-
     <p>
         Install, migrate and start.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         composer start
     </x-code-example>
 

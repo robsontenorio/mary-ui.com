@@ -6,12 +6,13 @@ use Illuminate\Support\Collection;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Rule;
-use Livewire\Volt\Component;
+use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 use Mary\Traits\WithMediaSync;
 
-new #[Layout('components.layouts.landing')]
+new
+#[Layout('layouts.landing')]
 class extends Component {
     use WithFileUploads, WithMediaSync, WithPagination;
 
@@ -105,10 +106,10 @@ class extends Component {
             {{--            </span>--}}
 
             <div class="flex gap-5 justify-center items-center my-10">
-                <img src="/laravel.png" class="object-contain w-9 h-9" />
-                <img src="/livewire.png" class="object-contain w-11 h-9" />
-                <img src="/tailwind.png" class="object-contain w-13 h-11" />
-                <img src="/daisyui.png" class="object-contain w-9 h-12" />
+                <img src="/images/tech/laravel.png" class="object-contain w-9 h-9" />
+                <img src="/images/tech/livewire.png" class="object-contain w-11 h-9" />
+                <img src="/images/tech/tailwind.png" class="object-contain w-13 h-11" />
+                <img src="/images/tech/daisyui.png" class="object-contain w-9 h-12" />
             </div>
 
             <div class="text-xl lg:text-4xl lg:leading-12 justify-self-auto m-auto">
@@ -155,7 +156,7 @@ class extends Component {
                     </div>
                     <div class="mb-8 -mt-3">
                         <a href="https://naqrat.sa" target="_blank">
-                            <img src="partners/naqrat.png" class="inline-block h-24 rounded object-contain" />
+                            <img src="/images/partners/naqrat.png" class="inline-block h-24 rounded object-contain" />
                         </a>
                     </div>
                     <div class="text-base-content/60 text-xs">
@@ -190,11 +191,11 @@ class extends Component {
             <div>
                 @php
                     $images = [
-                        '/photos/photo-1559703248-dcaaec9fab78.jpg',
-                        '/photos/photo-1572635148818-ef6fd45eb394.jpg',
-                        '/photos/photo-1565098772267-60af42b81ef2.jpg',
-                        '/photos/photo-1494253109108-2e30c049369b.jpg',
-                        '/photos/photo-1550258987-190a2d41a8ba.jpg',
+                        '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
+                        '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                        '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
+                        '/images/photos/photo-1494253109108-2e30c049369b.jpg',
+                        '/images/photos/photo-1550258987-190a2d41a8ba.jpg',
                     ]
                 @endphp
 
@@ -239,7 +240,7 @@ class extends Component {
                     <div>
                         <div>
                             <a href="https://bird.mary-ui.com" target="_blank">
-                                <img src="/bird-demo.png?u=2025-06-01" />
+                                <img src="/images/demos/bird-demo.png?u=2025-06-01" />
                             </a>
                         </div>
                     </div>
@@ -259,7 +260,7 @@ class extends Component {
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <a href="https://ping.mary-ui.com" target="_blank">
-                            <img src="/ping-demo.png?u=2025-04-09" />
+                            <img src="/images/demos/ping-demo.png?u=2025-04-09" />
                         </a>
                     </div>
                 </div>
@@ -274,7 +275,7 @@ class extends Component {
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <a href="https://flow.mary-ui.com" target="_blank">
-                            <img src="/flow-demo.png?u=2025-04-09" />
+                            <img src="/images/demos/flow-demo.png?u=2025-04-09" />
                         </a>
                     </div>
                 </div>
@@ -289,7 +290,7 @@ class extends Component {
                     <div class="mockup-browser-toolbar"></div>
                     <div>
                         <a href="https://orange.mary-ui.com" target="_blank">
-                            <img src="/orange-demo.png?u=2025-04-09" />
+                            <img src="/images/demos/orange-demo.png?u=2025-04-09" />
                         </a>
                     </div>
                 </div>
@@ -303,7 +304,7 @@ class extends Component {
                 <div class="mockup-browser  bg-base-300 cursor-pointer hover:scale-105 transition-all shadow-xl">
                     <div class="mockup-browser-toolbar"></div>
                     <a href="https://paper.mary-ui.com" target="_blank">
-                        <img src="/paper-demo.png?u=2025-04-09" />
+                        <img src="/images/demos/paper-demo.png?u=2025-04-09" />
                     </a>
                 </div>
                 <div class="mt-5">
@@ -321,10 +322,9 @@ class extends Component {
 
         <x-code-example side-by-side render-col-span="4" code-col-span="8">
             @verbatim('docs')
-                @php
+                @php    // [tl! .docs-hide:2]
                     $users = App\Models\User::take(3)->get();
                 @endphp
-
                 @foreach($users as $user)
                     <x-list-item :item="$user" sub-value="username" link="/docs/installation">
                         <x-slot:actions>
@@ -343,9 +343,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
-                @php                              // [tl! .docs-hide]
-                        $users = $this->users;       // [tl! .docs-hide]
-                @endphp                          <!-- [tl! .docs-hide]-->
+                @php     // [tl! .docs-hide:2]
+                        $users = $this->users;
+                @endphp
                 <x-choices
                     label="Users - server side"
                     wire:model="selected_users"
@@ -360,9 +360,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="6" code-col-span="6" class="grid gap-5">
             @verbatim('docs')
-                @php                                    // [tl! .docs-hide]
-                        $cities = App\Models\City::all();   // [tl! .docs-hide]
-                @endphp                                  <!-- [tl! .docs-hide] -->
+                @php             // [tl! .docs-hide:2]
+                        $cities = App\Models\City::all();
+                @endphp
                 <x-choices-offline
                     label="Cities - frontend side"
                     wire:model="selected_cities"
@@ -381,13 +381,13 @@ class extends Component {
 
         <x-code-example side-by-side render-col-span="5" code-col-span="7">
             @verbatim('docs')
-                @php                                                // [tl! .docs-hide]
-                    $cities = App\Models\City::take(3)->get();      // [tl! .docs-hide]
-                     $roles = [                                                                     // [tl! .docs-hide]
-                        ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],     // [tl! .docs-hide]
-                        ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],             // [tl! .docs-hide]
-                    ];                                                                              // [tl! .docs-hide]
-                @endphp                                             <!-- [tl! .docs-hide] -->
+                @php    // [tl! .docs-hide:6]
+                    $cities = App\Models\City::take(3)->get();
+                     $roles = [
+                        ['id' => 1 , 'name' => 'Administrator', 'hint' => 'Can do anything.' ],
+                        ['id' => 2 , 'name' => 'Editor', 'hint' => 'Can not delete.' ],
+                    ];
+                @endphp
                 <x-form wire:submit="save">
                     <x-input label="Name" wire:model="name" icon="o-user" placeholder="Full name" />
                     <x-input label="Amount" wire:model="amount" prefix="USD" money />
@@ -411,9 +411,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
-                @php                                    // [tl! .docs-hide]
-                    $showDrawer = $this->showDrawer;    // [tl! .docs-hide]
-                @endphp                                 {{-- [tl! .docs-hide] --}}
+                @php    // [tl! .docs-hide:2]
+                    $showDrawer = $this->showDrawer;
+                @endphp
                 <x-button label="Open Drawer" wire:click="$toggle('showDrawer')" class="btn-primary btn-block" /><!-- [tl! .docs-hide] -->
                 <x-drawer wire:model="showDrawer" title="Hello!" with-close-button class="w-11/12 lg:w-1/3">
                     Click outside, on `CANCEL` button or `CLOSE` icon to close.
@@ -430,9 +430,9 @@ class extends Component {
 
         <x-code-example side-by-side invert render-col-span="3" code-col-span="9">
             @verbatim('docs')
-                @php                                    // [tl! .docs-hide]
-                    $myModal = $this->myModal;    // [tl! .docs-hide]
-                @endphp                                 {{-- [tl! .docs-hide] --}}
+                @php    // [tl! .docs-hide:2]
+                    $myModal = $this->myModal;
+                @endphp
                 <x-button label="Open Modal" wire:click="$toggle('myModal')" class="btn-warning btn-block" /> <!-- [tl! .docs-hide] -->
                 <x-modal wire:model="myModal" title="Hello">
                     Click outside, press `ESC` or click `CANCEL` button to close.
@@ -453,7 +453,6 @@ class extends Component {
 
         {{--@formatter:off--}}
         <x-code-example side-by-side render-col-span="5" code-col-span="7" class="grid gap-5">
-
             @verbatim('docs')
                 @php
                     use App\Models\User; // [tl! .docs-hide]

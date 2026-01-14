@@ -6,7 +6,7 @@ use Livewire\Component;
 
 new
 #[Title('Upgrading to Livewire 4')]
-#[Layout('components.layouts.app', ['description' => 'Upgrading to Livewire 4'])]
+#[Layout('layouts.app', ['description' => 'Upgrading to Livewire 4'])]
 class extends Component {
     //
 }; ?>
@@ -14,13 +14,17 @@ class extends Component {
 <div class="docs">
     <x-anchor title="Upgrading to Livewire 4" />
 
+    <x-anchor title="Brand new projects" size="text-xl" class="mt-14" />
+
+    <p>
+        You are good to go. Nothing to do here.
+    </p>
+
     <x-anchor title="Important" size="text-xl" class="mt-14" />
     <p>
         There are <b>no changes</b> in maryUI components.
-    </p>
-
-    <p>
         This is about Livewire/Volt and <b>has nothing to do</b> with maryUI.
+        For more info check the official Livewire upgrade guide <a href="https://livewire.laravel.com/docs/4.x/upgrading" target="_blank">here</a>.
     </p>
 
     <x-anchor title="Do I need this?" size="text-xl" class="mt-14" />
@@ -56,17 +60,7 @@ class extends Component {
         Now Livewire offers native support for class-based components. So, you need <b>to remove Volt</b> to avoid conflicts.
     </p>
 
-    <x-anchor title="Upgrade" size="text-xl" class="mt-14" />
-
-    <p>
-        Install Livewire 4 Beta.
-    </p>
-
-    <x-code-example no-render language="bash">
-        @verbatim('docs')
-            composer require livewire/livewire:^4.0@beta
-        @endverbatim
-    </x-code-example>
+    <x-anchor title="Existing projects" size="text-xl" class="mt-14" />
 
     <p>
         Make all components to extend from <code>Livewire\Component</code>.
@@ -109,7 +103,7 @@ class extends Component {
         Move all the layout files.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             `resources/views/components/layouts/*.blade.php` ➡️ `resources/views/layouts/*.blade.php
 
@@ -152,9 +146,10 @@ class extends Component {
         Remove Volt.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             rm app/providers/VoltServiceProvider.php
+
             composer remove livewire/volt
         @endverbatim
     </x-code-example>
@@ -163,9 +158,10 @@ class extends Component {
         Clear the cache.
     </p>
 
-    <x-code-example no-render language="bash">
+    <x-code-example no-render language="shellscript">
         @verbatim('docs')
             php artisan config:clear
+
             php artisan view:clear
         @endverbatim
     </x-code-example>
