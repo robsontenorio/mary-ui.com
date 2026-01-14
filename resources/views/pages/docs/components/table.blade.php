@@ -768,6 +768,30 @@ class extends Component {
     </x-code-example>
     {{--@formatter:on--}}
 
+    <x-anchor title="Fluent context" size="text-xl" class="mt-14" />
+    <p>
+        You can transform scoped variables into a <code>Illuminate\Support\Fluent</code> object by using the <code>fluent</code> attribute.
+        Useful if you are not using eloquent or resources collections.
+    </p>
+
+    {{--@formatter:off--}}
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-table ... fluent>
+                @scope('cell_phones', $user)
+                {{-- Now `$user` is a fluent object --}}
+                @endscope
+            </x-table>
+
+            <x-table ... fluent>
+                @scope('expansion', $user)
+                {{-- Now `$user` is a fluent object --}}
+                @endscope
+            </x-table>
+        @endverbatim
+    </x-code-example>
+    {{--@formatter:off--}}
+
     <x-anchor title="Empty Slot" size="text-xl" class="mt-14" />
 
     <p>

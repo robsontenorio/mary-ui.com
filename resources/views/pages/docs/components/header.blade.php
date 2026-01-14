@@ -29,6 +29,8 @@ class extends Component {
 
             <x-header title="Custom size" size="text-xl" separator />
 
+            <x-header title="Custom weight" weight="font-thin" separator />
+
             <x-header title="With Anchor" subtitle="Click on title " with-anchor separator />
 
             <x-header title="Icon" icon="o-bolt" icon-classes="bg-warning rounded-full p-1 w-6 h-6" separator />
@@ -62,6 +64,19 @@ class extends Component {
             <x-button label="Some action" wire:click="something" />
 
             <x-button label="Save action" wire:click="save" class="btn-warning" />
+        @endverbatim
+    </x-code-example>
+
+    <x-anchor title="H1 tag" size="text-xl" class="mt-14" />
+
+    <p>
+        By default this components uses a <code>div</code> to render the content.
+        You can change it to an <code>h1</code> tag by adding the <code>use-h1</code> attribute.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-header title="Hello" use-h1 />
         @endverbatim
     </x-code-example>
 </div>
