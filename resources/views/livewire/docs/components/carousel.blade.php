@@ -147,6 +147,7 @@ class extends Component {
                         'image' => '/photos/photo-1565098772267-60af42b81ef2.jpg',
                         'title' => 'Full stack developers',
                         'description' => 'Where burnout is just a fancy term for Tuesday.',
+                        'lazy' => true,   // Make this image lazy loaded
                     ],
                     [
                         'image' => '/photos/photo-1494253109108-2e30c049369b.jpg',

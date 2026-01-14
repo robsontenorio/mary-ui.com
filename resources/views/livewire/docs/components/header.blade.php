@@ -29,6 +29,8 @@ class extends Component {
 
             <x-header title="Custom size" size="text-xl" separator />
 
+            <x-header title="Custom weight" weight="font-thin" separator />
+
             <x-header title="With Anchor" subtitle="Click on title " with-anchor separator />
 
             <x-header title="Icon" icon="o-bolt" icon-classes="bg-warning rounded-full p-1 w-6 h-6" separator />

@@ -5,7 +5,8 @@ use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
-new #[Title('Customizing')] class extends Component {
+new #[Title('Customizing')]
+class extends Component {
     #[Validate('required')]
     public int $user_id = 1;
 
@@ -48,13 +49,11 @@ new #[Title('Customizing')] class extends Component {
 
         <x-button label="Colors" link="https://daisyui.com/docs/colors" class="btn-ghost !no-underline" icon="o-link" external />
 
-        <x-button label="Utilities and variables" link="https://daisyui.com/docs/utilities" class="btn-ghost !no-underline" icon="o-link" external badge="new"
-                  badge-classes="badge-warning badge-xs !no-underline" />
+        <x-button label="Utilities and variables" link="https://daisyui.com/docs/utilities" class="btn-ghost !no-underline" icon="o-link" />
 
         <x-button label="Themes" link="https://daisyui.com/docs/themes" class="btn-ghost !no-underline" icon="o-link" external />
 
-        <x-button label="Theme generator" link="https://daisyui.com/theme-generator" class="btn-ghost !no-underline" icon="o-link" external badge="new"
-                  badge-classes="badge-warning badge-xs !no-underline" />
+        <x-button label="Theme generator" link="https://daisyui.com/theme-generator" class="btn-ghost !no-underline" icon="o-link" />
     </div>
 
     <x-alert icon="o-light-bulb" class="my-10">
