@@ -17,23 +17,23 @@
     "require": {
         "php": "^8.4",
         "laravel/framework": "^12.47",
-        "laravel/tinker": "^2.10",
-        "league/flysystem-aws-s3-v3": "^3.29",
+        "laravel/tinker": "^2.11",
+        "league/flysystem-aws-s3-v3": "^3.30",
         "livewire/livewire": "^4.0",
-        "mallardduck/blade-lucide-icons": "^1.24",
+        "mallardduck/blade-lucide-icons": "^1.26",
         "owenvoke/blade-fontawesome": "^3.0",
         "robsontenorio/mary": "^2.6",
-        "sentry/sentry-laravel": "^4.19",
+        "sentry/sentry-laravel": "^4.20",
         "torchlight/engine": "^0.1.0"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.24",
-        "laravel/sail": "^1.41",
+        "fakerphp/faker": "^1.24",
+        "laravel/pail": "^1.2",
+        "laravel/pint": "^1.27",
+        "laravel/sail": "^1.52",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
-        "pestphp/pest": "^4.1",
+        "nunomaduro/collision": "^8.8",
+        "pestphp/pest": "^4.3",
         "pestphp/pest-plugin-laravel": "^4.0"
     },
     "autoload": {
@@ -64,7 +64,7 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1 --timeout=0\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
         ],
         "test": [
             "@php artisan config:clear --ansi",
@@ -84,6 +84,9 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
     },
     "extra": {
