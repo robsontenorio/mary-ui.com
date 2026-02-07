@@ -27,7 +27,7 @@
     <meta property="twitter:image" content="https://mary-ui.com/mary-banner.png?new=2025-03-14">
 
     {{--  Currency  --}}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@2.7.0/libs/currency.js"></script>
 
     {{-- Cropper.js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>

@@ -523,10 +523,10 @@ concurrently@^9.2.1:
     tree-kill "1.2.2"
     yargs "17.7.2"
 
-daisyui@^5.5.14:
-  version "5.5.14"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.5.14.tgz#818487da886730f6338f51d0414c32159c297cad"
-  integrity sha512-L47rvw7I7hK68TA97VB8Ee0woHew+/ohR6Lx6Ah/krfISOqcG4My7poNpX5Mo5/ytMxiR40fEaz6njzDi7cuSg==
+daisyui@^5.5.18:
+  version "5.5.18"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-5.5.18.tgz#7524814b252ba23a5e0f69173556ca20a21e7744"
+  integrity sha512-VVzjpOitMGB6DWIBeRSapbjdOevFqyzpk9u5Um6a4tyId3JFrU5pbtF0vgjXDth76mJZbueN/j9Ok03SPrh/og==
 
 delayed-stream@~1.0.0:
   version "1.0.0"

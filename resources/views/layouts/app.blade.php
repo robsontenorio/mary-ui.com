@@ -66,7 +66,7 @@
     <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
 
     {{--  Currency  --}}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@2.7.0/libs/currency.js"></script>
 
     {{-- Signature Pad  --}}
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.2.0/dist/signature_pad.umd.min.js"></script>

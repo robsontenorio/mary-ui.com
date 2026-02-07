@@ -88,7 +88,7 @@ class extends Component {
                 ...
 
                 {{--  Currency  --}}
-                <SCRIPT type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@0.44.2/libs/currency/currency.js"></SCRIPT>
+                <SCRIPT type="text/javascript" src="https://cdn.jsdelivr.net/gh/robsontenorio/mary@2.7.0/libs/currency.js"></SCRIPT>
             </head>
         @endverbatim
     </x-code-example>

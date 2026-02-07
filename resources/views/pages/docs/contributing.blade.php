@@ -22,42 +22,27 @@ class extends Component {
     <x-anchor title="Components" size="text-xl" class="mt-14" />
 
     <p>
-        Clone the repository into some folder <strong>inside your app</strong>.
+        Clone the repository into your project root.
     </p>
 
     <x-code-example no-render language="shellscript">
-        git clone git@github.com:robsontenorio/mary.git
+        git clone git@github.com:robsontenorio/mary.git packages/mary
     </x-code-example>
 
     <p>
-        Change <code>composer.json</code> from <strong>your app</strong>.
+        Add the local repository to composer config.
     </p>
 
-    {{--@formatter:off--}}
-    <x-code-example no-render language="javascript">
-        @verbatim('docs')
-            "minimum-stability": "dev", // <- change to "dev"  [tl! highlight .animate-bounce]
-
-            // Add this block  [tl! highlight]
-            "repositories": {
-                "robsontenorio/mary": {
-                    "type": "path",
-                    "url": "/var/www/html/packages/mary", // <- change the path  [tl! highlight .animate-bounce]
-                    "options": {
-                        "symlink": true
-                    }
-                }
-            }
-        @endverbatim
+    <x-code-example no-render language="shellscript">
+        composer config repositories.local '{"type": "path", "url": "packages/mary"}'
     </x-code-example>
-    {{--@formatter:on--}}
 
     <p>
         Require the package again for local symlink.
     </p>
 
     <x-code-example no-render language="shellscript">
-        composer require robsontenorio/mary
+        composer require robsontenorio/mary:@dev
     </x-code-example>
 
     <p>
@@ -66,6 +51,18 @@ class extends Component {
 
     <x-code-example no-render language="shellscript">
         yarn dev
+    </x-code-example>
+
+    <p>
+        You can roll back to the stable version by removing the local repository and requiring the package again.
+    </p>
+
+    <x-code-example no-render language="shellscript">
+        @verbatim('docs')
+            composer config --unset repositories.local
+
+            composer require robsontenorio/mary
+        @endverbatim
     </x-code-example>
 
     <x-anchor title="Docs" size="text-xl" class="mt-14" />
