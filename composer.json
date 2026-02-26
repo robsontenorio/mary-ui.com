@@ -22,7 +22,7 @@
         "livewire/livewire": "^4.1",
         "mallardduck/blade-lucide-icons": "^1.26",
         "owenvoke/blade-fontawesome": "^3.0",
-        "robsontenorio/mary": "^2.7",
+        "robsontenorio/mary": "^2.8",
         "sentry/sentry-laravel": "^4.20",
         "torchlight/engine": "^0.1.0"
     },

@@ -73,6 +73,8 @@ class extends Component {
 
             <x-password label="Right toggle" wire:model="password" right />
 
+            <x-password label="Popover" wire:model="password" popover="Hey!" />
+
             <x-password label="Custom icons" wire:model="password" password-icon="o-lock-closed" password-visible-icon="o-lock-open" />
             <div></div> <!-- [tl! .docs-hide] -->
 

@@ -35,8 +35,8 @@
     <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
 
     {{-- Vanilla Calendar --}}
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.1.0/index.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.1.0/styles/index.min.css" rel="stylesheet">
 
     {{-- DIFF2HTML --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/xcode.min.css" />
@@ -104,11 +104,11 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased">
-    <div class="bg-secondary/20 text-center p-2 text-sm">
-        <x-icon name="o-bolt" class="h-4 w-4" />
-        Livewire v4 released!
-        <a href="/docs/livewire4" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">try it →</a>
-    </div>
+    {{--    <div class="bg-secondary/20 text-center p-2 text-sm">--}}
+    {{--        <x-icon name="o-bolt" class="h-4 w-4" />--}}
+    {{--        Livewire v4 released!--}}
+    {{--        <a href="/docs/livewire4" class="underline font-black border-l border-l-base-content/30 pl-2 ml-2">try it →</a>--}}
+    {{--    </div>--}}
     <x-nav sticky>
         <x-slot:brand>
             <label for="main-drawer" class="lg:hidden mr-3">

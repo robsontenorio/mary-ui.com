@@ -27,8 +27,8 @@ class extends Component {
     <x-code-example no-render language="shellscript">
         @verbatim('docs')
             php artisan livewire:make pages::index              # Home
-            php artisan livewire:make pages::users/create       # Create
-            php artisan livewire:make pages::users/edit         # Edit
+            php artisan livewire:make pages::users.create       # Create
+            php artisan livewire:make pages::users.edit         # Edit
         @endverbatim
     </x-code-example>
     {{--@formatter:on--}}

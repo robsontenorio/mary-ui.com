@@ -31,8 +31,8 @@ class extends Component {
             <head>
                 ...
                 {{-- Vanilla Calendar --}}
-                <SCRIPT src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.js"></SCRIPT>
-                <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@2.9.6/build/vanilla-calendar.min.css" rel="stylesheet">
+                <SCRIPT src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.1.0/index.min.js"></SCRIPT>
+                <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.1.0/styles/index.min.css" rel="stylesheet">
             </head>
         @endverbatim
     </x-code-example>
