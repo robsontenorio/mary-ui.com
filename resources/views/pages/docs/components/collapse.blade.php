@@ -11,6 +11,11 @@ class extends Component {
     public bool $show = false;
 
     public string $group = 'group1';
+
+    public function test(): void
+    {
+        sleep(2);
+    }
 }; ?>
 
 <div class="docs">
@@ -40,9 +45,11 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            <x-collapse wire:model="show" separator class="bg-base-200">
+            <x-collapse wire:model="show" separator separator progress-indicator>
                 <x-slot:heading>Hey</x-slot:heading>
-                <x-slot:content>There!</x-slot:content>
+                <x-slot:content>
+                    <x-button label="Test" wire:click="test()" icon="o-check" spinner />
+                </x-slot:content>
             </x-collapse>
         @endverbatim
     </x-code-example>
@@ -51,7 +58,7 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            <x-collapse collapse-plus-minus>
+            <x-collapse collapse-plus-minus open>
                 <x-slot:heading class="bg-warning/20">
                     How ...
                 </x-slot:heading>

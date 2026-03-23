@@ -31,6 +31,16 @@ class extends Component {
         @endverbatim
     </x-code-example>
 
+    <x-anchor title="Icons" size="text-xl" class="mt-14" />
+
+    <x-code-example class="flex gap-5">
+        @verbatim('docs')
+            <x-badge value="Done" icon="o-check" class="badge-success" />
+
+            <x-badge value="Waiting" icon-right="o-clock" class="badge-soft" />
+        @endverbatim
+    </x-code-example>
+
     <x-anchor title="Combined" size="text-xl" class="mt-14" />
 
     <x-code-example class="flex gap-5">

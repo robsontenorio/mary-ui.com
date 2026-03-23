@@ -4339,27 +4339,27 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "2.8.0",
+            "version": "2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "726ad37fd0e4461b0a146be158fd3dd985a255e8"
+                "reference": "dc5394d91397e69b1008ee371c11d22d8370cbac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/726ad37fd0e4461b0a146be158fd3dd985a255e8",
-                "reference": "726ad37fd0e4461b0a146be158fd3dd985a255e8",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/dc5394d91397e69b1008ee371c11d22d8370cbac",
+                "reference": "dc5394d91397e69b1008ee371c11d22d8370cbac",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.6",
-                "illuminate/support": "^10.0|^11.0|^12.0",
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
                 "jfcherng/php-diff": "^6.15",
                 "laravel/prompts": "^0|^1"
             },
             "require-dev": {
-                "orchestra/testbench": "^8|^9|^10",
-                "phpunit/phpunit": "^10|^11"
+                "orchestra/testbench": "^8|^9|^10|^11.0",
+                "phpunit/phpunit": "^10|^11|^12.5.12"
             },
             "type": "library",
             "extra": {
@@ -4413,7 +4413,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/2.8.0"
+                "source": "https://github.com/robsontenorio/mary/tree/2.8.1"
             },
             "funding": [
                 {
@@ -4421,7 +4421,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-26T22:17:12+00:00"
+            "time": "2026-03-23T19:55:17+00:00"
         },
         {
             "name": "sentry/sentry",
