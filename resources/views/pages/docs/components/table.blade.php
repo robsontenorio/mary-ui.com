@@ -351,6 +351,18 @@ class extends Component {
 
     <br>
     <p>
+        If you have multiple tables on the same page, you can use different properties to manage each table sorting independently by using the <code>sort-by-property</code>
+        attribute.
+    </p>
+
+    <x-code-example no-render>
+        @verbatim('docs')
+            <x-table ... :sort-by="$sortBy2" sort-by-property="sortBy2" />
+        @endverbatim
+    </x-code-example>
+
+    <br>
+    <p>
         If you plan to sort on relationship fields, consider using <code>withAggregate()</code> Eloquent method.
         It will add an extra column on result.
     </p>
@@ -361,8 +373,8 @@ class extends Component {
             User::withAggregate('city', 'name')-> ...
         @endverbatim
     </x-code-example>
-    <x-code-example>
 
+    <x-code-example>
         @verbatim('docs')
             @php
                 $users = $this->users();  // [tl! .docs-hide]
