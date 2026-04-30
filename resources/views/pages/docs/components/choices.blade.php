@@ -73,48 +73,38 @@ class extends Component {
     // For single searchable
     public function search(string $value = '')
     {
-        // Besides the search results, you must include on demand selected option
-        $selectedOption = User::where('id', $this->user_searchable_id)->get();
-
         $this->usersSearchable = User::query()
             ->where('name', 'like', "%$value%")
+            ->orWhere('id', $this->user_searchable_id) // <-- Adds already selected options
             ->take(5)
             ->orderBy('name')
-            ->get()
-            ->merge($selectedOption);     // <-- Adds selected option
+            ->get();
     }
 
     // For multi searchable
     public function searchMulti(string $value = '')
     {
-        // Besides the search results, you must include on demand selected options
-        $selectedOptions = User::whereIn('id', $this->users_multi_searchable_ids)->orderBy('name')->get();
-
         $this->usersMultiSearchable = User::query()
             ->where('name', 'like', "%$value%")
+            ->orWhere('id', $this->users_multi_searchable_ids) // <-- Adds already selected options
             ->take(5)
             ->orderBy('name')
-            ->get()
-            ->merge($selectedOptions);     // <-- Adds selected options
+            ->get();
     }
 
     // For single searchable (min chars)
     public function searchMinChars(string $value = '')
     {
-        // Besides the search results, you must include on demand selected options
-        $selectedOption = User::where('id', $this->user_searchable_min_chars_id)->orderBy('name')->get();
-
         $this->usersSearchableMinChars = collect();
 
         if (strlen($value) >= 2) {
             $this->usersSearchableMinChars = User::query()
                 ->where('name', 'like', "%$value%")
+                ->orWhere('id', $this->user_searchable_min_chars_id) // <-- Adds already selected options
                 ->take(5)
                 ->orderBy('name')
                 ->get();
         }
-
-        $this->usersSearchableMinChars = $this->usersSearchableMinChars->merge($selectedOption);     // <-- Adds selected option
     }
 }
 ?>
@@ -344,15 +334,12 @@ class extends Component {
                 // Also called as you type
                 public function search(string $value = '')
                 {
-                    // Besides the search results, you must include on demand selected option
-                    $selectedOption = User::where('id', $this->user_searchable_id)->get();
-
                     $this->usersSearchable = User::query()
                         ->where('name', 'like', "%$value%")
+                        ->orWhere('id', $this->user_searchable_id) // <-- Adds already selected options [tl! highlight]
                         ->take(5)
                         ->orderBy('name')
-                        ->get()
-                        ->merge($selectedOption);     // <-- Adds selected option [tl! highlight]
+                        ->get();
                 }
             }
         @endverbatim
