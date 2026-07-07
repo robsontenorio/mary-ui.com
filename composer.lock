@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04aff622e18b61588d771b991ed1d9b2",
+    "content-hash": "d0fbdf43d63b4c7d82d88634d8af8458",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2674,36 +2674,36 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v4.1.3",
+            "version": "v4.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "69c871cb15fb95f10cda5acd1ee7e63cd3c494c8"
+                "reference": "8021f2561865c4c297a3bfca37212a99034377e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/69c871cb15fb95f10cda5acd1ee7e63cd3c494c8",
-                "reference": "69c871cb15fb95f10cda5acd1ee7e63cd3c494c8",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/8021f2561865c4c297a3bfca37212a99034377e7",
+                "reference": "8021f2561865c4c297a3bfca37212a99034377e7",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^10.0|^11.0|^12.0",
-                "illuminate/routing": "^10.0|^11.0|^12.0",
-                "illuminate/support": "^10.0|^11.0|^12.0",
-                "illuminate/validation": "^10.0|^11.0|^12.0",
+                "illuminate/database": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/routing": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+                "illuminate/validation": "^10.0|^11.0|^12.0|^13.0",
                 "laravel/prompts": "^0.1.24|^0.2|^0.3",
                 "league/mime-type-detection": "^1.9",
                 "php": "^8.1",
-                "symfony/console": "^6.0|^7.0",
-                "symfony/http-kernel": "^6.2|^7.0"
+                "symfony/console": "^6.0|^7.0|^8.0",
+                "symfony/http-kernel": "^6.2|^7.0|^8.0"
             },
             "require-dev": {
                 "calebporzio/sushi": "^2.1",
-                "laravel/framework": "^10.15.0|^11.0|^12.0",
+                "laravel/framework": "^10.15.0|^11.0|^12.0|^13.0",
                 "mockery/mockery": "^1.3.1",
-                "orchestra/testbench": "^8.21.0|^9.0|^10.0",
-                "orchestra/testbench-dusk": "^8.24|^9.1|^10.0",
-                "phpunit/phpunit": "^10.4|^11.5",
+                "orchestra/testbench": "^8.21.0|^9.0|^10.0|^11.0",
+                "orchestra/testbench-dusk": "^8.24|^9.1|^10.0|^11.0",
+                "phpunit/phpunit": "^10.4|^11.5|^12.5",
                 "psy/psysh": "^0.11.22|^0.12"
             },
             "type": "library",
@@ -2738,7 +2738,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v4.1.3"
+                "source": "https://github.com/livewire/livewire/tree/v4.3.3"
             },
             "funding": [
                 {
@@ -2746,7 +2746,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-06T12:19:55+00:00"
+            "time": "2026-06-27T03:16:11+00:00"
         },
         {
             "name": "mallardduck/blade-lucide-icons",
@@ -4339,16 +4339,16 @@
         },
         {
             "name": "robsontenorio/mary",
-            "version": "2.8.2",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robsontenorio/mary.git",
-                "reference": "fee6e23a158c54c682b5dd5d7c9377ba4889761a"
+                "reference": "a48c94d77b92653c401a4e00b3d1d8f1a6240469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/fee6e23a158c54c682b5dd5d7c9377ba4889761a",
-                "reference": "fee6e23a158c54c682b5dd5d7c9377ba4889761a",
+                "url": "https://api.github.com/repos/robsontenorio/mary/zipball/a48c94d77b92653c401a4e00b3d1d8f1a6240469",
+                "reference": "a48c94d77b92653c401a4e00b3d1d8f1a6240469",
                 "shasum": ""
             },
             "require": {
@@ -4413,7 +4413,7 @@
             ],
             "support": {
                 "issues": "https://github.com/robsontenorio/mary/issues",
-                "source": "https://github.com/robsontenorio/mary/tree/2.8.2"
+                "source": "https://github.com/robsontenorio/mary/tree/2.9.0"
             },
             "funding": [
                 {
@@ -4421,7 +4421,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-17T13:40:53+00:00"
+            "time": "2026-07-07T17:19:14+00:00"
         },
         {
             "name": "sentry/sentry",
