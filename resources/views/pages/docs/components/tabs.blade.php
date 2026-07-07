@@ -10,13 +10,13 @@ new
 class extends Component {
     public string $selectedTab = 'tricks-tab';
 
-    public string $myTab = 'tricks-tab';
+    public string $myTab = 'house-tab';
 
-    public string $someTab = 'users-tab';
+    public string $someTab = 'joe-tab';
 
-    public string $selection = 'tricks-tab';
+    public string $anotherTab = 'car-tab';
 
-    public string $tabSelected = 'tricks-tab';
+    public string $tabSelected = 'school-tab';
 }
 
 ?>
@@ -50,19 +50,18 @@ class extends Component {
     <x-code-example>
         @verbatim('docs')
             <x-tabs wire:model="myTab">
-                <x-tab name="users-tab">
-                    <x-slot:label>  {{-- [tl! highlight:3] --}}
-                        Users
-                        <x-badge value="3" class="badge-primary badge-sm" />
+                <x-tab name="house-tab">
+                    <x-slot:label>  {{-- [tl! highlight:2] --}}
+                        House <i>Label</i>
                     </x-slot:label>
 
-                    <div>Users</div>
+                    <div>House</div>
                 </x-tab>
-                <x-tab name="tricks-tab" label="Tricks">
-                    <div>Tricks</div>
+                <x-tab name="toy-tab" label="Broken Toys" badge="1">
+                    <div>Toy</div>
                 </x-tab>
-                <x-tab name="musics-tab" label="Musics">
-                    <div>Musics</div>
+                <x-tab name="garage-tab" label="Garage" badge="3" badge-class="!badge-primary">
+                    <div>Garage</div>
                 </x-tab>
             </x-tabs>
         @endverbatim
@@ -73,17 +72,17 @@ class extends Component {
     <x-code-example>
         @verbatim('docs')
             <x-tabs wire:model="someTab">
-                <x-tab name="users-tab" label="Users">
-                    <div>Users</div>
+                <x-tab name="mary-tab" label="Mary">
+                    <div>Mary</div>
                 </x-tab>
-                <x-tab name="tricks-tab" label="Tricks">
-                    <div>Tricks</div>
+                <x-tab name="joe-tab" label="Joe">
+                    <div>Joe</div>
                 </x-tab>
-                <x-tab name="musics-tab" label="Musics">
-                    <div>Musics</div>
+                <x-tab name="ana-tab" label="Ana">
+                    <div>Ana</div>
                 </x-tab>
-                <x-tab name="stars-tab" label="Stars" disabled>
-                    <div>Stars</div>
+                <x-tab name="marina-tab" label="Marina" disabled>
+                    <div>Marina</div>
                 </x-tab>
             </x-tabs>
         @endverbatim
@@ -93,15 +92,15 @@ class extends Component {
 
     <x-code-example>
         @verbatim('docs')
-            <x-tabs wire:model="someTab">
-                <x-tab name="users-tab" label="Users">
-                    <div>Users</div>
+            <x-tabs wire:model="anotherTab">
+                <x-tab name="car-tab" label="Car">
+                    <div>Car</div>
                 </x-tab>
-                <x-tab name="tricks-tab" label="Tricks" hidden>
-                    <div>Tricks</div>
+                <x-tab name="bus-tab" label="Bus" hidden>
+                    <div>Bus</div>
                 </x-tab>
-                <x-tab name="musics-tab" label="Musics">
-                    <div>Musics</div>
+                <x-tab name="train-tab" label="Train">
+                    <div>Train</div>
                 </x-tab>
             </x-tabs>
         @endverbatim
@@ -117,18 +116,18 @@ class extends Component {
         @verbatim('docs')
             <x-tabs
                 wire:model="tabSelected"
-                active-class="bg-primary rounded !text-white"
-                label-class="font-semibold"
-                label-div-class="bg-primary/5 rounded w-fit p-2"
+                active-class="text-primary before:h-1 before:text-primary"
+                label-class="uppercase italic"
+                content-class="shadow-lg !p-10"
             >
-                <x-tab name="users-tab" label="Users">
-                    <div>All</div>
+                <x-tab name="school-tab" label="School">
+                    <div>School</div>
                 </x-tab>
-                <x-tab name="tricks-tab" label="Tricks">
-                    <div>Tricks</div>
+                <x-tab name="job-tab" label="Job">
+                    <div>Job</div>
                 </x-tab>
-                <x-tab name="musics-tab" label="Musics">
-                    <div>Musics</div>
+                <x-tab name="park-tab" label="Park">
+                    <div>Park</div>
                 </x-tab>
             </x-tabs>
         @endverbatim
