@@ -58,4 +58,26 @@ class extends Component {
             <x-image-gallery :images="$images" class="h-40 rounded-box" />
         @endverbatim
     </x-code-example>
+
+    <br>
+
+    <p>
+        You can also set a fixed width for the images using the <code>img-css</code> attribute to have a different presentation of the gallery.
+    </p>
+
+    <x-code-example>
+        @verbatim('docs')
+            @php
+                $images = [
+                    '/images/photos/photo-1559703248-dcaaec9fab78.jpg',
+                    '/images/photos/photo-1572635148818-ef6fd45eb394.jpg',
+                    '/images/photos/photo-1565098772267-60af42b81ef2.jpg',
+                    '/images/photos/photo-1494253109108-2e30c049369b.jpg',
+                    '/images/photos/photo-1550258987-190a2d41a8ba.jpg',
+                ]
+            @endphp
+
+            <x-image-gallery :images="$images" class="h-40 rounded-box" img-css="w-70" />
+        @endverbatim
+    </x-code-example>
 </div>
