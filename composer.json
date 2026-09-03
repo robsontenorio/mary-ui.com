@@ -19,7 +19,7 @@
         "laravel/framework": "^12.47",
         "laravel/tinker": "^2.11",
         "league/flysystem-aws-s3-v3": "^3.30",
-        "livewire/livewire": "^4.3",
+        "livewire/livewire": "^4.4",
         "mallardduck/blade-lucide-icons": "^1.26",
         "owenvoke/blade-fontawesome": "^3.0",
         "robsontenorio/mary": "^2.9",
