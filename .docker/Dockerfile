@@ -5,7 +5,7 @@ COPY --chown=www-data:www-data . .
 # Build
 FROM base AS build
 RUN cp .env.example .env
-RUN composer install --prefer-dist --no-interaction --no-progress --quiet --ansi --no-dev
+RUN composer install --prefer-dist --no-interaction --no-progress --quiet --ansi
 RUN yarn install --silent && yarn build && yarn cache clean && rm -rf node_modules
 
 # Production
