@@ -160,19 +160,11 @@ class extends Component {
                         </a>
                     </div>
                     <div class="text-base-content/60 text-xs">
-                        Showcase your brand here for
-                        <b class="font-black text-base-content">
-                            <livewire:analytics lazy="on-load" />
-                        </b>
-                        monthly visitors.
+                        Showcase your brand here.
 
                         <div class="mt-5 justify-center flex gap-5 text-xs">
                             <a href="https://x.com/robsontenorio" target="_blank">
                                 Contact
-                                <x-icon name="o-arrow-right" class="w-4 h-4" />
-                            </a>
-                            <a href="https://analytics.robsontenorio.com/share/PZ2Kf5nHYg6fp4Lt/mary-ui.com" target="_blank">
-                                Open analytics
                                 <x-icon name="o-arrow-right" class="w-4 h-4" />
                             </a>
                         </div>
