@@ -220,10 +220,6 @@
                     <x-menu-item title="Rich Text Editor" link="/docs/components/editor" />
                     <x-menu-item title="Signature" link="/docs/components/signature" />
                 </x-menu-sub>
-
-                <x-menu-separator />
-
-                <x-menu-item title="Go to v1 docs" link="https://v1.mary-ui.com" icon="o-backward" external />
             </x-menu>
         </x-slot:sidebar>
 
